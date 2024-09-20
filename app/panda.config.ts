@@ -13,7 +13,15 @@ export default defineConfig({
 
   // Useful for theme customization
   theme: {
-    extend: {},
+    extend: {
+      semanticTokens: {
+        colors: {
+          primary: {
+            value: { base: "{colors.teal.600}", _dark: "{colors.teal.400}" },
+          },
+        },
+      },
+    },
   },
   jsxFramework: "react",
 

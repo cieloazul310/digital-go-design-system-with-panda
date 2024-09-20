@@ -8,7 +8,7 @@ const buttonRecipe = defineRecipe({
   },
   variants: {
     visual: {
-      funky: { bg: "red.200", color: "white" },
+      funky: { bg: "primary", color: "white" },
       edgy: { border: "3px solid token(colors.purple.500)" },
     },
     size: {
@@ -32,6 +32,13 @@ export const preset = definePreset({
   theme: {
     recipes: {
       button: buttonRecipe,
+    },
+    semanticTokens: {
+      colors: {
+        primary: {
+          value: { base: "{colors.red.600}", _dark: "{colors.red.400}" },
+        },
+      },
     },
   },
 });
