@@ -6,6 +6,8 @@
 
 - `preset-base`: 基礎となるPandaプリセット
 - `preset`: コンポーネントのレシピを内包したPandaプリセット
+- `components`: Ark UIのコンポーネントをレシピでスタイリングしたReactコンポーネント
+- `core`: `preset`と`components`を内包したコアパッケージ
 - `styled-system`: スタイルシステム
 
 ## リンク

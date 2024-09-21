@@ -40,8 +40,7 @@
   },
   "dependencies": {
     "@cieloazul310/digital-go-panda-preset": "^0.0.1",
-    "@cieloazul310/digital-go-react-components": "^0.0.1",
-    "@import-map-package/styled-system": "^0.0.1"
+    "@cieloazul310/digital-go-react-components": "^0.0.1"
   },
   "devDependencies": {
     "@pandacss/dev": "^0.46.0",
@@ -54,6 +53,7 @@
   },
   "peerDependencies": {
     "@ark-ui/react": "^3.0.0",
+    "@import-map-package/styled-system": "^0.0.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   }
