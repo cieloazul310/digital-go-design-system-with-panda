@@ -30,6 +30,15 @@
         "default": "./dist/preset.mjs"
       },
       "require": "./dist/preset.js"
+    },
+    "./utils": {
+      "source": "./src/utils.ts",
+      "types": "./dist/utils.d.ts",
+      "import": {
+        "types": "./dist/utils.d.mts",
+        "default": "./dist/utils.mjs"
+      },
+      "require": "./dist/utils.js"
     }
   },
   "scripts": {
@@ -39,6 +48,7 @@
     "format": "prettier --parser typescript --write ."
   },
   "dependencies": {
+    "@cieloazul310/digital-go-panda-utils": "^0.0.1",
     "@cieloazul310/digital-go-panda-preset": "^0.0.1",
     "@cieloazul310/digital-go-react-components": "^0.0.1"
   },
