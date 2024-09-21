@@ -1,16 +1,12 @@
 import { definePreset } from "@pandacss/dev";
 import presetBase from "@cieloazul310/digital-go-pandacss-plugin";
-import accordion from "./accordion";
-import button from "./button";
+import recipes from "./recipes";
 
 export const preset = definePreset({
-  name: "with-import-map-package",
+  name: "digital-go-panda-preset",
   presets: [presetBase],
   theme: {
-    recipes: {
-      accordion,
-      button,
-    },
+    recipes,
   },
 });
 

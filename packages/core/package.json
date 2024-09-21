@@ -1,0 +1,60 @@
+{
+  "name": "@cieloazul310/digital-go-panda",
+  "version": "0.0.1",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": "./dist/index.js"
+    },
+    "./button": {
+      "source": "./src/components/button.tsx",
+      "types": "./dist/components/button.d.ts",
+      "import": {
+        "types": "./dist/components/button.d.mts",
+        "default": "./dist/components/button.mjs"
+      },
+      "require": "./dist/components/button.js"
+    },
+    "./preset": {
+      "source": "./src/preset.ts",
+      "types": "./dist/preset.d.ts",
+      "import": {
+        "types": "./dist/preset.d.mts",
+        "default": "./dist/preset.mjs"
+      },
+      "require": "./dist/preset.js"
+    }
+  },
+  "scripts": {
+    "prepare": "panda codegen",
+    "build": "tsup",
+    "dev": "npm run build -- --watch",
+    "format": "prettier --parser typescript --write ."
+  },
+  "dependencies": {
+    "@cieloazul310/digital-go-panda-preset": "^0.0.1",
+    "@cieloazul310/digital-go-react-components": "^0.0.1",
+    "@import-map-package/styled-system": "^0.0.1"
+  },
+  "devDependencies": {
+    "@pandacss/dev": "^0.46.0",
+    "@types/react": "^18.3.6",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tsup": "8.3.0",
+    "typescript": "5.6.2"
+  },
+  "peerDependencies": {
+    "@ark-ui/react": "^3.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  }
+}
