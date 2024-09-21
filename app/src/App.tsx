@@ -1,6 +1,6 @@
 import { css } from "@import-map-package/styled-system/css";
 import { Container, HStack } from "@import-map-package/styled-system/jsx";
-import { Button } from "@import-map-package/ui-lib";
+import { Button } from "@cieloazul310/digital-go-panda/button";
 
 function App() {
   return (

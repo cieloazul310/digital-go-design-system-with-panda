@@ -1,9 +1,8 @@
 import { defineConfig } from "@pandacss/dev";
-import presetBase from "@import-map-package/preset-base";
-import preset from "./src/preset";
+import preset from "@cieloazul310/digital-go-panda-preset";
 
 export default defineConfig({
-  presets: ["@pandacss/dev/presets", presetBase, preset],
+  presets: ["@pandacss/dev/presets", preset],
   // Whether to use css reset
   preflight: true,
 

@@ -1,59 +1,28 @@
-# module-resolution
+# デザイン庁デザインシステム +　Ark UI + Panda CSS
 
-## with-import-map-package
+デジタル庁デザインシステムをArk UI + Panda CSSで実装するためのリポジトリ。
 
-### Description
+## 構成
 
-This example shows how to use the `config.importMap` option to indicate where each of the `outdir` (`styled-system` by
-default) entrypoints should be imported from.
+- `preset-base`: 基礎となるPandaプリセット
+- `preset`: コンポーネントのレシピを内包したPandaプリセット
+- `components`: Ark UIのコンポーネントをレシピでスタイリングしたReactコンポーネント
+- `core`: `preset`と`components`を内包したコアパッケージ
+- `styled-system`: スタイルシステム
 
-### Problem
+## リンク
 
-When using `panda codegen` to generate the runtime code both in your `ui-lib` and in your `app`, the runtime code will
-end up being duplicated, because it will be imported twice:
+デジタル庁デザインシステムβ版  
+<https://design.digital.go.jp/>
 
-- once from the `ui-lib/styled-system`, used by your components (`Button` here)
-- once from the `app/styled-system` by your app code
+React サンプルコンポーネント (Tailwind)  
+<https://github.com/digital-go-jp/design-system-example-components>
 
-You might also just want to generate the runtime code somewhere and import it from another place. This option solves
-that.
+Tailwindテーマプラグイン  
+<https://github.com/digital-go-jp/tailwind-theme-plugin>
 
-### Solution
+Ark UI  
+<https://ark-ui.com/>
 
-When you import from the same module specifier both in your `ui-lib` and in your `app`, the generated JS runtime code
-will only be imported once.
-
-> (`yyy` is the module specifier in `import xxx from yyy`)
-
-**You will also need to mark the `outdir` (`styled-system` in this example) as `external` using your favorite bundler
-(tsup, vite, rollup, etc.) on the library (`ui-lib`) side so that the runtime code is not bundled twice, but only once
-in your `app`.**
-
----
-
-### Usage
-
-```ts
-outdir: '../generated',
-// Equivalent to:
-// `importMap: "@import-map-package/styled-system"`
-importMap: {
-    css: '@import-map-package/styled-system/css',
-    recipes: '@import-map-package/styled-system/recipes',
-    patterns: '@import-map-package/styled-system/patterns',
-    jsx: '@import-map-package/styled-system/jsx',
-},
-```
-
-This will generate the `outdir` folder in your monorepo in the same level as any other workspace packages.
-
-You are essentially telling Panda where to import the `outdir` entrypoints from, giving you freedom to generate the
-`outdir` anywhere you want. This is a powerful option that gives you full control on the package entrypoints, by letting
-you create your own `package.json` file for the `outdir` folder.
-
-In this example, the `@import-map-package/styled-system` is resolved at runtime using a package.json dependency, just
-like any other package.
-
-> There are other ways to achieve the same result, such as using the ESM native
-> [`package.json`.`imports`](https://nodejs.org/api/packages.html#imports) for the runtime and using `tsconfig` path
-> aliases for type suggestions.
+Panda CSS  
+<https://panda-css.com/>
