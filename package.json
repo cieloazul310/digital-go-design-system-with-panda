@@ -1,5 +1,5 @@
 {
-  "name": "panda-with-import-map-package",
+  "name": "digital-go-design-system-with-panda",
   "private": true,
   "version": "1.0.0",
   "engines": {
@@ -11,7 +11,7 @@
     "packages/*",
     "app"
   ],
-  "description": "with-import-map-package",
+  "description": "デザイン庁デザインシステムをPanda CSSで実装するリポジトリ",
   "author": "@cieloazul310",
   "license": "ISC",
   "scripts": {

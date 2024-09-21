@@ -13,14 +13,23 @@
       },
       "require": "./dist/index.js"
     },
-    "./preset": {
-      "source": "./src/preset.ts",
-      "types": "./dist/preset.d.ts",
+    "./button": {
+      "source": "./src/components/button/index.tsx",
+      "types": "./dist/components/button/index.d.ts",
       "import": {
-        "types": "./dist/preset.d.mts",
-        "default": "./dist/preset.mjs"
+        "types": "./dist/components/button/index.d.mts",
+        "default": "./dist/components/button/index.mjs"
       },
-      "require": "./dist/preset.js"
+      "require": "./dist/components/button/index.js"
+    },
+    "./preset": {
+      "source": "./src/preset/index.ts",
+      "types": "./dist/preset/index.d.ts",
+      "import": {
+        "types": "./dist/preset/index.d.mts",
+        "default": "./dist/preset/index.mjs"
+      },
+      "require": "./dist/preset/index.js"
     }
   },
   "scripts": {
@@ -30,10 +39,10 @@
     "format": "prettier --parser typescript --write ."
   },
   "dependencies": {
+    "@cieloazul310/digital-go-pandacss-plugin": "^0.0.1",
     "@import-map-package/styled-system": "^0.0.1"
   },
   "devDependencies": {
-    "@import-map-package/preset-base": "^0.0.1",
     "@pandacss/dev": "^0.46.0",
     "@types/react": "^18.3.6",
     "@types/react-dom": "^18.3.0",

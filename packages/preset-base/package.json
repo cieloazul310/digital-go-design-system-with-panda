@@ -1,5 +1,5 @@
 {
-  "name": "@import-map-package/preset-base",
+  "name": "@cieloazul310/digital-go-pandacss-plugin",
   "version": "0.0.1",
   "types": "./dist/index.d.ts",
   "main": "./dist/index.js",

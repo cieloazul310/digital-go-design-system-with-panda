@@ -1,7 +1,7 @@
 import { defineConfig } from "tsup";
 
 export default defineConfig({
-  entry: ["src/index.ts", "src/preset.ts"],
+  entry: ["src"],
   format: ["esm", "cjs"],
   external: ["@import-map-package/styled-system"],
   dts: true,

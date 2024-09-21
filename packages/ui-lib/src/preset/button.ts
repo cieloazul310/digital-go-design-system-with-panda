@@ -1,20 +1,31 @@
-import { definePreset, defineRecipe } from "@pandacss/dev";
-import presetBase from "@import-map-package/preset-base";
+import { defineRecipe } from "@pandacss/dev";
 
-const buttonRecipe = defineRecipe({
+const button = defineRecipe({
   className: "button",
   description: "The styles for the Button component",
-  base: {},
+  base: {
+    borderWidth: "1px",
+    _focusVisible: {
+      outlineWidth: "4px",
+      outlineColor: "black",
+      outlineOffset: "calc(2/16*1rem)",
+      borderInset: "md",
+    },
+    _disabled: {
+      pointerEvents: "none",
+    },
+  },
   variants: {
     variant: {
       "solid-fill": {
         bg: {
-          base: "blue.900",
-          _hover: "blue.1000",
-          _active: "blue.1200",
+          base: "keyColor.900",
+          _hover: "keyColor.1000",
+          _active: "keyColor.1200",
           _disabled: "solid-grey.300",
         },
         color: { base: "white", _disabled: "solid-grey.50" },
+        borderColor: "transparent",
         textDecoration: {
           base: "none",
           _hover: "underline",
@@ -22,15 +33,14 @@ const buttonRecipe = defineRecipe({
         },
       },
       outline: {
-        bg: { base: "white", _hover: "blue.200", _active: "blue.300" },
+        bg: { base: "white", _hover: "keyColor.200", _active: "keyColor.300" },
         color: {
-          base: "blue.900",
-          _hover: "blue.1000",
-          _active: "blue.1200",
+          base: "keyColor.900",
+          _hover: "keyColor.1000",
+          _active: "keyColor.1200",
           _disabled: "solid-grey.300",
         },
-        borderWidth: "1px",
-        borderColor: "blue.900",
+        borderColor: "keyColor.900",
         textDecoration: {
           base: "none",
           _hover: "underline",
@@ -40,17 +50,18 @@ const buttonRecipe = defineRecipe({
       text: {
         bg: {
           base: "transparent",
-          _hover: "blue.50",
-          active: "blue.100",
+          _hover: "keyColor.50",
+          _active: "keyColor.100",
           _focusVisible: "yellow.300",
           _disabled: "transparent",
         },
         color: {
-          base: "blue.900",
-          _hover: "blue.1000",
-          _active: "blue.1200",
+          base: "keyColor.900",
+          _hover: "keyColor.1000",
+          _active: "keyColor.1200",
           _disabled: "solid-grey.300",
         },
+        borderColor: "transparent",
         textDecoration: "underline",
       },
     },
@@ -60,7 +71,7 @@ const buttonRecipe = defineRecipe({
         minHeight: "56px",
         textStyle: "oln-16B-1",
         p: 4,
-        rounded: "lg",
+        rounded: "sm",
       },
       md: {
         minWidth: "96px",
@@ -68,7 +79,7 @@ const buttonRecipe = defineRecipe({
         textStyle: "oln-16B-1",
         px: 4,
         py: 3,
-        rounded: "lg",
+        rounded: "sm",
       },
       sm: {
         minWidth: "80px",
@@ -76,7 +87,7 @@ const buttonRecipe = defineRecipe({
         textStyle: "oln-16B-1",
         px: 3,
         py: 1.5,
-        rounded: "md",
+        rounded: "sm",
       },
       xs: {
         minWidth: "72px",
@@ -84,6 +95,7 @@ const buttonRecipe = defineRecipe({
         textStyle: "oln-14B-1",
         px: 2,
         py: 1.5,
+        rounded: "xs",
       },
     },
   },
@@ -93,14 +105,4 @@ const buttonRecipe = defineRecipe({
   },
 });
 
-export const preset = definePreset({
-  name: "with-import-map-package",
-  presets: [presetBase],
-  theme: {
-    recipes: {
-      button: buttonRecipe,
-    },
-  },
-});
-
-export default preset;
+export default button;
