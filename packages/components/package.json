@@ -30,7 +30,7 @@
     "format": "prettier --parser typescript --write ."
   },
   "dependencies": {
-    "@cieloazul310/digital-go-panda-preset": "^0.0.1",
+    "@cieloazul310/digital-go-pandacss-preset": "^0.0.1",
     "@import-map-package/styled-system": "^0.0.1"
   },
   "devDependencies": {

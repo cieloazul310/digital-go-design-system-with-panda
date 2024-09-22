@@ -4,6 +4,7 @@
 
 ## 構成
 
+- `utils`: ユーティリティパッケージ
 - `preset-base`: 基礎となるPandaプリセット
 - `preset`: コンポーネントのレシピを内包したPandaプリセット
 - `components`: Ark UIのコンポーネントをレシピでスタイリングしたReactコンポーネント

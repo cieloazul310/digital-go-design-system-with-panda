@@ -1,4 +1,4 @@
-type Palette =
+export type Palette =
   | "sea"
   | "sumi"
   | "forest"

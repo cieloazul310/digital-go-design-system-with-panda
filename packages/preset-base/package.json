@@ -20,14 +20,12 @@
     "format": "prettier --parser typescript --write ."
   },
   "dependencies": {
+    "@cieloazul310/digital-go-pandacss-utils": "^0.0.1",
     "@digital-go-jp/design-tokens": "^0.1.6"
   },
   "devDependencies": {
     "@pandacss/dev": "^0.46.0",
     "tsup": "8.3.0",
     "typescript": "5.6.2"
-  },
-  "peerDependencies": {
-    "@cieloazul310/digital-go-panda-utils": "^0.0.1"
   }
 }

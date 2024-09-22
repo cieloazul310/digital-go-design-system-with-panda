@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@ark-ui/react": "^3.12.1",
-    "@cieloazul310/digital-go-panda": "^0.0.1",
+    "@cieloazul310/digital-go-pandacss": "^0.0.1",
     "@import-map-package/styled-system": "^0.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"

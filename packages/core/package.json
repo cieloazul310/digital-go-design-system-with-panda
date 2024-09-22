@@ -1,5 +1,5 @@
 {
-  "name": "@cieloazul310/digital-go-panda",
+  "name": "@cieloazul310/digital-go-pandacss",
   "version": "0.0.1",
   "types": "./dist/index.d.ts",
   "main": "./dist/index.js",
@@ -48,8 +48,8 @@
     "format": "prettier --parser typescript --write ."
   },
   "dependencies": {
-    "@cieloazul310/digital-go-panda-utils": "^0.0.1",
-    "@cieloazul310/digital-go-panda-preset": "^0.0.1",
+    "@cieloazul310/digital-go-pandacss-utils": "^0.0.1",
+    "@cieloazul310/digital-go-pandacss-preset": "^0.0.1",
     "@cieloazul310/digital-go-react-components": "^0.0.1"
   },
   "devDependencies": {

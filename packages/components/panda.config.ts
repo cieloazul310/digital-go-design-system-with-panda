@@ -1,5 +1,5 @@
 import { defineConfig } from "@pandacss/dev";
-import preset from "@cieloazul310/digital-go-panda-preset";
+import preset from "@cieloazul310/digital-go-pandacss-preset";
 
 export default defineConfig({
   presets: ["@pandacss/dev/presets", preset],

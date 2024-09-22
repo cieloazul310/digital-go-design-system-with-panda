@@ -1,4 +1,4 @@
-import { createKeyColor } from "@cieloazul310/digital-go-panda-utils";
+import { createKeyColor } from "@cieloazul310/digital-go-pandacss-utils";
 
 const colors = {
   keyColor: createKeyColor("blue"),

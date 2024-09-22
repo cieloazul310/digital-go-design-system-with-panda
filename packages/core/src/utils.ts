@@ -1,1 +1,1 @@
-export * from "@cieloazul310/digital-go-panda-utils";
+export * from "@cieloazul310/digital-go-pandacss-utils";

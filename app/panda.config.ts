@@ -1,6 +1,6 @@
 import { defineConfig } from "@pandacss/dev";
-import { preset } from "@cieloazul310/digital-go-panda/preset";
-import { createKeyColor } from "@cieloazul310/digital-go-panda/utils";
+import { preset } from "@cieloazul310/digital-go-pandacss/preset";
+import { createKeyColor } from "@cieloazul310/digital-go-pandacss/utils";
 
 export default defineConfig({
   presets: ["@pandacss/dev/presets", preset],
@@ -18,7 +18,7 @@ export default defineConfig({
     extend: {
       semanticTokens: {
         colors: {
-          keyColor: createKeyColor("wood"),
+          keyColor: createKeyColor("blue"),
         },
       },
     },
