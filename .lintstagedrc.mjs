@@ -1,3 +1,6 @@
 export default {
-  "**/*.{js,mjs,cjs,tsx,ts,tsx}": ["prettier --parser typescript --write"],
+  "**/*.{js,mjs,cjs,tsx,ts,tsx}": [
+    "eslint --fix",
+    "prettier --parser typescript --write",
+  ],
 };
