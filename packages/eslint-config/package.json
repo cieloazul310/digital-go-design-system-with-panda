@@ -1,0 +1,51 @@
+{
+  "name": "@repo/eslint-config",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./index.mjs",
+  "exports": {
+    ".": {
+      "source": "./index.mjs",
+      "import": "./index.mjs"
+    },
+    "./library": {
+      "source": "./library.mjs",
+      "import": "./library.mjs"
+    },
+    "./react-app": {
+      "source": "./react-app.mjs",
+      "import": "./react-app.mjs"
+    },
+    "./react-internal": {
+      "source": "./react-internal.mjs",
+      "import": "./react-internal.mjs"
+    }
+  },
+  "files": [
+    "library.mjs",
+    "app.mjs",
+    "react-internal.mjs"
+  ],
+  "dependencies": {
+    "@eslint/js": "^9.11.1",
+    "@typescript-eslint/parser": "^8.7.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.3",
+    "eslint-plugin-import-x": "^4.3.0",
+    "eslint-plugin-jsx-a11y": "^6.10.0",
+    "eslint-plugin-react": "^7.36.1",
+    "eslint-plugin-react-refresh": "^0.4.12",
+    "globals": "^15.9.0",
+    "typescript-eslint": "^8.7.0"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "^0.0.0",
+    "@types/eslint__js": "^8.42.3",
+    "eslint": "^9.11.1",
+    "typescript": "5.6.2"
+  },
+  "peerDependencies": {
+    "eslint": "^9.0.0"
+  }
+}

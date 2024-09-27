@@ -27,6 +27,7 @@
     "prepare": "panda codegen",
     "build": "tsup",
     "dev": "npm run build -- --watch",
+    "eslint": "eslint src --fix",
     "format": "prettier --parser typescript --write ."
   },
   "dependencies": {
@@ -35,8 +36,11 @@
   },
   "devDependencies": {
     "@pandacss/dev": "^0.46.0",
+    "@repo/eslint-config": "^0.0.0",
+    "@repo/typescript-config": "^0.0.0",
     "@types/react": "^18.3.6",
     "@types/react-dom": "^18.3.0",
+    "eslint": "^9.11.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tsup": "8.3.0",

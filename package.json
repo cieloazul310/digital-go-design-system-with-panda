@@ -15,10 +15,12 @@
   "author": "@cieloazul310",
   "license": "ISC",
   "scripts": {
+    "prepare": "git config --local core.hooksPath .githooks",
     "turbo": "turbo",
     "dev": "turbo run dev --parallel",
     "build": "turbo run build",
     "build:package": "turbo run build --filter='./packages/*'",
+    "lint-staged": "lint-staged",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
