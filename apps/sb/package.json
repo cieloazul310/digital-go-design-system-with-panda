@@ -1,0 +1,46 @@
+{
+  "name": "sb",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "prepare": "panda codegen",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@ark-ui/react": "^3.12.1",
+    "@cieloazul310/digital-go-pandacss": "^0.0.1",
+    "@import-map-package/styled-system": "^0.0.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.9.0",
+    "@pandacss/dev": "^0.46.0",
+    "@repo/eslint-config": "^0.0.0",
+    "@repo/typescript-config": "^0.0.0",
+    "@storybook/addon-essentials": "^8.3.3",
+    "@storybook/addon-interactions": "^8.3.3",
+    "@storybook/addon-links": "^8.3.3",
+    "@storybook/addon-themes": "^8.3.3",
+    "@storybook/addon-onboarding": "^8.3.3",
+    "@storybook/blocks": "^8.3.3",
+    "@storybook/react": "^8.3.3",
+    "@storybook/react-vite": "^8.3.3",
+    "@storybook/test": "^8.3.3",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^9.11.1",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-storybook": "^0.9.0",
+    "storybook": "^8.3.3",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.6"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
+  }
+}
