@@ -1,0 +1,42 @@
+export const paragraphTextStyles = [
+  "std-22N-5",
+  "std-20N-5",
+  "std-18N-6",
+  "std-17N-7",
+  "std-16N-7",
+  "std-20M-5",
+  "std-17M-7",
+  "std-16M-7",
+  "std-22B-5",
+  "std-20B-5",
+  "std-18B-6",
+  "std-17B-7",
+  "std-16B-7",
+];
+
+export const headingTextStyles = [
+  "dsp-64N-4",
+  "dsp-57N-4",
+  "dsp-48N-4",
+  "std-45B-4",
+  "std-36B-4",
+  "std-32B-5",
+  "std-28B-5",
+  "std-24B-5",
+  "std-22B-5",
+  "std-20B-5",
+  "std-32M-5",
+  "std-28M-5",
+  "std-24M-5",
+  "std-20M-5",
+  "std-45N-4",
+  "std-36N-4",
+  "std-32N-5",
+  "std-28N-5",
+  "std-26N-5",
+  "std-24N-5",
+  "std-22N-5",
+  "std-20N-5",
+];
+
+export default [...headingTextStyles, ...paragraphTextStyles];
