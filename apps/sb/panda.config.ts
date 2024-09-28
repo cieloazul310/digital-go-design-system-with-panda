@@ -1,6 +1,7 @@
 import { defineConfig } from "@pandacss/dev";
 import preset from "@cieloazul310/digital-go-pandacss/preset";
 import { createKeyColor } from "@cieloazul310/digital-go-pandacss/utils";
+import typography from "./stories/typography";
 
 export default defineConfig({
   presets: ["@pandacss/dev/presets", preset],
@@ -25,6 +26,13 @@ export default defineConfig({
   },
 
   staticCss: {
+    css: [
+      {
+        properties: {
+          textStyle: [...typography],
+        },
+      },
+    ],
     recipes: "*",
   },
 

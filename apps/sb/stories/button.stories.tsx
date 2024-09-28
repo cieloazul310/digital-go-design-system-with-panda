@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 import { Button } from "@cieloazul310/digital-go-pandacss/button";
+import { css } from "@import-map-package/styled-system/css";
 import { button } from "@import-map-package/styled-system/recipes";
 
 const meta: Meta<typeof Button> = {
@@ -17,6 +18,7 @@ const meta: Meta<typeof Button> = {
     },
   },
   args: {
+    disabled: false,
     onClick: fn(),
   },
 };
@@ -47,5 +49,14 @@ export const WithAsChild: Story = {
       </a>
     ),
     asChild: true,
+  },
+};
+
+export const FullWidth: Story = {
+  args: {
+    children: "Full Width",
+    ...css.raw({
+      width: "full",
+    }),
   },
 };

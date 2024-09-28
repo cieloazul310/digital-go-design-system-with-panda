@@ -6,6 +6,9 @@ const button = defineRecipe({
     "ボタンは、主にアクション実行またはページ遷移のためのトリガーとして使用します。画面内におけるボタンの重要度に応じて使い分け可能な複数のスタイルがあります。",
   base: {
     borderWidth: "1px",
+    display: "inline-flex",
+    alignItems: "center",
+    justifyContent: "center",
     _focusVisible: {
       outlineWidth: "4px",
       outlineColor: "black",
