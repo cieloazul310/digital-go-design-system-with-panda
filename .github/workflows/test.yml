@@ -1,18 +1,12 @@
-name: Storybook
+name: Test
 
 on:
-  push:
+  pull_request:
     branches:
       - main
 
       # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
@@ -55,12 +49,11 @@ jobs:
           cache: ${{ steps.detect-package-manager.outputs.manager }}
           cache-dependency-path: ./package-lock.json
 
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+
+      #- name: Test
+      #  run: ${{ steps.detect-package-manager.outputs.manager }} run test
 
       - name: Build Packages
         run: ${{ steps.detect-package-manager.outputs.manager }} run build:package
@@ -68,21 +61,3 @@ jobs:
       - name: Build storybook
         run: ${{ steps.detect-package-manager.outputs.manager }} run build-storybook
         working-directory: ${{ env.BUILD_PATH }}
-
-      - name: Upload production-ready build files
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ${{ env.BUILD_PATH}}/storybook-static
-
-  deploy:
-    name: Deploy
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
