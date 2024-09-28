@@ -26,6 +26,6 @@ export default defineConfig({
   jsxFramework: "react",
 
   // The output directory for your css system
-  outdir: "../../packages/generated/dist",
+  outdir: "styled-system",
   importMap: "@import-map-package/styled-system",
 });

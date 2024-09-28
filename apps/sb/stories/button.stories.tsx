@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { fn } from "@storybook/test";
 import { Button } from "@cieloazul310/digital-go-pandacss/button";
 import { button } from "@import-map-package/styled-system/recipes";
 
@@ -14,6 +15,9 @@ const meta: Meta<typeof Button> = {
       control: "inline-radio",
       options: button.variantMap.size,
     },
+  },
+  args: {
+    onClick: fn(),
   },
 };
 
@@ -32,5 +36,16 @@ export const Outline: Story = {
     ...button.raw({
       variant: "outline",
     }),
+  },
+};
+
+export const WithAsChild: Story = {
+  args: {
+    children: (
+      <a href="https://cieloazul310.github.io" target="_blank">
+        水戸地図
+      </a>
+    ),
+    asChild: true,
   },
 };
