@@ -9,22 +9,27 @@
   "packageManager": "npm@10.8.3",
   "workspaces": [
     "packages/*",
-    "app"
+    "apps/*"
   ],
   "description": "デザイン庁デザインシステムをPanda CSSで実装するリポジトリ",
   "author": "@cieloazul310",
   "license": "ISC",
   "scripts": {
+    "prepare": "git config --local core.hooksPath .githooks",
     "turbo": "turbo",
     "dev": "turbo run dev --parallel",
     "build": "turbo run build",
     "build:package": "turbo run build --filter='./packages/*'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint-staged": "lint-staged",
+    "test": "vitest"
   },
   "devDependencies": {
+    "eslint": "^9.11.1",
+    "lint-staged": "^15.2.0",
     "prettier": "^3.3.3",
     "tsup": "^8.2.4",
     "turbo": "^2.1.2",
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.2",
+    "vitest": "^2.1.1"
   }
 }

@@ -1,0 +1,30 @@
+{
+  "name": "@cieloazul310/digital-go-pandacss-utils",
+  "version": "0.0.1",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "npm run build -- --watch",
+    "eslint": "eslint src --fix",
+    "format": "prettier --parser typescript --write ."
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "^0.0.0",
+    "@repo/typescript-config": "^0.0.0",
+    "eslint": "^9.11.1",
+    "tsup": "8.3.0",
+    "typescript": "5.6.2"
+  }
+}

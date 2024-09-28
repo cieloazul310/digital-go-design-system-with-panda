@@ -13,7 +13,7 @@ const borderInset = defineUtility({
     })();
 
     return {
-      boxShadow: `inset 0 0 0 ${width} ${token("colors.ring.300")}`,
+      boxShadow: `inset 0 0 0 ${width} ${token("colors.ring")}`,
     };
   },
 });

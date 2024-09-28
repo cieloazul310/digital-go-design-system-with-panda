@@ -1,5 +1,6 @@
 import { defineConfig } from "@pandacss/dev";
-import { preset } from "@cieloazul310/digital-go-panda/preset";
+import { preset } from "@cieloazul310/digital-go-pandacss/preset";
+import { createKeyColor } from "@cieloazul310/digital-go-pandacss/utils";
 
 export default defineConfig({
   presets: ["@pandacss/dev/presets", preset],
@@ -7,7 +8,7 @@ export default defineConfig({
   preflight: true,
 
   // Where to look for your css declarations
-  include: ["./src/**/*.{js,jsx,ts,tsx}"],
+  include: ["./stories/**/*.{js,jsx,ts,tsx}"],
 
   // Files to exclude
   exclude: [],
@@ -17,16 +18,18 @@ export default defineConfig({
     extend: {
       semanticTokens: {
         colors: {
-          primary: {
-            value: { base: "{colors.teal.600}", _dark: "{colors.teal.400}" },
-          },
+          keyColor: createKeyColor("forest"),
         },
       },
     },
   },
-  jsxFramework: "react",
 
+  staticCss: {
+    recipes: "*",
+  },
+
+  jsxFramework: "react",
   // The output directory for your css system
-  outdir: "../packages/generated/dist",
+  outdir: "styled-system",
   importMap: "@import-map-package/styled-system",
 });

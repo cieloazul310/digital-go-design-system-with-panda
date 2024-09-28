@@ -2,7 +2,8 @@ import { defineRecipe } from "@pandacss/dev";
 
 const button = defineRecipe({
   className: "button",
-  description: "The styles for the Button component",
+  description:
+    "ボタンは、主にアクション実行またはページ遷移のためのトリガーとして使用します。画面内におけるボタンの重要度に応じて使い分け可能な複数のスタイルがあります。",
   base: {
     borderWidth: "1px",
     _focusVisible: {

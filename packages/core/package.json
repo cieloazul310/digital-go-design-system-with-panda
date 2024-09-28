@@ -1,5 +1,5 @@
 {
-  "name": "@cieloazul310/digital-go-panda",
+  "name": "@cieloazul310/digital-go-pandacss",
   "version": "0.0.1",
   "types": "./dist/index.d.ts",
   "main": "./dist/index.js",
@@ -30,22 +30,36 @@
         "default": "./dist/preset.mjs"
       },
       "require": "./dist/preset.js"
+    },
+    "./utils": {
+      "source": "./src/utils.ts",
+      "types": "./dist/utils.d.ts",
+      "import": {
+        "types": "./dist/utils.d.mts",
+        "default": "./dist/utils.mjs"
+      },
+      "require": "./dist/utils.js"
     }
   },
   "scripts": {
     "prepare": "panda codegen",
     "build": "tsup",
     "dev": "npm run build -- --watch",
+    "eslint": "eslint src --fix",
     "format": "prettier --parser typescript --write ."
   },
   "dependencies": {
-    "@cieloazul310/digital-go-panda-preset": "^0.0.1",
+    "@cieloazul310/digital-go-pandacss-utils": "^0.0.1",
+    "@cieloazul310/digital-go-pandacss-preset": "^0.0.1",
     "@cieloazul310/digital-go-react-components": "^0.0.1"
   },
   "devDependencies": {
     "@pandacss/dev": "^0.46.0",
+    "@repo/eslint-config": "^0.0.0",
+    "@repo/typescript-config": "^0.0.0",
     "@types/react": "^18.3.6",
     "@types/react-dom": "^18.3.0",
+    "eslint": "^9.11.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tsup": "8.3.0",
