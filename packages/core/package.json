@@ -42,15 +42,14 @@
     }
   },
   "scripts": {
-    "prepare": "panda codegen",
     "build": "tsup",
     "dev": "npm run build -- --watch",
     "eslint": "eslint src --fix",
     "format": "prettier --parser typescript --write ."
   },
   "dependencies": {
-    "@cieloazul310/digital-go-pandacss-utils": "^0.0.1",
     "@cieloazul310/digital-go-pandacss-preset": "^0.0.1",
+    "@cieloazul310/digital-go-pandacss-utils": "^0.0.1",
     "@cieloazul310/digital-go-react-components": "^0.0.1"
   },
   "devDependencies": {
