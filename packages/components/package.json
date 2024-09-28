@@ -25,6 +25,7 @@
   },
   "scripts": {
     "panda": "panda codegen",
+    "prebuild": "npm run panda",
     "build": "tsup",
     "dev": "npm run build -- --watch",
     "eslint": "eslint src --fix",
