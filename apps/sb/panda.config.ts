@@ -19,7 +19,7 @@ export default defineConfig({
     extend: {
       semanticTokens: {
         colors: {
-          keyColor: createKeyColor("forest"),
+          keyColor: createKeyColor("blue"),
         },
       },
     },

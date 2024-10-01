@@ -1,6 +1,10 @@
+/**
+ * source:
+ * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Link/Link.tsx
+ */
 import { defineRecipe } from "@pandacss/dev";
 
-const link = defineRecipe({
+export default defineRecipe({
   className: "link",
   description:
     "リンクテキストは通常、色や下線などの視覚的な表現で通常のテキストと区別され、URLと関連づけられたテキスト文字列です。この関連付けをハイパーリンクと呼び、これはウェブをウェブたらしめている基本的な概念のひとつです。",
@@ -40,5 +44,3 @@ const link = defineRecipe({
     */
   },
 });
-
-export default link;

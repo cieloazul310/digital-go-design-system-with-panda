@@ -1,6 +1,10 @@
+/**
+ * source:
+ * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Button/Button.tsx
+ */
 import { defineRecipe } from "@pandacss/dev";
 
-const button = defineRecipe({
+export default defineRecipe({
   className: "button",
   description:
     "ボタンは、主にアクション実行またはページ遷移のためのトリガーとして使用します。画面内におけるボタンの重要度に応じて使い分け可能な複数のスタイルがあります。",
@@ -26,9 +30,9 @@ const button = defineRecipe({
           base: "keyColor.900",
           _hover: "keyColor.1000",
           _active: "keyColor.1200",
-          _disabled: "solid-grey.300",
+          _disabled: "solid-gray.300",
         },
-        color: { base: "white", _disabled: "solid-grey.50" },
+        color: { base: "white", _disabled: "solid-gray.50" },
         borderColor: "transparent",
         textDecoration: {
           base: "none",
@@ -42,7 +46,7 @@ const button = defineRecipe({
           base: "keyColor.900",
           _hover: "keyColor.1000",
           _active: "keyColor.1200",
-          _disabled: "solid-grey.300",
+          _disabled: "solid-gray.300",
         },
         borderColor: "keyColor.900",
         textDecoration: {
@@ -63,7 +67,7 @@ const button = defineRecipe({
           base: "keyColor.900",
           _hover: "keyColor.1000",
           _active: "keyColor.1200",
-          _disabled: "solid-grey.300",
+          _disabled: "solid-gray.300",
         },
         borderColor: "transparent",
         textDecoration: "underline",
@@ -73,14 +77,14 @@ const button = defineRecipe({
       lg: {
         minWidth: "136px",
         minHeight: "56px",
-        textStyle: "oln-16B-1",
+        textStyle: "oln-16B-100",
         p: 4,
         rounded: "sm",
       },
       md: {
         minWidth: "96px",
         minHeight: "48px",
-        textStyle: "oln-16B-1",
+        textStyle: "oln-16B-100",
         px: 4,
         py: 3,
         rounded: "sm",
@@ -88,7 +92,7 @@ const button = defineRecipe({
       sm: {
         minWidth: "80px",
         minHeight: "36px",
-        textStyle: "oln-16B-1",
+        textStyle: "oln-16B-100",
         px: 3,
         py: 1.5,
         rounded: "sm",
@@ -96,7 +100,7 @@ const button = defineRecipe({
       xs: {
         minWidth: "72px",
         minHeight: "28px",
-        textStyle: "oln-14B-1",
+        textStyle: "oln-14B-100",
         px: 2,
         py: 1.5,
         rounded: "xs",
@@ -108,5 +112,3 @@ const button = defineRecipe({
     size: "md",
   },
 });
-
-export default button;

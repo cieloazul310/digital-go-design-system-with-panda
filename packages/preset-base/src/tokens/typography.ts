@@ -91,37 +91,42 @@ export const fontWeights = {
 };
 
 export const lineHeights = {
-  "1": {
+  "100": {
     value: tokens.LineHeight["1_0"].value,
     description:
       "主にボタンなど、コンポーネント内で使用されるワンラインのテキストで上下の余白を持っていない行間",
   },
-  "2": {
+  "120": {
     value: tokens.LineHeight["1_2"].value,
     description:
       "主に管理画面や業務システムの画面等で、膨大な情報を一覧表示したりなど、限られた画面領域での表示情報量を最優先した行間",
   },
-  "3": {
+  "130": {
     value: tokens.LineHeight["1_3"].value,
     description:
       "主に管理画面や業務システムの画面等で使用する、表示情報量を優先した行間",
   },
-  "4": {
+  "140": {
     value: tokens.LineHeight["1_4"].value,
     description: "見出しなど、やや大きな文字に使用される行間",
   },
-  "5": {
+  "150": {
     value: tokens.LineHeight["1_5"].value,
     description:
       "一般的なウェブサイトの本文や見出しで使用される行間（本文の行間としては最低限度）",
   },
-  "6": {
+  "160": {
     value: tokens.LineHeight["1_6"].value,
     description: "一般的なウェブサイトの本文で使用される行間",
   },
-  "7": {
+  "170": {
     value: tokens.LineHeight["1_7"].value,
     description:
       "一般的なウェブサイトの本文で使用する、心理的負荷の軽減を考慮した行間",
+  },
+  "175": {
+    value: tokens.LineHeight["1_75"].value,
+    description:
+      "一般的なウェブサイトの本文で使用する、心理的負荷の軽減を考慮した行間。採用するグリッド幅やフォントサイズに応じて170%と使い分ける",
   },
 };

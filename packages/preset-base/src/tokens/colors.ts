@@ -228,7 +228,7 @@ const colors = {
     1100: { value: tokens.Color.Primitive.Purple[1100].value },
     1200: { value: tokens.Color.Primitive.Purple[1200].value },
   },
-  "solid-grey": {
+  "solid-gray": {
     50: { value: tokens.Color.Neutral.SolidGrey[50].value },
     100: { value: tokens.Color.Neutral.SolidGrey[100].value },
     200: { value: tokens.Color.Neutral.SolidGrey[200].value },

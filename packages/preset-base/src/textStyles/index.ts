@@ -1,6 +1,20 @@
 import { defineTextStyles } from "@pandacss/dev";
 
-const textStylesMap = {
+type TextStylesMap = Record<
+  string,
+  {
+    fontFamily: string;
+    description: string;
+    variants: {
+      fontSize: number;
+      fontWeight: string;
+      lineHeight: number;
+      letterSpacing?: number;
+    }[];
+  }
+>;
+
+const textStylesMap: TextStylesMap = {
   dsp: {
     fontFamily: "body",
     description:
@@ -9,17 +23,17 @@ const textStylesMap = {
       {
         fontSize: 64,
         fontWeight: "N",
-        lineHeight: 4,
+        lineHeight: 140,
       },
       {
         fontSize: 57,
         fontWeight: "N",
-        lineHeight: 4,
+        lineHeight: 140,
       },
       {
         fontSize: 48,
         fontWeight: "N",
-        lineHeight: 4,
+        lineHeight: 140,
       },
     ],
   },
@@ -31,137 +45,138 @@ const textStylesMap = {
       {
         fontSize: 45,
         fontWeight: "B",
-        lineHeight: 4,
+        lineHeight: 140,
       },
       {
         fontSize: 36,
         fontWeight: "B",
-        lineHeight: 4,
+        lineHeight: 140,
+        letterSpacing: 0.01,
       },
       {
         fontSize: 32,
         fontWeight: "B",
-        lineHeight: 5,
+        lineHeight: 150,
+        letterSpacing: 0.01,
       },
       {
         fontSize: 28,
         fontWeight: "B",
-        lineHeight: 5,
+        lineHeight: 150,
+        letterSpacing: 0.01,
       },
       {
         fontSize: 24,
         fontWeight: "B",
-        lineHeight: 5,
+        lineHeight: 150,
+        letterSpacing: 0.02,
       },
       {
         fontSize: 22,
         fontWeight: "B",
-        lineHeight: 5,
+        lineHeight: 150,
+        letterSpacing: 0.02,
       },
       {
         fontSize: 20,
         fontWeight: "B",
-        lineHeight: 5,
+        lineHeight: 150,
+        letterSpacing: 0.02,
       },
       {
         fontSize: 18,
         fontWeight: "B",
-        lineHeight: 6,
+        lineHeight: 160,
+        letterSpacing: 0.02,
       },
       {
         fontSize: 17,
         fontWeight: "B",
-        lineHeight: 7,
+        lineHeight: 170,
+        letterSpacing: 0.02,
       },
       {
         fontSize: 16,
         fontWeight: "B",
-        lineHeight: 7,
-      },
-      {
-        fontSize: 32,
-        fontWeight: "M",
-        lineHeight: 5,
-      },
-      {
-        fontSize: 28,
-        fontWeight: "M",
-        lineHeight: 5,
-      },
-      {
-        fontSize: 24,
-        fontWeight: "M",
-        lineHeight: 5,
-      },
-      {
-        fontSize: 20,
-        fontWeight: "M",
-        lineHeight: 5,
-      },
-      {
-        fontSize: 17,
-        fontWeight: "M",
-        lineHeight: 7,
+        lineHeight: 170,
+        letterSpacing: 0.02,
       },
       {
         fontSize: 16,
-        fontWeight: "M",
-        lineHeight: 7,
+        fontWeight: "B",
+        lineHeight: 175,
+        letterSpacing: 0.02,
       },
       {
         fontSize: 45,
         fontWeight: "N",
-        lineHeight: 4,
+        lineHeight: 140,
       },
       {
         fontSize: 36,
         fontWeight: "N",
-        lineHeight: 4,
+        lineHeight: 140,
+        letterSpacing: 0.01,
       },
       {
         fontSize: 32,
         fontWeight: "N",
-        lineHeight: 5,
+        lineHeight: 150,
+        letterSpacing: 0.01,
       },
       {
         fontSize: 28,
         fontWeight: "N",
-        lineHeight: 5,
+        lineHeight: 150,
+        letterSpacing: 0.01,
       },
       {
         fontSize: 26,
         fontWeight: "N",
-        lineHeight: 5,
+        lineHeight: 150,
+        letterSpacing: 0.02,
       },
       {
         fontSize: 24,
         fontWeight: "N",
-        lineHeight: 5,
+        lineHeight: 150,
+        letterSpacing: 0.02,
       },
       {
         fontSize: 22,
         fontWeight: "N",
-        lineHeight: 5,
+        lineHeight: 150,
+        letterSpacing: 0.02,
       },
       {
         fontSize: 20,
         fontWeight: "N",
-        lineHeight: 5,
+        lineHeight: 150,
+        letterSpacing: 0.02,
       },
       {
         fontSize: 18,
         fontWeight: "N",
-        lineHeight: 6,
+        lineHeight: 160,
+        letterSpacing: 0.02,
       },
       {
         fontSize: 17,
         fontWeight: "N",
-        lineHeight: 7,
+        lineHeight: 170,
+        letterSpacing: 0.02,
       },
       {
         fontSize: 16,
         fontWeight: "N",
-        lineHeight: 7,
+        lineHeight: 170,
+        letterSpacing: 0.02,
+      },
+      {
+        fontSize: 16,
+        fontWeight: "N",
+        lineHeight: 175,
+        letterSpacing: 0.02,
       },
     ],
   },
@@ -173,62 +188,62 @@ const textStylesMap = {
       {
         fontSize: 17,
         fontWeight: "B",
-        lineHeight: 3,
+        lineHeight: 130,
       },
       {
         fontSize: 17,
         fontWeight: "N",
-        lineHeight: 3,
+        lineHeight: 130,
       },
       {
         fontSize: 17,
         fontWeight: "B",
-        lineHeight: 2,
+        lineHeight: 120,
       },
       {
         fontSize: 17,
         fontWeight: "N",
-        lineHeight: 2,
+        lineHeight: 120,
       },
       {
         fontSize: 16,
         fontWeight: "B",
-        lineHeight: 3,
+        lineHeight: 130,
       },
       {
         fontSize: 16,
         fontWeight: "N",
-        lineHeight: 3,
+        lineHeight: 130,
       },
       {
         fontSize: 16,
         fontWeight: "B",
-        lineHeight: 2,
+        lineHeight: 120,
       },
       {
         fontSize: 17,
         fontWeight: "N",
-        lineHeight: 2,
+        lineHeight: 120,
       },
       {
         fontSize: 14,
         fontWeight: "B",
-        lineHeight: 3,
+        lineHeight: 130,
       },
       {
         fontSize: 14,
         fontWeight: "N",
-        lineHeight: 3,
+        lineHeight: 130,
       },
       {
         fontSize: 14,
         fontWeight: "B",
-        lineHeight: 2,
+        lineHeight: 120,
       },
       {
         fontSize: 17,
         fontWeight: "N",
-        lineHeight: 2,
+        lineHeight: 120,
       },
     ],
   },
@@ -240,47 +255,47 @@ const textStylesMap = {
       {
         fontSize: 17,
         fontWeight: "B",
-        lineHeight: 1,
+        lineHeight: 100,
       },
       {
         fontSize: 17,
         fontWeight: "M",
-        lineHeight: 1,
+        lineHeight: 100,
       },
       {
         fontSize: 17,
         fontWeight: "N",
-        lineHeight: 1,
+        lineHeight: 100,
       },
       {
         fontSize: 16,
         fontWeight: "B",
-        lineHeight: 1,
+        lineHeight: 100,
       },
       {
         fontSize: 16,
         fontWeight: "M",
-        lineHeight: 1,
+        lineHeight: 100,
       },
       {
         fontSize: 16,
         fontWeight: "N",
-        lineHeight: 1,
+        lineHeight: 100,
       },
       {
         fontSize: 14,
         fontWeight: "B",
-        lineHeight: 1,
+        lineHeight: 100,
       },
       {
         fontSize: 14,
         fontWeight: "M",
-        lineHeight: 1,
+        lineHeight: 100,
       },
       {
         fontSize: 14,
         fontWeight: "N",
-        lineHeight: 1,
+        lineHeight: 100,
       },
     ],
   },
@@ -292,32 +307,32 @@ const textStylesMap = {
       {
         fontSize: 17,
         fontWeight: "B",
-        lineHeight: 5,
+        lineHeight: 150,
       },
       {
         fontSize: 17,
         fontWeight: "N",
-        lineHeight: 5,
+        lineHeight: 150,
       },
       {
         fontSize: 16,
         fontWeight: "B",
-        lineHeight: 5,
+        lineHeight: 150,
       },
       {
         fontSize: 16,
         fontWeight: "N",
-        lineHeight: 5,
+        lineHeight: 150,
       },
       {
         fontSize: 14,
         fontWeight: "B",
-        lineHeight: 5,
+        lineHeight: 150,
       },
       {
         fontSize: 14,
         fontWeight: "N",
-        lineHeight: 5,
+        lineHeight: 150,
       },
     ],
   },
@@ -328,23 +343,26 @@ const map = new Map<
   string,
   {
     value: {
+      deprecated?: boolean;
       fontFamily: string;
       fontSize: number;
       fontWeight: string;
       lineHeight: number;
+      letterSpacing?: string;
     };
     description: string;
   }
 >();
 
 textStyle.forEach(([key, { fontFamily, description, variants }]) => {
-  variants.forEach(({ fontSize, fontWeight, lineHeight }) => {
+  variants.forEach(({ fontSize, fontWeight, lineHeight, letterSpacing }) => {
     map.set(`${key}-${fontSize}${fontWeight}-${lineHeight}`, {
       value: {
         fontFamily,
         fontSize,
         fontWeight,
         lineHeight,
+        letterSpacing: letterSpacing ? `${letterSpacing}em` : undefined,
       },
       description,
     });
