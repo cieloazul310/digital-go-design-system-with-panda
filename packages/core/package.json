@@ -40,6 +40,15 @@
       },
       "require": "./dist/components/input.js"
     },
+    "./input-text": {
+      "source": "./src/components/input-text.tsx",
+      "types": "./dist/components/input-text.d.ts",
+      "import": {
+        "types": "./dist/components/input-text.d.mts",
+        "default": "./dist/components/input-text.mjs"
+      },
+      "require": "./dist/components/input-text.js"
+    },
     "./preset": {
       "source": "./src/preset.ts",
       "types": "./dist/preset.d.ts",

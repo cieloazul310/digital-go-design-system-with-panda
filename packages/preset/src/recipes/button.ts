@@ -1,3 +1,7 @@
+/**
+ * source:
+ * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Button/Button.tsx
+ */
 import { defineRecipe } from "@pandacss/dev";
 
 export default defineRecipe({
@@ -26,9 +30,9 @@ export default defineRecipe({
           base: "keyColor.900",
           _hover: "keyColor.1000",
           _active: "keyColor.1200",
-          _disabled: "solid-grey.300",
+          _disabled: "solid-gray.300",
         },
-        color: { base: "white", _disabled: "solid-grey.50" },
+        color: { base: "white", _disabled: "solid-gray.50" },
         borderColor: "transparent",
         textDecoration: {
           base: "none",
@@ -42,7 +46,7 @@ export default defineRecipe({
           base: "keyColor.900",
           _hover: "keyColor.1000",
           _active: "keyColor.1200",
-          _disabled: "solid-grey.300",
+          _disabled: "solid-gray.300",
         },
         borderColor: "keyColor.900",
         textDecoration: {
@@ -63,7 +67,7 @@ export default defineRecipe({
           base: "keyColor.900",
           _hover: "keyColor.1000",
           _active: "keyColor.1200",
-          _disabled: "solid-grey.300",
+          _disabled: "solid-gray.300",
         },
         borderColor: "transparent",
         textDecoration: "underline",

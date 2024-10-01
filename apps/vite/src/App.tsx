@@ -8,7 +8,7 @@ function App() {
   return (
     <Container maxWidth="breakpoint-lg">
       <h1 className={css({ textStyle: "dsp-64N-140" })}>Hello from Panda 🐼</h1>
-      <Divider color="grey-536" />
+      <Divider color="gray-536" />
       <h2
         className={css({
           textStyle: "dsp-48N-140",

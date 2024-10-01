@@ -1,3 +1,7 @@
+/**
+ * source:
+ * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Input/Input.tsx
+ */
 import { defineRecipe } from "@pandacss/dev";
 
 export default defineRecipe({

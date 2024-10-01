@@ -1,3 +1,7 @@
+/**
+ * source:
+ * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Accordion/Accordion.tsx
+ */
 import { defineSlotRecipe } from "@pandacss/dev";
 import { anatomy as accordionAnatomy } from "@ark-ui/anatomy/accordion";
 
@@ -7,14 +11,14 @@ export default defineSlotRecipe({
   base: {
     item: {
       borderBottomWidth: "1px",
-      borderBottomColor: "solid-grey.420",
+      borderBottomColor: "solid-gray.420",
     },
     itemTrigger: {
       width: "full",
       display: "flex",
       bg: {
         base: "transparent",
-        _hover: "solid-grey.50",
+        _hover: "solid-gray.50",
         _focusVisible: "yellow.300",
       },
       alignItems: "center",
