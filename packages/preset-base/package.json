@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@cieloazul310/digital-go-pandacss-utils": "^0.0.1",
-    "@digital-go-jp/design-tokens": "^0.1.6"
+    "@digital-go-jp/design-tokens": "^0.1.7"
   },
   "devDependencies": {
     "@pandacss/dev": "^0.46.0",

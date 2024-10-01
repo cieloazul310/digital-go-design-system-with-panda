@@ -7,10 +7,14 @@ import { Divider } from "@cieloazul310/digital-go-pandacss";
 function App() {
   return (
     <Container maxWidth="breakpoint-lg">
-      <h1 className={css({ textStyle: "dsp-64N-4" })}>Hello from Panda 🐼</h1>
+      <h1 className={css({ textStyle: "dsp-64N-140" })}>Hello from Panda 🐼</h1>
       <Divider color="grey-536" />
       <h2
-        className={css({ textStyle: "dsp-48N-4", my: 4, color: "yellow.400" })}
+        className={css({
+          textStyle: "dsp-48N-140",
+          my: 4,
+          color: "yellow.400",
+        })}
       >
         module-resolution/with-import-map-package
       </h2>

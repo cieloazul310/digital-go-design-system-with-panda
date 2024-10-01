@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { ark } from "@ark-ui/react/factory";
-import { css } from "@import-map-package/styled-system/css";
-import { styled } from "@import-map-package/styled-system/jsx";
+import { styled, Container } from "@import-map-package/styled-system/jsx";
 import { link } from "@import-map-package/styled-system/recipes";
 
 const Link = styled(ark.a, link);
@@ -25,7 +24,7 @@ export const Simple: Story = {
 
 export const Inline: Story = {
   render: ({ href }) => (
-    <article className={css({ maxWidth: "lg", textStyle: "std-17N-7" })}>
+    <Container maxWidth="2xl" textStyle="std-17N-170" py={8}>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.{" "}
@@ -35,6 +34,6 @@ export const Inline: Story = {
         dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
-    </article>
+    </Container>
   ),
 };
