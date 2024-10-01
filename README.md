@@ -2,6 +2,9 @@
 
 デジタル庁デザインシステムをArk UI + Panda CSSで実装するためのリポジトリ。
 
+Storybook  
+<https://cieloazul310.github.io/digital-go-design-system-with-panda/>
+
 ## 構成
 
 - `utils`: ユーティリティパッケージ
