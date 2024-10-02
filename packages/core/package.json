@@ -49,6 +49,24 @@
       },
       "require": "./dist/components/input-text.js"
     },
+    "./select": {
+      "source": "./src/components/select.tsx",
+      "types": "./dist/components/select.d.ts",
+      "import": {
+        "types": "./dist/components/select.d.mts",
+        "default": "./dist/components/select.mjs"
+      },
+      "require": "./dist/components/select.js"
+    },
+    "./textarea": {
+      "source": "./src/components/textarea.tsx",
+      "types": "./dist/components/textarea.d.ts",
+      "import": {
+        "types": "./dist/components/textarea.d.mts",
+        "default": "./dist/components/textarea.mjs"
+      },
+      "require": "./dist/components/textarea.js"
+    },
     "./preset": {
       "source": "./src/preset.ts",
       "types": "./dist/preset.d.ts",

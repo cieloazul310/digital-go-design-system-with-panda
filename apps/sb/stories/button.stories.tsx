@@ -19,6 +19,8 @@ const meta: Meta<typeof Button> = {
   },
   args: {
     disabled: false,
+    variant: "solid-fill",
+    size: "md",
     onClick: fn(),
   },
 };

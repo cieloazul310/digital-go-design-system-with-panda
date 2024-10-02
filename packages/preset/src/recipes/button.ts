@@ -79,7 +79,7 @@ export default defineRecipe({
         minHeight: "56px",
         textStyle: "oln-16B-100",
         p: 4,
-        rounded: "sm",
+        rounded: "md",
       },
       md: {
         minWidth: "96px",
@@ -87,7 +87,7 @@ export default defineRecipe({
         textStyle: "oln-16B-100",
         px: 4,
         py: 3,
-        rounded: "sm",
+        rounded: "md",
       },
       sm: {
         minWidth: "80px",
@@ -95,7 +95,7 @@ export default defineRecipe({
         textStyle: "oln-16B-100",
         px: 3,
         py: 1.5,
-        rounded: "sm",
+        rounded: "md",
       },
       xs: {
         minWidth: "72px",
@@ -103,7 +103,7 @@ export default defineRecipe({
         textStyle: "oln-14B-100",
         px: 2,
         py: 1.5,
-        rounded: "xs",
+        rounded: "sm",
       },
     },
   },

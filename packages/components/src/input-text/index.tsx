@@ -1,12 +1,9 @@
 "use client";
 import type { Assign } from "@ark-ui/react";
 import { Field } from "@ark-ui/react/field";
-// import { styled } from "@import-map-package/styled-system/jsx";
 import {
   type InputTextVariantProps,
   inputText,
-  // input,
-  // textarea,
 } from "@import-map-package/styled-system/recipes";
 import type {
   ComponentProps,
@@ -56,13 +53,12 @@ export const Select = withContext<
 
 export const Input = withContext<
   HTMLInputElement,
-  Assign<HTMLStyledProps<"input">, Field.SelectBaseProps>
->(Field.Select, "input");
-/*
-export type InputProps = ComponentProps<typeof Input>;
-export const Input = styled(Field.Input, input);
+  Assign<HTMLStyledProps<"input">, Field.InputBaseProps>
+>(Field.Input, "input");
 
-export type TextareaProps = ComponentProps<typeof Textarea>;
-export const Textarea = styled(Field.Textarea, textarea);
-*/
+export const Textarea = withContext<
+  HTMLTextAreaElement,
+  Assign<HTMLStyledProps<"textarea">, Field.TextareaBaseProps>
+>(Field.Textarea, "textarea");
+
 export { FieldContext as Context } from "@ark-ui/react/field";
