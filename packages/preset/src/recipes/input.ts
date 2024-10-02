@@ -11,13 +11,12 @@ export default defineRecipe({
   base: {
     minWidth: "80px",
     maxWidth: "full",
-    rounded: 8,
+    rounded: "lg",
     px: 4,
     py: 3,
     borderWidth: "1px",
     borderColor: {
-      vase: "solid-gray.900",
-      _error: "error.1",
+      base: "solid-gray.900",
       _disabled: "solid-gray.300",
     },
     color: { base: "solid-gray.800", _disabled: "solid-gray.420" },
@@ -29,13 +28,6 @@ export default defineRecipe({
       outlineOffset: "calc(2/16*1rem)",
       borderInset: "md",
     },
-    /**
-     * min-w-80 max-w-full rounded-lg border bg-white px-4 py-3 text-oln-16N-100 text-solid-gray-800
-        ${isError ? 'border-error-1' : 'border-solid-gray-900'}
-        focus:outline focus:outline-4 focus:outline-black focus:outline-offset-[calc(2/16*1rem)] focus:ring-[calc(2/16*1rem)] focus:ring-yellow-300
-        aria-disabled:border-solid-gray-300 aria-disabled:bg-solid-gray-50 aria-disabled:text-solid-gray-420 aria-disabled:pointer-events-none
-        ${className ?? ''}
-     */
   },
   variants: {
     size: {
@@ -43,7 +35,7 @@ export default defineRecipe({
       md: { height: "12" },
       lg: { height: "14" },
     },
-    error: {
+    invalid: {
       true: {
         borderColor: "error.1",
       },
@@ -51,6 +43,6 @@ export default defineRecipe({
   },
   defaultVariants: {
     size: "lg",
-    error: false,
+    invalid: false,
   },
 });

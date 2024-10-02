@@ -8,9 +8,4 @@ export default defineSemanticTokens({
     M: { deprecated: true, value: "{fontWeights.500}", description: "500" },
     B: { value: "{fontWeights.700}", description: "700 (bold)" },
   },
-  radii: {
-    sm: { value: "{radii.8}" },
-    md: { value: "{radii.16}" },
-    lg: { value: "{radii.32}" },
-  },
 });

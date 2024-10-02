@@ -48,6 +48,24 @@
         "default": "./dist/input-text/index.mjs"
       },
       "require": "./dist/input-text/index.js"
+    },
+    "./select": {
+      "source": "./src/select/index.tsx",
+      "types": "./dist/select/index.d.ts",
+      "import": {
+        "types": "./dist/select/index.d.mts",
+        "default": "./dist/select/index.mjs"
+      },
+      "require": "./dist/select/index.js"
+    },
+    "./textarea": {
+      "source": "./src/textarea/index.tsx",
+      "types": "./dist/textarea/index.d.ts",
+      "import": {
+        "types": "./dist/textarea/index.d.mts",
+        "default": "./dist/textarea/index.mjs"
+      },
+      "require": "./dist/textarea/index.js"
     }
   },
   "scripts": {

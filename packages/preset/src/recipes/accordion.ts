@@ -71,7 +71,7 @@ export default defineSlotRecipe({
       },
       square: {
         itemIndicator: {
-          rounded: 4,
+          rounded: "md",
         },
       },
     },

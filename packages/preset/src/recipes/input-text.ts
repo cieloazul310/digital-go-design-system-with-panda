@@ -1,11 +1,15 @@
 /**
- * sources:
- * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Label/Label.tsx
- * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/ErrorText/ErrorText.tsx
- * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/SupportText/SupportText.tsx
+ * source:
+ * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Input/Input.tsx
  */
 import { defineSlotRecipe } from "@pandacss/dev";
 import { anatomy as fieldAnatomy } from "@ark-ui/anatomy/field";
+import errorText from "./error-text";
+import input from "./input";
+import label from "./label";
+import select from "./select";
+import supportText from "./support-text";
+import textarea from "./textarea";
 
 const inputText = defineSlotRecipe({
   className: "input-text",
@@ -16,73 +20,49 @@ const inputText = defineSlotRecipe({
     root: {
       display: "flex",
       flexDirection: "column",
-      gap: 1,
+      gap: 1.5,
     },
     label: {
-      /**
-       * flex w-fit items-center gap-2 text-solid-gray-800
-       */
-      display: "flex",
-      width: "fit-content",
-      alignItems: "center",
-      gap: 2,
-      color: "solid-gray.800",
+      ...label.base,
     },
     input: {
-      minWidth: "80px",
-      maxWidth: "full",
-      rounded: 8,
-      px: 4,
-      py: 3,
-      borderWidth: "1px",
-      borderColor: {
-        vase: "solid-gray.900",
-        _error: "error.1",
-        _disabled: "solid-gray.300",
-      },
-      color: { base: "solid-gray.800", _disabled: "solid-gray.420" },
-      bg: { base: "white", _disabled: "solid-gray.50" },
-      textStyle: "oln-16N-100",
-      _focus: {
-        outlineWidth: "4px",
-        outlineColor: "black",
-        outlineOffset: "calc(2/16*1rem)",
-        borderInset: "md",
-      },
+      ...input.base,
+    },
+    textarea: {
+      ...textarea.base,
+    },
+    select: {
+      ...select.base?.trigger,
     },
     errorText: {
-      textStyle: "dns-16N-130",
-      color: "error.1",
+      ...errorText.base,
     },
     helperText: {
-      textStyle: "dns-16N-170",
-      color: "solid-gray.700",
+      ...supportText.base,
     },
   },
   variants: {
     size: {
       lg: {
-        label: {
-          textStyle: "std-18B-160",
-        },
-        input: { height: "14" },
+        label: { ...label.variants?.size?.lg },
+        input: { ...input.variants?.size?.lg },
+        select: { ...select.variants?.size?.lg?.trigger },
       },
       md: {
-        label: {
-          textStyle: "std-17B-170",
-        },
-        input: { height: "12" },
+        label: { ...label.variants?.size?.md },
+        input: { ...input.variants?.size?.md },
+        select: { ...select.variants?.size?.md?.trigger },
       },
       sm: {
-        label: {
-          textStyle: "std-16B-170",
-        },
-        input: { height: "10" },
+        label: { ...label.variants?.size?.sm },
+        input: { ...input.variants?.size?.sm },
+        select: { ...select.variants?.size?.sm?.trigger },
       },
     },
     invalid: {
       true: {
-        input: { borderColor: "error.1" },
+        input: { ...input.variants?.invalid?.true },
+        textarea: { ...textarea.variants?.invalid?.true },
       },
     },
   },

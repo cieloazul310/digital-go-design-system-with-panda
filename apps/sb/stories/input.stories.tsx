@@ -13,13 +13,13 @@ const meta: Meta<typeof Input> = {
     disabled: {
       control: "boolean",
     },
-    error: {
+    invalid: {
       control: "boolean",
     },
   },
   args: {
     disabled: false,
-    error: false,
+    invalid: false,
   },
 };
 
