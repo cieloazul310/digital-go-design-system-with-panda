@@ -16,7 +16,7 @@ Storybook
 
 ## コンポーネント
 
-| 名称                       | recipe         | react            |
+| 名称                       | recipe         | React            |
 | -------------------------- | :------------- | :--------------- |
 | ボタン                     | ✅ `button`    | ✅ `<Button>`    |
 | アコーディオン             | ✅ `accordion` | ✅ `<Accordion>` |
