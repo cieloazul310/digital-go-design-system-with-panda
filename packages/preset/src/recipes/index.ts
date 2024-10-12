@@ -6,6 +6,7 @@ import label from "./label";
 import input from "./input";
 import inputText from "./input-text";
 import link from "./link";
+import menu from "./menu";
 import select from "./select";
 import supportText from "./support-text";
 import textarea from "./textarea";
@@ -19,6 +20,7 @@ const recipes = {
   input,
   inputText,
   link,
+  menu,
   select,
   supportText,
   textarea,

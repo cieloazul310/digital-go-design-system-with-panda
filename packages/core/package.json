@@ -98,8 +98,8 @@
     "@cieloazul310/digital-go-react-components": "^0.0.1"
   },
   "devDependencies": {
-    "@ark-ui/react": "^4.1.0",
-    "@pandacss/dev": "^0.46.0",
+    "@ark-ui/react": "^4.1.1",
+    "@pandacss/dev": "^0.46.1",
     "@repo/eslint-config": "^0.0.0",
     "@repo/typescript-config": "^0.0.0",
     "@types/react": "^18.3.6",

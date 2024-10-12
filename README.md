@@ -1,4 +1,4 @@
-# デザイン庁デザインシステム +　Ark UI + Panda CSS
+# デザイン庁デザインシステム + Ark UI + Panda CSS
 
 デジタル庁デザインシステムをArk UI + Panda CSSで実装するためのリポジトリ。
 
