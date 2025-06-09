@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
+import type { Meta, StoryObj } from "@storybook/react-vite";
+import { fn } from "storybook/test";
 import { Button } from "@cieloazul310/digital-go-pandacss/button";
 import { css } from "@import-map-package/styled-system/css";
 import { button } from "@import-map-package/styled-system/recipes";

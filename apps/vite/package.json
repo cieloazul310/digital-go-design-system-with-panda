@@ -11,21 +11,21 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@ark-ui/react": "^4.1.1",
+    "@ark-ui/react": "^5.13.0",
     "@cieloazul310/digital-go-pandacss": "^0.0.1",
     "@import-map-package/styled-system": "^0.0.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@pandacss/dev": "^0.46.1",
+    "@pandacss/dev": "^0.53.7",
     "@repo/eslint-config": "^0.0.0",
     "@repo/typescript-config": "^0.0.0",
-    "@types/react": "^18.3.6",
-    "@types/react-dom": "^18.3.0",
-    "@vitejs/plugin-react-swc": "^3.7.0",
-    "eslint": "^9.11.1",
-    "typescript": "^5.6.2",
-    "vite": "^5.4.6"
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react-swc": "^3.10.1",
+    "eslint": "^9.28.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
   }
 }

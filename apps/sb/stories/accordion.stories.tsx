@@ -1,5 +1,5 @@
 import { ChevronDownIcon } from "lucide-react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import * as Accordion from "@cieloazul310/digital-go-pandacss/accordion";
 
 const meta: Meta<typeof Accordion.Root> = {

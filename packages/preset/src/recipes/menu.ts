@@ -3,8 +3,24 @@
  * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/LanguageSelector/parts/Menu.tsx
  * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/LanguageSelector/parts/MenuItem.tsx
  */
-import { defineSlotRecipe } from "@pandacss/dev";
+import { defineSlotRecipe, type SystemStyleObject } from "@pandacss/dev";
 import { anatomy as menuAnatomy } from "@ark-ui/anatomy/menu";
+
+const itemStyle = {
+  alignItems: "center",
+  columnGap: 2,
+  textWrap: "nowrap",
+  textStyle: "oln-16N-1",
+  py: 3,
+  pl: 3,
+  pr: 6,
+  color: { base: "solid-gray.800" },
+  bg: {
+    base: "white",
+    _hover: "solid-gray.50",
+    _focusVisible: "yellow.300",
+  },
+} satisfies SystemStyleObject;
 
 export default defineSlotRecipe({
   className: "menu",
@@ -27,46 +43,19 @@ export default defineSlotRecipe({
      */
     },
     itemGroupLabel: {
-      textWrap: "nowrap",
-      textStyle: "oln-16N-1",
+      ...itemStyle,
       fontWeight: "bold",
-      py: 3,
-      pl: 3,
-      pr: 6,
     },
     triggerItem: {
-      textWrap: "nowrap",
-      textStyle: "oln-16N-1",
-      py: 3,
-      pl: 3,
-      pr: 6,
-      bg: {
-        base: "white",
-        _hover: "solid-gray.50",
-        _focusVisible: "yellow.300",
-      },
+      ...itemStyle,
     },
     item: {
-      display: "flex",
-      position: "relative",
-      alignItems: "center",
-      textWrap: "nowrap",
-      textStyle: "oln-16N-1",
-      bg: {
-        base: "white",
-        _hover: "solid-gray.50",
-        _focusVisible: "yellow.300",
-      },
-      color: { base: "solid-gray.800" },
+      ...itemStyle,
       textDecoration: {
         base: "none",
         _hover: "underline",
       },
       textUnderlineOffset: "calc(3/16*1rem)",
-      py: 3,
-      pl: 3,
-      pr: 6,
-      columnGap: 2,
       _checked: {
         bg: "keyColor.100",
         color: "keyColor.1000",
@@ -94,6 +83,12 @@ export default defineSlotRecipe({
       true: {
         content: {
           maxHeight: "calc((32 * 6.5 + 16) / 16 * 1rem)",
+        },
+        itemGroupLabel: {
+          py: 1.5,
+          pl: 1.5,
+          pr: 4,
+          columnGap: 1.5,
         },
         item: {
           py: 1.5,
