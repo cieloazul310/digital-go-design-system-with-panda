@@ -31,5 +31,11 @@
     "eslint": "^9.28.0",
     "tsup": "8.5.0",
     "typescript": "5.8.3"
+  },
+  "lint-staged": {
+    "**/*.{js,mjs,cjs,tsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --parser typescript --write"
+    ]
   }
 }

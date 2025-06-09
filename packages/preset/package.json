@@ -35,5 +35,11 @@
   },
   "peerDependencies": {
     "@ark-ui/anatomy": "^3.0.0"
+  },
+  "lint-staged": {
+    "**/*.{js,mjs,cjs,tsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --parser typescript --write"
+    ]
   }
 }

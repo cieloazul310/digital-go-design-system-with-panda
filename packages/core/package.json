@@ -115,5 +115,11 @@
     "@import-map-package/styled-system": "^0.0.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
+  },
+  "lint-staged": {
+    "**/*.{js,mjs,cjs,tsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --parser typescript --write"
+    ]
   }
 }
