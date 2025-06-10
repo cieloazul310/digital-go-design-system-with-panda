@@ -259,11 +259,6 @@ const textStylesMap: TextStylesMap = {
       },
       {
         fontSize: 17,
-        fontWeight: "M",
-        lineHeight: 100,
-      },
-      {
-        fontSize: 17,
         fontWeight: "N",
         lineHeight: 100,
       },
@@ -274,22 +269,12 @@ const textStylesMap: TextStylesMap = {
       },
       {
         fontSize: 16,
-        fontWeight: "M",
-        lineHeight: 100,
-      },
-      {
-        fontSize: 16,
         fontWeight: "N",
         lineHeight: 100,
       },
       {
         fontSize: 14,
         fontWeight: "B",
-        lineHeight: 100,
-      },
-      {
-        fontSize: 14,
-        fontWeight: "M",
         lineHeight: 100,
       },
       {
