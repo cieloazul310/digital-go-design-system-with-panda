@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "engines": {
-    "node": ">=20",
+    "node": ">=22",
     "npm": ">=10"
   },
   "packageManager": "npm@11.4.1",
@@ -24,6 +24,7 @@
     "test": "vitest"
   },
   "devDependencies": {
+    "@types/node": "^22",
     "eslint": "^9.28.0",
     "lint-staged": "^16.1.0",
     "prettier": "^3.5.3",
