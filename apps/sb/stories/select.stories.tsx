@@ -1,6 +1,6 @@
 import { ChevronDownIcon } from "lucide-react";
-import type { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
+import type { Meta, StoryObj } from "@storybook/react-vite";
+import { fn } from "storybook/test";
 import { Portal, createListCollection } from "@ark-ui/react";
 import * as Select from "@cieloazul310/digital-go-pandacss/select";
 import { select } from "@import-map-package/styled-system/recipes";

@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Textarea } from "@cieloazul310/digital-go-pandacss/textarea";
 // import { textarea } from "@import-map-package/styled-system/recipes";
 

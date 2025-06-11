@@ -5,6 +5,7 @@
 import { defineSlotRecipe } from "@pandacss/dev";
 import { anatomy as selectAnatomy } from "@ark-ui/anatomy/select";
 import label from "./label";
+import menu from "./menu";
 
 export default defineSlotRecipe({
   className: "select",
@@ -61,6 +62,19 @@ export default defineSlotRecipe({
       top: "50%",
       transform: "translateY(-50%)",
       color: { base: "solid-gray.900", _disabled: "solid-gray.420" },
+    },
+    content: {
+      ...menu.base?.content,
+    },
+    itemGroupLabel: {
+      textStyle: "oln-16N-1",
+      fontWeight: "bold",
+      py: 3,
+      pl: 3,
+      pr: 6,
+    },
+    item: {
+      ...menu.base?.item,
     },
   },
   variants: {

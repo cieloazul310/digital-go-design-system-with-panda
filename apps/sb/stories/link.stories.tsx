@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { ark } from "@ark-ui/react/factory";
 import { styled, Container } from "@import-map-package/styled-system/jsx";
 import { link } from "@import-map-package/styled-system/recipes";
