@@ -8,6 +8,7 @@ import inputText from "./input-text";
 import link from "./link";
 import menu from "./menu";
 import select from "./select";
+import selectBox from "./select-box";
 import supportText from "./support-text";
 import textarea from "./textarea";
 
@@ -22,6 +23,7 @@ const recipes = {
   link,
   menu,
   select,
+  selectBox,
   supportText,
   textarea,
 };

@@ -15,7 +15,7 @@ const buttons = hstack({ gap: 4, alignItems: "end" });
 const Link = styled(ark.a, link);
 
 const meta: Meta<typeof Button> = {
-  title: "Components/Button",
+  title: "Components/ボタン",
   component: Button,
   argTypes: {
     variant: {

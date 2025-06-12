@@ -7,6 +7,8 @@ import { defineSlotRecipe, type SystemStyleObject } from "@pandacss/dev";
 import { anatomy as menuAnatomy } from "@ark-ui/anatomy/menu";
 
 const itemStyle = {
+  position: "relative",
+  cursor: "pointer",
   alignItems: "center",
   columnGap: 2,
   textWrap: "nowrap",
@@ -55,7 +57,7 @@ export default defineSlotRecipe({
         base: "none",
         _hover: "underline",
       },
-      textUnderlineOffset: "calc(3/16*1rem)",
+      textUnderlineOffset: "calc(3 / 16 * 1rem)",
       _checked: {
         bg: "keyColor.100",
         color: "keyColor.1000",
@@ -64,7 +66,7 @@ export default defineSlotRecipe({
       _focusVisible: {
         outlineWidth: "4px",
         outlineColor: "black",
-        outlineOffset: "calc(2/16*1rem)",
+        outlineOffset: "calc(2 / 16 * 1rem)",
         borderInset: "md",
         zIndex: 1,
       },

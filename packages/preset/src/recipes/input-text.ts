@@ -7,7 +7,7 @@ import { anatomy as fieldAnatomy } from "@ark-ui/anatomy/field";
 import errorText from "./error-text";
 import input from "./input";
 import label from "./label";
-import select from "./select";
+import selectBox from "./select-box";
 import supportText from "./support-text";
 import textarea from "./textarea";
 
@@ -32,7 +32,7 @@ const inputText = defineSlotRecipe({
       ...textarea.base,
     },
     select: {
-      ...select.base?.trigger,
+      ...selectBox.base,
     },
     errorText: {
       ...errorText.base,
@@ -46,22 +46,23 @@ const inputText = defineSlotRecipe({
       lg: {
         label: { ...label.variants?.size?.lg },
         input: { ...input.variants?.size?.lg },
-        select: { ...select.variants?.size?.lg?.trigger },
+        select: { ...selectBox.variants?.size?.lg },
       },
       md: {
         label: { ...label.variants?.size?.md },
         input: { ...input.variants?.size?.md },
-        select: { ...select.variants?.size?.md?.trigger },
+        select: { ...selectBox.variants?.size?.md },
       },
       sm: {
         label: { ...label.variants?.size?.sm },
         input: { ...input.variants?.size?.sm },
-        select: { ...select.variants?.size?.sm?.trigger },
+        select: { ...selectBox.variants?.size?.sm },
       },
     },
     invalid: {
       true: {
         input: { ...input.variants?.invalid?.true },
+        select: { ...selectBox.variants?.invalid?.true },
         textarea: { ...textarea.variants?.invalid?.true },
       },
     },

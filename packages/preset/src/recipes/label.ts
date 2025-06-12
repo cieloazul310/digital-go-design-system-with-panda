@@ -4,12 +4,12 @@
  */
 import { defineRecipe } from "@pandacss/dev";
 
-/**
- * flex w-fit items-center gap-2 text-solid-gray-800
- */
 export default defineRecipe({
   className: "label",
   base: {
+    /**
+     * flex w-fit items-center gap-2 text-solid-gray-800
+     */
     display: "flex",
     width: "fit-content",
     alignItems: "center",
@@ -18,12 +18,15 @@ export default defineRecipe({
   },
   variants: {
     size: {
-      lg: { textStyle: "std-18B-160" },
-      md: { textStyle: "std-17B-170" },
+      /**
+       * data-[size=sm]:text-std-16B-170 data-[size=md]:text-std-17B-170 data-[size=lg]:text-std-18B-160
+       */
       sm: { textStyle: "std-16B-170" },
+      md: { textStyle: "std-17B-170" },
+      lg: { textStyle: "std-18B-160" },
     },
   },
   defaultVariants: {
-    size: "lg",
+    size: "md",
   },
 });

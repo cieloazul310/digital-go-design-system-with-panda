@@ -3,8 +3,8 @@ import { fn } from "storybook/test";
 import * as InputText from "@cieloazul310/digital-go-pandacss/input-text";
 import { inputText } from "@import-map-package/styled-system/recipes";
 
-const meta: Meta<typeof InputText.Root> = {
-  title: "Components/InputText",
+const meta = {
+  title: "Components/インプットテキスト",
   argTypes: {
     size: {
       control: "inline-radio",
@@ -23,7 +23,7 @@ const meta: Meta<typeof InputText.Root> = {
     required: false,
     onChange: fn(),
   },
-};
+} satisfies Meta<typeof InputText.Root>;
 
 export default meta;
 type Story = StoryObj;
