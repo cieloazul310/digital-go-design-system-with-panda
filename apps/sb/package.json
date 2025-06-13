@@ -34,11 +34,6 @@
     "typescript": "^5.8.3",
     "vite": "^6.3.5"
   },
-  "eslintConfig": {
-    "extends": [
-      "plugin:storybook/recommended"
-    ]
-  },
   "overrides": {
     "storybook": "$storybook"
   },

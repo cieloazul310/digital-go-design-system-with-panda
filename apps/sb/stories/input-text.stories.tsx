@@ -28,7 +28,7 @@ const meta = {
 export default meta;
 type Story = StoryObj;
 
-export const input: Story = {
+export const Input: Story = {
   render: ({ ...props }) => {
     return (
       <InputText.Root {...props}>
@@ -41,7 +41,7 @@ export const input: Story = {
   },
 };
 
-export const invalid: Story = {
+export const Invalid: Story = {
   args: {
     invalid: true,
   },
@@ -57,7 +57,7 @@ export const invalid: Story = {
   },
 };
 
-export const textarea: Story = {
+export const Textarea: Story = {
   render: ({ ...props }) => {
     return (
       <InputText.Root {...props}>
@@ -70,7 +70,7 @@ export const textarea: Story = {
   },
 };
 
-export const select: Story = {
+export const Select: Story = {
   render: ({ ...props }) => {
     return (
       <InputText.Root {...props}>

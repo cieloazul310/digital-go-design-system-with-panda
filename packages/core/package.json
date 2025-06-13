@@ -22,6 +22,15 @@
       },
       "require": "./dist/components/accordion.js"
     },
+    "./breadcrumb": {
+      "source": "./src/components/breadcrumb.tsx",
+      "types": "./dist/components//breadcrumb.d.ts",
+      "import": {
+        "types": "./dist/components/breadcrumb.d.mts",
+        "default": "./dist/components/breadcrumb.mjs"
+      },
+      "require": "./dist/components/breadcrumb.js"
+    },
     "./button": {
       "source": "./src/components/button.tsx",
       "types": "./dist/components/button.d.ts",

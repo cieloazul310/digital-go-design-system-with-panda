@@ -1,3 +1,6 @@
+/**
+ * https://github.com/cschroeter/park-ui/blob/main/components/react/src/components/ui/styled/accordion.tsx
+ */
 "use client";
 import type { Assign } from "@ark-ui/react";
 import { Accordion } from "@ark-ui/react/accordion";

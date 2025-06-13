@@ -72,9 +72,9 @@ const meta = {
 export default meta;
 type Story = StoryObj;
 
-export const basic: Story = {};
+export const Basic: Story = {};
 
-export const summary: Story = {
+export const Summary: Story = {
   render: ({ ...props }) => (
     <Container maxWidth="breakpoint-md" textStyle="std-16N-170">
       <article>

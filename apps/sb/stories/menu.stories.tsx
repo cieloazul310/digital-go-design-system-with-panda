@@ -6,7 +6,7 @@ import { Menu } from "@cieloazul310/digital-go-pandacss";
 import { Button } from "@cieloazul310/digital-go-pandacss/button";
 import { menu } from "@import-map-package/styled-system/recipes";
 
-const meta: Meta<typeof Menu.Root> = {
+const meta = {
   title: "Components/Menu",
   argTypes: {
     isCondensed: {
@@ -18,12 +18,12 @@ const meta: Meta<typeof Menu.Root> = {
     isCondensed: false,
     onSelect: fn(),
   },
-};
+} satisfies Meta<typeof Menu.Root>;
 
 export default meta;
 type Story = StoryObj;
 
-export const basic: Story = {
+export const Basic: Story = {
   render: ({ ...props }) => (
     <Menu.Root {...props}>
       <Menu.Trigger asChild>
@@ -40,7 +40,7 @@ export const basic: Story = {
   ),
 };
 
-export const nested: Story = {
+export const Nested: Story = {
   render: ({ ...props }) => (
     <Menu.Root {...props}>
       <Menu.Trigger asChild>

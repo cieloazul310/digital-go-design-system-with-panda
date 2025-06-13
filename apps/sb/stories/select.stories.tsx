@@ -30,7 +30,7 @@ const meta = {
 export default meta;
 type Story = StoryObj;
 
-export const basic: Story = {
+export const Basic: Story = {
   render: ({ ...props }) => {
     const collection = createListCollection({
       items: ["React", "Solid", "Vue"],
@@ -69,7 +69,7 @@ export const basic: Story = {
   },
 };
 
-export const nativeSelect: Story = {
+export const NativeSelect: Story = {
   render: ({ ...props }) => {
     const collection = createListCollection({
       items: ["React", "Solid", "Vue"],

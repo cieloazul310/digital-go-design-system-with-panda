@@ -15,7 +15,7 @@ const Article = ({
   </Container>
 );
 
-const meta: Meta<Props> = {
+const meta = {
   title: "Components/Typography",
   args: {
     paragraph: "std-17N-170",
@@ -33,12 +33,12 @@ const meta: Meta<Props> = {
       options: [...headingTextStyles],
     },
   },
-};
+} satisfies Meta<Props>;
 
 export default meta;
 type Story = StoryObj<Props>;
 
-export const en: Story = {
+export const En: Story = {
   render: ({ paragraph, heading }) => (
     <Article
       className={css({
@@ -68,7 +68,7 @@ export const en: Story = {
   ),
 };
 
-export const jp: Story = {
+export const Jp: Story = {
   render: ({ paragraph, heading }) => (
     <Article
       className={css({

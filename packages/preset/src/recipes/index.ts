@@ -1,4 +1,5 @@
 import accordion from "./accordion";
+import breadcrumb from "./breadcrumb";
 import button from "./button";
 import divider from "./divider";
 import errorText from "./error-text";
@@ -14,6 +15,7 @@ import textarea from "./textarea";
 
 const recipes = {
   accordion,
+  breadcrumb,
   button,
   divider,
   errorText,
