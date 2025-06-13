@@ -1,3 +1,7 @@
+/**
+ * source:
+ * https://github.com/cschroeter/park-ui/blob/main/components/react/src/components/ui/styled/button.tsx
+ */
 import type { PropsWithChildren } from "react";
 import { ark } from "@ark-ui/react/factory";
 import { styled } from "@import-map-package/styled-system/jsx";

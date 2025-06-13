@@ -3,8 +3,8 @@ import { fn } from "storybook/test";
 import * as InputText from "@cieloazul310/digital-go-pandacss/input-text";
 import { inputText } from "@import-map-package/styled-system/recipes";
 
-const meta: Meta<typeof InputText.Root> = {
-  title: "Components/InputText",
+const meta = {
+  title: "Components/インプットテキスト",
   argTypes: {
     size: {
       control: "inline-radio",
@@ -23,12 +23,12 @@ const meta: Meta<typeof InputText.Root> = {
     required: false,
     onChange: fn(),
   },
-};
+} satisfies Meta<typeof InputText.Root>;
 
 export default meta;
 type Story = StoryObj;
 
-export const input: Story = {
+export const Input: Story = {
   render: ({ ...props }) => {
     return (
       <InputText.Root {...props}>
@@ -41,7 +41,7 @@ export const input: Story = {
   },
 };
 
-export const invalid: Story = {
+export const Invalid: Story = {
   args: {
     invalid: true,
   },
@@ -57,7 +57,7 @@ export const invalid: Story = {
   },
 };
 
-export const textarea: Story = {
+export const Textarea: Story = {
   render: ({ ...props }) => {
     return (
       <InputText.Root {...props}>
@@ -70,7 +70,7 @@ export const textarea: Story = {
   },
 };
 
-export const select: Story = {
+export const Select: Story = {
   render: ({ ...props }) => {
     return (
       <InputText.Root {...props}>

@@ -3,8 +3,8 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import * as Accordion from "@cieloazul310/digital-go-pandacss/accordion";
 import { styled, Container } from "@import-map-package/styled-system/jsx";
 
-const meta: Meta<typeof Accordion.Root> = {
-  title: "Components/Accordion",
+const meta = {
+  title: "Components/アコーディオン",
   argTypes: {
     collapsible: {
       control: "boolean",
@@ -67,14 +67,14 @@ const meta: Meta<typeof Accordion.Root> = {
       </Accordion.Root>
     );
   },
-};
+} satisfies Meta<typeof Accordion.Root>;
 
 export default meta;
 type Story = StoryObj;
 
-export const basic: Story = {};
+export const Basic: Story = {};
 
-export const summary: Story = {
+export const Summary: Story = {
   render: ({ ...props }) => (
     <Container maxWidth="breakpoint-md" textStyle="std-16N-170">
       <article>

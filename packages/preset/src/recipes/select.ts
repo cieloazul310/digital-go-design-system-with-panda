@@ -5,6 +5,7 @@
 import { defineSlotRecipe } from "@pandacss/dev";
 import { anatomy as selectAnatomy } from "@ark-ui/anatomy/select";
 import label from "./label";
+import selectBox from "./select-box";
 import menu from "./menu";
 
 export default defineSlotRecipe({
@@ -30,38 +31,34 @@ export default defineSlotRecipe({
       maxWidth: "full",
     },
     trigger: {
-      width: "full",
-      height: "full",
-      appearance: "none",
-      textStyle: "oln-16N-100",
-      px: 4,
-      py: "calc(11/16 * 1rem)",
-      borderWidth: "1px",
-      borderColor: {
-        base: "solid-gray.900",
-        _disabled: "solid-gray.300",
-      },
-      rounded: "lg",
-      color: { base: "solid-gray.800", _disabled: "solid-gray.420" },
-      bg: { base: "white", _disabled: "solid-gray.50" },
-      _focus: {
-        outlineWidth: "4px",
-        outlineColor: "black",
-        outlineOffset: "calc(2/16*1rem)",
-        borderInset: "md",
-      },
+      ...selectBox.base,
+      /**
+       * adapt to clearTrigger
+       */
+      pr: 20,
     },
     indicator: {
       /**
        * pointer-events-none absolute right-4 top-1/2 -translate-y-1/2
-        ${props['aria-disabled'] ? 'text-solid-gray-420' : 'text-solid-gray-900'}
        */
       pointerEvents: "none",
       position: "absolute",
-      right: 4,
       top: "50%",
       transform: "translateY(-50%)",
-      color: { base: "solid-gray.900", _disabled: "solid-gray.420" },
+      right: 4,
+      /**
+       * ${props['aria-disabled'] ? 'text-solid-gray-420 forced-colors:text-[GrayText]' : 'text-solid-gray-900 forced-colors:text-[CanvasText]'}
+       */
+      color: {
+        base: { base: "solid-gray.900", _highContrast: "CanvasText" },
+        _disabled: { base: "solid-gray.420", _highContrast: "GrayText" },
+      },
+    },
+    clearTrigger: {
+      position: "absolute",
+      top: "50%",
+      right: 12,
+      transform: "translateY(-50%)",
     },
     content: {
       ...menu.base?.content,
@@ -76,24 +73,31 @@ export default defineSlotRecipe({
     item: {
       ...menu.base?.item,
     },
+    itemIndicator: {
+      pointerEvents: "none",
+      position: "absolute",
+      right: 4,
+      top: "50%",
+      transform: "translateY(-50%)",
+    },
   },
   variants: {
     size: {
       lg: {
-        control: {
-          height: 14,
+        trigger: {
+          ...selectBox.variants?.size?.lg,
         },
         label: { ...label.variants?.size?.lg },
       },
       md: {
-        control: {
-          height: 12,
+        trigger: {
+          ...selectBox.variants?.size?.md,
         },
         label: { ...label.variants?.size?.md },
       },
       sm: {
-        control: {
-          height: 10,
+        trigger: {
+          ...selectBox.variants?.size?.sm,
         },
         label: { ...label.variants?.size?.sm },
       },
@@ -101,7 +105,7 @@ export default defineSlotRecipe({
     invalid: {
       true: {
         trigger: {
-          borderColor: "error.1",
+          ...selectBox.variants?.invalid?.true,
         },
       },
     },

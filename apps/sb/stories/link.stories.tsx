@@ -5,13 +5,13 @@ import { link } from "@import-map-package/styled-system/recipes";
 
 const Link = styled(ark.a, link);
 
-const meta: Meta<typeof Link> = {
-  title: "Components/Link",
+const meta = {
+  title: "Components/リンク",
   component: Link,
   args: {
     href: "https://cieloazul310.github.io",
   },
-};
+} satisfies Meta<typeof Link>;
 
 export default meta;
 type Story = StoryObj<typeof Link>;
