@@ -8,6 +8,7 @@ import input from "./input";
 import inputText from "./input-text";
 import link from "./link";
 import menu from "./menu";
+import notificationBanner from "./notification-banner";
 import select from "./select";
 import selectBox from "./select-box";
 import supportText from "./support-text";
@@ -24,6 +25,7 @@ const recipes = {
   inputText,
   link,
   menu,
+  notificationBanner,
   select,
   selectBox,
   supportText,

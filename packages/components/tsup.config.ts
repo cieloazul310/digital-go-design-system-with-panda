@@ -4,6 +4,6 @@ export default defineConfig({
   entry: ["src"],
   format: ["esm", "cjs"],
   external: ["@import-map-package/styled-system"],
-  dts: true,
+  // dts: true,
   clean: true,
 });

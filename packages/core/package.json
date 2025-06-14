@@ -17,7 +17,7 @@
       "source": "./src/components/accordion.tsx",
       "types": "./dist/components/accordion.d.ts",
       "import": {
-        "types": "./dist/components/accordion.d.mts",
+        "types": "./dist/components/accordion.d.ts",
         "default": "./dist/components/accordion.mjs"
       },
       "require": "./dist/components/accordion.js"
@@ -26,7 +26,7 @@
       "source": "./src/components/breadcrumb.tsx",
       "types": "./dist/components//breadcrumb.d.ts",
       "import": {
-        "types": "./dist/components/breadcrumb.d.mts",
+        "types": "./dist/components/breadcrumb.d.ts",
         "default": "./dist/components/breadcrumb.mjs"
       },
       "require": "./dist/components/breadcrumb.js"
@@ -35,7 +35,7 @@
       "source": "./src/components/button.tsx",
       "types": "./dist/components/button.d.ts",
       "import": {
-        "types": "./dist/components/button.d.mts",
+        "types": "./dist/components/button.d.ts",
         "default": "./dist/components/button.mjs"
       },
       "require": "./dist/components/button.js"
@@ -44,7 +44,7 @@
       "source": "./src/components/input.tsx",
       "types": "./dist/components/input.d.ts",
       "import": {
-        "types": "./dist/components/input.d.mts",
+        "types": "./dist/components/input.d.ts",
         "default": "./dist/components/input.mjs"
       },
       "require": "./dist/components/input.js"
@@ -53,16 +53,25 @@
       "source": "./src/components/input-text.tsx",
       "types": "./dist/components/input-text.d.ts",
       "import": {
-        "types": "./dist/components/input-text.d.mts",
+        "types": "./dist/components/input-text.d.ts",
         "default": "./dist/components/input-text.mjs"
       },
       "require": "./dist/components/input-text.js"
+    },
+    "./notification-banner": {
+      "source": "./src/components/notification-banner.tsx",
+      "types": "./dist/components/notification-banner.d.ts",
+      "import": {
+        "types": "./dist/components/notification-banner.d.ts",
+        "default": "./dist/components/notification-banner.mjs"
+      },
+      "require": "./dist/components/notification-banner.js"
     },
     "./select": {
       "source": "./src/components/select.tsx",
       "types": "./dist/components/select.d.ts",
       "import": {
-        "types": "./dist/components/select.d.mts",
+        "types": "./dist/components/select.d.ts",
         "default": "./dist/components/select.mjs"
       },
       "require": "./dist/components/select.js"
@@ -71,7 +80,7 @@
       "source": "./src/components/textarea.tsx",
       "types": "./dist/components/textarea.d.ts",
       "import": {
-        "types": "./dist/components/textarea.d.mts",
+        "types": "./dist/components/textarea.d.ts",
         "default": "./dist/components/textarea.mjs"
       },
       "require": "./dist/components/textarea.js"

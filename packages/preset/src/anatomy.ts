@@ -10,3 +10,7 @@ export const breadcrumbAnatomy = createAnatomy("breadcrumb").parts(
   "link",
   "separator",
 );
+
+export const notificationBannerAnatomy = createAnatomy(
+  "notification-banner",
+).parts("root", "icon", "close", "header", "heading", "body");
