@@ -14,6 +14,7 @@ import type {
   HTMLStyledProps,
 } from "@import-map-package/styled-system/types";
 import { createStyleContext } from "../utils/create-style-context";
+import { NotificationBannerIcon } from "./icon";
 
 const { withProvider, withContext } = createStyleContext(notificationBanner);
 
@@ -42,9 +43,9 @@ export const Heading = withContext<
 >(ark.h2, "heading");
 
 export const Icon = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, PolymorphicProps>
->(ark.div, "icon");
+  HTMLOrSVGElement,
+  Assign<HTMLStyledProps<"svg">, PolymorphicProps>
+>(NotificationBannerIcon, "icon");
 
 export const Close = withContext<
   HTMLButtonElement,

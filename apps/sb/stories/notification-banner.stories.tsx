@@ -43,7 +43,33 @@ export const Playground: Story = {
       </NotificationBanner.Icon>
       <NotificationBanner.Header>
         <NotificationBanner.Heading>バナータイトル</NotificationBanner.Heading>
-        <NotificationBanner.Close />
+        <NotificationBanner.Close>閉じる</NotificationBanner.Close>
+      </NotificationBanner.Header>
+      <NotificationBanner.Body>
+        <p>
+          <time dateTime="2024-07-01">2024年7月1日</time>
+        </p>
+        <p>
+          ダミーテキストは、デザインの作成時に使用される仮の文章です。ダミーテキストは、デザインの作成時に使用される仮の文章です。ダミーテキストは、デザインの作成時に使用される仮の文章です。
+        </p>
+      </NotificationBanner.Body>
+    </NotificationBanner.Root>
+  ),
+};
+
+export const WithAction: Story = {
+  args: {
+    bannerStyle: "standard",
+    type: "info2",
+  },
+  render: ({ ...props }) => (
+    <NotificationBanner.Root {...props}>
+      <NotificationBanner.Icon>
+        <InfoIcon />
+      </NotificationBanner.Icon>
+      <NotificationBanner.Header>
+        <NotificationBanner.Heading>バナータイトル</NotificationBanner.Heading>
+        <NotificationBanner.Close>閉じる</NotificationBanner.Close>
       </NotificationBanner.Header>
       <NotificationBanner.Body>
         <p>

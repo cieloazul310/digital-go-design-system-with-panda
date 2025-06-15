@@ -44,7 +44,7 @@ export default defineSlotRecipe({
       gridColumnEnd: -1,
       placeItems: "start",
       "& > *:last-child": {
-        gridColumnEnd: 1,
+        gridColumnEnd: -1,
       },
     },
     icon: {
@@ -52,12 +52,16 @@ export default defineSlotRecipe({
        * mt-[calc(2/16*1rem)] desktop:mt-0
        */
       mt: { base: "calc(2 / 16 * 1rem)", md: 0 },
+      /**
+       * h-auto max-w-full
+       */
+      height: "auto",
+      maxWidth: "full",
     },
     close: {
       /**
        * inline-flex items-center gap-0.5
        * -mt-2 -mr-3 desktop:mt-0 desktop:mr-0 desktop:px-2 desktop:py-0.5
-       * text-solid-gray-900 hover:border-solid-gray-900
        */
       display: "inline-flex",
       alignItems: "center",
@@ -67,10 +71,18 @@ export default defineSlotRecipe({
       px: { base: 0, md: 2 },
       py: { base: 0, md: 0.5 },
       /**
-       * border border-transparent rounded-8 focus-visible:border-transparent
+       * text-solid-gray-900
+       */
+      color: "solid-gray.900",
+      /**
+       * border border-transparent  hover:border-solid-gray-900 rounded-8 focus-visible:border-transparent
        */
       borderWidth: "1px",
-      borderColor: { base: "transparent", _focusVisible: "transparent" },
+      borderColor: {
+        base: "transparent",
+        _hover: "solid-gray.900",
+        _focusVisible: "transparent",
+      },
       rounded: 8,
       /**
        * focus-visible:outline focus-visible:outline-4 focus-visible:outline-black focus-visible:outline-offset-[calc(2/16*1rem)]
