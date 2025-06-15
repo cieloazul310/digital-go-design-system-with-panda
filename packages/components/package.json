@@ -58,6 +58,15 @@
       },
       "require": "./dist/input-text/index.js"
     },
+    "./notification-banner": {
+      "source": "./src/notification-banner/index.tsx",
+      "types": "./dist/notification-banner/index.d.ts",
+      "import": {
+        "types": "./dist/notification-banner/index.d.mts",
+        "default": "./dist/notification-banner/index.mjs"
+      },
+      "require": "./dist/notification-banner/index.js"
+    },
     "./select": {
       "source": "./src/select/index.tsx",
       "types": "./dist/select/index.d.ts",
@@ -80,7 +89,7 @@
   "scripts": {
     "panda": "panda codegen",
     "prebuild": "npm run panda",
-    "build": "tsup",
+    "build": "tsup && tsc",
     "dev": "npm run build -- --watch",
     "eslint": "eslint src --fix",
     "format": "prettier --parser typescript --write ."

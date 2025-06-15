@@ -20,6 +20,23 @@ const textStylesMap: TextStylesMap = {
     description:
       "Displayテキストは、主に冒頭で大きく掲出されるテキストやメッセージを伝えるヘッドコピーなど、視覚的なインパクトを強く与えたい場合に使用されます。",
     variants: [
+      /** Display(Dsp) Bold */
+      {
+        fontSize: 64,
+        fontWeight: "B",
+        lineHeight: 140,
+      },
+      {
+        fontSize: 57,
+        fontWeight: "B",
+        lineHeight: 140,
+      },
+      {
+        fontSize: 48,
+        fontWeight: "B",
+        lineHeight: 140,
+      },
+      /** Display(Dsp) Normal */
       {
         fontSize: 64,
         fontWeight: "N",
@@ -42,6 +59,7 @@ const textStylesMap: TextStylesMap = {
     description:
       "Standardテキストは、ページの文書構造を形成する見出しや本文など、多くの要素において最も使用される普遍的なテキストスタイルです。",
     variants: [
+      /** Standard(Std) Bold */
       {
         fontSize: 45,
         fontWeight: "B",
@@ -107,6 +125,7 @@ const textStylesMap: TextStylesMap = {
         lineHeight: 175,
         letterSpacing: 0.02,
       },
+      /** Standard(Std) Normal */
       {
         fontSize: 45,
         fontWeight: "N",
@@ -185,6 +204,7 @@ const textStylesMap: TextStylesMap = {
     description:
       "Denseテキストは管理画面や業務システムなど、限られた画面領域での表示情報量を優先したテキストスタイルです。たとえば、データテーブル内での情報提示など、表示領域に制約がある場合のテキストスタイルとして使用します。",
     variants: [
+      /** Dense(Dns) Bold */
       {
         fontSize: 17,
         fontWeight: "B",
@@ -192,17 +212,7 @@ const textStylesMap: TextStylesMap = {
       },
       {
         fontSize: 17,
-        fontWeight: "N",
-        lineHeight: 130,
-      },
-      {
-        fontSize: 17,
         fontWeight: "B",
-        lineHeight: 120,
-      },
-      {
-        fontSize: 17,
-        fontWeight: "N",
         lineHeight: 120,
       },
       {
@@ -212,23 +222,39 @@ const textStylesMap: TextStylesMap = {
       },
       {
         fontSize: 16,
+        fontWeight: "B",
+        lineHeight: 120,
+      },
+      {
+        fontSize: 14,
+        fontWeight: "B",
+        lineHeight: 130,
+      },
+      {
+        fontSize: 14,
+        fontWeight: "B",
+        lineHeight: 120,
+      },
+      /** Dense(Dns) Normal */
+      {
+        fontSize: 17,
+        fontWeight: "N",
+        lineHeight: 130,
+      },
+      {
+        fontSize: 17,
+        fontWeight: "N",
+        lineHeight: 120,
+      },
+      {
+        fontSize: 16,
         fontWeight: "N",
         lineHeight: 130,
       },
       {
         fontSize: 16,
-        fontWeight: "B",
-        lineHeight: 120,
-      },
-      {
-        fontSize: 17,
         fontWeight: "N",
         lineHeight: 120,
-      },
-      {
-        fontSize: 14,
-        fontWeight: "B",
-        lineHeight: 130,
       },
       {
         fontSize: 14,
@@ -237,11 +263,6 @@ const textStylesMap: TextStylesMap = {
       },
       {
         fontSize: 14,
-        fontWeight: "B",
-        lineHeight: 120,
-      },
-      {
-        fontSize: 17,
         fontWeight: "N",
         lineHeight: 120,
       },
@@ -252,29 +273,31 @@ const textStylesMap: TextStylesMap = {
     description:
       "Onelineテキストは1行展開を前提として、主にUI要素への適用を想定したテキストスタイルです。行間の余白を最小限にすることでUIパーツに対するデザイン、及びコーディング実装調整コストの軽減を優先したデキストスタイルとなります。",
     variants: [
+      /** Oneline(Oln) Bold */
       {
         fontSize: 17,
         fontWeight: "B",
         lineHeight: 100,
       },
       {
-        fontSize: 17,
-        fontWeight: "N",
-        lineHeight: 100,
-      },
-      {
         fontSize: 16,
         fontWeight: "B",
-        lineHeight: 100,
-      },
-      {
-        fontSize: 16,
-        fontWeight: "N",
         lineHeight: 100,
       },
       {
         fontSize: 14,
         fontWeight: "B",
+        lineHeight: 100,
+      },
+      /** Oneline(Oln) Normal */
+      {
+        fontSize: 17,
+        fontWeight: "N",
+        lineHeight: 100,
+      },
+      {
+        fontSize: 16,
+        fontWeight: "N",
         lineHeight: 100,
       },
       {
@@ -289,29 +312,32 @@ const textStylesMap: TextStylesMap = {
     description:
       "Monoテキストはコード系コンテンツへの適用を想定したテキストスタイルです。文字・単語レベルの可読性を優先したモノスペース（等幅フォント）を使用します。",
     variants: [
+      /** Mono Bold */
       {
         fontSize: 17,
         fontWeight: "B",
         lineHeight: 150,
       },
       {
-        fontSize: 17,
-        fontWeight: "N",
-        lineHeight: 150,
-      },
-      {
         fontSize: 16,
         fontWeight: "B",
-        lineHeight: 150,
-      },
-      {
-        fontSize: 16,
-        fontWeight: "N",
         lineHeight: 150,
       },
       {
         fontSize: 14,
         fontWeight: "B",
+        lineHeight: 150,
+      },
+      /** Oneline(Oln) Normal */
+      {
+        fontSize: 17,
+        fontWeight: "N",
+        lineHeight: 150,
+      },
+
+      {
+        fontSize: 16,
+        fontWeight: "N",
         lineHeight: 150,
       },
       {
