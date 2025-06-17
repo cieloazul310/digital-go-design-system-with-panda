@@ -13,6 +13,7 @@ import select from "./select";
 import selectBox from "./select-box";
 import supportText from "./support-text";
 import textarea from "./textarea";
+import utilityLink from "./utility-link";
 
 const recipes = {
   accordion,
@@ -30,6 +31,7 @@ const recipes = {
   selectBox,
   supportText,
   textarea,
+  utilityLink,
 };
 
 export default recipes;

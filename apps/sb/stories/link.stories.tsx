@@ -1,9 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { ark } from "@ark-ui/react/factory";
-import { styled, Container } from "@import-map-package/styled-system/jsx";
-import { link } from "@import-map-package/styled-system/recipes";
-
-const Link = styled(ark.a, link);
+import { Link } from "@cieloazul310/digital-go-pandacss/link";
+import { Container } from "@import-map-package/styled-system/jsx";
 
 const meta = {
   title: "Components/リンク",

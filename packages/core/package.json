@@ -58,6 +58,15 @@
       },
       "require": "./dist/components/input-text.js"
     },
+    "./link": {
+      "source": "./src/components/link.tsx",
+      "types": "./dist/components/link.d.ts",
+      "import": {
+        "types": "./dist/components/link.d.ts",
+        "default": "./dist/components/link.mjs"
+      },
+      "require": "./dist/components/link.js"
+    },
     "./notification-banner": {
       "source": "./src/components/notification-banner.tsx",
       "types": "./dist/components/notification-banner.d.ts",
@@ -84,6 +93,15 @@
         "default": "./dist/components/textarea.mjs"
       },
       "require": "./dist/components/textarea.js"
+    },
+    "./utility-link": {
+      "source": "./src/components/utility-link.tsx",
+      "types": "./dist/components/utility-link.d.ts",
+      "import": {
+        "types": "./dist/components/utility-link.d.ts",
+        "default": "./dist/components/utility-link.mjs"
+      },
+      "require": "./dist/components/utility-link.js"
     },
     "./preset": {
       "source": "./src/preset.ts",

@@ -58,6 +58,15 @@
       },
       "require": "./dist/input-text/index.js"
     },
+    "./link": {
+      "source": "./src/link/index.tsx",
+      "types": "./dist/link/index.d.ts",
+      "import": {
+        "types": "./dist/link/index.d.mts",
+        "default": "./dist/link/index.mjs"
+      },
+      "require": "./dist/link/index.js"
+    },
     "./notification-banner": {
       "source": "./src/notification-banner/index.tsx",
       "types": "./dist/notification-banner/index.d.ts",
@@ -84,6 +93,15 @@
         "default": "./dist/textarea/index.mjs"
       },
       "require": "./dist/textarea/index.js"
+    },
+    "./utility-link": {
+      "source": "./src/utility-link/index.tsx",
+      "types": "./dist/utility-link/index.d.ts",
+      "import": {
+        "types": "./dist/utility-link/index.d.mts",
+        "default": "./dist/utility-link/index.mjs"
+      },
+      "require": "./dist/utility-link/index.js"
     }
   },
   "scripts": {

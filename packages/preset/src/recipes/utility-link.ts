@@ -1,41 +1,31 @@
 /**
- * source:
- * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Link/Link.tsx
+ * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/UtilityLink/UtilityLink.tsx
  */
 import { defineRecipe } from "@pandacss/dev";
 
 export default defineRecipe({
-  className: "link",
+  className: "utility-link",
   description:
-    "リンクテキストは通常、色や下線などの視覚的な表現で通常のテキストと区別され、URLと関連づけられたテキスト文字列です。この関連付けをハイパーリンクと呼び、これはウェブをウェブたらしめている基本的な概念のひとつです。",
+    "ユーティリティリンクはふつうの横並びリンクリストに近いが、それよりもコンパクトに作られています。",
   base: {
     /**
-     * text-blue-1000 visited:text-magenta-900 hover:text-blue-1000
-     * focus-visible:text-blue-1000 active:text-orange-700
+     * !text-solid-gray-800 text-dns-16N-130
+     * focus-visible:bg-yellow-300 focus-visible:text-blue-1000
      */
+    textStyle: "dns-16N-130",
     color: {
-      base: "blue.1000",
-      _visited: "magenta.900",
-      _hover: "blue.1000",
+      base: "solid-gray.800",
       _focusVisible: "blue.1000",
-      _active: "orange.700",
     },
+    bg: { base: "transparent", _focusVisible: "yellow.300" },
     /**
-     * focus-visible:bg-yellow-300
-     */
-    bg: {
-      base: "transparent",
-      _focusVisible: "yellow.300",
-    },
-    /**
-     * underline underline-offset-[calc(3/16*1rem)] hover:decoration-[calc(3/16*1rem)]
-     * active:decoration-1
+     * underline underline-offset-[calc(3/16*1rem)]
+     * hover:decoration-[calc(3/16*1rem)]
      */
     textDecoration: "underline",
     textDecorationThickness: {
       base: "1px",
       _hover: "calc(3 / 16 * 1rem)",
-      _active: "1px",
     },
     textUnderlineOffset: "calc(3 / 16 * 1rem)",
     /**
