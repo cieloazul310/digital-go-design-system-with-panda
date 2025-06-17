@@ -40,6 +40,15 @@
       },
       "require": "./dist/components/button.js"
     },
+    "./checkbox": {
+      "source": "./src/components/checkbox.tsx",
+      "types": "./dist/components/checkbox.d.ts",
+      "import": {
+        "types": "./dist/components/checkbox.d.ts",
+        "default": "./dist/components/checkbox.mjs"
+      },
+      "require": "./dist/components/checkbox.js"
+    },
     "./input": {
       "source": "./src/components/input.tsx",
       "types": "./dist/components/input.d.ts",

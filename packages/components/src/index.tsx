@@ -1,5 +1,6 @@
 import * as Accordion from "./accordion";
 import * as Breadcrumb from "./breadcrumb";
+import * as Checkbox from "./checkbox";
 import * as InputText from "./input-text";
 import * as Menu from "./menu";
 import * as NotificationBanner from "./notification-banner";
@@ -13,4 +14,12 @@ export * from "./textarea";
 export * from "./utility-link";
 export * from "./utils/create-style-context";
 
-export { Accordion, Breadcrumb, InputText, Menu, NotificationBanner, Select };
+export {
+  Accordion,
+  Breadcrumb,
+  Checkbox,
+  InputText,
+  Menu,
+  NotificationBanner,
+  Select,
+};

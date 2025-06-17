@@ -1,6 +1,7 @@
 import accordion from "./accordion";
 import breadcrumb from "./breadcrumb";
 import button from "./button";
+import checkbox from "./checkbox";
 import divider from "./divider";
 import errorText from "./error-text";
 import label from "./label";
@@ -19,6 +20,7 @@ const recipes = {
   accordion,
   breadcrumb,
   button,
+  checkbox,
   divider,
   errorText,
   label,

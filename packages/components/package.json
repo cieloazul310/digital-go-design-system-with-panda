@@ -40,6 +40,15 @@
       },
       "require": "./dist/button/index.js"
     },
+    "./checkbox": {
+      "source": "./src/checkbox/index.tsx",
+      "types": "./dist/checkbox/index.d.ts",
+      "import": {
+        "types": "./dist/checkbox/index.d.mts",
+        "default": "./dist/checkbox/index.mjs"
+      },
+      "require": "./dist/checkbox/index.js"
+    },
     "./input": {
       "source": "./src/input/index.tsx",
       "types": "./dist/input/index.d.ts",
