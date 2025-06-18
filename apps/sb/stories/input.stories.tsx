@@ -4,6 +4,7 @@ import { input } from "@import-map-package/styled-system/recipes";
 
 const meta = {
   title: "Components/インプット",
+  tags: ["autodocs"],
   component: Input,
   argTypes: {
     size: {

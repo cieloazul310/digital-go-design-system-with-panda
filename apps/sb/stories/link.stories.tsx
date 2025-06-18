@@ -4,6 +4,7 @@ import { Container } from "@import-map-package/styled-system/jsx";
 
 const meta = {
   title: "Components/リンク",
+  tags: ["autodocs"],
   component: Link,
   args: {
     href: "https://cieloazul310.github.io",

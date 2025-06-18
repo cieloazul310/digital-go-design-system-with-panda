@@ -4,6 +4,7 @@ import * as InputText from "@cieloazul310/digital-go-pandacss/input-text";
 
 const meta = {
   title: "Components/テキストエリア",
+  tags: ["autodocs"],
   component: Textarea,
   argTypes: {
     invalid: {

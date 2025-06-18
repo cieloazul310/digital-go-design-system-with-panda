@@ -5,6 +5,7 @@ import { styled, Container } from "@import-map-package/styled-system/jsx";
 
 const meta = {
   title: "Components/アコーディオン",
+  tags: ["autodocs"],
   argTypes: {
     collapsible: {
       control: "boolean",

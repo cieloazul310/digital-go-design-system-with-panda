@@ -2,7 +2,7 @@ import accordion from "./accordion";
 import breadcrumb from "./breadcrumb";
 import button from "./button";
 import checkbox from "./checkbox";
-import divider from "./divider";
+import digitalGoDivider from "./divider";
 import errorText from "./error-text";
 import label from "./label";
 import input from "./input";
@@ -21,7 +21,7 @@ const recipes = {
   breadcrumb,
   button,
   checkbox,
-  divider,
+  digitalGoDivider,
   errorText,
   label,
   input,

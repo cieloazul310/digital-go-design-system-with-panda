@@ -5,6 +5,7 @@ import * as Checkbox from "@cieloazul310/digital-go-pandacss/checkbox";
 
 const meta = {
   title: "Components/チェックボックス",
+  tags: ["autodocs"],
   component: Checkbox.Root,
   argTypes: {
     size: {

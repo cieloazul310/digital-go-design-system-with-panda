@@ -14,6 +14,7 @@ const buttons = hstack({ gap: 4, alignItems: "end" });
 
 const meta = {
   title: "Components/ボタン",
+  tags: ["autodocs"],
   component: Button,
   argTypes: {
     variant: {

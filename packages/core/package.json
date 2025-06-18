@@ -49,6 +49,15 @@
       },
       "require": "./dist/components/checkbox.js"
     },
+    "./divider": {
+      "source": "./src/components/divider.tsx",
+      "types": "./dist/components/divider.d.ts",
+      "import": {
+        "types": "./dist/components/divider.d.ts",
+        "default": "./dist/components/divider.mjs"
+      },
+      "require": "./dist/components/divider.js"
+    },
     "./input": {
       "source": "./src/components/input.tsx",
       "types": "./dist/components/input.d.ts",

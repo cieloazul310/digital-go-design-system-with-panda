@@ -4,6 +4,7 @@ import * as NotificationBanner from "@cieloazul310/digital-go-pandacss/notificat
 
 const meta = {
   title: "Components/ノティフィケーションバナー",
+  tags: ["autodocs"],
   component: NotificationBanner.Root,
   argTypes: {
     bannerStyle: {

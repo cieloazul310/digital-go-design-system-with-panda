@@ -17,6 +17,7 @@ const Article = ({
 
 const meta = {
   title: "Components/Typography",
+  tags: ["autodocs"],
   args: {
     paragraph: "std-17N-170",
     heading: "std-28B-150",

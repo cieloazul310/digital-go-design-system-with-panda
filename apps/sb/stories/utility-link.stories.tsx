@@ -4,6 +4,7 @@ import { ExternalLink } from "lucide-react";
 
 const meta = {
   title: "Components/ユーティリティリンク",
+  tags: ["autodocs"],
   component: UtilityLink,
   args: {
     href: "https://cieloazul310.github.io",
