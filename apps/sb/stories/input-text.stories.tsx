@@ -5,6 +5,7 @@ import { inputText } from "@import-map-package/styled-system/recipes";
 
 const meta = {
   title: "Components/インプットテキスト",
+  tags: ["autodocs"],
   argTypes: {
     size: {
       control: "inline-radio",

@@ -40,6 +40,24 @@
       },
       "require": "./dist/components/button.js"
     },
+    "./checkbox": {
+      "source": "./src/components/checkbox.tsx",
+      "types": "./dist/components/checkbox.d.ts",
+      "import": {
+        "types": "./dist/components/checkbox.d.ts",
+        "default": "./dist/components/checkbox.mjs"
+      },
+      "require": "./dist/components/checkbox.js"
+    },
+    "./divider": {
+      "source": "./src/components/divider.tsx",
+      "types": "./dist/components/divider.d.ts",
+      "import": {
+        "types": "./dist/components/divider.d.ts",
+        "default": "./dist/components/divider.mjs"
+      },
+      "require": "./dist/components/divider.js"
+    },
     "./input": {
       "source": "./src/components/input.tsx",
       "types": "./dist/components/input.d.ts",
@@ -57,6 +75,15 @@
         "default": "./dist/components/input-text.mjs"
       },
       "require": "./dist/components/input-text.js"
+    },
+    "./link": {
+      "source": "./src/components/link.tsx",
+      "types": "./dist/components/link.d.ts",
+      "import": {
+        "types": "./dist/components/link.d.ts",
+        "default": "./dist/components/link.mjs"
+      },
+      "require": "./dist/components/link.js"
     },
     "./notification-banner": {
       "source": "./src/components/notification-banner.tsx",
@@ -76,6 +103,15 @@
       },
       "require": "./dist/components/select.js"
     },
+    "./table": {
+      "source": "./src/components/table.tsx",
+      "types": "./dist/components/table.d.ts",
+      "import": {
+        "types": "./dist/components/table.d.ts",
+        "default": "./dist/components/table.mjs"
+      },
+      "require": "./dist/components/table.js"
+    },
     "./textarea": {
       "source": "./src/components/textarea.tsx",
       "types": "./dist/components/textarea.d.ts",
@@ -84,6 +120,15 @@
         "default": "./dist/components/textarea.mjs"
       },
       "require": "./dist/components/textarea.js"
+    },
+    "./utility-link": {
+      "source": "./src/components/utility-link.tsx",
+      "types": "./dist/components/utility-link.d.ts",
+      "import": {
+        "types": "./dist/components/utility-link.d.ts",
+        "default": "./dist/components/utility-link.mjs"
+      },
+      "require": "./dist/components/utility-link.js"
     },
     "./preset": {
       "source": "./src/preset.ts",

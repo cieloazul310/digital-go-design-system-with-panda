@@ -5,6 +5,7 @@ import * as Breadcrumb from "@cieloazul310/digital-go-pandacss/breadcrumb";
 
 const meta = {
   title: "Components/パンくずリスト",
+  tags: ["autodocs"],
 } satisfies Meta<typeof Breadcrumb.Root>;
 
 export default meta;

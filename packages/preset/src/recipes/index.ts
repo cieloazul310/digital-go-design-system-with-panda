@@ -1,7 +1,8 @@
 import accordion from "./accordion";
 import breadcrumb from "./breadcrumb";
 import button from "./button";
-import divider from "./divider";
+import checkbox from "./checkbox";
+import digitalGoDivider from "./divider";
 import errorText from "./error-text";
 import label from "./label";
 import input from "./input";
@@ -12,13 +13,16 @@ import notificationBanner from "./notification-banner";
 import select from "./select";
 import selectBox from "./select-box";
 import supportText from "./support-text";
+import table from "./table";
 import textarea from "./textarea";
+import utilityLink from "./utility-link";
 
 const recipes = {
   accordion,
   breadcrumb,
   button,
-  divider,
+  checkbox,
+  digitalGoDivider,
   errorText,
   label,
   input,
@@ -29,7 +33,9 @@ const recipes = {
   select,
   selectBox,
   supportText,
+  table,
   textarea,
+  utilityLink,
 };
 
 export default recipes;

@@ -3,19 +3,18 @@
  */
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { fn } from "storybook/test";
-import { ark } from "@ark-ui/react/factory";
 import { Button } from "@cieloazul310/digital-go-pandacss/button";
+import { Link } from "@cieloazul310/digital-go-pandacss/link";
 import { cx, css } from "@import-map-package/styled-system/css";
 import { styled, Flex } from "@import-map-package/styled-system/jsx";
-import { link } from "@import-map-package/styled-system/recipes";
 import { hstack } from "@import-map-package/styled-system/patterns";
 
 const headingStyle = css({ textStyle: "std-32B-150", mb: 6 });
 const buttons = hstack({ gap: 4, alignItems: "end" });
-const Link = styled(ark.a, link);
 
 const meta = {
   title: "Components/ボタン",
+  tags: ["autodocs"],
   component: Button,
   argTypes: {
     variant: {

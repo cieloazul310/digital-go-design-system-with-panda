@@ -7,6 +7,7 @@ import { select } from "@import-map-package/styled-system/recipes";
 
 const meta = {
   title: "Components/セレクトボックス",
+  tags: ["autodocs"],
   argTypes: {
     size: {
       control: "inline-radio",
