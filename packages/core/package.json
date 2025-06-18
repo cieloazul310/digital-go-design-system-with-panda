@@ -103,6 +103,15 @@
       },
       "require": "./dist/components/select.js"
     },
+    "./table": {
+      "source": "./src/components/table.tsx",
+      "types": "./dist/components/table.d.ts",
+      "import": {
+        "types": "./dist/components/table.d.ts",
+        "default": "./dist/components/table.mjs"
+      },
+      "require": "./dist/components/table.js"
+    },
     "./textarea": {
       "source": "./src/components/textarea.tsx",
       "types": "./dist/components/textarea.d.ts",

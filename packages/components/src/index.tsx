@@ -5,6 +5,7 @@ import * as InputText from "./input-text";
 import * as Menu from "./menu";
 import * as NotificationBanner from "./notification-banner";
 import * as Select from "./select";
+import * as Table from "./table";
 
 export * from "./button";
 export * from "./divider";
@@ -22,4 +23,5 @@ export {
   Menu,
   NotificationBanner,
   Select,
+  Table,
 };

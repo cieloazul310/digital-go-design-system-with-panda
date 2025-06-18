@@ -103,6 +103,15 @@
       },
       "require": "./dist/select/index.js"
     },
+    "./table": {
+      "source": "./src/table/index.tsx",
+      "types": "./dist/table/index.d.ts",
+      "import": {
+        "types": "./dist/table/index.d.mts",
+        "default": "./dist/table/index.mjs"
+      },
+      "require": "./dist/table/index.js"
+    },
     "./textarea": {
       "source": "./src/textarea/index.tsx",
       "types": "./dist/textarea/index.d.ts",
