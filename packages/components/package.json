@@ -85,6 +85,15 @@
       },
       "require": "./dist/link/index.js"
     },
+    "./list": {
+      "source": "./src/list/index.tsx",
+      "types": "./dist/list/index.d.ts",
+      "import": {
+        "types": "./dist/list/index.d.mts",
+        "default": "./dist/list/index.mjs"
+      },
+      "require": "./dist/list/index.js"
+    },
     "./notification-banner": {
       "source": "./src/notification-banner/index.tsx",
       "types": "./dist/notification-banner/index.d.ts",
@@ -93,6 +102,15 @@
         "default": "./dist/notification-banner/index.mjs"
       },
       "require": "./dist/notification-banner/index.js"
+    },
+    "./ordered-list": {
+      "source": "./src/ordered-list/index.tsx",
+      "types": "./dist/ordered-list/index.d.ts",
+      "import": {
+        "types": "./dist/ordered-list/index.d.mts",
+        "default": "./dist/ordered-list/index.mjs"
+      },
+      "require": "./dist/ordered-list/index.js"
     },
     "./select": {
       "source": "./src/select/index.tsx",
@@ -120,6 +138,15 @@
         "default": "./dist/textarea/index.mjs"
       },
       "require": "./dist/textarea/index.js"
+    },
+    "./unordered-list": {
+      "source": "./src/unordered-list/index.tsx",
+      "types": "./dist/unordered-list/index.d.ts",
+      "import": {
+        "types": "./dist/unordered-list/index.d.mts",
+        "default": "./dist/unordered-list/index.mjs"
+      },
+      "require": "./dist/unordered-list/index.js"
     },
     "./utility-link": {
       "source": "./src/utility-link/index.tsx",

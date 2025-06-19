@@ -41,7 +41,7 @@ Storybook
 | リソースリスト                | ❌               | ❌                 |
 | スクロールトップボタン        | ❌               | ❌                 |
 | セレクトボックス v2           | ✅ `select`      | ✅ `<Select>`      |
-| テーブル                      | 🔨               | 🔨                 |
+| テーブル v2                  | ✅ `table`      | ✅ `<Table>`      |
 | テキストエリア v2             | ✅ `textarea`    | ✅ `<Textarea>`    |
 | インプットテキスト v2         | ✅ `inputText`   | ✅ `<InputText>`   |
 | ユーティリティリンク v2       | ✅ `utilityLink` | ✅ `<UtilityLink>` |
