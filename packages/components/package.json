@@ -112,6 +112,15 @@
       },
       "require": "./dist/ordered-list/index.js"
     },
+    "./radio": {
+      "source": "./src/radio/index.tsx",
+      "types": "./dist/radio/index.d.ts",
+      "import": {
+        "types": "./dist/radio/index.d.mts",
+        "default": "./dist/radio/index.mjs"
+      },
+      "require": "./dist/radio/index.js"
+    },
     "./select": {
       "source": "./src/select/index.tsx",
       "types": "./dist/select/index.d.ts",

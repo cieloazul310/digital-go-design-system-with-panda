@@ -12,6 +12,8 @@ import list from "./list";
 import menu from "./menu";
 import notificationBanner from "./notification-banner";
 import orderedList from "./ordered-list";
+import radio from "./radio";
+import radioGroup from "./radio-group";
 import select from "./select";
 import selectBox from "./select-box";
 import supportText from "./support-text";
@@ -35,6 +37,8 @@ const recipes = {
   menu,
   notificationBanner,
   orderedList,
+  radio,
+  radioGroup,
   select,
   selectBox,
   supportText,

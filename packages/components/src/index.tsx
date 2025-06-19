@@ -4,6 +4,7 @@ import * as Checkbox from "./checkbox";
 import * as InputText from "./input-text";
 import * as Menu from "./menu";
 import * as NotificationBanner from "./notification-banner";
+import * as Radio from "./radio";
 import * as Select from "./select";
 import * as Table from "./table";
 
@@ -25,6 +26,7 @@ export {
   InputText,
   Menu,
   NotificationBanner,
+  Radio,
   Select,
   Table,
 };
