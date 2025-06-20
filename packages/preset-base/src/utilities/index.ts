@@ -1,6 +1,7 @@
 import { defineUtility } from "@pandacss/dev";
 
 const borderInset = defineUtility({
+  deprecated: true,
   className: "border-inset",
   values: ["xs", "sm", "md", "lg", "xl"],
   transform(value, { token }) {
@@ -18,8 +19,19 @@ const borderInset = defineUtility({
   },
 });
 
+const focusRing = defineUtility({
+  className: "ring",
+  values: "borderWidths",
+  transform(value, { token }) {
+    return {
+      boxShadow: `0 0 0 ${value} ${token("colors.ring")}`,
+    };
+  },
+});
+
 const utilities = {
   borderInset,
-}
+  focusRing,
+};
 
 export default utilities;

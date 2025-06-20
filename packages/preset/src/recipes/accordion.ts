@@ -35,7 +35,7 @@ export default defineSlotRecipe({
       bg: {
         base: "transparent",
         _hover: "solid-gray.50",
-        _focusVisible: "yellow.300",
+        _focusVisible: { base: "yellow.300", _hover: "yellow.300" },
       },
       /*
        * py-2 pl-[calc(var(--icon-size)+(12/16*1rem))] pr-2
@@ -57,9 +57,12 @@ export default defineSlotRecipe({
        * focus-visible:rounded-4 focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-[calc(2/16*1rem)] focus-visible:outline-black focus-visible:ring-[calc(2/16*1rem)] focus-visible:ring-yellow-300
        */
       _focusVisible: {
+        rounded: 4,
+        outlineStyle: "solid",
         outlineWidth: "4px",
         outlineColor: "black",
         outlineOffset: "calc(2 / 16 * 1rem)",
+        focusRing: "calc(2 / 16 * 1rem)",
       },
       /**
        * remove button style

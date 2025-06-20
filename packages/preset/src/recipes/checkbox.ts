@@ -143,6 +143,7 @@ export default defineSlotRecipe({
        * aria-disabled:before:border-solid-gray-50
        */
       _before: {
+        content: '""',
         display: { base: "none", _checked: "block", _indeterminate: "block" },
         width: 3.5,
         height: 3.5,
@@ -163,13 +164,12 @@ export default defineSlotRecipe({
        * focus:outline-offset-[calc(2/16*1rem)]
        * focus:ring-[calc(2/16*1rem)] focus:ring-yellow-300
        */
-      outline: {
-        _focus: {
-          outlineWidth: "4px",
-          outlineColor: "black",
-          outlineOffset: "calc(2 / 16 * 1rem)",
-          borderInset: "md",
-        },
+      _focus: {
+        outlineStyle: "solid",
+        outlineWidth: "4px",
+        outlineColor: "black",
+        outlineOffset: "calc(2 / 16 * 1rem)",
+        focusRing: "calc(2 / 16 * 1rem)",
       },
     },
     label: {

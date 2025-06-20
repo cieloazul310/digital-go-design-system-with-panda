@@ -45,10 +45,11 @@ export default defineRecipe({
      * focus:outline-offset-[calc(2/16*1rem)] focus:ring-[calc(2/16*1rem)] focus:ring-yellow-300
      */
     _focus: {
+      outlineStyle: "solid",
       outlineWidth: "4px",
       outlineColor: "black",
       outlineOffset: "calc(2 / 16 * 1rem)",
-      borderInset: "md",
+      focusRing: "calc(2 / 16 * 1rem)",
     },
     /**
      * aria-disabled:pointer-events-none

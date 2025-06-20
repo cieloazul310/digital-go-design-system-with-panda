@@ -19,10 +19,11 @@ export default defineRecipe({
      * focus-visible:ring-[calc(2/16*1rem)] focus-visible:ring-yellow-300
      */
     _focusVisible: {
+      outlineStyle: "solid",
       outlineWidth: "4px",
       outlineColor: "black",
       outlineOffset: "calc(2 / 16 * 1rem)",
-      borderInset: "md",
+      focusRing: "calc(2 / 16 * 1rem)",
     },
     /**
      * aria-disabled:pointer-events-none aria-disabled:forced-colors:border-[GrayText] aria-disabled:forced-colors:text-[GrayText]
@@ -106,7 +107,7 @@ export default defineRecipe({
           base: "transparent",
           _hover: "keyColor.50",
           _active: "keyColor.100",
-          _focusVisible: "yellow.300",
+          _focusVisible: { base: "yellow.300", _hover: "yellow.300" },
           _disabled: "transparent",
         },
         color: {

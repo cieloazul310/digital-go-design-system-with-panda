@@ -30,20 +30,17 @@ export default defineRecipe({
     textUnderlineOffset: "calc(3 / 16 * 1rem)",
     /**
      * focus-visible:rounded-4
-     */
-    rounded: { base: 0, _focusVisible: 4 },
-    /**
      * focus-visible:outline focus-visible:outline-4
      * focus-visible:outline-black focus-visible:outline-offset-[calc(2/16*1rem)]
      * focus-visible:ring-[calc(2/16*1rem)] focus-visible:ring-yellow-300
      */
-    outline: {
-      _focusVisible: {
-        outlineWidth: "4px",
-        outlineColor: "black",
-        outlineOffset: "calc(2 / 16 * 1rem)",
-        borderInset: "md",
-      },
+    _focusVisible: {
+      rounded: 4,
+      outlineStyle: "solid",
+      outlineWidth: "4px",
+      outlineColor: "black",
+      outlineOffset: "calc(2 / 16 * 1rem)",
+      focusRing: "calc(2 / 16 * 1rem)",
     },
     /**
      * with icon
