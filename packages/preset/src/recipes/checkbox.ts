@@ -143,19 +143,28 @@ export default defineSlotRecipe({
        * aria-disabled:before:border-solid-gray-50
        */
       _before: {
-        display: { base: "none", _checked: "block", _indeterminate: "block" },
+        content: '""',
+        display: "none",
         width: 3.5,
         height: 3.5,
         bg: { base: "white", _highContrast: "HighlightText" },
         borderColor: { _disabled: "solid-gray.50" },
-        clipPath: {
-          /**
-           * checked:before:[clip-path:path('M5.6,11.2L12.65,4.15L11.25,2.75L5.6,8.4L2.75,5.55L1.35,6.95L5.6,11.2Z')]
-           * indeterminate:before:[clip-path:path('M3.25,7.75H10.75V6.25H3.25V7.75Z')]
-           */
-          _checked:
+      },
+      /**
+       * checked:before:[clip-path:path('M5.6,11.2L12.65,4.15L11.25,2.75L5.6,8.4L2.75,5.55L1.35,6.95L5.6,11.2Z')]
+       * indeterminate:before:[clip-path:path('M3.25,7.75H10.75V6.25H3.25V7.75Z')]
+       */
+      _checked: {
+        _before: {
+          display: "block",
+          clipPath:
             "path('M5.6,11.2L12.65,4.15L11.25,2.75L5.6,8.4L2.75,5.55L1.35,6.95L5.6,11.2Z')",
-          _indeterminate: "path('M3.25,7.75H10.75V6.25H3.25V7.75Z')",
+        },
+      },
+      _indeterminate: {
+        _before: {
+          display: "block",
+          clipPath: "path('M3.25,7.75H10.75V6.25H3.25V7.75Z')",
         },
       },
       /**
@@ -163,13 +172,12 @@ export default defineSlotRecipe({
        * focus:outline-offset-[calc(2/16*1rem)]
        * focus:ring-[calc(2/16*1rem)] focus:ring-yellow-300
        */
-      outline: {
-        _focus: {
-          outlineWidth: "4px",
-          outlineColor: "black",
-          outlineOffset: "calc(2 / 16 * 1rem)",
-          borderInset: "md",
-        },
+      _focus: {
+        outlineStyle: "solid",
+        outlineWidth: "4px",
+        outlineColor: "black",
+        outlineOffset: "calc(2 / 16 * 1rem)",
+        focusRing: "calc(2 / 16 * 1rem)",
       },
     },
     label: {

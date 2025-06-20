@@ -90,10 +90,11 @@ export default defineSlotRecipe({
        *
        */
       _focusVisible: {
+        outlineStyle: "solid",
         outlineWidth: "4px",
         outlineColor: "black",
         outlineOffset: "calc(2 / 16 * 1rem)",
-        borderInset: "md",
+        focusRing: "calc(2 / 16 * 1rem)",
       },
     },
     heading: {

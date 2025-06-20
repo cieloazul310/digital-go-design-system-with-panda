@@ -20,7 +20,7 @@ const itemStyle = {
   bg: {
     base: "white",
     _hover: "solid-gray.50",
-    _focusVisible: "yellow.300",
+    _focusVisible: { base: "yellow.300", _hover: "yellow.300" },
   },
 } satisfies SystemStyleObject;
 
@@ -64,10 +64,11 @@ export default defineSlotRecipe({
         fontWeight: "bold",
       },
       _focusVisible: {
+        outlineStyle: "solid",
         outlineWidth: "4px",
         outlineColor: "black",
         outlineOffset: "calc(2 / 16 * 1rem)",
-        borderInset: "md",
+        focusRing: "calc(2 / 16 * 1rem)",
         zIndex: 1,
       },
       /**
