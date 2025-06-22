@@ -20,7 +20,7 @@ export default defineSlotRecipe({
         md: "calc(36 / 16 * 1rem)",
       },
       "--icon-scale": {
-        base: "calc(24 / 36)",
+        base: 24 / 36,
         md: 1,
       },
       /**
@@ -61,6 +61,10 @@ export default defineSlotRecipe({
        */
       height: "auto",
       maxWidth: "full",
+      /**
+       * icon element
+       * instead of icon component
+       */
       _before: {
         content: '""',
         display: "block",
