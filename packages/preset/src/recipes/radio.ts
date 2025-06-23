@@ -15,7 +15,7 @@ export default defineSlotRecipe({
       display: "flex",
       width: "fit-content",
       alignItems: "start",
-      py: 2,
+      // py: 2,
     },
     itemControl: {
       /**
@@ -30,22 +30,14 @@ export default defineSlotRecipe({
       rounded: "full",
       */
       /**
-       * checked:before:bg-blue-900
-       * checked:hover:before:bg-blue-1100
-       * before:hidden before:size-full
-       * before:bg-white before:[clip-path:circle(calc(5/16*100%))]
-       * checked:before:block
-       * data-[error]:checked:before:bg-error-1
-       * data-[error]:checked:hover:before:bg-red-1000
-       * aria-disabled:checked:before:!bg-solid-gray-300
-       * forced-colors:checked:before:!bg-[Highlight]
-       * forced-colors:aria-disabled:checked:before:!bg-[GrayText]
-       */
-      /**
        * appearance-none size-[calc(5/6*100%)] rounded-full
        */
       appearance: "none",
       rounded: "full",
+      width: "calc(var(--radio-size) * 5 / 6)",
+      height: "calc(var(--radio-size) * 5 / 6)",
+      m: "calc(var(--radio-size) / 12)",
+      flexShrink: 0,
       /**
        * bg-white aria-disabled:!bg-solid-gray-50
        */
@@ -64,6 +56,7 @@ export default defineSlotRecipe({
         _checked: {
           base: "blue.900",
           _hover: "blue.1100",
+          _disabled: "solid-gray.300",
           _highContrast: "Highlight",
         },
         /**
@@ -88,6 +81,47 @@ export default defineSlotRecipe({
         outlineOffset: "calc(2 / 16 * 1rem)",
         focusRing: "calc(2 / 16 * 1rem)",
       },
+      _before: {
+        /**
+         * before:hidden
+         * before:size-full
+         * before:[clip-path:circle(calc(5/16*100%))]
+         * before:bg-white
+         */
+        content: '""',
+        display: "none",
+        width: "full",
+        height: "full",
+        clipPath: "circle(calc(5 / 16 * 100%))",
+        bg: "white",
+      },
+      _checked: {
+        /**
+         * checked:before:block
+         * checked:before:bg-blue-900 checked:hover:before:bg-blue-1100
+         * data-[error]:checked:before:bg-error-1
+         * data-[error]:checked:hover:before:bg-red-1000
+         * aria-disabled:checked:before:!bg-solid-gray-300
+         * forced-colors:checked:before:!bg-[Highlight]
+         * forced-colors:aria-disabled:checked:before:!bg-[GrayText]
+         */
+        _before: {
+          display: "block",
+          bg: "blue.900",
+          _hover: "blue.1100",
+          _invalid: {
+            base: "error.1",
+            _hover: "red.1000",
+          },
+          _highContrast: "Highlight",
+        },
+        _disabled: {
+          _before: {
+            base: "solid-gray.300",
+            _highContrast: "GrayText",
+          },
+        },
+      },
     },
     itemText: {
       /**
@@ -107,10 +141,9 @@ export default defineSlotRecipe({
         },
         itemControl: {
           /**
-           * data-[size=sm]:size-6 data-[size=md]:size-8 data-[size=lg]:size-11
+           * data-[size=sm]:size-6
            */
-          width: 6,
-          height: 6,
+          "--radio-size": "{spacing.6}",
           /**
            * data-[size=sm]:border-[calc(2/16*1rem)]
            */
@@ -136,8 +169,7 @@ export default defineSlotRecipe({
           /**
            * data-[size=md]:size-8
            */
-          width: 8,
-          height: 8,
+          "--radio-size": "{spacing.8}",
           /**
            * data-[size=md]:border-[calc(2/16*1rem)]
            */
@@ -163,8 +195,7 @@ export default defineSlotRecipe({
           /**
            * data-[size=lg]:size-11
            */
-          width: 11,
-          height: 11,
+          "--radio-size": "{spacing.11}",
           /**
            * data-[size=lg]:border-[calc(3/16*1rem)]
            */
