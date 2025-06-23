@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Info as InfoIcon } from "lucide-react";
 import * as NotificationBanner from "@cieloazul310/digital-go-pandacss/notification-banner";
 
 const meta = {
@@ -39,9 +38,7 @@ export const Playground: Story = {
   },
   render: ({ ...props }) => (
     <NotificationBanner.Root {...props}>
-      <NotificationBanner.Icon>
-        <InfoIcon />
-      </NotificationBanner.Icon>
+      <NotificationBanner.Icon />
       <NotificationBanner.Header>
         <NotificationBanner.Heading>バナータイトル</NotificationBanner.Heading>
         <NotificationBanner.Close>閉じる</NotificationBanner.Close>
@@ -65,9 +62,7 @@ export const WithAction: Story = {
   },
   render: ({ ...props }) => (
     <NotificationBanner.Root {...props}>
-      <NotificationBanner.Icon>
-        <InfoIcon />
-      </NotificationBanner.Icon>
+      <NotificationBanner.Icon />
       <NotificationBanner.Header>
         <NotificationBanner.Heading>バナータイトル</NotificationBanner.Heading>
         <NotificationBanner.Close>閉じる</NotificationBanner.Close>

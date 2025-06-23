@@ -10,6 +10,14 @@ export default defineSlotRecipe({
   className: "radio-group",
   slots: radioGroupAnatomy.keys(),
   base: {
+    root: {
+      display: "flex",
+      flexDirection: {
+        _vertical: "column",
+        _horizonal: "row",
+      },
+      gap: 4,
+    },
     item: {
       ...radio.base?.item,
     },
