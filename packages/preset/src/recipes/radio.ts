@@ -15,7 +15,7 @@ export default defineSlotRecipe({
       display: "flex",
       width: "fit-content",
       alignItems: "start",
-      // py: 2,
+      py: 2,
     },
     itemControl: {
       /**
@@ -68,6 +68,15 @@ export default defineSlotRecipe({
          * forced-colors:aria-disabled:!border-[GrayText]
          */
         _disabled: { base: "solid-gray.300", _highContrast: "GrayText" },
+      },
+      /**
+       * outline on hover
+       * has-[input:hover:not(:focus):not([aria-disabled="true"])]:bg-solid-gray-420
+       */
+      '&:is(:hover, [data-hover]):not(:focus):not([aria-disabled="true"])': {
+        outlineStyle: "solid",
+        outlineWidth: "calc(var(--radio-size) / 12)",
+        outlineColor: "solid-gray.420",
       },
       /**
        * focus:outline focus:outline-4 focus:outline-black

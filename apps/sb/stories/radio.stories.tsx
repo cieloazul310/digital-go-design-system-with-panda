@@ -1,5 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import * as RadioGroup from "@cieloazul310/digital-go-pandacss/radio";
+import { Legend } from "@cieloazul310/digital-go-pandacss/form/legend";
+import { RequirementBadge } from "@cieloazul310/digital-go-pandacss/form/requirement-badge";
+import { SupportText } from "@cieloazul310/digital-go-pandacss/form/support-text";
 
 const meta = {
   title: "Components/ラジオボタン",
@@ -19,10 +22,10 @@ const meta = {
     orientation: {
       type: "string",
       control: { type: "radio" },
-      options: ["vertical", "horizonal"],
+      options: ["vertical", "horizontal"],
       table: {
         defaultValue: { summary: "vertical" },
-        type: { summary: "'vertical' | 'horizonal'" },
+        type: { summary: "'vertical' | 'horizontal'" },
       },
     },
     disabled: {
@@ -47,22 +50,65 @@ export const Playground: Story = {
     orientation: "vertical",
   },
   render: ({ ...props }) => (
-    <RadioGroup.Root defaultValue="hoge" {...props}>
-      <RadioGroup.Item value="hoge">
-        <RadioGroup.ItemControl />
-        <RadioGroup.ItemText>Hoge</RadioGroup.ItemText>
-        <RadioGroup.ItemHiddenInput />
-      </RadioGroup.Item>
-      <RadioGroup.Item value="hige">
-        <RadioGroup.ItemControl />
-        <RadioGroup.ItemText>Hige</RadioGroup.ItemText>
-        <RadioGroup.ItemHiddenInput />
-      </RadioGroup.Item>
-      <RadioGroup.Item value="huge">
-        <RadioGroup.ItemControl />
-        <RadioGroup.ItemText>Huge</RadioGroup.ItemText>
-        <RadioGroup.ItemHiddenInput />
-      </RadioGroup.Item>
-    </RadioGroup.Root>
+    <fieldset>
+      <Legend>
+        ラベル<RequirementBadge>※必須</RequirementBadge>
+      </Legend>
+      <SupportText mt="2" id="stacked-support-text">
+        サポートテキスト
+      </SupportText>
+      <RadioGroup.Root mt="1" defaultValue="hoge" {...props}>
+        <RadioGroup.Item aria-describedby="stacked-support-text" value="hoge">
+          <RadioGroup.ItemControl />
+          <RadioGroup.ItemText>選択肢1</RadioGroup.ItemText>
+          <RadioGroup.ItemHiddenInput />
+        </RadioGroup.Item>
+        <RadioGroup.Item aria-describedby="stacked-support-text" value="hige">
+          <RadioGroup.ItemControl />
+          <RadioGroup.ItemText>選択肢2</RadioGroup.ItemText>
+          <RadioGroup.ItemHiddenInput />
+        </RadioGroup.Item>
+        <RadioGroup.Item aria-describedby="stacked-support-text" value="huge">
+          <RadioGroup.ItemControl />
+          <RadioGroup.ItemText>選択肢3</RadioGroup.ItemText>
+          <RadioGroup.ItemHiddenInput />
+        </RadioGroup.Item>
+      </RadioGroup.Root>
+    </fieldset>
+  ),
+};
+
+export const Inline: Story = {
+  args: {
+    size: "sm",
+    disabled: false,
+    orientation: "horizontal",
+  },
+  render: ({ ...props }) => (
+    <fieldset>
+      <Legend>
+        ラベル<RequirementBadge>※必須</RequirementBadge>
+      </Legend>
+      <SupportText mt="2" id="inline-support-text">
+        サポートテキスト
+      </SupportText>
+      <RadioGroup.Root mt="1" flexWrap="wrap" defaultValue="hoge" {...props}>
+        <RadioGroup.Item aria-describedby="inline-support-text" value="hoge">
+          <RadioGroup.ItemControl />
+          <RadioGroup.ItemText>選択肢1</RadioGroup.ItemText>
+          <RadioGroup.ItemHiddenInput />
+        </RadioGroup.Item>
+        <RadioGroup.Item aria-describedby="inline-support-text" value="hige">
+          <RadioGroup.ItemControl />
+          <RadioGroup.ItemText>選択肢2</RadioGroup.ItemText>
+          <RadioGroup.ItemHiddenInput />
+        </RadioGroup.Item>
+        <RadioGroup.Item aria-describedby="inline-support-text" value="huge">
+          <RadioGroup.ItemControl />
+          <RadioGroup.ItemText>選択肢3</RadioGroup.ItemText>
+          <RadioGroup.ItemHiddenInput />
+        </RadioGroup.Item>
+      </RadioGroup.Root>
+    </fieldset>
   ),
 };

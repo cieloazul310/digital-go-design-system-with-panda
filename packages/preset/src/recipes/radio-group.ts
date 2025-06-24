@@ -12,11 +12,14 @@ export default defineSlotRecipe({
   base: {
     root: {
       display: "flex",
-      flexDirection: {
-        _vertical: "column",
-        _horizonal: "row",
+      _vertical: {
+        flexDirection: "column",
+        gap: 0,
       },
-      gap: 4,
+      _horizonal: {
+        flexDirection: "row",
+        gap: 4,
+      },
     },
     item: {
       ...radio.base?.item,

@@ -58,6 +58,15 @@
       },
       "require": "./dist/components/divider.js"
     },
+    "./form/*": {
+      "source": "./src/components/form/*.tsx",
+      "types": "./dist/components/form/*.d.ts",
+      "import": {
+        "types": "./dist/components/form/*.d.ts",
+        "default": "./dist/components/form/*.mjs"
+      },
+      "require": "./dist/components/form/*.js"
+    },
     "./input": {
       "source": "./src/components/input.tsx",
       "types": "./dist/components/input.d.ts",
