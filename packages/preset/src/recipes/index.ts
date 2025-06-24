@@ -4,9 +4,10 @@ import button from "./button";
 import checkbox from "./checkbox";
 import digitalGoDivider from "./divider";
 import errorText from "./error-text";
-import label from "./label";
 import input from "./input";
 import inputText from "./input-text";
+import label from "./label";
+import legend from "./legend";
 import link from "./link";
 import list from "./list";
 import menu from "./menu";
@@ -14,6 +15,7 @@ import notificationBanner from "./notification-banner";
 import orderedList from "./ordered-list";
 import radio from "./radio";
 import radioGroup from "./radio-group";
+import requirementBadge from "./requirement-badge";
 import select from "./select";
 import selectBox from "./select-box";
 import supportText from "./support-text";
@@ -29,9 +31,10 @@ const recipes = {
   checkbox,
   digitalGoDivider,
   errorText,
-  label,
   input,
   inputText,
+  label,
+  legend,
   link,
   list,
   menu,
@@ -39,6 +42,7 @@ const recipes = {
   orderedList,
   radio,
   radioGroup,
+  requirementBadge,
   select,
   selectBox,
   supportText,
