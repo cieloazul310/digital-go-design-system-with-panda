@@ -49,6 +49,15 @@
       },
       "require": "./dist/components/checkbox.js"
     },
+    "./disclosure": {
+      "source": "./src/components/disclosure.tsx",
+      "types": "./dist/components/disclosure.d.ts",
+      "import": {
+        "types": "./dist/components/disclosure.d.ts",
+        "default": "./dist/components/disclosure.mjs"
+      },
+      "require": "./dist/components/disclosure.js"
+    },
     "./divider": {
       "source": "./src/components/divider.tsx",
       "types": "./dist/components/divider.d.ts",
