@@ -1,15 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Input } from "@cieloazul310/digital-go-pandacss/input";
-import { input } from "@import-map-package/styled-system/recipes";
+import { Input } from "@cieloazul310/digital-go-pandacss/form/input";
 
 const meta = {
-  title: "Components/インプット",
+  title: "Components/フォーム",
   tags: ["autodocs"],
-  component: Input,
   argTypes: {
     size: {
       control: "inline-radio",
-      options: input.variantMap.size,
     },
     disabled: {
       control: "boolean",
@@ -25,10 +22,11 @@ const meta = {
 } satisfies Meta<typeof Input>;
 
 export default meta;
-type Story = StoryObj<typeof Input>;
+type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const InputText: Story = {
   args: {
     size: "lg",
   },
+  render: () => <Input />,
 };

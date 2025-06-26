@@ -76,15 +76,6 @@
       },
       "require": "./dist/components/form/*.js"
     },
-    "./input": {
-      "source": "./src/components/input.tsx",
-      "types": "./dist/components/input.d.ts",
-      "import": {
-        "types": "./dist/components/input.d.ts",
-        "default": "./dist/components/input.mjs"
-      },
-      "require": "./dist/components/input.js"
-    },
     "./input-text": {
       "source": "./src/components/input-text.tsx",
       "types": "./dist/components/input-text.d.ts",
