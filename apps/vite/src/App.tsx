@@ -1,53 +1,140 @@
 import { css } from "@import-map-package/styled-system/css";
-import { Container, Stack } from "@import-map-package/styled-system/jsx";
-import { link } from "@import-map-package/styled-system/recipes";
+import { styled, Stack } from "@import-map-package/styled-system/jsx";
 import { Button } from "@cieloazul310/digital-go-pandacss/button";
-import { Divider } from "@cieloazul310/digital-go-pandacss";
+import { Divider } from "@cieloazul310/digital-go-pandacss/divider";
+import { Link } from "@cieloazul310/digital-go-pandacss/link";
+
+import { Paragraph } from "./components/paragraph";
 
 function App() {
   return (
-    <Container maxWidth="breakpoint-lg">
-      <h1 className={css({ textStyle: "dsp-64N-140" })}>Hello from Panda 🐼</h1>
-      <Divider color="gray-536" />
-      <h2
+    <div
+      className={css({
+        display: "grid",
+        gridTemplateAreas: `
+            "side-nav main"
+            "side-nav footer"
+          `,
+        gridTemplateColumns: {
+          base: "0 1fr",
+          md: "18rem 1fr",
+        },
+        gridTemplateRows: "1fr auto",
+      })}
+    >
+      <header
         className={css({
-          textStyle: "dsp-48N-140",
-          my: 4,
-          color: "yellow.400",
+          gridArea: "side-nav",
+          display: { base: "none", md: "flex" },
+          flexDirection: "column",
+          pt: 10,
+          borderRightWidth: { base: 0, md: "1px" },
+          borderRightColor: "solid-gray.420",
+          minHeight: "100vh",
+          overflowY: "auto",
+          gap: 10,
         })}
       >
-        module-resolution/with-import-map-package
-      </h2>
-      <p>
-        <a className={link()} href="https://cieloazul310.github.io">
-          リンク
+        <a
+          href="/"
+          className={css({
+            alignSelf: "center",
+            width: 48,
+            color: "inherit",
+            textStyle: "std-20B-150",
+            my: 2,
+          })}
+        >
+          デジタル庁デザインシステムβ版 for Panda CSS
         </a>
-      </p>
-      <Divider />
-      <Stack
-        gap={2}
-        direction={{ base: "column", md: "row" }}
-        alignItems={{ base: "start", md: "center" }}
-      >
-        <Button variant="outline" size="lg">
-          Outline Large
-        </Button>
-        <Button size="md">Solid Medium</Button>
-        <Button variant="text" size="sm">
-          Text
-        </Button>
-      </Stack>
-      <Divider color="black" />
-      <Stack
-        gap={2}
-        direction={{ base: "column", md: "row" }}
-        alignItems={{ base: "start", md: "center" }}
-      >
-        <Button variant="outline" size="lg" asChild>
-          <a href="https://cieloazul310.github.io">Outline Large</a>
-        </Button>
-      </Stack>
-    </Container>
+      </header>
+      <main className={css({ gridArea: "main", pt: 10 })}>
+        <div
+          className={css({
+            maxWidth: "breakpoint-xl",
+            mx: "auto",
+            px: { base: 4, md: 8 },
+            textStyle: { base: "std-18N-160", md: "std-20N-150" },
+          })}
+        >
+          {/**
+           * text-std-28B-150 mt-4 mb-8 -ml-0.5 md:text-std-45B-140 md:mt-6 md:mb-12 lg:mt-0 lg:mb-16
+           */}
+          <styled.hgroup
+            mt={{ base: 4, md: 6, lg: 0 }}
+            mb={{ base: 8, md: 12, lg: 16 }}
+          >
+            <h1
+              className={css({
+                textStyle: { base: "std-28B-150", md: "std-45B-140" },
+                ml: -0.5,
+              })}
+            >
+              ようこそデジタル庁デザインシステムへ🐼
+            </h1>
+            <span
+              className={css({
+                textStyle: { base: "std-18N-160", md: "std-22N-150" },
+                my: 4,
+              })}
+            >
+              <Link
+                href="https://design.digital.go.jp/"
+                target="_blank"
+                rel="noopener noreferer"
+              >
+                デジタル庁デザインシステムウェブサイト
+              </Link>
+              のコンテンツを加工して作成
+            </span>
+          </styled.hgroup>
+          <Paragraph>
+            デジタル庁デザインシステムは、スタイリングの考え方を提供するデザイン言語、情報の視覚表現とインタラクションを具現化するUIコンポーネント、ユーザビリティとアクセシビリティを踏まえた設計や実装のためのガイドラインから構成されるデザインアセットです。
+          </Paragraph>
+          <Paragraph>
+            デジタル庁のミッションである「誰一人取り残されない、人に優しいデジタル化を。」の実現に寄与することを標榜し、官公庁や地方自治体などの行政機関や公共性の高い組織等のウェブサイト/ウェブアプリケーション/オンラインサービスまたはシステム等で利用することを念頭に置いて構築されています。
+          </Paragraph>
+          <Paragraph>
+            <Link
+              href="https://cieloazul310.github.io"
+              target="_blank"
+              rel="noopener noreferer"
+            >
+              リンク
+            </Link>
+          </Paragraph>
+          <Stack
+            gap={2}
+            direction={{ base: "column", md: "row" }}
+            alignItems={{ base: "start", md: "center" }}
+          >
+            <Button variant="outline" size="lg">
+              Outline Large
+            </Button>
+            <Button size="md">Solid Medium</Button>
+            <Button variant="text" size="sm">
+              Text
+            </Button>
+          </Stack>
+          <Divider color="black" />
+          <Stack
+            gap={2}
+            direction={{ base: "column", md: "row" }}
+            alignItems={{ base: "start", md: "center" }}
+          >
+            <Button variant="outline" size="lg" asChild>
+              <a
+                href="https://cieloazul310.github.io"
+                target="_blank"
+                rel="noopener noreferer"
+              >
+                Outline Large
+              </a>
+            </Button>
+          </Stack>
+        </div>
+      </main>
+    </div>
   );
 }
 
