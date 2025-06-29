@@ -2,9 +2,9 @@ import { css } from "@import-map-package/styled-system/css";
 import { styled, Stack } from "@import-map-package/styled-system/jsx";
 import { Button } from "@cieloazul310/digital-go-pandacss/button";
 import { Divider } from "@cieloazul310/digital-go-pandacss/divider";
-import { Link } from "@cieloazul310/digital-go-pandacss/link";
 
-import { Paragraph } from "./components/paragraph";
+import { Paragraph } from "./components/article";
+import { ExternalLink } from "./components/external-link";
 
 function App() {
   return (
@@ -58,7 +58,9 @@ function App() {
           })}
         >
           {/**
-           * text-std-28B-150 mt-4 mb-8 -ml-0.5 md:text-std-45B-140 md:mt-6 md:mb-12 lg:mt-0 lg:mb-16
+           * text-std-28B-150 md:text-std-45B-140
+           * mt-4 mb-8 md:mt-6 md:mb-12 lg:mt-0 lg:mb-16
+           * -ml-0.5
            */}
           <styled.hgroup
             mt={{ base: 4, md: 6, lg: 0 }}
@@ -78,31 +80,55 @@ function App() {
                 my: 4,
               })}
             >
-              <Link
+              <ExternalLink
                 href="https://design.digital.go.jp/"
                 target="_blank"
                 rel="noopener noreferer"
               >
                 デジタル庁デザインシステムウェブサイト
-              </Link>
+              </ExternalLink>
               のコンテンツを加工して作成
             </span>
           </styled.hgroup>
-          <Paragraph>
-            デジタル庁デザインシステムは、スタイリングの考え方を提供するデザイン言語、情報の視覚表現とインタラクションを具現化するUIコンポーネント、ユーザビリティとアクセシビリティを踏まえた設計や実装のためのガイドラインから構成されるデザインアセットです。
-          </Paragraph>
-          <Paragraph>
-            デジタル庁のミッションである「誰一人取り残されない、人に優しいデジタル化を。」の実現に寄与することを標榜し、官公庁や地方自治体などの行政機関や公共性の高い組織等のウェブサイト/ウェブアプリケーション/オンラインサービスまたはシステム等で利用することを念頭に置いて構築されています。
-          </Paragraph>
-          <Paragraph>
-            <Link
-              href="https://cieloazul310.github.io"
-              target="_blank"
-              rel="noopener noreferer"
+          <section>
+            <Paragraph>
+              デジタル庁デザインシステムは、スタイリングの考え方を提供するデザイン言語、情報の視覚表現とインタラクションを具現化するUIコンポーネント、ユーザビリティとアクセシビリティを踏まえた設計や実装のためのガイドラインから構成されるデザインアセットです。
+            </Paragraph>
+            <Paragraph>
+              デジタル庁のミッションである「誰一人取り残されない、人に優しいデジタル化を。」の実現に寄与することを標榜し、官公庁や地方自治体などの行政機関や公共性の高い組織等のウェブサイト/ウェブアプリケーション/オンラインサービスまたはシステム等で利用することを念頭に置いて構築されています。
+            </Paragraph>
+            <Stack
+              gap={2}
+              my={4}
+              direction={{ base: "column", md: "row" }}
+              alignItems={{ base: "start", md: "center" }}
             >
-              リンク
-            </Link>
-          </Paragraph>
+              <ExternalLink
+                href="https://github.com/cieloazul310/digital-go-design-system-with-panda"
+                target="_blank"
+                rel="noopener noreferer"
+              >
+                GitHub リポジトリ
+              </ExternalLink>
+              <ExternalLink
+                href="https://cieloazul310.github.io/digital-go-design-system-with-panda"
+                target="_blank"
+                rel="noopener noreferer"
+              >
+                Storybook
+              </ExternalLink>
+            </Stack>
+            <Paragraph>
+              作成:{" "}
+              <ExternalLink
+                href="https://cieloazul310.github.io"
+                target="_blank"
+                rel="noopener noreferer"
+              >
+                水戸地図
+              </ExternalLink>
+            </Paragraph>
+          </section>
           <Stack
             gap={2}
             direction={{ base: "column", md: "row" }}
