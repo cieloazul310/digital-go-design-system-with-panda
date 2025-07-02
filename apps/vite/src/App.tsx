@@ -1,3 +1,4 @@
+import { createTreeCollection } from "@ark-ui/react/tree-view";
 import { css } from "@import-map-package/styled-system/css";
 import { styled, Stack } from "@import-map-package/styled-system/jsx";
 import { Button } from "@cieloazul310/digital-go-pandacss/button";
@@ -5,6 +6,38 @@ import { Divider } from "@cieloazul310/digital-go-pandacss/divider";
 
 import { Paragraph } from "./components/article";
 import { ExternalLink } from "./components/external-link";
+import { TreeView, type TreeNodeType } from "./components/tree-view";
+
+const menu = createTreeCollection<TreeNodeType>({
+  nodeToValue: (node) => node.id,
+  nodeToString: (node) => node.name,
+  rootNode: {
+    id: "ROOT",
+    name: "",
+    children: [
+      {
+        id: "node_modules",
+        name: "node_modules",
+        children: [
+          {
+            id: "node_modules/zag-js",
+            name: "zag-js",
+            href: "https://zagjs.com/",
+          },
+          {
+            id: "node_modules/pandacss",
+            name: "panda",
+            href: "https://panda-css.com/",
+          },
+        ],
+      },
+      { id: "panda.config", name: "panda.config.ts" },
+      { id: "package.json", name: "package.json" },
+      { id: "renovate.json", name: "renovate.json" },
+      { id: "readme.md", name: "README.md" },
+    ],
+  },
+});
 
 function App() {
   return (
@@ -47,6 +80,7 @@ function App() {
         >
           デジタル庁デザインシステムβ版 for Panda CSS
         </a>
+        <TreeView collection={menu} />
       </header>
       <main className={css({ gridArea: "main", pt: 10 })}>
         <div

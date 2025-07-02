@@ -1,0 +1,65 @@
+import * as StyledTreeView from "@cieloazul310/digital-go-pandacss/tree-view";
+import { ChevronRightIcon } from "lucide-react";
+import { forwardRef } from "react";
+
+export interface TreeNodeType {
+  id: string;
+  name: string;
+  href?: string;
+  children?: TreeNodeType[];
+}
+
+export const TreeView = forwardRef<HTMLDivElement, StyledTreeView.RootProps>(
+  (props, ref) => {
+    return (
+      <StyledTreeView.Root ref={ref} {...props}>
+        <StyledTreeView.Tree>
+          {/* @ts-expect-error any type node */}
+          {props.collection.rootNode.children.map((node, index) => (
+            <TreeNode key={node.id} node={node} indexPath={[index]} />
+          ))}
+        </StyledTreeView.Tree>
+      </StyledTreeView.Root>
+    );
+  },
+);
+
+TreeView.displayName = "TreeView";
+
+const TreeNode = (props: StyledTreeView.NodeProviderProps) => {
+  const { node, indexPath } = props;
+  return (
+    <StyledTreeView.NodeProvider
+      key={node.id}
+      node={node}
+      indexPath={indexPath}
+    >
+      {node.children ? (
+        <StyledTreeView.Branch>
+          <StyledTreeView.BranchControl>
+            <StyledTreeView.BranchText>{node.name}</StyledTreeView.BranchText>
+            <StyledTreeView.BranchIndicator>
+              <ChevronRightIcon />
+            </StyledTreeView.BranchIndicator>
+          </StyledTreeView.BranchControl>
+          <StyledTreeView.BranchContent>
+            {/* @ts-expect-error any type node */}
+            {node.children.map((child, index) => (
+              <TreeNode
+                key={child.id}
+                node={child}
+                indexPath={[...indexPath, index]}
+              />
+            ))}
+          </StyledTreeView.BranchContent>
+        </StyledTreeView.Branch>
+      ) : (
+        <StyledTreeView.Item asChild>
+          <a href={node.href} target="_blank">
+            <StyledTreeView.ItemText>{node.name}</StyledTreeView.ItemText>
+          </a>
+        </StyledTreeView.Item>
+      )}
+    </StyledTreeView.NodeProvider>
+  );
+};

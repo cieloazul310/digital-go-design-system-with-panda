@@ -139,14 +139,14 @@
       },
       "require": "./dist/components/select.js"
     },
-    "./table": {
-      "source": "./src/components/table.tsx",
-      "types": "./dist/components/table.d.ts",
+    "./tree-view": {
+      "source": "./src/components/tree-view.tsx",
+      "types": "./dist/components/tree-view.d.ts",
       "import": {
-        "types": "./dist/components/table.d.ts",
-        "default": "./dist/components/table.mjs"
+        "types": "./dist/components/tree-view.d.ts",
+        "default": "./dist/components/tree-view.mjs"
       },
-      "require": "./dist/components/table.js"
+      "require": "./dist/components/tree-view.js"
     },
     "./textarea": {
       "source": "./src/components/textarea.tsx",
@@ -156,6 +156,15 @@
         "default": "./dist/components/textarea.mjs"
       },
       "require": "./dist/components/textarea.js"
+    },
+    "./table": {
+      "source": "./src/components/table.tsx",
+      "types": "./dist/components/table.d.ts",
+      "import": {
+        "types": "./dist/components/table.d.ts",
+        "default": "./dist/components/table.mjs"
+      },
+      "require": "./dist/components/table.js"
     },
     "./unordered-list": {
       "source": "./src/components/unordered-list.tsx",

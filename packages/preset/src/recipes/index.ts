@@ -12,6 +12,7 @@ import legend from "./legend";
 import link from "./link";
 import list from "./list";
 import menu from "./menu";
+import menuItem from "./menu-item";
 import notificationBanner from "./notification-banner";
 import orderedList from "./ordered-list";
 import radio from "./radio";
@@ -22,6 +23,7 @@ import selectBox from "./select-box";
 import supportText from "./support-text";
 import table from "./table";
 import textarea from "./textarea";
+import treeView from "./tree-view";
 import unorderedList from "./unordered-list";
 import utilityLink from "./utility-link";
 
@@ -40,6 +42,7 @@ const recipes = {
   link,
   list,
   menu,
+  menuItem,
   notificationBanner,
   orderedList,
   radio,
@@ -50,6 +53,7 @@ const recipes = {
   supportText,
   table,
   textarea,
+  treeView,
   unorderedList,
   utilityLink,
 };
