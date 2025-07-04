@@ -62,7 +62,7 @@ export default defineSlotRecipe({
        * forced-colors:text-inherit
        */
       flex: "none",
-      color: { base: "blue.1000", _highContrast: "inherit" },
+      color: { base: "keyColor.1000", _highContrast: "inherit" },
       mt: "calc((1lh - 24px) / 2)",
       /**
        * svg

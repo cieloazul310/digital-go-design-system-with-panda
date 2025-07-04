@@ -20,23 +20,23 @@ export default defineRecipe({
       base: "transparent",
       _hover: "solid-gray.50",
       _selected: {
-        base: "blue.100",
-        _hover: "blue.100",
+        base: "keyColor.100",
+        _hover: "keyColor.100",
       },
       _checked: {
-        base: "blue.100",
-        _hover: "blue.100",
+        base: "keyColor.100",
+        _hover: "keyColor.100",
       },
       _open: {
-        base: "blue.50",
-        _hover: "blue.50",
+        base: "keyColor.50",
+        _hover: "keyColor.50",
       },
     },
     color: {
       base: "solid-gray.800",
-      _selected: "blue.1000",
-      _checked: "blue.1000",
-      _open: "blue.1000",
+      _selected: "keyColor.1000",
+      _checked: "keyColor.1000",
+      _open: "keyColor.1000",
     },
     fontWeight: { base: "normal", _selected: "bold", _checked: "bold" },
     /**
