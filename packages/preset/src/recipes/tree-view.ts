@@ -30,6 +30,7 @@ export default defineSlotRecipe({
     branchControl: { ...menuItem.base },
     branchTrigger: {},
     branchContent: {
+      my: 1,
       pl: 8,
     },
     branchIndicator: {

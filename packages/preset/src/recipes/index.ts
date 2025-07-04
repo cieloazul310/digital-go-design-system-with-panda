@@ -13,6 +13,7 @@ import link from "./link";
 import list from "./list";
 import menu from "./menu";
 import menuItem from "./menu-item";
+import menuList from "./menu-list";
 import notificationBanner from "./notification-banner";
 import orderedList from "./ordered-list";
 import radio from "./radio";
@@ -43,6 +44,7 @@ const recipes = {
   list,
   menu,
   menuItem,
+  menuList,
   notificationBanner,
   orderedList,
   radio,

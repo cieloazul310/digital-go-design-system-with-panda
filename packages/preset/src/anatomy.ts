@@ -11,6 +11,18 @@ export const breadcrumbAnatomy = createAnatomy("breadcrumb").parts(
   "separator",
 );
 
+export const menuListAnatomy = createAnatomy("menu-list").parts(
+  "root",
+  "label",
+  "content",
+  "item",
+  "itemGroup",
+  "itemGroupLabel",
+  "itemText",
+  "itemIndicator",
+  "input",
+);
+
 export const notificationBannerAnatomy = createAnatomy(
   "notification-banner",
 ).parts("root", "icon", "close", "header", "heading", "body");

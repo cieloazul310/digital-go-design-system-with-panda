@@ -103,6 +103,15 @@
       },
       "require": "./dist/components/list.js"
     },
+    "./menu-list": {
+      "source": "./src/components/menu-list.tsx",
+      "types": "./dist/components/menu-list.d.ts",
+      "import": {
+        "types": "./dist/components/menu-list.d.ts",
+        "default": "./dist/components/menu-list.mjs"
+      },
+      "require": "./dist/components/menu-list.js"
+    },
     "./notification-banner": {
       "source": "./src/components/notification-banner.tsx",
       "types": "./dist/components/notification-banner.d.ts",

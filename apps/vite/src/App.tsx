@@ -1,42 +1,31 @@
-import { createTreeCollection } from "@ark-ui/react/tree-view";
+import { createListCollection } from "@ark-ui/react/listbox";
 import { css } from "@import-map-package/styled-system/css";
 import { styled, Stack } from "@import-map-package/styled-system/jsx";
 import { Button } from "@cieloazul310/digital-go-pandacss/button";
 import { Divider } from "@cieloazul310/digital-go-pandacss/divider";
+import * as MenuList from "@cieloazul310/digital-go-pandacss/menu-list";
 
 import { Paragraph } from "./components/article";
 import { ExternalLink } from "./components/external-link";
-import { TreeView, type TreeNodeType } from "./components/tree-view";
 
-const menu = createTreeCollection<TreeNodeType>({
-  nodeToValue: (node) => node.id,
-  nodeToString: (node) => node.name,
-  rootNode: {
-    id: "ROOT",
-    name: "",
-    children: [
-      {
-        id: "node_modules",
-        name: "node_modules",
-        children: [
-          {
-            id: "node_modules/zag-js",
-            name: "zag-js",
-            href: "https://zagjs.com/",
-          },
-          {
-            id: "node_modules/pandacss",
-            name: "panda",
-            href: "https://panda-css.com/",
-          },
-        ],
-      },
-      { id: "panda.config", name: "panda.config.ts" },
-      { id: "package.json", name: "package.json" },
-      { id: "renovate.json", name: "renovate.json" },
-      { id: "readme.md", name: "README.md" },
-    ],
-  },
+const collection = createListCollection({
+  items: [
+    { value: "はじめに", href: "/introduction" },
+    { value: "はじめて本ウェブサイトを見る方へ", href: "/introduction/about" },
+    { value: "利用上の注意事項", href: "/introduction/notices" },
+    { value: "ガイダンス", href: "/guidance" },
+    { value: "デザインシステムとは", href: "/guidance/desgin-system" },
+    { value: "使い方", href: "/guidance/how-to-use" },
+    { value: "アクセシビリティ", href: "/foundations/accessibility" },
+    { value: "基本デザイン", href: "/foundations/style-guides" },
+    { value: "カラー", href: "/guidance" },
+    { value: "タイポグラフィ", href: "/foundations/desgin-system" },
+    { value: "レイアウト", href: "/foundations/how-to-use" },
+    { value: "リンクテキスト", href: "/foundations/accessibility" },
+    { value: "余白", href: "/foundations/style-guides" },
+    { value: "エレベーション", href: "/foundations/style-guides" },
+  ],
+  groupBy: ({ href }) => href.split("/")[1]?.toString() ?? "/",
 });
 
 function App() {
@@ -66,6 +55,7 @@ function App() {
           minHeight: "100vh",
           overflowY: "auto",
           gap: 10,
+          height: "full",
         })}
       >
         <a
@@ -80,7 +70,23 @@ function App() {
         >
           デジタル庁デザインシステムβ版 for Panda CSS
         </a>
-        <TreeView collection={menu} />
+        <MenuList.Root variant="boxed" collection={collection}>
+          <MenuList.Label>お品書き</MenuList.Label>
+          <MenuList.Content>
+            {collection.group().map(([group, items]) => (
+              <MenuList.ItemGroup key={group}>
+                <MenuList.ItemGroupLabel>{group}</MenuList.ItemGroupLabel>
+                <styled.ul pl={8}>
+                  {items.map((item) => (
+                    <MenuList.Item key={item.href} item={item}>
+                      <MenuList.ItemText>{item.value}</MenuList.ItemText>
+                    </MenuList.Item>
+                  ))}
+                </styled.ul>
+              </MenuList.ItemGroup>
+            ))}
+          </MenuList.Content>
+        </MenuList.Root>
       </header>
       <main className={css({ gridArea: "main", pt: 10 })}>
         <div

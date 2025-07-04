@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { createTreeCollection } from "@ark-ui/react/tree-view";
 import * as StyledTreeView from "@cieloazul310/digital-go-pandacss/tree-view";
-import { ChevronRightIcon } from "lucide-react";
 import { forwardRef } from "react";
 
 const TreeView = forwardRef<HTMLDivElement, StyledTreeView.RootProps>(
@@ -34,9 +33,7 @@ const TreeNode = (props: StyledTreeView.NodeProviderProps) => {
         <StyledTreeView.Branch>
           <StyledTreeView.BranchControl>
             <StyledTreeView.BranchText>{node.name}</StyledTreeView.BranchText>
-            <StyledTreeView.BranchIndicator>
-              <ChevronRightIcon />
-            </StyledTreeView.BranchIndicator>
+            <StyledTreeView.BranchIndicator />
           </StyledTreeView.BranchControl>
           <StyledTreeView.BranchContent>
             {/* @ts-expect-error any type node */}

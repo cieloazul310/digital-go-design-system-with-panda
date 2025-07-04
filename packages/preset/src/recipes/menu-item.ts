@@ -1,5 +1,5 @@
 /**
- * source:
+ * reference:
  * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/LanguageSelector/parts/MenuItem.tsx
  */
 import { defineRecipe } from "@pandacss/dev";
@@ -15,8 +15,7 @@ export default defineRecipe({
     display: "flex",
     position: "relative",
     alignItems: "center",
-    textWrap: "nowrap",
-    textStyle: "oln-16N-100",
+    textStyle: "dns-16N-130",
     bg: {
       base: "transparent",
       _hover: "solid-gray.50",
