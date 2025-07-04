@@ -5,23 +5,10 @@
  */
 import { defineSlotRecipe, type SystemStyleObject } from "@pandacss/dev";
 import { anatomy as menuAnatomy } from "@ark-ui/anatomy/menu";
+import menuItem from "./menu-item";
 
 const itemStyle = {
-  position: "relative",
-  cursor: "pointer",
-  alignItems: "center",
-  columnGap: 2,
-  textWrap: "nowrap",
-  textStyle: "oln-16N-1",
-  py: 3,
-  pl: 3,
-  pr: 6,
-  color: { base: "solid-gray.800" },
-  bg: {
-    base: "white",
-    _hover: "solid-gray.50",
-    _focusVisible: { base: "yellow.300", _hover: "yellow.300" },
-  },
+  ...menuItem.base,
 } satisfies SystemStyleObject;
 
 export default defineSlotRecipe({

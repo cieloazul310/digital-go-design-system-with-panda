@@ -103,6 +103,15 @@
       },
       "require": "./dist/components/list.js"
     },
+    "./menu-list": {
+      "source": "./src/components/menu-list.tsx",
+      "types": "./dist/components/menu-list.d.ts",
+      "import": {
+        "types": "./dist/components/menu-list.d.ts",
+        "default": "./dist/components/menu-list.mjs"
+      },
+      "require": "./dist/components/menu-list.js"
+    },
     "./notification-banner": {
       "source": "./src/components/notification-banner.tsx",
       "types": "./dist/components/notification-banner.d.ts",
@@ -139,14 +148,14 @@
       },
       "require": "./dist/components/select.js"
     },
-    "./table": {
-      "source": "./src/components/table.tsx",
-      "types": "./dist/components/table.d.ts",
+    "./tree-view": {
+      "source": "./src/components/tree-view.tsx",
+      "types": "./dist/components/tree-view.d.ts",
       "import": {
-        "types": "./dist/components/table.d.ts",
-        "default": "./dist/components/table.mjs"
+        "types": "./dist/components/tree-view.d.ts",
+        "default": "./dist/components/tree-view.mjs"
       },
-      "require": "./dist/components/table.js"
+      "require": "./dist/components/tree-view.js"
     },
     "./textarea": {
       "source": "./src/components/textarea.tsx",
@@ -156,6 +165,15 @@
         "default": "./dist/components/textarea.mjs"
       },
       "require": "./dist/components/textarea.js"
+    },
+    "./table": {
+      "source": "./src/components/table.tsx",
+      "types": "./dist/components/table.d.ts",
+      "import": {
+        "types": "./dist/components/table.d.ts",
+        "default": "./dist/components/table.mjs"
+      },
+      "require": "./dist/components/table.js"
     },
     "./unordered-list": {
       "source": "./src/components/unordered-list.tsx",

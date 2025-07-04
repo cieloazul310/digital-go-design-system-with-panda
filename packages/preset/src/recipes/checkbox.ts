@@ -49,8 +49,8 @@ export default defineSlotRecipe({
            * checked:border-blue-900 checked:hover:border-blue-1100
            * forced-colors:checked:!border-[Highlight]
            */
-          base: "blue.900",
-          _hover: "blue.1100",
+          base: "keyColor.900",
+          _hover: "keyColor.1100",
           _highContrast: "Highlight",
         },
         _indeterminate: {
@@ -58,8 +58,8 @@ export default defineSlotRecipe({
            * indeterminate:border-blue-900 indeterminate:hover:border-blue-1100
            * forced-colors:indeterminate:!border-[Highlight]
            */
-          base: "blue.900",
-          _hover: "blue.1100",
+          base: "keyColor.900",
+          _hover: "keyColor.1100",
           _highContrast: "Highlight",
         },
         _invalid: {
@@ -88,8 +88,8 @@ export default defineSlotRecipe({
          * forced-colors:checked:!bg-[Highlight]
          */
         _checked: {
-          base: "blue.900",
-          _hover: "blue.1100",
+          base: "keyColor.900",
+          _hover: "keyColor.1100",
           _highContrast: "Highlight",
         },
         _indeterminate: {
@@ -97,8 +97,8 @@ export default defineSlotRecipe({
            * indeterminate:bg-blue-900 indeterminate:hover:bg-blue-1100
            * forced-colors:indeterminate:!bg-[Highlight]
            */
-          base: "blue.900",
-          _hover: "blue.1100",
+          base: "keyColor.900",
+          _hover: "keyColor.1100",
           _highContrast: "Highlight",
         },
         /**

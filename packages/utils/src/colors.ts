@@ -1,9 +1,4 @@
 export type Palette =
-  | "sea"
-  | "sumi"
-  | "forest"
-  | "wood"
-  | "sun"
   | "blue"
   | "light-blue"
   | "cyan"
@@ -13,7 +8,8 @@ export type Palette =
   | "orange"
   | "red"
   | "magenta"
-  | "purple";
+  | "purple"
+  | "solid-gray";
 
 export function createKeyColor(palette: Palette) {
   return {

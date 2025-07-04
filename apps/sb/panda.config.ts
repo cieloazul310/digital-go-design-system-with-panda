@@ -1,10 +1,9 @@
 import { defineConfig } from "@pandacss/dev";
-import preset from "@cieloazul310/digital-go-pandacss/preset";
-import { createKeyColor } from "@cieloazul310/digital-go-pandacss/utils";
+import { createPreset } from "@cieloazul310/digital-go-pandacss/preset";
 import typography from "./stories/typography";
 
 export default defineConfig({
-  presets: ["@pandacss/dev/presets", preset],
+  presets: ["@pandacss/dev/presets", createPreset("blue")],
   // Whether to use css reset
   preflight: true,
 
@@ -16,13 +15,7 @@ export default defineConfig({
 
   // Useful for theme customization
   theme: {
-    extend: {
-      semanticTokens: {
-        colors: {
-          keyColor: createKeyColor("blue"),
-        },
-      },
-    },
+    extend: {},
   },
 
   staticCss: {

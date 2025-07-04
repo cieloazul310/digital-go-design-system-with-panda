@@ -4,10 +4,12 @@ import * as Checkbox from "./checkbox";
 import * as Disclosure from "./disclosure";
 import * as InputText from "./input-text";
 import * as Menu from "./menu";
+import * as MenuList from "./menu-list";
 import * as NotificationBanner from "./notification-banner";
 import * as Radio from "./radio";
 import * as Select from "./select";
 import * as Table from "./table";
+import * as TreeView from "./tree-view";
 
 export * from "./button";
 export * from "./divider";
@@ -27,8 +29,10 @@ export {
   Disclosure,
   InputText,
   Menu,
+  MenuList,
   NotificationBanner,
   Radio,
   Select,
   Table,
+  TreeView,
 };
