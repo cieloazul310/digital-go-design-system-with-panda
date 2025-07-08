@@ -2,7 +2,7 @@
  * reference:
  * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Disclosure/Disclosure.stories.tsx
  */
-import type { Meta, StoryObj } from "@storybook/react-vite";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import * as Disclosure from "@cieloazul310/digital-go-pandacss/disclosure";
 import { styled, Container } from "@import-map-package/styled-system/jsx";
 

@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 // import{ type ChangeEvent, useEffect, useRef, useState } from "react";
 // import { ErrorText, Legend, RequirementBadge, SupportText } from "../";
 import * as Checkbox from "@cieloazul310/digital-go-pandacss/checkbox";

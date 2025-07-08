@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import * as NotificationBanner from "@cieloazul310/digital-go-pandacss/notification-banner";
 
 const meta = {

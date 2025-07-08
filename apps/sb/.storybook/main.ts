@@ -1,4 +1,4 @@
-import type { StorybookConfig } from "@storybook/react-vite";
+import type { StorybookConfig } from "@storybook/nextjs-vite";
 
 import { join, dirname } from "path";
 
@@ -18,9 +18,9 @@ const config: StorybookConfig = {
     getAbsolutePath("@storybook/addon-themes"),
     getAbsolutePath("@storybook/addon-docs"),
   ],
-  framework: {
-    name: getAbsolutePath("@storybook/react-vite"),
-    options: {},
+  framework: "@storybook/nextjs-vite",
+  features: {
+    experimentalRSC: true,
   },
 };
 export default config;

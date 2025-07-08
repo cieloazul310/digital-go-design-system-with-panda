@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { UtilityLink } from "@cieloazul310/digital-go-pandacss/utility-link";
 import { ExternalLink } from "lucide-react";
 

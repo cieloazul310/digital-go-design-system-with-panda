@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { UnorderedList } from "@cieloazul310/digital-go-pandacss/unordered-list";
 import { List } from "@cieloazul310/digital-go-pandacss/list";
 

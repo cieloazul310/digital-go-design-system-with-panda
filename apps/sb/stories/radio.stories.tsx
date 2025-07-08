@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import * as RadioGroup from "@cieloazul310/digital-go-pandacss/radio";
 import { Legend } from "@cieloazul310/digital-go-pandacss/form/legend";
 import { RequirementBadge } from "@cieloazul310/digital-go-pandacss/form/requirement-badge";

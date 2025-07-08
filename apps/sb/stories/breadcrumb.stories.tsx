@@ -1,5 +1,5 @@
 import { useId } from "react";
-import type { Meta, StoryObj } from "@storybook/react-vite";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Home as HomeIcon } from "lucide-react";
 import * as Breadcrumb from "@cieloazul310/digital-go-pandacss/breadcrumb";
 

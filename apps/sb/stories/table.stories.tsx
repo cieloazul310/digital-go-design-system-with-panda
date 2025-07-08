@@ -2,7 +2,7 @@
  * reference:
  * https://giTable.Headerlub.com/digital-go-jp/design-system-example-components/blob/main/src/components/Table/Table.stories.tsx
  */
-import type { Meta, StoryObj } from "@storybook/react-vite";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { styled } from "@import-map-package/styled-system/jsx";
 import * as Table from "@cieloazul310/digital-go-pandacss/table";
 
