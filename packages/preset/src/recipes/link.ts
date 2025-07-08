@@ -14,10 +14,10 @@ export default defineRecipe({
      * focus-visible:text-blue-1000 active:text-orange-700
      */
     color: {
-      base: "blue.1000",
+      base: "keyColor.1000",
       _visited: "magenta.900",
-      _hover: "blue.1000",
-      _focusVisible: "blue.1000",
+      _hover: "keyColor.1000",
+      _focusVisible: "keyColor.1000",
       _active: "orange.700",
     },
     /**
