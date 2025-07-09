@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Textarea } from "@cieloazul310/digital-go-pandacss/textarea";
 import * as InputText from "@cieloazul310/digital-go-pandacss/input-text";
 

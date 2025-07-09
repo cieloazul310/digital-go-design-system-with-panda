@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { createTreeCollection } from "@ark-ui/react/tree-view";
 import * as StyledTreeView from "@cieloazul310/digital-go-pandacss/tree-view";
 import { forwardRef } from "react";

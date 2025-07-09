@@ -1,5 +1,6 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { createListCollection } from "@ark-ui/react/listbox";
+import NextLink from "next/link";
 import * as MenuList from "@cieloazul310/digital-go-pandacss/menu-list";
 import { css } from "@import-map-package/styled-system/css";
 
@@ -103,6 +104,27 @@ export const WithLink: Story = {
                 <MenuList.ItemText>{item}</MenuList.ItemText>
                 <MenuList.ItemIndicator />
               </a>
+            </MenuList.Item>
+          ))}
+        </MenuList.Content>
+      </>
+    ),
+  },
+};
+
+export const WithNextLink: Story = {
+  args: {
+    collection,
+    children: (
+      <>
+        <MenuList.Label>カテゴリータイトル</MenuList.Label>
+        <MenuList.Content>
+          {collection.items.map((item) => (
+            <MenuList.Item key={item} item={item} asChild>
+              <NextLink href={`/${item}`}>
+                <MenuList.ItemText>{item}</MenuList.ItemText>
+                <MenuList.ItemIndicator />
+              </NextLink>
             </MenuList.Item>
           ))}
         </MenuList.Content>

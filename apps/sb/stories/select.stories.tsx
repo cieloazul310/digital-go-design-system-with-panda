@@ -1,5 +1,5 @@
 import { ChevronDownIcon, X as XIcon } from "lucide-react";
-import type { Meta, StoryObj } from "@storybook/react-vite";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { fn } from "storybook/test";
 import { Portal, createListCollection } from "@ark-ui/react";
 import * as Select from "@cieloazul310/digital-go-pandacss/select";

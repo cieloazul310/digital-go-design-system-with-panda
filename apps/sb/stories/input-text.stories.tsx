@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { fn } from "storybook/test";
 import * as InputText from "@cieloazul310/digital-go-pandacss/input-text";
 import { inputText } from "@import-map-package/styled-system/recipes";

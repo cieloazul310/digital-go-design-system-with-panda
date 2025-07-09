@@ -1,7 +1,7 @@
 /**
  * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Button/Button.stories.tsx
  */
-import type { Meta, StoryObj } from "@storybook/react-vite";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { fn } from "storybook/test";
 import { Button } from "@cieloazul310/digital-go-pandacss/button";
 import { Link } from "@cieloazul310/digital-go-pandacss/link";

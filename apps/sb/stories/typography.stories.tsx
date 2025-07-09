@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { css } from "@import-map-package/styled-system/css";
 import { Container } from "@import-map-package/styled-system/jsx";
 import { headingTextStyles, paragraphTextStyles } from "./typography";

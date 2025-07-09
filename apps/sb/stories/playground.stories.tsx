@@ -1,4 +1,4 @@
-import type { StoryObj, Meta } from "@storybook/react-vite";
+import type { StoryObj, Meta } from "@storybook/nextjs-vite";
 import { css } from "@import-map-package/styled-system/css";
 import { menuItem } from "@import-map-package/styled-system/recipes";
 
