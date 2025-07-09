@@ -1,0 +1,27 @@
+import NextLink from "next/link";
+import {
+  Link as LinkBase,
+  type LinkProps as LinkBaseProps,
+} from "@cieloazul310/digital-go-pandacss/link";
+import { ExternalLinkIcon } from "lucide-react";
+import { isInternal } from "@/utils/isInternal";
+
+export function Link({ children, href, ...props }: LinkBaseProps) {
+  if (!href) return null;
+  const internal = isInternal(href);
+
+  if (internal) {
+    return (
+      <LinkBase asChild {...props}>
+        <NextLink href={href}>{children}</NextLink>
+      </LinkBase>
+    );
+  }
+
+  return (
+    <LinkBase href={href} target="_blank" rel="noopener noreferer" {...props}>
+      {children}
+      <ExternalLinkIcon />
+    </LinkBase>
+  );
+}

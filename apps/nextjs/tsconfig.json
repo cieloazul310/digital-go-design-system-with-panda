@@ -1,0 +1,25 @@
+{
+  "extends": "@repo/typescript-config/app.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "src",
+    ".next/types/**/*.ts",
+    "styled-system"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

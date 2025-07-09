@@ -32,3 +32,20 @@ packages/studio/src/lib/analysis.json
 
 .turbo
 **/storybook-static
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# testing
+**/coverage
+
+# next.js
+**/.next/
+**/out/
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
