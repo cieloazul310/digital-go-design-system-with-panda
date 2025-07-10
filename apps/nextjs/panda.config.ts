@@ -1,5 +1,6 @@
 import { defineConfig } from "@pandacss/dev";
 import { createPreset } from "@cieloazul310/digital-go-pandacss/preset";
+import { tokens } from "./src/theme/tokens";
 
 export default defineConfig({
   presets: ["@pandacss/dev/presets", createPreset("blue")],
@@ -14,7 +15,9 @@ export default defineConfig({
 
   // Useful for theme customization
   theme: {
-    extend: {},
+    extend: {
+      tokens,
+    },
   },
   jsxFramework: "react",
 

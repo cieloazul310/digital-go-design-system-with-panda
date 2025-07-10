@@ -67,6 +67,15 @@
       },
       "require": "./dist/components/divider.js"
     },
+    "./drawer": {
+      "source": "./src/components/drawer.tsx",
+      "types": "./dist/components/drawer.d.ts",
+      "import": {
+        "types": "./dist/components/drawer.d.ts",
+        "default": "./dist/components/drawer.mjs"
+      },
+      "require": "./dist/components/drawer.js"
+    },
     "./form/*": {
       "source": "./src/components/form/*.tsx",
       "types": "./dist/components/form/*.d.ts",

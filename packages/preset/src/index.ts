@@ -1,4 +1,4 @@
-import { definePreset } from "@pandacss/dev";
+import { definePreset, type Preset } from "@pandacss/dev";
 import presetBase from "@cieloazul310/digital-go-pandacss-plugin";
 import {
   createKeyColor,
@@ -6,20 +6,21 @@ import {
 } from "@cieloazul310/digital-go-pandacss-utils";
 import recipes from "./recipes";
 
-export default definePreset({
+const base = {
   name: "digital-go-pandacss-preset",
   presets: [presetBase],
   theme: {
     recipes,
   },
-});
+} satisfies Preset;
+
+export default definePreset(base);
 
 export const createPreset = (keyColor?: Palette) =>
   definePreset({
-    name: "digital-go-pandacss-preset",
-    presets: [presetBase],
+    ...base,
     theme: {
-      recipes,
+      ...base.theme,
       extend: {
         semanticTokens: {
           colors: {
