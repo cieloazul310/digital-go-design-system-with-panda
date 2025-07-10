@@ -4,6 +4,7 @@ import button from "./button";
 import checkbox from "./checkbox";
 import disclosure from "./disclosure";
 import digitalGoDivider from "./divider";
+import drawer from "./drawer";
 import errorText from "./error-text";
 import input from "./input";
 import inputText from "./input-text";
@@ -33,6 +34,7 @@ const recipes = {
   breadcrumb,
   button,
   checkbox,
+  drawer,
   disclosure,
   digitalGoDivider,
   errorText,
