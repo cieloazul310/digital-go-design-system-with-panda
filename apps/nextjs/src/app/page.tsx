@@ -1,4 +1,4 @@
-import { styled, Stack } from "@import-map-package/styled-system/jsx";
+import { Stack } from "@import-map-package/styled-system/jsx";
 import { css } from "@import-map-package/styled-system/css";
 import { Link } from "@/components/link";
 import { Paragraph } from "@/components/article";
@@ -11,9 +11,11 @@ export default function Home() {
        * mt-4 mb-8 md:mt-6 md:mb-12 lg:mt-0 lg:mb-16
        * -ml-0.5
        */}
-      <styled.hgroup
-        mt={{ base: 4, md: 6, lg: 0 }}
-        mb={{ base: 8, md: 12, lg: 16 }}
+      <hgroup
+        className={css({
+          mt: { base: 4, md: 6, lg: 0 },
+          mb: { base: 8, md: 12, lg: 16 },
+        })}
       >
         <h1
           className={css({
@@ -34,7 +36,7 @@ export default function Home() {
           </Link>
           のコンテンツを加工して作成
         </span>
-      </styled.hgroup>
+      </hgroup>
       <section>
         <Paragraph>
           デジタル庁デザインシステムは、スタイリングの考え方を提供するデザイン言語、情報の視覚表現とインタラクションを具現化するUIコンポーネント、ユーザビリティとアクセシビリティを踏まえた設計や実装のためのガイドラインから構成されるデザインアセットです。

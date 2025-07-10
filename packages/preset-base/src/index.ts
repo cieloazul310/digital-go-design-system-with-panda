@@ -3,6 +3,7 @@ import semanticTokens from "./semanticTokens";
 import textStyles from "./textStyles";
 import tokens from "./tokens";
 import utilities from "./utilities";
+import globalCss from "./globalCss";
 
 const preset = definePreset({
   name: "digital-go",
@@ -14,6 +15,7 @@ const preset = definePreset({
     },
   },
   utilities,
+  globalCss,
 });
 
 export default preset;
