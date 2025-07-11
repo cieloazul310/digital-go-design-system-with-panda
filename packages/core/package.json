@@ -85,6 +85,15 @@
       },
       "require": "./dist/components/form/*.js"
     },
+    "./hamburger-menu-button": {
+      "source": "./src/components/hamburger-menu-button.tsx",
+      "types": "./dist/components/hamburger-menu-button.d.ts",
+      "import": {
+        "types": "./dist/components/hamburger-menu-button.d.ts",
+        "default": "./dist/components/hamburger-menu-button.mjs"
+      },
+      "require": "./dist/components/hamburger-menu-button.js"
+    },
     "./input-text": {
       "source": "./src/components/input-text.tsx",
       "types": "./dist/components/input-text.d.ts",

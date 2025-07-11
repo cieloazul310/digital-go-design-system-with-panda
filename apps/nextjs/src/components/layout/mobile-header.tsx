@@ -1,7 +1,10 @@
 import { css } from "@import-map-package/styled-system/css";
 import * as Drawer from "@cieloazul310/digital-go-pandacss/drawer";
-import { Button } from "@cieloazul310/digital-go-pandacss/button";
-import { XIcon } from "lucide-react";
+import {
+  HamburgerMenuButton,
+  HamburgerIcon,
+  CloseIcon,
+} from "@cieloazul310/digital-go-pandacss/hamburger-menu-button";
 import Menu from "./menu";
 
 export default function MobileHeader() {
@@ -54,7 +57,10 @@ export default function MobileHeader() {
         </h1>
         <Drawer.Root placement="right">
           <Drawer.Trigger asChild>
-            <Button variant="outline">メニュー</Button>
+            <HamburgerMenuButton>
+              <HamburgerIcon />
+              メニュー
+            </HamburgerMenuButton>
           </Drawer.Trigger>
           <Drawer.Backdrop />
           <Drawer.Positioner>
@@ -64,10 +70,13 @@ export default function MobileHeader() {
                 <Drawer.CloseTrigger
                   asChild
                   position="absolute"
-                  top="3"
+                  top="5"
                   right="4"
                 >
-                  <XIcon />
+                  <HamburgerMenuButton>
+                    <CloseIcon />
+                    閉じる
+                  </HamburgerMenuButton>
                 </Drawer.CloseTrigger>
               </Drawer.Header>
               <Drawer.Body>

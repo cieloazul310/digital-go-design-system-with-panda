@@ -15,6 +15,7 @@ import * as TreeView from "./tree-view";
 export * from "./button";
 export * from "./divider";
 export * from "./form";
+export * from "./hamburger-menu-button";
 export * from "./link";
 export * from "./list";
 export * from "./ordered-list";

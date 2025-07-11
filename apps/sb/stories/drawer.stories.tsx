@@ -1,7 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import * as Drawer from "@cieloazul310/digital-go-pandacss/drawer";
-import { Button } from "@cieloazul310/digital-go-pandacss/button";
-import { XIcon } from "lucide-react";
+import {
+  HamburgerMenuButton,
+  CloseIcon,
+  HamburgerIcon,
+} from "@cieloazul310/digital-go-pandacss/hamburger-menu-button";
 import { css } from "@import-map-package/styled-system/css";
 
 const meta = {
@@ -31,7 +34,10 @@ export const Basic: Story = {
     children: (
       <>
         <Drawer.Trigger asChild>
-          <Button>Open Drawer</Button>
+          <HamburgerMenuButton>
+            <HamburgerIcon />
+            メニュー
+          </HamburgerMenuButton>
         </Drawer.Trigger>
         <Drawer.Backdrop />
         <Drawer.Positioner>
@@ -44,7 +50,10 @@ export const Basic: Story = {
                 top="3"
                 right="4"
               >
-                <XIcon />
+                <HamburgerMenuButton>
+                  <CloseIcon />
+                  閉じる
+                </HamburgerMenuButton>
               </Drawer.CloseTrigger>
             </Drawer.Header>
             <Drawer.Body>

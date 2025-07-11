@@ -5,6 +5,9 @@
 Storybook  
 <https://cieloazul310.github.io/digital-go-design-system-with-panda/>
 
+Next.js Example  
+<https://digital-go-design-system-with-panda.vercel.app/>
+
 ## 構成
 
 - `utils`: ユーティリティパッケージ
@@ -12,7 +15,6 @@ Storybook
 - `preset`: コンポーネントのレシピを内包したPandaプリセット
 - `components`: Ark UIのコンポーネントをレシピでスタイリングしたReactコンポーネント
 - `core`: `preset`と`components`を内包したコアパッケージ
-- `styled-system`: スタイルシステム
 
 ## コンポーネント
 
@@ -25,10 +27,10 @@ Storybook
 | チェックボックス v2           | 🔨               | 🔨                 |
 | モーダルダイアログ            | ❌               | ❌                 |
 | ディバイダー v2               | ✅ `digitalGoDivider` |✅ `<Divider>`  |
-| ドロワー                      | ❌               | ❌                 |
+| ドロワー v2                  | ✅ `drawer`        | ✅ `<Drawer>`     |
 | 緊急時バナー                  | ❌               | ❌                 |
 | グローバルメニュー            | ❌               | ❌                 |
-| ハンバーガーメニューボタン    | ❌               | ❌                 |
+| ハンバーガーメニューボタン v2 | ✅ `hamburgerMenuButton` | ✅ `<HamburgerMenuButton>` |
 | ヘッダーコンテナ              | ❌               | ❌                 |
 | ランゲージセレクター          | ❌               | ❌                 |
 | メガメニュー                  | ❌               | ❌                 |
@@ -63,5 +65,5 @@ Ark UI
 Panda CSS  
 <https://panda-css.com/>
 
-Park UI
+Park UI  
 <https://park-ui.com/>
