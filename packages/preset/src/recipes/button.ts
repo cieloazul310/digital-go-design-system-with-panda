@@ -38,6 +38,7 @@ export default defineRecipe({
     textAlign: "center",
     alignItems: "center",
     justifyContent: "center",
+    cursor: "pointer",
   },
   variants: {
     variant: {

@@ -6,6 +6,7 @@ import disclosure from "./disclosure";
 import digitalGoDivider from "./divider";
 import drawer from "./drawer";
 import errorText from "./error-text";
+import hamburgerMenuButton from "./hamburger-menu-button";
 import input from "./input";
 import inputText from "./input-text";
 import label from "./label";
@@ -38,6 +39,7 @@ const recipes = {
   disclosure,
   digitalGoDivider,
   errorText,
+  hamburgerMenuButton,
   input,
   inputText,
   label,
