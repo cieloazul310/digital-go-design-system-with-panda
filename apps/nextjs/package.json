@@ -12,12 +12,17 @@
     "@ark-ui/react": "^5.13.0",
     "@cieloazul310/digital-go-pandacss": "^0.0.1",
     "@import-map-package/styled-system": "^0.0.1",
+    "@shikijs/rehype": "^3.7.0",
     "lucide-react": "^0.513.0",
+    "next": "^15.3.5",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "next": "^15.3.5"
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
+    "@next/mdx": "^15.3.5",
     "@pandacss/dev": "^0.53.7",
     "@repo/eslint-config": "^0.0.0",
     "@repo/typescript-config": "^0.0.0",
