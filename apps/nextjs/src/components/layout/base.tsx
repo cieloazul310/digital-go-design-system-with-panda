@@ -36,6 +36,8 @@ export default function BaseLayout({ children }: PropsWithChildren) {
             display: { base: "none", md: "flex" },
             flexDirection: "column",
             pt: 10,
+            position: "fixed",
+            top: 0,
             borderRightWidth: { base: 0, md: "1px" },
             borderRightColor: "solid-gray.420",
             overflowY: "auto",
