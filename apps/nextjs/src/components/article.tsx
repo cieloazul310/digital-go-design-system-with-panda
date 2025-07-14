@@ -22,3 +22,18 @@ export const Heading2 = (
     {...props}
   />
 );
+
+/**
+ *
+ * text-std-22B-150 md:text-std-24B-150 mt-8 mb-4 md:mt-12 md:mb-6
+ */
+export const Heading3 = (
+  props: JsxHTMLProps<ComponentProps<"h3">, JsxStyleProps>,
+) => (
+  <styled.h3
+    textStyle={{ base: "std-22B-150", md: "std-24B-150" }}
+    mt={{ base: 8, md: 12 }}
+    mb={{ base: 4, md: 6 }}
+    {...props}
+  />
+);
