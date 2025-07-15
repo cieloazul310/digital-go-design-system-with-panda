@@ -1,6 +1,7 @@
 import { withThemeByClassName } from "@storybook/addon-themes";
 import type { Preview, ReactRenderer } from "@storybook/nextjs-vite";
 import { Noto_Sans_JP, Noto_Sans_Mono } from "next/font/google";
+import { css, cx } from "@import-map-package/styled-system/css";
 import "./index.css";
 
 const notoSansJp = Noto_Sans_JP({
@@ -32,7 +33,13 @@ const preview: Preview = {
       defaultTheme: "light",
     }),
     (Story) => (
-      <div className={`${notoSansJp.variable} ${notoSansMono.variable}`}>
+      <div
+        className={cx(
+          notoSansJp.variable,
+          notoSansMono.variable,
+          css({ textStyle: { base: "std-18N-160", md: "std-20N-150" } }),
+        )}
+      >
         <Story />
       </div>
     ),

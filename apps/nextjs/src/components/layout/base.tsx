@@ -1,7 +1,8 @@
-import { css } from "@import-map-package/styled-system/css";
 import type { PropsWithChildren } from "react";
+import { css } from "@import-map-package/styled-system/css";
 import MobileHeader from "./mobile-header";
 import Menu from "./menu";
+import Footer from "./footer";
 
 export default function BaseLayout({ children }: PropsWithChildren) {
   return (
@@ -73,16 +74,7 @@ export default function BaseLayout({ children }: PropsWithChildren) {
             {children}
           </div>
         </main>
-        <footer
-          className={css({
-            /**
-             * [grid-area:footer] [&>div]:max-w-[--home-main-width] mb-6 mt-16 md:mb-10 md:mt-20
-             */
-            gridArea: "footer",
-            mb: { base: 6, md: 10 },
-            mt: { base: 16, md: 20 },
-          })}
-        />
+        <Footer />
       </div>
     </div>
   );

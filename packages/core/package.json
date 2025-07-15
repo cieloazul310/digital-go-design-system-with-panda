@@ -157,6 +157,15 @@
       },
       "require": "./dist/components/radio.js"
     },
+    "./resource-list": {
+      "source": "./src/components/resource-list.tsx",
+      "types": "./dist/components/resource-list.d.ts",
+      "import": {
+        "types": "./dist/components/resource-list.d.ts",
+        "default": "./dist/components/resource-list.mjs"
+      },
+      "require": "./dist/components/resource-list.js"
+    },
     "./select": {
       "source": "./src/components/select.tsx",
       "types": "./dist/components/select.d.ts",
