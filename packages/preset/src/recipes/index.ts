@@ -21,6 +21,7 @@ import orderedList from "./ordered-list";
 import radio from "./radio";
 import radioGroup from "./radio-group";
 import requirementBadge from "./requirement-badge";
+import resourceList from "./resource-list";
 import select from "./select";
 import selectBox from "./select-box";
 import supportText from "./support-text";
@@ -54,6 +55,7 @@ const recipes = {
   radio,
   radioGroup,
   requirementBadge,
+  resourceList,
   select,
   selectBox,
   supportText,

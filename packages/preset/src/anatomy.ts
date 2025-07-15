@@ -26,3 +26,16 @@ export const menuListAnatomy = createAnatomy("menu-list").parts(
 export const notificationBannerAnatomy = createAnatomy(
   "notification-banner",
 ).parts("root", "icon", "close", "header", "heading", "body");
+
+export const resourceListAnatomy = createAnatomy("resource-list").parts(
+  "root",
+  "contentsContainer",
+  "functionButton",
+  "frontIcon",
+  "form",
+  "content",
+  "label",
+  "title",
+  "supportText",
+  "subLabel",
+);
