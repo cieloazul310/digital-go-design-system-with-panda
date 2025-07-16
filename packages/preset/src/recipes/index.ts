@@ -26,6 +26,7 @@ import select from "./select";
 import selectBox from "./select-box";
 import supportText from "./support-text";
 import table from "./table";
+import tabs from "./tabs";
 import textarea from "./textarea";
 import treeView from "./tree-view";
 import unorderedList from "./unordered-list";
@@ -60,6 +61,7 @@ const recipes = {
   selectBox,
   supportText,
   table,
+  tabs,
   textarea,
   treeView,
   unorderedList,

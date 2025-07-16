@@ -1,3 +1,4 @@
+import * as Disclosure from "@cieloazul310/digital-go-pandacss/disclosure";
 import { styled } from "@import-map-package/styled-system/jsx";
 import type {
   ComponentProps,
@@ -36,4 +37,19 @@ export const Heading3 = (
     mb={{ base: 4, md: 6 }}
     {...props}
   />
+);
+
+export const Details = ({ children, ...props }: Disclosure.RootProps) => (
+  <Disclosure.Root asChild {...props}>
+    <details>{children}</details>
+  </Disclosure.Root>
+);
+
+export const Summary = ({ children, ...props }: Disclosure.SummaryProps) => (
+  <Disclosure.Summary asChild {...props}>
+    <summary>
+      <Disclosure.Icon />
+      {children}
+    </summary>
+  </Disclosure.Summary>
 );

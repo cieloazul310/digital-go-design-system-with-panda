@@ -184,15 +184,6 @@
       },
       "require": "./dist/components/tree-view.js"
     },
-    "./textarea": {
-      "source": "./src/components/textarea.tsx",
-      "types": "./dist/components/textarea.d.ts",
-      "import": {
-        "types": "./dist/components/textarea.d.ts",
-        "default": "./dist/components/textarea.mjs"
-      },
-      "require": "./dist/components/textarea.js"
-    },
     "./table": {
       "source": "./src/components/table.tsx",
       "types": "./dist/components/table.d.ts",
@@ -201,6 +192,24 @@
         "default": "./dist/components/table.mjs"
       },
       "require": "./dist/components/table.js"
+    },
+    "./tabs": {
+      "source": "./src/components/tabs.tsx",
+      "types": "./dist/components/tabs.d.ts",
+      "import": {
+        "types": "./dist/components/tabs.d.ts",
+        "default": "./dist/components/tabs.mjs"
+      },
+      "require": "./dist/components/tabs.js"
+    },
+    "./textarea": {
+      "source": "./src/components/textarea.tsx",
+      "types": "./dist/components/textarea.d.ts",
+      "import": {
+        "types": "./dist/components/textarea.d.ts",
+        "default": "./dist/components/textarea.mjs"
+      },
+      "require": "./dist/components/textarea.js"
     },
     "./unordered-list": {
       "source": "./src/components/unordered-list.tsx",
