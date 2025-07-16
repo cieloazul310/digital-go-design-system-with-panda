@@ -2,9 +2,11 @@
  * reference:
  * https://giTable.Headerlub.com/digital-go-jp/design-system-example-components/blob/main/src/components/Table/Table.stories.tsx
  */
+import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { styled } from "@import-map-package/styled-system/jsx";
 import * as Table from "@cieloazul310/digital-go-pandacss/table";
+import * as Checkbox from "@cieloazul310/digital-go-pandacss/checkbox";
 
 const meta = {
   title: "Components/テーブル",
@@ -130,11 +132,99 @@ export const TableHeaderWithRowspan: Story = {
   },
 };
 
+export const Selectable: Story = {
+  args: {
+    dense: true,
+  },
+  render: ({ ...props }) => {
+    const articles = [
+      { title: "記事タイトル1", status: "公開中", comments: 10 },
+      { title: "記事タイトル2", status: "下書き", comments: 0 },
+      { title: "記事タイトル3", status: "非公開", comments: 3 },
+    ];
+    const [selected, setSelected] = useState<string[]>([]);
+    const onCheckedChange = () => {
+      if (selected.length === 3) {
+        setSelected([]);
+      } else {
+        setSelected(articles.map(({ title }) => title));
+      }
+    };
+    const onValueChange = (values: string[]) => {
+      setSelected(values);
+    };
+
+    return (
+      <Table.Root {...props}>
+        <Table.Caption>テーブル</Table.Caption>
+        <Table.Head>
+          <Table.Row>
+            <Table.Header scope="col" width={10} position="relative">
+              <Checkbox.Root
+                position="absolute"
+                pt={2.5}
+                top="50%"
+                left="50%"
+                transform="translate(-50%, -50%)"
+                checked={
+                  selected.length === 3
+                    ? true
+                    : selected.length === 0
+                      ? false
+                      : "indeterminate"
+                }
+                onCheckedChange={onCheckedChange}
+              >
+                <Checkbox.Control>
+                  <Checkbox.Indicator />
+                  <Checkbox.Indicator indeterminate />
+                </Checkbox.Control>
+                <Checkbox.HiddenInput />
+              </Checkbox.Root>
+            </Table.Header>
+            <Table.Header scope="col">タイトル</Table.Header>
+            <Table.Header scope="col">状態</Table.Header>
+            <Table.Header scope="col">コメント数</Table.Header>
+          </Table.Row>
+        </Table.Head>
+        <Checkbox.Group value={selected} onValueChange={onValueChange} asChild>
+          <Table.Body>
+            {articles.map(({ title, status, comments }) => (
+              <Table.Row key={title}>
+                <Table.Cell position="relative">
+                  <Checkbox.Root
+                    value={title}
+                    position="absolute"
+                    pt={2.5}
+                    top="50%"
+                    left="50%"
+                    transform="translate(-50%, -50%)"
+                  >
+                    <Checkbox.Control>
+                      <Checkbox.Indicator />
+                    </Checkbox.Control>
+                    <Checkbox.HiddenInput />
+                  </Checkbox.Root>
+                </Table.Cell>
+                <Table.Header scope="row">{title}</Table.Header>
+                <Table.Cell>{status}</Table.Cell>
+                <Table.Cell>{comments.toString()}</Table.Cell>
+              </Table.Row>
+            ))}
+          </Table.Body>
+        </Checkbox.Group>
+      </Table.Root>
+    );
+  },
+};
+
 export const IndentedRows: Story = {
   args: {
     children: (
       <>
-        <styled.col width={8} />
+        <colgroup>
+          <styled.col width={8} />
+        </colgroup>
         <Table.Head>
           <Table.Row>
             <Table.Cell colSpan={2} />
