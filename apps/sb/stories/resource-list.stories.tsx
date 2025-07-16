@@ -2,8 +2,10 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import NextLink from "next/link";
 import * as ResouceList from "@cieloazul310/digital-go-pandacss/resource-list";
 import { Link } from "@cieloazul310/digital-go-pandacss/link";
+import * as RadioGroup from "@cieloazul310/digital-go-pandacss/radio";
+import * as Checkbox from "@cieloazul310/digital-go-pandacss/checkbox";
 import { EllipsisVertical, CircleUser, Heart } from "lucide-react";
-import { link, radio } from "@import-map-package/styled-system/recipes";
+import { link } from "@import-map-package/styled-system/recipes";
 import { css } from "@import-map-package/styled-system/css";
 
 const meta = {
@@ -245,7 +247,7 @@ export const PaymentExample: Story = {
     asLink: false,
   },
   render: ({ ...props }) => (
-    <ul
+    <fieldset
       className={css({
         maxW: "breakpoint-md",
         m: "auto",
@@ -254,23 +256,89 @@ export const PaymentExample: Story = {
         gap: 4,
       })}
     >
-      {payments.map(({ id, label, description, recomended }) => (
-        <ResouceList.Root key={id} {...props} asChild>
-          <li>
+      <RadioGroup.Root>
+        {payments.map(({ id, label, description, recomended }) => (
+          <RadioGroup.Item width="full" key={id} value={id}>
+            <ResouceList.Root width="full" {...props}>
+              <ResouceList.ContentsContainer className="group">
+                <ResouceList.Form>
+                  <RadioGroup.ItemControl />
+                  <RadioGroup.ItemHiddenInput />
+                </ResouceList.Form>
+                <ResouceList.Content>
+                  {recomended && (
+                    <ResouceList.Label>おすすめ</ResouceList.Label>
+                  )}
+                  <ResouceList.Title>{label}</ResouceList.Title>
+                  <ResouceList.SuportText>{description}</ResouceList.SuportText>
+                </ResouceList.Content>
+              </ResouceList.ContentsContainer>
+            </ResouceList.Root>
+          </RadioGroup.Item>
+        ))}
+      </RadioGroup.Root>
+    </fieldset>
+  ),
+};
+
+const users = [
+  {
+    name: "電磁 多留子",
+    description: "開発部",
+    role: "管理者",
+    selected: false,
+  },
+  {
+    name: "デジ田 太郎",
+    description: "マーケティング部",
+    role: "メンバー",
+    selected: true,
+  },
+  {
+    name: "デジ山 ひかり",
+    description: "CEO",
+    role: "オーナー",
+    selected: false,
+  },
+];
+
+export const UserSelectExample: Story = {
+  args: {
+    variant: "list",
+    asLink: false,
+  },
+  render: ({ ...props }) => (
+    <Checkbox.Group
+      className={css({
+        maxW: "breakpoint-md",
+        m: "auto",
+      })}
+    >
+      {users.map(({ name, description, role }) => (
+        <Checkbox.Root width="full" py={0} value={name} key={name}>
+          <ResouceList.Root width="full" {...props}>
             <ResouceList.ContentsContainer className="group">
               <ResouceList.Form>
-                <div className={radio({ size: "sm" }).itemControl} />
+                <Checkbox.Control>
+                  <Checkbox.Indicator />
+                </Checkbox.Control>
+                <Checkbox.HiddenInput />
               </ResouceList.Form>
-              <ResouceList.Content>
-                {recomended && <ResouceList.Label>おすすめ</ResouceList.Label>}
-                <ResouceList.Title>{label}</ResouceList.Title>
-                <ResouceList.SuportText>{description}</ResouceList.SuportText>
+              <ResouceList.FrontIcon>
+                <CircleUser className={css({ width: 8, height: 8 })} />
+              </ResouceList.FrontIcon>
+              <ResouceList.Content asChild>
+                <Checkbox.Label>
+                  <ResouceList.Title>{name}</ResouceList.Title>
+                  <ResouceList.SuportText>{description}</ResouceList.SuportText>
+                </Checkbox.Label>
               </ResouceList.Content>
+              <ResouceList.Label>{role}</ResouceList.Label>
             </ResouceList.ContentsContainer>
-          </li>
-        </ResouceList.Root>
+          </ResouceList.Root>
+        </Checkbox.Root>
       ))}
-    </ul>
+    </Checkbox.Group>
   ),
 };
 

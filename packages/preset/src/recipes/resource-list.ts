@@ -8,6 +8,10 @@ export default defineSlotRecipe({
     root: {
       display: "flex",
       borderColor: "solid-gray.420",
+      bg: {
+        "&:has(input:checked)": "keyColor.50",
+        _selected: "keyColor.50",
+      },
     },
     contentsContainer: {
       display: "flex",

@@ -56,6 +56,7 @@ export default defineSlotRecipe({
        * border-b
        */
       borderBottomWidth: "1px",
+      "tbody > &:has(input:checked)": { bg: "keyColor.100" },
     },
     header: {
       /**
@@ -119,7 +120,7 @@ export default defineSlotRecipe({
         body: {
           "& tr": {
             _even: {
-              bg: "{colors.keyColor.50}/25",
+              "&:not(:has(input:checked))": { bg: "{colors.keyColor.50}/25" },
             },
           },
         },
