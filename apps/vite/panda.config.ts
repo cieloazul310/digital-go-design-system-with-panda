@@ -14,7 +14,13 @@ export default defineConfig({
 
   // Useful for theme customization
   theme: {
-    extend: {},
+    extend: {
+      tokens: {
+        sizes: {
+          "mobile-header-height": { value: "4.25rem" },
+        },
+      },
+    },
   },
   jsxFramework: "react",
 
