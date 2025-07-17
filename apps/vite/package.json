@@ -1,7 +1,7 @@
 {
   "name": "app",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1-prerelease.0",
   "type": "module",
   "scripts": {
     "panda": "panda codegen",
@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "@ark-ui/react": "^5.13.0",
-    "@cieloazul310/digital-go-pandacss": "^0.0.0",
-    "@cieloazul310/styled-system": "^0.0.0",
+    "@cieloazul310/digital-go-pandacss": "^0.0.1-prerelease.0",
+    "@cieloazul310/styled-system": "^0.0.1-prerelease.0",
     "lucide-react": "^0.513.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
