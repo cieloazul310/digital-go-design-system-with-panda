@@ -1,9 +1,9 @@
 import { defineSlotRecipe } from "@pandacss/dev";
-import { anatomy as checkboxAnatomy } from "@ark-ui/anatomy/checkbox";
+import { anatomy as checkboxAnatomy } from "@zag-js/checkbox";
 
 export default defineSlotRecipe({
   className: "checkbox",
-  slots: checkboxAnatomy.keys(),
+  slots: checkboxAnatomy.extendWith("group").keys(),
   base: {
     root: {
       /**
@@ -189,7 +189,6 @@ export default defineSlotRecipe({
        */
       color: "solid-gray.800",
     },
-    group: {},
   },
   variants: {
     size: {

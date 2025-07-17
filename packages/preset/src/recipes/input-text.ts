@@ -3,7 +3,7 @@
  * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Input/Input.tsx
  */
 import { defineSlotRecipe } from "@pandacss/dev";
-import { anatomy as fieldAnatomy } from "@ark-ui/anatomy/field";
+import { inputTextAnatomy } from "../anatomy";
 import errorText from "./error-text";
 import input from "./input";
 import label from "./label";
@@ -15,7 +15,7 @@ const inputText = defineSlotRecipe({
   className: "input-text",
   description:
     "インプットテキストコンポーネントは、名前や電話番号など、1行以内のテキストを入力する場合に使用します。",
-  slots: fieldAnatomy.keys(),
+  slots: inputTextAnatomy.keys(),
   base: {
     root: {
       display: "flex",

@@ -8,6 +8,69 @@ Storybook
 Next.js Example  
 <https://digital-go-design-system-with-panda.vercel.app/>
 
+## 使い方
+
+### 1. React + Panda CSS プロジェクトにインストール
+
+```sh
+npm install @cieloazul310/digital-go-pandacss @cieloazul310/styled-system
+```
+
+### 2. `panda.config`の設定
+
+```diff
+// panda.config.ts
+import { defineConfig } from "@pandacss/dev";
++ import { createPreset } from "@cieloazul310/digital-go-pandacss/preset";
+
+export default defineConfig({
+  presets: [
+    "@pandacss/dev/presets",
++   createPreset("blue"),
+  ],
+  // Whether to use css reset
+  preflight: true,
+
+  // Where to look for your css declarations
+  include: ["./src/**/*.{js,jsx,ts,tsx}"],
+
+  // Files to exclude
+  exclude: [],
+
+  // Useful for theme customization
+  theme: {
+    extend: {},
+  },
+  jsxFramework: "react",
+
+  // The output directory for your css system
+  outdir: "styled-system",
++ importMap: "@cieloazul310/styled-system",
+});
+```
+
+### 3. コンポーネントを使う
+
+```tsx
+import { Button } from "@cieloazul310/digital-go-pandacss/button";
+import { css } from "@cieloazul310/styled-system/css";
+
+export default function App() {
+  return (
+    <main
+      className={css({
+        maxWidth: "breakpoint-md",
+        mx: "auto",
+      })}
+    >
+      <Button variant="outline">
+        Here we go, Digital Go!
+      </Button>
+    </main>
+  );
+}
+```
+
 ## 構成
 
 - `utils`: ユーティリティパッケージ
@@ -34,13 +97,13 @@ Next.js Example
 | ヘッダーコンテナ              | ❌               | ❌                 |
 | ランゲージセレクター          | ❌               | ❌                 |
 | メガメニュー                  | ❌               | ❌                 |
-| メニューリスト v2            | 🔨`menuList`      | 🔨 `<MenuList>`                |
+| メニューリスト v2            | 🔨 `menuList`      | 🔨 `<MenuList>`                |
 | メニューリストボックス        | ❌               | ❌                 |
 | ノティフィケーションバナー v2 | 🔨 `notificationBanner` | 🔨 `<NotificationBanner>` |
 | ページネーション              | ❌               | ❌                 |
 | プログレスインジケーター      | ❌               | ❌                 |
-| ラジオボタン v2                 | ✅ `radio-group` | ✅ `<RadioGroup>` |
-| リソースリスト                | ❌               | ❌                 |
+| ラジオボタン v2              | ✅ `radio-group` | ✅ `<RadioGroup>` |
+| リソースリスト v2             | ✅ `resourceList` | ✅ `<ResourceList>` |
 | スクロールトップボタン        | ❌               | ❌                 |
 | セレクトボックス v2           | ✅ `select`      | ✅ `<Select>`      |
 | テーブル v2                  | ✅ `table`      | ✅ `<Table>`      |

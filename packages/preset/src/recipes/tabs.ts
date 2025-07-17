@@ -1,5 +1,5 @@
 import { defineSlotRecipe } from "@pandacss/dev";
-import { anatomy as tabsAnatomy } from "@ark-ui/anatomy/tabs";
+import { anatomy as tabsAnatomy } from "@zag-js/tabs";
 
 export default defineSlotRecipe({
   className: "tabs",

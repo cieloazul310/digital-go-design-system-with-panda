@@ -3,7 +3,7 @@
  * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Accordion/Accordion.tsx
  */
 import { defineSlotRecipe } from "@pandacss/dev";
-import { anatomy as accordionAnatomy } from "@ark-ui/anatomy/accordion";
+import { anatomy as accordionAnatomy } from "@zag-js/accordion";
 
 export default defineSlotRecipe({
   className: "accordion",

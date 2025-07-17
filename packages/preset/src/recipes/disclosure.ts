@@ -3,10 +3,11 @@
  * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Disclosure/Disclosure.tsx
  */
 import { defineSlotRecipe } from "@pandacss/dev";
+import { disclosureAnatomy } from "../anatomy";
 
 export default defineSlotRecipe({
   className: "disclosure",
-  slots: ["root", "summary", "icon", "content"],
+  slots: disclosureAnatomy.keys(),
   base: {
     root: {
       /**
