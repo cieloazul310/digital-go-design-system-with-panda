@@ -4,7 +4,7 @@ import { fn } from "storybook/test";
 import { Portal } from "@ark-ui/react/portal";
 import { Menu } from "@cieloazul310/digital-go-pandacss";
 import { Button } from "@cieloazul310/digital-go-pandacss/button";
-import { menu } from "@import-map-package/styled-system/recipes";
+import { menu } from "@digital-go-pandacss/styled-system/recipes";
 
 const meta = {
   title: "Components/Menu",

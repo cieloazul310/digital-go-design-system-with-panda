@@ -5,7 +5,7 @@ import {
   CloseIcon,
   HamburgerIcon,
 } from "@cieloazul310/digital-go-pandacss/hamburger-menu-button";
-import { css } from "@import-map-package/styled-system/css";
+import { css } from "@digital-go-pandacss/styled-system/css";
 
 const meta = {
   title: "Components/ドロワー",

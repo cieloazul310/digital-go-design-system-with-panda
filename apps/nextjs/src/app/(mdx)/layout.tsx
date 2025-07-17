@@ -1,5 +1,5 @@
 import type { PropsWithChildren } from "react";
-import { css } from "@import-map-package/styled-system/css";
+import { css } from "@digital-go-pandacss/styled-system/css";
 import { Link } from "@/components/link";
 
 export default function Layout({ children }: PropsWithChildren) {

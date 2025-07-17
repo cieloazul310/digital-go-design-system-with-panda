@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { Flex } from "@import-map-package/styled-system/jsx";
+import { Flex } from "@digital-go-pandacss/styled-system/jsx";
 import { Divider } from "@cieloazul310/digital-go-pandacss/divider";
 
 const meta = {

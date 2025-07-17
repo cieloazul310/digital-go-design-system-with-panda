@@ -7,11 +7,11 @@ import { Accordion } from "@ark-ui/react/accordion";
 import {
   type AccordionVariantProps,
   accordion,
-} from "@import-map-package/styled-system/recipes";
+} from "@digital-go-pandacss/styled-system/recipes";
 import type {
   ComponentProps,
   HTMLStyledProps,
-} from "@import-map-package/styled-system/types";
+} from "@digital-go-pandacss/styled-system/types";
 import { createStyleContext } from "../utils/create-style-context";
 
 const { withProvider, withContext } = createStyleContext(accordion);

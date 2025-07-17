@@ -1,4 +1,4 @@
-import { css } from "@import-map-package/styled-system/css";
+import { css } from "@digital-go-pandacss/styled-system/css";
 import * as Drawer from "@cieloazul310/digital-go-pandacss/drawer";
 import {
   HamburgerMenuButton,

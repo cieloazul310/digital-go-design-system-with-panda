@@ -1,6 +1,6 @@
 import type { StoryObj, Meta } from "@storybook/nextjs-vite";
-import { css } from "@import-map-package/styled-system/css";
-import { menuItem } from "@import-map-package/styled-system/recipes";
+import { css } from "@digital-go-pandacss/styled-system/css";
+import { menuItem } from "@digital-go-pandacss/styled-system/recipes";
 
 const meta = {
   title: "プレイグラウンド",

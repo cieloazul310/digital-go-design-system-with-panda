@@ -1,6 +1,6 @@
 {
-  "name": "@import-map-package/styled-system",
-  "version": "0.0.1",
+  "name": "@digital-go-pandacss/styled-system",
+  "version": "0.0.0",
   "type": "module",
   "exports": {
     "./css": {

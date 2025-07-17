@@ -8,8 +8,8 @@ import { ark } from "@ark-ui/react/factory";
 import {
   type TableVariantProps,
   table,
-} from "@import-map-package/styled-system/recipes";
-import type { HTMLStyledProps } from "@import-map-package/styled-system/types";
+} from "@digital-go-pandacss/styled-system/recipes";
+import type { HTMLStyledProps } from "@digital-go-pandacss/styled-system/types";
 import { createStyleContext } from "../utils/create-style-context";
 
 const { withProvider, withContext } = createStyleContext(table);

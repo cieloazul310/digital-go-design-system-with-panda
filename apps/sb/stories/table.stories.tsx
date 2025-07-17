@@ -4,7 +4,7 @@
  */
 import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { styled } from "@import-map-package/styled-system/jsx";
+import { styled } from "@digital-go-pandacss/styled-system/jsx";
 import * as Table from "@cieloazul310/digital-go-pandacss/table";
 import * as Checkbox from "@cieloazul310/digital-go-pandacss/checkbox";
 

@@ -1,10 +1,10 @@
 import type { PropsWithChildren } from "react";
 import { ark } from "@ark-ui/react/factory";
-import { styled } from "@import-map-package/styled-system/jsx";
+import { styled } from "@digital-go-pandacss/styled-system/jsx";
 import {
   hamburgerMenuButton,
   type HamburgerMenuButtonVariantProps,
-} from "@import-map-package/styled-system/recipes";
+} from "@digital-go-pandacss/styled-system/recipes";
 
 export interface HamburgerMenuButtonProps
   extends HamburgerMenuButtonVariantProps,
