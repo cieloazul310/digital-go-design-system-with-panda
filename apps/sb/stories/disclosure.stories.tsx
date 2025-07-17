@@ -4,7 +4,7 @@
  */
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import * as Disclosure from "@cieloazul310/digital-go-pandacss/disclosure";
-import { styled, Container } from "@digital-go-pandacss/styled-system/jsx";
+import { styled, Container } from "@cieloazul310/styled-system/jsx";
 
 const meta = {
   title: "Components/ディスクロージャー",

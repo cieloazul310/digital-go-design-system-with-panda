@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { fn } from "storybook/test";
 import * as InputText from "@cieloazul310/digital-go-pandacss/input-text";
-import { inputText } from "@digital-go-pandacss/styled-system/recipes";
+import { inputText } from "@cieloazul310/styled-system/recipes";
 
 const meta = {
   title: "Components/インプットテキスト",

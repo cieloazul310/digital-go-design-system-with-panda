@@ -4,11 +4,11 @@ import { Listbox, type CollectionItem } from "@ark-ui/react/listbox";
 import {
   menuList,
   type MenuListVariantProps,
-} from "@digital-go-pandacss/styled-system/recipes";
+} from "@cieloazul310/styled-system/recipes";
 import type {
   ComponentProps,
   HTMLStyledProps,
-} from "@digital-go-pandacss/styled-system/types";
+} from "@cieloazul310/styled-system/types";
 import { createStyleContext } from "../utils/create-style-context";
 
 const { withProvider, withContext } = createStyleContext(menuList);

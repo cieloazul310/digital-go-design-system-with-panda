@@ -5,8 +5,8 @@
 import type { ComponentProps } from "react";
 import type { Assign } from "@ark-ui/react";
 import { ark } from "@ark-ui/react/factory";
-import type { NotificationBannerVariantProps } from "@digital-go-pandacss/styled-system/recipes";
-import type { HTMLStyledProps } from "@digital-go-pandacss/styled-system/types";
+import type { NotificationBannerVariantProps } from "@cieloazul310/styled-system/recipes";
+import type { HTMLStyledProps } from "@cieloazul310/styled-system/types";
 
 type IconProps = ComponentProps<"svg">;
 

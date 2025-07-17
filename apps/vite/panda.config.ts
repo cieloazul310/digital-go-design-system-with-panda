@@ -26,5 +26,5 @@ export default defineConfig({
 
   // The output directory for your css system
   outdir: "styled-system",
-  importMap: "@digital-go-pandacss/styled-system",
+  importMap: "@cieloazul310/styled-system",
 });

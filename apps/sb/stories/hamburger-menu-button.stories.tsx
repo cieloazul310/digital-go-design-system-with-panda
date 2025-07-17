@@ -11,7 +11,7 @@ import {
   HamburgerIcon,
   HamburgerWithLabelIcon,
 } from "@cieloazul310/digital-go-pandacss/hamburger-menu-button";
-import { css } from "@digital-go-pandacss/styled-system/css";
+import { css } from "@cieloazul310/styled-system/css";
 
 const meta = {
   id: "Component/DADS v2/HamburgerMenuButton",

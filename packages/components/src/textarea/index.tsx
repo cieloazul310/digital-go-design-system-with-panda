@@ -1,9 +1,9 @@
 import { ark } from "@ark-ui/react/factory";
-import { styled } from "@digital-go-pandacss/styled-system/jsx";
+import { styled } from "@cieloazul310/styled-system/jsx";
 import {
   textarea,
   type TextareaVariantProps,
-} from "@digital-go-pandacss/styled-system/recipes";
+} from "@cieloazul310/styled-system/recipes";
 
 export type TextareaProps = TextareaVariantProps;
 

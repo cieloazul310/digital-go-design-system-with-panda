@@ -1,4 +1,4 @@
-import { css } from "@digital-go-pandacss/styled-system/css";
+import { css } from "@cieloazul310/styled-system/css";
 import { Link } from "../link";
 
 export default function Footer() {
