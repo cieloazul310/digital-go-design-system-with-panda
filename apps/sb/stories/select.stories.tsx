@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { fn } from "storybook/test";
 import { Portal, createListCollection } from "@ark-ui/react";
 import * as Select from "@cieloazul310/digital-go-pandacss/select";
-import { select } from "@digital-go-pandacss/styled-system/recipes";
+import { select } from "@cieloazul310/styled-system/recipes";
 
 const meta = {
   title: "Components/セレクトボックス",

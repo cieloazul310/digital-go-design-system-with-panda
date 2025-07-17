@@ -1,7 +1,7 @@
 import { createListCollection } from "@ark-ui/react/listbox";
-import { css } from "@digital-go-pandacss/styled-system/css";
-import { menuItem } from "@digital-go-pandacss/styled-system/recipes";
-import { styled, Stack } from "@digital-go-pandacss/styled-system/jsx";
+import { css } from "@cieloazul310/styled-system/css";
+import { menuItem } from "@cieloazul310/styled-system/recipes";
+import { styled, Stack } from "@cieloazul310/styled-system/jsx";
 import * as ResourceList from "@cieloazul310/digital-go-pandacss/resource-list";
 
 import { Heading2, Paragraph } from "./components/article";

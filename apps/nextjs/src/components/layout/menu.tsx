@@ -2,8 +2,8 @@
 
 // import NextLink from "next/link";
 import { usePathname } from "next/navigation";
-import { css } from "@digital-go-pandacss/styled-system/css";
-import { menuItem } from "@digital-go-pandacss/styled-system/recipes";
+import { css } from "@cieloazul310/styled-system/css";
+import { menuItem } from "@cieloazul310/styled-system/recipes";
 
 export default function Menu() {
   const collection = {

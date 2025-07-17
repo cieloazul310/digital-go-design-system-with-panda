@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { css } from "@digital-go-pandacss/styled-system/css";
-import { Container } from "@digital-go-pandacss/styled-system/jsx";
+import { css } from "@cieloazul310/styled-system/css";
+import { Container } from "@cieloazul310/styled-system/jsx";
 import { headingTextStyles, paragraphTextStyles } from "./typography";
 import { PropsWithChildren } from "react";
 

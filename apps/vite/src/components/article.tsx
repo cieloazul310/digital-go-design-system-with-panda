@@ -1,9 +1,9 @@
-import { styled } from "@digital-go-pandacss/styled-system/jsx";
+import { styled } from "@cieloazul310/styled-system/jsx";
 import type {
   ComponentProps,
   JsxHTMLProps,
   JsxStyleProps,
-} from "@digital-go-pandacss/styled-system/types";
+} from "@cieloazul310/styled-system/types";
 
 export const Paragraph = (
   props: JsxHTMLProps<ComponentProps<"p">, JsxStyleProps>,

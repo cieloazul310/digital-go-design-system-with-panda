@@ -8,11 +8,11 @@ import { ark } from "@ark-ui/react/factory";
 import {
   notificationBanner,
   type NotificationBannerVariantProps,
-} from "@digital-go-pandacss/styled-system/recipes";
+} from "@cieloazul310/styled-system/recipes";
 import type {
   ComponentProps,
   HTMLStyledProps,
-} from "@digital-go-pandacss/styled-system/types";
+} from "@cieloazul310/styled-system/types";
 import { createStyleContext } from "../utils/create-style-context";
 // import { NotificationBannerIcon } from "./icon";
 

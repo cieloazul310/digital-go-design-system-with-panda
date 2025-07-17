@@ -8,11 +8,11 @@ import { Checkbox } from "@ark-ui/react/checkbox";
 import {
   type CheckboxVariantProps,
   checkbox,
-} from "@digital-go-pandacss/styled-system/recipes";
+} from "@cieloazul310/styled-system/recipes";
 import type {
   ComponentProps,
   HTMLStyledProps,
-} from "@digital-go-pandacss/styled-system/types";
+} from "@cieloazul310/styled-system/types";
 import { createStyleContext } from "../utils/create-style-context";
 
 const { withProvider, withContext } = createStyleContext(checkbox);
