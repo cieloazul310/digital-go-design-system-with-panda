@@ -8,7 +8,7 @@
     "@cieloazul310/digital-go-react-components": "0.0.0",
     "@cieloazul310/digital-go-pandacss": "0.0.0",
     "@repo/eslint-config": "0.0.0",
-    "@digital-go-pandacss/styled-system": "0.0.0",
+    "@cieloazul310/styled-system": "0.0.0",
     "@cieloazul310/digital-go-pandacss-preset": "0.0.0",
     "@cieloazul310/digital-go-pandacss-plugin": "0.0.0",
     "@repo/typescript-config": "0.0.0",
