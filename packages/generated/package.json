@@ -17,7 +17,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "files": [
-    "dist/**/*.d.ts"
+    "dist"
   ],
   "type": "module",
   "exports": {
@@ -49,6 +49,6 @@
     "./types": {
       "types": "./dist/types/index.d.ts"
     },
-    "./styles.css": "./styles.css"
+    "./styles.css": "./dist/styles.css"
   }
 }
