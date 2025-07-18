@@ -16,7 +16,7 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "files": [],
+  "files": ["dist"],
   "type": "module",
   "exports": {
     "./css": {
