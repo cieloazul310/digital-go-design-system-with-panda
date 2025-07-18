@@ -4,7 +4,7 @@ import { UnorderedList } from "@cieloazul310/digital-go-pandacss/unordered-list"
 import { List } from "@cieloazul310/digital-go-pandacss/list";
 import { Divider } from "@cieloazul310/digital-go-pandacss/divider";
 import * as Table from "@cieloazul310/digital-go-pandacss/table";
-import { Paragraph, Heading2, Heading3 } from "@/components/article";
+import { Paragraph, Heading2, Heading3, Pre, Code } from "@/components/article";
 import { Link } from "@/components/link";
 
 export function useMDXComponents(
@@ -25,6 +25,8 @@ export function useMDXComponents(
     tr: (props) => <Table.Row {...props} />,
     th: (props) => <Table.Header {...props} />,
     td: (props) => <Table.Cell {...props} />,
+    pre: Pre,
+    code: Code,
     ...components,
   };
 }

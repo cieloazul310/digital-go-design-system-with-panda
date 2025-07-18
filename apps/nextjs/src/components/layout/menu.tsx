@@ -1,11 +1,11 @@
-"use client";
-
-// import NextLink from "next/link";
-import { usePathname } from "next/navigation";
 import { css } from "@cieloazul310/styled-system/css";
 import { menuItem } from "@cieloazul310/styled-system/recipes";
 
-export default function Menu() {
+type MenuProps = {
+  slug?: string[];
+};
+
+export default function Menu({ slug = [] }: MenuProps) {
   const collection = {
     items: [
       { value: "トップページ", href: "/" },
@@ -28,15 +28,14 @@ export default function Menu() {
       { value: "エレベーション", href: "/foundations/style-guides" },
     ],
   };
-  const pathname = usePathname();
 
   return (
-    <nav className={css({ p: 1 })}>
+    <nav className={css({ p: 1, maxWidth: "full" })}>
       {collection.items.map(({ value, href }) => (
         <li
           className={menuItem({ variant: "boxed" })}
           key={value}
-          data-selected={pathname === href || undefined}
+          data-selected={`/${slug.join("/")}` === href || undefined}
         >
           {value}
         </li>

@@ -3,6 +3,7 @@
   "version": "0.0.1-prerelease.4",
   "private": true,
   "scripts": {
+    "panda": "panda",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -11,6 +12,7 @@
   "dependencies": {
     "@ark-ui/react": "^5.13.0",
     "@cieloazul310/digital-go-pandacss": "^0.0.1-prerelease.4",
+    "@cieloazul310/regista": "^1.2.0",
     "@cieloazul310/styled-system": "^0.0.1-prerelease.4",
     "@shikijs/rehype": "^3.7.0",
     "lucide-react": "^0.513.0",

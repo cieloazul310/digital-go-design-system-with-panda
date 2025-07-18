@@ -11,7 +11,7 @@ export default function Footer() {
         gridArea: "footer",
         mb: { base: 6, md: 10 },
         mt: { base: 16, md: 20 },
-        maxWidth: "breakpoint-xl",
+        maxWidth: "common-main-width",
       })}
     >
       <div
