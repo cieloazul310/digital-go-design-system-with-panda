@@ -15,6 +15,7 @@
     "@cieloazul310/digital-go-pandacss-utils": "0.0.0"
   },
   "changesets": [
-    "brave-bats-join"
+    "brave-bats-join",
+    "shy-roses-divide"
   ]
 }
