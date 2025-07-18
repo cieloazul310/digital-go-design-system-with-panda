@@ -1,5 +1,11 @@
 # @cieloazul310/digital-go-pandacss-utils
 
+## 0.0.1-prerelease.3
+
+### Patch Changes
+
+- fdab7d7: tiny fix
+
 ## 0.0.1-prerelease.2
 
 ### Patch Changes

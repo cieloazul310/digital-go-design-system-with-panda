@@ -1,6 +1,6 @@
 {
   "name": "@cieloazul310/digital-go-pandacss",
-  "version": "0.0.1-prerelease.2",
+  "version": "0.0.1-prerelease.3",
   "license": "MIT",
   "homepage": "https://github.com/cieloazul310/digital-go-design-system-with-panda",
   "author": {
@@ -273,9 +273,9 @@
     "format": "prettier --parser typescript --write ."
   },
   "dependencies": {
-    "@cieloazul310/digital-go-pandacss-preset": "^0.0.1-prerelease.2",
-    "@cieloazul310/digital-go-pandacss-utils": "^0.0.1-prerelease.2",
-    "@cieloazul310/digital-go-react-components": "^0.0.1-prerelease.2"
+    "@cieloazul310/digital-go-pandacss-preset": "^0.0.1-prerelease.3",
+    "@cieloazul310/digital-go-pandacss-utils": "^0.0.1-prerelease.3",
+    "@cieloazul310/digital-go-react-components": "^0.0.1-prerelease.3"
   },
   "devDependencies": {
     "@ark-ui/react": "^5.13.0",
@@ -292,7 +292,7 @@
   },
   "peerDependencies": {
     "@ark-ui/react": "^5.0.0",
-    "@cieloazul310/styled-system": "^0.0.1-prerelease.2",
+    "@cieloazul310/styled-system": "^0.0.1-prerelease.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
