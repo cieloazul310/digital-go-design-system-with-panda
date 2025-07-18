@@ -1,5 +1,13 @@
 # @cieloazul310/digital-go-pandacss-plugin
 
+## 0.0.1-prerelease.4
+
+### Patch Changes
+
+- ce5e788: tiny fix
+- Updated dependencies [ce5e788]
+  - @cieloazul310/digital-go-pandacss-utils@0.0.1-prerelease.4
+
 ## 0.0.1-prerelease.3
 
 ### Patch Changes

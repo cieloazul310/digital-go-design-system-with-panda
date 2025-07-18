@@ -1,5 +1,11 @@
 # @cieloazul310/styled-system
 
+## 0.0.1-prerelease.4
+
+### Patch Changes
+
+- ce5e788: tiny fix
+
 ## 0.0.1-prerelease.3
 
 ### Patch Changes
