@@ -1,5 +1,14 @@
 # @cieloazul310/digital-go-pandacss-preset
 
+## 0.0.1-prerelease.3
+
+### Patch Changes
+
+- fdab7d7: tiny fix
+- Updated dependencies [fdab7d7]
+  - @cieloazul310/digital-go-pandacss-plugin@0.0.1-prerelease.3
+  - @cieloazul310/digital-go-pandacss-utils@0.0.1-prerelease.3
+
 ## 0.0.1-prerelease.2
 
 ### Patch Changes
