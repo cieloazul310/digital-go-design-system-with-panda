@@ -1,6 +1,6 @@
 {
   "name": "@cieloazul310/styled-system",
-  "version": "0.0.1-prerelease.0",
+  "version": "0.0.1-prerelease.4",
   "license": "MIT",
   "homepage": "https://github.com/cieloazul310/digital-go-design-system-with-panda",
   "author": {
@@ -16,6 +16,9 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
+  "files": [
+    "dist"
+  ],
   "type": "module",
   "exports": {
     "./css": {
@@ -46,6 +49,6 @@
     "./types": {
       "types": "./dist/types/index.d.ts"
     },
-    "./styles.css": "./styles.css"
+    "./styles.css": "./dist/styles.css"
   }
 }
