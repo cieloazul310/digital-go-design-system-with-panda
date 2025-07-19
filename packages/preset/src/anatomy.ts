@@ -57,3 +57,16 @@ export const resourceListAnatomy = createAnatomy("resource-list").parts(
   "supportText",
   "subLabel",
 );
+
+export const tableAnatomy = createAnatomy("table").parts(
+  "root",
+  "head",
+  "body",
+  "foot",
+  "row",
+  "header",
+  "cell",
+  "colgroup",
+  "col",
+  "caption",
+);

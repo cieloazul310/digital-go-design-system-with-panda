@@ -27,7 +27,7 @@ const meta = {
 } satisfies Meta<typeof InputText.Root>;
 
 export default meta;
-type Story = StoryObj;
+type Story = StoryObj<typeof meta>;
 
 export const Input: Story = {
   render: ({ ...props }) => {

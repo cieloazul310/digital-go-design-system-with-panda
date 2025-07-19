@@ -28,7 +28,7 @@ export default function BaseLayout({
           `,
           gridTemplateColumns: {
             base: "0 1fr",
-            md: "{sizes.sidebar-width} minmax(0, 1fr)",
+            lg: "{sizes.sidebar-width} minmax(0, 1fr)",
           },
           gridTemplateRows: "1fr auto",
           minHeight: "calc(100vh - {sizes.mobile-header-height})",
@@ -37,12 +37,12 @@ export default function BaseLayout({
         <header
           className={css({
             gridArea: "side-nav",
-            display: { base: "none", md: "flex" },
+            display: { base: "none", lg: "flex" },
             flexDirection: "column",
             pt: 10,
             position: "fixed",
             top: 0,
-            borderRightWidth: { base: 0, md: "1px" },
+            borderRightWidth: { base: 0, lg: "1px" },
             borderRightColor: "solid-gray.420",
             overflowY: "auto",
             overscrollBehaviorY: "contain",

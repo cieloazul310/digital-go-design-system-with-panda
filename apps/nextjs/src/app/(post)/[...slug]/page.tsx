@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { css } from "@cieloazul310/styled-system/css";
 import { Stack } from "@cieloazul310/styled-system/jsx";
 import { useMDXComponents } from "@/mdx-components";
+import BaseLayout from "@/components/layout/base";
 import { Link } from "@/components/link";
 import { post } from "@/content";
 
@@ -39,7 +40,7 @@ async function Page({ params }: { params: Promise<{ slug: string[] }> }) {
   const { older, newer } = context;
 
   return (
-    <>
+    <BaseLayout slug={slug}>
       <article>
         <hgroup
           className={css({
@@ -120,7 +121,7 @@ async function Page({ params }: { params: Promise<{ slug: string[] }> }) {
           )}
         </div>
       </nav>
-    </>
+    </BaseLayout>
   );
 }
 

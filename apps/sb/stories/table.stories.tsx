@@ -7,6 +7,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { styled } from "@cieloazul310/styled-system/jsx";
 import * as Table from "@cieloazul310/digital-go-pandacss/table";
 import * as Checkbox from "@cieloazul310/digital-go-pandacss/checkbox";
+import { css } from "@cieloazul310/styled-system/css";
 
 const meta = {
   title: "Components/テーブル",
@@ -264,4 +265,49 @@ export const IndentedRows: Story = {
       </>
     ),
   },
+};
+
+export const Overflow: Story = {
+  render: ({ ...props }) => (
+    <div className={css({ overflowX: "auto" })}>
+      <Table.Root {...props}>
+        <Table.Caption>テーブル</Table.Caption>
+        <colgroup>
+          <styled.col
+            borderRightWidth="1px"
+            borderColor="black"
+            bg="solid-gray.50"
+            minWidth={24}
+          />
+          <styled.col minWidth={24} />
+          <styled.col minWidth={24} />
+          <styled.col minWidth={48} />
+          <styled.col minWidth={48} />
+          <styled.col minWidth={48} />
+        </colgroup>
+        <Table.Head>
+          <Table.Row>
+            <Table.Header scope="col">ラベル</Table.Header>
+            <Table.Header scope="col">ラベル</Table.Header>
+            <Table.Header scope="col">ラベル</Table.Header>
+            <Table.Header scope="col">ラベル</Table.Header>
+            <Table.Header scope="col">ラベル</Table.Header>
+            <Table.Header scope="col">ラベル</Table.Header>
+          </Table.Row>
+        </Table.Head>
+        <Table.Body>
+          {Array.from({ length: 4 }).map((_, index) => (
+            <Table.Row key={index}>
+              <Table.Header scope="row">データ</Table.Header>
+              <Table.Cell>データ</Table.Cell>
+              <Table.Cell>データ</Table.Cell>
+              <Table.Cell>構造化されたデータや情報を表示するとき</Table.Cell>
+              <Table.Cell>データを比較するとき</Table.Cell>
+              <Table.Cell>大量のデータを一覧表示するとき</Table.Cell>
+            </Table.Row>
+          ))}
+        </Table.Body>
+      </Table.Root>
+    </div>
+  ),
 };

@@ -4,15 +4,14 @@ export const semanticTokens = defineSemanticTokens({
   sizes: {
     "common-main-width": {
       value: {
-        base: "{sizes.xl}",
-        md: "{sizes.2xl}",
-        lg: "{sizes.3xl}",
-        xl: "{sizes.4xl}",
-        "2xl": "{sizes.5xl}",
+        base: "{sizes.3xl}",
+        lg: "{sizes.4xl}",
+        xl: "{sizes.5xl}",
+        "2xl": "{sizes.6xl}",
       },
     },
     "sidebar-width": {
-      value: "{spacing.72}",
+      value: "{sizes.72}",
     },
   },
 });

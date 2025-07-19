@@ -16,6 +16,7 @@ export default defineRecipe({
     textStyle: "oln-16N-100",
     rounded: 4,
     touchAction: "manipulation",
+    gap: 1.5,
     /**
      * hover:bg-solid-gray-50 hover:underline hover:underline-offset-[calc(3/16*1rem)]
      */
