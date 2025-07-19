@@ -4,7 +4,7 @@
  * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/LanguageSelector/parts/MenuItem.tsx
  */
 import { defineSlotRecipe, type SystemStyleObject } from "@pandacss/dev";
-import { anatomy as menuAnatomy } from "@ark-ui/anatomy/menu";
+import { anatomy as menuAnatomy } from "@zag-js/menu";
 import menuItem from "./menu-item";
 
 const itemStyle = {

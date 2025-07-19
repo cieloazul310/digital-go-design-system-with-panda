@@ -8,8 +8,8 @@ import { ark } from "@ark-ui/react/factory";
 import {
   type TableVariantProps,
   table,
-} from "@import-map-package/styled-system/recipes";
-import type { HTMLStyledProps } from "@import-map-package/styled-system/types";
+} from "@cieloazul310/styled-system/recipes";
+import type { HTMLStyledProps } from "@cieloazul310/styled-system/types";
 import { createStyleContext } from "../utils/create-style-context";
 
 const { withProvider, withContext } = createStyleContext(table);

@@ -10,12 +10,12 @@ import {
   forwardRef,
   useContext,
 } from "react";
-import { cx } from "@import-map-package/styled-system/css";
+import { cx } from "@cieloazul310/styled-system/css";
 import {
   type StyledComponent,
   isCssProperty,
   styled,
-} from "@import-map-package/styled-system/jsx";
+} from "@cieloazul310/styled-system/jsx";
 
 type Props = Record<string, unknown>;
 type Recipe = {

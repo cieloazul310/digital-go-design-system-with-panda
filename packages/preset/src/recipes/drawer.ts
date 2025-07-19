@@ -3,7 +3,7 @@
  * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Drawer/Drawer.stories.tsx
  * https://github.com/cschroeter/park-ui/blob/main/packages/preset/src/theme/recipes/drawer.ts
  */
-import { anatomy as dialogAnatomy } from "@ark-ui/anatomy/dialog";
+import { anatomy as dialogAnatomy } from "@zag-js/dialog";
 import { defineSlotRecipe } from "@pandacss/dev";
 
 const anatomy = dialogAnatomy.extendWith("header", "body", "footer");

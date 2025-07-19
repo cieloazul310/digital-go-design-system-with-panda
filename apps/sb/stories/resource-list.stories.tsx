@@ -5,8 +5,8 @@ import { Link } from "@cieloazul310/digital-go-pandacss/link";
 import * as RadioGroup from "@cieloazul310/digital-go-pandacss/radio";
 import * as Checkbox from "@cieloazul310/digital-go-pandacss/checkbox";
 import { EllipsisVertical, CircleUser, Heart } from "lucide-react";
-import { link } from "@import-map-package/styled-system/recipes";
-import { css } from "@import-map-package/styled-system/css";
+import { link } from "@cieloazul310/styled-system/recipes";
+import { css } from "@cieloazul310/styled-system/css";
 
 const meta = {
   title: "Components/リソースリスト",

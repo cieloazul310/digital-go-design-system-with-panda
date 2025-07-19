@@ -1,7 +1,7 @@
 {
   "name": "digital-go-design-system-with-panda",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.0.0",
   "engines": {
     "node": ">=22",
     "npm": ">=10"
@@ -20,10 +20,13 @@
     "dev": "turbo run dev --parallel",
     "build": "turbo run build",
     "build:package": "turbo run build --filter='./packages/*'",
+    "changeset": "changeset",
+    "publish-packages": "npm run build:package && changeset version && changeset publish",
     "lint-staged": "lint-staged",
     "test": "vitest"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.29.5",
     "@types/node": "^22",
     "eslint": "^9.28.0",
     "lint-staged": "^16.1.0",

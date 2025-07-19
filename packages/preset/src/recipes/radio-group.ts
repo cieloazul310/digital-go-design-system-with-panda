@@ -3,7 +3,7 @@
  * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Radio/Radio.tsx
  */
 import { defineSlotRecipe } from "@pandacss/dev";
-import { anatomy as radioGroupAnatomy } from "@ark-ui/anatomy/radio-group";
+import { anatomy as radioGroupAnatomy } from "@zag-js/radio-group";
 import radio from "./radio";
 
 export default defineSlotRecipe({

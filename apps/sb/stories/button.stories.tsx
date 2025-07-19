@@ -5,9 +5,9 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { fn } from "storybook/test";
 import { Button } from "@cieloazul310/digital-go-pandacss/button";
 import { Link } from "@cieloazul310/digital-go-pandacss/link";
-import { cx, css } from "@import-map-package/styled-system/css";
-import { styled, Flex } from "@import-map-package/styled-system/jsx";
-import { hstack } from "@import-map-package/styled-system/patterns";
+import { cx, css } from "@cieloazul310/styled-system/css";
+import { styled, Flex } from "@cieloazul310/styled-system/jsx";
+import { hstack } from "@cieloazul310/styled-system/patterns";
 
 const headingStyle = css({ textStyle: "std-32B-150", mb: 6 });
 const buttons = hstack({ gap: 4, alignItems: "end" });

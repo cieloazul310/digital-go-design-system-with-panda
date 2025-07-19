@@ -1,6 +1,5 @@
 import type { PropsWithChildren } from "react";
 import type { Metadata } from "next";
-import BaseLayout from "@/components/layout/base";
 import { notoSansJp, notoSansMono } from "@/styles/fonts";
 import "@/styles/globals.css";
 
@@ -14,7 +13,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="ja">
       <body className={`${notoSansJp.variable} ${notoSansMono.variable}`}>
-        <BaseLayout>{children}</BaseLayout>
+        {children}
       </body>
     </html>
   );

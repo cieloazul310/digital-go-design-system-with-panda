@@ -3,7 +3,7 @@
  * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Select/Select.tsx
  */
 import { defineSlotRecipe } from "@pandacss/dev";
-import { anatomy as selectAnatomy } from "@ark-ui/anatomy/select";
+import { anatomy as selectAnatomy } from "@zag-js/select";
 import label from "./label";
 import selectBox from "./select-box";
 import menu from "./menu";

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { fn } from "storybook/test";
 import * as InputText from "@cieloazul310/digital-go-pandacss/input-text";
-import { inputText } from "@import-map-package/styled-system/recipes";
+import { inputText } from "@cieloazul310/styled-system/recipes";
 
 const meta = {
   title: "Components/インプットテキスト",
@@ -27,7 +27,7 @@ const meta = {
 } satisfies Meta<typeof InputText.Root>;
 
 export default meta;
-type Story = StoryObj;
+type Story = StoryObj<typeof meta>;
 
 export const Input: Story = {
   render: ({ ...props }) => {

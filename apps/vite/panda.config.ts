@@ -14,11 +14,17 @@ export default defineConfig({
 
   // Useful for theme customization
   theme: {
-    extend: {},
+    extend: {
+      tokens: {
+        sizes: {
+          "mobile-header-height": { value: "4.25rem" },
+        },
+      },
+    },
   },
   jsxFramework: "react",
 
   // The output directory for your css system
   outdir: "styled-system",
-  importMap: "@import-map-package/styled-system",
+  importMap: "@cieloazul310/styled-system",
 });

@@ -1,9 +1,9 @@
 import { ark } from "@ark-ui/react/factory";
-import { styled } from "@import-map-package/styled-system/jsx";
+import { styled } from "@cieloazul310/styled-system/jsx";
 import {
   input,
   type InputVariantProps,
-} from "@import-map-package/styled-system/recipes";
+} from "@cieloazul310/styled-system/recipes";
 
 export type InputProps = InputVariantProps;
 

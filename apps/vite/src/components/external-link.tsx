@@ -1,14 +1,11 @@
-import {
-  Link as LinkBase,
-  type LinkProps as LinkBaseProps,
-} from "@cieloazul310/digital-go-pandacss/link";
+import { Link, type LinkProps } from "@cieloazul310/digital-go-pandacss/link";
 import { ExternalLinkIcon } from "lucide-react";
 
-export function ExternalLink({ children, ...props }: LinkBaseProps) {
+export function ExternalLink({ children, ...props }: LinkProps) {
   return (
-    <LinkBase {...props}>
+    <Link target="_blank" rel="noreferer noopener" {...props}>
       {children}
       <ExternalLinkIcon />
-    </LinkBase>
+    </Link>
   );
 }

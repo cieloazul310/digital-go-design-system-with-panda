@@ -1,4 +1,4 @@
-import { css } from "@import-map-package/styled-system/css";
+import { css } from "@cieloazul310/styled-system/css";
 import * as Drawer from "@cieloazul310/digital-go-pandacss/drawer";
 import {
   HamburgerMenuButton,
@@ -7,7 +7,11 @@ import {
 } from "@cieloazul310/digital-go-pandacss/hamburger-menu-button";
 import Menu from "./menu";
 
-export default function MobileHeader() {
+type MobileHeaderProps = {
+  slug?: string[];
+};
+
+export default function MobileHeader({ slug }: MobileHeaderProps) {
   return (
     <header
       className={css({
@@ -80,7 +84,7 @@ export default function MobileHeader() {
                 </Drawer.CloseTrigger>
               </Drawer.Header>
               <Drawer.Body>
-                <Menu />
+                <Menu slug={slug} />
               </Drawer.Body>
             </Drawer.Content>
           </Drawer.Positioner>

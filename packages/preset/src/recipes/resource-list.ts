@@ -44,6 +44,7 @@ export default defineSlotRecipe({
       // px: 2,
     },
     content: {
+      height: "full",
       flexGrow: 1,
       display: "flex",
       flexDirection: "column",

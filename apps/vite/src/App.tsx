@@ -1,11 +1,10 @@
 import { createListCollection } from "@ark-ui/react/listbox";
-import { css } from "@import-map-package/styled-system/css";
-import { styled, Stack } from "@import-map-package/styled-system/jsx";
-import { Button } from "@cieloazul310/digital-go-pandacss/button";
-import { Divider } from "@cieloazul310/digital-go-pandacss/divider";
-import * as MenuList from "@cieloazul310/digital-go-pandacss/menu-list";
+import { css } from "@cieloazul310/styled-system/css";
+import { menuItem } from "@cieloazul310/styled-system/recipes";
+import { styled, Stack } from "@cieloazul310/styled-system/jsx";
+import * as ResourceList from "@cieloazul310/digital-go-pandacss/resource-list";
 
-import { Paragraph } from "./components/article";
+import { Heading2, Paragraph } from "./components/article";
 import { ExternalLink } from "./components/external-link";
 
 const collection = createListCollection({
@@ -16,190 +15,364 @@ const collection = createListCollection({
     { value: "ガイダンス", href: "/guidance" },
     { value: "デザインシステムとは", href: "/guidance/desgin-system" },
     { value: "使い方", href: "/guidance/how-to-use" },
-    { value: "アクセシビリティ", href: "/foundations/accessibility" },
+    { value: "アクセシビリティ", href: "/guidance/accessibility" },
+    { value: "スタイルガイド", href: "/guidance/style-guides" },
     { value: "基本デザイン", href: "/foundations/style-guides" },
-    { value: "カラー", href: "/guidance" },
-    { value: "タイポグラフィ", href: "/foundations/desgin-system" },
-    { value: "レイアウト", href: "/foundations/how-to-use" },
-    { value: "リンクテキスト", href: "/foundations/accessibility" },
-    { value: "余白", href: "/foundations/style-guides" },
-    { value: "エレベーション", href: "/foundations/style-guides" },
+    { value: "カラー", href: "/foundations/colors" },
+    { value: "タイポグラフィ", href: "/foundations/typography" },
+    { value: "レイアウト", href: "/foundations/layout" },
+    { value: "リンクテキスト", href: "/foundations/link-text" },
+    { value: "余白", href: "/foundations/spacing" },
+    { value: "エレベーション", href: "/foundations/elevation" },
   ],
   groupBy: ({ href }) => href.split("/")[1]?.toString() ?? "/",
 });
+
+const links = [
+  {
+    title: "デジタル庁デザインシステム",
+    description:
+      "デジタル庁デザインシステムの使い方、基本デザインやコンポーネントの仕様、ガイドライン、作例、アクセシビリティのドキュメントなどが含まれます。",
+    url: "https://design.digital.go.jp/",
+  },
+  {
+    title: "Ark UI",
+    description: "Chakra UIが提供するヘッドレスUIライブラリ。",
+    url: "https://ark-ui.com/",
+  },
+  {
+    title: "Panda CSS",
+    description: "Chakra UIが提供するゼロランタイムCSS-in-JSライブラリ。",
+    url: "https://panda-css.com/",
+  },
+  {
+    title: "Park UI",
+    description:
+      "Ark UIをPanda CSSでスタイリングしたReactコンポーネントライブラリ。",
+    url: "https://park-ui.com/",
+  },
+];
 
 function App() {
   return (
     <div
       className={css({
-        display: "grid",
-        gridTemplateAreas: `
-            "side-nav main"
-            "side-nav footer"
-          `,
-        gridTemplateColumns: {
-          base: "0 1fr",
-          md: "18rem 1fr",
-        },
-        gridTemplateRows: "1fr auto",
+        /**
+         * min-h-screen pt-[var(--mobile-header-height)] lg:pt-0
+         */
+        minHeight: "screen",
+        pt: { base: "{sizes.mobile-header-height}", lg: 0 },
       })}
     >
       <header
         className={css({
-          gridArea: "side-nav",
-          display: { base: "none", md: "flex" },
-          flexDirection: "column",
-          pt: 10,
-          borderRightWidth: { base: 0, md: "1px" },
-          borderRightColor: "solid-gray.420",
-          minHeight: "100vh",
-          overflowY: "auto",
-          gap: 10,
-          height: "full",
+          /**
+           * fixed top-0 z-10 w-full bg-white/85 lg:hidden
+           */
+          position: "fixed",
+          top: 0,
+          zIndex: 10,
+          width: "full",
+          height: "mobile-header-height",
+          bg: "white/85",
+          display: { base: "block", lg: "none" },
         })}
       >
-        <a
-          href="/"
-          className={css({
-            alignSelf: "center",
-            width: 48,
-            color: "inherit",
-            textStyle: "std-20B-150",
-            my: 2,
-          })}
-        >
-          デジタル庁デザインシステムβ版 for Panda CSS
-        </a>
-        <MenuList.Root variant="boxed" collection={collection}>
-          <MenuList.Label>お品書き</MenuList.Label>
-          <MenuList.Content>
-            {collection.group().map(([group, items]) => (
-              <MenuList.ItemGroup key={group}>
-                <MenuList.ItemGroupLabel>{group}</MenuList.ItemGroupLabel>
-                <styled.ul pl={8}>
-                  {items.map((item) => (
-                    <MenuList.Item key={item.href} item={item}>
-                      <MenuList.ItemText>{item.value}</MenuList.ItemText>
-                    </MenuList.Item>
-                  ))}
-                </styled.ul>
-              </MenuList.ItemGroup>
-            ))}
-          </MenuList.Content>
-        </MenuList.Root>
-      </header>
-      <main className={css({ gridArea: "main", pt: 10 })}>
         <div
           className={css({
-            maxWidth: "breakpoint-xl",
+            /**
+             * mx-auto flex w-full max-w-screen-1440 items-center justify-between
+             * px-4 py-2.5 md:px-8
+             */
             mx: "auto",
+            display: "flex",
+            width: "full",
+            maxWidth: "90em",
+            alignItems: "center",
+            justifyContent: "space-between",
             px: { base: 4, md: 8 },
-            textStyle: { base: "std-18N-160", md: "std-20N-150" },
+            py: 2.5,
           })}
         >
-          {/**
-           * text-std-28B-150 md:text-std-45B-140
-           * mt-4 mb-8 md:mt-6 md:mb-12 lg:mt-0 lg:mb-16
-           * -ml-0.5
-           */}
-          <styled.hgroup
-            mt={{ base: 4, md: 6, lg: 0 }}
-            mb={{ base: 8, md: 12, lg: 16 }}
+          <h1
+            className={css({
+              /**
+               * w-40 lg:w-48 rounded-4 text-std-16B-170 lg:text-std-20B-150 leading-150
+               * lg:mr-2 block
+               */
+              display: "block",
+              width: 48,
+              textStyle: { base: "std-16B-170", lg: "std-20B-150" },
+              rounded: 4,
+              mr: { base: 0, lg: 2 },
+              lineHeight: 150,
+            })}
           >
-            <h1
+            デジタル庁デザインシステムβ版 for Panda CSS
+          </h1>
+        </div>
+      </header>
+      <div
+        className={css({
+          display: "grid",
+          gridTemplateAreas: `
+            "side-nav main"
+            "side-nav footer"
+          `,
+          gridTemplateColumns: {
+            base: "0 1fr",
+            md: "18rem 1fr",
+          },
+          gridTemplateRows: "1fr auto",
+          minHeight: "calc(100vh - {sizes.mobile-header-height})",
+        })}
+      >
+        <header
+          className={css({
+            gridArea: "side-nav",
+            display: { base: "none", md: "flex" },
+            flexDirection: "column",
+            pt: 10,
+            position: "fixed",
+            top: 0,
+            borderRightWidth: { base: 0, md: "1px" },
+            borderRightColor: "solid-gray.420",
+            overflowY: "auto",
+            overscrollBehaviorY: "contain",
+            gap: 10,
+            height: "full",
+          })}
+        >
+          <a
+            href="/"
+            className={css({
+              alignSelf: "center",
+              width: 48,
+              color: "inherit",
+              textStyle: "std-20B-150",
+              my: 2,
+            })}
+          >
+            デジタル庁デザインシステムβ版 for Panda CSS
+          </a>
+          <nav className={css({ p: 1 })}>
+            {collection.items.map(({ value }) => (
+              <li className={menuItem({ variant: "boxed" })} key={value}>
+                {value}
+              </li>
+            ))}
+          </nav>
+        </header>
+        <main className={css({ gridArea: "main", pt: { base: 0, lg: 10 } })}>
+          <div
+            className={css({
+              maxWidth: "breakpoint-xl",
+              mx: "auto",
+              px: { base: 4, md: 8 },
+              textStyle: { base: "std-18N-160", md: "std-20N-150" },
+              boxSizing: "content-box",
+            })}
+          >
+            {/**
+             * text-std-28B-150 md:text-std-45B-140
+             * mt-4 mb-8 md:mt-6 md:mb-12 lg:mt-0 lg:mb-16
+             * -ml-0.5
+             */}
+            <styled.hgroup
+              mt={{ base: 4, md: 6, lg: 0 }}
+              mb={{ base: 8, md: 12, lg: 16 }}
+            >
+              <h1
+                className={css({
+                  textStyle: { base: "std-28B-150", md: "std-45B-140" },
+                  ml: -0.5,
+                })}
+              >
+                ようこそデジタル庁デザインシステムへ🐼
+              </h1>
+              <span
+                className={css({
+                  textStyle: { base: "std-18N-160", md: "std-22N-150" },
+                  my: 4,
+                })}
+              >
+                <ExternalLink
+                  href="https://design.digital.go.jp/"
+                  target="_blank"
+                  rel="noopener noreferer"
+                >
+                  デジタル庁デザインシステムウェブサイト
+                </ExternalLink>
+                のコンテンツを加工して作成
+              </span>
+            </styled.hgroup>
+            <section>
+              <Paragraph>
+                デジタル庁デザインシステムは、スタイリングの考え方を提供するデザイン言語、情報の視覚表現とインタラクションを具現化するUIコンポーネント、ユーザビリティとアクセシビリティを踏まえた設計や実装のためのガイドラインから構成されるデザインアセットです。
+              </Paragraph>
+              <Paragraph>
+                デジタル庁のミッションである「誰一人取り残されない、人に優しいデジタル化を。」の実現に寄与することを標榜し、官公庁や地方自治体などの行政機関や公共性の高い組織等のウェブサイト/ウェブアプリケーション/オンラインサービスまたはシステム等で利用することを念頭に置いて構築されています。
+              </Paragraph>
+              <Stack
+                gap={2}
+                my={4}
+                direction={{ base: "column", md: "row" }}
+                alignItems={{ base: "start", md: "center" }}
+              >
+                <ExternalLink
+                  href="https://github.com/cieloazul310/digital-go-design-system-with-panda"
+                  target="_blank"
+                  rel="noopener noreferer"
+                >
+                  GitHub リポジトリ
+                </ExternalLink>
+                <ExternalLink
+                  href="https://cieloazul310.github.io/digital-go-design-system-with-panda"
+                  target="_blank"
+                  rel="noopener noreferer"
+                >
+                  Storybook
+                </ExternalLink>
+              </Stack>
+              <Paragraph>
+                作成:{" "}
+                <ExternalLink
+                  href="https://cieloazul310.github.io"
+                  target="_blank"
+                  rel="noopener noreferer"
+                >
+                  水戸地図
+                </ExternalLink>
+              </Paragraph>
+            </section>
+            <section>
+              <Heading2>参照</Heading2>
+              <ul
+                className={css({
+                  /**
+                   * mt-6 grid grid-cols-1 gap-8 xl:grid-cols-2
+                   */
+                  mt: 6,
+                  display: "grid",
+                  gridTemplateColumns: {
+                    base: "repeat(1, minmax(0, 1fr))",
+                    xl: "repeat(2, minmax(0, 1fr))",
+                  },
+                  gap: 8,
+                })}
+              >
+                {links.map(({ title, description, url }) => (
+                  <ResourceList.Root borderWidth="1px" asLink asChild key={url}>
+                    <li>
+                      <ResourceList.ContentsContainer>
+                        <ResourceList.Content py={4}>
+                          <ResourceList.Title asChild mb={4}>
+                            <ExternalLink href={url}>{title}</ExternalLink>
+                          </ResourceList.Title>
+                          <ResourceList.SuportText>
+                            {description}
+                          </ResourceList.SuportText>
+                        </ResourceList.Content>
+                      </ResourceList.ContentsContainer>
+                    </li>
+                  </ResourceList.Root>
+                ))}
+              </ul>
+            </section>
+          </div>
+        </main>
+        <footer
+          className={css({
+            /**
+             * [grid-area:footer] [&>div]:max-w-[--home-main-width] mb-6 mt-16 md:mb-10 md:mt-20
+             */
+            gridArea: "footer",
+            mb: { base: 6, md: 10 },
+            mt: { base: 16, md: 20 },
+            maxWidth: "breakpoint-xl",
+          })}
+        >
+          <div
+            className={css({
+              /**
+               * mx-auto box-content md:px-[--content-padding]
+               */
+              mx: "auto",
+              px: { base: 4, md: 8 },
+              boxSizing: "content-box",
+            })}
+          >
+            <div
               className={css({
-                textStyle: { base: "std-28B-150", md: "std-45B-140" },
-                ml: -0.5,
+                /**
+                 * flex flex-col gap-8 md:flex-row md:items-center md:gap-20 lg:gap-16 xl:gap-24
+                 */
+                display: "flex",
+                flexDirection: { base: "column", md: "row" },
+                alignItems: { base: "initial", md: "center" },
+                gap: { base: 8, md: 20, lg: 16, xl: 24 },
               })}
             >
-              ようこそデジタル庁デザインシステムへ🐼
-            </h1>
-            <span
-              className={css({
-                textStyle: { base: "std-18N-160", md: "std-22N-150" },
-                my: 4,
-              })}
-            >
-              <ExternalLink
-                href="https://design.digital.go.jp/"
-                target="_blank"
-                rel="noopener noreferer"
-              >
-                デジタル庁デザインシステムウェブサイト
-              </ExternalLink>
-              のコンテンツを加工して作成
-            </span>
-          </styled.hgroup>
-          <section>
-            <Paragraph>
-              デジタル庁デザインシステムは、スタイリングの考え方を提供するデザイン言語、情報の視覚表現とインタラクションを具現化するUIコンポーネント、ユーザビリティとアクセシビリティを踏まえた設計や実装のためのガイドラインから構成されるデザインアセットです。
-            </Paragraph>
-            <Paragraph>
-              デジタル庁のミッションである「誰一人取り残されない、人に優しいデジタル化を。」の実現に寄与することを標榜し、官公庁や地方自治体などの行政機関や公共性の高い組織等のウェブサイト/ウェブアプリケーション/オンラインサービスまたはシステム等で利用することを念頭に置いて構築されています。
-            </Paragraph>
-            <Stack
-              gap={2}
-              my={4}
-              direction={{ base: "column", md: "row" }}
-              alignItems={{ base: "start", md: "center" }}
-            >
-              <ExternalLink
-                href="https://github.com/cieloazul310/digital-go-design-system-with-panda"
-                target="_blank"
-                rel="noopener noreferer"
-              >
-                GitHub リポジトリ
-              </ExternalLink>
-              <ExternalLink
-                href="https://cieloazul310.github.io/digital-go-design-system-with-panda"
-                target="_blank"
-                rel="noopener noreferer"
-              >
-                Storybook
-              </ExternalLink>
-            </Stack>
-            <Paragraph>
-              作成:{" "}
               <ExternalLink
                 href="https://cieloazul310.github.io"
-                target="_blank"
-                rel="noopener noreferer"
+                className={css({
+                  /**
+                   * w-fit text-std-20B-150 md:p-1.5
+                   */
+                  color: "inherit",
+                  width: "fit-content",
+                  textStyle: "std-20B-150",
+                  p: { base: 0, md: 1.5 },
+                })}
               >
                 水戸地図
               </ExternalLink>
-            </Paragraph>
-          </section>
-          <Stack
-            gap={2}
-            direction={{ base: "column", md: "row" }}
-            alignItems={{ base: "start", md: "center" }}
-          >
-            <Button variant="outline" size="lg">
-              Outline Large
-            </Button>
-            <Button size="md">Solid Medium</Button>
-            <Button variant="text" size="sm">
-              Text
-            </Button>
-          </Stack>
-          <Divider color="black" />
-          <Stack
-            gap={2}
-            direction={{ base: "column", md: "row" }}
-            alignItems={{ base: "start", md: "center" }}
-          >
-            <Button variant="outline" size="lg" asChild>
-              <a
-                href="https://cieloazul310.github.io"
-                target="_blank"
-                rel="noopener noreferer"
+              <ul
+                className={css({
+                  /**
+                   * flex flex-col gap-4 md:flex-row md:gap-8
+                   */
+                  display: "flex",
+                  flexDirection: { base: "column", md: "row" },
+                  gap: { base: 4, md: 8 },
+                  textStyle: "dns-16N-130",
+                  color: "solid-gray.800",
+                })}
               >
-                Outline Large
-              </a>
-            </Button>
-          </Stack>
-        </div>
-      </main>
+                <li>
+                  <ExternalLink
+                    href="https://github.com/cieloazul310/digital-go-design-system-with-panda"
+                    color="inherit"
+                  >
+                    GitHub
+                  </ExternalLink>
+                </li>
+                <li>
+                  <ExternalLink
+                    href="https://cieloazul310.github.io/digital-go-design-system-with-panda"
+                    color="inherit"
+                  >
+                    Storybook
+                  </ExternalLink>
+                </li>
+              </ul>
+            </div>
+            <p
+              className={css({
+                /**
+                 * mt-8 text-oln-16N-100 text-solid-gray-600 md:px-1.5
+                 */
+                textStyle: "oln-16N-100",
+                color: "solid-gray.600",
+                mt: 8,
+                px: { base: 0, md: 1.5 },
+              })}
+            >
+              © cieloazul310 All rights reserved.
+            </p>
+          </div>
+        </footer>
+      </div>
     </div>
   );
 }

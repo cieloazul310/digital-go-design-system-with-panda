@@ -4,7 +4,7 @@ import {
   type LinkProps as LinkBaseProps,
 } from "@cieloazul310/digital-go-pandacss/link";
 import { ExternalLinkIcon } from "lucide-react";
-import { css } from "@import-map-package/styled-system/css";
+import { css } from "@cieloazul310/styled-system/css";
 import { isInternal } from "@/utils/isInternal";
 
 export function Link({ children, href, ...props }: LinkBaseProps) {

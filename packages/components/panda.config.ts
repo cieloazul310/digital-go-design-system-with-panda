@@ -21,7 +21,7 @@ export default defineConfig({
 
   // The output directory for your css system
   outdir: "../generated/dist",
-  importMap: "@import-map-package/styled-system",
+  importMap: "@cieloazul310/styled-system",
   // Equivalent to:
   // importMap: {
   //   css: '@import-map-package/styled-system/css',

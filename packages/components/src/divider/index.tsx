@@ -1,10 +1,10 @@
 import type { PropsWithChildren } from "react";
 import { ark } from "@ark-ui/react/factory";
-import { styled } from "@import-map-package/styled-system/jsx";
+import { styled } from "@cieloazul310/styled-system/jsx";
 import {
   digitalGoDivider,
   type DigitalGoDividerVariantProps,
-} from "@import-map-package/styled-system/recipes";
+} from "@cieloazul310/styled-system/recipes";
 
 export interface DividerProps
   extends DigitalGoDividerVariantProps,

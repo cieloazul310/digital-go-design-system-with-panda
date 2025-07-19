@@ -3,27 +3,17 @@
  * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Table/Table.stories.tsx
  */
 import { defineSlotRecipe } from "@pandacss/dev";
+import { tableAnatomy } from "../anatomy";
 
 export default defineSlotRecipe({
   className: "table",
-  slots: [
-    "root",
-    "head",
-    "body",
-    "foot",
-    "row",
-    "header",
-    "cell",
-    "colgroup",
-    "col",
-    "caption",
-  ],
+  slots: tableAnatomy.keys(),
   base: {
     root: {
       /**
        * w-full text-std-16N-170
        */
-      width: "full",
+      maxWidth: "full",
     },
     head: {
       "& tr": {
@@ -99,7 +89,7 @@ export default defineSlotRecipe({
       },
       true: {
         root: {
-          textStyle: "std-16N-120",
+          textStyle: "dns-16N-130",
         },
         header: {
           /**
@@ -132,6 +122,11 @@ export default defineSlotRecipe({
           "& tr": {
             _hover: {
               bg: "keyColor.50",
+            },
+            _even: {
+              "&:not(:has(input:checked))": {
+                _hover: { bg: "{colors.keyColor.50}" },
+              },
             },
           },
         },

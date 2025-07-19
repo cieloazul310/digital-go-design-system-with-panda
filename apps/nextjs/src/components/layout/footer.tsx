@@ -1,4 +1,4 @@
-import { css } from "@import-map-package/styled-system/css";
+import { css } from "@cieloazul310/styled-system/css";
 import { Link } from "../link";
 
 export default function Footer() {
@@ -11,7 +11,9 @@ export default function Footer() {
         gridArea: "footer",
         mb: { base: 6, md: 10 },
         mt: { base: 16, md: 20 },
-        maxWidth: "breakpoint-xl",
+        "& > div": {
+          maxWidth: "common-main-width",
+        },
       })}
     >
       <div

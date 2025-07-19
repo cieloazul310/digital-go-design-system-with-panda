@@ -4,11 +4,11 @@ import { Listbox, type CollectionItem } from "@ark-ui/react/listbox";
 import {
   menuList,
   type MenuListVariantProps,
-} from "@import-map-package/styled-system/recipes";
+} from "@cieloazul310/styled-system/recipes";
 import type {
   ComponentProps,
   HTMLStyledProps,
-} from "@import-map-package/styled-system/types";
+} from "@cieloazul310/styled-system/types";
 import { createStyleContext } from "../utils/create-style-context";
 
 const { withProvider, withContext } = createStyleContext(menuList);

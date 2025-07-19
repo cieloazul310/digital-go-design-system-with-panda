@@ -1,11 +1,15 @@
-"use client";
+import NextLink from "next/link";
+import { css } from "@cieloazul310/styled-system/css";
+import { menuItem } from "@cieloazul310/styled-system/recipes";
+import { post } from "@/content";
 
-// import NextLink from "next/link";
-import { usePathname } from "next/navigation";
-import { css } from "@import-map-package/styled-system/css";
-import { menuItem } from "@import-map-package/styled-system/recipes";
+type MenuProps = {
+  slug?: string[];
+};
 
-export default function Menu() {
+export default async function Menu({ slug = [] }: MenuProps) {
+  const allPost = await post.getAll();
+  /*
   const collection = {
     items: [
       { value: "トップページ", href: "/" },
@@ -28,19 +32,23 @@ export default function Menu() {
       { value: "エレベーション", href: "/foundations/style-guides" },
     ],
   };
-  const pathname = usePathname();
+  */
 
   return (
     <nav className={css({ p: 1 })}>
-      {collection.items.map(({ value, href }) => (
-        <li
-          className={menuItem({ variant: "boxed" })}
-          key={value}
-          data-selected={pathname === href || undefined}
-        >
-          {value}
-        </li>
-      ))}
+      <ul>
+        {[...allPost].map(({ frontmatter, href }) => (
+          <li key={href}>
+            <NextLink
+              className={menuItem({ variant: "boxed" })}
+              data-selected={`/${slug.join("/")}` === href || undefined}
+              href={href}
+            >
+              {frontmatter.title}
+            </NextLink>
+          </li>
+        ))}
+      </ul>
     </nav>
   );
 }

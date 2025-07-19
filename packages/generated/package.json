@@ -1,6 +1,24 @@
 {
-  "name": "@import-map-package/styled-system",
-  "version": "0.0.1",
+  "name": "@cieloazul310/styled-system",
+  "version": "0.0.1-prerelease.4",
+  "license": "MIT",
+  "homepage": "https://github.com/cieloazul310/digital-go-design-system-with-panda",
+  "author": {
+    "name": "cieloazul310",
+    "url": "https://cieloazul310.github.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cieloazul310/digital-go-design-system-with-panda.git",
+    "directory": "packages/generated"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "dist"
+  ],
   "type": "module",
   "exports": {
     "./css": {
@@ -31,6 +49,6 @@
     "./types": {
       "types": "./dist/types/index.d.ts"
     },
-    "./styles.css": "./styles.css"
+    "./styles.css": "./dist/styles.css"
   }
 }

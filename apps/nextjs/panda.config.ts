@@ -1,6 +1,7 @@
 import { defineConfig } from "@pandacss/dev";
 import { createPreset } from "@cieloazul310/digital-go-pandacss/preset";
 import { tokens } from "./src/theme/tokens";
+import { semanticTokens } from "./src/theme/semantic-tokens";
 
 export default defineConfig({
   presets: ["@pandacss/dev/presets", createPreset("blue")],
@@ -17,11 +18,12 @@ export default defineConfig({
   theme: {
     extend: {
       tokens,
+      semanticTokens,
     },
   },
   jsxFramework: "react",
 
   // The output directory for your css system
   outdir: "styled-system",
-  importMap: "@import-map-package/styled-system",
+  importMap: "@cieloazul310/styled-system",
 });

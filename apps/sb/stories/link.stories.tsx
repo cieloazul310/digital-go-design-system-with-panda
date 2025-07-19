@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Link } from "@cieloazul310/digital-go-pandacss/link";
-import { Container } from "@import-map-package/styled-system/jsx";
+import { Container } from "@cieloazul310/styled-system/jsx";
 
 const meta = {
   title: "Components/リンク",

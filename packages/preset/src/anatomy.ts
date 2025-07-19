@@ -1,7 +1,7 @@
 /**
  * https://github.com/chakra-ui/chakra-ui/blob/main/packages/react/src/anatomy.ts
  */
-import { createAnatomy } from "@ark-ui/react/anatomy";
+import { createAnatomy } from "@zag-js/anatomy";
 
 export const breadcrumbAnatomy = createAnatomy("breadcrumb").parts(
   "root",
@@ -9,6 +9,24 @@ export const breadcrumbAnatomy = createAnatomy("breadcrumb").parts(
   "item",
   "link",
   "separator",
+);
+
+export const disclosureAnatomy = createAnatomy("disclosure").parts(
+  "root",
+  "summary",
+  "icon",
+  "content",
+);
+
+export const inputTextAnatomy = createAnatomy("field").parts(
+  "root",
+  "errorText",
+  "helperText",
+  "input",
+  "label",
+  "select",
+  "textarea",
+  "requiredIndicator",
 );
 
 export const menuListAnatomy = createAnatomy("menu-list").parts(
@@ -38,4 +56,17 @@ export const resourceListAnatomy = createAnatomy("resource-list").parts(
   "title",
   "supportText",
   "subLabel",
+);
+
+export const tableAnatomy = createAnatomy("table").parts(
+  "root",
+  "head",
+  "body",
+  "foot",
+  "row",
+  "header",
+  "cell",
+  "colgroup",
+  "col",
+  "caption",
 );

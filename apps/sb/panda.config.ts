@@ -32,5 +32,5 @@ export default defineConfig({
   jsxFramework: "react",
   // The output directory for your css system
   outdir: "styled-system",
-  importMap: "@import-map-package/styled-system",
+  importMap: "@cieloazul310/styled-system",
 });

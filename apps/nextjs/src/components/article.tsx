@@ -1,10 +1,11 @@
 import * as Disclosure from "@cieloazul310/digital-go-pandacss/disclosure";
-import { styled } from "@import-map-package/styled-system/jsx";
+import { css } from "@cieloazul310/styled-system/css";
+import { styled } from "@cieloazul310/styled-system/jsx";
 import type {
   ComponentProps,
   JsxHTMLProps,
   JsxStyleProps,
-} from "@import-map-package/styled-system/types";
+} from "@cieloazul310/styled-system/types";
 
 export const Paragraph = (
   props: JsxHTMLProps<ComponentProps<"p">, JsxStyleProps>,
@@ -52,4 +53,35 @@ export const Summary = ({ children, ...props }: Disclosure.SummaryProps) => (
       {children}
     </summary>
   </Disclosure.Summary>
+);
+
+export const Pre = (
+  props: JsxHTMLProps<ComponentProps<"pre">, JsxStyleProps>,
+) => {
+  return (
+    <styled.pre
+      bg="solid-gray.100"
+      textStyle="mono-16N-150"
+      rounded={8}
+      overflowX="auto"
+      p={8}
+      {...props}
+    />
+  );
+};
+
+export const Code = (
+  props: JsxHTMLProps<ComponentProps<"code">, JsxStyleProps>,
+) => (
+  <styled.code
+    className={css({
+      ":not(pre) > &": {
+        color: "keyColor.800",
+        bg: "keyColor.50",
+        px: 1,
+        rounded: 2,
+      },
+    })}
+    {...props}
+  />
 );
