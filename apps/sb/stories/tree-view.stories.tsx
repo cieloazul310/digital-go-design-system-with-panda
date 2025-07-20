@@ -57,6 +57,7 @@ const TreeNode = (props: StyledTreeView.NodeProviderProps) => {
 
 const meta = {
   title: "Components/ツリービュー",
+  component: TreeView,
   argTypes: {
     variant: {
       options: ["standard", "boxed"],
@@ -83,7 +84,7 @@ const meta = {
 } satisfies Meta<typeof TreeView>;
 
 export default meta;
-type Story = StoryObj<typeof TreeView>;
+type Story = StoryObj<typeof meta>;
 
 interface Node {
   id: string;

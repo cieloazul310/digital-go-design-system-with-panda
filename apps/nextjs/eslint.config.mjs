@@ -9,4 +9,10 @@ export default [
     files: ["postcss.config.cjs"],
     languageOptions: {},
   },
+  {
+    files: ["src/**/*.{jsx,tsx}"],
+    rules: {
+      "react-refresh/only-export-components": "off",
+    },
+  },
 ];

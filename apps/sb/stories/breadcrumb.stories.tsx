@@ -9,7 +9,7 @@ const meta = {
 } satisfies Meta<typeof Breadcrumb.Root>;
 
 export default meta;
-type Story = StoryObj<typeof Breadcrumb.Root>;
+type Story = StoryObj<typeof meta>;
 
 export const Basic: Story = {
   render: ({ ...props }) => {

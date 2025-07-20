@@ -61,8 +61,8 @@ async function Page({ params }: { params: Promise<{ slug: string[] }> }) {
           </h1>
           {(ark || storybook || digitalgo) && (
             <Stack
-              gap={{ base: 2, md: 4 }}
-              direction={{ base: "column", md: "row" }}
+              gap={{ base: 2, sm: 4 }}
+              direction={{ base: "column", sm: "row" }}
             >
               {ark && <Link href={ark}>Ark UI</Link>}
               {storybook && <Link href={storybook}>Storybook</Link>}

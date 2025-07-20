@@ -41,7 +41,7 @@ const meta = {
 } satisfies Meta<typeof RadioGroup.Root>;
 
 export default meta;
-type Story = StoryObj<typeof RadioGroup.Root>;
+type Story = StoryObj<typeof meta>;
 
 export const Playground: Story = {
   args: {
