@@ -12,7 +12,7 @@ const meta = {
 } satisfies Meta<typeof UtilityLink>;
 
 export default meta;
-type Story = StoryObj<typeof UtilityLink>;
+type Story = StoryObj<typeof meta>;
 
 export const Simple: Story = {
   args: {

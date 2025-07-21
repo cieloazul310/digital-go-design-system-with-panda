@@ -26,7 +26,7 @@ const meta = {
 } satisfies Meta<typeof Table.Root>;
 
 export default meta;
-type Story = StoryObj<typeof Table.Root>;
+type Story = StoryObj<typeof meta>;
 
 export const Playground: Story = {
   args: {

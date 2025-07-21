@@ -1,3 +1,4 @@
+import NextLink from "next/link";
 import { css } from "@cieloazul310/styled-system/css";
 import * as Drawer from "@cieloazul310/digital-go-pandacss/drawer";
 import {
@@ -57,7 +58,9 @@ export default function MobileHeader({ slug }: MobileHeaderProps) {
             lineHeight: 150,
           })}
         >
-          デジタル庁デザインシステムβ版 for Panda CSS
+          <NextLink href="/">
+            デジタル庁デザインシステムβ版 for Panda CSS
+          </NextLink>
         </h1>
         <Drawer.Root placement="right">
           <Drawer.Trigger asChild>
