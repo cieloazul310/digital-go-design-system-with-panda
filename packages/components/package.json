@@ -24,7 +24,7 @@
   },
   "scripts": {
     "panda": "panda codegen",
-    "dev": "npm run build -- --watch",
+    "build": "npm run panda",
     "eslint": "eslint src --fix",
     "format": "prettier --parser typescript --write ."
   },
@@ -42,7 +42,6 @@
     "eslint": "^9.28.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "tsup": "8.5.0",
     "typescript": "5.8.3"
   },
   "peerDependencies": {
