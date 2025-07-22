@@ -1,5 +1,5 @@
 import type { PropsWithChildren } from "react";
-import { css } from "@cieloazul310/styled-system/css";
+import { css } from "styled-system/css";
 import BaseLayout from "@/components/layout/base";
 import { Link } from "@/components/link";
 

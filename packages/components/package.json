@@ -1,6 +1,7 @@
 {
   "name": "@cieloazul310/digital-go-react-components",
   "version": "0.0.1-prerelease.4",
+  "private": true,
   "license": "MIT",
   "homepage": "https://github.com/cieloazul310/digital-go-design-system-with-panda",
   "author": {
@@ -12,73 +13,43 @@
     "url": "git+https://github.com/cieloazul310/digital-go-design-system-with-panda.git",
     "directory": "packages/components"
   },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  },
-  "files": [
-    "dist"
-  ],
-  "types": "./dist/index.d.ts",
-  "main": "./dist/index.js",
-  "exports": {
-    ".": {
-      "source": "./src/index.tsx",
-      "types": "./dist/index.d.ts",
-      "import": {
-        "types": "./dist/index.d.mts",
-        "default": "./dist/index.mjs"
-      },
-      "require": "./dist/index.js"
-    },
-    "./*": {
-      "source": "./src/*/index.tsx",
-      "types": "./dist/*/index.d.ts",
-      "import": {
-        "types": "./dist/*/index.d.mts",
-        "default": "./dist/*/index.mjs"
-      },
-      "require": "./dist/*/index.js"
-    },
-    "./form/*": {
-      "source": "./src/form/*.tsx",
-      "types": "./dist/form/*.d.ts",
-      "import": {
-        "types": "./dist/form/*.d.mts",
-        "default": "./dist/form/*.mjs"
-      },
-      "require": "./dist/form/*.js"
-    }
-  },
   "scripts": {
     "panda": "panda codegen",
-    "prebuild": "npm run panda",
-    "build": "tsup && tsc",
-    "dev": "npm run build -- --watch",
+    "build": "npm run panda",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
     "eslint": "eslint src --fix",
     "format": "prettier --parser typescript --write ."
   },
   "dependencies": {
-    "@cieloazul310/digital-go-pandacss-preset": "^0.0.1-prerelease.4"
+    "@ark-ui/react": "^5.13.0",
+    "lucide-react": "^0.513.0",
+    "next": "^15.3.5",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "styled-system": "^0.0.1-prerelease.4"
   },
   "devDependencies": {
-    "@ark-ui/react": "^5.13.0",
+    "@chromatic-com/storybook": "^4.0.1",
+    "@cieloazul310/digital-go-pandacss-preset": "^0.0.1-prerelease.4",
     "@pandacss/dev": "^0.53.7",
     "@repo/eslint-config": "^0.0.0",
     "@repo/typescript-config": "^0.0.0",
+    "@storybook/addon-docs": "^9.0.15",
+    "@storybook/addon-links": "^9.0.15",
+    "@storybook/addon-onboarding": "^9.0.15",
+    "@storybook/addon-themes": "^9.0.15",
+    "@storybook/nextjs-vite": "^9.0.15",
     "@types/react": "^19.1.6",
     "@types/react-dom": "^19.1.6",
     "eslint": "^9.28.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "tsup": "8.5.0",
-    "typescript": "5.8.3"
+    "eslint-plugin-storybook": "^9.0.15",
+    "storybook": "^9.0.15",
+    "typescript": "5.8.3",
+    "vite": "^6.3.5"
   },
-  "peerDependencies": {
-    "@ark-ui/react": "^5.0.0",
-    "@cieloazul310/styled-system": "^0.0.1-prerelease.4",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+  "overrides": {
+    "storybook": "$storybook"
   },
   "lint-staged": {
     "**/*.{js,mjs,cjs,tsx,ts,tsx}": [

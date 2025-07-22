@@ -1,11 +1,11 @@
-import * as Disclosure from "@cieloazul310/digital-go-pandacss/disclosure";
-import { css } from "@cieloazul310/styled-system/css";
-import { styled } from "@cieloazul310/styled-system/jsx";
+import * as Disclosure from "@/components/ui/disclosure";
+import { css } from "styled-system/css";
+import { styled } from "styled-system/jsx";
 import type {
   ComponentProps,
   JsxHTMLProps,
   JsxStyleProps,
-} from "@cieloazul310/styled-system/types";
+} from "styled-system/types";
 
 export const Paragraph = (
   props: JsxHTMLProps<ComponentProps<"p">, JsxStyleProps>,

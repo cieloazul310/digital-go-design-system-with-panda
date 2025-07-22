@@ -1,6 +1,6 @@
 import NextLink from "next/link";
-import { css } from "@cieloazul310/styled-system/css";
-import { menuItem } from "@cieloazul310/styled-system/recipes";
+import { css } from "styled-system/css";
+import { menuItem } from "styled-system/recipes";
 import { post } from "@/content";
 
 type MenuProps = {

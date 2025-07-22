@@ -1,10 +1,10 @@
 import type { MDXComponents } from "mdx/types";
-import { OrderedList } from "@cieloazul310/digital-go-pandacss/ordered-list";
-import { UnorderedList } from "@cieloazul310/digital-go-pandacss/unordered-list";
-import { List } from "@cieloazul310/digital-go-pandacss/list";
-import { Divider } from "@cieloazul310/digital-go-pandacss/divider";
-import * as Table from "@cieloazul310/digital-go-pandacss/table";
-import { css } from "@cieloazul310/styled-system/css";
+import { OrderedList } from "@/components/ui/ordered-list";
+import { UnorderedList } from "@/components/ui/unordered-list";
+import { List } from "@/components/ui/list";
+import { Divider } from "@/components/ui/divider";
+import * as Table from "@/components/ui/table";
+import { css } from "styled-system/css";
 import { Paragraph, Heading2, Heading3, Pre, Code } from "@/components/article";
 import { Link } from "@/components/link";
 

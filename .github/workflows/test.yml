@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  BUILD_PATH: "./apps/sb"
+  BUILD_PATH: "./packages/components"
 
 jobs:
   build:
@@ -52,11 +52,11 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
-      #- name: Test
-      #  run: ${{ steps.detect-package-manager.outputs.manager }} run test
-
       - name: Build Packages
         run: ${{ steps.detect-package-manager.outputs.manager }} run build:package
+
+      - name: Test
+        run: ${{ steps.detect-package-manager.outputs.manager }} run test
 
       - name: Build storybook
         run: ${{ steps.detect-package-manager.outputs.manager }} run build-storybook

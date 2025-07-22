@@ -1,9 +1,9 @@
-import { styled } from "@cieloazul310/styled-system/jsx";
+import { styled } from "styled-system/jsx";
 import type {
   ComponentProps,
   JsxHTMLProps,
   JsxStyleProps,
-} from "@cieloazul310/styled-system/types";
+} from "styled-system/types";
 
 export const Paragraph = (
   props: JsxHTMLProps<ComponentProps<"p">, JsxStyleProps>,

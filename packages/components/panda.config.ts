@@ -9,7 +9,11 @@ export default defineConfig({
   // The extension for the emitted JavaScript files
   outExtension: "mjs",
   // Where to look for your css declarations
-  include: ["./src/**/*.{js,jsx,ts,tsx}"],
+  include: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./stories/**/*.{js,jsx,ts,tsx}",
+    "./.storybook/**/*.{js,jsx,ts,tsx}",
+  ],
 
   // Files to exclude
   exclude: [],
@@ -21,14 +25,8 @@ export default defineConfig({
 
   // The output directory for your css system
   outdir: "../generated/dist",
-  importMap: "@cieloazul310/styled-system",
-  // Equivalent to:
-  // importMap: {
-  //   css: '@import-map-package/styled-system/css',
-  //   recipes: '@import-map-package/styled-system/recipes',
-  //   patterns: '@import-map-package/styled-system/patterns',
-  //   jsx: '@import-map-package/styled-system/jsx',
-  // },
+  importMap: "styled-system",
+
   // The JSX framework to use
   jsxFramework: "react",
 

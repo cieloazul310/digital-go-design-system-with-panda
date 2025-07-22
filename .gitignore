@@ -49,3 +49,8 @@ packages/studio/src/lib/analysis.json
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# CLI
+**/bin
+
+**/var

@@ -1,5 +1,5 @@
-import { Link, type LinkProps } from "@cieloazul310/digital-go-pandacss/link";
 import { ExternalLinkIcon } from "lucide-react";
+import { Link, type LinkProps } from "./ui/link";
 
 export function ExternalLink({ children, ...props }: LinkProps) {
   return (

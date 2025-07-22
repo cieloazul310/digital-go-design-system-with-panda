@@ -1,11 +1,11 @@
 import NextLink from "next/link";
-import { css } from "@cieloazul310/styled-system/css";
-import * as Drawer from "@cieloazul310/digital-go-pandacss/drawer";
+import { css } from "styled-system/css";
+import * as Drawer from "@/components/ui/drawer";
 import {
   HamburgerMenuButton,
   HamburgerIcon,
   CloseIcon,
-} from "@cieloazul310/digital-go-pandacss/hamburger-menu-button";
+} from "@/components/ui/hamburger-menu-button";
 import Menu from "./menu";
 
 type MobileHeaderProps = {

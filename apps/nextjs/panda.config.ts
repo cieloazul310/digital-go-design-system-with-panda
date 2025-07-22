@@ -1,5 +1,5 @@
 import { defineConfig } from "@pandacss/dev";
-import { createPreset } from "@cieloazul310/digital-go-pandacss/preset";
+import { createPreset } from "@cieloazul310/digital-go-pandacss-preset";
 import { tokens } from "./src/theme/tokens";
 import { semanticTokens } from "./src/theme/semantic-tokens";
 
@@ -25,5 +25,4 @@ export default defineConfig({
 
   // The output directory for your css system
   outdir: "styled-system",
-  importMap: "@cieloazul310/styled-system",
 });

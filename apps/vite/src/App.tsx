@@ -1,11 +1,17 @@
 import { createListCollection } from "@ark-ui/react/listbox";
-import { css } from "@cieloazul310/styled-system/css";
-import { menuItem } from "@cieloazul310/styled-system/recipes";
-import { styled, Stack } from "@cieloazul310/styled-system/jsx";
-import * as ResourceList from "@cieloazul310/digital-go-pandacss/resource-list";
+import { css } from "styled-system/css";
+import { menuItem } from "styled-system/recipes";
+import { styled, Stack } from "styled-system/jsx";
 
-import { Heading2, Paragraph } from "./components/article";
-import { ExternalLink } from "./components/external-link";
+import * as Drawer from "@/components/ui/drawer";
+import {
+  HamburgerMenuButton,
+  HamburgerIcon,
+  CloseIcon,
+} from "@/components/ui/hamburger-menu-button";
+import * as ResourceList from "@/components/ui/resource-list";
+import { Heading2, Paragraph } from "@/components/article";
+import { ExternalLink } from "@/components/external-link";
 
 const collection = createListCollection({
   items: [
@@ -110,6 +116,45 @@ function App() {
           >
             デジタル庁デザインシステムβ版 for Panda CSS
           </h1>
+          <Drawer.Root placement="right">
+            <Drawer.Trigger asChild>
+              <HamburgerMenuButton>
+                <HamburgerIcon />
+                メニュー
+              </HamburgerMenuButton>
+            </Drawer.Trigger>
+            <Drawer.Backdrop />
+            <Drawer.Positioner>
+              <Drawer.Content>
+                <Drawer.Header>
+                  <Drawer.Title>ドロワー</Drawer.Title>
+                  <Drawer.CloseTrigger
+                    asChild
+                    position="absolute"
+                    top="5"
+                    right="4"
+                  >
+                    <HamburgerMenuButton>
+                      <CloseIcon />
+                      閉じる
+                    </HamburgerMenuButton>
+                  </Drawer.CloseTrigger>
+                </Drawer.Header>
+                <Drawer.Body>
+                  <nav className={css({ p: 1 })}>
+                    {collection.items.map(({ value }) => (
+                      <li
+                        className={menuItem({ variant: "boxed" })}
+                        key={value}
+                      >
+                        {value}
+                      </li>
+                    ))}
+                  </nav>
+                </Drawer.Body>
+              </Drawer.Content>
+            </Drawer.Positioner>
+          </Drawer.Root>
         </div>
       </header>
       <div
@@ -121,7 +166,7 @@ function App() {
           `,
           gridTemplateColumns: {
             base: "0 1fr",
-            md: "18rem 1fr",
+            lg: "{sizes.sidebar-width} minmax(0, 1fr)",
           },
           gridTemplateRows: "1fr auto",
           minHeight: "calc(100vh - {sizes.mobile-header-height})",
@@ -130,17 +175,18 @@ function App() {
         <header
           className={css({
             gridArea: "side-nav",
-            display: { base: "none", md: "flex" },
+            display: { base: "none", lg: "flex" },
             flexDirection: "column",
             pt: 10,
             position: "fixed",
             top: 0,
-            borderRightWidth: { base: 0, md: "1px" },
+            borderRightWidth: { base: 0, lg: "1px" },
             borderRightColor: "solid-gray.420",
             overflowY: "auto",
             overscrollBehaviorY: "contain",
             gap: 10,
             height: "full",
+            width: "sidebar-width",
           })}
         >
           <a
@@ -163,10 +209,16 @@ function App() {
             ))}
           </nav>
         </header>
-        <main className={css({ gridArea: "main", pt: { base: 0, lg: 10 } })}>
+        <main
+          className={css({
+            gridArea: "main",
+            minWidth: "0",
+            pt: { base: 0, lg: 10 },
+          })}
+        >
           <div
             className={css({
-              maxWidth: "breakpoint-xl",
+              maxWidth: "common-main-width",
               mx: "auto",
               px: { base: 4, md: 8 },
               textStyle: { base: "std-18N-160", md: "std-20N-150" },
@@ -289,7 +341,9 @@ function App() {
             gridArea: "footer",
             mb: { base: 6, md: 10 },
             mt: { base: 16, md: 20 },
-            maxWidth: "breakpoint-xl",
+            "& > div": {
+              maxWidth: "common-main-width",
+            },
           })}
         >
           <div
