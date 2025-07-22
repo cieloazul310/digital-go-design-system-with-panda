@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 // import{ type ChangeEvent, useEffect, useRef, useState } from "react";
 // import { ErrorText, Legend, RequirementBadge, SupportText } from "../";
-import * as Checkbox from "@cieloazul310/digital-go-react-components/checkbox";
+import * as Checkbox from "../src/checkbox";
 
 const meta = {
   title: "Components/チェックボックス",

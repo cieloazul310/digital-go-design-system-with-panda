@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { UtilityLink } from "@cieloazul310/digital-go-react-components/utility-link";
+import { UtilityLink } from "../src/utility-link";
 import { ExternalLink } from "lucide-react";
 
 const meta = {

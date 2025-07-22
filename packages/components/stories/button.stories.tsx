@@ -3,8 +3,8 @@
  */
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { fn } from "storybook/test";
-import { Button } from "@cieloazul310/digital-go-react-components/button";
-import { Link } from "@cieloazul310/digital-go-react-components/link";
+import { Button } from "../src/button";
+import { Link } from "../src/link";
 import { cx, css } from "styled-system/css";
 import { styled, Flex } from "styled-system/jsx";
 import { hstack } from "styled-system/patterns";

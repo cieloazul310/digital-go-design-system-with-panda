@@ -5,8 +5,8 @@
 import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { styled } from "styled-system/jsx";
-import * as Table from "@cieloazul310/digital-go-react-components/table";
-import * as Checkbox from "@cieloazul310/digital-go-react-components/checkbox";
+import * as Table from "../src/table";
+import * as Checkbox from "../src/checkbox";
 import { css } from "styled-system/css";
 
 const meta = {

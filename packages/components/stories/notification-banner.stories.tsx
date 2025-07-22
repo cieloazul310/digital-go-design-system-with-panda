@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import * as NotificationBanner from "@cieloazul310/digital-go-react-components/notification-banner";
+import * as NotificationBanner from "../src/notification-banner";
 
 const meta = {
   title: "Components/ノティフィケーションバナー",

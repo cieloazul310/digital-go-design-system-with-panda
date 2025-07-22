@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import * as Drawer from "@cieloazul310/digital-go-react-components/drawer";
+import * as Drawer from "../src/drawer";
 import {
   HamburgerMenuButton,
   CloseIcon,
   HamburgerIcon,
-} from "@cieloazul310/digital-go-react-components/hamburger-menu-button";
+} from "../src/hamburger-menu-button";
 import { css } from "styled-system/css";
 
 const meta = {

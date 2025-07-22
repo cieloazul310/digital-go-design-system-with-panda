@@ -1,7 +1,7 @@
 import { withThemeByClassName } from "@storybook/addon-themes";
 import type { Preview, ReactRenderer } from "@storybook/nextjs-vite";
 import { Noto_Sans_JP, Noto_Sans_Mono } from "next/font/google";
-import { css, cx } from "@cieloazul310/styled-system/css";
+import { css, cx } from "styled-system/css";
 import "./index.css";
 
 const notoSansJp = Noto_Sans_JP({

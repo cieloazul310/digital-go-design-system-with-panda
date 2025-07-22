@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import * as RadioGroup from "@cieloazul310/digital-go-react-components/radio";
-import { Legend } from "@cieloazul310/digital-go-react-components/form/legend";
-import { RequirementBadge } from "@cieloazul310/digital-go-react-components/form/requirement-badge";
-import { SupportText } from "@cieloazul310/digital-go-react-components/form/support-text";
+import * as RadioGroup from "../src/radio";
+import { Legend } from "../src/form/legend";
+import { RequirementBadge } from "../src/form/requirement-badge";
+import { SupportText } from "../src/form/support-text";
 
 const meta = {
   title: "Components/ラジオボタン",

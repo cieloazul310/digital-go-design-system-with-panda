@@ -2,8 +2,8 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { fn } from "storybook/test";
 import { Portal } from "@ark-ui/react/portal";
-import { Menu } from "@cieloazul310/digital-go-react-components";
-import { Button } from "@cieloazul310/digital-go-react-components/button";
+import { Menu } from "../src";
+import { Button } from "../src/button";
 import { menu } from "styled-system/recipes";
 
 const meta = {

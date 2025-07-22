@@ -10,7 +10,7 @@ import {
   CloseWithLabelIcon,
   HamburgerIcon,
   HamburgerWithLabelIcon,
-} from "@cieloazul310/digital-go-react-components/hamburger-menu-button";
+} from "../src/hamburger-menu-button";
 import { css } from "styled-system/css";
 
 const meta = {

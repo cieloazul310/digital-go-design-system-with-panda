@@ -9,7 +9,11 @@ export default defineConfig({
   // The extension for the emitted JavaScript files
   outExtension: "mjs",
   // Where to look for your css declarations
-  include: ["./src/**/*.{js,jsx,ts,tsx}"],
+  include: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./stories/**/*.{js,jsx,ts,tsx}",
+    "./.storybook/**/*.{js,jsx,ts,tsx}",
+  ],
 
   // Files to exclude
   exclude: [],

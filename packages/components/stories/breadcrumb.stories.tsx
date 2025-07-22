@@ -1,7 +1,7 @@
 import { useId } from "react";
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Home as HomeIcon } from "lucide-react";
-import * as Breadcrumb from "@cieloazul310/digital-go-react-components/breadcrumb";
+import * as Breadcrumb from "../src/breadcrumb";
 
 const meta = {
   title: "Components/パンくずリスト",

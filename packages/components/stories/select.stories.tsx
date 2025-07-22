@@ -2,7 +2,7 @@ import { ChevronDownIcon, X as XIcon } from "lucide-react";
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { fn } from "storybook/test";
 import { Portal, createListCollection } from "@ark-ui/react";
-import * as Select from "@cieloazul310/digital-go-react-components/select";
+import * as Select from "../src/select";
 import { select } from "styled-system/recipes";
 
 const meta = {

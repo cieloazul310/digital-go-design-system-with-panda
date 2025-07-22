@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Flex } from "styled-system/jsx";
-import { Divider } from "@cieloazul310/digital-go-react-components/divider";
+import { Divider } from "../src/divider";
 
 const meta = {
   title: "Components/ディバイダー",

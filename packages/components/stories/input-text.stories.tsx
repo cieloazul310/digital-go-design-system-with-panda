@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { fn } from "storybook/test";
-import * as InputText from "@cieloazul310/digital-go-react-components/input-text";
+import * as InputText from "../src/input-text";
 import { inputText } from "styled-system/recipes";
 
 const meta = {
