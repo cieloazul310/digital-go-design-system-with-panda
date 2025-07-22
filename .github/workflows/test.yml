@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  BUILD_PATH: "./apps/sb"
+  BUILD_PATH: "./packages/components"
 
 jobs:
   build:
