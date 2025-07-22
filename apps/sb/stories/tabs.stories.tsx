@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import NextLink from "next/link";
-import * as Tabs from "@cieloazul310/digital-go-pandacss/tabs";
+import * as Tabs from "@cieloazul310/digital-go-react-components/tabs";
 
 const meta = {
   title: "Components/タブ",

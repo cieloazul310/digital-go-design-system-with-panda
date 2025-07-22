@@ -1,4 +1,4 @@
-import { css } from "@cieloazul310/styled-system/css";
+import { css } from "styled-system/css";
 import { Link } from "../link";
 
 export default function Footer() {

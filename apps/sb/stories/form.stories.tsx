@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { Input } from "@cieloazul310/digital-go-pandacss/form/input";
+import { Input } from "@cieloazul310/digital-go-react-components/form/input";
 
 const meta = {
   title: "Components/フォーム",

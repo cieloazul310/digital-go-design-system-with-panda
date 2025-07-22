@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { createTreeCollection } from "@ark-ui/react/tree-view";
-import * as StyledTreeView from "@cieloazul310/digital-go-pandacss/tree-view";
+import * as StyledTreeView from "@cieloazul310/digital-go-react-components/tree-view";
 import { forwardRef } from "react";
 
 const TreeView = forwardRef<HTMLDivElement, StyledTreeView.RootProps>(

@@ -10,8 +10,8 @@ import {
   CloseWithLabelIcon,
   HamburgerIcon,
   HamburgerWithLabelIcon,
-} from "@cieloazul310/digital-go-pandacss/hamburger-menu-button";
-import { css } from "@cieloazul310/styled-system/css";
+} from "@cieloazul310/digital-go-react-components/hamburger-menu-button";
+import { css } from "styled-system/css";
 
 const meta = {
   id: "Component/DADS v2/HamburgerMenuButton",

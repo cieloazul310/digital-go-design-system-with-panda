@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { createListCollection } from "@ark-ui/react/listbox";
 import NextLink from "next/link";
-import * as MenuList from "@cieloazul310/digital-go-pandacss/menu-list";
-import { css } from "@cieloazul310/styled-system/css";
+import * as MenuList from "@cieloazul310/digital-go-react-components/menu-list";
+import { css } from "styled-system/css";
 
 const meta = {
   title: "Components/メニューリスト",

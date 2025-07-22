@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { Link } from "@cieloazul310/digital-go-pandacss/link";
-import { Container } from "@cieloazul310/styled-system/jsx";
+import { Link } from "@cieloazul310/digital-go-react-components/link";
+import { Container } from "styled-system/jsx";
 
 const meta = {
   title: "Components/リンク",

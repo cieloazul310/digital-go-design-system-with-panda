@@ -3,11 +3,11 @@
  */
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { fn } from "storybook/test";
-import { Button } from "@cieloazul310/digital-go-pandacss/button";
-import { Link } from "@cieloazul310/digital-go-pandacss/link";
-import { cx, css } from "@cieloazul310/styled-system/css";
-import { styled, Flex } from "@cieloazul310/styled-system/jsx";
-import { hstack } from "@cieloazul310/styled-system/patterns";
+import { Button } from "@cieloazul310/digital-go-react-components/button";
+import { Link } from "@cieloazul310/digital-go-react-components/link";
+import { cx, css } from "styled-system/css";
+import { styled, Flex } from "styled-system/jsx";
+import { hstack } from "styled-system/patterns";
 
 const headingStyle = css({ textStyle: "std-32B-150", mb: 6 });
 const buttons = hstack({ gap: 4, alignItems: "end" });

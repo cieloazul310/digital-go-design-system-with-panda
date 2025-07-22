@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import NextLink from "next/link";
-import * as ResouceList from "@cieloazul310/digital-go-pandacss/resource-list";
-import { Link } from "@cieloazul310/digital-go-pandacss/link";
-import * as RadioGroup from "@cieloazul310/digital-go-pandacss/radio";
-import * as Checkbox from "@cieloazul310/digital-go-pandacss/checkbox";
+import * as ResouceList from "@cieloazul310/digital-go-react-components/resource-list";
+import { Link } from "@cieloazul310/digital-go-react-components/link";
+import * as RadioGroup from "@cieloazul310/digital-go-react-components/radio";
+import * as Checkbox from "@cieloazul310/digital-go-react-components/checkbox";
 import { EllipsisVertical, CircleUser, Heart } from "lucide-react";
-import { link } from "@cieloazul310/styled-system/recipes";
-import { css } from "@cieloazul310/styled-system/css";
+import { link } from "styled-system/recipes";
+import { css } from "styled-system/css";
 
 const meta = {
   title: "Components/リソースリスト",

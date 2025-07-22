@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { UnorderedList } from "@cieloazul310/digital-go-pandacss/unordered-list";
-import { List } from "@cieloazul310/digital-go-pandacss/list";
+import { UnorderedList } from "@cieloazul310/digital-go-react-components/unordered-list";
+import { List } from "@cieloazul310/digital-go-react-components/list";
 
 const meta = {
   title: "Components/リスト/Ul",

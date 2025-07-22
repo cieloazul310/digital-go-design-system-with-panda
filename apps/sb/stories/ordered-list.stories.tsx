@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { OrderedList } from "@cieloazul310/digital-go-pandacss/ordered-list";
-import { List } from "@cieloazul310/digital-go-pandacss/list";
+import { OrderedList } from "@cieloazul310/digital-go-react-components/ordered-list";
+import { List } from "@cieloazul310/digital-go-react-components/list";
 
 const meta = {
   title: "Components/リスト/Ol",

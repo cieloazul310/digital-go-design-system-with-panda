@@ -2,9 +2,9 @@ import NextLink from "next/link";
 import {
   Link as LinkBase,
   type LinkProps as LinkBaseProps,
-} from "@cieloazul310/digital-go-pandacss/link";
+} from "@/components/ui/link";
 import { ExternalLinkIcon } from "lucide-react";
-import { css } from "@cieloazul310/styled-system/css";
+import { css } from "styled-system/css";
 import { isInternal } from "@/utils/isInternal";
 
 export function Link({ children, href, ...props }: LinkBaseProps) {

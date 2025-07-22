@@ -1,5 +1,5 @@
 import { defineConfig } from "@pandacss/dev";
-import { createPreset } from "@cieloazul310/digital-go-pandacss/preset";
+import { createPreset } from "@cieloazul310/digital-go-pandacss-preset";
 import typography from "./stories/typography";
 
 export default defineConfig({
@@ -32,5 +32,4 @@ export default defineConfig({
   jsxFramework: "react",
   // The output directory for your css system
   outdir: "styled-system",
-  importMap: "@cieloazul310/styled-system",
 });

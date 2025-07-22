@@ -293,7 +293,6 @@
   },
   "peerDependencies": {
     "@ark-ui/react": "^5.0.0",
-    "@cieloazul310/styled-system": "^0.0.1-prerelease.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

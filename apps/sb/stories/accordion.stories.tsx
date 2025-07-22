@@ -1,7 +1,7 @@
 import { ChevronDownIcon } from "lucide-react";
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import * as Accordion from "@cieloazul310/digital-go-pandacss/accordion";
-import { styled, Container } from "@cieloazul310/styled-system/jsx";
+import * as Accordion from "@cieloazul310/digital-go-react-components/accordion";
+import { styled, Container } from "styled-system/jsx";
 
 const meta = {
   title: "Components/アコーディオン",

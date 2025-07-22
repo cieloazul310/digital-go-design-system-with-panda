@@ -1,9 +1,9 @@
 import remarkGfm from "remark-gfm";
 import rehypeShiki from "@shikijs/rehype";
-import { Button } from "@cieloazul310/digital-go-pandacss/button";
+import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { css } from "@cieloazul310/styled-system/css";
-import { Stack } from "@cieloazul310/styled-system/jsx";
+import { css } from "styled-system/css";
+import { Stack } from "styled-system/jsx";
 import { useMDXComponents } from "@/mdx-components";
 import BaseLayout from "@/components/layout/base";
 import { Link } from "@/components/link";

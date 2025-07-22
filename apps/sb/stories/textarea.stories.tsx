@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { Textarea } from "@cieloazul310/digital-go-pandacss/textarea";
-import * as InputText from "@cieloazul310/digital-go-pandacss/input-text";
+import { Textarea } from "@cieloazul310/digital-go-react-components/textarea";
+import * as InputText from "@cieloazul310/digital-go-react-components/input-text";
 
 const meta = {
   title: "Components/テキストエリア",

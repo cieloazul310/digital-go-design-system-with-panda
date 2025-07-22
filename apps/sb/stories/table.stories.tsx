@@ -4,10 +4,10 @@
  */
 import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { styled } from "@cieloazul310/styled-system/jsx";
-import * as Table from "@cieloazul310/digital-go-pandacss/table";
-import * as Checkbox from "@cieloazul310/digital-go-pandacss/checkbox";
-import { css } from "@cieloazul310/styled-system/css";
+import { styled } from "styled-system/jsx";
+import * as Table from "@cieloazul310/digital-go-react-components/table";
+import * as Checkbox from "@cieloazul310/digital-go-react-components/checkbox";
+import { css } from "styled-system/css";
 
 const meta = {
   title: "Components/テーブル",

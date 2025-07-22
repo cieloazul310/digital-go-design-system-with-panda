@@ -1,5 +1,5 @@
 import type { PropsWithChildren } from "react";
-import { css } from "@cieloazul310/styled-system/css";
+import { css } from "styled-system/css";
 import MobileHeader from "./mobile-header";
 import Menu from "./menu";
 import Footer from "./footer";
