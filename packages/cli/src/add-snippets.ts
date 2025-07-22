@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { simpleGit } from "simple-git";
 import { tmpdir } from "os";
-import { cpSync } from "fs";
+import { cpSync, existsSync, readFileSync } from "fs";
 import { join } from "path";
 
 async function main() {
@@ -19,12 +19,24 @@ async function main() {
   // 指定ディレクトリにあるテンプレートを使用
   const templateDir = join(tmpPath, templateSubdir);
 
+  const cwd = process.cwd();
+  const configPath = join(cwd, "components.json");
+
+  let outDir = "src/components/ui";
+
+  if (existsSync(configPath)) {
+    const config = JSON.parse(readFileSync(configPath, "utf-8")) as {
+      // components: string[];
+      outDir?: string;
+    };
+    outDir = config.outDir ?? outDir;
+  }
+
   // アプリ側へのコピー
-  const targetDir = process.argv[2] || "components/ui";
-  const outputDir = join(process.cwd(), targetDir);
+  const outputDir = join(process.cwd(), outDir);
   cpSync(templateDir, outputDir, { recursive: true });
 
-  console.log(`✅ UI components generated from GitHub at ${targetDir}`);
+  console.log(`✅ UI components generated from GitHub at ${outDir}`);
 }
 
 main()

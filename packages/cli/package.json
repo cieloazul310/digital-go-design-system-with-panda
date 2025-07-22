@@ -18,7 +18,8 @@
     "registry": "https://registry.npmjs.org/"
   },
   "files": [
-    "bin"
+    "bin",
+    "public"
   ],
   "bin": {
     "add": "./bin/add-snippets.cjs"

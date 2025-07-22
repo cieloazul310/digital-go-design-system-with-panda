@@ -1,6 +1,6 @@
-import * as StyledTreeView from "@cieloazul310/digital-go-pandacss/tree-view";
 import { ChevronRightIcon } from "lucide-react";
 import { forwardRef } from "react";
+import * as StyledTreeView from "./ui/tree-view";
 
 export interface TreeNodeType {
   id: string;

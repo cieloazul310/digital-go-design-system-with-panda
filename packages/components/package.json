@@ -1,6 +1,7 @@
 {
   "name": "@cieloazul310/digital-go-react-components",
   "version": "0.0.1-prerelease.4",
+  "private": true,
   "license": "MIT",
   "homepage": "https://github.com/cieloazul310/digital-go-design-system-with-panda",
   "author": {

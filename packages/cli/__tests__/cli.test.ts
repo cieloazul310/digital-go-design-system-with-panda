@@ -1,15 +1,21 @@
 import { describe, it, expect, beforeEach, afterEach } from "vitest";
 import { execa } from "execa";
-import { rmSync, mkdtempSync, readdirSync, mkdirSync, existsSync } from "fs";
+import {
+  rmSync,
+  mkdtempSync,
+  readdirSync,
+  existsSync,
+  cpSync,
+  writeFileSync,
+} from "fs";
 import { tmpdir } from "os";
-import { join } from "path";
+import { join, resolve } from "path";
 
 describe("digital go panda css CLI", () => {
   let outputDir: string;
 
   beforeEach(() => {
     outputDir = mkdtempSync(join(tmpdir(), "digital-go-panda-cli-"));
-    mkdirSync(outputDir, { recursive: true });
     console.log(`Temporary directory created: ${outputDir}`);
   });
 
@@ -20,15 +26,13 @@ describe("digital go panda css CLI", () => {
     }
   });
 
-  it("should generate component files in specified directory", async () => {
+  async function runCliAndAssert(outDir: string, expectedMsg: string) {
     const cliPath = join(__dirname, "../bin/add-snippets.cjs");
-    const { stdout } = await execa("node", [cliPath], { cwd: outputDir });
+    const { stdout } = await execa("node", [cliPath], { cwd: outDir });
 
-    expect(stdout).toBe(
-      `✅ UI components generated from GitHub at components/ui`,
-    );
+    expect(stdout).toBe(expectedMsg);
 
-    const componentDir = join(outputDir, "components/ui");
+    const componentDir = join(outDir, expectedMsg.match(/at (.+)$/)?.[1] ?? "");
     expect(existsSync(componentDir)).toBe(true);
 
     const files = readdirSync(componentDir, { withFileTypes: true });
@@ -38,5 +42,37 @@ describe("digital go panda css CLI", () => {
       recursive: true,
     });
     expect(generatedFiles).toContain("index.tsx");
+  }
+
+  it("if component.json exists", async () => {
+    cpSync(
+      resolve(__dirname, "../public/components.json"),
+      join(outputDir, "components.json"),
+    );
+    await runCliAndAssert(
+      outputDir,
+      "✅ UI components generated from GitHub at src/components/ui",
+    );
+  });
+
+  it("if component.json does not exist", async () => {
+    await runCliAndAssert(
+      outputDir,
+      "✅ UI components generated from GitHub at src/components/ui",
+    );
+  });
+
+  it("custom config", async () => {
+    const customConfig = {
+      outDir: "components/digital-go",
+    };
+    writeFileSync(
+      join(outputDir, "components.json"),
+      JSON.stringify(customConfig, null, 2),
+    );
+    await runCliAndAssert(
+      outputDir,
+      "✅ UI components generated from GitHub at components/digital-go",
+    );
   });
 });

@@ -21,14 +21,8 @@ export default defineConfig({
 
   // The output directory for your css system
   outdir: "../generated/dist",
-  importMap: "@cieloazul310/styled-system",
-  // Equivalent to:
-  // importMap: {
-  //   css: '@import-map-package/styled-system/css',
-  //   recipes: '@import-map-package/styled-system/recipes',
-  //   patterns: '@import-map-package/styled-system/patterns',
-  //   jsx: '@import-map-package/styled-system/jsx',
-  // },
+  importMap: "styled-system",
+
   // The JSX framework to use
   jsxFramework: "react",
 
