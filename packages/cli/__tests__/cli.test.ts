@@ -7,6 +7,7 @@ import {
   existsSync,
   cpSync,
   writeFileSync,
+  mkdirSync,
 } from "fs";
 import { tmpdir } from "os";
 import { join, resolve } from "path";
@@ -62,7 +63,7 @@ describe("digital go panda css CLI", () => {
     );
   });
 
-  it("custom config", async () => {
+  it("custom output directory", async () => {
     const customConfig = {
       outDir: "components/digital-go",
     };
@@ -73,6 +74,26 @@ describe("digital go panda css CLI", () => {
     await runCliAndAssert(
       outputDir,
       "✅ UI components generated from GitHub at components/digital-go",
+    );
+  });
+
+  it("override false config", async () => {
+    const customConfig = {
+      override: false,
+    };
+    writeFileSync(
+      join(outputDir, "components.json"),
+      JSON.stringify(customConfig, null, 2),
+    );
+    // 事前にディレクトリを作成しておく
+    const targetDir = join(outputDir, "src/components/ui");
+    // 必要ならサブディレクトリも作成
+    mkdirSync(targetDir, { recursive: true });
+
+    const cliPath = join(__dirname, "../bin/add-snippets.cjs");
+    // エラーが出ることを期待
+    await expect(execa("node", [cliPath], { cwd: outputDir })).rejects.toThrow(
+      /already exists|overwrite/i,
     );
   });
 });

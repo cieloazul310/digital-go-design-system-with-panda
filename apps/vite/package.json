@@ -4,6 +4,7 @@
   "version": "0.0.1-prerelease.4",
   "type": "module",
   "scripts": {
+    "prebuild": "panda codegen",
     "panda": "panda codegen",
     "start": "vite",
     "build": "tsc && vite build",

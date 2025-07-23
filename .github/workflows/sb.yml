@@ -21,7 +21,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  BUILD_PATH: "./packages/components"
+  BUILD_PATH: "./components"
 
 jobs:
   build:
