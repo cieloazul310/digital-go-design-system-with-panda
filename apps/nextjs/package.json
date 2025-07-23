@@ -3,6 +3,7 @@
   "version": "0.0.1-prerelease.4",
   "private": true,
   "scripts": {
+    "prebuild": "panda codegen",
     "panda": "panda",
     "dev": "next dev",
     "build": "next build",
