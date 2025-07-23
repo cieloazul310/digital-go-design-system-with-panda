@@ -24,7 +24,7 @@ export default defineConfig({
   },
 
   // The output directory for your css system
-  outdir: "../generated/dist",
+  outdir: "../packages/generated/dist",
   importMap: "styled-system",
 
   // The JSX framework to use

@@ -14,6 +14,14 @@
     "outputDir": {
       "type": "string",
       "description": "The directory where the components will be generated."
+    },
+    "sourceDir": {
+      "type": "string",
+      "description": "The directory where the source files for the components are located."
+    },
+    "override": {
+      "type": "boolean",
+      "description": "Whether to override existing files in the output directory."
     }
   },
   "required": []
