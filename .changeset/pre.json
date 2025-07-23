@@ -1,22 +1,17 @@
 {
   "mode": "pre",
-  "tag": "prerelease",
+  "tag": "beta",
   "initialVersions": {
-    "nextjs": "0.0.0",
-    "sb": "0.0.0",
-    "app": "0.0.0",
-    "styled-system": "0.0.0",
+    "nextjs": "0.0.1-prerelease.4",
+    "app": "0.0.1-prerelease.4",
+    "components": "0.0.1-prerelease.4",
+    "@cieloazul310/digital-go-pandacss-cli": "0.0.1-prerelease.4",
     "@repo/eslint-config": "0.0.0",
+    "styled-system": "0.0.1-prerelease.4",
+    "@cieloazul310/digital-go-pandacss-preset": "0.0.1-prerelease.4",
+    "@cieloazul310/digital-go-pandacss-plugin": "0.0.1-prerelease.4",
     "@repo/typescript-config": "0.0.0",
-    "@cieloazul310/digital-go-pandacss-preset": "0.0.0",
-    "@cieloazul310/digital-go-pandacss-plugin": "0.0.0",
-    "@cieloazul310/digital-go-pandacss-utils": "0.0.0"
+    "@cieloazul310/digital-go-pandacss-utils": "0.0.1-prerelease.4"
   },
-  "changesets": [
-    "brave-bats-join",
-    "proud-seas-cry",
-    "shy-roses-divide",
-    "sour-wombats-turn",
-    "violet-poems-bathe"
-  ]
+  "changesets": []
 }
