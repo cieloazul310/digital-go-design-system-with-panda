@@ -32,7 +32,7 @@ async function main() {
     // GitHub 上のテンプレートリポジトリ
     const repoUrl =
       "https://github.com/cieloazul310/digital-go-design-system-with-panda";
-    const templateSubdir = "packages/components/src";
+    const templateSubdir = "components/src";
 
     // 一時ディレクトリへ clone
     const tmpPath = join(tmpdir(), `digital-go-pandacss-${Date.now()}`);
