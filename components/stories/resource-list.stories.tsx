@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import NextLink from "next/link";
-import * as ResouceList from "../src/resource-list";
+import * as ResourceList from "../src/resource-list";
 import { Link } from "../src/link";
 import * as RadioGroup from "../src/radio";
 import * as Checkbox from "../src/checkbox";
@@ -10,7 +10,7 @@ import { css } from "styled-system/css";
 
 const meta = {
   title: "Components/リソースリスト",
-  component: ResouceList.Root,
+  component: ResourceList.Root,
   tags: ["autodocs"],
   args: {
     variant: "list",
@@ -27,7 +27,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof ResouceList.Root>;
+} satisfies Meta<typeof ResourceList.Root>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -36,20 +36,20 @@ export const Basic: Story = {
   args: {
     children: (
       <>
-        <ResouceList.ContentsContainer>
-          <ResouceList.FrontIcon>
+        <ResourceList.ContentsContainer>
+          <ResourceList.FrontIcon>
             <CircleUser />
-          </ResouceList.FrontIcon>
-          <ResouceList.Content>
-            <ResouceList.Label>ラベル</ResouceList.Label>
-            <ResouceList.Title>リストタイトル</ResouceList.Title>
-            <ResouceList.SuportText>サポートテキスト</ResouceList.SuportText>
-          </ResouceList.Content>
-          <ResouceList.SubLabel>サブラベル</ResouceList.SubLabel>
-        </ResouceList.ContentsContainer>
-        <ResouceList.FunctionButton>
+          </ResourceList.FrontIcon>
+          <ResourceList.Content>
+            <ResourceList.Label>ラベル</ResourceList.Label>
+            <ResourceList.Title>リストタイトル</ResourceList.Title>
+            <ResourceList.SuportText>サポートテキスト</ResourceList.SuportText>
+          </ResourceList.Content>
+          <ResourceList.SubLabel>サブラベル</ResourceList.SubLabel>
+        </ResourceList.ContentsContainer>
+        <ResourceList.FunctionButton>
           <EllipsisVertical />
-        </ResouceList.FunctionButton>
+        </ResourceList.FunctionButton>
       </>
     ),
   },
@@ -60,13 +60,13 @@ export const AsLink: Story = {
     asLink: true,
     children: (
       <>
-        <ResouceList.ContentsContainer>
-          <ResouceList.FrontIcon>
+        <ResourceList.ContentsContainer>
+          <ResourceList.FrontIcon>
             <CircleUser />
-          </ResouceList.FrontIcon>
-          <ResouceList.Content>
-            <ResouceList.Label>ラベル</ResouceList.Label>
-            <ResouceList.Title asChild>
+          </ResourceList.FrontIcon>
+          <ResourceList.Content>
+            <ResourceList.Label>ラベル</ResourceList.Label>
+            <ResourceList.Title asChild>
               <Link
                 href="https://cieloazul310.github.io"
                 target="_blank"
@@ -74,14 +74,14 @@ export const AsLink: Story = {
               >
                 リストタイトル
               </Link>
-            </ResouceList.Title>
-            <ResouceList.SuportText>サポートテキスト</ResouceList.SuportText>
-          </ResouceList.Content>
-          <ResouceList.SubLabel>サブラベル</ResouceList.SubLabel>
-        </ResouceList.ContentsContainer>
-        <ResouceList.FunctionButton>
+            </ResourceList.Title>
+            <ResourceList.SuportText>サポートテキスト</ResourceList.SuportText>
+          </ResourceList.Content>
+          <ResourceList.SubLabel>サブラベル</ResourceList.SubLabel>
+        </ResourceList.ContentsContainer>
+        <ResourceList.FunctionButton>
           <EllipsisVertical />
-        </ResouceList.FunctionButton>
+        </ResourceList.FunctionButton>
       </>
     ),
   },
@@ -91,17 +91,17 @@ export const WithoutFunctionButton: Story = {
   args: {
     asLink: false,
     children: (
-      <ResouceList.ContentsContainer>
-        <ResouceList.FrontIcon>
+      <ResourceList.ContentsContainer>
+        <ResourceList.FrontIcon>
           <CircleUser />
-        </ResouceList.FrontIcon>
-        <ResouceList.Content>
-          <ResouceList.Label>ラベル</ResouceList.Label>
-          <ResouceList.Title>リストタイトル</ResouceList.Title>
-          <ResouceList.SuportText>サポートテキスト</ResouceList.SuportText>
-        </ResouceList.Content>
-        <ResouceList.SubLabel>サブラベル</ResouceList.SubLabel>
-      </ResouceList.ContentsContainer>
+        </ResourceList.FrontIcon>
+        <ResourceList.Content>
+          <ResourceList.Label>ラベル</ResourceList.Label>
+          <ResourceList.Title>リストタイトル</ResourceList.Title>
+          <ResourceList.SuportText>サポートテキスト</ResourceList.SuportText>
+        </ResourceList.Content>
+        <ResourceList.SubLabel>サブラベル</ResourceList.SubLabel>
+      </ResourceList.ContentsContainer>
     ),
   },
 };
@@ -125,22 +125,22 @@ export const ConsultationExample: Story = {
         new Date("2024-11-24"),
         new Date("2023-10-13"),
       ].map((date) => (
-        <ResouceList.Root key={date.toString()} {...props} asChild>
+        <ResourceList.Root key={date.toString()} {...props} asChild>
           <li>
-            <ResouceList.ContentsContainer>
-              <ResouceList.Content>
-                <ResouceList.Title>健康診断</ResouceList.Title>
-                <ResouceList.SuportText>
+            <ResourceList.ContentsContainer>
+              <ResourceList.Content>
+                <ResourceList.Title>健康診断</ResourceList.Title>
+                <ResourceList.SuportText>
                   {date.getFullYear()}年度
-                </ResouceList.SuportText>
-              </ResouceList.Content>
-              <ResouceList.SubLabel>
+                </ResourceList.SuportText>
+              </ResourceList.Content>
+              <ResourceList.SubLabel>
                 受診日:{" "}
                 {`${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`}
-              </ResouceList.SubLabel>
-            </ResouceList.ContentsContainer>
+              </ResourceList.SubLabel>
+            </ResourceList.ContentsContainer>
           </li>
-        </ResouceList.Root>
+        </ResourceList.Root>
       ))}
     </ul>
   ),
@@ -183,21 +183,21 @@ export const AccountsExample: Story = {
       })}
     >
       {accounts.map(({ lastName, firstName, email, status, favorited }) => (
-        <ResouceList.Root key={`${lastName}${firstName}`} {...props} asChild>
+        <ResourceList.Root key={`${lastName}${firstName}`} {...props} asChild>
           <li>
-            <ResouceList.ContentsContainer className="group">
-              <ResouceList.Content>
-                <ResouceList.Title asChild>
+            <ResourceList.ContentsContainer className="group">
+              <ResourceList.Content>
+                <ResourceList.Title asChild>
                   <NextLink
                     className={link()}
                     href={`/${lastName}_${firstName}`}
                   >
                     {lastName} {firstName}
                   </NextLink>
-                </ResouceList.Title>
-                <ResouceList.SuportText>{email}</ResouceList.SuportText>
-              </ResouceList.Content>
-              <ResouceList.SubLabel>
+                </ResourceList.Title>
+                <ResourceList.SuportText>{email}</ResourceList.SuportText>
+              </ResourceList.Content>
+              <ResourceList.SubLabel>
                 {status === "invited" ? (
                   <Heart
                     className={
@@ -209,10 +209,10 @@ export const AccountsExample: Story = {
                 ) : (
                   "招待中"
                 )}
-              </ResouceList.SubLabel>
-            </ResouceList.ContentsContainer>
+              </ResourceList.SubLabel>
+            </ResourceList.ContentsContainer>
           </li>
-        </ResouceList.Root>
+        </ResourceList.Root>
       ))}
     </ul>
   ),
@@ -259,21 +259,23 @@ export const PaymentExample: Story = {
       <RadioGroup.Root>
         {payments.map(({ id, label, description, recomended }) => (
           <RadioGroup.Item width="full" key={id} value={id}>
-            <ResouceList.Root width="full" {...props}>
-              <ResouceList.ContentsContainer className="group">
-                <ResouceList.Form>
+            <ResourceList.Root width="full" {...props}>
+              <ResourceList.ContentsContainer className="group">
+                <ResourceList.Form>
                   <RadioGroup.ItemControl />
                   <RadioGroup.ItemHiddenInput />
-                </ResouceList.Form>
-                <ResouceList.Content>
+                </ResourceList.Form>
+                <ResourceList.Content>
                   {recomended && (
-                    <ResouceList.Label>おすすめ</ResouceList.Label>
+                    <ResourceList.Label>おすすめ</ResourceList.Label>
                   )}
-                  <ResouceList.Title>{label}</ResouceList.Title>
-                  <ResouceList.SuportText>{description}</ResouceList.SuportText>
-                </ResouceList.Content>
-              </ResouceList.ContentsContainer>
-            </ResouceList.Root>
+                  <ResourceList.Title>{label}</ResourceList.Title>
+                  <ResourceList.SuportText>
+                    {description}
+                  </ResourceList.SuportText>
+                </ResourceList.Content>
+              </ResourceList.ContentsContainer>
+            </ResourceList.Root>
           </RadioGroup.Item>
         ))}
       </RadioGroup.Root>
@@ -316,26 +318,28 @@ export const UserSelectExample: Story = {
     >
       {users.map(({ name, description, role }) => (
         <Checkbox.Root width="full" py={0} value={name} key={name}>
-          <ResouceList.Root width="full" {...props}>
-            <ResouceList.ContentsContainer className="group">
-              <ResouceList.Form>
+          <ResourceList.Root width="full" {...props}>
+            <ResourceList.ContentsContainer className="group">
+              <ResourceList.Form>
                 <Checkbox.Control>
                   <Checkbox.Indicator />
                 </Checkbox.Control>
                 <Checkbox.HiddenInput />
-              </ResouceList.Form>
-              <ResouceList.FrontIcon>
+              </ResourceList.Form>
+              <ResourceList.FrontIcon>
                 <CircleUser className={css({ width: 8, height: 8 })} />
-              </ResouceList.FrontIcon>
-              <ResouceList.Content asChild>
+              </ResourceList.FrontIcon>
+              <ResourceList.Content asChild>
                 <Checkbox.Label>
-                  <ResouceList.Title>{name}</ResouceList.Title>
-                  <ResouceList.SuportText>{description}</ResouceList.SuportText>
+                  <ResourceList.Title>{name}</ResourceList.Title>
+                  <ResourceList.SuportText>
+                    {description}
+                  </ResourceList.SuportText>
                 </Checkbox.Label>
-              </ResouceList.Content>
-              <ResouceList.Label>{role}</ResouceList.Label>
-            </ResouceList.ContentsContainer>
-          </ResouceList.Root>
+              </ResourceList.Content>
+              <ResourceList.Label>{role}</ResourceList.Label>
+            </ResourceList.ContentsContainer>
+          </ResourceList.Root>
         </Checkbox.Root>
       ))}
     </Checkbox.Group>
@@ -372,18 +376,18 @@ export const SearchResultExample: Story = {
   render: ({ ...props }) => (
     <nav className={css({ maxW: "breakpoint-md", m: "auto" })}>
       {searchResult.map(({ title, description, href }) => (
-        <ResouceList.Root key={href} {...props}>
-          <ResouceList.ContentsContainer className="group">
-            <ResouceList.Content>
-              <ResouceList.Title mb={4} asChild>
+        <ResourceList.Root key={href} {...props}>
+          <ResourceList.ContentsContainer className="group">
+            <ResourceList.Content>
+              <ResourceList.Title mb={4} asChild>
                 <NextLink className={link()} href={href}>
                   {title}
                 </NextLink>
-              </ResouceList.Title>
-              <ResouceList.SuportText>{description}</ResouceList.SuportText>
-            </ResouceList.Content>
-          </ResouceList.ContentsContainer>
-        </ResouceList.Root>
+              </ResourceList.Title>
+              <ResourceList.SuportText>{description}</ResourceList.SuportText>
+            </ResourceList.Content>
+          </ResourceList.ContentsContainer>
+        </ResourceList.Root>
       ))}
     </nav>
   ),
@@ -425,11 +429,11 @@ export const InformationExample: Story = {
       })}
     >
       {information.map(({ title, date, isImportant, href }) => (
-        <ResouceList.Root key={href} {...props}>
-          <ResouceList.ContentsContainer className="group">
-            <ResouceList.Content>
+        <ResourceList.Root key={href} {...props}>
+          <ResourceList.ContentsContainer className="group">
+            <ResourceList.Content>
               {isImportant && (
-                <ResouceList.Label
+                <ResourceList.Label
                   rounded={4}
                   color="red.900"
                   bg="red.50"
@@ -439,17 +443,17 @@ export const InformationExample: Story = {
                   mb={1}
                 >
                   重要
-                </ResouceList.Label>
+                </ResourceList.Label>
               )}
-              <ResouceList.Title asChild>
+              <ResourceList.Title asChild>
                 <NextLink className={link()} href={href}>
                   {title}
                 </NextLink>
-              </ResouceList.Title>
-              <ResouceList.SuportText>{`${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`}</ResouceList.SuportText>
-            </ResouceList.Content>
-          </ResouceList.ContentsContainer>
-        </ResouceList.Root>
+              </ResourceList.Title>
+              <ResourceList.SuportText>{`${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`}</ResourceList.SuportText>
+            </ResourceList.Content>
+          </ResourceList.ContentsContainer>
+        </ResourceList.Root>
       ))}
     </nav>
   ),
