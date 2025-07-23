@@ -13,5 +13,7 @@
     "@repo/typescript-config": "0.0.0",
     "@cieloazul310/digital-go-pandacss-utils": "0.0.1-prerelease.4"
   },
-  "changesets": []
+  "changesets": [
+    "shy-clocks-wash"
+  ]
 }
