@@ -1,5 +1,11 @@
 # @cieloazul310/digital-go-pandacss-utils
 
+## 0.1.0-beta.5
+
+### Minor Changes
+
+- 3ba4563: beta version
+
 ## 0.0.1-prerelease.4
 
 ### Patch Changes

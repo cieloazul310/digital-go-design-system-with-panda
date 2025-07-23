@@ -1,5 +1,16 @@
 # @cieloazul310/digital-go-react-components
 
+## 0.1.0-beta.5
+
+### Minor Changes
+
+- 3ba4563: beta version
+
+### Patch Changes
+
+- Updated dependencies [3ba4563]
+  - styled-system@0.1.0-beta.5
+
 ## 0.0.1-prerelease.4
 
 ### Patch Changes
