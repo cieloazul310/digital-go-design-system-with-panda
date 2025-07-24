@@ -21,7 +21,7 @@ const meta = {
   render: ({ ...props }) => {
     return (
       <Accordion.Root textStyle="std-16N-170" {...props}>
-        <Accordion.Item className="group" value="hoge">
+        <Accordion.Item value="hoge">
           <Accordion.ItemTrigger>
             <h3>ダミーテキストとは何ですか？</h3>
             <Accordion.ItemIndicator>
@@ -35,7 +35,7 @@ const meta = {
             </p>
           </Accordion.ItemContent>
         </Accordion.Item>
-        <Accordion.Item className="group" value="hige">
+        <Accordion.Item value="hige">
           <Accordion.ItemTrigger>
             <h3>
               ダミーテキストがデザインやレイアウトに使用されていることがよくありますが、どのような目的や意味で使用されているのでしょうか？
@@ -48,7 +48,7 @@ const meta = {
             これはダミーテキストです。ダミーテキストは、デザインやレイアウトの作成時に使用される仮の文章です。ダミーテキストを使用すると、デザインの全体像を評価したり、テキストの配置や長さを確認したりすることができます。ダミーテキストは実際の文章ではないので、内容には意味がありません。これはダミーテキストです。ダミーテキストは、デザインやレイアウトの作成時に使用される仮の文章です。ダミーテキストを使用すると、デザインの全体像を評価したり、テキストの配置や長さを確認したりすることができます。ダミーテキストは実際の文章ではないので、内容には意味がありません。
           </Accordion.ItemContent>
         </Accordion.Item>
-        <Accordion.Item className="group" value="huge">
+        <Accordion.Item value="huge">
           <Accordion.ItemTrigger>
             <h3>ダミーテキストはどのような場合に使用されますか？</h3>
             <Accordion.ItemIndicator>
@@ -85,7 +85,7 @@ export const Summary: Story = {
           ダミーテキストは、デザインやレイアウトの作成時に使用される仮の文章です。ダミーテキストを使用すると、デザインの全体像を評価したり、テキストの配置や長さを確認したりすることができます。ダミーテキストは実際の文章ではないので、内容には意味がありません。
         </styled.p>
         <Accordion.Root my={8} {...props}>
-          <Accordion.Item className="group" value="hoge" asChild>
+          <Accordion.Item value="hoge" asChild>
             <details>
               <Accordion.ItemTrigger asChild>
                 <summary>

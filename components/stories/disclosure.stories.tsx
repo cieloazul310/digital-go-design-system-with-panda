@@ -14,7 +14,7 @@ const meta = {
   render: ({ ...props }) => {
     return (
       <Disclosure.Root {...props}>
-        <Disclosure.Summary className="group">
+        <Disclosure.Summary>
           <Disclosure.Icon />
           ディスクロージャータイトル
         </Disclosure.Summary>
@@ -42,7 +42,7 @@ export const Summary: Story = {
         </styled.p>
         <Disclosure.Root my={8} asChild {...props}>
           <details>
-            <Disclosure.Summary className="group" asChild>
+            <Disclosure.Summary asChild>
               <summary>
                 <Disclosure.Icon />
                 ダミーテキストがデザインやレイアウトに使用されていることがよくありますが、どのような目的や意味で使用されているのでしょうか？

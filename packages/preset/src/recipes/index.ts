@@ -1,6 +1,7 @@
 import accordion from "./accordion";
 import breadcrumb from "./breadcrumb";
 import button from "./button";
+import card from "./card";
 import checkbox from "./checkbox";
 import disclosure from "./disclosure";
 import digitalGoDivider from "./divider";
@@ -36,6 +37,7 @@ const recipes = {
   accordion,
   breadcrumb,
   button,
+  card,
   checkbox,
   drawer,
   disclosure,

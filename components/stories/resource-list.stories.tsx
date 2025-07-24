@@ -185,7 +185,7 @@ export const AccountsExample: Story = {
       {accounts.map(({ lastName, firstName, email, status, favorited }) => (
         <ResourceList.Root key={`${lastName}${firstName}`} {...props} asChild>
           <li>
-            <ResourceList.ContentsContainer className="group">
+            <ResourceList.ContentsContainer>
               <ResourceList.Content>
                 <ResourceList.Title asChild>
                   <NextLink
@@ -260,7 +260,7 @@ export const PaymentExample: Story = {
         {payments.map(({ id, label, description, recomended }) => (
           <RadioGroup.Item width="full" key={id} value={id}>
             <ResourceList.Root width="full" {...props}>
-              <ResourceList.ContentsContainer className="group">
+              <ResourceList.ContentsContainer>
                 <ResourceList.Form>
                   <RadioGroup.ItemControl />
                   <RadioGroup.ItemHiddenInput />
@@ -319,7 +319,7 @@ export const UserSelectExample: Story = {
       {users.map(({ name, description, role }) => (
         <Checkbox.Root width="full" py={0} value={name} key={name}>
           <ResourceList.Root width="full" {...props}>
-            <ResourceList.ContentsContainer className="group">
+            <ResourceList.ContentsContainer>
               <ResourceList.Form>
                 <Checkbox.Control>
                   <Checkbox.Indicator />
@@ -377,7 +377,7 @@ export const SearchResultExample: Story = {
     <nav className={css({ maxW: "breakpoint-md", m: "auto" })}>
       {searchResult.map(({ title, description, href }) => (
         <ResourceList.Root key={href} {...props}>
-          <ResourceList.ContentsContainer className="group">
+          <ResourceList.ContentsContainer>
             <ResourceList.Content>
               <ResourceList.Title mb={4} asChild>
                 <NextLink className={link()} href={href}>
@@ -430,7 +430,7 @@ export const InformationExample: Story = {
     >
       {information.map(({ title, date, isImportant, href }) => (
         <ResourceList.Root key={href} {...props}>
-          <ResourceList.ContentsContainer className="group">
+          <ResourceList.ContentsContainer>
             <ResourceList.Content>
               {isImportant && (
                 <ResourceList.Label

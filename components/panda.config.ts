@@ -23,6 +23,10 @@ export default defineConfig({
     extend: {},
   },
 
+  staticCss: {
+    recipes: "*",
+  },
+
   // The output directory for your css system
   outdir: "../packages/generated/dist",
   importMap: "styled-system",
