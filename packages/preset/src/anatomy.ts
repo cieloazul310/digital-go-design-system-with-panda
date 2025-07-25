@@ -11,7 +11,13 @@ export const breadcrumbAnatomy = createAnatomy("breadcrumb").parts(
   "separator",
 );
 
-export const cardAnatomy = createAnatomy("card").parts("root");
+export const cardAnatomy = createAnatomy("card").parts(
+  "root",
+  "main",
+  "image",
+  "sub",
+  "title",
+);
 
 export const disclosureAnatomy = createAnatomy("disclosure").parts(
   "root",
