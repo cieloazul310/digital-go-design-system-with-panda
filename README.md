@@ -10,10 +10,10 @@ Next.js Example
 
 ## 使い方
 
-### 1. React + Panda CSS プロジェクトにインストール
+### 1. React + Panda CSS プロジェクトにプリセットをインストール
 
 ```sh
-npm install @cieloazul310/digital-go-pandacss @cieloazul310/styled-system
+npm install @cieloazul310/digital-go-pandacss-preset
 ```
 
 ### 2. `panda.config`の設定
@@ -21,7 +21,7 @@ npm install @cieloazul310/digital-go-pandacss @cieloazul310/styled-system
 ```diff
 // panda.config.ts
 import { defineConfig } from "@pandacss/dev";
-+ import { createPreset } from "@cieloazul310/digital-go-pandacss/preset";
++ import { createPreset } from "@cieloazul310/digital-go-pandacss-preset";
 
 export default defineConfig({
   presets: [
@@ -45,15 +45,22 @@ export default defineConfig({
 
   // The output directory for your css system
   outdir: "styled-system",
-+ importMap: "@cieloazul310/styled-system",
 });
 ```
 
-### 3. コンポーネントを使う
+### 3. コンポーネントをインストール
+
+```sh
+npx @cieloazul310/digital-go-pandacss-cli add
+```
+
+`src/components/ui`にコンポーネントを生成
+
+### 4. コンポーネントを使う
 
 ```tsx
-import { Button } from "@cieloazul310/digital-go-pandacss/button";
-import { css } from "@cieloazul310/styled-system/css";
+import { Button } from "@/components/ui/button";
+import { css } from "styled-system/css";
 
 export default function App() {
   return (
@@ -74,10 +81,8 @@ export default function App() {
 ## 構成
 
 - `utils`: ユーティリティパッケージ
-- `preset-base`: 基礎となるPandaプリセット
+- `preset-base`: Tailwindテーマプラグインを基に作成したPandaプリセット
 - `preset`: コンポーネントのレシピを内包したPandaプリセット
-- `components`: Ark UIのコンポーネントをレシピでスタイリングしたReactコンポーネント
-- `core`: `preset`と`components`を内包したコアパッケージ
 
 ## コンポーネント
 
