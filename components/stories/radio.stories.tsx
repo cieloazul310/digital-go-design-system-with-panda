@@ -81,7 +81,7 @@ export const Playground: Story = {
 export const Inline: Story = {
   args: {
     size: "sm",
-    disabled: false,
+    "aria-disabled": false,
     orientation: "horizontal",
   },
   render: ({ ...props }) => (

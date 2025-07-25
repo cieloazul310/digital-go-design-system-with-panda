@@ -19,6 +19,52 @@ import { Stack } from "styled-system/jsx";
 
 ---
 
+## 使い方
+
+### 1. React + Panda CSSプロジェクトにプリセットをインストール
+
+```sh
+npm install --save-dev @cieloazul310/digital-go-pandacss-preset
+```
+
+### 2. 設定
+
+#### `panda.config.ts`
+
+```ts
+// panda.config.ts
+import { defineConfig } from "@pandacss/dev";
+import { createPreset } from "@cieloazul310/digital-go-pandacss-preset";
+
+export default defineConfig({
+  presets: ["@pandacss/dev/presets", createPreset("blue")],
+  // ...pandaConfig
+});
+```
+
+#### `tsconfig.json`
+
+```json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "styled-system/*": [
+        "./styled-system/*"
+      ]
+    }
+  }
+}
+```
+
+### 3. コンポーネントを`components/ui`ディレクトリに生成
+
+```sh
+npx @cieloazul310/digital-go-pandacss-cli add
+```
+
+---
+
 ## 実装状況
 
 | 名称                          | recipe           | React              |

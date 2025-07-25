@@ -21,7 +21,7 @@ export type SummaryProps = ComponentProps<typeof Summary>;
 export const Summary = withContext<
   HTMLElement,
   Assign<HTMLStyledProps<"summary">, PolymorphicProps>
->(Collapsible.Trigger, "summary");
+>(Collapsible.Trigger, "summary", { defaultClassName: "group" });
 
 export type IconProps = ComponentProps<typeof Icon>;
 export const Icon = withContext<

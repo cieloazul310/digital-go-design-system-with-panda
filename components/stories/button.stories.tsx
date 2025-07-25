@@ -34,13 +34,6 @@ const meta = {
         type: { summary: "'lg' | 'md' | 'sm' | 'xs'" },
       },
     },
-    disabled: {
-      control: { type: "boolean" },
-      table: {
-        defaultValue: { summary: "false" },
-        type: { summary: "boolean" },
-      },
-    },
     "aria-disabled": {
       description:
         "無効化する必要がある場合は `disabled` 属性ではなく `aria-disabled` 属性を使用します。",
@@ -62,7 +55,6 @@ export const Playground: Story = {
     size: "lg",
     children: "ボタン",
     onClick: fn(),
-    disabled: false,
     "aria-disabled": false,
   },
 };
@@ -134,10 +126,6 @@ export const DisabledButtons = {
         <h2 className={headingStyle}>
           Disabledの作例（aria-disabled 属性を使用）
         </h2>
-        <styled.p color="error.2">
-          Panda CSSでは <code>aria-disabled</code> 属性と <code>_disabled</code>{" "}
-          に互換性はない。
-        </styled.p>
         <styled.p mb={8}>
           ※ ボタンの無効化に<code>disabled</code>
           コンテンツ属性ではなく、キーボード操作のタブフォーカスでもアクセスできる
@@ -247,7 +235,6 @@ export const SolidFillLG: Story = {
     size: "lg",
     children: "ボタン",
     onClick: fn(),
-    disabled: false,
     "aria-disabled": false,
   },
 };
@@ -258,7 +245,6 @@ export const SolidFillMD: Story = {
     size: "md",
     children: "ボタン",
     onClick: fn(),
-    disabled: false,
     "aria-disabled": false,
   },
 };
@@ -269,7 +255,6 @@ export const SolidFillSM: Story = {
     size: "sm",
     children: "ボタン",
     onClick: fn(),
-    disabled: false,
     "aria-disabled": false,
   },
 };
@@ -280,7 +265,6 @@ export const SolidFillXS: Story = {
     size: "xs",
     children: "ボタン",
     onClick: fn(),
-    disabled: false,
     "aria-disabled": false,
   },
 };
@@ -291,7 +275,6 @@ export const OutlineLG: Story = {
     size: "lg",
     children: "ボタン",
     onClick: fn(),
-    disabled: false,
     "aria-disabled": false,
   },
 };
@@ -302,7 +285,6 @@ export const OutlineMD: Story = {
     size: "md",
     children: "ボタン",
     onClick: fn(),
-    disabled: false,
     "aria-disabled": false,
   },
 };
@@ -313,7 +295,6 @@ export const OutlineSM: Story = {
     size: "sm",
     children: "ボタン",
     onClick: fn(),
-    disabled: false,
     "aria-disabled": false,
   },
 };
@@ -324,7 +305,6 @@ export const OutlineXS: Story = {
     size: "xs",
     children: "ボタン",
     onClick: fn(),
-    disabled: false,
     "aria-disabled": false,
   },
 };
@@ -335,7 +315,6 @@ export const TextLG: Story = {
     size: "lg",
     children: "ボタン",
     onClick: fn(),
-    disabled: false,
     "aria-disabled": false,
   },
 };
@@ -346,7 +325,6 @@ export const TextMD: Story = {
     size: "md",
     children: "ボタン",
     onClick: fn(),
-    disabled: false,
     "aria-disabled": false,
   },
 };
@@ -357,7 +335,6 @@ export const TextSM: Story = {
     size: "sm",
     children: "ボタン",
     onClick: fn(),
-    disabled: false,
     "aria-disabled": false,
   },
 };
@@ -368,7 +345,6 @@ export const TextXS: Story = {
     size: "xs",
     children: "ボタン",
     onClick: fn(),
-    disabled: false,
     "aria-disabled": false,
   },
 };
