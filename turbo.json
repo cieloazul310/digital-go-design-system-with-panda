@@ -3,11 +3,11 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist", "bin"]
+      "outputs": ["dist", "bin", ".next", "storybook-static"]
     },
     "dev": {
       "dependsOn": ["^dev"],
-      "outputs": ["dist"]
+      "outputs": ["dist", ".next"]
     },
     "clean": {}
   }
