@@ -26,6 +26,13 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+function withSubPath(href: string) {
+  if (process.env.NODE_ENV === "production") {
+    return `/digital-go-design-system-with-panda/${href}`;
+  }
+  return href;
+}
+
 export const Basic: Story = {
   args: {
     orientation: "vertical",
@@ -36,7 +43,12 @@ export const Basic: Story = {
     children: (
       <>
         <Card.Image>
-          <Image src="/IMG_7224.jpg" alt="Kiyomizu" width={640} height={400} />
+          <Image
+            src={withSubPath("/IMG_7224.jpg")}
+            alt="Kiyomizu"
+            width={640}
+            height={400}
+          />
         </Card.Image>
         <Card.Main>
           <Card.Title>Card</Card.Title>
@@ -60,7 +72,12 @@ export const AsLink: Story = {
     children: (
       <>
         <Card.Image>
-          <Image src="/IMG_7224.jpg" alt="Kiyomizu" width={640} height={400} />
+          <Image
+            src={withSubPath("/IMG_7224.jpg")}
+            alt="Kiyomizu"
+            width={640}
+            height={400}
+          />
         </Card.Image>
         <Card.Main>
           <Card.Title asChild>
@@ -114,7 +131,12 @@ export const MainAndImageResponsive: Story = {
     children: (
       <>
         <Card.Image>
-          <Image src="/IMG_7224.jpg" alt="Kiyomizu" width={640} height={400} />
+          <Image
+            src={withSubPath("/IMG_7224.jpg")}
+            alt="Kiyomizu"
+            width={640}
+            height={400}
+          />
         </Card.Image>
         <Card.Main>
           <Card.Title color="inherit" mb={{ base: 0, md: 4 }} asChild>
@@ -157,7 +179,12 @@ export const MainAndImageBg: Story = {
     children: (
       <>
         <Card.Image>
-          <Image src="/IMG_7224.jpg" alt="Kiyomizu" width={640} height={400} />
+          <Image
+            src={withSubPath("/IMG_7224.jpg")}
+            alt="Kiyomizu"
+            width={640}
+            height={400}
+          />
         </Card.Image>
         <Card.Main>
           <Card.Title color="inherit" mb={{ base: 0, md: 4 }} asChild>
