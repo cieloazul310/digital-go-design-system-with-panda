@@ -8,16 +8,16 @@ import { type AccordionVariantProps, accordion } from "styled-system/recipes";
 import type { ComponentProps, HTMLStyledProps } from "styled-system/types";
 import { createStyleContext } from "../utils/create-style-context";
 
-const { withProvider, withContext } = createStyleContext(accordion);
+const { withRootProvider, withProvider, withContext } =
+  createStyleContext(accordion);
 
 export type RootProviderProps = ComponentProps<typeof RootProvider>;
-export const RootProvider = withProvider<
-  HTMLDivElement,
+export const RootProvider = withRootProvider<
   Assign<
     Assign<HTMLStyledProps<"div">, Accordion.RootProviderBaseProps>,
     AccordionVariantProps
   >
->(Accordion.RootProvider, "root");
+>(Accordion.RootProvider);
 
 export type RootProps = ComponentProps<typeof Root>;
 export const Root = withProvider<
@@ -41,7 +41,7 @@ export const ItemIndicator = withContext<
 export const Item = withContext<
   HTMLDivElement,
   Assign<HTMLStyledProps<"div">, Accordion.ItemBaseProps>
->(Accordion.Item, "item");
+>(Accordion.Item, "item", { defaultClassName: "group" });
 
 export const ItemTrigger = withContext<
   HTMLButtonElement,

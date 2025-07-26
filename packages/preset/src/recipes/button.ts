@@ -9,6 +9,7 @@ export default defineRecipe({
   description:
     "ボタンは、主にアクション実行またはページ遷移のためのトリガーとして使用します。画面内におけるボタンの重要度に応じて使い分け可能な複数のスタイルがあります。",
   base: {
+    colorPalette: "keyColor",
     /**
      * underline-offset-[calc(3/16*1rem)]
      */
@@ -48,9 +49,9 @@ export default defineRecipe({
          * bg-blue-900 hover:bg-blue-1000 active:bg-blue-1200 aria-disabled:bg-solid-gray-300
          */
         bg: {
-          base: "keyColor.900",
-          _hover: "keyColor.1000",
-          _active: "keyColor.1200",
+          base: "colorPalette.900",
+          _hover: "colorPalette.1000",
+          _active: "colorPalette.1200",
           _disabled: "solid-gray.300",
         },
         color: { base: "white", _disabled: "solid-gray.50" },
@@ -75,14 +76,14 @@ export default defineRecipe({
          */
         bg: {
           base: "white",
-          _hover: "keyColor.200",
-          _active: "keyColor.300",
+          _hover: "colorPalette.200",
+          _active: "colorPalette.300",
           _disabled: "white",
         },
         color: {
-          base: "keyColor.900",
-          _hover: "keyColor.1000",
-          _active: "keyColor.1200",
+          base: "colorPalette.900",
+          _hover: "colorPalette.1000",
+          _active: "colorPalette.1200",
           _disabled: "solid-gray.300",
         },
         /**
@@ -106,15 +107,15 @@ export default defineRecipe({
          */
         bg: {
           base: "transparent",
-          _hover: "keyColor.50",
-          _active: "keyColor.100",
+          _hover: "colorPalette.50",
+          _active: "colorPalette.100",
           _focusVisible: { base: "yellow.300", _hover: "yellow.300" },
           _disabled: "transparent",
         },
         color: {
-          base: "keyColor.900",
-          _hover: "keyColor.1000",
-          _active: "keyColor.1200",
+          base: "colorPalette.900",
+          _hover: "colorPalette.1000",
+          _active: "colorPalette.1200",
           _disabled: "solid-gray.300",
         },
         /**
