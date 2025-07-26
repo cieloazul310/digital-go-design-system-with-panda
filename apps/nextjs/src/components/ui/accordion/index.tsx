@@ -14,7 +14,7 @@ const { withRootProvider, withProvider, withContext } =
 export type RootProviderProps = ComponentProps<typeof RootProvider>;
 export const RootProvider = withRootProvider<
   Assign<
-    Assign<HTMLStyledProps<"div">, Accordion.RootBaseProps>,
+    Assign<HTMLStyledProps<"div">, Accordion.RootProviderBaseProps>,
     AccordionVariantProps
   >
 >(Accordion.RootProvider);

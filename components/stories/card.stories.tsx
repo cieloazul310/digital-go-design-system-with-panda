@@ -769,3 +769,51 @@ export const VerticalLayoutWithFormControl: Story = {
     </Checkbox.Group>
   ),
 };
+
+export const HorizontalLayoutWithColorChip: Story = {
+  args: {
+    orientation: "horizontal",
+    ...css.raw({
+      gridTemplateAreas: `"main image"`,
+      gridTemplateColumns: "1fr minmax(auto, 216px)",
+      rounded: 0,
+      borderColor: "keyColor.1000",
+      borderWidth: "2px",
+      borderLeftWidth: "8px",
+    }),
+  },
+  render: ({ ...props }) => (
+    <div
+      className={css({
+        display: "grid",
+        gridTemplateColumns: "1fr",
+        gridAutoRows: "minmax(auto, 124px)",
+        gap: 4,
+      })}
+    >
+      {[
+        { title: "大気環境・排気ガス対策" },
+        { title: "温室効果ガス排出削減" },
+        { title: "給水栓整備" },
+      ].map(({ title }) => (
+        <Card.Root {...props} key={title}>
+          <Card.Main justifyContent="center">
+            <Card.Title>
+              <Link color="inherit" href="/">
+                {title}
+              </Link>
+            </Card.Title>
+          </Card.Main>
+          <Card.Image>
+            <Image
+              src={withSubPath("/IMG_7224_640.jpg")}
+              alt="Kiyomizu"
+              width={640}
+              height={400}
+            />
+          </Card.Image>
+        </Card.Root>
+      ))}
+    </div>
+  ),
+};
