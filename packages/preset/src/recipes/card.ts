@@ -13,6 +13,8 @@ export default defineSlotRecipe({
         "sub"
       `,
       bg: { base: "white", "&:has(input:checked)": "keyColor.50" },
+      color: "solid-gray.800",
+      textStyle: "std-16N-170",
       borderColor: "solid-gray.420",
       borderWidth: "1px",
       rounded: 16,
@@ -22,6 +24,9 @@ export default defineSlotRecipe({
       gridArea: "main",
       py: 4,
       px: { base: 4, md: 6 },
+      display: "flex",
+      flexDirection: "column",
+      gap: 4,
       _focusVisible: {
         outlineStyle: "solid",
         outlineWidth: "4px",
@@ -47,6 +52,7 @@ export default defineSlotRecipe({
     },
     title: {
       textStyle: "std-20B-150",
+      color: "solid-gray.900",
     },
   },
   variants: {

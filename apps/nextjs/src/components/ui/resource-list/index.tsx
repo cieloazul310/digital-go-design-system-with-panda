@@ -26,7 +26,7 @@ export const Root = withProvider<
 export const ContentsContainer = withContext<
   HTMLDivElement,
   Assign<HTMLStyledProps<"div">, PolymorphicProps>
->(ark.div, "contentsContainer");
+>(ark.div, "contentsContainer", { defaultClassName: "group" });
 
 export const FunctionButton = withContext<
   HTMLDivElement,
