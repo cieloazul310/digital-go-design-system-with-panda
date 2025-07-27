@@ -12,13 +12,14 @@ export default defineSlotRecipe({
         "main"
         "sub"
       `,
-      bg: { base: "white", "&:has(input:checked)": "keyColor.50" },
+      bg: { base: "white", "&:has(input:checked)": "colorPalette.50" },
       color: "solid-gray.800",
       textStyle: "std-16N-170",
       borderColor: "solid-gray.420",
       borderWidth: "1px",
       rounded: 16,
       overflow: "hidden",
+      colorPalette: "keyColor",
     },
     main: {
       gridArea: "main",

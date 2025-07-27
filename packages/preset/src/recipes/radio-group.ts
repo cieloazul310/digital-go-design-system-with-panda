@@ -12,6 +12,7 @@ export default defineSlotRecipe({
   base: {
     root: {
       display: "flex",
+      colorPalette: "keyColor",
       _vertical: {
         flexDirection: "column",
         gap: 0,

@@ -36,20 +36,20 @@ export const Basic: Story = {
   args: {
     children: (
       <>
-        <ResourceList.ContentsContainer>
-          <ResourceList.FrontIcon>
+        <ResourceList.Main>
+          <div>
             <CircleUser />
-          </ResourceList.FrontIcon>
+          </div>
           <ResourceList.Content>
-            <ResourceList.Label>ラベル</ResourceList.Label>
+            <span>ラベル</span>
             <ResourceList.Title>リストタイトル</ResourceList.Title>
-            <ResourceList.SuportText>サポートテキスト</ResourceList.SuportText>
+            <p>サポートテキスト</p>
           </ResourceList.Content>
-          <ResourceList.SubLabel>サブラベル</ResourceList.SubLabel>
-        </ResourceList.ContentsContainer>
-        <ResourceList.FunctionButton>
+          <span>サブラベル</span>
+        </ResourceList.Main>
+        <ResourceList.Action>
           <EllipsisVertical />
-        </ResourceList.FunctionButton>
+        </ResourceList.Action>
       </>
     ),
   },
@@ -60,12 +60,10 @@ export const AsLink: Story = {
     asLink: true,
     children: (
       <>
-        <ResourceList.ContentsContainer>
-          <ResourceList.FrontIcon>
-            <CircleUser />
-          </ResourceList.FrontIcon>
+        <ResourceList.Main>
+          <CircleUser />
           <ResourceList.Content>
-            <ResourceList.Label>ラベル</ResourceList.Label>
+            <span>ラベル</span>
             <ResourceList.Title asChild>
               <Link
                 href="https://cieloazul310.github.io"
@@ -75,33 +73,31 @@ export const AsLink: Story = {
                 リストタイトル
               </Link>
             </ResourceList.Title>
-            <ResourceList.SuportText>サポートテキスト</ResourceList.SuportText>
+            <p>サポートテキスト</p>
           </ResourceList.Content>
-          <ResourceList.SubLabel>サブラベル</ResourceList.SubLabel>
-        </ResourceList.ContentsContainer>
-        <ResourceList.FunctionButton>
+          <span>サブラベル</span>
+        </ResourceList.Main>
+        <ResourceList.Action>
           <EllipsisVertical />
-        </ResourceList.FunctionButton>
+        </ResourceList.Action>
       </>
     ),
   },
 };
 
-export const WithoutFunctionButton: Story = {
+export const WithoutAction: Story = {
   args: {
     asLink: false,
     children: (
-      <ResourceList.ContentsContainer>
-        <ResourceList.FrontIcon>
-          <CircleUser />
-        </ResourceList.FrontIcon>
+      <ResourceList.Main>
+        <CircleUser />
         <ResourceList.Content>
-          <ResourceList.Label>ラベル</ResourceList.Label>
+          <span>ラベル</span>
           <ResourceList.Title>リストタイトル</ResourceList.Title>
-          <ResourceList.SuportText>サポートテキスト</ResourceList.SuportText>
+          <p>サポートテキスト</p>
         </ResourceList.Content>
-        <ResourceList.SubLabel>サブラベル</ResourceList.SubLabel>
-      </ResourceList.ContentsContainer>
+        <span>サブラベル</span>
+      </ResourceList.Main>
     ),
   },
 };
@@ -127,18 +123,16 @@ export const ConsultationExample: Story = {
       ].map((date) => (
         <ResourceList.Root key={date.toString()} {...props} asChild>
           <li>
-            <ResourceList.ContentsContainer>
+            <ResourceList.Main>
               <ResourceList.Content>
                 <ResourceList.Title>健康診断</ResourceList.Title>
-                <ResourceList.SuportText>
-                  {date.getFullYear()}年度
-                </ResourceList.SuportText>
+                <p>{date.getFullYear()}年度</p>
               </ResourceList.Content>
-              <ResourceList.SubLabel>
+              <span>
                 受診日:{" "}
                 {`${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`}
-              </ResourceList.SubLabel>
-            </ResourceList.ContentsContainer>
+              </span>
+            </ResourceList.Main>
           </li>
         </ResourceList.Root>
       ))}
@@ -185,7 +179,7 @@ export const AccountsExample: Story = {
       {accounts.map(({ lastName, firstName, email, status, favorited }) => (
         <ResourceList.Root key={`${lastName}${firstName}`} {...props} asChild>
           <li>
-            <ResourceList.ContentsContainer>
+            <ResourceList.Main>
               <ResourceList.Content>
                 <ResourceList.Title asChild>
                   <NextLink
@@ -195,9 +189,9 @@ export const AccountsExample: Story = {
                     {lastName} {firstName}
                   </NextLink>
                 </ResourceList.Title>
-                <ResourceList.SuportText>{email}</ResourceList.SuportText>
+                <p>{email}</p>
               </ResourceList.Content>
-              <ResourceList.SubLabel>
+              <span>
                 {status === "invited" ? (
                   <Heart
                     className={
@@ -209,8 +203,8 @@ export const AccountsExample: Story = {
                 ) : (
                   "招待中"
                 )}
-              </ResourceList.SubLabel>
-            </ResourceList.ContentsContainer>
+              </span>
+            </ResourceList.Main>
           </li>
         </ResourceList.Root>
       ))}
@@ -260,21 +254,17 @@ export const PaymentExample: Story = {
         {payments.map(({ id, label, description, recomended }) => (
           <RadioGroup.Item width="full" key={id} value={id}>
             <ResourceList.Root width="full" {...props}>
-              <ResourceList.ContentsContainer>
-                <ResourceList.Form>
-                  <RadioGroup.ItemControl />
+              <ResourceList.Main>
+                <RadioGroup.ItemControl>
+                  <RadioGroup.Indicator />
                   <RadioGroup.ItemHiddenInput />
-                </ResourceList.Form>
+                </RadioGroup.ItemControl>
                 <ResourceList.Content>
-                  {recomended && (
-                    <ResourceList.Label>おすすめ</ResourceList.Label>
-                  )}
+                  {recomended && <span>おすすめ</span>}
                   <ResourceList.Title>{label}</ResourceList.Title>
-                  <ResourceList.SuportText>
-                    {description}
-                  </ResourceList.SuportText>
+                  <p>{description}</p>
                 </ResourceList.Content>
-              </ResourceList.ContentsContainer>
+              </ResourceList.Main>
             </ResourceList.Root>
           </RadioGroup.Item>
         ))}
@@ -319,26 +309,20 @@ export const UserSelectExample: Story = {
       {users.map(({ name, description, role }) => (
         <Checkbox.Root width="full" py={0} value={name} key={name}>
           <ResourceList.Root width="full" {...props}>
-            <ResourceList.ContentsContainer>
-              <ResourceList.Form>
-                <Checkbox.Control>
-                  <Checkbox.Indicator />
-                </Checkbox.Control>
-                <Checkbox.HiddenInput />
-              </ResourceList.Form>
-              <ResourceList.FrontIcon>
-                <CircleUser className={css({ width: 8, height: 8 })} />
-              </ResourceList.FrontIcon>
+            <ResourceList.Main>
+              <Checkbox.Control>
+                <Checkbox.Indicator />
+              </Checkbox.Control>
+              <Checkbox.HiddenInput />
+              <CircleUser className={css({ width: 8, height: 8 })} />
               <ResourceList.Content asChild>
                 <Checkbox.Label>
                   <ResourceList.Title>{name}</ResourceList.Title>
-                  <ResourceList.SuportText>
-                    {description}
-                  </ResourceList.SuportText>
+                  <p>{description}</p>
                 </Checkbox.Label>
               </ResourceList.Content>
-              <ResourceList.Label>{role}</ResourceList.Label>
-            </ResourceList.ContentsContainer>
+              <span>{role}</span>
+            </ResourceList.Main>
           </ResourceList.Root>
         </Checkbox.Root>
       ))}
@@ -377,16 +361,16 @@ export const SearchResultExample: Story = {
     <nav className={css({ maxW: "breakpoint-md", m: "auto" })}>
       {searchResult.map(({ title, description, href }) => (
         <ResourceList.Root key={href} {...props}>
-          <ResourceList.ContentsContainer>
+          <ResourceList.Main>
             <ResourceList.Content>
               <ResourceList.Title mb={4} asChild>
                 <NextLink className={link()} href={href}>
                   {title}
                 </NextLink>
               </ResourceList.Title>
-              <ResourceList.SuportText>{description}</ResourceList.SuportText>
+              <p className={css({ textStyle: "std-16N-170" })}>{description}</p>
             </ResourceList.Content>
-          </ResourceList.ContentsContainer>
+          </ResourceList.Main>
         </ResourceList.Root>
       ))}
     </nav>
@@ -430,29 +414,32 @@ export const InformationExample: Story = {
     >
       {information.map(({ title, date, isImportant, href }) => (
         <ResourceList.Root key={href} {...props}>
-          <ResourceList.ContentsContainer>
+          <ResourceList.Main>
             <ResourceList.Content>
               {isImportant && (
-                <ResourceList.Label
-                  rounded={4}
-                  color="red.900"
-                  bg="red.50"
-                  borderColor="currentColor"
-                  borderWidth="1px"
-                  p={2}
-                  mb={1}
+                <span
+                  className={css({
+                    rounded: 4,
+                    color: "red.900",
+                    bg: "red.50",
+                    borderColor: "currentColor",
+                    borderWidth: "1px",
+                    p: 2,
+                    mb: 1,
+                    width: "fit-content",
+                  })}
                 >
                   重要
-                </ResourceList.Label>
+                </span>
               )}
               <ResourceList.Title asChild>
                 <NextLink className={link()} href={href}>
                   {title}
                 </NextLink>
               </ResourceList.Title>
-              <ResourceList.SuportText>{`${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`}</ResourceList.SuportText>
+              <p>{`${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`}</p>
             </ResourceList.Content>
-          </ResourceList.ContentsContainer>
+          </ResourceList.Main>
         </ResourceList.Root>
       ))}
     </nav>

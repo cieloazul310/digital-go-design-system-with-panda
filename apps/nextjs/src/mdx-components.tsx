@@ -5,8 +5,17 @@ import { List } from "@/components/ui/list";
 import { Divider } from "@/components/ui/divider";
 import * as Table from "@/components/ui/table";
 import { css } from "styled-system/css";
-import { Paragraph, Heading2, Heading3, Pre, Code } from "@/components/article";
+import {
+  Paragraph,
+  Heading2,
+  Heading3,
+  Heading4,
+  Heading5,
+  Pre,
+  Code,
+} from "@/components/article";
 import { Link } from "@/components/link";
+import { DemoViewer } from "@/components/demo-viewer";
 
 export function useMDXComponents(
   components: MDXComponents = {},
@@ -16,6 +25,8 @@ export function useMDXComponents(
     a: Link,
     h2: Heading2,
     h3: Heading3,
+    h4: Heading4,
+    h5: Heading5,
     ol: OrderedList,
     ul: UnorderedList,
     li: List,
@@ -32,6 +43,7 @@ export function useMDXComponents(
     td: (props) => <Table.Cell {...props} />,
     pre: Pre,
     code: Code,
+    DemoViewer,
     ...components,
   };
 }

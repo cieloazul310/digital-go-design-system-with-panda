@@ -14,6 +14,7 @@ export default defineSlotRecipe({
        * w-full text-std-16N-170
        */
       maxWidth: "full",
+      colorPalette: "keyColor",
     },
     head: {
       "& tr": {
@@ -35,7 +36,7 @@ export default defineSlotRecipe({
          */
         /*
         "&:has(input:checked)": {
-          bg: "keyColor.100",
+          bg: "colorPalette.100",
         },
         */
       },
@@ -46,7 +47,7 @@ export default defineSlotRecipe({
        * border-b
        */
       borderBottomWidth: "1px",
-      "tbody > &:has(input:checked)": { bg: "keyColor.100" },
+      "tbody > &:has(input:checked)": { bg: "colorPalette.100" },
     },
     header: {
       /**
@@ -110,7 +111,9 @@ export default defineSlotRecipe({
         body: {
           "& tr": {
             _even: {
-              "&:not(:has(input:checked))": { bg: "{colors.keyColor.50}/25" },
+              "&:not(:has(input:checked))": {
+                bg: "{colors.colorPalette.50}/25",
+              },
             },
           },
         },
@@ -121,11 +124,11 @@ export default defineSlotRecipe({
         body: {
           "& tr": {
             _hover: {
-              bg: "keyColor.50",
+              bg: "colorPalette.50",
             },
             _even: {
               "&:not(:has(input:checked))": {
-                _hover: { bg: "{colors.keyColor.50}" },
+                _hover: { bg: "{colors.colorPalette.50}" },
               },
             },
           },

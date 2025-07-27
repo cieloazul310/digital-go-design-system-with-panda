@@ -16,27 +16,28 @@ export default defineRecipe({
     position: "relative",
     alignItems: "center",
     textStyle: "dns-16N-130",
+    colorPalette: "keyColor",
     bg: {
       base: "transparent",
       _hover: "solid-gray.50",
       _selected: {
-        base: "keyColor.100",
-        _hover: "keyColor.100",
+        base: "colorPalette.100",
+        _hover: "colorPalette.100",
       },
       _checked: {
-        base: "keyColor.100",
-        _hover: "keyColor.100",
+        base: "colorPalette.100",
+        _hover: "colorPalette.100",
       },
       _open: {
-        base: "keyColor.50",
-        _hover: "keyColor.50",
+        base: "colorPalette.50",
+        _hover: "colorPalette.50",
       },
     },
     color: {
       base: "solid-gray.800",
-      _selected: "keyColor.1000",
-      _checked: "keyColor.1000",
-      _open: "keyColor.1000",
+      _selected: "colorPalette.1000",
+      _checked: "colorPalette.1000",
+      _open: "colorPalette.1000",
     },
     fontWeight: { base: "normal", _selected: "bold", _checked: "bold" },
     /**

@@ -22,10 +22,18 @@ export const Basic: Story = {
           <Tabs.Trigger value="solid">Solid</Tabs.Trigger>
           <Tabs.Trigger value="svelte">Svelte</Tabs.Trigger>
         </Tabs.List>
-        <Tabs.Content value="react">React Content</Tabs.Content>
-        <Tabs.Content value="vue">Vue Content</Tabs.Content>
-        <Tabs.Content value="solid">Solid Content</Tabs.Content>
-        <Tabs.Content value="svelte">Svelte Content</Tabs.Content>
+        <Tabs.Content value="react" p={4}>
+          React Content
+        </Tabs.Content>
+        <Tabs.Content value="vue" p={4}>
+          Vue Content
+        </Tabs.Content>
+        <Tabs.Content value="solid" p={4}>
+          Solid Content
+        </Tabs.Content>
+        <Tabs.Content value="svelte" p={4}>
+          Svelte Content
+        </Tabs.Content>
       </>
     ),
   },
