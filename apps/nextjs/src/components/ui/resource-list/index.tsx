@@ -23,25 +23,15 @@ export const Root = withProvider<
   >
 >(ark.div, "root");
 
-export const ContentsContainer = withContext<
+export const Main = withContext<
   HTMLDivElement,
   Assign<HTMLStyledProps<"div">, PolymorphicProps>
->(ark.div, "contentsContainer", { defaultClassName: "group" });
+>(ark.div, "main", { defaultClassName: "group" });
 
-export const FunctionButton = withContext<
+export const Action = withContext<
   HTMLDivElement,
   Assign<HTMLStyledProps<"div">, PolymorphicProps>
->(ark.div, "functionButton");
-
-export const Form = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, PolymorphicProps>
->(ark.div, "form");
-
-export const FrontIcon = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, PolymorphicProps>
->(ark.div, "frontIcon");
+>(ark.div, "action");
 
 export const Content = withContext<
   HTMLDivElement,
@@ -52,18 +42,3 @@ export const Title = withContext<
   HTMLHeadingElement,
   Assign<HTMLStyledProps<"h2">, PolymorphicProps>
 >(ark.h2, "title");
-
-export const Label = withContext<
-  HTMLSpanElement,
-  Assign<HTMLStyledProps<"span">, PolymorphicProps>
->(ark.span, "label");
-
-export const SuportText = withContext<
-  HTMLParagraphElement,
-  Assign<HTMLStyledProps<"p">, PolymorphicProps>
->(ark.p, "supportText");
-
-export const SubLabel = withContext<
-  HTMLSpanElement,
-  Assign<HTMLStyledProps<"span">, PolymorphicProps>
->(ark.span, "subLabel");

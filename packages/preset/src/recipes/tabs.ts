@@ -8,6 +8,7 @@ export default defineSlotRecipe({
     root: {
       p: 1.5,
       mx: -1.5,
+      colorPalette: "keyColor",
     },
     list: {
       /**
@@ -73,7 +74,7 @@ export default defineSlotRecipe({
          * after:border-current
          * aria-[current=page]:cursor-default
          */
-        color: "keyColor.900",
+        color: "colorPalette.900",
         cursor: "default",
         _after: {
           content: '""',

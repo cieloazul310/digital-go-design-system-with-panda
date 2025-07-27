@@ -316,16 +316,14 @@ function App() {
                 {links.map(({ title, description, url }) => (
                   <ResourceList.Root borderWidth="1px" asLink asChild key={url}>
                     <li>
-                      <ResourceList.ContentsContainer>
+                      <ResourceList.Main>
                         <ResourceList.Content py={4}>
                           <ResourceList.Title asChild mb={4}>
                             <ExternalLink href={url}>{title}</ExternalLink>
                           </ResourceList.Title>
-                          <ResourceList.SuportText>
-                            {description}
-                          </ResourceList.SuportText>
+                          <p>{description}</p>
                         </ResourceList.Content>
-                      </ResourceList.ContentsContainer>
+                      </ResourceList.Main>
                     </li>
                   </ResourceList.Root>
                 ))}

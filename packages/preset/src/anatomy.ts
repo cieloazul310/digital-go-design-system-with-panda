@@ -55,15 +55,10 @@ export const notificationBannerAnatomy = createAnatomy(
 
 export const resourceListAnatomy = createAnatomy("resource-list").parts(
   "root",
-  "contentsContainer",
-  "functionButton",
-  "frontIcon",
-  "form",
+  "main",
+  "action",
   "content",
-  "label",
   "title",
-  "supportText",
-  "subLabel",
 );
 
 export const tableAnatomy = createAnatomy("table").parts(

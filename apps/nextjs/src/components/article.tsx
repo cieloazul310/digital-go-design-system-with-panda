@@ -40,6 +40,28 @@ export const Heading3 = (
   />
 );
 
+/**
+ * text-std-18B-160 md:text-std-20B-150 mb-4 mt-6 md:mt-10
+ */
+export const Heading4 = (
+  props: JsxHTMLProps<ComponentProps<"h4">, JsxStyleProps>,
+) => (
+  <styled.h4
+    textStyle={{ base: "std-18B-160", md: "std-20B-150" }}
+    mt={{ base: 6, md: 10 }}
+    mb={4}
+    {...props}
+  />
+);
+
+/**
+ *
+ * text-std-18B-160 mt-4
+ */
+export const Heading5 = (
+  props: JsxHTMLProps<ComponentProps<"h5">, JsxStyleProps>,
+) => <styled.h5 textStyle="std-18B-160" mt={4} {...props} />;
+
 export const Details = ({ children, ...props }: Disclosure.RootProps) => (
   <Disclosure.Root asChild {...props}>
     <details>{children}</details>
@@ -76,7 +98,7 @@ export const Code = (
   <styled.code
     className={css({
       ":not(pre) > &": {
-        color: "keyColor.800",
+        color: "keyColor.1200",
         bg: "keyColor.50",
         px: 1,
         rounded: 2,

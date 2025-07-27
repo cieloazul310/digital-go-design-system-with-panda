@@ -726,8 +726,9 @@ export const VerticalLayoutWithFormControl: Story = {
       display="grid"
       gridTemplateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
       gap={8}
+      defaultValue={["2025-07-25"]}
     >
-      {[new Date("2025-07-25"), new Date("2025-07-26")].map((date) => (
+      {["2025-07-25", "2025-07-26"].map((date) => (
         <Checkbox.Root size="md" value={date.toString()} key={date.toString()}>
           <Card.Root {...props}>
             <Card.Image position="relative">

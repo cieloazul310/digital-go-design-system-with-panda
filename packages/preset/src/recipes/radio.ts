@@ -54,8 +54,8 @@ export default defineSlotRecipe({
         _hover: "black",
         _highContrast: { base: "ButtonText" },
         _checked: {
-          base: "keyColor.900",
-          _hover: "keyColor.1100",
+          base: "colorPalette.900",
+          _hover: "colorPalette.1100",
           _disabled: "solid-gray.300",
           _highContrast: "Highlight",
         },
@@ -116,8 +116,8 @@ export default defineSlotRecipe({
          */
         _before: {
           display: "block",
-          bg: "keyColor.900",
-          _hover: "keyColor.1100",
+          bg: "colorPalette.900",
+          _hover: "colorPalette.1100",
           _invalid: {
             base: "error.1",
             _hover: "red.1000",

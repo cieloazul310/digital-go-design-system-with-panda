@@ -9,6 +9,9 @@ export default defineSlotRecipe({
   className: "accordion",
   slots: accordionAnatomy.keys(),
   base: {
+    root: {
+      colorPalette: "keyColor",
+    },
     item: {
       /**
        * group/accordion border-b border-solid-gray-420
@@ -93,7 +96,7 @@ export default defineSlotRecipe({
        * bg-white text-blue-1000
        */
       bg: "white",
-      color: "keyColor.1000",
+      color: "colorPalette.1000",
       /**
        * border border-current rounded-full
           group-hover/summary:outline group-hover/summary:outline-2 group-hover/summary:outline-current

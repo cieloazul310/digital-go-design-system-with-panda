@@ -8,18 +8,22 @@ export default defineSlotRecipe({
     root: {
       display: "flex",
       borderColor: "solid-gray.420",
+      overflow: "hidden",
+      colorPalette: "keyColor",
       bg: {
-        "&:has(input:checked)": "keyColor.50",
-        _selected: "keyColor.50",
+        "&:has(input:checked)": "colorPalette.50",
+        _selected: "colorPalette.50",
       },
     },
-    contentsContainer: {
+    main: {
       display: "flex",
       flexGrow: 1,
       flexDirection: "row",
       alignItems: "center",
       justifyContent: "start",
       gap: { base: 4, md: 6 },
+      color: "solid-gray.800",
+      textStyle: "dns-16N-130",
       /**
        * p-4 md:px-6 md:py-4
        */
@@ -34,14 +38,11 @@ export default defineSlotRecipe({
         focusRing: "calc(2 / 16 * 1rem)",
       },
     },
-    functionButton: {
+    action: {
       p: 4,
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-    },
-    frontIcon: {
-      // px: 2,
     },
     content: {
       height: "full",
@@ -53,21 +54,9 @@ export default defineSlotRecipe({
       /**
        * mb-4 text-std-20B-150 font-bold group-hover:text-blue-1000 group-hover:decoration-[calc(3/16*1rem)] md:mb-4
        */
+      color: "solid-gray.900",
       textStyle: "std-20B-150",
       width: "fit-content",
-    },
-    label: {
-      zIndex: 1,
-      width: "fit-content",
-      textStyle: "oln-17N-100",
-      color: "solid-gray.800",
-    },
-    supportText: {
-      color: "solid-gray.800",
-    },
-    subLabel: {
-      zIndex: 1,
-      color: "solid-gray.800",
     },
   },
   variants: {
@@ -82,23 +71,11 @@ export default defineSlotRecipe({
           rounded: 16,
           borderWidth: "1px",
         },
-        contentsContainer: {
-          borderTopLeftRadius: 16,
-          borderBottomLeftRadius: 16,
-          _only: {
-            borderTopRightRadius: 16,
-            borderBottomRightRadius: 16,
-          },
-        },
-        functionButton: {
-          borderTopRightRadius: 16,
-          borderBottomRightRadius: 16,
-        },
       },
     },
     asLink: {
       true: {
-        contentsContainer: {
+        main: {
           position: "relative",
         },
         title: {
@@ -112,9 +89,6 @@ export default defineSlotRecipe({
             zIndex: 0,
             cursor: "inherit",
           },
-        },
-        supportText: {
-          textDecoration: { base: "none", _groupHover: "underline" },
         },
       },
     },

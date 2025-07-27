@@ -13,11 +13,12 @@ export default defineRecipe({
      * text-blue-1000 visited:text-magenta-900 hover:text-blue-1000
      * focus-visible:text-blue-1000 active:text-orange-700
      */
+    colorPalette: "keyColor",
     color: {
-      base: "keyColor.1000",
+      base: "colorPalette.1000",
       _visited: "magenta.900",
-      _hover: "keyColor.1000",
-      _focusVisible: "keyColor.1000",
+      _hover: "colorPalette.1000",
+      _focusVisible: "colorPalette.1000",
       _active: "orange.700",
     },
     /**

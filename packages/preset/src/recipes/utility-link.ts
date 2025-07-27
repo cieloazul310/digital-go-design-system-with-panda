@@ -8,6 +8,7 @@ export default defineRecipe({
   description:
     "ユーティリティリンクはふつうの横並びリンクリストに近いが、それよりもコンパクトに作られています。",
   base: {
+    colorPalette: "keyColor",
     /**
      * !text-solid-gray-800 text-dns-16N-130
      * focus-visible:bg-yellow-300 focus-visible:text-blue-1000
@@ -15,7 +16,7 @@ export default defineRecipe({
     textStyle: "dns-16N-130",
     color: {
       base: "solid-gray.800",
-      _focusVisible: "keyColor.1000",
+      _focusVisible: "colorPalette.1000",
     },
     bg: { base: "transparent", _focusVisible: "yellow.300" },
     /**
