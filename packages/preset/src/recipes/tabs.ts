@@ -6,8 +6,6 @@ export default defineSlotRecipe({
   slots: tabsAnatomy.keys(),
   base: {
     root: {
-      p: 1.5,
-      mx: -1.5,
       colorPalette: "keyColor",
     },
     list: {

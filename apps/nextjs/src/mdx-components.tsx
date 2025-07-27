@@ -15,6 +15,7 @@ import {
   Code,
 } from "@/components/article";
 import { Link } from "@/components/link";
+import { DemoViewer } from "@/components/demo-viewer";
 
 export function useMDXComponents(
   components: MDXComponents = {},
@@ -42,6 +43,7 @@ export function useMDXComponents(
     td: (props) => <Table.Cell {...props} />,
     pre: Pre,
     code: Code,
+    DemoViewer,
     ...components,
   };
 }
