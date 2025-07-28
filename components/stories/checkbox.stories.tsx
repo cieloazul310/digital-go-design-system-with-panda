@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 // import{ type ChangeEvent, useEffect, useRef, useState } from "react";
-// import { ErrorText, Legend, RequirementBadge, SupportText } from "../";
+import { css } from "styled-system/css";
+import { ErrorText, Legend, RequirementBadge, SupportText } from "../src/form";
 import * as Checkbox from "../src/checkbox";
 
 const meta = {
@@ -46,89 +47,107 @@ export const Playground: Story = {
     size: "sm",
     disabled: false,
     invalid: false,
+    children: (
+      <>
+        <Checkbox.Control>
+          <Checkbox.Indicator />
+        </Checkbox.Control>
+        <Checkbox.HiddenInput />
+        <Checkbox.Label>選択肢</Checkbox.Label>
+      </>
+    ),
   },
-  render: ({ ...props }) => (
-    <Checkbox.Root {...props}>
-      <Checkbox.Control>
-        <Checkbox.Indicator />
-      </Checkbox.Control>
-      <Checkbox.HiddenInput />
-      <Checkbox.Label>選択肢</Checkbox.Label>
-    </Checkbox.Root>
-  ),
 };
-/*
+
 export const Standalone: Story = {
   args: {
     size: "sm",
     "aria-disabled": false,
-    isError: false,
+    invalid: false,
     "aria-label": "名前を指定してください",
+    children: (
+      <>
+        <Checkbox.Control>
+          <Checkbox.Indicator />
+        </Checkbox.Control>
+        <Checkbox.HiddenInput />
+      </>
+    ),
   },
 };
 
 export const Stacked: Story = {
   render: ({ ...args }) => (
-    <fieldset>
-      <Legend>
-        ラベル<RequirementBadge>※必須</RequirementBadge>
-      </Legend>
-      <SupportText className="mt-2" id="stacked-support-text">
-        サポートテキスト
-      </SupportText>
-      <div className="mt-2 flex flex-col gap-2">
-        <Checkbox aria-describedby="stacked-support-text" {...args}>
-          選択肢1
-        </Checkbox>
-        <Checkbox
-          aria-describedby="stacked-support-text"
-          defaultChecked
-          {...args}
+    <Checkbox.Group defaultValue={["選択肢2"]} asChild>
+      <fieldset>
+        <Legend>
+          ラベル<RequirementBadge>※必須</RequirementBadge>
+        </Legend>
+        <SupportText textStyle="std-16N-170" id="stacked-support-text">
+          サポートテキスト
+        </SupportText>
+        <div
+          className={css({
+            mt: 2,
+            display: "flex",
+            flexDirection: "column",
+            gap: 2,
+          })}
         >
-          選択肢2
-        </Checkbox>
-        <Checkbox aria-describedby="stacked-support-text" {...args}>
-          選択肢3
-        </Checkbox>
-      </div>
-    </fieldset>
+          {["選択肢1", "選択肢2", "選択肢3"].map((value) => (
+            <Checkbox.Root {...args} key={value} value={value}>
+              <Checkbox.Control>
+                <Checkbox.Indicator />
+              </Checkbox.Control>
+              <Checkbox.HiddenInput />
+              <Checkbox.Label>{value}</Checkbox.Label>
+            </Checkbox.Root>
+          ))}
+        </div>
+      </fieldset>
+    </Checkbox.Group>
   ),
   args: {
     size: "sm",
-    isError: false,
+    invalid: false,
     "aria-disabled": false,
   },
 };
 
 export const Inline: Story = {
   render: ({ ...args }) => (
-    <fieldset>
-      <Legend>
-        ラベル<RequirementBadge>※必須</RequirementBadge>
-      </Legend>
-      <SupportText className="mt-2" id="inline-support-text">
-        サポートテキスト
-      </SupportText>
-      <div className="mt-1 flex flex-wrap gap-x-4">
-        <Checkbox aria-describedby="inline-support-text" {...args}>
-          選択肢1
-        </Checkbox>
-        <Checkbox
-          aria-describedby="inline-support-text"
-          defaultChecked
-          {...args}
+    <Checkbox.Group defaultValue={["選択肢2"]} asChild>
+      <fieldset>
+        <Legend>
+          ラベル<RequirementBadge>※必須</RequirementBadge>
+        </Legend>
+        <SupportText textStyle="std-16N-170" id="stacked-support-text">
+          サポートテキスト
+        </SupportText>
+        <div
+          className={css({
+            mt: 2,
+            display: "flex",
+            flexWrap: "wrap",
+            columnGap: 4,
+          })}
         >
-          選択肢2
-        </Checkbox>
-        <Checkbox aria-describedby="inline-support-text" {...args}>
-          選択肢3
-        </Checkbox>
-      </div>
-    </fieldset>
+          {["選択肢1", "選択肢2", "選択肢3"].map((value) => (
+            <Checkbox.Root {...args} key={value} value={value}>
+              <Checkbox.Control>
+                <Checkbox.Indicator />
+              </Checkbox.Control>
+              <Checkbox.HiddenInput />
+              <Checkbox.Label>{value}</Checkbox.Label>
+            </Checkbox.Root>
+          ))}
+        </div>
+      </fieldset>
+    </Checkbox.Group>
   ),
   args: {
     size: "sm",
-    isError: false,
+    invalid: false,
     "aria-disabled": false,
   },
 };
@@ -136,88 +155,78 @@ export const Inline: Story = {
 export const Errored: Story = {
   render: ({ ...args }) => {
     return (
-      <div className="flex flex-col gap-16">
-        <fieldset>
-          <Legend>
-            ラベル<RequirementBadge>※必須</RequirementBadge>
-          </Legend>
-          <SupportText className="mt-2" id="error-1-support-text">
-            サポートテキスト
-          </SupportText>
-          <div className="mt-1 flex flex-col">
-            <Checkbox
-              aria-describedby="error-1-support-text error-1-text"
-              {...args}
+      <div
+        className={css({ display: "flex", flexDirection: "column", gap: 16 })}
+      >
+        <Checkbox.Group defaultValue={["選択肢2"]} asChild>
+          <fieldset>
+            <Legend>
+              ラベル<RequirementBadge>※必須</RequirementBadge>
+            </Legend>
+            <SupportText textStyle="std-16N-170" id="stacked-support-text">
+              サポートテキスト
+            </SupportText>
+            <div
+              className={css({
+                mt: 2,
+                display: "flex",
+                flexDirection: "column",
+                gap: 2,
+              })}
             >
-              選択肢1
-            </Checkbox>
-            <Checkbox
-              aria-describedby="error-1-support-text error-1-text"
-              defaultChecked
-              {...args}
+              {["選択肢1", "選択肢2", "選択肢3"].map((value) => (
+                <Checkbox.Root {...args} key={value} value={value}>
+                  <Checkbox.Control>
+                    <Checkbox.Indicator />
+                  </Checkbox.Control>
+                  <Checkbox.HiddenInput />
+                  <Checkbox.Label>{value}</Checkbox.Label>
+                </Checkbox.Root>
+              ))}
+            </div>
+            <ErrorText>＊エラーテキストが入ります</ErrorText>
+          </fieldset>
+        </Checkbox.Group>
+        <Checkbox.Group defaultValue={["選択肢2"]} asChild>
+          <fieldset>
+            <Legend>
+              ラベル<RequirementBadge>※必須</RequirementBadge>
+            </Legend>
+            <SupportText textStyle="std-16N-170" id="stacked-support-text">
+              サポートテキスト
+            </SupportText>
+            <div
+              className={css({
+                mt: 2,
+                display: "flex",
+                flexWrap: "wrap",
+                columnGap: 4,
+              })}
             >
-              選択肢2
-            </Checkbox>
-            <Checkbox
-              aria-describedby="error-1-support-text error-1-text"
-              {...args}
-            >
-              選択肢3
-            </Checkbox>
-          </div>
-          <ErrorText className="mt-2" id="error-1-text">
-            ＊エラーテキストが入ります。
-          </ErrorText>
-        </fieldset>
-        <fieldset>
-          <Legend>
-            ラベル<RequirementBadge>※必須</RequirementBadge>
-          </Legend>
-          <SupportText className="mt-2" id="error-2-support-text">
-            サポートテキスト
-          </SupportText>
-          <div className="mt-1 flex flex-wrap gap-x-4">
-            <Checkbox
-              aria-describedby="error-2-support-text error-2-text"
-              {...args}
-            >
-              選択肢1
-            </Checkbox>
-            <Checkbox
-              aria-describedby="error-2-support-text error-2-text"
-              defaultChecked
-              {...args}
-            >
-              選択肢2
-            </Checkbox>
-            <Checkbox
-              aria-describedby="error-2-support-text error-2-text"
-              {...args}
-            >
-              選択肢3
-            </Checkbox>
-          </div>
-          <ErrorText className="mt-2" id="error-2-text">
-            ＊エラーテキストが入ります。
-          </ErrorText>
-        </fieldset>
+              {["選択肢1", "選択肢2", "選択肢3"].map((value) => (
+                <Checkbox.Root {...args} key={value} value={value}>
+                  <Checkbox.Control>
+                    <Checkbox.Indicator />
+                  </Checkbox.Control>
+                  <Checkbox.HiddenInput />
+                  <Checkbox.Label>{value}</Checkbox.Label>
+                </Checkbox.Root>
+              ))}
+            </div>
+            <ErrorText>＊エラーテキストが入ります</ErrorText>
+          </fieldset>
+        </Checkbox.Group>
       </div>
     );
   },
   args: {
     size: "sm",
-    isError: true,
+    invalid: true,
     "aria-disabled": false,
-  },
-  argTypes: {
-    isError: {
-      table: {
-        disable: true,
-      },
-    },
   },
 };
 
+/*
 export const Disabled: Story = {
   render: ({ ...args }) => {
     return (

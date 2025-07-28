@@ -9,3 +9,13 @@ digitalgo: https://design.digital.go.jp/components/resource-list/
 ```tsx
 import * as ResourceList from "@/components/ui/resource-list";
 ```
+
+## 使用例
+
+<DemoViewer name="resource-list" />
+
+### リンク
+
+`<ResourceList.Root>`に`asLink`属性を付与すると、ホバー時にインタラクションが加わる。このとき、通常`<ResourceList.Title>`に`asChild`属性を付与し、子要素のリンクと合成して使用する。
+
+<DemoViewer name="resource-list-aslink" />

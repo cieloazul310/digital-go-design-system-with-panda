@@ -25,6 +25,24 @@ export default defineConfig({
 
   staticCss: {
     recipes: "*",
+    css: [
+      {
+        properties: {
+          colorPalette: [
+            "blue",
+            "light-blue",
+            "cyan",
+            "green",
+            "lime",
+            "yellow",
+            "orange",
+            "red",
+            "magenta",
+            "purple",
+          ],
+        },
+      },
+    ],
   },
 
   // The output directory for your css system

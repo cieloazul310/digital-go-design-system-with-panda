@@ -24,7 +24,10 @@ export default defineSlotRecipe({
       alignItems: "center",
       justifyContent: "center",
       flexShrink: 0,
-      rounded: "calc(1 / 8 * 100%)",
+      rounded: "calc(1 / 4 * 100%)",
+      outlineStyle: "solid",
+      outlineWidth: "2px",
+      outlineColor: { base: "solid-gray.420", _groupHover: "black" },
       _disabled: {
         bg: "solid-gray.420",
       },
@@ -37,6 +40,7 @@ export default defineSlotRecipe({
       width: "3/4",
       height: "3/4",
       rounded: "calc(2 / 18 * 100%)",
+      zIndex: 1,
       borderColor: {
         /**
          * border-solid-gray-600 hover:border-black
@@ -206,6 +210,8 @@ export default defineSlotRecipe({
            */
           width: 6,
           height: 6,
+          outlineOffset: "-4px",
+          boxShadow: { _groupHover: "inset 0 0 0 2px {colors.solid-gray.420}" },
         },
         indicator: {
           /**
@@ -234,6 +240,8 @@ export default defineSlotRecipe({
            */
           width: 8,
           height: 8,
+          outlineOffset: "-5px",
+          boxShadow: { _groupHover: "inset 0 0 0 4px {colors.solid-gray.420}" },
         },
         indicator: {
           /**
@@ -268,6 +276,8 @@ export default defineSlotRecipe({
            */
           width: 11,
           height: 11,
+          outlineOffset: "-7px",
+          boxShadow: { _groupHover: "inset 0 0 0 6px {colors.solid-gray.420}" },
         },
         indicator: {
           /**

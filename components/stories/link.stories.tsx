@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Link } from "../src/link";
 import { Container } from "styled-system/jsx";
+import { ExternalLink } from "lucide-react";
 
 const meta = {
   title: "Components/リンク",
@@ -26,9 +27,12 @@ export const Inline: Story = {
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.{" "}
-        <Link href={href}>Ut enim ad minim veniam</Link>, quis nostrud
-        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+        <Link href={href}>
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat
+          <ExternalLink />
+        </Link>
+        . Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
         dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>

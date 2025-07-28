@@ -54,7 +54,6 @@ export default defineSlotRecipe({
       /**
        * mb-4 text-std-20B-150 font-bold group-hover:text-blue-1000 group-hover:decoration-[calc(3/16*1rem)] md:mb-4
        */
-      color: "solid-gray.900",
       textStyle: "std-20B-150",
       width: "fit-content",
     },
@@ -92,5 +91,9 @@ export default defineSlotRecipe({
         },
       },
     },
+  },
+  defaultVariants: {
+    variant: "list",
+    asLink: false,
   },
 });

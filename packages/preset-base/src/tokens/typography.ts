@@ -1,6 +1,7 @@
+import { defineTokens } from "@pandacss/dev";
 import tokens from "@digital-go-jp/design-tokens";
 
-export const fonts = {
+export const fonts = defineTokens.fonts({
   body: {
     value: [
       "Noto Sans JP",
@@ -12,9 +13,9 @@ export const fonts = {
   mono: {
     value: ["Noto Sans Mono", "monospace"],
   },
-};
+});
 
-export const fontSizes = {
+export const fontSizes = defineTokens.fontSizes({
   "64": {
     value: tokens.FontSize[64].$value,
     description: "視覚的なインパクトが必要なデザイン要素としての文字サイズ。",
@@ -82,14 +83,14 @@ export const fontSizes = {
     description:
       "基本的には使用しません。フッター要素などコンテンツに付随する情報や、UIやコンテンツを構成する際の領域的な制約がある場合のように標準的な文字サイズ（16 CSS px以上）の使用が難しいケースにおいてのみ使用される文字サイズです。なお、14 CSS px未満の大きさの使用は原則として許容されません。",
   },
-};
+});
 
-export const fontWeights = {
+export const fontWeights = defineTokens.fontWeights({
   "400": { value: tokens.FontWeight[400].$value },
   "700": { value: tokens.FontWeight[700].$value },
-};
+});
 
-export const lineHeights = {
+export const lineHeights = defineTokens.lineHeights({
   "100": {
     value: tokens.LineHeight[100].$value,
     description:
@@ -128,4 +129,4 @@ export const lineHeights = {
     description:
       "一般的なウェブサイトの本文で使用する、心理的負荷の軽減を考慮した行間。採用するグリッド幅やフォントサイズに応じて170%と使い分ける",
   },
-};
+});

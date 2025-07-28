@@ -56,10 +56,10 @@ export default defineRecipe({
     /**
      * with icon
      */
-    display: "inline-flex",
-    alignItems: "center",
-    gap: 1,
-    "& svg": {
+    "& > svg": {
+      display: "inline",
+      ml: 1,
+      mb: 1,
       width: "1em",
       height: "1em",
     },

@@ -34,6 +34,29 @@ const meta = {
         type: { summary: "'lg' | 'md' | 'sm' | 'xs'" },
       },
     },
+    colorPalette: {
+      options: [
+        "keyColor",
+        "blue",
+        "light-blue",
+        "cyan",
+        "green",
+        "lime",
+        "yellow",
+        "orange",
+        "red",
+        "magenta",
+        "purple",
+      ],
+      control: { type: "radio" },
+      table: {
+        defaultValue: { summary: "keyColor" },
+        type: {
+          summary:
+            "'keyColor' | 'blue' | 'light-blue' | 'cyan' | 'green' | 'lime' | 'yellow' | 'orange' | 'red' | 'magenta' | 'purple'",
+        },
+      },
+    },
     "aria-disabled": {
       description:
         "無効化する必要がある場合は `disabled` 属性ではなく `aria-disabled` 属性を使用します。",
@@ -44,6 +67,14 @@ const meta = {
       },
     },
   },
+  args: {
+    variant: "solid-fill",
+    size: "md",
+    children: "ボタン",
+    onClick: fn(),
+    colorPalette: "keyColor",
+    "aria-disabled": false,
+  },
 } satisfies Meta<typeof Button>;
 
 export default meta;
@@ -51,31 +82,50 @@ type Story = StoryObj<typeof meta>;
 
 export const Playground: Story = {
   args: {
-    variant: "solid-fill",
     size: "lg",
-    children: "ボタン",
-    onClick: fn(),
-    "aria-disabled": false,
+  },
+};
+
+export const ColorPalette: Story = {
+  args: {
+    size: "lg",
+    colorPalette: "magenta",
   },
 };
 
 export const AllButtons = {
-  render: () => {
+  render: ({ ...props }) => {
     return (
       <Flex gap={8} direction="column">
         <div>
           <h2 className={headingStyle}>塗りボタン（Solid Fill）</h2>
           <div className={buttons}>
-            <Button variant="solid-fill" size="lg">
+            <Button
+              variant="solid-fill"
+              size="lg"
+              colorPalette={props.colorPalette}
+            >
               ラベル
             </Button>
-            <Button variant="solid-fill" size="md">
+            <Button
+              variant="solid-fill"
+              size="md"
+              colorPalette={props.colorPalette}
+            >
               ラベル
             </Button>
-            <Button variant="solid-fill" size="sm">
+            <Button
+              variant="solid-fill"
+              size="sm"
+              colorPalette={props.colorPalette}
+            >
               ラベル
             </Button>
-            <Button variant="solid-fill" size="xs">
+            <Button
+              variant="solid-fill"
+              size="xs"
+              colorPalette={props.colorPalette}
+            >
               ラベル
             </Button>
           </div>
@@ -83,16 +133,32 @@ export const AllButtons = {
         <div>
           <h2 className={headingStyle}>アウトラインボタン（Outline）</h2>
           <div className={buttons}>
-            <Button variant="outline" size="lg">
+            <Button
+              variant="outline"
+              size="lg"
+              colorPalette={props.colorPalette}
+            >
               ラベル
             </Button>
-            <Button variant="outline" size="md">
+            <Button
+              variant="outline"
+              size="md"
+              colorPalette={props.colorPalette}
+            >
               ラベル
             </Button>
-            <Button variant="outline" size="sm">
+            <Button
+              variant="outline"
+              size="sm"
+              colorPalette={props.colorPalette}
+            >
               ラベル
             </Button>
-            <Button variant="outline" size="xs">
+            <Button
+              variant="outline"
+              size="xs"
+              colorPalette={props.colorPalette}
+            >
               ラベル
             </Button>
           </div>
@@ -100,16 +166,16 @@ export const AllButtons = {
         <div>
           <h2 className={headingStyle}>テキストボタン（Text）</h2>
           <div className={buttons}>
-            <Button variant="text" size="lg">
+            <Button variant="text" size="lg" colorPalette={props.colorPalette}>
               ラベル
             </Button>
-            <Button variant="text" size="md">
+            <Button variant="text" size="md" colorPalette={props.colorPalette}>
               ラベル
             </Button>
-            <Button variant="text" size="sm">
+            <Button variant="text" size="sm" colorPalette={props.colorPalette}>
               ラベル
             </Button>
-            <Button variant="text" size="xs">
+            <Button variant="text" size="xs" colorPalette={props.colorPalette}>
               ラベル
             </Button>
           </div>
@@ -233,9 +299,6 @@ export const SolidFillLG: Story = {
   args: {
     variant: "solid-fill",
     size: "lg",
-    children: "ボタン",
-    onClick: fn(),
-    "aria-disabled": false,
   },
 };
 
@@ -243,9 +306,6 @@ export const SolidFillMD: Story = {
   args: {
     variant: "solid-fill",
     size: "md",
-    children: "ボタン",
-    onClick: fn(),
-    "aria-disabled": false,
   },
 };
 
@@ -253,9 +313,6 @@ export const SolidFillSM: Story = {
   args: {
     variant: "solid-fill",
     size: "sm",
-    children: "ボタン",
-    onClick: fn(),
-    "aria-disabled": false,
   },
 };
 
@@ -263,9 +320,6 @@ export const SolidFillXS: Story = {
   args: {
     variant: "solid-fill",
     size: "xs",
-    children: "ボタン",
-    onClick: fn(),
-    "aria-disabled": false,
   },
 };
 
@@ -273,9 +327,6 @@ export const OutlineLG: Story = {
   args: {
     variant: "outline",
     size: "lg",
-    children: "ボタン",
-    onClick: fn(),
-    "aria-disabled": false,
   },
 };
 
@@ -283,9 +334,6 @@ export const OutlineMD: Story = {
   args: {
     variant: "outline",
     size: "md",
-    children: "ボタン",
-    onClick: fn(),
-    "aria-disabled": false,
   },
 };
 
@@ -293,9 +341,6 @@ export const OutlineSM: Story = {
   args: {
     variant: "outline",
     size: "sm",
-    children: "ボタン",
-    onClick: fn(),
-    "aria-disabled": false,
   },
 };
 
@@ -303,9 +348,6 @@ export const OutlineXS: Story = {
   args: {
     variant: "outline",
     size: "xs",
-    children: "ボタン",
-    onClick: fn(),
-    "aria-disabled": false,
   },
 };
 
@@ -313,9 +355,6 @@ export const TextLG: Story = {
   args: {
     variant: "text",
     size: "lg",
-    children: "ボタン",
-    onClick: fn(),
-    "aria-disabled": false,
   },
 };
 
@@ -323,9 +362,6 @@ export const TextMD: Story = {
   args: {
     variant: "text",
     size: "md",
-    children: "ボタン",
-    onClick: fn(),
-    "aria-disabled": false,
   },
 };
 
@@ -333,9 +369,6 @@ export const TextSM: Story = {
   args: {
     variant: "text",
     size: "sm",
-    children: "ボタン",
-    onClick: fn(),
-    "aria-disabled": false,
   },
 };
 
@@ -343,8 +376,5 @@ export const TextXS: Story = {
   args: {
     variant: "text",
     size: "xs",
-    children: "ボタン",
-    onClick: fn(),
-    "aria-disabled": false,
   },
 };
