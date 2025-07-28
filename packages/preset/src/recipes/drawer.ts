@@ -17,7 +17,7 @@ export default defineSlotRecipe({
        * backdrop:bg-opacity-gray-100 forced-colors:backdrop:bg-[#000b]
        */
       backdropFilter: "blur(4px)",
-      background: "gray.100/90",
+      background: "solid-gray.100/90",
       height: "100vh",
       position: "fixed",
       top: 0,

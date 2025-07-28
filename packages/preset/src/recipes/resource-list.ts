@@ -93,4 +93,8 @@ export default defineSlotRecipe({
       },
     },
   },
+  defaultVariants: {
+    variant: "list",
+    asLink: false,
+  },
 });

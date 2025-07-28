@@ -658,8 +658,8 @@ export const VerticalLayoutWithAvatarAndButtons: Story = {
             className={css({
               aspectRatio: 4 / 3,
               bgGradient: "to-tr",
-              gradientFrom: "sky.50",
-              gradientTo: "sky.300",
+              gradientFrom: "light-blue.50",
+              gradientTo: "light-blue.300",
             })}
           />
         </Card.Image>
@@ -737,7 +737,7 @@ export const VerticalLayoutWithFormControl: Story = {
                   aspectRatio: 4 / 3,
                   bgGradient: "to-tr",
                   gradientFrom: "pink.200",
-                  gradientTo: "amber.300",
+                  gradientTo: "orange.300",
                 })}
               />
               <div

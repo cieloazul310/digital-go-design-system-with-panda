@@ -13,10 +13,34 @@ const meta = {
     multiple: {
       control: "boolean",
     },
+    colorPalette: {
+      options: [
+        "keyColor",
+        "blue",
+        "light-blue",
+        "cyan",
+        "green",
+        "lime",
+        "yellow",
+        "orange",
+        "red",
+        "magenta",
+        "purple",
+      ],
+      control: { type: "radio" },
+      table: {
+        defaultValue: { summary: "keyColor" },
+        type: {
+          summary:
+            "'keyColor' | 'blue' | 'light-blue' | 'cyan' | 'green' | 'lime' | 'yellow' | 'orange' | 'red' | 'magenta' | 'purple'",
+        },
+      },
+    },
   },
   args: {
     collapsible: true,
     multiple: true,
+    colorPalette: "keyColor",
   },
   render: ({ ...props }) => {
     return (

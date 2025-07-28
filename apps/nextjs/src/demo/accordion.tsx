@@ -3,7 +3,7 @@ import * as Accordion from "@/components/ui/accordion";
 
 export default function App() {
   return (
-    <Accordion.Root textStyle="std-16N-170">
+    <Accordion.Root textStyle="std-17N-170" multiple>
       <Accordion.Item value="hoge">
         <Accordion.ItemTrigger>
           <h3>ダミーテキストとは何ですか？</h3>

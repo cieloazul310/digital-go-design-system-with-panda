@@ -9,3 +9,21 @@ digitalgo: https://design.digital.go.jp/components/card/
 ```tsx
 import * as Card from "@/components/ui/card";
 ```
+
+## 使用例
+
+### 縦レイアウト
+
+<DemoViewer name="card" />
+
+### 横レイアウト
+
+`<Card.Root>`に`orientation="horizontal"`を設定する
+
+<DemoViewer name="card-horizontal" />
+
+### リンク
+
+`<Card.Root>`に`asLink`属性を付与すると、ホバー時にインタラクションが加わる。このとき、通常`<Card.Title>`に`asChild`属性を付与し、子要素のリンクと合成して使用する。
+
+<DemoViewer name="card-aslink" />

@@ -1,6 +1,7 @@
+import { defineTokens } from "@pandacss/dev";
 import tokens from "@digital-go-jp/design-tokens";
 
-const colors = {
+const colors = defineTokens.colors({
   white: { value: tokens.Color.Neutral.White.$value },
   black: { value: tokens.Color.Neutral.Black.$value },
   blue: {
@@ -215,6 +216,6 @@ const colors = {
     yellow: { value: tokens.Color.Primitive.Yellow[700].$value },
     blue: { value: tokens.Color.Primitive.LightBlue[700].$value },
   },
-};
+});
 
 export default colors;

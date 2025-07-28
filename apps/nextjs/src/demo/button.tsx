@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export default function App() {
   return (
-    <HStack gap={2}>
+    <HStack gap={4}>
       <Button>ボタン</Button>
       <Button variant="outline">ボタン</Button>
       <Button variant="text">ボタン</Button>

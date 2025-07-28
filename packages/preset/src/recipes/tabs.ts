@@ -40,6 +40,7 @@ export default defineSlotRecipe({
        */
       px: { base: 4, md: 8 },
       py: 6,
+      cursor: "pointer",
       bg: {
         base: "transparent",
         _hover: "solid-gray.50",

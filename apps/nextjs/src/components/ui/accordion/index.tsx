@@ -42,12 +42,12 @@ export const ItemIndicator = withContext<
 export const Item = withContext<
   HTMLDivElement,
   Assign<HTMLStyledProps<"div">, Accordion.ItemBaseProps>
->(Accordion.Item, "item", { defaultClassName: "group" });
+>(Accordion.Item, "item");
 
 export const ItemTrigger = withContext<
   HTMLButtonElement,
   Assign<HTMLStyledProps<"button">, Accordion.ItemTriggerBaseProps>
->(Accordion.ItemTrigger, "itemTrigger");
+>(Accordion.ItemTrigger, "itemTrigger", { defaultClassName: "group" });
 
 export {
   AccordionContext as Context,
