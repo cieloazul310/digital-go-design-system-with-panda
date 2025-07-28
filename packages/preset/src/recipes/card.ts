@@ -53,7 +53,6 @@ export default defineSlotRecipe({
     },
     title: {
       textStyle: "std-20B-150",
-      color: "solid-gray.900",
     },
   },
   variants: {

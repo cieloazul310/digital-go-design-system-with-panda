@@ -27,7 +27,7 @@ export const Root = withProvider<
     Assign<HTMLStyledProps<"label">, Checkbox.RootBaseProps>,
     CheckboxVariantProps
   >
->(Checkbox.Root, "root");
+>(Checkbox.Root, "root", { defaultClassName: "group" });
 
 export const Control = withContext<
   HTMLDivElement,

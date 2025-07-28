@@ -73,10 +73,17 @@ export default defineSlotRecipe({
        * outline on hover
        * has-[input:hover:not(:focus):not([aria-disabled="true"])]:bg-solid-gray-420
        */
-      '&:is(:hover, [data-hover]):not(:focus):not([aria-disabled="true"])': {
+      '&:is(:hover, [data-hover]):not([aria-disabled="true"])': {
         outlineStyle: "solid",
         outlineWidth: "calc(var(--radio-size) / 12)",
         outlineColor: "solid-gray.420",
+        _focus: {
+          outlineStyle: "solid",
+          outlineWidth: "4px",
+          outlineColor: "black",
+          outlineOffset: "calc(2 / 16 * 1rem)",
+          focusRing: "calc(2 / 16 * 1rem)",
+        },
       },
       /**
        * focus:outline focus:outline-4 focus:outline-black
@@ -116,13 +123,15 @@ export default defineSlotRecipe({
          */
         _before: {
           display: "block",
-          bg: "colorPalette.900",
-          _hover: "colorPalette.1100",
-          _invalid: {
-            base: "error.1",
-            _hover: "red.1000",
+          bg: {
+            base: "colorPalette.900",
+            _hover: "colorPalette.1100",
+            _invalid: {
+              base: "error.1",
+              _hover: "red.1000",
+            },
+            _highContrast: "Highlight",
           },
-          _highContrast: "Highlight",
         },
         _disabled: {
           _before: {
