@@ -1,5 +1,11 @@
 # @cieloazul310/digital-go-pandacss-utils
 
+## 0.1.0-beta.6
+
+### Patch Changes
+
+- 4c18a70: update recipes
+
 ## 0.1.0-beta.5
 
 ### Minor Changes

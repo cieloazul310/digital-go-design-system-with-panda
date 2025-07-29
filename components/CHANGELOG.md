@@ -1,5 +1,13 @@
 # @cieloazul310/digital-go-react-components
 
+## 0.1.0-beta.6
+
+### Patch Changes
+
+- 4c18a70: update recipes
+- Updated dependencies [4c18a70]
+  - styled-system@0.1.0-beta.6
+
 ## 0.1.0-beta.5
 
 ### Minor Changes
