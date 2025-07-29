@@ -28,15 +28,18 @@ export default defineRecipe({
     /**
      * border border-solid-gray-600 hover:border-black
      * aria-disabled:border-solid-gray-300 aria-disabled:forced-colors:border-[GrayText]
+     * aria-[invalid=true]:border-error-1 aria-[invalid=true]:hover:border-red-1000
      */
     borderWidth: "1px",
     borderColor: {
       base: "solid-gray.600",
       _hover: "black",
       _disabled: { base: "solid-gray.300", _hover: "GrayText" },
+      _invalid: { base: "error.1", _hover: "red.1000" },
     },
     /**
-     * focus:outline focus:outline-4 focus:outline-black focus:outline-offset-[calc(2/16*1rem)]
+     * focus:outline focus:outline-4 focus:outline-black
+     * focus:outline-offset-[calc(2/16*1rem)]
      * focus:ring-[calc(2/16*1rem)] focus:ring-yellow-300
      */
     _focus: {
@@ -46,18 +49,5 @@ export default defineRecipe({
       outlineOffset: "calc(2 / 16 * 1rem)",
       focusRing: "calc(2 / 16 * 1rem)",
     },
-  },
-  variants: {
-    invalid: {
-      true: {
-        /**
-         * aria-[invalid=true]:border-error-1 aria-[invalid=true]:hover:border-red-1000
-         */
-        borderColor: { base: "error.1", _hover: "red.1000" },
-      },
-    },
-  },
-  defaultVariants: {
-    invalid: false,
   },
 });

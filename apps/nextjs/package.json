@@ -9,7 +9,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "add-snippets": "node ../../packages/cli/bin/add-snippets.cjs"
+    "sync": "node ../../packages/cli/bin/add-snippets.cjs"
   },
   "dependencies": {
     "@ark-ui/react": "^5.13.0",

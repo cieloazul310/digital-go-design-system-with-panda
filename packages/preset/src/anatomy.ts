@@ -26,6 +26,30 @@ export const disclosureAnatomy = createAnatomy("disclosure").parts(
   "content",
 );
 
+/**
+ * https://github.com/chakra-ui/ark/blob/main/packages/react/src/components/field/field.anatomy.ts
+ */
+export const fieldAnatomy = createAnatomy("field").parts(
+  "root",
+  "errorText",
+  "supportText",
+  "input",
+  "label",
+  "select",
+  "textarea",
+  "requirementBadge",
+);
+
+/**
+ * https://github.com/chakra-ui/ark/blob/main/packages/react/src/components/fieldset/fieldset.anatomy.ts
+ */
+export const fieldsetAnatomy = createAnatomy("fieldset").parts(
+  "root",
+  "errorText",
+  "supportText",
+  "legend",
+);
+
 export const inputTextAnatomy = createAnatomy("field").parts(
   "root",
   "errorText",

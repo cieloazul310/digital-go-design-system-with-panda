@@ -33,11 +33,13 @@ export default defineRecipe({
      * border border-solid-gray-600 hover:border-black
      * aria-disabled:border-solid-gray-300 aria-disabled:bg-solid-gray-50
      * aria-disabled:forced-colors:border-[GrayText]
+     * aria-[invalid=true]:border-error-1aria-[invalid=true]:hover:border-red-1000
      */
     borderWidth: "1px",
     borderColor: {
       base: "solid-gray.900",
       _disabled: "solid-gray.300",
+      _invalid: { base: "error.1", _hover: "red.1000" },
     },
     /**
      * remove button style
@@ -67,14 +69,6 @@ export default defineRecipe({
       },
       lg: {
         height: 14,
-      },
-    },
-    invalid: {
-      /**
-       * aria-[invalid=true]:border-error-1aria-[invalid=true]:hover:border-red-1000
-       */
-      true: {
-        borderColor: { base: "error.1", _hover: "red.1000" },
       },
     },
   },

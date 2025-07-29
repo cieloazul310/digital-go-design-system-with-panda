@@ -5,6 +5,7 @@
 import { defineSlotRecipe } from "@pandacss/dev";
 
 export default defineSlotRecipe({
+  deprecated: true,
   className: "radio",
   slots: ["item", "itemControl", "itemText"],
   base: {

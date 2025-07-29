@@ -102,16 +102,8 @@ export default defineSlotRecipe({
         label: { ...label.variants?.size?.sm },
       },
     },
-    invalid: {
-      true: {
-        trigger: {
-          ...selectBox.variants?.invalid?.true,
-        },
-      },
-    },
   },
   defaultVariants: {
     size: "lg",
-    invalid: false,
   },
 });

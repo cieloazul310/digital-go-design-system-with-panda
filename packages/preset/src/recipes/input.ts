@@ -21,12 +21,14 @@ export default defineRecipe({
      * border border-solid-gray-600 hover:border-black
      * aria-disabled:border-solid-gray-300
      * aria-disabled:forced-colors:border-[GrayText]
+     * aria-[invalid=true]:border-error-1 aria-[invalid=true]:hover:border-red-1000
      */
     borderWidth: "1px",
     borderColor: {
       base: "solid-gray.600",
       _hover: "black",
       _disabled: { base: "solid-gray.300", _highContrast: "GrayText" },
+      _invalid: { base: "error.1", _hover: "red.1000" },
     },
     /**
      * bg-white text-oln-16N-100 text-solid-gray-800
@@ -42,7 +44,8 @@ export default defineRecipe({
     textStyle: "oln-16N-100",
     /**
      * focus:outline focus:outline-4 focus:outline-black
-     * focus:outline-offset-[calc(2/16*1rem)] focus:ring-[calc(2/16*1rem)] focus:ring-yellow-300
+     * focus:outline-offset-[calc(2/16*1rem)]
+     * focus:ring-[calc(2/16*1rem)] focus:ring-yellow-300
      */
     _focus: {
       outlineStyle: "solid",
@@ -65,17 +68,8 @@ export default defineRecipe({
       md: { height: 12 },
       lg: { height: 14 },
     },
-    invalid: {
-      true: {
-        /**
-         * aria-[invalid=true]:border-error-1 aria-[invalid=true]:hover:border-red-1000
-         */
-        borderColor: { base: "error.1", _hover: "red.1000" },
-      },
-    },
   },
   defaultVariants: {
     size: "lg",
-    invalid: false,
   },
 });
