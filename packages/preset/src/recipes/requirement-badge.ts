@@ -13,17 +13,4 @@ export default defineRecipe({
     textStyle: "oln-16N-100",
     color: "red.800",
   },
-  variants: {
-    isOptional: {
-      true: {
-        /**
-         * data-[is-optional]:text-solid-gray-800
-         */
-        color: "solid-gray.800",
-      },
-    },
-  },
-  defaultVariants: {
-    isOptional: false,
-  },
 });

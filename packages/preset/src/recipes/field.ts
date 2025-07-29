@@ -3,20 +3,18 @@
  * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Input/Input.tsx
  */
 import { defineSlotRecipe } from "@pandacss/dev";
-import { inputTextAnatomy } from "../anatomy";
+import { fieldAnatomy } from "../anatomy";
 import errorText from "./error-text";
 import input from "./input";
 import label from "./label";
+import requirementBadge from "./requirement-badge";
 import selectBox from "./select-box";
 import supportText from "./support-text";
 import textarea from "./textarea";
 
-const inputText = defineSlotRecipe({
-  deprecated: true,
-  className: "input-text",
-  description:
-    "インプットテキストコンポーネントは、名前や電話番号など、1行以内のテキストを入力する場合に使用します。",
-  slots: inputTextAnatomy.keys(),
+const field = defineSlotRecipe({
+  className: "field",
+  slots: fieldAnatomy.keys(),
   base: {
     root: {
       display: "flex",
@@ -38,8 +36,11 @@ const inputText = defineSlotRecipe({
     errorText: {
       ...errorText.base,
     },
-    helperText: {
+    supportText: {
       ...supportText.base,
+    },
+    requirementBadge: {
+      ...requirementBadge.base,
     },
   },
   variants: {
@@ -62,8 +63,8 @@ const inputText = defineSlotRecipe({
     },
   },
   defaultVariants: {
-    size: "lg",
+    size: "md",
   },
 });
 
-export default inputText;
+export default field;

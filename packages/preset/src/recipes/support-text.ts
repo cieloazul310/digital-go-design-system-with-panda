@@ -10,7 +10,7 @@ export default defineRecipe({
     /**
      * text-std-16N-170 text-solid-gray-700
      */
-    textStyle: "dns-16N-170",
+    textStyle: "std-16N-170",
     color: "solid-gray.700",
   },
 });

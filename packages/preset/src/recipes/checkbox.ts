@@ -27,9 +27,13 @@ export default defineSlotRecipe({
       rounded: "calc(1 / 4 * 100%)",
       outlineStyle: "solid",
       outlineWidth: "2px",
-      outlineColor: { base: "solid-gray.420", _groupHover: "black" },
+      outlineColor: {
+        base: "solid-gray.420",
+        _invalid: { base: "error.1", _disabled: "solid-gray.420" },
+        _groupHover: { base: "black", _disabled: "solid-gray.420" },
+      },
       _disabled: {
-        bg: "solid-gray.420",
+        bg: "solid-gray.50",
       },
     },
     indicator: {
@@ -72,7 +76,8 @@ export default defineSlotRecipe({
            * data-[error]:border-error-1 data-[error]:hover:border-red-1000
            */
           base: "error.1",
-          _hover: "red.1000",
+          _disabled: "solid-gray.300",
+          _hover: { base: "red.1000", _disabled: "solid-gray.300" },
         },
         _disabled: {
           /**
@@ -115,10 +120,12 @@ export default defineSlotRecipe({
           _indeterminate: {
             base: "error.1",
             _hover: "red.1000",
+            _disabled: "solid-gray.300",
           },
           _checked: {
             base: "error.1",
             _hover: "red.1000",
+            _disabled: "solid-gray.300",
           },
         },
         /**
@@ -211,7 +218,12 @@ export default defineSlotRecipe({
           width: 6,
           height: 6,
           outlineOffset: "-4px",
-          boxShadow: { _groupHover: "inset 0 0 0 2px {colors.solid-gray.420}" },
+          boxShadow: {
+            _groupHover: {
+              base: "inset 0 0 0 2px {colors.solid-gray.420}",
+              _disabled: "none",
+            },
+          },
         },
         indicator: {
           /**
@@ -241,7 +253,12 @@ export default defineSlotRecipe({
           width: 8,
           height: 8,
           outlineOffset: "-5px",
-          boxShadow: { _groupHover: "inset 0 0 0 4px {colors.solid-gray.420}" },
+          boxShadow: {
+            _groupHover: {
+              base: "inset 0 0 0 4px {colors.solid-gray.420}",
+              _disabled: "none",
+            },
+          },
         },
         indicator: {
           /**
@@ -277,7 +294,12 @@ export default defineSlotRecipe({
           width: 11,
           height: 11,
           outlineOffset: "-7px",
-          boxShadow: { _groupHover: "inset 0 0 0 6px {colors.solid-gray.420}" },
+          boxShadow: {
+            _groupHover: {
+              base: "inset 0 0 0 6px {colors.solid-gray.420}",
+              _disabled: "none",
+            },
+          },
         },
         indicator: {
           /**

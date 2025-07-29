@@ -7,6 +7,8 @@ import disclosure from "./disclosure";
 import digitalGoDivider from "./divider";
 import drawer from "./drawer";
 import errorText from "./error-text";
+import field from "./field";
+import fieldset from "./fieldset";
 import hamburgerMenuButton from "./hamburger-menu-button";
 import input from "./input";
 import inputText from "./input-text";
@@ -43,6 +45,8 @@ const recipes = {
   disclosure,
   digitalGoDivider,
   errorText,
+  field,
+  fieldset,
   hamburgerMenuButton,
   input,
   inputText,
