@@ -14,6 +14,7 @@
     "@cieloazul310/digital-go-pandacss-utils": "0.0.1-prerelease.4"
   },
   "changesets": [
+    "khaki-chairs-cover",
     "shy-clocks-wash"
   ]
 }
