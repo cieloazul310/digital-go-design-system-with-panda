@@ -23,6 +23,11 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    options: {
+      storySort: {
+        order: ["Getting Started"],
+      },
+    },
   },
   decorators: [
     withThemeByClassName<ReactRenderer>({

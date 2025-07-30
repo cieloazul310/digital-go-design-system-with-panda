@@ -1,15 +1,17 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+// import type { KeyboardEvent } from "react";
 import { fn } from "storybook/test";
-import * as InputText from "../src/input-text";
-import { inputText } from "styled-system/recipes";
+import * as Field from "../src/field";
+import { field } from "styled-system/recipes";
 
 const meta = {
   title: "Components/インプットテキスト",
   tags: ["autodocs"],
+  component: Field.Root,
   argTypes: {
     size: {
       control: "inline-radio",
-      options: inputText.variantMap.size,
+      options: field.variantMap.size,
     },
     disabled: {
       description:
@@ -32,68 +34,75 @@ const meta = {
     required: false,
     onChange: fn(),
   },
-} satisfies Meta<typeof InputText.Root>;
+} satisfies Meta<typeof Field.Root>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Input: Story = {
-  render: ({ ...props }) => {
-    return (
-      <InputText.Root {...props}>
-        <InputText.Label>ラベル</InputText.Label>
-        <InputText.HelperText>サポートテキスト</InputText.HelperText>
-        <InputText.Input placeholder="Placeholder" />
-        <InputText.ErrorText>※エラーテキストが入ります</InputText.ErrorText>
-      </InputText.Root>
-    );
+export const InputText: Story = {
+  args: {
+    children: (
+      <>
+        <Field.Label>
+          ラベル
+          <Field.RequirementBadge>※必須</Field.RequirementBadge>
+        </Field.Label>
+        <Field.SupportText>サポートテキスト</Field.SupportText>
+        <Field.Input placeholder="Placeholder" />
+        <Field.ErrorText>※エラーテキストが入ります</Field.ErrorText>
+      </>
+    ),
   },
 };
 
 export const Invalid: Story = {
   args: {
     invalid: true,
-  },
-  render: ({ ...props }) => {
-    return (
-      <InputText.Root {...props}>
-        <InputText.Label>ラベル</InputText.Label>
-        <InputText.HelperText>サポートテキスト</InputText.HelperText>
-        <InputText.Input placeholder="Placeholder" />
-        <InputText.ErrorText>※エラーテキストが入ります</InputText.ErrorText>
-      </InputText.Root>
-    );
+    children: (
+      <>
+        <Field.Label>
+          ラベル<Field.RequirementBadge>※必須</Field.RequirementBadge>
+        </Field.Label>
+        <Field.SupportText>サポートテキスト</Field.SupportText>
+        <Field.Input placeholder="Placeholder" />
+        <Field.ErrorText>※エラーテキストが入ります</Field.ErrorText>
+      </>
+    ),
   },
 };
 
 export const Textarea: Story = {
-  render: ({ ...props }) => {
-    return (
-      <InputText.Root {...props}>
-        <InputText.Label>ラベル</InputText.Label>
-        <InputText.HelperText>サポートテキスト</InputText.HelperText>
-        <InputText.Textarea rows={6} />
-        <InputText.ErrorText>※エラーテキストが入ります</InputText.ErrorText>
-      </InputText.Root>
-    );
+  args: {
+    children: (
+      <>
+        <Field.Label>
+          ラベル<Field.RequirementBadge>※必須</Field.RequirementBadge>
+        </Field.Label>
+        <Field.SupportText>サポートテキスト</Field.SupportText>
+        <Field.Textarea rows={6} />
+        <Field.ErrorText>※エラーテキストが入ります</Field.ErrorText>
+      </>
+    ),
   },
 };
 
 export const Select: Story = {
-  render: ({ ...props }) => {
-    return (
-      <InputText.Root {...props}>
-        <InputText.Label>ラベル</InputText.Label>
-        <InputText.HelperText>サポートテキスト</InputText.HelperText>
-        <InputText.Select asChild>
+  args: {
+    children: (
+      <>
+        <Field.Label>
+          ラベル<Field.RequirementBadge>※必須</Field.RequirementBadge>
+        </Field.Label>
+        <Field.SupportText>サポートテキスト</Field.SupportText>
+        <Field.Select asChild>
           <select>
             <option value="one">オプション1</option>
             <option value="two">オプション2</option>
             <option value="three">オプション3</option>
           </select>
-        </InputText.Select>
-        <InputText.ErrorText>※エラーテキストが入ります</InputText.ErrorText>
-      </InputText.Root>
-    );
+        </Field.Select>
+        <Field.ErrorText>※エラーテキストが入ります</Field.ErrorText>
+      </>
+    ),
   },
 };
