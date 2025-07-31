@@ -4,7 +4,7 @@ import { tokens } from "./src/theme/tokens";
 import { semanticTokens } from "./src/theme/semantic-tokens";
 
 export default defineConfig({
-  presets: ["@pandacss/dev/presets", createPreset("blue")],
+  presets: [createPreset("blue")],
   // Whether to use css reset
   preflight: true,
 

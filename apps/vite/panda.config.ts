@@ -2,7 +2,7 @@ import { defineConfig } from "@pandacss/dev";
 import { createPreset } from "@cieloazul310/digital-go-pandacss-preset";
 
 export default defineConfig({
-  presets: ["@pandacss/dev/presets", createPreset("lime")],
+  presets: [createPreset("lime")],
   // Whether to use css reset
   preflight: true,
 

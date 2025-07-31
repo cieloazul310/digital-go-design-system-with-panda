@@ -1,7 +1,10 @@
 import { defineTokens } from "@pandacss/dev";
+import { preset as pandaPreset } from "@pandacss/preset-panda";
 import tokens from "@digital-go-jp/design-tokens";
 import colors from "./colors";
 import { fonts, fontSizes, fontWeights, lineHeights } from "./typography";
+
+const { spacing, sizes } = pandaPreset.theme.tokens;
 
 export default defineTokens({
   colors,
@@ -29,4 +32,6 @@ export default defineTokens({
     "7": { value: tokens.Elevation[7].$value },
     "8": { value: tokens.Elevation[8].$value },
   },
+  sizes,
+  spacing,
 });

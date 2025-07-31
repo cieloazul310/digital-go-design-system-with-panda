@@ -25,7 +25,6 @@ import { defineConfig } from "@pandacss/dev";
 
 export default defineConfig({
   presets: [
-    "@pandacss/dev/presets",
 +   createPreset("blue"),
   ],
   // Whether to use css reset
