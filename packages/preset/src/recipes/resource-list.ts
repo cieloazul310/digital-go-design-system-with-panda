@@ -11,8 +11,8 @@ export default defineSlotRecipe({
       overflow: "hidden",
       colorPalette: "keyColor",
       bg: {
-        "&:has(input:checked)": "colorPalette.50",
-        _selected: "colorPalette.50",
+        "&:has(input:checked)": "colorPalette.bg",
+        _selected: "colorPalette.bg",
       },
     },
     main: {

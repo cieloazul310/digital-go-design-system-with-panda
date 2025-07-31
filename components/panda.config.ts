@@ -39,6 +39,7 @@ export default defineConfig({
             "red",
             "magenta",
             "purple",
+            "solid-gray",
           ],
         },
       },
