@@ -32,7 +32,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Playground: Story = {
   args: {
-    className: "",
     color: "gray-420",
   },
 };

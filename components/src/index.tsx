@@ -1,15 +1,19 @@
 import * as Accordion from "./accordion";
 import * as Breadcrumb from "./breadcrumb";
+import * as Card from "./card";
 import * as Checkbox from "./checkbox";
 import * as Disclosure from "./disclosure";
 import * as Drawer from "./drawer";
-import * as InputText from "./input-text";
+import * as Field from "./field";
+import * as Fieldset from "./fieldset";
 import * as Menu from "./menu";
 import * as MenuList from "./menu-list";
 import * as NotificationBanner from "./notification-banner";
-import * as Radio from "./radio";
 import * as Select from "./select";
+import * as RadioGroup from "./radio-group";
+import * as ResourceList from "./resource-list";
 import * as Table from "./table";
+import * as Tabs from "./tabs";
 import * as TreeView from "./tree-view";
 
 export * from "./button";
@@ -27,15 +31,19 @@ export * from "./utils/create-style-context";
 export {
   Accordion,
   Breadcrumb,
+  Card,
   Checkbox,
   Disclosure,
   Drawer,
-  InputText,
+  Field,
+  Fieldset,
   Menu,
   MenuList,
   NotificationBanner,
-  Radio,
   Select,
+  RadioGroup,
+  ResourceList,
   Table,
+  Tabs,
   TreeView,
 };

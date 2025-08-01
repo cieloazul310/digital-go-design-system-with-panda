@@ -9,11 +9,18 @@ import { styled, Container } from "styled-system/jsx";
 const meta = {
   title: "Components/ディスクロージャー",
   tags: ["autodocs"],
+  component: Disclosure.Root,
   argTypes: {},
   args: {},
-  render: ({ ...props }) => {
-    return (
-      <Disclosure.Root {...props}>
+} satisfies Meta<typeof Disclosure.Root>;
+
+export default meta;
+type Story = StoryObj;
+
+export const Basic: Story = {
+  args: {
+    children: (
+      <>
         <Disclosure.Summary>
           <Disclosure.Icon />
           ディスクロージャータイトル
@@ -21,15 +28,10 @@ const meta = {
         <Disclosure.Content my={4}>
           これはダミーテキストです。ダミーテキストは、デザインやレイアウトの作成時に使用される仮の文章です。ダミーテキストを使用すると、デザインの全体像を評価したり、テキストの配置や長さを確認したりすることができます。ダミーテキストは実際の文章ではないので、内容には意味がありません。
         </Disclosure.Content>
-      </Disclosure.Root>
-    );
+      </>
+    ),
   },
-} satisfies Meta<typeof Disclosure.Root>;
-
-export default meta;
-type Story = StoryObj;
-
-export const Basic: Story = {};
+};
 
 export const Summary: Story = {
   render: ({ ...props }) => (

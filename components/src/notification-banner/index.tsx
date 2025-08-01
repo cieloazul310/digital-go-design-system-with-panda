@@ -11,7 +11,6 @@ import {
 } from "styled-system/recipes";
 import type { ComponentProps, HTMLStyledProps } from "styled-system/types";
 import { createStyleContext } from "../utils/create-style-context";
-// import { NotificationBannerIcon } from "./icon";
 
 const { withProvider, withContext } = createStyleContext(notificationBanner);
 
@@ -48,3 +47,8 @@ export const Close = withContext<
   HTMLButtonElement,
   Assign<HTMLStyledProps<"button">, PolymorphicProps>
 >(ark.button, "close");
+
+export const Actions = withContext<
+  HTMLButtonElement,
+  Assign<HTMLStyledProps<"div">, PolymorphicProps>
+>(ark.div, "actions");

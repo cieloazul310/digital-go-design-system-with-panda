@@ -1,6 +1,6 @@
 import { defineSlotRecipe } from "@pandacss/dev";
-import menuItem from "./menu-item";
 import { anatomy as treeViewAnatomy } from "@zag-js/tree-view";
+import menuItem from "./menu-item";
 
 export default defineSlotRecipe({
   className: "tree-view",

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import NextLink from "next/link";
 import * as ResourceList from "../src/resource-list";
 import { Link } from "../src/link";
-import * as RadioGroup from "../src/radio";
+import * as RadioGroup from "../src/radio-group";
 import * as Checkbox from "../src/checkbox";
 import { EllipsisVertical, CircleUser, Heart } from "lucide-react";
 import { link } from "styled-system/recipes";

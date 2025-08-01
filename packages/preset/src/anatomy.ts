@@ -50,17 +50,6 @@ export const fieldsetAnatomy = createAnatomy("fieldset").parts(
   "legend",
 );
 
-export const inputTextAnatomy = createAnatomy("field").parts(
-  "root",
-  "errorText",
-  "helperText",
-  "input",
-  "label",
-  "select",
-  "textarea",
-  "requiredIndicator",
-);
-
 export const menuListAnatomy = createAnatomy("menu-list").parts(
   "root",
   "label",
@@ -75,7 +64,7 @@ export const menuListAnatomy = createAnatomy("menu-list").parts(
 
 export const notificationBannerAnatomy = createAnatomy(
   "notification-banner",
-).parts("root", "icon", "close", "header", "heading", "body");
+).parts("root", "icon", "close", "header", "heading", "body", "actions");
 
 export const resourceListAnatomy = createAnatomy("resource-list").parts(
   "root",

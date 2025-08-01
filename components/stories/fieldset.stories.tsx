@@ -56,14 +56,14 @@ export const Basic: Story = {
             <Field.Label>
               市区町村<Field.RequirementBadge>※必須</Field.RequirementBadge>
             </Field.Label>
-            <Field.Input />
+            <Field.Input width="300px" />
           </Field.Root>
           <Field.Root>
             <Field.Label>
               電話番号<Field.RequirementBadge>※必須</Field.RequirementBadge>
             </Field.Label>
             <Field.SupportText>ハイフンなし</Field.SupportText>
-            <Field.Input />
+            <Field.Input width="200px" />
             <Field.ErrorText>Field Error Text</Field.ErrorText>
           </Field.Root>
           <Fieldset.Root>

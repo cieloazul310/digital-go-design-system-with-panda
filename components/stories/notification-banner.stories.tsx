@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import * as NotificationBanner from "../src/notification-banner";
+import { Button } from "../src/button";
 
 const meta = {
   title: "Components/ノティフィケーションバナー",
@@ -26,6 +27,10 @@ const meta = {
       },
     },
   },
+  args: {
+    bannerStyle: "standard",
+    type: "info2",
+  },
 } satisfies Meta<typeof NotificationBanner.Root>;
 
 export default meta;
@@ -33,48 +38,52 @@ type Story = StoryObj<typeof meta>;
 
 export const Playground: Story = {
   args: {
-    bannerStyle: "standard",
-    type: "info2",
+    children: (
+      <>
+        <NotificationBanner.Icon />
+        <NotificationBanner.Header>
+          <NotificationBanner.Heading>
+            バナータイトル
+          </NotificationBanner.Heading>
+          <NotificationBanner.Close>閉じる</NotificationBanner.Close>
+        </NotificationBanner.Header>
+        <NotificationBanner.Body>
+          <p>
+            <time dateTime="2024-07-01">2024年7月1日</time>
+          </p>
+          <p>
+            ダミーテキストは、デザインの作成時に使用される仮の文章です。ダミーテキストは、デザインの作成時に使用される仮の文章です。ダミーテキストは、デザインの作成時に使用される仮の文章です。
+          </p>
+        </NotificationBanner.Body>
+      </>
+    ),
   },
-  render: ({ ...props }) => (
-    <NotificationBanner.Root {...props}>
-      <NotificationBanner.Icon />
-      <NotificationBanner.Header>
-        <NotificationBanner.Heading>バナータイトル</NotificationBanner.Heading>
-        <NotificationBanner.Close>閉じる</NotificationBanner.Close>
-      </NotificationBanner.Header>
-      <NotificationBanner.Body>
-        <p>
-          <time dateTime="2024-07-01">2024年7月1日</time>
-        </p>
-        <p>
-          ダミーテキストは、デザインの作成時に使用される仮の文章です。ダミーテキストは、デザインの作成時に使用される仮の文章です。ダミーテキストは、デザインの作成時に使用される仮の文章です。
-        </p>
-      </NotificationBanner.Body>
-    </NotificationBanner.Root>
-  ),
 };
 
 export const WithAction: Story = {
   args: {
-    bannerStyle: "standard",
-    type: "info2",
+    children: (
+      <>
+        <NotificationBanner.Icon />
+        <NotificationBanner.Header>
+          <NotificationBanner.Heading>
+            バナータイトル
+          </NotificationBanner.Heading>
+          <NotificationBanner.Close>閉じる</NotificationBanner.Close>
+        </NotificationBanner.Header>
+        <NotificationBanner.Body>
+          <p>
+            <time dateTime="2024-07-01">2024年7月1日</time>
+          </p>
+          <p>
+            ダミーテキストは、デザインの作成時に使用される仮の文章です。ダミーテキストは、デザインの作成時に使用される仮の文章です。ダミーテキストは、デザインの作成時に使用される仮の文章です。
+          </p>
+          <NotificationBanner.Actions>
+            <Button variant="outline">アクションボタン</Button>
+            <Button>アクションボタン</Button>
+          </NotificationBanner.Actions>
+        </NotificationBanner.Body>
+      </>
+    ),
   },
-  render: ({ ...props }) => (
-    <NotificationBanner.Root {...props}>
-      <NotificationBanner.Icon />
-      <NotificationBanner.Header>
-        <NotificationBanner.Heading>バナータイトル</NotificationBanner.Heading>
-        <NotificationBanner.Close>閉じる</NotificationBanner.Close>
-      </NotificationBanner.Header>
-      <NotificationBanner.Body>
-        <p>
-          <time dateTime="2024-07-01">2024年7月1日</time>
-        </p>
-        <p>
-          ダミーテキストは、デザインの作成時に使用される仮の文章です。ダミーテキストは、デザインの作成時に使用される仮の文章です。ダミーテキストは、デザインの作成時に使用される仮の文章です。
-        </p>
-      </NotificationBanner.Body>
-    </NotificationBanner.Root>
-  ),
 };
