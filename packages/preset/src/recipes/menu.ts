@@ -47,7 +47,7 @@ export default defineSlotRecipe({
       textUnderlineOffset: "calc(3 / 16 * 1rem)",
       _checked: {
         bg: "colorPalette.100",
-        color: "colorPalette.1000",
+        color: "colorPalette.primary.100",
         fontWeight: "bold",
       },
       _focusVisible: {

@@ -49,9 +49,9 @@ export default defineRecipe({
          * bg-blue-900 hover:bg-blue-1000 active:bg-blue-1200 aria-disabled:bg-solid-gray-300
          */
         bg: {
-          base: "colorPalette.900",
-          _hover: "colorPalette.1000",
-          _active: "colorPalette.1200",
+          base: "colorPalette.primary",
+          _hover: "colorPalette.primary.100",
+          _active: "colorPalette.primary.300",
           _disabled: "solid-gray.300",
         },
         color: { base: "white", _disabled: "solid-gray.50" },
@@ -81,9 +81,9 @@ export default defineRecipe({
           _disabled: "white",
         },
         color: {
-          base: "colorPalette.900",
-          _hover: "colorPalette.1000",
-          _active: "colorPalette.1200",
+          base: "colorPalette.primary",
+          _hover: "colorPalette.primary.100",
+          _active: "colorPalette.primary.300",
           _disabled: "solid-gray.300",
         },
         /**
@@ -107,15 +107,15 @@ export default defineRecipe({
          */
         bg: {
           base: "transparent",
-          _hover: "colorPalette.50",
+          _hover: "colorPalette.bg",
           _active: "colorPalette.100",
           _focusVisible: { base: "yellow.300", _hover: "yellow.300" },
           _disabled: "transparent",
         },
         color: {
-          base: "colorPalette.900",
-          _hover: "colorPalette.1000",
-          _active: "colorPalette.1200",
+          base: "colorPalette.primary",
+          _hover: "colorPalette.primary.100",
+          _active: "colorPalette.primary.300",
           _disabled: "solid-gray.300",
         },
         /**

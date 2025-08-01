@@ -29,15 +29,15 @@ export default defineRecipe({
         _hover: "colorPalette.100",
       },
       _open: {
-        base: "colorPalette.50",
-        _hover: "colorPalette.50",
+        base: "colorPalette.bg",
+        _hover: "colorPalette.bg",
       },
     },
     color: {
       base: "solid-gray.800",
-      _selected: "colorPalette.1000",
-      _checked: "colorPalette.1000",
-      _open: "colorPalette.1000",
+      _selected: "colorPalette.primary.100",
+      _checked: "colorPalette.primary.100",
+      _open: "colorPalette.primary.100",
     },
     fontWeight: { base: "normal", _selected: "bold", _checked: "bold" },
     /**

@@ -16,7 +16,7 @@ export default defineRecipe({
     textStyle: "dns-16N-130",
     color: {
       base: "solid-gray.800",
-      _focusVisible: "colorPalette.1000",
+      _focusVisible: "colorPalette.primary.100",
     },
     bg: { base: "transparent", _focusVisible: "yellow.300" },
     /**

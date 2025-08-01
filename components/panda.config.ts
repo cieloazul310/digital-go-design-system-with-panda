@@ -1,8 +1,8 @@
 import { defineConfig } from "@pandacss/dev";
-import preset from "@cieloazul310/digital-go-pandacss-preset";
+import { createPreset } from "@cieloazul310/digital-go-pandacss-preset";
 
 export default defineConfig({
-  presets: ["@pandacss/dev/presets", preset],
+  presets: [createPreset("blue")],
   // Whether to use css reset
   preflight: true,
 
@@ -39,6 +39,7 @@ export default defineConfig({
             "red",
             "magenta",
             "purple",
+            "solid-gray",
           ],
         },
       },

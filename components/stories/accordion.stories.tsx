@@ -1,11 +1,13 @@
 import { ChevronDownIcon } from "lucide-react";
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { css } from "styled-system/css";
 import * as Accordion from "../src/accordion";
 import { styled, Container } from "styled-system/jsx";
 
 const meta = {
   title: "Components/アコーディオン",
   tags: ["autodocs"],
+  component: Accordion.Root,
   argTypes: {
     collapsible: {
       control: "boolean",
@@ -42,9 +44,18 @@ const meta = {
     multiple: true,
     colorPalette: "keyColor",
   },
-  render: ({ ...props }) => {
-    return (
-      <Accordion.Root textStyle="std-16N-170" {...props}>
+} satisfies Meta<typeof Accordion.Root>;
+
+export default meta;
+type Story = StoryObj;
+
+export const Basic: Story = {
+  args: {
+    ...css.raw({
+      textStyle: "std-17N-170",
+    }),
+    children: (
+      <>
         <Accordion.Item value="hoge">
           <Accordion.ItemTrigger>
             <h3>ダミーテキストとは何ですか？</h3>
@@ -89,15 +100,10 @@ const meta = {
             </p>
           </Accordion.ItemContent>
         </Accordion.Item>
-      </Accordion.Root>
-    );
+      </>
+    ),
   },
-} satisfies Meta<typeof Accordion.Root>;
-
-export default meta;
-type Story = StoryObj;
-
-export const Basic: Story = {};
+};
 
 export const Summary: Story = {
   render: ({ ...props }) => (

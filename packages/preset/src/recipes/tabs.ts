@@ -73,7 +73,7 @@ export default defineSlotRecipe({
          * after:border-current
          * aria-[current=page]:cursor-default
          */
-        color: "colorPalette.900",
+        color: "colorPalette.primary",
         cursor: "default",
         _after: {
           content: '""',

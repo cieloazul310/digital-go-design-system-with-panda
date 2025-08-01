@@ -1,7 +1,10 @@
 import { defineTokens } from "@pandacss/dev";
+import { preset as pandaPreset } from "@pandacss/preset-panda";
 import tokens from "@digital-go-jp/design-tokens";
 import colors from "./colors";
 import { fonts, fontSizes, fontWeights, lineHeights } from "./typography";
+
+const { spacing, sizes } = pandaPreset.theme.tokens;
 
 export default defineTokens({
   colors,
@@ -10,16 +13,14 @@ export default defineTokens({
   fontWeights,
   lineHeights,
   radii: {
-    xs: { value: "0.125rem" },
-    sm: { value: "0.25rem" },
-    md: { value: "0.375rem" },
-    lg: { value: "0.5rem" },
-    xl: { value: "0.75rem" },
-    "2xl": { value: "1rem" },
-    "3xl": { value: "1.5rem" },
+    "4": { value: tokens.BorderRadius[4].$value },
+    "6": { value: tokens.BorderRadius[6].$value },
     "8": { value: tokens.BorderRadius[8].$value },
+    "12": { value: tokens.BorderRadius[12].$value },
     "16": { value: tokens.BorderRadius[16].$value },
+    "24": { value: tokens.BorderRadius[24].$value },
     "32": { value: tokens.BorderRadius[32].$value },
+    full: { value: tokens.BorderRadius.Full.$value },
   },
   shadows: {
     "1": { value: tokens.Elevation[1].$value },
@@ -31,4 +32,6 @@ export default defineTokens({
     "7": { value: tokens.Elevation[7].$value },
     "8": { value: tokens.Elevation[8].$value },
   },
+  sizes,
+  spacing,
 });

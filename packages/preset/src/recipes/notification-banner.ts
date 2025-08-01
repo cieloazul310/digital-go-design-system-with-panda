@@ -76,35 +76,50 @@ export default defineSlotRecipe({
       },
     },
     close: {
+      _before: {
+        content: '""',
+        display: "block",
+        mt: 0.5,
+        width: 6,
+        height: 6,
+        bg: "currentColor",
+        clipPath:
+          "path('m6.4 18.6-1-1 5.5-5.6-5.6-5.6 1.1-1 5.6 5.5 5.6-5.6 1 1.1L13 12l5.6 5.6-1 1L12 13l-5.6 5.6Z')",
+      },
       /**
-       * inline-flex items-center gap-0.5
-       * -mt-2 -mr-3 desktop:mt-0 desktop:mr-0 desktop:px-2 desktop:py-0.5
+       * inline-flex items-center gap-1
+       * px-3 pb-1.5 pt-1 desktop:px-2 desktop:py-0.5
+       * -mt-2 -mr-3 desktop:mt-0 desktop:mr-0
        */
       display: "inline-flex",
       alignItems: "center",
       gap: 0.5,
       mt: { base: -2, md: 0 },
       mr: { base: -3, md: 0 },
-      px: { base: 0, md: 2 },
+      px: { base: 3, md: 2 },
+      pt: 1,
+      pb: 1.5,
       py: { base: 0, md: 0.5 },
       /**
        * text-solid-gray-900
        */
       color: "solid-gray.900",
       /**
-       * border border-transparent  hover:border-solid-gray-900 rounded-8 focus-visible:border-transparent
+       * hover:bg-solid-gray-50 hover:underline hover:underline-offset-[calc(3/16*1rem)]
        */
-      borderWidth: "1px",
-      borderColor: {
-        base: "transparent",
-        _hover: "solid-gray.900",
-        _focusVisible: "transparent",
+      _hover: {
+        bg: "solid-gray.50",
+        textDecoration: "underline",
+        textUnderlineOffset: "calc(3 / 16 * 1rem)",
+        cursor: "pointer",
       },
-      rounded: 8,
+      rounded: 6,
+      textStyle: "oln-16N-100",
       /**
-       * focus-visible:outline focus-visible:outline-4 focus-visible:outline-black focus-visible:outline-offset-[calc(2/16*1rem)]
-       * focus-visible:ring-[calc(2/16*1rem)] focus-visible:ring-yellow-300 focus-visible:bg-yellow-300
-       *
+       * focus-visible:outline focus-visible:outline-4
+       * focus-visible:outline-black focus-visible:outline-offset-[calc(2/16*1rem)]
+       * focus-visible:ring-[calc(2/16*1rem)]
+       * focus-visible:ring-yellow-300 focus-visible:bg-yellow-300
        */
       _focusVisible: {
         outlineStyle: "solid",
@@ -136,6 +151,13 @@ export default defineSlotRecipe({
       textStyle: "std-16N-170",
       color: "solid-gray.800",
     },
+    actions: {
+      mt: 4,
+      display: "flex",
+      flexDirection: { base: "column", md: "row" },
+      justifyContent: "end",
+      gap: { base: 2, md: 4 },
+    },
   },
   variants: {
     type: {
@@ -150,7 +172,12 @@ export default defineSlotRecipe({
         icon: {
           _before: {
             clipPath:
-              "path('M18 0C8.064 0 0 8.064 0 18C0 27.936 8.064 36 18 36C27.936 36 36 27.936 36 18C36 8.064 27.936 0 18 0ZM14.4 27L5.4 18L7.938 15.462L14.4 21.906L28.062 8.244L30.6 10.8L14.4 27Z')",
+              "path('M18 0C8.064 0 0 8.064 0 18C0 27.936 8.064 36 18 36C27.936 36 36 27.936 36 18C36 8.064 27.936 0 18 0Z M14.4 27L5.4 18L7.938 15.462L14.4 21.906L28.062 8.244L30.6 10.8L14.4 27Z')",
+          },
+        },
+        actions: {
+          "& button": {
+            colorPalette: "green",
           },
         },
       },
@@ -165,7 +192,12 @@ export default defineSlotRecipe({
         icon: {
           _before: {
             clipPath:
-              "path('M24.2525 33H11.7475L3 24.2525V11.7475L11.7475 3H24.2525L33 11.7475V24.2525L24.2525 33Z')",
+              "path('M10.82 35.3.74 25.22v-14.4L10.82.74h14.4L35.3 10.82v14.4L25.22 35.3h-14.4Zm7.2-14.592 5.472 5.472 2.688-2.688-5.472-5.472 5.472-5.472-2.688-2.688-5.472 5.472-5.472-5.472-2.688 2.688 5.472 5.472-5.472 5.472 2.688 2.688 5.472-5.472Z')",
+          },
+        },
+        actions: {
+          "& button": {
+            colorPalette: "red",
           },
         },
       },
@@ -183,6 +215,11 @@ export default defineSlotRecipe({
               "path('M0 34.0909H36L18 3L0 34.0909ZM19.6364 29.1818H16.3636V25.9091H19.6364V29.1818ZM19.6364 22.6364H16.3636V16.0909H19.6364V22.6364Z')",
           },
         },
+        actions: {
+          "& button": {
+            colorPalette: "yellow",
+          },
+        },
       },
       info1: {
         root: {
@@ -198,6 +235,11 @@ export default defineSlotRecipe({
               "path('M18 0C8.064 0 0 8.064 0 18C0 27.936 8.064 36 18 36C27.936 36 36 27.936 36 18C36 8.064 27.936 0 18 0ZM19.8 27H16.2V16.2H19.8V27ZM19.8 12.6H16.2V9H19.8V12.6Z')",
           },
         },
+        actions: {
+          "& button": {
+            colorPalette: "blue",
+          },
+        },
       },
       info2: {
         root: {
@@ -211,6 +253,11 @@ export default defineSlotRecipe({
           _before: {
             clipPath:
               "path('M18 0C8.064 0 0 8.064 0 18C0 27.936 8.064 36 18 36C27.936 36 36 27.936 36 18C36 8.064 27.936 0 18 0ZM19.8 27H16.2V16.2H19.8V27ZM19.8 12.6H16.2V9H19.8V12.6Z')",
+          },
+        },
+        actions: {
+          "& button": {
+            colorPalette: "solid-gray",
           },
         },
       },

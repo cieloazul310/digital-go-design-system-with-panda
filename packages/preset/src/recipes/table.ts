@@ -112,7 +112,7 @@ export default defineSlotRecipe({
           "& tr": {
             _even: {
               "&:not(:has(input:checked))": {
-                bg: "{colors.colorPalette.50}/25",
+                bg: "{colors.colorPalette.bg}/25",
               },
             },
           },
@@ -124,11 +124,11 @@ export default defineSlotRecipe({
         body: {
           "& tr": {
             _hover: {
-              bg: "colorPalette.50",
+              bg: "colorPalette.bg",
             },
             _even: {
               "&:not(:has(input:checked))": {
-                _hover: { bg: "{colors.colorPalette.50}" },
+                _hover: { bg: "{colors.colorPalette.bg}" },
               },
             },
           },

@@ -17,6 +17,30 @@ const meta = {
     dense: { control: "boolean" },
     striped: { control: "boolean" },
     hovered: { control: "boolean" },
+    colorPalette: {
+      options: [
+        "keyColor",
+        "blue",
+        "light-blue",
+        "cyan",
+        "green",
+        "lime",
+        "yellow",
+        "orange",
+        "red",
+        "magenta",
+        "purple",
+        "solid-gray",
+      ],
+      control: { type: "radio" },
+      table: {
+        defaultValue: { summary: "keyColor" },
+        type: {
+          summary:
+            "'keyColor' | 'blue' | 'light-blue' | 'cyan' | 'green' | 'lime' | 'yellow' | 'orange' | 'red' | 'magenta' | 'purple' | 'solid-gray'",
+        },
+      },
+    },
   },
   args: {
     dense: false,
@@ -30,6 +54,100 @@ type Story = StoryObj<typeof meta>;
 
 export const Playground: Story = {
   args: {
+    children: (
+      <>
+        <Table.Caption>テーブル</Table.Caption>
+        <colgroup>
+          <styled.col
+            borderRightWidth="1px"
+            borderColor="black"
+            bg="solid-gray.50"
+          />
+          <col />
+          <col />
+          <col />
+          <col />
+          <col />
+        </colgroup>
+        <Table.Head>
+          <Table.Row>
+            <Table.Header scope="col">ラベル</Table.Header>
+            <Table.Header scope="col">ラベル</Table.Header>
+            <Table.Header scope="col">ラベル</Table.Header>
+            <Table.Header scope="col">ラベル</Table.Header>
+            <Table.Header scope="col">ラベル</Table.Header>
+            <Table.Header scope="col">ラベル</Table.Header>
+          </Table.Row>
+        </Table.Head>
+        <Table.Body>
+          {Array.from({ length: 4 }).map((_, index) => (
+            <Table.Row key={index}>
+              <Table.Header scope="row">データ</Table.Header>
+              <Table.Cell>データ</Table.Cell>
+              <Table.Cell>データ</Table.Cell>
+              <Table.Cell>データ</Table.Cell>
+              <Table.Cell>データ</Table.Cell>
+              <Table.Cell>データ</Table.Cell>
+            </Table.Row>
+          ))}
+        </Table.Body>
+      </>
+    ),
+  },
+};
+
+export const DenseHoveredStriped: Story = {
+  args: {
+    dense: true,
+    hovered: true,
+    striped: true,
+    children: (
+      <>
+        <Table.Caption>テーブル</Table.Caption>
+        <colgroup>
+          <styled.col
+            borderRightWidth="1px"
+            borderColor="black"
+            bg="solid-gray.50"
+          />
+          <col />
+          <col />
+          <col />
+          <col />
+          <col />
+        </colgroup>
+        <Table.Head>
+          <Table.Row>
+            <Table.Header scope="col">ラベル</Table.Header>
+            <Table.Header scope="col">ラベル</Table.Header>
+            <Table.Header scope="col">ラベル</Table.Header>
+            <Table.Header scope="col">ラベル</Table.Header>
+            <Table.Header scope="col">ラベル</Table.Header>
+            <Table.Header scope="col">ラベル</Table.Header>
+          </Table.Row>
+        </Table.Head>
+        <Table.Body>
+          {Array.from({ length: 4 }).map((_, index) => (
+            <Table.Row key={index}>
+              <Table.Header scope="row">データ</Table.Header>
+              <Table.Cell>データ</Table.Cell>
+              <Table.Cell>データ</Table.Cell>
+              <Table.Cell>データ</Table.Cell>
+              <Table.Cell>データ</Table.Cell>
+              <Table.Cell>データ</Table.Cell>
+            </Table.Row>
+          ))}
+        </Table.Body>
+      </>
+    ),
+  },
+};
+
+export const ColorPalette: Story = {
+  args: {
+    colorPalette: "green",
+    hovered: true,
+    striped: true,
     children: (
       <>
         <Table.Caption>テーブル</Table.Caption>

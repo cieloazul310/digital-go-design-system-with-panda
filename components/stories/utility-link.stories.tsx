@@ -21,9 +21,11 @@ export const Simple: Story = {
 };
 
 export const WithExternalIcon: Story = {
-  render: ({ href }) => (
-    <UtilityLink href={href}>
-      Ut enim ad minim veniam <ExternalLink />
-    </UtilityLink>
-  ),
+  args: {
+    children: (
+      <>
+        Ut enim ad minim veniam <ExternalLink />
+      </>
+    ),
+  },
 };

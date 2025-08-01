@@ -12,7 +12,7 @@ export default defineSlotRecipe({
         "main"
         "sub"
       `,
-      bg: { base: "white", "&:has(input:checked)": "colorPalette.50" },
+      bg: { base: "white", "&:has(input:checked)": "colorPalette.bg" },
       color: "solid-gray.800",
       textStyle: "std-16N-170",
       borderColor: "solid-gray.420",

@@ -47,13 +47,14 @@ const meta = {
         "red",
         "magenta",
         "purple",
+        "solid-gray",
       ],
       control: { type: "radio" },
       table: {
         defaultValue: { summary: "keyColor" },
         type: {
           summary:
-            "'keyColor' | 'blue' | 'light-blue' | 'cyan' | 'green' | 'lime' | 'yellow' | 'orange' | 'red' | 'magenta' | 'purple'",
+            "'keyColor' | 'blue' | 'light-blue' | 'cyan' | 'green' | 'lime' | 'yellow' | 'orange' | 'red' | 'magenta' | 'purple' | 'solid-gray'",
         },
       },
     },

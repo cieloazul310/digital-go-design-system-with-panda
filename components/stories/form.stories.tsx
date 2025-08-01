@@ -25,7 +25,7 @@ const meta = {
     disabled: false,
     invalid: false,
   },
-} satisfies Meta<typeof Input>;
+} satisfies Meta;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

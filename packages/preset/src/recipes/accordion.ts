@@ -96,7 +96,7 @@ export default defineSlotRecipe({
        * bg-white text-blue-1000
        */
       bg: "white",
-      color: "colorPalette.1000",
+      color: "colorPalette.primary.100",
       /**
        * border border-current rounded-full
           group-hover/summary:outline group-hover/summary:outline-2 group-hover/summary:outline-current

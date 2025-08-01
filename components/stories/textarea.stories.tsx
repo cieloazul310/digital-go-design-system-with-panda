@@ -1,19 +1,14 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import * as InputText from "../src/input-text";
+// import * as InputText from "../src/input-text";
+import { css } from "styled-system/css";
+import * as Field from "../src/field";
+import { Textarea } from "../src/textarea";
 
 const meta = {
   title: "Components/テキストエリア",
   tags: ["autodocs"],
-  component: InputText.Root,
+  component: Textarea,
   argTypes: {
-    invalid: {
-      description: "エラー状態であるかどうかを指定します。",
-      control: { type: "boolean" },
-      table: {
-        defaultValue: { summary: "false" },
-        type: { summary: "boolean" },
-      },
-    },
     disabled: {
       description:
         "無効化する必要がある場合は `disabled` 属性ではなく `aria-disabled` 属性を使用します。",
@@ -24,31 +19,38 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof InputText.Root>;
+  args: {
+    disabled: false,
+    "aria-disabled": false,
+  },
+} satisfies Meta<typeof Textarea>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Plain: Story = {
   args: {
-    invalid: false,
+    name: "plain-textarea",
     disabled: false,
+    placeholder: "",
+    rows: 6,
+    ...css.raw({
+      width: "320px",
+    }),
   },
 };
 
-export const WithLabel: Story = {
-  render: ({ ...props }) => (
-    <InputText.Root {...props}>
-      <InputText.Label>ラベル</InputText.Label>
-      <InputText.HelperText>
-        番組へのご意見・ご感想をご記入ください。
-      </InputText.HelperText>
-      <InputText.Textarea />
-      <InputText.ErrorText>140字以内で記入</InputText.ErrorText>
-    </InputText.Root>
-  ),
+export const WithField: Story = {
   args: {
-    invalid: false,
-    disabled: false,
+    placeholder:
+      "Ark UIのFieldコンポーネントを使用するとラベルやサポートテキストとテキストエリアがidによって自動的に関連付けられる",
   },
+  render: ({ ...args }) => (
+    <Field.Root>
+      <Field.Label>ラベル</Field.Label>
+      <Field.SupportText>サポートテキスト</Field.SupportText>
+      <Field.Textarea {...args} />
+      <Field.ErrorText>エラーテキスト</Field.ErrorText>
+    </Field.Root>
+  ),
 };

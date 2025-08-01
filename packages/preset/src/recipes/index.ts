@@ -11,7 +11,6 @@ import field from "./field";
 import fieldset from "./fieldset";
 import hamburgerMenuButton from "./hamburger-menu-button";
 import input from "./input";
-import inputText from "./input-text";
 import label from "./label";
 import legend from "./legend";
 import link from "./link";
@@ -21,12 +20,10 @@ import menuItem from "./menu-item";
 import menuList from "./menu-list";
 import notificationBanner from "./notification-banner";
 import orderedList from "./ordered-list";
-import radio from "./radio";
 import radioGroup from "./radio-group";
 import requirementBadge from "./requirement-badge";
 import resourceList from "./resource-list";
 import select from "./select";
-import selectBox from "./select-box";
 import supportText from "./support-text";
 import table from "./table";
 import tabs from "./tabs";
@@ -49,7 +46,6 @@ const recipes = {
   fieldset,
   hamburgerMenuButton,
   input,
-  inputText,
   label,
   legend,
   link,
@@ -59,12 +55,10 @@ const recipes = {
   menuList,
   notificationBanner,
   orderedList,
-  radio,
   radioGroup,
   requirementBadge,
   resourceList,
   select,
-  selectBox,
   supportText,
   table,
   tabs,
