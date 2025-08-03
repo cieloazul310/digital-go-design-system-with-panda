@@ -20,8 +20,22 @@ export default defineSlotRecipe({
       ...menuItem.base,
     },
     itemIndicator: {
-      transition: "transform",
-      transform: { base: "rotate(0deg)", _open: "rotate(90deg)" },
+      _empty: {
+        _before: {
+          content: '""',
+          display: "block",
+          width: "24px",
+          height: "24px",
+          bg: "black",
+          clipPath: "path('M12 19L5 12L12 5L19 12L12 19Z')",
+        },
+        _selected: {
+          _before: {
+            clipPath:
+              "path('M12 19L5 12L12 5L19 12L12 19ZM12 16.15L16.15 12L12 7.85L7.85 12L12 16.15Z')",
+          },
+        },
+      },
     },
     itemText: {
       flexGrow: 1,
@@ -34,10 +48,28 @@ export default defineSlotRecipe({
       pl: 8,
     },
     branchIndicator: {
-      position: "absolute",
-      right: 4,
-      transition: "transform",
-      transform: { base: "rotate(0deg)", _open: "rotate(90deg)" },
+      _empty: {
+        _before: {
+          content: '""',
+          display: "block",
+          width: "24px",
+          height: "24px",
+          bg: "black",
+          clipPath: "path('M12 19L5 12L12 5L19 12L12 19Z')",
+        },
+        _selected: {
+          _before: {
+            clipPath:
+              "path('M12 19L5 12L12 5L19 12L12 19ZM12 16.15L16.15 12L12 7.85L7.85 12L12 16.15Z')",
+          },
+        },
+        _open: {
+          _before: {
+            clipPath:
+              "path('M12 19L5 12L12 5L19 12L12 19ZM12 16.15L16.15 12L12 7.85L7.85 12L12 16.15Z')",
+          },
+        },
+      },
     },
     branchText: {
       flexGrow: 1,

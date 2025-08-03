@@ -9,8 +9,7 @@ export const post = defineMdx({
     storybook: z.url().optional(),
     digitalgo: z.url().optional(),
   },
-  sortFunction: (a, b) =>
-    a.frontmatter.title.localeCompare(b.frontmatter.title),
+  sortFunction: (a, b) => a.slug.join("/").localeCompare(b.slug.join("/")),
 });
 export type PostFrontmatter = z.infer<typeof post.schema>;
 export type PostMetadata = z.infer<typeof post.metadataSchema>;

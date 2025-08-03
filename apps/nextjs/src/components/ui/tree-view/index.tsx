@@ -68,7 +68,7 @@ export const BranchTrigger = withContext<
 export const ItemIndicator = withContext<
   HTMLDivElement,
   Assign<HTMLStyledProps<"div">, TreeView.ItemIndicatorBaseProps>
->(TreeView.ItemIndicator, "itemIndicator");
+>(TreeView.ItemIndicator, "itemIndicator", { defaultProps: { hidden: false } });
 
 export const Item = withContext<
   HTMLDivElement,
@@ -90,7 +90,7 @@ export const Tree = withContext<
   Assign<HTMLStyledProps<"div">, TreeView.TreeBaseProps>
 >(TreeView.Tree, "tree");
 
-export type NodeProviderProps = TreeView.NodeProviderProps<TreeNode>;
+export type NodeProviderProps<T> = TreeView.NodeProviderProps<T>;
 export const NodeProvider = TreeView.NodeProvider;
 
 export { TreeViewContext as Context } from "@ark-ui/react/tree-view";

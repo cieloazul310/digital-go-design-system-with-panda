@@ -2,6 +2,7 @@ import NextLink from "next/link";
 import { css } from "styled-system/css";
 import { menuItem } from "styled-system/recipes";
 import { post } from "@/content";
+import { postGroups } from "@/utils/post-group";
 
 type MenuProps = {
   slug?: string[];
@@ -9,43 +10,67 @@ type MenuProps = {
 
 export default async function Menu({ slug = [] }: MenuProps) {
   const allPost = await post.getAll();
-  /*
-  const collection = {
-    items: [
-      { value: "トップページ", href: "/" },
-      { value: "はじめに", href: "/introduction" },
-      {
-        value: "はじめて本ウェブサイトを見る方へ",
-        href: "/introduction/about",
-      },
-      { value: "利用上の注意事項", href: "/introduction/notices" },
-      { value: "ガイダンス", href: "/guidance" },
-      { value: "デザインシステムとは", href: "/guidance/desgin-system" },
-      { value: "使い方", href: "/guidance/how-to-use" },
-      { value: "アクセシビリティ", href: "/foundations/accessibility" },
-      { value: "基本デザイン", href: "/foundations/style-guides" },
-      { value: "カラー", href: "/guidance" },
-      { value: "タイポグラフィ", href: "/foundations/desgin-system" },
-      { value: "レイアウト", href: "/foundations/how-to-use" },
-      { value: "リンクテキスト", href: "/foundations/accessibility" },
-      { value: "余白", href: "/foundations/style-guides" },
-      { value: "エレベーション", href: "/foundations/style-guides" },
-    ],
-  };
-  */
+
+  const menuCollection = postGroups.map(({ title, href, id }) => {
+    const children = allPost
+      .filter((post) => post.slug.length === 2 && post.slug.includes(id))
+      .map((post) => ({
+        title: post.frontmatter.title,
+        href: post.href,
+        selected: slug.join("/") === post.slug.join("/"),
+      }));
+
+    return {
+      title,
+      href,
+      children,
+      open: slug.includes(id),
+      selected: slug.join("/") === id,
+    };
+  });
 
   return (
     <nav className={css({ p: 1 })}>
       <ul>
-        {[...allPost].map(({ frontmatter, href }) => (
-          <li key={href}>
+        {menuCollection.map((menuGroup) => (
+          <li key={menuGroup.href}>
             <NextLink
               className={menuItem({ variant: "boxed" })}
-              data-selected={`/${slug.join("/")}` === href || undefined}
-              href={href}
+              href={menuGroup.href}
+              data-open={menuGroup.open || undefined}
+              data-selected={menuGroup.selected || undefined}
             >
-              {frontmatter.title}
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                {menuGroup.open ? (
+                  <path
+                    d="M12 19L5 12L12 5L19 12L12 19ZM12 16.15L16.15 12L12 7.85L7.85 12L12 16.15Z"
+                    fill="currentColor"
+                  />
+                ) : (
+                  <path d="M12 19L5 12L12 5L19 12L12 19Z" fill="currentColor" />
+                )}
+              </svg>
+              {menuGroup.title}
             </NextLink>
+            <ul
+              className={css({
+                pl: 8,
+                display: { base: "none", _open: "block" },
+              })}
+              data-open={menuGroup.open || undefined}
+            >
+              {menuGroup.children.map((item) => (
+                <li key={item.href}>
+                  <NextLink
+                    className={menuItem({ variant: "boxed" })}
+                    href={item.href}
+                    data-selected={item.selected || undefined}
+                  >
+                    {item.title}
+                  </NextLink>
+                </li>
+              ))}
+            </ul>
           </li>
         ))}
       </ul>
