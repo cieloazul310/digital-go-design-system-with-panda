@@ -1,7 +1,8 @@
+import { forwardRef } from "react";
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import NextLink from "next/link";
 import { createTreeCollection } from "@ark-ui/react/tree-view";
 import * as StyledTreeView from "../src/tree-view";
-import { forwardRef } from "react";
 
 const TreeView = forwardRef<HTMLDivElement, StyledTreeView.RootProps>(
   (props, ref) => {
@@ -31,9 +32,11 @@ const TreeNode = (props: StyledTreeView.NodeProviderProps) => {
     >
       {node.children ? (
         <StyledTreeView.Branch>
-          <StyledTreeView.BranchControl>
-            <StyledTreeView.BranchText>{node.name}</StyledTreeView.BranchText>
-            <StyledTreeView.BranchIndicator />
+          <StyledTreeView.BranchControl asChild>
+            <NextLink href={`/${node.id}`}>
+              <StyledTreeView.BranchIndicator />
+              <StyledTreeView.BranchText>{node.name}</StyledTreeView.BranchText>
+            </NextLink>
           </StyledTreeView.BranchControl>
           <StyledTreeView.BranchContent>
             {/* @ts-expect-error any type node */}
@@ -47,8 +50,11 @@ const TreeNode = (props: StyledTreeView.NodeProviderProps) => {
           </StyledTreeView.BranchContent>
         </StyledTreeView.Branch>
       ) : (
-        <StyledTreeView.Item>
-          <StyledTreeView.ItemText>{node.name}</StyledTreeView.ItemText>
+        <StyledTreeView.Item asChild>
+          <NextLink href={`/${node.id}`}>
+            <StyledTreeView.ItemIndicator />
+            <StyledTreeView.ItemText>{node.name}</StyledTreeView.ItemText>
+          </NextLink>
         </StyledTreeView.Item>
       )}
     </StyledTreeView.NodeProvider>
@@ -56,7 +62,7 @@ const TreeNode = (props: StyledTreeView.NodeProviderProps) => {
 };
 
 const meta = {
-  title: "Components/ツリービュー",
+  title: "Components/ツリービュー/ルーター",
   component: TreeView,
   argTypes: {
     variant: {

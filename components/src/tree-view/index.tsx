@@ -68,7 +68,7 @@ export const BranchTrigger = withContext<
 export const ItemIndicator = withContext<
   HTMLDivElement,
   Assign<HTMLStyledProps<"div">, TreeView.ItemIndicatorBaseProps>
->(TreeView.ItemIndicator, "itemIndicator");
+>(TreeView.ItemIndicator, "itemIndicator", { defaultProps: { hidden: false } });
 
 export const Item = withContext<
   HTMLDivElement,
