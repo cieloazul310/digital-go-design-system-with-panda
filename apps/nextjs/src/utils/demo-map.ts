@@ -1,4 +1,4 @@
-export const demoMap: Record<string, () => Promise<unknown>> = {
+export const demoMap = {
   // accordion
   accordion: () => import("@/demo/accordion"),
 
@@ -23,6 +23,9 @@ export const demoMap: Record<string, () => Promise<unknown>> = {
   // disclosure
   disclosure: () => import("@/demo/disclosure"),
   "disclosure-as-details": () => import("@/demo/disclosure-as-details"),
+
+  // drawer
+  drawer: () => import("@/demo/drawer"),
 
   // resource-list
   "resource-list": () => import("@/demo/resource-list"),
