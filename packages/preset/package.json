@@ -43,21 +43,21 @@
     "@cieloazul310/digital-go-pandacss-utils": "^0.1.0-beta.6"
   },
   "devDependencies": {
-    "@pandacss/dev": "^0.53.7",
+    "@pandacss/dev": "^0.54.0",
     "@repo/eslint-config": "^0.1.0-beta.1",
     "@repo/typescript-config": "^0.1.0-beta.1",
-    "@zag-js/accordion": "^1.15.0",
-    "@zag-js/anatomy": "^1.15.0",
-    "@zag-js/checkbox": "^1.15.0",
-    "@zag-js/dialog": "^1.15.0",
-    "@zag-js/menu": "^1.15.0",
-    "@zag-js/radio-group": "^1.15.0",
-    "@zag-js/select": "^1.15.0",
-    "@zag-js/tabs": "^1.15.0",
-    "@zag-js/tree-view": "^1.15.0",
-    "eslint": "^9.28.0",
+    "@zag-js/accordion": "^1.21.1",
+    "@zag-js/anatomy": "^1.21.1",
+    "@zag-js/checkbox": "^1.21.1",
+    "@zag-js/dialog": "^1.21.1",
+    "@zag-js/menu": "^1.21.1",
+    "@zag-js/radio-group": "^1.21.1",
+    "@zag-js/select": "^1.21.1",
+    "@zag-js/tabs": "^1.21.1",
+    "@zag-js/tree-view": "^1.21.1",
+    "eslint": "^9.32.0",
     "tsup": "8.5.0",
-    "typescript": "5.8.3"
+    "typescript": "^5.8.3"
   },
   "peerDependencies": {
     "@pandacss/dev": ">=0.40.0",

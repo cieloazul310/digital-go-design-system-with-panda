@@ -42,7 +42,7 @@ const preview: Preview = {
         className={cx(
           notoSansJp.variable,
           notoSansMono.variable,
-          css({ textStyle: { base: "std-18N-160", md: "std-20N-150" } }),
+          css({ textStyle: { base: "std-17N-170", md: "std-18N-160" } }),
         )}
       >
         <Story />
