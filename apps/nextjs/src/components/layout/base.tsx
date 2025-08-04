@@ -1,10 +1,10 @@
 import type { PropsWithChildren } from "react";
 import { css } from "styled-system/css";
-import MobileHeader from "./mobile-header";
-import Menu from "./menu";
-import Footer from "./footer";
+import { MobileHeader } from "./mobile-header";
+import { Menu } from "./menu";
+import { Footer } from "./footer";
 
-export default function BaseLayout({
+export function BaseLayout({
   children,
   slug,
 }: PropsWithChildren<{ slug?: string[] }>) {
@@ -18,7 +18,7 @@ export default function BaseLayout({
         pt: { base: "{sizes.mobile-header-height}", lg: 0 },
       })}
     >
-      <MobileHeader />
+      <MobileHeader slug={slug} />
       <div
         className={css({
           display: "grid",
@@ -77,7 +77,7 @@ export default function BaseLayout({
               maxWidth: "common-main-width",
               mx: "auto",
               px: { base: 4, md: 8 },
-              textStyle: { base: "std-18N-160", md: "std-20N-150" },
+              textStyle: { base: "std-17N-170", md: "std-18N-160" },
               boxSizing: "content-box",
             })}
           >

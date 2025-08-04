@@ -13,6 +13,8 @@ import {
   Heading5,
   Pre,
   Code,
+  LeadingText,
+  Details,
 } from "@/components/article";
 import { Link } from "@/components/link";
 import { DemoViewer } from "@/components/demo-viewer";
@@ -43,6 +45,8 @@ export function useMDXComponents(
     td: (props) => <Table.Cell {...props} />,
     pre: Pre,
     code: Code,
+    LeadingText,
+    Details,
     DemoViewer,
     ...components,
   };

@@ -1,12 +1,22 @@
 import * as Tabs from "@/components/ui/tabs";
 import { Stack } from "styled-system/jsx";
 
-デジタル庁デザインシステムは、スタイリングの考え方を提供するデザイン言語、情報の視覚表現とインタラクションを具現化するUIコンポーネント、ユーザビリティとアクセシビリティを踏まえた設計や実装のためのガイドラインから構成されるデザインアセットです。
+<LeadingText>デジタル庁デザインシステム for Panda CSS は、デジタル庁が提供する[デザインシステム][デジタル庁デザインシステム]を[Ark UI]と[Panda CSS]で実装する非公式のプロジェクトです。</LeadingText>
 
-デジタル庁のミッションである「誰一人取り残されない、人に優しいデジタル化を。」の実現に寄与することを標榜し、官公庁や地方自治体などの行政機関や公共性の高い組織等のウェブサイト/ウェブアプリケーション/オンラインサービスまたはシステム等で利用することを念頭に置いて構築されています。
+### [デジタル庁デザインシステム]
+
+日本の行政サービスにおける統一的なUI・UXを提供するために、デジタル庁が策定したデザインルールとコンポーネントガイドライン。アクセシビリティ、再利用性、統一感を重視しており、Figmaライブラリやコード実装指針が公開されている。
+
+### [Ark UI]
+
+[Chakra UI]の開発チームが提供するアクセシブルでロジック主導のUIコンポーネントライブラリ。状態管理やキーボード操作などの機能を提供し、スタイルはユーザー側に委ねる「スタイルレス」な設計が特徴。ReactやVueなどのフレームワークに対応している。
+
+### [Panda CSS]
+
+[Chakra UI]の開発チームが提供する型安全でテーマベースなCSS-in-JSライブラリ。Tailwindのようなユーティリティクラスを用いつつ、TypeScriptでの補完やスタイルの一貫性を保つ。レシピ（Recipe）や条件付きスタイルなどを使って、再利用可能なスタイルの構築が可能。
 
 <Stack 
-  gap={2}
+  gap={4}
   my={4}
   direction={{ base: "column", md: "row" }}
   alignItems={{ base: "start", md: "center" }}
@@ -96,3 +106,10 @@ npx @cieloazul310/digital-go-pandacss-cli add
 | テキストエリア v2             | ✅ `textarea`    | ✅ `<Textarea>`    |
 | インプットテキスト v2         | ✅ `inputText`   | ✅ `<InputText>`   |
 | ユーティリティリンク v2       | ✅ `utilityLink` | ✅ `<UtilityLink>` |
+
+[デジタル庁デザインシステム]: https://design.digital.go.jp/
+[Ark UI]: https://ark-ui.com/
+[Panda CSS]: https://panda-css.com/
+
+[Chakra UI]: https://chakra-ui.com/
+[Park UI]: https://park-ui.com/>
