@@ -1,10 +1,10 @@
 import type { MDXComponents } from "mdx/types";
+import { css } from "styled-system/css";
 import { OrderedList } from "@/components/ui/ordered-list";
 import { UnorderedList } from "@/components/ui/unordered-list";
 import { List } from "@/components/ui/list";
 import { Divider } from "@/components/ui/divider";
 import * as Table from "@/components/ui/table";
-import { css } from "styled-system/css";
 import {
   Paragraph,
   Heading2,
@@ -13,9 +13,8 @@ import {
   Heading5,
   Pre,
   Code,
-  LeadingText,
-  Details,
 } from "@/components/article";
+import { shortcodes } from "@/components/shortcodes";
 import { Link } from "@/components/link";
 import { DemoViewer } from "@/components/demo-viewer";
 
@@ -45,9 +44,8 @@ export function useMDXComponents(
     td: (props) => <Table.Cell {...props} />,
     pre: Pre,
     code: Code,
-    LeadingText,
-    Details,
     DemoViewer,
+    ...shortcodes,
     ...components,
   };
 }

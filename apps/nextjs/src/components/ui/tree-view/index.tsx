@@ -90,7 +90,7 @@ export const Tree = withContext<
   Assign<HTMLStyledProps<"div">, TreeView.TreeBaseProps>
 >(TreeView.Tree, "tree");
 
-export type NodeProviderProps<T> = TreeView.NodeProviderProps<T>;
+export type NodeProviderProps = TreeView.NodeProviderProps<TreeNode>;
 export const NodeProvider = TreeView.NodeProvider;
 
 export { TreeViewContext as Context } from "@ark-ui/react/tree-view";

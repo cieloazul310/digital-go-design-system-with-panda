@@ -2,7 +2,8 @@ import { css } from "styled-system/css";
 import { post } from "@/content";
 import * as ResourceList from "@/components/ui/resource-list";
 import { BaseLayout } from "@/components/layout/base";
-import { Heading2, LeadingText } from "@/components/article";
+import { Heading2 } from "@/components/article";
+import { LeadingText } from "@/components/shortcodes";
 import { Link } from "@/components/link";
 import { postGroups } from "@/utils/post-group";
 

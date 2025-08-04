@@ -18,6 +18,10 @@ export default defineSlotRecipe({
        */
       "--icon-size": "16px",
     },
+    label: {
+      srOnly: true,
+      textStyle: "oln-16N-100",
+    },
     list: {
       /**
        * inline

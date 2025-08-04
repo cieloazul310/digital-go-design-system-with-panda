@@ -1,5 +1,3 @@
-import * as Disclosure from "@/components/ui/disclosure";
-import { PropsWithChildren } from "react";
 import { css } from "styled-system/css";
 import { styled } from "styled-system/jsx";
 import type {
@@ -62,34 +60,6 @@ export const Heading4 = (
 export const Heading5 = (
   props: JsxHTMLProps<ComponentProps<"h5">, JsxStyleProps>,
 ) => <styled.h5 textStyle="std-18B-160" mt={4} {...props} />;
-
-export const LeadingText = (
-  props: JsxHTMLProps<ComponentProps<"p">, JsxStyleProps>,
-) => (
-  <styled.p
-    textStyle={{ base: "std-18N-160", md: "std-20N-150" }}
-    my={4}
-    mb={{ md: 6 }}
-    {...props}
-  />
-);
-
-export const Details = ({
-  children,
-  summary,
-}: PropsWithChildren<{ summary: string }>) => (
-  <Disclosure.Root asChild>
-    <details>
-      <Disclosure.Summary asChild>
-        <summary>
-          <Disclosure.Icon />
-          {summary}
-        </summary>
-      </Disclosure.Summary>
-      {children}
-    </details>
-  </Disclosure.Root>
-);
 
 export const Pre = (
   props: JsxHTMLProps<ComponentProps<"pre">, JsxStyleProps>,
