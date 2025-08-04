@@ -8,7 +8,7 @@ type MenuProps = {
   slug?: string[];
 };
 
-export default async function Menu({ slug = [] }: MenuProps) {
+export async function Menu({ slug = [] }: MenuProps) {
   const allPost = await post.getAll();
 
   const menuCollection = postGroups.map(({ title, href, id }) => {

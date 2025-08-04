@@ -1,6 +1,6 @@
 import type { PropsWithChildren } from "react";
 import { css } from "styled-system/css";
-import BaseLayout from "@/components/layout/base";
+import { BaseLayout } from "@/components/layout/base";
 import { Link } from "@/components/link";
 
 export default function Layout({ children }: PropsWithChildren) {

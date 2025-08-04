@@ -29,6 +29,7 @@ const meta = {
   args: {
     size: "lg",
     disabled: false,
+    "aria-disabled": false,
     invalid: false,
     readOnly: false,
     required: false,

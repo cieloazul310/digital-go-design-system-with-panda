@@ -21,6 +21,13 @@ export const Root = withProvider<
   >
 >(ark.nav, "root");
 
+export type LabelProps = ComponentProps<typeof Label>;
+
+export const Label = withContext<
+  HTMLSpanElement,
+  Assign<HTMLStyledProps<"span">, PolymorphicProps>
+>(ark.span, "label");
+
 export type ListProps = ComponentProps<typeof List>;
 
 export const List = withContext<

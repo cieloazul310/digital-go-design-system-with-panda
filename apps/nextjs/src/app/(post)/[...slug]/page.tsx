@@ -1,11 +1,12 @@
 import remarkGfm from "remark-gfm";
+import NextLink from "next/link";
 import rehypeShiki from "@shikijs/rehype";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { css } from "styled-system/css";
 import { Stack } from "styled-system/jsx";
 import { useMDXComponents } from "@/mdx-components";
-import BaseLayout from "@/components/layout/base";
+import { BaseLayout } from "@/components/layout/base";
 import { Link } from "@/components/link";
 import { post } from "@/content";
 
@@ -93,12 +94,13 @@ async function Page({ params }: { params: Promise<{ slug: string[] }> }) {
               variant="outline"
               width="full"
               justifyContent="start"
+              alignItems="center"
               asChild
             >
-              <Link href={older.href}>
+              <NextLink href={older.href}>
                 <ChevronLeft />
                 {older.frontmatter.title}
-              </Link>
+              </NextLink>
             </Button>
           )}
         </div>
@@ -112,11 +114,17 @@ async function Page({ params }: { params: Promise<{ slug: string[] }> }) {
           })}
         >
           {newer && (
-            <Button variant="outline" width="full" justifyContent="end" asChild>
-              <Link href={newer.href}>
+            <Button
+              variant="outline"
+              width="full"
+              justifyContent="end"
+              alignItems="center"
+              asChild
+            >
+              <NextLink href={newer.href}>
                 {newer.frontmatter.title}
                 <ChevronRight />
-              </Link>
+              </NextLink>
             </Button>
           )}
         </div>

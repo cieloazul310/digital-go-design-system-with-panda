@@ -6,13 +6,13 @@ import {
   HamburgerIcon,
   CloseIcon,
 } from "@/components/ui/hamburger-menu-button";
-import Menu from "./menu";
+import { Menu } from "./menu";
 
 type MobileHeaderProps = {
   slug?: string[];
 };
 
-export default function MobileHeader({ slug }: MobileHeaderProps) {
+export function MobileHeader({ slug }: MobileHeaderProps) {
   return (
     <header
       className={css({

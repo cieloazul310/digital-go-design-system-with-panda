@@ -5,6 +5,7 @@ import { createAnatomy } from "@zag-js/anatomy";
 
 export const breadcrumbAnatomy = createAnatomy("breadcrumb").parts(
   "root",
+  "label",
   "list",
   "item",
   "link",

@@ -1,4 +1,3 @@
-import * as Disclosure from "@/components/ui/disclosure";
 import { css } from "styled-system/css";
 import { styled } from "styled-system/jsx";
 import type {
@@ -61,21 +60,6 @@ export const Heading4 = (
 export const Heading5 = (
   props: JsxHTMLProps<ComponentProps<"h5">, JsxStyleProps>,
 ) => <styled.h5 textStyle="std-18B-160" mt={4} {...props} />;
-
-export const Details = ({ children, ...props }: Disclosure.RootProps) => (
-  <Disclosure.Root asChild {...props}>
-    <details>{children}</details>
-  </Disclosure.Root>
-);
-
-export const Summary = ({ children, ...props }: Disclosure.SummaryProps) => (
-  <Disclosure.Summary asChild {...props}>
-    <summary>
-      <Disclosure.Icon />
-      {children}
-    </summary>
-  </Disclosure.Summary>
-);
 
 export const Pre = (
   props: JsxHTMLProps<ComponentProps<"pre">, JsxStyleProps>,

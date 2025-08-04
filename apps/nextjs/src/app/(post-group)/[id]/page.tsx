@@ -1,8 +1,9 @@
 import { css } from "styled-system/css";
 import { post } from "@/content";
 import * as ResourceList from "@/components/ui/resource-list";
-import BaseLayout from "@/components/layout/base";
-import { Paragraph, Heading2 } from "@/components/article";
+import { BaseLayout } from "@/components/layout/base";
+import { Heading2 } from "@/components/article";
+import { LeadingText } from "@/components/shortcodes";
 import { Link } from "@/components/link";
 import { postGroups } from "@/utils/post-group";
 
@@ -43,9 +44,11 @@ export default async function Page({
             {title}
           </h1>
         </hgroup>
-        <section>
-          <Paragraph>{description}</Paragraph>
-        </section>
+        {description && (
+          <section>
+            <LeadingText>{description}</LeadingText>
+          </section>
+        )}
       </article>
       <section>
         <Heading2>{title}一覧</Heading2>

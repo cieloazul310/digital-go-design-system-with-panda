@@ -107,7 +107,7 @@ export const Basic: Story = {
 
 export const Summary: Story = {
   render: ({ ...props }) => (
-    <Container maxWidth="breakpoint-md" textStyle="std-16N-170">
+    <Container maxWidth="breakpoint-md">
       <article>
         <styled.h1 textStyle="std-28B-150">Heading</styled.h1>
         <styled.p my={4}>これはダミーテキストです。</styled.p>
@@ -127,7 +127,7 @@ export const Summary: Story = {
                   </Accordion.ItemIndicator>
                 </summary>
               </Accordion.ItemTrigger>
-              <Accordion.ItemContent>
+              <Accordion.ItemContent textStyle="std-17N-170">
                 <p>
                   これはダミーテキストです。ダミーテキストは、デザインやレイアウトの作成時に使用される仮の文章です。ダミーテキストを使用すると、デザインの全体像を評価したり、テキストの配置や長さを確認したりすることができます。ダミーテキストは実際の文章ではないので、内容には意味がありません。これはダミーテキストです。ダミーテキストは、デザインやレイアウトの作成時に使用される仮の文章です。ダミーテキストを使用すると、デザインの全体像を評価したり、テキストの配置や長さを確認したりすることができます。ダミーテキストは実際の文章ではないので、内容には意味がありません。
                 </p>

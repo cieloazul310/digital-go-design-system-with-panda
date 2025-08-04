@@ -1,0 +1,41 @@
+---
+title: プロジェクトの構成
+date: 2025-08-04
+lastmod: 2025-08-04
+---
+
+## 構成
+
+このプロジェクトは以下の3つのパッケージで構成されています。
+
+### 基礎プリセット
+
+```sh
+npm install --save-dev @cieloazul310/digital-go-pandacss-plugin
+```
+
+デジタル庁デザインシステムの[Tailwindテーマプラグイン]を基に作成したPanda CSSのプリセット。カラー、タイポグラフィなどのテーマが使用可能。コンポーネントのレシピは含まれていない。
+
+### コンポーネントプリセット
+
+```sh
+npm install --save-dev @cieloazul310/digital-go-pandacss-preset
+```
+
+デジタル庁デザインシステムの[Reactサンプルコンポーネント]や[Figma]を基に作成したコンポーネントのレシピで構成されるPanda CSSのプリセット。[Ark UI]と共に使用することが前提。
+
+### コンポーネントコレクション
+
+```sh
+npx @cieloazul310/digital-go-pandacss-cli add
+```
+
+デジタル庁デザインシステムのコンポーネントをPanda CSSでスタイリングしたArk UIのコンポーネントコレクション。[shadcn/ui]や[Park UI]のようにコードスニペットをプロジェクト内のディレクトリに生成して使用する。
+
+[Tailwindテーマプラグイン]: https://github.com/digital-go-jp/tailwind-theme-plugin
+[Reactサンプルコンポーネント]: https://github.com/digital-go-jp/design-system-example-components
+[Figma]: https://www.figma.com/community/file/1377880368787735577
+
+[Ark UI]: https://ark-ui.com/
+[shadcn/ui]: https://ui.shadcn.com/
+[Park UI]: https://park-ui.com/
