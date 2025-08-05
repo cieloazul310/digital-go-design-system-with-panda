@@ -21,6 +21,7 @@ import menuItem from "./menu-item";
 import menuList from "./menu-list";
 import notificationBanner from "./notification-banner";
 import orderedList from "./ordered-list";
+import progress from "./progress";
 import radioGroup from "./radio-group";
 import requirementBadge from "./requirement-badge";
 import resourceList from "./resource-list";
@@ -57,6 +58,7 @@ const recipes = {
   menuList,
   notificationBanner,
   orderedList,
+  progress,
   radioGroup,
   requirementBadge,
   resourceList,
