@@ -3,6 +3,8 @@ import { anatomy as checkboxAnatomy } from "@zag-js/checkbox";
 
 export default defineSlotRecipe({
   className: "checkbox",
+  description:
+    "チェックボックスは、複数の項目の中から複数の選択肢を選ぶことを可能にします。また、ひとつの選択肢のオン・オフの切り替えにも用いることができます。",
   slots: checkboxAnatomy.extendWith("group").keys(),
   base: {
     root: {

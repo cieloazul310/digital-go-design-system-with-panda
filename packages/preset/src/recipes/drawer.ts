@@ -10,6 +10,8 @@ const anatomy = dialogAnatomy.extendWith("header", "body", "footer");
 
 export default defineSlotRecipe({
   className: "drawer",
+  description:
+    "ブラウザ画面の四辺(上下左右端)から展開し、モバイルメニューなどのコンポーネントを格納可能なコンテナです。",
   slots: anatomy.keys(),
   base: {
     backdrop: {

@@ -3,6 +3,8 @@ import { cardAnatomy } from "../anatomy";
 
 export default defineSlotRecipe({
   className: "card",
+  description:
+    "単一の主題に関するコンテンツをまとめて表示するコンテナとなるコンポーネントです。さまざまなタイプとサイズの要素やコンポーネントを柔軟に格納できます。本来カードコンポーネントは、あらゆるコンテンツ（コンポーネントや要素）を内包することができ、非常に自由度の高いコンテナとなります。本デザインシステムでは、情報設計をしやすいカードを提供するため、自由度に制約を設けたコンポーネント仕様として策定しています。",
   slots: cardAnatomy.keys(),
   base: {
     root: {

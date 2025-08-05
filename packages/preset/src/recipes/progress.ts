@@ -1,3 +1,10 @@
+/**
+ * references:
+ * https://github.com/cschroeter/park-ui/blob/main/packages/preset/src/theme/recipes/progress.ts
+ * https://github.com/chakra-ui/chakra-ui/blob/main/packages/react/src/theme/recipes/progress.ts
+ * https://github.com/chakra-ui/chakra-ui/blob/main/packages/react/src/theme/recipes/progress-circle.ts
+ */
+
 import { defineSlotRecipe } from "@pandacss/dev";
 import { anatomy as progressAnatomy } from "@zag-js/progress";
 
@@ -25,6 +32,22 @@ export default defineSlotRecipe({
       outlineWidth: "1px",
       outlineColor: "white",
       rounded: "full",
+      transition: "width 0.2s ease-in-out",
+      "--translate-x": "-100%",
+      _indeterminate: {
+        "--animate-from-x": "-40%",
+        "--animate-to-x": "100%",
+        position: "absolute",
+        willChange: "left",
+        minWidth: "50%",
+        animation: "position 1s ease infinite normal none running",
+        backgroundImage: `linear-gradient(to right, transparent 0%, var(--track-color) 50%, transparent 100%)`,
+      },
+    },
+    circle: {
+      _indeterminate: {
+        animation: "spin 2s linear infinite",
+      },
     },
     circleTrack: {
       stroke: "colorPalette.500",
@@ -32,6 +55,11 @@ export default defineSlotRecipe({
     circleRange: {
       stroke: "colorPalette.1200",
       strokeLinecap: "round",
+      transitionProperty: "stroke-dasharray, stroke",
+      transitionDuration: "0.6s",
+      _indeterminate: {
+        animation: "circular-progress 1.5s linear infinite",
+      },
     },
     label: {
       textStyle: "std-16N-170",

@@ -2,6 +2,8 @@ import { defineRecipe } from "@pandacss/dev";
 
 export default defineRecipe({
   className: "chip-label",
+  description:
+    "状態や状況を示すキーワードを表示して、情報の分類・整理の効率を向上させるグラフィック要素です。情報リストやテーブルの各行などのステータスを分かりやすく表示したい場合に有効です。",
   base: {
     display: "inline-flex",
     alignItems: "center",

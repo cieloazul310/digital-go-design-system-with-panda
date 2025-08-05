@@ -17,6 +17,7 @@ import * as Tabs from "./tabs";
 import * as TreeView from "./tree-view";
 
 export * from "./button";
+export * from "./chip-label";
 export * from "./divider";
 export * from "./form";
 export * from "./hamburger-menu-button";

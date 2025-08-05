@@ -7,6 +7,8 @@ import { disclosureAnatomy } from "../anatomy";
 
 export default defineSlotRecipe({
   className: "disclosure",
+  description:
+    "ディスクロージャーは、コンテンツのセクション内の任意の範囲を折りたたむことができるユーザーインターフェースです。※セクション単位で折りたたみ表示をする場合は「アコーディオン」コンポーネントを使用してください。",
   slots: disclosureAnatomy.keys(),
   base: {
     root: {
