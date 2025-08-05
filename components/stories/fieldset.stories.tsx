@@ -12,8 +12,8 @@ const meta = {
   component: Fieldset.Root,
   argTypes: {
     size: {
-      control: "inline-radio",
       options: fieldset.variantMap.size,
+      control: "inline-radio",
     },
     disabled: {
       description:

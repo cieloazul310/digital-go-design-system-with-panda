@@ -4,10 +4,11 @@
  */
 import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { css } from "styled-system/css";
 import { styled } from "styled-system/jsx";
 import * as Table from "../src/table";
 import * as Checkbox from "../src/checkbox";
-import { css } from "styled-system/css";
+import { colorPalette } from "./utils/color-palette";
 
 const meta = {
   title: "Components/テーブル",
@@ -17,30 +18,7 @@ const meta = {
     dense: { control: "boolean" },
     striped: { control: "boolean" },
     hovered: { control: "boolean" },
-    colorPalette: {
-      options: [
-        "keyColor",
-        "blue",
-        "light-blue",
-        "cyan",
-        "green",
-        "lime",
-        "yellow",
-        "orange",
-        "red",
-        "magenta",
-        "purple",
-        "solid-gray",
-      ],
-      control: { type: "radio" },
-      table: {
-        defaultValue: { summary: "keyColor" },
-        type: {
-          summary:
-            "'keyColor' | 'blue' | 'light-blue' | 'cyan' | 'green' | 'lime' | 'yellow' | 'orange' | 'red' | 'magenta' | 'purple' | 'solid-gray'",
-        },
-      },
-    },
+    colorPalette,
   },
   args: {
     dense: false,

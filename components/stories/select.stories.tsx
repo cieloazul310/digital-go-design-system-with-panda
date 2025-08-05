@@ -2,8 +2,8 @@ import { ChevronDownIcon, X as XIcon } from "lucide-react";
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { fn } from "storybook/test";
 import { Portal, createListCollection } from "@ark-ui/react";
-import * as Select from "../src/select";
 import { select } from "styled-system/recipes";
+import * as Select from "../src/select";
 
 const meta = {
   title: "Components/セレクトボックス",

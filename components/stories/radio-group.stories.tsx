@@ -1,10 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { css } from "styled-system/css";
+import { radioGroup } from "styled-system/recipes";
 import * as RadioGroup from "../src/radio-group";
 import * as Fieldset from "../src/fieldset";
 import { Legend } from "../src/form/legend";
 import { RequirementBadge } from "../src/form/requirement-badge";
 import { SupportText } from "../src/form/support-text";
+import { colorPalette } from "./utils/color-palette";
 
 const meta = {
   title: "Components/ラジオボタン",
@@ -15,10 +17,10 @@ const meta = {
       type: "string",
       description: "チェックボックスのサイズを以下から選択します。",
       control: { type: "radio" },
-      options: ["sm", "md", "lg"],
+      options: radioGroup.variantMap.size,
       table: {
         defaultValue: { summary: "sm" },
-        type: { summary: "'sm' | 'md' | 'lg'" },
+        type: { summary: `${radioGroup.variantMap.size.join(" | ")}` },
       },
     },
     orientation: {
@@ -39,29 +41,7 @@ const meta = {
         type: { summary: "boolean" },
       },
     },
-    colorPalette: {
-      options: [
-        "keyColor",
-        "blue",
-        "light-blue",
-        "cyan",
-        "green",
-        "lime",
-        "yellow",
-        "orange",
-        "red",
-        "magenta",
-        "purple",
-      ],
-      control: { type: "radio" },
-      table: {
-        defaultValue: { summary: "keyColor" },
-        type: {
-          summary:
-            "'keyColor' | 'blue' | 'light-blue' | 'cyan' | 'green' | 'lime' | 'yellow' | 'orange' | 'red' | 'magenta' | 'purple'",
-        },
-      },
-    },
+    colorPalette,
   },
   args: {
     size: "sm",

@@ -3,11 +3,13 @@
  */
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { fn } from "storybook/test";
+import { cx, css } from "styled-system/css";
+import { hstack } from "styled-system/patterns";
+import { button } from "styled-system/recipes";
+import { styled, Flex } from "styled-system/jsx";
 import { Button } from "../src/button";
 import { Link } from "../src/link";
-import { cx, css } from "styled-system/css";
-import { styled, Flex } from "styled-system/jsx";
-import { hstack } from "styled-system/patterns";
+import { colorPalette } from "./utils/color-palette";
 
 const headingStyle = css({ textStyle: "std-32B-150", mb: 6 });
 const buttons = hstack({ gap: 4, alignItems: "end" });
@@ -18,44 +20,20 @@ const meta = {
   component: Button,
   argTypes: {
     variant: {
-      options: ["solid-fill", "outline", "text"],
+      options: button.variantMap.variant,
       control: { type: "radio" },
       description:
         "ボタンのスタイルを、塗りボタン（`solid-fill`）、アウトラインボタン（`outline`）、テキストボタン（`text`）の3種類から選択します。",
       table: {
-        type: { summary: "'solid-fill' | 'outline' | 'text'" },
+        type: { summary: `${button.variantMap.variant.join(" | ")}` },
       },
     },
     size: {
-      options: ["lg", "md", "sm", "xs"],
+      options: button.variantMap.size,
       control: { type: "radio" },
       description: "ボタンのサイズを以下から選択します。",
       table: {
-        type: { summary: "'lg' | 'md' | 'sm' | 'xs'" },
-      },
-    },
-    colorPalette: {
-      options: [
-        "keyColor",
-        "blue",
-        "light-blue",
-        "cyan",
-        "green",
-        "lime",
-        "yellow",
-        "orange",
-        "red",
-        "magenta",
-        "purple",
-        "solid-gray",
-      ],
-      control: { type: "radio" },
-      table: {
-        defaultValue: { summary: "keyColor" },
-        type: {
-          summary:
-            "'keyColor' | 'blue' | 'light-blue' | 'cyan' | 'green' | 'lime' | 'yellow' | 'orange' | 'red' | 'magenta' | 'purple' | 'solid-gray'",
-        },
+        type: { summary: `${button.variantMap.size.join(" | ")}` },
       },
     },
     "aria-disabled": {
@@ -67,6 +45,7 @@ const meta = {
         type: { summary: "boolean" },
       },
     },
+    colorPalette,
   },
   args: {
     variant: "solid-fill",

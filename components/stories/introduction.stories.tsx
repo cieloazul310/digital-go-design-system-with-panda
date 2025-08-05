@@ -73,66 +73,6 @@ export const Introduction: Story = {
       <p className={paragraph}>
         これにより、デジタル庁デザインシステムのコンポーネントを使うことで、WCAGの各達成基準に適合または適合が容易になります。
       </p>
-      {/*  
-      <h3 className={h3}>HTML ネイティブ機能の活用</h3>
-      <p className={paragraph}>
-        保守性の観点から、可能な限りHTMLネイティブの機能を使用することを重視して開発をしています。
-      </p>
-      <p className={paragraph}>
-        <Link href="https://html.spec.whatwg.org" target="_blank">
-          HTML Living Standard
-        </Link>
-        や
-        <Link href="https://open-ui.org/" target="_blank">
-          Open UI
-        </Link>
-        の動向を常に確認し、新しい
-        HTMLネイティブの機能が利用可能になった際には、既存の実装を最新の標準に置き換えていきます。この取り組みにより、一部のブラウザではまだ実装されていない最新機能を試験的に導入することもあります。
-      </p>
-      <p className={paragraph}>
-        HTMLネイティブ機能だけでは実現できないコンポーネントに関しては、ヘッドレスUIライブラリの使用を推奨します。
-      </p>
-      <p className={paragraph}>
-        一部のサンプルコードでは、Reactの機能を使った実装も提供していますので、実装の参考にしてください。WAI-ARIAやキーボード操作などの挙動については
-        <Link href="ARIA Authoring Practices Guide (APG)" target="_blank">
-          ARIA Authoring Practices Guide (APG)
-        </Link>
-        の
-        <Link href="https://www.w3.org/WAI/ARIA/apg/patterns/" target="_blank">
-          Patterns
-        </Link>
-        を参考にして実装しています。
-      </p>
-      <h2 className={h2}>コンポーネントのバージョンについて</h2>
-      <p className={paragraph}>
-        DADS
-        v2はv2.0.0以降の最新のガイドラインとデザインデータを基に作られたコンポーネントです。
-      </p>
-      <p className={paragraph}>
-        v1.x系統が基となっているDADS
-        v1のコンポーネントは非推奨となっています。それらのコンポーネントのガイドラインとデザインデータがv2に追加され次第、順次DADS
-        v2に置き換えていく予定です。
-      </p>
-      <h2 className={h2}>検証済み環境</h2>
-      <p className={paragraph}>
-        以下のブラウザの最新版で動作確認を行なっています。
-      </p>
-      <UnorderedList className={ul}>
-        <List>Google Chrome</List>
-        <List>Microsoft Edge</List>
-        <List>Safari</List>
-        <List>Firefox</List>
-      </UnorderedList>
-      <p className={paragraph}>
-        また、以下のスクリーンリーダーでも動作検証を行なっています。
-      </p>
-      <UnorderedList className={ul}>
-        <List>NVDA</List>
-        <List>iOS VoiceOver</List>
-        <List>TalkBack</List>
-        <List>Mac VoiceOver</List>
-      </UnorderedList>
-      */}
       <h2 className={h2}>リソース</h2>
       <p className={paragraph}>
         デジタル庁が提供する、デジタル庁デザインシステムのガイドラインやデザインデータなど、連携可能な各種リソースです。用途の必要性に応じてあわせてご利用ください。

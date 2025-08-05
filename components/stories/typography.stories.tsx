@@ -1,9 +1,8 @@
+import type { PropsWithChildren } from "react";
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { css } from "styled-system/css";
 import { Container } from "styled-system/jsx";
 import { headingTextStyles, paragraphTextStyles } from "./typography";
-import { PropsWithChildren } from "react";
-
 type Props = { paragraph: string; heading: string };
 
 const Article = ({

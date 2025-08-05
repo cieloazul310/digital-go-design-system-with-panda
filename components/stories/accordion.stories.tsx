@@ -1,8 +1,9 @@
 import { ChevronDownIcon } from "lucide-react";
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { css } from "styled-system/css";
-import * as Accordion from "../src/accordion";
 import { styled, Container } from "styled-system/jsx";
+import * as Accordion from "../src/accordion";
+import { colorPalette } from "./utils/color-palette";
 
 const meta = {
   title: "Components/アコーディオン",
@@ -15,29 +16,7 @@ const meta = {
     multiple: {
       control: "boolean",
     },
-    colorPalette: {
-      options: [
-        "keyColor",
-        "blue",
-        "light-blue",
-        "cyan",
-        "green",
-        "lime",
-        "yellow",
-        "orange",
-        "red",
-        "magenta",
-        "purple",
-      ],
-      control: { type: "radio" },
-      table: {
-        defaultValue: { summary: "keyColor" },
-        type: {
-          summary:
-            "'keyColor' | 'blue' | 'light-blue' | 'cyan' | 'green' | 'lime' | 'yellow' | 'orange' | 'red' | 'magenta' | 'purple'",
-        },
-      },
-    },
+    colorPalette,
   },
   args: {
     collapsible: true,

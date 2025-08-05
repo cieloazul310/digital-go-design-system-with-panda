@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-// import{ type ChangeEvent, useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { css } from "styled-system/css";
 import * as Fieldset from "../src/fieldset";
 import { RequirementBadge } from "../src/form";
 import * as Checkbox from "../src/checkbox";
-import { useState } from "react";
+import { colorPalette } from "./utils/color-palette";
 
 const meta = {
   title: "Components/チェックボックス/グループ",
@@ -37,29 +37,7 @@ const meta = {
         type: { summary: "boolean" },
       },
     },
-    colorPalette: {
-      options: [
-        "keyColor",
-        "blue",
-        "light-blue",
-        "cyan",
-        "green",
-        "lime",
-        "yellow",
-        "orange",
-        "red",
-        "magenta",
-        "purple",
-      ],
-      control: { type: "radio" },
-      table: {
-        defaultValue: { summary: "keyColor" },
-        type: {
-          summary:
-            "'keyColor' | 'blue' | 'light-blue' | 'cyan' | 'green' | 'lime' | 'yellow' | 'orange' | 'red' | 'magenta' | 'purple'",
-        },
-      },
-    },
+    colorPalette,
   },
   args: {
     invalid: false,

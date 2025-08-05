@@ -1,31 +1,35 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import NextLink from "next/link";
+import { EllipsisVertical, CircleUser, Heart } from "lucide-react";
+import { css } from "styled-system/css";
+import { link, resourceList } from "styled-system/recipes";
 import * as ResourceList from "../src/resource-list";
 import { Link } from "../src/link";
 import * as RadioGroup from "../src/radio-group";
 import * as Checkbox from "../src/checkbox";
-import { EllipsisVertical, CircleUser, Heart } from "lucide-react";
-import { link } from "styled-system/recipes";
-import { css } from "styled-system/css";
 
 const meta = {
   title: "Components/リソースリスト",
   component: ResourceList.Root,
   tags: ["autodocs"],
-  args: {
-    variant: "list",
-    asLink: false,
-  },
   argTypes: {
     variant: {
       type: "string",
       control: { type: "radio" },
-      options: ["list", "frame"],
+      options: resourceList.variantMap.variant,
       table: {
         defaultValue: { summary: "list" },
-        type: { summary: "'list' | 'frame'" },
+        type: { summary: `${resourceList.variantMap.variant.join(" | ")}` },
       },
     },
+    asLink: {
+      type: "boolean",
+      control: { type: "boolean" },
+    },
+  },
+  args: {
+    variant: "list",
+    asLink: false,
   },
 } satisfies Meta<typeof ResourceList.Root>;
 

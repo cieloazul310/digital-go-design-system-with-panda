@@ -3,6 +3,7 @@ import breadcrumb from "./breadcrumb";
 import button from "./button";
 import card from "./card";
 import checkbox from "./checkbox";
+import chipLabel from "./chip-label";
 import disclosure from "./disclosure";
 import digitalGoDivider from "./divider";
 import drawer from "./drawer";
@@ -38,6 +39,7 @@ const recipes = {
   button,
   card,
   checkbox,
+  chipLabel,
   drawer,
   disclosure,
   digitalGoDivider,

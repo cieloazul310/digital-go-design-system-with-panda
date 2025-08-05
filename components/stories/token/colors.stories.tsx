@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { css } from "styled-system/css";
 import { Square } from "styled-system/jsx";
+import { colorPalette } from "../utils/color-palette";
 
 const meta = {
   title: "Token/カラー",
@@ -9,19 +10,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const colors = [
-  "blue",
-  "light-blue",
-  "cyan",
-  "green",
-  "lime",
-  "yellow",
-  "orange",
-  "red",
-  "magenta",
-  "purple",
-  "solid-gray",
-];
+const colors = colorPalette.options;
 
 export const Palettes: Story = {
   render: () => (

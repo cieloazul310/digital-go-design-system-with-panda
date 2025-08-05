@@ -1,26 +1,27 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { css } from "styled-system/css";
+import { drawer } from "styled-system/recipes";
 import * as Drawer from "../src/drawer";
 import {
   HamburgerMenuButton,
   CloseIcon,
   HamburgerIcon,
 } from "../src/hamburger-menu-button";
-import { css } from "styled-system/css";
 
 const meta = {
   title: "Components/ドロワー",
   component: Drawer.Root,
-  args: {
-    placement: "right",
-  },
   argTypes: {
     placement: {
-      options: ["left", "right"],
+      options: drawer.variantMap.placement,
       control: { type: "radio" },
       table: {
-        type: { summary: "'left' | 'right'" },
+        type: { summary: `${drawer.variantMap.placement.join(" | ")}` },
       },
     },
+  },
+  args: {
+    placement: "right",
   },
 } satisfies Meta<typeof Drawer.Root>;
 

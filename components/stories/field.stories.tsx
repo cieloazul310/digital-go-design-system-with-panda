@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 // import type { KeyboardEvent } from "react";
 import { fn } from "storybook/test";
-import * as Field from "../src/field";
 import { field } from "styled-system/recipes";
+import * as Field from "../src/field";
 
 const meta = {
   title: "Components/インプットテキスト",
@@ -10,8 +10,8 @@ const meta = {
   component: Field.Root,
   argTypes: {
     size: {
-      control: "inline-radio",
       options: field.variantMap.size,
+      control: "inline-radio",
     },
     disabled: {
       description:

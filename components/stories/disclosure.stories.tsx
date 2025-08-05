@@ -3,8 +3,9 @@
  * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Disclosure/Disclosure.stories.tsx
  */
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import * as Disclosure from "../src/disclosure";
+import { css } from "styled-system/css";
 import { styled, Container } from "styled-system/jsx";
+import * as Disclosure from "../src/disclosure";
 
 const meta = {
   title: "Components/ディスクロージャー",
@@ -16,6 +17,8 @@ const meta = {
 
 export default meta;
 type Story = StoryObj;
+
+const paragraph = css({ my: 4 });
 
 export const Basic: Story = {
   args: {
@@ -38,10 +41,10 @@ export const Summary: Story = {
     <Container maxWidth="breakpoint-md" textStyle="std-16N-170">
       <article>
         <styled.h1 textStyle="std-28B-150">Heading</styled.h1>
-        <styled.p my={4}>これはダミーテキストです。</styled.p>
-        <styled.p my={4}>
+        <p className={paragraph}>これはダミーテキストです。</p>
+        <p className={paragraph}>
           ダミーテキストは、デザインやレイアウトの作成時に使用される仮の文章です。ダミーテキストを使用すると、デザインの全体像を評価したり、テキストの配置や長さを確認したりすることができます。ダミーテキストは実際の文章ではないので、内容には意味がありません。
-        </styled.p>
+        </p>
         <Disclosure.Root my={8} asChild {...props}>
           <details>
             <Disclosure.Summary asChild>
@@ -55,9 +58,9 @@ export const Summary: Story = {
             </Disclosure.Content>
           </details>
         </Disclosure.Root>
-        <styled.p my={4}>
+        <p className={paragraph}>
           ダミーテキストを使用すると、デザインの全体像を評価したり、テキストの配置や長さを確認したりすることができます。ダミーテキストは実際の文章ではないので、内容には意味がありません。
-        </styled.p>
+        </p>
       </article>
     </Container>
   ),

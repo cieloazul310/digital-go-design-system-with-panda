@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { checkbox } from "styled-system/recipes";
 import * as Checkbox from "../src/checkbox";
 import * as Field from "../src/field";
+import { colorPalette } from "./utils/color-palette";
 
 const meta = {
   title: "Components/チェックボックス/単体",
@@ -11,7 +13,7 @@ const meta = {
       type: "string",
       description: "チェックボックスのサイズを以下から選択します。",
       control: { type: "radio" },
-      options: ["sm", "md", "lg"],
+      options: checkbox.variantMap.size,
       table: {
         defaultValue: { summary: "sm" },
         type: { summary: "'sm' | 'md' | 'lg'" },
@@ -57,29 +59,7 @@ const meta = {
         type: { summary: "boolean" },
       },
     },
-    colorPalette: {
-      options: [
-        "keyColor",
-        "blue",
-        "light-blue",
-        "cyan",
-        "green",
-        "lime",
-        "yellow",
-        "orange",
-        "red",
-        "magenta",
-        "purple",
-      ],
-      control: { type: "radio" },
-      table: {
-        defaultValue: { summary: "keyColor" },
-        type: {
-          summary:
-            "'keyColor' | 'blue' | 'light-blue' | 'cyan' | 'green' | 'lime' | 'yellow' | 'orange' | 'red' | 'magenta' | 'purple'",
-        },
-      },
-    },
+    colorPalette,
   },
   args: {
     size: "sm",

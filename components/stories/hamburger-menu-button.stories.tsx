@@ -4,6 +4,7 @@
  */
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { useId, useState } from "react";
+import { css } from "styled-system/css";
 import {
   HamburgerMenuButton,
   CloseIcon,
@@ -11,7 +12,6 @@ import {
   HamburgerIcon,
   HamburgerWithLabelIcon,
 } from "../src/hamburger-menu-button";
-import { css } from "styled-system/css";
 
 const meta = {
   id: "Component/DADS v2/HamburgerMenuButton",
