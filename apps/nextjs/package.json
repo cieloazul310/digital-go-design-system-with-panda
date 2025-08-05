@@ -27,7 +27,7 @@
     "@mdx-js/loader": "^3.1.0",
     "@mdx-js/react": "^3.1.0",
     "@next/mdx": "^15.3.5",
-    "@pandacss/dev": "^0.54.0",
+    "@pandacss/dev": "^1.0.0",
     "@repo/eslint-config": "^0.1.0-beta.1",
     "@repo/typescript-config": "^0.1.0-beta.1",
     "@types/react": "^19.1.6",

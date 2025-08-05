@@ -3,70 +3,33 @@
  * https://github.com/cschroeter/park-ui/blob/main/components/react/src/components/ui/styled/progress.tsx
  */
 "use client";
-import type { Assign } from "@ark-ui/react";
 import { Progress } from "@ark-ui/react/progress";
-import { type ProgressVariantProps, progress } from "styled-system/recipes";
-import type { ComponentProps, HTMLStyledProps } from "styled-system/types";
-import { createStyleContext } from "../utils/create-style-context";
+import { progress } from "styled-system/recipes";
+import type { ComponentProps } from "styled-system/types";
+import { createStyleContext } from "styled-system/jsx";
 
 const { withProvider, withContext } = createStyleContext(progress);
 
 export type RootProviderProps = ComponentProps<typeof RootProvider>;
-export const RootProvider = withProvider<
-  HTMLDivElement,
-  Assign<
-    Assign<HTMLStyledProps<"div">, Progress.RootProviderBaseProps>,
-    ProgressVariantProps
-  >
->(Progress.RootProvider, "root");
+export const RootProvider = withProvider(Progress.RootProvider, "root");
 
 export type RootProps = ComponentProps<typeof Root>;
-export const Root = withProvider<
-  HTMLDivElement,
-  Assign<
-    Assign<HTMLStyledProps<"div">, Progress.RootBaseProps>,
-    ProgressVariantProps
-  >
->(Progress.Root, "root");
+export const Root = withProvider(Progress.Root, "root");
 
-export const Circle = withContext<
-  SVGSVGElement,
-  Assign<HTMLStyledProps<"svg">, Progress.CircleBaseProps>
->(Progress.Circle, "circle");
+export const Circle = withContext(Progress.Circle, "circle");
 
-export const CircleRange = withContext<
-  SVGCircleElement,
-  Assign<HTMLStyledProps<"circle">, Progress.CircleRangeBaseProps>
->(Progress.CircleRange, "circleRange");
+export const CircleRange = withContext(Progress.CircleRange, "circleRange");
 
-export const CircleTrack = withContext<
-  SVGCircleElement,
-  Assign<HTMLStyledProps<"circle">, Progress.CircleTrackBaseProps>
->(Progress.CircleTrack, "circleTrack");
+export const CircleTrack = withContext(Progress.CircleTrack, "circleTrack");
 
-export const Label = withContext<
-  HTMLLabelElement,
-  Assign<HTMLStyledProps<"label">, Progress.LabelBaseProps>
->(Progress.Label, "label");
+export const Label = withContext(Progress.Label, "label");
 
-export const Range = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Progress.RangeBaseProps>
->(Progress.Range, "range");
+export const Range = withContext(Progress.Range, "range");
 
-export const Track = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Progress.TrackBaseProps>
->(Progress.Track, "track");
+export const Track = withContext(Progress.Track, "track");
 
-export const ValueText = withContext<
-  HTMLSpanElement,
-  Assign<HTMLStyledProps<"span">, Progress.ValueTextBaseProps>
->(Progress.ValueText, "valueText");
+export const ValueText = withContext(Progress.ValueText, "valueText");
 
-export const View = withContext<
-  HTMLSpanElement,
-  Assign<HTMLStyledProps<"span">, Progress.ViewBaseProps>
->(Progress.View, "view");
+export const View = withContext(Progress.View, "view");
 
 export { ProgressContext as Context } from "@ark-ui/react/progress";

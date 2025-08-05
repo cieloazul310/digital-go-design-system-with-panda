@@ -2,52 +2,32 @@
  * Icon
  * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Breadcrumbs/Breadcrumbs.tsx
  */
-
 "use client";
-import type { Assign, PolymorphicProps } from "@ark-ui/react";
 import { ark } from "@ark-ui/react/factory";
-import { breadcrumb, type BreadcrumbVariantProps } from "styled-system/recipes";
-import type { ComponentProps, HTMLStyledProps } from "styled-system/types";
-import { createStyleContext } from "../utils/create-style-context";
+import { breadcrumb } from "styled-system/recipes";
+import { createStyleContext } from "styled-system/jsx";
+import type { ComponentProps } from "styled-system/types";
 
 const { withProvider, withContext } = createStyleContext(breadcrumb);
 
 export type RootProps = ComponentProps<typeof Root>;
-export const Root = withProvider<
-  HTMLDivElement,
-  Assign<
-    Assign<HTMLStyledProps<"nav">, PolymorphicProps>,
-    BreadcrumbVariantProps
-  >
->(ark.nav, "root");
+export const Root = withProvider(ark.nav, "root");
 
 export type LabelProps = ComponentProps<typeof Label>;
 
-export const Label = withContext<
-  HTMLSpanElement,
-  Assign<HTMLStyledProps<"span">, PolymorphicProps>
->(ark.span, "label");
+export const Label = withContext(ark.span, "label");
 
 export type ListProps = ComponentProps<typeof List>;
 
-export const List = withContext<
-  HTMLElement,
-  Assign<HTMLStyledProps<"ol">, PolymorphicProps>
->(ark.ol, "list");
+export const List = withContext(ark.ol, "list");
 
 export type ItemProps = ComponentProps<typeof Item>;
 
-export const Item = withContext<
-  HTMLElement,
-  Assign<HTMLStyledProps<"li">, PolymorphicProps>
->(ark.li, "item");
+export const Item = withContext(ark.li, "item");
 
 export type LinkProps = ComponentProps<typeof Link>;
 
-export const Link = withContext<
-  HTMLAnchorElement,
-  Assign<HTMLStyledProps<"a">, PolymorphicProps>
->(ark.a, "link");
+export const Link = withContext(ark.a, "link");
 
 const Icon = ({ ...props }: ComponentProps<"svg">) => (
   <ark.svg
@@ -67,7 +47,4 @@ const Icon = ({ ...props }: ComponentProps<"svg">) => (
 
 export type SeparatorProps = ComponentProps<typeof Separator>;
 
-export const Separator = withContext<
-  HTMLElement,
-  Assign<HTMLStyledProps<"svg">, PolymorphicProps>
->(Icon, "separator");
+export const Separator = withContext(Icon, "separator");
