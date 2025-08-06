@@ -3,51 +3,31 @@
  * https://github.com/cschroeter/park-ui/blob/main/components/react/src/components/ui/styled/checkbox.tsx
  */
 "use client";
-import type { Assign } from "@ark-ui/react";
 import { Checkbox } from "@ark-ui/react/checkbox";
-import { type CheckboxVariantProps, checkbox } from "styled-system/recipes";
-import type { ComponentProps, HTMLStyledProps } from "styled-system/types";
-import { createStyleContext } from "../utils/create-style-context";
+import { checkbox } from "styled-system/recipes";
+import { createStyleContext } from "styled-system/jsx";
+import type { ComponentProps } from "styled-system/types";
 
-const { withProvider, withContext } = createStyleContext(checkbox);
+const { withRootProvider, withProvider, withContext } =
+  createStyleContext(checkbox);
 
 export type RootProviderProps = ComponentProps<typeof RootProvider>;
-export const RootProvider = withProvider<
-  HTMLLabelElement,
-  Assign<
-    Assign<HTMLStyledProps<"label">, Checkbox.RootProviderBaseProps>,
-    CheckboxVariantProps
-  >
->(Checkbox.RootProvider, "root");
+export const RootProvider = withProvider(Checkbox.RootProvider, "root");
 
 export type RootProps = ComponentProps<typeof Root>;
-export const Root = withProvider<
-  HTMLLabelElement,
-  Assign<
-    Assign<HTMLStyledProps<"label">, Checkbox.RootBaseProps>,
-    CheckboxVariantProps
-  >
->(Checkbox.Root, "root", { defaultClassName: "group" });
+export const Root = withProvider(Checkbox.Root, "root", {
+  defaultProps: { className: "group" },
+});
 
-export const Control = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Checkbox.ControlBaseProps>
->(Checkbox.Control, "control");
+export const Control = withContext(Checkbox.Control, "control");
 
-export const Group = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Checkbox.GroupBaseProps>
->(Checkbox.Group, "group");
+export const Group = withProvider(Checkbox.Group, "group");
 
-export const Indicator = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Checkbox.IndicatorBaseProps>
->(Checkbox.Indicator, "indicator");
+export const GroupProvider = withRootProvider(Checkbox.GroupProvider);
 
-export const Label = withContext<
-  HTMLSpanElement,
-  Assign<HTMLStyledProps<"span">, Checkbox.LabelBaseProps>
->(Checkbox.Label, "label");
+export const Indicator = withContext(Checkbox.Indicator, "indicator");
+
+export const Label = withContext(Checkbox.Label, "label");
 
 export {
   CheckboxContext as Context,

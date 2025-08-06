@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { useState } from "react";
+import { useCheckboxGroup } from "@ark-ui/react/checkbox";
 import { css } from "styled-system/css";
 import * as Fieldset from "../src/fieldset";
 import { RequirementBadge } from "../src/form";
@@ -343,6 +344,32 @@ export const Indeterminate: Story = {
           <Fieldset.ErrorText>エラーテキスト</Fieldset.ErrorText>
         </Checkbox.Group>
       </Fieldset.Root>
+    );
+  },
+};
+
+export const WithProvider: Story = {
+  render: ({ ...args }) => {
+    const checkboxGroup = useCheckboxGroup({ ...args });
+    return (
+      <>
+        <p>Checked: {checkboxGroup.value.join(", ")}</p>
+        <Checkbox.GroupProvider value={checkboxGroup}>
+          {["選択肢1", "選択肢2", "選択肢3"].map((value) => (
+            <Checkbox.Root
+              colorPalette={args.colorPalette}
+              value={value}
+              key={value}
+            >
+              <Checkbox.Control>
+                <Checkbox.Indicator />
+              </Checkbox.Control>
+              <Checkbox.HiddenInput />
+              <Checkbox.Label>{value}</Checkbox.Label>
+            </Checkbox.Root>
+          ))}
+        </Checkbox.GroupProvider>
+      </>
     );
   },
 };

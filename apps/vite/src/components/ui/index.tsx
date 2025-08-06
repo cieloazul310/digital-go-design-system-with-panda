@@ -9,6 +9,7 @@ import * as Fieldset from "./fieldset";
 import * as Menu from "./menu";
 import * as MenuList from "./menu-list";
 import * as NotificationBanner from "./notification-banner";
+import * as Progress from "./progress";
 import * as Select from "./select";
 import * as RadioGroup from "./radio-group";
 import * as ResourceList from "./resource-list";
@@ -41,6 +42,7 @@ export {
   Menu,
   MenuList,
   NotificationBanner,
+  Progress,
   Select,
   RadioGroup,
   ResourceList,

@@ -32,7 +32,7 @@ export function useMDXComponents(
     ul: UnorderedList,
     li: List,
     hr: Divider,
-    table: (props: Table.RootProps) => (
+    table: (props) => (
       <div className={css({ overflowX: "auto" })}>
         <Table.Root striped {...props} />
       </div>

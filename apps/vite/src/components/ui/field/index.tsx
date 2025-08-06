@@ -1,60 +1,32 @@
 "use client";
-import type { Assign } from "@ark-ui/react";
 import { Field } from "@ark-ui/react/field";
-import { type FieldVariantProps, field } from "styled-system/recipes";
-import type { ComponentProps, HTMLStyledProps } from "styled-system/types";
-import { createStyleContext } from "../utils/create-style-context";
+import { field } from "styled-system/recipes";
+import { createStyleContext } from "styled-system/jsx";
+import type { ComponentProps } from "styled-system/types";
 
 const { withProvider, withContext } = createStyleContext(field);
 
 export type RootProviderProps = ComponentProps<typeof RootProvider>;
-export const RootProvider = withProvider<
-  HTMLDivElement,
-  Assign<
-    Assign<HTMLStyledProps<"div">, Field.RootProviderBaseProps>,
-    FieldVariantProps
-  >
->(Field.RootProvider, "root");
+export const RootProvider = withProvider(Field.RootProvider, "root");
 
 export type RootProps = ComponentProps<typeof Root>;
-export const Root = withProvider<
-  HTMLDivElement,
-  Assign<Assign<HTMLStyledProps<"div">, Field.RootBaseProps>, FieldVariantProps>
->(Field.Root, "root");
+export const Root = withProvider(Field.Root, "root");
 
-export const ErrorText = withContext<
-  HTMLSpanElement,
-  Assign<HTMLStyledProps<"span">, Field.ErrorTextBaseProps>
->(Field.ErrorText, "errorText");
+export const ErrorText = withContext(Field.ErrorText, "errorText");
 
-export const SupportText = withContext<
-  HTMLSpanElement,
-  Assign<HTMLStyledProps<"span">, Field.HelperTextBaseProps>
->(Field.HelperText, "supportText");
+export const SupportText = withContext(Field.HelperText, "supportText");
 
-export const Label = withContext<
-  HTMLLabelElement,
-  Assign<HTMLStyledProps<"label">, Field.LabelBaseProps>
->(Field.Label, "label");
+export const Label = withContext(Field.Label, "label");
 
-export const RequirementBadge = withContext<
-  HTMLLabelElement,
-  Assign<HTMLStyledProps<"span">, Field.LabelBaseProps>
->(Field.RequiredIndicator, "requirementBadge");
+export const RequirementBadge = withContext(
+  Field.RequiredIndicator,
+  "requirementBadge",
+);
 
-export const Select = withContext<
-  HTMLSelectElement,
-  Assign<HTMLStyledProps<"select">, Field.SelectBaseProps>
->(Field.Select, "select");
+export const Select = withContext(Field.Select, "select");
 
-export const Input = withContext<
-  HTMLInputElement,
-  Assign<HTMLStyledProps<"input">, Field.InputBaseProps>
->(Field.Input, "input");
+export const Input = withContext(Field.Input, "input");
 
-export const Textarea = withContext<
-  HTMLTextAreaElement,
-  Assign<HTMLStyledProps<"textarea">, Field.TextareaBaseProps>
->(Field.Textarea, "textarea");
+export const Textarea = withContext(Field.Textarea, "textarea");
 
 export { FieldContext as Context } from "@ark-ui/react/field";

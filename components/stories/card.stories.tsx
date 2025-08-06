@@ -737,7 +737,7 @@ export const VerticalLayoutWithFormControl: Story = {
                 className={css({
                   aspectRatio: 4 / 3,
                   bgGradient: "to-tr",
-                  gradientFrom: "pink.200",
+                  gradientFrom: "magenta.200",
                   gradientTo: "orange.300",
                 })}
               />

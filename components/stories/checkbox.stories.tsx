@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { useCheckbox } from "@ark-ui/react/checkbox";
 import { checkbox } from "styled-system/recipes";
 import * as Checkbox from "../src/checkbox";
 import * as Field from "../src/field";
@@ -124,6 +125,45 @@ export const WithField: Story = {
         </Checkbox.Root>
         <Field.ErrorText>エラーテキスト</Field.ErrorText>
       </Field.Root>
+    );
+  },
+};
+
+export const WithContext: Story = {
+  args: {
+    children: (
+      <>
+        <Checkbox.Control>
+          <Checkbox.Indicator />
+        </Checkbox.Control>
+        <Checkbox.Context>
+          {(checkbox) => (
+            <Checkbox.Label>
+              Checkbox {checkbox.checked.toString()}
+            </Checkbox.Label>
+          )}
+        </Checkbox.Context>
+        <Checkbox.HiddenInput />
+      </>
+    ),
+  },
+};
+
+export const WithProvider: Story = {
+  render: ({ ...args }) => {
+    const checkbox = useCheckbox({ ...args });
+
+    return (
+      <>
+        <span>{checkbox.checked ? "Checked" : "UnChecked"}</span>
+        <Checkbox.RootProvider value={checkbox}>
+          <Checkbox.Control>
+            <Checkbox.Indicator />
+          </Checkbox.Control>
+          <Checkbox.Label>Checkbox</Checkbox.Label>
+          <Checkbox.HiddenInput />
+        </Checkbox.RootProvider>
+      </>
     );
   },
 };

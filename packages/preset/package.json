@@ -43,7 +43,7 @@
     "@cieloazul310/digital-go-pandacss-utils": "^0.1.0-beta.6"
   },
   "devDependencies": {
-    "@pandacss/dev": "^0.54.0",
+    "@pandacss/dev": "^1.0.1",
     "@repo/eslint-config": "^0.1.0-beta.1",
     "@repo/typescript-config": "^0.1.0-beta.1",
     "@zag-js/accordion": "^1.21.1",
@@ -61,7 +61,7 @@
     "typescript": "^5.8.3"
   },
   "peerDependencies": {
-    "@pandacss/dev": ">=0.40.0",
+    "@pandacss/dev": ">=1.0.1",
     "@zag-js/accordion": "^1.0.0",
     "@zag-js/anatomy": "^1.0.0",
     "@zag-js/checkbox": "^1.0.0",
