@@ -4,18 +4,25 @@
  */
 
 "use client";
+import type { JSX, RefAttributes } from "react";
 import { type TreeNode, TreeView } from "@ark-ui/react/tree-view";
-import { treeView } from "styled-system/recipes";
+import { treeView, type TreeViewVariantProps } from "styled-system/recipes";
 import { createStyleContext } from "styled-system/jsx";
-import type { ComponentProps } from "styled-system/types";
 
 const { withProvider, withContext } = createStyleContext(treeView);
 
-export type RootProviderProps = ComponentProps<typeof RootProvider>;
-export const RootProvider = withProvider(TreeView.RootProvider, "root");
+export type RootProviderProps<T extends TreeNode> =
+  TreeView.RootProviderProps<T> & TreeViewVariantProps;
+export const RootProvider = withProvider(TreeView.RootProvider, "root") as {
+  <T extends TreeNode>(props: RootProviderProps<T>): JSX.Element;
+};
 
-export type RootProps = ComponentProps<typeof Root>;
-export const Root = withProvider(TreeView.Root, "root");
+export type RootProps<T extends TreeNode> = TreeView.RootProps<T> &
+  RefAttributes<HTMLDivElement> &
+  TreeViewVariantProps;
+export const Root = withProvider(TreeView.Root, "root") as {
+  <T extends TreeNode>(props: RootProps<T>): JSX.Element;
+};
 
 export const BranchContent = withContext(
   TreeView.BranchContent,

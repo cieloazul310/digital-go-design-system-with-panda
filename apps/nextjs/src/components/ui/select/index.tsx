@@ -3,7 +3,7 @@
  * https://github.com/chakra-ui/chakra-ui/blob/main/packages/react/src/components/select/select.tsx
  */
 "use client";
-import type { JSX } from "react";
+import type { JSX, RefAttributes } from "react";
 import type { CollectionItem } from "@ark-ui/react/select";
 import { Select } from "@ark-ui/react/select";
 import { select, type SelectVariantProps } from "styled-system/recipes";
@@ -18,7 +18,7 @@ export const RootProvider = withProvider(Select.RootProvider, "root") as {
 };
 
 export type RootProps<T extends CollectionItem> = Select.RootProps<T> &
-  React.RefAttributes<HTMLDivElement> &
+  RefAttributes<HTMLDivElement> &
   SelectVariantProps;
 export const Root = withProvider(Select.Root, "root") as {
   <T extends CollectionItem>(props: RootProps<T>): JSX.Element;
