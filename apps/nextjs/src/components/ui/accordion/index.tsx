@@ -8,11 +8,10 @@ import { accordion } from "styled-system/recipes";
 import { createStyleContext } from "styled-system/jsx";
 import type { ComponentProps } from "styled-system/types";
 
-const { withRootProvider, withProvider, withContext } =
-  createStyleContext(accordion);
+const { withProvider, withContext } = createStyleContext(accordion);
 
 export type RootProviderProps = ComponentProps<typeof RootProvider>;
-export const RootProvider = withRootProvider(Accordion.RootProvider);
+export const RootProvider = withProvider(Accordion.RootProvider, "root");
 
 export type RootProps = ComponentProps<typeof Root>;
 export const Root = withProvider(Accordion.Root, "root");

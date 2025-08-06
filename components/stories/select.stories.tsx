@@ -1,7 +1,7 @@
-import { ChevronDownIcon, X as XIcon } from "lucide-react";
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { fn } from "storybook/test";
 import { Portal, createListCollection } from "@ark-ui/react";
+import { ChevronDownIcon, X as XIcon } from "lucide-react";
 import { select } from "styled-system/recipes";
 import * as Select from "../src/select";
 

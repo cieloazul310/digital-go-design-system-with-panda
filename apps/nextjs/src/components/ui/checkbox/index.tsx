@@ -8,7 +8,8 @@ import { checkbox } from "styled-system/recipes";
 import { createStyleContext } from "styled-system/jsx";
 import type { ComponentProps } from "styled-system/types";
 
-const { withProvider, withContext } = createStyleContext(checkbox);
+const { withRootProvider, withProvider, withContext } =
+  createStyleContext(checkbox);
 
 export type RootProviderProps = ComponentProps<typeof RootProvider>;
 export const RootProvider = withProvider(Checkbox.RootProvider, "root");
@@ -20,7 +21,9 @@ export const Root = withProvider(Checkbox.Root, "root", {
 
 export const Control = withContext(Checkbox.Control, "control");
 
-export const Group = withContext(Checkbox.Group, "group");
+export const Group = withProvider(Checkbox.Group, "group");
+
+export const GroupProvider = withRootProvider(Checkbox.GroupProvider);
 
 export const Indicator = withContext(Checkbox.Indicator, "indicator");
 

@@ -1,8 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-// import type { KeyboardEvent } from "react";
+import { useState } from "react";
 import { fn } from "storybook/test";
+import { useField } from "@ark-ui/react/field";
 import { field } from "styled-system/recipes";
 import * as Field from "../src/field";
+import { Button } from "../src";
 
 const meta = {
   title: "Components/インプットテキスト",
@@ -105,5 +107,28 @@ export const Select: Story = {
         <Field.ErrorText>※エラーテキストが入ります</Field.ErrorText>
       </>
     ),
+  },
+};
+
+export const WithProvider: Story = {
+  render: ({ ...args }) => {
+    const [invalid, setInvalid] = useState(false);
+    const field = useField({ ...args, invalid });
+
+    return (
+      <>
+        <Button onClick={() => setInvalid((prev) => !prev)} my={4}>
+          Toggle invalid
+        </Button>
+        <Field.RootProvider value={field}>
+          <Field.Label>
+            ラベル<Field.RequirementBadge>※必須</Field.RequirementBadge>
+          </Field.Label>
+          <Field.SupportText>サポートテキスト</Field.SupportText>
+          <Field.Input placeholder="Placeholder" />
+          <Field.ErrorText>※エラーテキストが入ります</Field.ErrorText>
+        </Field.RootProvider>
+      </>
+    );
   },
 };

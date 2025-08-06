@@ -1,17 +1,28 @@
+/**
+ * reference:
+ * https://github.com/chakra-ui/chakra-ui/blob/main/packages/react/src/components/select/select.tsx
+ */
 "use client";
+import type { JSX } from "react";
+import type { CollectionItem } from "@ark-ui/react/select";
 import { Select } from "@ark-ui/react/select";
-import { select } from "styled-system/recipes";
+import { select, type SelectVariantProps } from "styled-system/recipes";
 import { createStyleContext } from "styled-system/jsx";
-import type { ComponentProps } from "styled-system/types";
 
-const { withProvider, withRootProvider, withContext } =
-  createStyleContext(select);
+const { withProvider, withContext } = createStyleContext(select);
 
-export type RootProviderProps = ComponentProps<typeof RootProvider>;
-export const RootProvider = withRootProvider(Select.RootProvider);
+export type RootProviderProps<T extends CollectionItem> =
+  Select.RootProviderProps<T> & SelectVariantProps;
+export const RootProvider = withProvider(Select.RootProvider, "root") as {
+  <T extends CollectionItem>(props: RootProviderProps<T>): JSX.Element;
+};
 
-export type RootProps = ComponentProps<typeof Root>;
-export const Root = withProvider(Select.Root, "root");
+export type RootProps<T extends CollectionItem> = Select.RootProps<T> &
+  React.RefAttributes<HTMLDivElement> &
+  SelectVariantProps;
+export const Root = withProvider(Select.Root, "root") as {
+  <T extends CollectionItem>(props: RootProps<T>): JSX.Element;
+};
 
 export const ClearTrigger = withContext(Select.ClearTrigger, "clearTrigger");
 

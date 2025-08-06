@@ -4,13 +4,13 @@ import { fieldset } from "styled-system/recipes";
 import { createStyleContext } from "styled-system/jsx";
 import type { ComponentProps } from "styled-system/types";
 
-const { withProvider, withContext } = createStyleContext(fieldset);
+const { withRootProvider, withContext } = createStyleContext(fieldset);
 
 export type RootProviderProps = ComponentProps<typeof RootProvider>;
-export const RootProvider = withProvider(Fieldset.RootProvider, "root");
+export const RootProvider = withRootProvider(Fieldset.RootProvider);
 
 export type RootProps = ComponentProps<typeof Root>;
-export const Root = withProvider(Fieldset.Root, "root");
+export const Root = withRootProvider(Fieldset.Root);
 
 export const ErrorText = withContext(Fieldset.ErrorText, "errorText");
 

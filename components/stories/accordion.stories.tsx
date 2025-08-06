@@ -1,8 +1,10 @@
 import { ChevronDownIcon } from "lucide-react";
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { useAccordion } from "@ark-ui/react/accordion";
 import { css } from "styled-system/css";
 import { styled, Container } from "styled-system/jsx";
 import * as Accordion from "../src/accordion";
+import { Button } from "../src/button";
 import { colorPalette } from "./utils/color-palette";
 
 const meta = {
@@ -120,4 +122,81 @@ export const Summary: Story = {
       </article>
     </Container>
   ),
+};
+
+export const WithRootProvider: Story = {
+  render: ({ ...args }) => {
+    const accordion = useAccordion({
+      ...args,
+      defaultValue: ["React"],
+    });
+    const onClick = () => {
+      accordion.setValue(["React", "Solid", "Vue", "Svelte"]);
+    };
+
+    return (
+      <>
+        <Button onClick={onClick}>Open all</Button>
+        <Accordion.RootProvider value={accordion}>
+          {["React", "Solid", "Vue", "Svelte"].map((item) => (
+            <Accordion.Item value={item} key={item}>
+              <Accordion.ItemTrigger>
+                What is {item}?
+                <Accordion.ItemIndicator>
+                  <ChevronDownIcon />
+                </Accordion.ItemIndicator>
+              </Accordion.ItemTrigger>
+              <Accordion.ItemContent>
+                {item} is a JavaScript library for building user interfaces.
+              </Accordion.ItemContent>
+            </Accordion.Item>
+          ))}
+        </Accordion.RootProvider>
+      </>
+    );
+  },
+};
+
+export const WithContext: Story = {
+  args: {
+    defaultValue: ["React"],
+    children: (
+      <>
+        <Accordion.Context>
+          {(context) => (
+            <div
+              className={css({
+                display: "flex",
+                flexDirection: "column",
+                gap: 2,
+                my: 4,
+              })}
+            >
+              <span>Selected items: {context.value.join(", ")}</span>
+              <span>Focused item: {context.focusedValue}</span>
+              <Button
+                width="fit-content"
+                onClick={() => context.setValue(["React", "Solid"])}
+              >
+                Set value
+              </Button>
+            </div>
+          )}
+        </Accordion.Context>
+        {["React", "Solid", "Vue", "Svelte"].map((item) => (
+          <Accordion.Item key={item} value={item}>
+            <Accordion.ItemTrigger>
+              What is {item}?
+              <Accordion.ItemIndicator>
+                <ChevronDownIcon />
+              </Accordion.ItemIndicator>
+            </Accordion.ItemTrigger>
+            <Accordion.ItemContent>
+              {item} is a JavaScript library for building user interfaces.
+            </Accordion.ItemContent>
+          </Accordion.Item>
+        ))}
+      </>
+    ),
+  },
 };

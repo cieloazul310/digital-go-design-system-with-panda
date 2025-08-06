@@ -7,6 +7,9 @@ import type { ComponentProps } from "styled-system/types";
 
 const { withProvider, withContext } = createStyleContext(disclosure);
 
+export type RootProviderProps = ComponentProps<typeof RootProvider>;
+export const RootProvider = withProvider(Collapsible.RootProvider, "root");
+
 export type RootProps = ComponentProps<typeof Root>;
 export const Root = withProvider(Collapsible.Root, "root");
 
@@ -20,3 +23,7 @@ export const Icon = withContext(ark.span, "icon");
 
 export type ContentProps = ComponentProps<typeof Content>;
 export const Content = withContext(Collapsible.Content, "content");
+
+export { CollapsibleContext as Context } from "@ark-ui/react/collapsible";
+
+export type { CollapsibleOpenChangeDetails as OpenChangeDetails } from "@ark-ui/react/collapsible";
