@@ -6,8 +6,8 @@
 "use client";
 import { type TreeNode, TreeView } from "@ark-ui/react/tree-view";
 import { treeView } from "styled-system/recipes";
-import type { ComponentProps } from "styled-system/types";
 import { createStyleContext } from "styled-system/jsx";
+import type { ComponentProps } from "styled-system/types";
 
 const { withProvider, withContext } = createStyleContext(treeView);
 

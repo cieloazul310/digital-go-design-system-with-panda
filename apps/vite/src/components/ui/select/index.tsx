@@ -1,8 +1,8 @@
 "use client";
 import { Select } from "@ark-ui/react/select";
 import { select } from "styled-system/recipes";
-import type { ComponentProps } from "styled-system/types";
 import { createStyleContext } from "styled-system/jsx";
+import type { ComponentProps } from "styled-system/types";
 
 const { withProvider, withContext } = createStyleContext(select);
 

@@ -1,13 +1,14 @@
 "use client";
 import { Select } from "@ark-ui/react/select";
 import { select } from "styled-system/recipes";
-import type { ComponentProps } from "styled-system/types";
 import { createStyleContext } from "styled-system/jsx";
+import type { ComponentProps } from "styled-system/types";
 
-const { withProvider, withContext } = createStyleContext(select);
+const { withProvider, withRootProvider, withContext } =
+  createStyleContext(select);
 
 export type RootProviderProps = ComponentProps<typeof RootProvider>;
-export const RootProvider = withProvider(Select.RootProvider, "root");
+export const RootProvider = withRootProvider(Select.RootProvider);
 
 export type RootProps = ComponentProps<typeof Root>;
 export const Root = withProvider(Select.Root, "root");

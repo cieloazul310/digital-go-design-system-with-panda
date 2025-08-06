@@ -5,8 +5,8 @@
 "use client";
 import { ark } from "@ark-ui/react/factory";
 import { resourceList } from "styled-system/recipes";
-import type { ComponentProps } from "styled-system/types";
 import { createStyleContext } from "styled-system/jsx";
+import type { ComponentProps } from "styled-system/types";
 
 const { withProvider, withContext } = createStyleContext(resourceList);
 

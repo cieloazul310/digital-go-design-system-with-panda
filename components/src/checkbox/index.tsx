@@ -20,7 +20,7 @@ export const Root = withProvider(Checkbox.Root, "root", {
 
 export const Control = withContext(Checkbox.Control, "control");
 
-export const Group = withContext(Checkbox.Group, "group");
+export const Group = withProvider(Checkbox.Group, "group");
 
 export const Indicator = withContext(Checkbox.Indicator, "indicator");
 
