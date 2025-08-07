@@ -10,6 +10,7 @@ import { styled, Flex } from "styled-system/jsx";
 import { Button } from "../src/button";
 import { Link } from "../src/link";
 import { colorPalette } from "./utils/color-palette";
+import { ariaDisabled } from "./utils/arg-types";
 
 const headingStyle = css({ textStyle: "std-32B-150", mb: 6 });
 const buttons = hstack({ gap: 4, alignItems: "end" });
@@ -36,15 +37,7 @@ const meta = {
         type: { summary: `${button.variantMap.size.join(" | ")}` },
       },
     },
-    "aria-disabled": {
-      description:
-        "無効化する必要がある場合は `disabled` 属性ではなく `aria-disabled` 属性を使用します。",
-      control: { type: "boolean" },
-      table: {
-        defaultValue: { summary: "false" },
-        type: { summary: "boolean" },
-      },
-    },
+    "aria-disabled": ariaDisabled,
     colorPalette,
   },
   args: {

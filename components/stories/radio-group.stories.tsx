@@ -7,6 +7,7 @@ import { Legend } from "../src/form/legend";
 import { RequirementBadge } from "../src/form/requirement-badge";
 import { SupportText } from "../src/form/support-text";
 import { colorPalette } from "./utils/color-palette";
+import { disabled, ariaDisabled, readOnly } from "./utils/arg-types";
 
 const meta = {
   title: "Components/ラジオボタン",
@@ -32,20 +33,16 @@ const meta = {
         type: { summary: "'vertical' | 'horizontal'" },
       },
     },
-    disabled: {
-      description:
-        "無効化する必要がある場合は `disabled` 属性ではなく `aria-disabled` 属性を使用します。",
-      control: { type: "boolean" },
-      table: {
-        defaultValue: { summary: "false" },
-        type: { summary: "boolean" },
-      },
-    },
+    disabled,
+    "aria-disabled": ariaDisabled,
+    readOnly,
     colorPalette,
   },
   args: {
     size: "sm",
     disabled: false,
+    "aria-disabled": false,
+    readOnly: false,
     orientation: "vertical",
     colorPalette: "keyColor",
   },

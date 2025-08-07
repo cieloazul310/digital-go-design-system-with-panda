@@ -6,6 +6,7 @@ import * as Fieldset from "../src/fieldset";
 import * as Field from "../src/field";
 import * as Checkbox from "../src/checkbox";
 import * as RadioGroup from "../src/radio-group";
+import { disabled, ariaDisabled, invalid } from "./utils/arg-types";
 
 const meta = {
   title: "Components/フィールドセット",
@@ -15,20 +16,14 @@ const meta = {
       options: fieldset.variantMap.size,
       control: "inline-radio",
     },
-    disabled: {
-      description:
-        "無効化する必要がある場合は `disabled` 属性ではなく `aria-disabled` 属性を使用します。",
-      control: { type: "boolean" },
-      table: {
-        defaultValue: { summary: "false" },
-        type: { summary: "boolean" },
-      },
-    },
-    invalid: { control: "boolean" },
+    disabled,
+    "aria-disabled": ariaDisabled,
+    invalid,
   },
   args: {
     size: "lg",
     disabled: false,
+    "aria-disabled": false,
     invalid: false,
     onChange: fn(),
   },

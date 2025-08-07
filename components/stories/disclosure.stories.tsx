@@ -7,16 +7,14 @@ import { useCollapsible } from "@ark-ui/react/collapsible";
 import { css } from "styled-system/css";
 import { styled, Container } from "styled-system/jsx";
 import * as Disclosure from "../src/disclosure";
+import { disabled } from "./utils/arg-types";
 
 const meta = {
   title: "Components/ディスクロージャー",
   tags: ["autodocs"],
   component: Disclosure.Root,
   argTypes: {
-    disabled: {
-      type: "boolean",
-      control: { type: "boolean" },
-    },
+    disabled,
     defaultOpen: {
       type: "boolean",
       control: { type: "boolean" },
@@ -48,7 +46,7 @@ export const Basic: Story = {
     children: (
       <>
         <Disclosure.Summary>
-          <Disclosure.Icon />
+          <Disclosure.Indicator />
           ディスクロージャータイトル
         </Disclosure.Summary>
         <Disclosure.Content my={4}>
@@ -72,7 +70,7 @@ export const Summary: Story = {
           <details>
             <Disclosure.Summary asChild>
               <summary>
-                <Disclosure.Icon />
+                <Disclosure.Indicator />
                 ダミーテキストがデザインやレイアウトに使用されていることがよくありますが、どのような目的や意味で使用されているのでしょうか？
               </summary>
             </Disclosure.Summary>
@@ -96,7 +94,7 @@ export const LazyMountAndUnmountOnExit: Story = {
     children: (
       <>
         <Disclosure.Summary>
-          <Disclosure.Icon />
+          <Disclosure.Indicator />
           ディスクロージャータイトル
         </Disclosure.Summary>
         <Disclosure.Content my={4}>
@@ -115,7 +113,7 @@ export const WithProvider: Story = {
         <p className={paragraph}>{disclosure.visible ? "Visible" : "Hidden"}</p>
         <Disclosure.RootProvider value={disclosure}>
           <Disclosure.Summary>
-            <Disclosure.Icon />
+            <Disclosure.Indicator />
             ディスクロージャータイトル
           </Disclosure.Summary>
           <Disclosure.Content my={4}>

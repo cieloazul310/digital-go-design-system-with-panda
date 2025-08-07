@@ -3,25 +3,23 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { css } from "styled-system/css";
 import * as Field from "../src/field";
 import { Textarea } from "../src/textarea";
+import { disabled, ariaDisabled, readOnly, required } from "./utils/arg-types";
 
 const meta = {
   title: "Components/テキストエリア",
   tags: ["autodocs"],
   component: Textarea,
   argTypes: {
-    disabled: {
-      description:
-        "無効化する必要がある場合は `disabled` 属性ではなく `aria-disabled` 属性を使用します。",
-      control: { type: "boolean" },
-      table: {
-        defaultValue: { summary: "false" },
-        type: { summary: "boolean" },
-      },
-    },
+    disabled,
+    "aria-disabled": ariaDisabled,
+    readOnly,
+    required,
   },
   args: {
     disabled: false,
     "aria-disabled": false,
+    readOnly: false,
+    required: false,
   },
 } satisfies Meta<typeof Textarea>;
 

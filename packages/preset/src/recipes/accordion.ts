@@ -101,21 +101,18 @@ export default defineSlotRecipe({
       color: "colorPalette.primary.100",
       /**
        * border border-current rounded-full
-          group-hover/summary:outline group-hover/summary:outline-2 group-hover/summary:outline-current
-          group-open/accordion:rotate-180
+       * group-hover/summary:outline group-hover/summary:outline-2
+       * group-hover/summary:outline-current
+       * group-open/accordion:rotate-180
        */
       borderWidth: "1px",
       borderColor: "currentcolor",
       rounded: "full",
       outlineStyle: "solid",
       outlineWidth: { base: "0px", _groupHover: "2px" },
-      transformOrigin: "center",
-      transitionDuration: "normal",
-      transitionProperty: "transform",
-      transitionTimingFunction: "default",
-      _open: {
-        transform: "rotate(-180deg)",
-      },
+      outlineColor: { base: "transparent", _groupHover: "currentcolor" },
+      transition: "transform",
+      transform: { base: "rotate(0deg)", _open: "rotate(-180deg)" },
     },
     itemContent: {
       /**

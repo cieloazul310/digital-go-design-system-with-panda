@@ -4,7 +4,14 @@ import { fn } from "storybook/test";
 import { useField } from "@ark-ui/react/field";
 import { field } from "styled-system/recipes";
 import * as Field from "../src/field";
-import { Button } from "../src";
+import { Button } from "../src/button";
+import {
+  disabled,
+  ariaDisabled,
+  invalid,
+  readOnly,
+  required,
+} from "./utils/arg-types";
 
 const meta = {
   title: "Components/インプットテキスト",
@@ -15,18 +22,11 @@ const meta = {
       options: field.variantMap.size,
       control: "inline-radio",
     },
-    disabled: {
-      description:
-        "無効化する必要がある場合は `disabled` 属性ではなく `aria-disabled` 属性を使用します。",
-      control: { type: "boolean" },
-      table: {
-        defaultValue: { summary: "false" },
-        type: { summary: "boolean" },
-      },
-    },
-    invalid: { control: "boolean" },
-    readOnly: { control: "boolean" },
-    required: { control: "boolean" },
+    disabled,
+    "aria-disabled": ariaDisabled,
+    invalid,
+    readOnly,
+    required,
   },
   args: {
     size: "lg",

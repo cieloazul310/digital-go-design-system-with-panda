@@ -28,7 +28,6 @@ export * from "./ordered-list";
 export * from "./textarea";
 export * from "./unordered-list";
 export * from "./utility-link";
-export * from "./utils/create-style-context";
 
 export {
   Accordion,

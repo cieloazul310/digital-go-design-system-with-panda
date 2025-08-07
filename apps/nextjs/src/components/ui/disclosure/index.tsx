@@ -1,6 +1,5 @@
 "use client";
 import { Collapsible } from "@ark-ui/react/collapsible";
-import { ark } from "@ark-ui/react/factory";
 import { disclosure } from "styled-system/recipes";
 import { createStyleContext } from "styled-system/jsx";
 import type { ComponentProps } from "styled-system/types";
@@ -14,12 +13,26 @@ export type RootProps = ComponentProps<typeof Root>;
 export const Root = withProvider(Collapsible.Root, "root");
 
 export type SummaryProps = ComponentProps<typeof Summary>;
-export const Summary = withContext(Collapsible.Trigger, "summary", {
+export const Summary = withContext(Collapsible.Trigger, "trigger", {
   defaultProps: { className: "group" },
 });
 
-export type IconProps = ComponentProps<typeof Icon>;
-export const Icon = withContext(ark.span, "icon");
+const DefaultIndicator = (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    aria-hidden={true}
+  >
+    <path d="M12 15.525L16.925 10.625H7.07502L12 15.525Z" />
+  </svg>
+);
+
+export type IndicatorProps = ComponentProps<typeof Indicator>;
+export const Indicator = withContext(Collapsible.Indicator, "indicator", {
+  defaultProps: { children: DefaultIndicator },
+});
 
 export type ContentProps = ComponentProps<typeof Content>;
 export const Content = withContext(Collapsible.Content, "content");

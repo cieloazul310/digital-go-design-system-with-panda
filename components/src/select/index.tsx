@@ -4,8 +4,7 @@
  */
 "use client";
 import type { JSX, RefAttributes } from "react";
-import type { CollectionItem } from "@ark-ui/react/select";
-import { Select } from "@ark-ui/react/select";
+import { Select, type CollectionItem } from "@ark-ui/react/select";
 import { select, type SelectVariantProps } from "styled-system/recipes";
 import { createStyleContext } from "styled-system/jsx";
 
@@ -24,13 +23,49 @@ export const Root = withProvider(Select.Root, "root") as {
   <T extends CollectionItem>(props: RootProps<T>): JSX.Element;
 };
 
-export const ClearTrigger = withContext(Select.ClearTrigger, "clearTrigger");
+const DefaultClearIcon = (
+  <svg
+    aria-hidden={true}
+    fill="none"
+    height="24"
+    viewBox="0 0 24 24"
+    width="24"
+  >
+    <g>
+      <path
+        d="m6.4 18.6-1-1 5.5-5.6-5.6-5.6 1.1-1 5.6 5.5 5.6-5.6 1 1.1L13 12l5.6 5.6-1 1L12 13l-5.6 5.6Z"
+        fill="currentColor"
+      />
+    </g>
+  </svg>
+);
+
+export const ClearTrigger = withContext(Select.ClearTrigger, "clearTrigger", {
+  defaultProps: { children: DefaultClearIcon },
+});
 
 export const Content = withContext(Select.Content, "content");
 
 export const Control = withContext(Select.Control, "control");
 
-export const Indicator = withContext(Select.Indicator, "indicator");
+const DefaultIndicator = (
+  <svg
+    aria-hidden={true}
+    fill="none"
+    height="16"
+    viewBox="0 0 16 16"
+    width="16"
+  >
+    <path
+      d="M13.3344 4.40002L8.00104 9.73336L2.66771 4.40002L1.73438 5.33336L8.00104 11.6L14.2677 5.33336L13.3344 4.40002Z"
+      fill="currentColor"
+    />
+  </svg>
+);
+
+export const Indicator = withContext(Select.Indicator, "indicator", {
+  defaultProps: { children: DefaultIndicator },
+});
 
 export const ItemGroupLabel = withContext(
   Select.ItemGroupLabel,

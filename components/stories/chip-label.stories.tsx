@@ -18,6 +18,7 @@ import { colorPalette } from "./utils/color-palette";
 const meta = {
   title: "Components/チップラベル",
   component: ChipLabel,
+  tags: ["autodocs"],
   argTypes: {
     variant: {
       options: chipLabel.variantMap.variant,
@@ -25,7 +26,7 @@ const meta = {
       description:
         "チップラベルのスタイルを、塗りボタン（`solid-fill`）、アウトラインボタン（`outline`）、テキストボタン（`text`）、アウトライン+塗り(`ghost`)の4種類から選択します。",
       table: {
-        type: { summary: "'solid-fill' | 'outline' | 'text' | 'ghots'" },
+        type: { summary: `${chipLabel.variantMap.variant.join(" | ")}` },
       },
     },
     colorPalette,

@@ -6,7 +6,7 @@ export default function App() {
       <details>
         <Disclosure.Summary asChild>
           <summary>
-            <Disclosure.Icon />
+            <Disclosure.Indicator />
             ディスクロージャータイトル
           </summary>
         </Disclosure.Summary>

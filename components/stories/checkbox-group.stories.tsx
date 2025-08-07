@@ -6,44 +6,24 @@ import * as Fieldset from "../src/fieldset";
 import { RequirementBadge } from "../src/form";
 import * as Checkbox from "../src/checkbox";
 import { colorPalette } from "./utils/color-palette";
+import { invalid, disabled, ariaDisabled, readOnly } from "./utils/arg-types";
 
 const meta = {
   title: "Components/チェックボックス/グループ",
   tags: ["autodocs"],
   component: Checkbox.Group,
   argTypes: {
-    invalid: {
-      description: "エラー状態であるかどうかを指定します。",
-      control: { type: "boolean" },
-      table: {
-        defaultValue: { summary: "false" },
-        type: { summary: "boolean" },
-      },
-    },
-    disabled: {
-      description:
-        "無効化する必要がある場合は `disabled` 属性ではなく `aria-disabled` 属性を使用します。",
-      control: { type: "boolean" },
-      table: {
-        defaultValue: { summary: "false" },
-        type: { summary: "boolean" },
-      },
-    },
-    "aria-disabled": {
-      description:
-        "無効化する必要がある場合は `disabled` 属性ではなく `aria-disabled` 属性を使用します。",
-      control: { type: "boolean" },
-      table: {
-        defaultValue: { summary: "false" },
-        type: { summary: "boolean" },
-      },
-    },
+    invalid,
+    disabled,
+    "aria-disabled": ariaDisabled,
+    readOnly,
     colorPalette,
   },
   args: {
     invalid: false,
     disabled: false,
     "aria-disabled": false,
+    readOnly: false,
     colorPalette: "keyColor",
   },
 } satisfies Meta<typeof Checkbox.Group>;

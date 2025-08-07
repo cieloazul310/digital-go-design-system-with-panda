@@ -29,22 +29,19 @@ export type LinkProps = ComponentProps<typeof Link>;
 
 export const Link = withContext(ark.a, "link");
 
-const Icon = ({ ...props }: ComponentProps<"svg">) => (
-  <ark.svg
-    {...props}
-    aria-hidden={true}
-    fill="none"
-    height="12"
-    viewBox="0 0 12 12"
-    width="12"
-  >
-    <path
-      d="M4.50078 1.2998L3.80078 1.9998L7.80078 5.9998L3.80078 9.9998L4.50078 10.6998L9.20078 5.9998L4.50078 1.2998Z"
-      fill="currentColor"
-    />
-  </ark.svg>
+const ChevronRight = (
+  <path
+    d="M4.50078 1.2998L3.80078 1.9998L7.80078 5.9998L3.80078 9.9998L4.50078 10.6998L9.20078 5.9998L4.50078 1.2998Z"
+    fill="currentColor"
+  />
 );
 
 export type SeparatorProps = ComponentProps<typeof Separator>;
 
-export const Separator = withContext(Icon, "separator");
+export const Separator = withContext(ark.svg, "separator", {
+  defaultProps: {
+    viewBox: "0 0 12 12",
+    "aria-hidden": true,
+    children: ChevronRight,
+  },
+});

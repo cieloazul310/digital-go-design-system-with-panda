@@ -20,13 +20,6 @@ export const cardAnatomy = createAnatomy("card").parts(
   "title",
 );
 
-export const disclosureAnatomy = createAnatomy("disclosure").parts(
-  "root",
-  "summary",
-  "icon",
-  "content",
-);
-
 /**
  * https://github.com/chakra-ui/ark/blob/main/packages/react/src/components/field/field.anatomy.ts
  */

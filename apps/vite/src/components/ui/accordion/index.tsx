@@ -18,9 +18,27 @@ export const Root = withProvider(Accordion.Root, "root");
 
 export const ItemContent = withContext(Accordion.ItemContent, "itemContent");
 
+export const DefaultIndicator = (
+  <svg
+    aria-hidden={true}
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
+    fill="none"
+  >
+    <g>
+      <path
+        d="M16.668 5.5L10.0013 12.1667L3.33464 5.5L2.16797 6.66667L10.0013 14.5L17.8346 6.66667L16.668 5.5Z"
+        fill="currentColor"
+      />
+    </g>
+  </svg>
+);
+
 export const ItemIndicator = withContext(
   Accordion.ItemIndicator,
   "itemIndicator",
+  { defaultProps: { children: DefaultIndicator } },
 );
 
 export const Item = withContext(Accordion.Item, "item");

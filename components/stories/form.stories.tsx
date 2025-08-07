@@ -1,31 +1,34 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { input } from "styled-system/recipes";
 import { Input } from "../src/form/input";
+import { disabled, ariaDisabled, readOnly, required } from "./utils/arg-types";
 
 const meta = {
   title: "Components/フォーム",
   tags: ["autodocs"],
+  component: Input,
   argTypes: {
     size: {
-      control: "inline-radio",
-    },
-    disabled: {
-      description:
-        "無効化する必要がある場合は `disabled` 属性ではなく `aria-disabled` 属性を使用します。",
-      control: { type: "boolean" },
+      options: input.variantMap.size,
+      control: { type: "inline-radio" },
       table: {
-        defaultValue: { summary: "false" },
-        type: { summary: "boolean" },
+        defaultValue: { summary: "lg" },
+        type: { summary: `${input.variantMap.size.join(" | ")}` },
       },
     },
-    invalid: {
-      control: "boolean",
-    },
+    disabled,
+    "aria-disabled": ariaDisabled,
+    readOnly,
+    required,
   },
   args: {
+    size: "lg",
     disabled: false,
-    invalid: false,
+    "aria-disabled": false,
+    readOnly: false,
+    required: false,
   },
-} satisfies Meta;
+} satisfies Meta<typeof Input>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -34,5 +37,4 @@ export const InputText: Story = {
   args: {
     size: "lg",
   },
-  render: () => <Input />,
 };

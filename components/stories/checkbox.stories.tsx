@@ -4,6 +4,13 @@ import { checkbox } from "styled-system/recipes";
 import * as Checkbox from "../src/checkbox";
 import * as Field from "../src/field";
 import { colorPalette } from "./utils/color-palette";
+import {
+  invalid,
+  disabled,
+  ariaDisabled,
+  readOnly,
+  required,
+} from "./utils/arg-types";
 
 const meta = {
   title: "Components/チェックボックス/単体",
@@ -20,46 +27,11 @@ const meta = {
         type: { summary: "'sm' | 'md' | 'lg'" },
       },
     },
-    invalid: {
-      description: "エラー状態であるかどうかを指定します。",
-      control: { type: "boolean" },
-      table: {
-        defaultValue: { summary: "false" },
-        type: { summary: "boolean" },
-      },
-    },
-    disabled: {
-      description:
-        "無効化する必要がある場合は `disabled` 属性ではなく `aria-disabled` 属性を使用します。",
-      control: { type: "boolean" },
-      table: {
-        defaultValue: { summary: "false" },
-        type: { summary: "boolean" },
-      },
-    },
-    "aria-disabled": {
-      description:
-        "無効化する必要がある場合は `disabled` 属性ではなく `aria-disabled` 属性を使用します。",
-      control: { type: "boolean" },
-      table: {
-        defaultValue: { summary: "false" },
-        type: { summary: "boolean" },
-      },
-    },
-    readOnly: {
-      control: { type: "boolean" },
-      table: {
-        defaultValue: { summary: "false" },
-        type: { summary: "boolean" },
-      },
-    },
-    required: {
-      control: { type: "boolean" },
-      table: {
-        defaultValue: { summary: "false" },
-        type: { summary: "boolean" },
-      },
-    },
+    invalid,
+    disabled,
+    "aria-disabled": ariaDisabled,
+    readOnly,
+    required,
     colorPalette,
   },
   args: {
