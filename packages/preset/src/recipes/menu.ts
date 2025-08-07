@@ -23,7 +23,7 @@ export default defineSlotRecipe({
       borderWidth: "1px",
       borderColor: "solid-gray.420",
       bg: "white",
-      rounded: "lg",
+      rounded: 8,
       boxShadow: 1,
       /**
      * min-w-fit w-auto py-2 border border-solid-grey-420 bg-white shadow-1 rounded-lg

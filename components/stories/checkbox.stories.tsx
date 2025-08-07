@@ -1,6 +1,16 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { useCheckbox } from "@ark-ui/react/checkbox";
+import { checkbox } from "styled-system/recipes";
 import * as Checkbox from "../src/checkbox";
 import * as Field from "../src/field";
+import { colorPalette } from "./utils/color-palette";
+import {
+  invalid,
+  disabled,
+  ariaDisabled,
+  readOnly,
+  required,
+} from "./utils/arg-types";
 
 const meta = {
   title: "Components/チェックボックス/単体",
@@ -11,75 +21,18 @@ const meta = {
       type: "string",
       description: "チェックボックスのサイズを以下から選択します。",
       control: { type: "radio" },
-      options: ["sm", "md", "lg"],
+      options: checkbox.variantMap.size,
       table: {
         defaultValue: { summary: "sm" },
         type: { summary: "'sm' | 'md' | 'lg'" },
       },
     },
-    invalid: {
-      description: "エラー状態であるかどうかを指定します。",
-      control: { type: "boolean" },
-      table: {
-        defaultValue: { summary: "false" },
-        type: { summary: "boolean" },
-      },
-    },
-    disabled: {
-      description:
-        "無効化する必要がある場合は `disabled` 属性ではなく `aria-disabled` 属性を使用します。",
-      control: { type: "boolean" },
-      table: {
-        defaultValue: { summary: "false" },
-        type: { summary: "boolean" },
-      },
-    },
-    "aria-disabled": {
-      description:
-        "無効化する必要がある場合は `disabled` 属性ではなく `aria-disabled` 属性を使用します。",
-      control: { type: "boolean" },
-      table: {
-        defaultValue: { summary: "false" },
-        type: { summary: "boolean" },
-      },
-    },
-    readOnly: {
-      control: { type: "boolean" },
-      table: {
-        defaultValue: { summary: "false" },
-        type: { summary: "boolean" },
-      },
-    },
-    required: {
-      control: { type: "boolean" },
-      table: {
-        defaultValue: { summary: "false" },
-        type: { summary: "boolean" },
-      },
-    },
-    colorPalette: {
-      options: [
-        "keyColor",
-        "blue",
-        "light-blue",
-        "cyan",
-        "green",
-        "lime",
-        "yellow",
-        "orange",
-        "red",
-        "magenta",
-        "purple",
-      ],
-      control: { type: "radio" },
-      table: {
-        defaultValue: { summary: "keyColor" },
-        type: {
-          summary:
-            "'keyColor' | 'blue' | 'light-blue' | 'cyan' | 'green' | 'lime' | 'yellow' | 'orange' | 'red' | 'magenta' | 'purple'",
-        },
-      },
-    },
+    invalid,
+    disabled,
+    "aria-disabled": ariaDisabled,
+    readOnly,
+    required,
+    colorPalette,
   },
   args: {
     size: "sm",
@@ -144,6 +97,45 @@ export const WithField: Story = {
         </Checkbox.Root>
         <Field.ErrorText>エラーテキスト</Field.ErrorText>
       </Field.Root>
+    );
+  },
+};
+
+export const WithContext: Story = {
+  args: {
+    children: (
+      <>
+        <Checkbox.Control>
+          <Checkbox.Indicator />
+        </Checkbox.Control>
+        <Checkbox.Context>
+          {(checkbox) => (
+            <Checkbox.Label>
+              Checkbox {checkbox.checked.toString()}
+            </Checkbox.Label>
+          )}
+        </Checkbox.Context>
+        <Checkbox.HiddenInput />
+      </>
+    ),
+  },
+};
+
+export const WithProvider: Story = {
+  render: ({ ...args }) => {
+    const checkbox = useCheckbox({ ...args });
+
+    return (
+      <>
+        <span>{checkbox.checked ? "Checked" : "UnChecked"}</span>
+        <Checkbox.RootProvider value={checkbox}>
+          <Checkbox.Control>
+            <Checkbox.Indicator />
+          </Checkbox.Control>
+          <Checkbox.Label>Checkbox</Checkbox.Label>
+          <Checkbox.HiddenInput />
+        </Checkbox.RootProvider>
+      </>
     );
   },
 };

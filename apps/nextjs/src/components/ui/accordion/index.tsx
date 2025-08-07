@@ -3,51 +3,49 @@
  * https://github.com/cschroeter/park-ui/blob/main/components/react/src/components/ui/styled/accordion.tsx
  */
 "use client";
-import type { Assign } from "@ark-ui/react";
 import { Accordion } from "@ark-ui/react/accordion";
-import { type AccordionVariantProps, accordion } from "styled-system/recipes";
-import type { ComponentProps, HTMLStyledProps } from "styled-system/types";
-import { createStyleContext } from "../utils/create-style-context";
+import { accordion } from "styled-system/recipes";
+import { createStyleContext } from "styled-system/jsx";
+import type { ComponentProps } from "styled-system/types";
 
-const { withRootProvider, withProvider, withContext } =
-  createStyleContext(accordion);
+const { withProvider, withContext } = createStyleContext(accordion);
 
 export type RootProviderProps = ComponentProps<typeof RootProvider>;
-export const RootProvider = withRootProvider<
-  Assign<
-    Assign<HTMLStyledProps<"div">, Accordion.RootProviderBaseProps>,
-    AccordionVariantProps
-  >
->(Accordion.RootProvider);
+export const RootProvider = withProvider(Accordion.RootProvider, "root");
 
 export type RootProps = ComponentProps<typeof Root>;
-export const Root = withProvider<
-  HTMLDivElement,
-  Assign<
-    Assign<HTMLStyledProps<"div">, Accordion.RootBaseProps>,
-    AccordionVariantProps
+export const Root = withProvider(Accordion.Root, "root");
+
+export const ItemContent = withContext(Accordion.ItemContent, "itemContent");
+
+export const DefaultIndicator = (
+  <svg
+    aria-hidden={true}
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
+    fill="none"
   >
->(Accordion.Root, "root");
+    <g>
+      <path
+        d="M16.668 5.5L10.0013 12.1667L3.33464 5.5L2.16797 6.66667L10.0013 14.5L17.8346 6.66667L16.668 5.5Z"
+        fill="currentColor"
+      />
+    </g>
+  </svg>
+);
 
-export const ItemContent = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Accordion.ItemContentBaseProps>
->(Accordion.ItemContent, "itemContent");
+export const ItemIndicator = withContext(
+  Accordion.ItemIndicator,
+  "itemIndicator",
+  { defaultProps: { children: DefaultIndicator } },
+);
 
-export const ItemIndicator = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Accordion.ItemIndicatorBaseProps>
->(Accordion.ItemIndicator, "itemIndicator");
+export const Item = withContext(Accordion.Item, "item");
 
-export const Item = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Accordion.ItemBaseProps>
->(Accordion.Item, "item");
-
-export const ItemTrigger = withContext<
-  HTMLButtonElement,
-  Assign<HTMLStyledProps<"button">, Accordion.ItemTriggerBaseProps>
->(Accordion.ItemTrigger, "itemTrigger", { defaultClassName: "group" });
+export const ItemTrigger = withContext(Accordion.ItemTrigger, "itemTrigger", {
+  defaultProps: { className: "group" },
+});
 
 export {
   AccordionContext as Context,

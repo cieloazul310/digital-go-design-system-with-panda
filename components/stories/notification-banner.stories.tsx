@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { notificationBanner } from "styled-system/recipes";
 import * as NotificationBanner from "../src/notification-banner";
 import { Button } from "../src/button";
 
@@ -8,21 +9,27 @@ const meta = {
   component: NotificationBanner.Root,
   argTypes: {
     bannerStyle: {
-      options: ["standard", "color-chip"],
+      options: notificationBanner.variantMap.bannerStyle,
       control: { type: "radio" },
       description: "ノティフケーションバナーのスタイルを選択します。",
       table: {
-        type: { summary: "'standard' | 'color-chip'" },
+        type: {
+          summary: `${notificationBanner.variantMap.bannerStyle.join(" | ")}`,
+        },
+        defaultValue: { summary: "standard" },
       },
     },
     type: {
-      options: ["info1", "info2", "warning", "error", "success"],
+      options: notificationBanner.variantMap.type,
       control: { type: "radio" },
       description:
         "ノティフケーションバナーで通知する情報属性の種類を選択します。",
       table: {
+        defaultValue: {
+          summary: "info2",
+        },
         type: {
-          summary: "'info1' | 'info2' | 'warning' | 'error' | 'success'",
+          summary: `${notificationBanner.variantMap.type.join(" | ")}`,
         },
       },
     },

@@ -6,22 +6,17 @@ import tokens from "./tokens";
 import utilities from "./utilities";
 import globalCss from "./globalCss";
 
-const { breakpoints } = pandaPreset.theme;
+const { breakpoints, keyframes } = pandaPreset.theme;
 
 const preset = definePreset({
   name: "digital-go",
-  conditions: {
-    extend: {
-      disabled:
-        "&:is(:disabled, [disabled], [data-disabled], [aria-disabled=true])",
-    },
-  },
   theme: {
     extend: {
       breakpoints,
       textStyles,
       semanticTokens,
       tokens,
+      keyframes,
     },
   },
   utilities,

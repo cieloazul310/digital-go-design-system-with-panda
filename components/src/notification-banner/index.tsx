@@ -3,52 +3,24 @@
  * https://github.com/cschroeter/park-ui/blob/main/components/react/src/components/ui/styled/alert.tsx
  */
 "use client";
-import type { Assign, PolymorphicProps } from "@ark-ui/react";
 import { ark } from "@ark-ui/react/factory";
-import {
-  notificationBanner,
-  type NotificationBannerVariantProps,
-} from "styled-system/recipes";
-import type { ComponentProps, HTMLStyledProps } from "styled-system/types";
-import { createStyleContext } from "../utils/create-style-context";
+import { notificationBanner } from "styled-system/recipes";
+import { createStyleContext } from "styled-system/jsx";
+import type { ComponentProps } from "styled-system/types";
 
 const { withProvider, withContext } = createStyleContext(notificationBanner);
 
 export type RootProps = ComponentProps<typeof Root>;
-export const Root = withProvider<
-  HTMLDivElement,
-  Assign<
-    Assign<HTMLStyledProps<"div">, PolymorphicProps>,
-    NotificationBannerVariantProps
-  >
->(ark.div, "root");
+export const Root = withProvider(ark.div, "root");
 
-export const Body = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, PolymorphicProps>
->(ark.div, "body");
+export const Body = withContext(ark.div, "body");
 
-export const Header = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, PolymorphicProps>
->(ark.div, "header");
+export const Header = withContext(ark.div, "header");
 
-export const Heading = withContext<
-  HTMLHeadingElement,
-  Assign<HTMLStyledProps<"h2">, PolymorphicProps>
->(ark.h2, "heading");
+export const Heading = withContext(ark.h2, "heading");
 
-export const Icon = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, PolymorphicProps>
->(ark.div, "icon");
+export const Icon = withContext(ark.div, "icon");
 
-export const Close = withContext<
-  HTMLButtonElement,
-  Assign<HTMLStyledProps<"button">, PolymorphicProps>
->(ark.button, "close");
+export const Close = withContext(ark.button, "close");
 
-export const Actions = withContext<
-  HTMLButtonElement,
-  Assign<HTMLStyledProps<"div">, PolymorphicProps>
->(ark.div, "actions");
+export const Actions = withContext(ark.div, "actions");

@@ -26,7 +26,7 @@ export const Details = ({
     <details>
       <Disclosure.Summary asChild>
         <summary>
-          <Disclosure.Icon />
+          <Disclosure.Indicator />
           {summary}
         </summary>
       </Disclosure.Summary>

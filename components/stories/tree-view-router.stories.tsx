@@ -1,10 +1,11 @@
 import { forwardRef } from "react";
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import NextLink from "next/link";
-import { createTreeCollection } from "@ark-ui/react/tree-view";
+import { createTreeCollection, type TreeNode } from "@ark-ui/react/tree-view";
+import { ChevronRight } from "lucide-react";
 import * as StyledTreeView from "../src/tree-view";
 
-const TreeView = forwardRef<HTMLDivElement, StyledTreeView.RootProps>(
+const TreeView = forwardRef<HTMLDivElement, StyledTreeView.RootProps<TreeNode>>(
   (props, ref) => {
     return (
       <StyledTreeView.Root ref={ref} {...props}>
@@ -34,8 +35,10 @@ const TreeNode = (props: StyledTreeView.NodeProviderProps) => {
         <StyledTreeView.Branch>
           <StyledTreeView.BranchControl asChild>
             <NextLink href={`/${node.id}`}>
-              <StyledTreeView.BranchIndicator />
               <StyledTreeView.BranchText>{node.name}</StyledTreeView.BranchText>
+              <StyledTreeView.BranchIndicator>
+                <ChevronRight />
+              </StyledTreeView.BranchIndicator>
             </NextLink>
           </StyledTreeView.BranchControl>
           <StyledTreeView.BranchContent>
@@ -52,7 +55,6 @@ const TreeNode = (props: StyledTreeView.NodeProviderProps) => {
       ) : (
         <StyledTreeView.Item asChild>
           <NextLink href={`/${node.id}`}>
-            <StyledTreeView.ItemIndicator />
             <StyledTreeView.ItemText>{node.name}</StyledTreeView.ItemText>
           </NextLink>
         </StyledTreeView.Item>

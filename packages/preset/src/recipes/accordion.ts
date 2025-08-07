@@ -7,6 +7,8 @@ import { anatomy as accordionAnatomy } from "@zag-js/accordion";
 
 export default defineSlotRecipe({
   className: "accordion",
+  description:
+    "アコーディオンは、ユーザーがコンテンツのセクションを展開または折りたたむことができるユーザーインターフェースです。項目をコンパクトにリスト表示しつつページ遷移せず関連情報を表示したいという要求に対応します。※セクション内の任意の範囲で折りたたみ表示をする場合は「ディスクロージャー」コンポーネントを使用してください。",
   slots: accordionAnatomy.keys(),
   base: {
     root: {
@@ -99,21 +101,18 @@ export default defineSlotRecipe({
       color: "colorPalette.primary.100",
       /**
        * border border-current rounded-full
-          group-hover/summary:outline group-hover/summary:outline-2 group-hover/summary:outline-current
-          group-open/accordion:rotate-180
+       * group-hover/summary:outline group-hover/summary:outline-2
+       * group-hover/summary:outline-current
+       * group-open/accordion:rotate-180
        */
       borderWidth: "1px",
       borderColor: "currentcolor",
       rounded: "full",
       outlineStyle: "solid",
       outlineWidth: { base: "0px", _groupHover: "2px" },
-      transformOrigin: "center",
-      transitionDuration: "normal",
-      transitionProperty: "transform",
-      transitionTimingFunction: "default",
-      _open: {
-        transform: "rotate(-180deg)",
-      },
+      outlineColor: { base: "transparent", _groupHover: "currentcolor" },
+      transition: "transform",
+      transform: { base: "rotate(0deg)", _open: "rotate(-180deg)" },
     },
     itemContent: {
       /**

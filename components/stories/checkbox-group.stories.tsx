@@ -1,70 +1,29 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-// import{ type ChangeEvent, useEffect, useRef, useState } from "react";
+import { useState } from "react";
+import { useCheckboxGroup } from "@ark-ui/react/checkbox";
 import { css } from "styled-system/css";
 import * as Fieldset from "../src/fieldset";
 import { RequirementBadge } from "../src/form";
 import * as Checkbox from "../src/checkbox";
-import { useState } from "react";
+import { colorPalette } from "./utils/color-palette";
+import { invalid, disabled, ariaDisabled, readOnly } from "./utils/arg-types";
 
 const meta = {
   title: "Components/チェックボックス/グループ",
   tags: ["autodocs"],
   component: Checkbox.Group,
   argTypes: {
-    invalid: {
-      description: "エラー状態であるかどうかを指定します。",
-      control: { type: "boolean" },
-      table: {
-        defaultValue: { summary: "false" },
-        type: { summary: "boolean" },
-      },
-    },
-    disabled: {
-      description:
-        "無効化する必要がある場合は `disabled` 属性ではなく `aria-disabled` 属性を使用します。",
-      control: { type: "boolean" },
-      table: {
-        defaultValue: { summary: "false" },
-        type: { summary: "boolean" },
-      },
-    },
-    "aria-disabled": {
-      description:
-        "無効化する必要がある場合は `disabled` 属性ではなく `aria-disabled` 属性を使用します。",
-      control: { type: "boolean" },
-      table: {
-        defaultValue: { summary: "false" },
-        type: { summary: "boolean" },
-      },
-    },
-    colorPalette: {
-      options: [
-        "keyColor",
-        "blue",
-        "light-blue",
-        "cyan",
-        "green",
-        "lime",
-        "yellow",
-        "orange",
-        "red",
-        "magenta",
-        "purple",
-      ],
-      control: { type: "radio" },
-      table: {
-        defaultValue: { summary: "keyColor" },
-        type: {
-          summary:
-            "'keyColor' | 'blue' | 'light-blue' | 'cyan' | 'green' | 'lime' | 'yellow' | 'orange' | 'red' | 'magenta' | 'purple'",
-        },
-      },
-    },
+    invalid,
+    disabled,
+    "aria-disabled": ariaDisabled,
+    readOnly,
+    colorPalette,
   },
   args: {
     invalid: false,
     disabled: false,
     "aria-disabled": false,
+    readOnly: false,
     colorPalette: "keyColor",
   },
 } satisfies Meta<typeof Checkbox.Group>;
@@ -365,6 +324,32 @@ export const Indeterminate: Story = {
           <Fieldset.ErrorText>エラーテキスト</Fieldset.ErrorText>
         </Checkbox.Group>
       </Fieldset.Root>
+    );
+  },
+};
+
+export const WithProvider: Story = {
+  render: ({ ...args }) => {
+    const checkboxGroup = useCheckboxGroup({ ...args });
+    return (
+      <>
+        <p>Checked: {checkboxGroup.value.join(", ")}</p>
+        <Checkbox.GroupProvider value={checkboxGroup}>
+          {["選択肢1", "選択肢2", "選択肢3"].map((value) => (
+            <Checkbox.Root
+              colorPalette={args.colorPalette}
+              value={value}
+              key={value}
+            >
+              <Checkbox.Control>
+                <Checkbox.Indicator />
+              </Checkbox.Control>
+              <Checkbox.HiddenInput />
+              <Checkbox.Label>{value}</Checkbox.Label>
+            </Checkbox.Root>
+          ))}
+        </Checkbox.GroupProvider>
+      </>
     );
   },
 };

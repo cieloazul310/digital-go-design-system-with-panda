@@ -1,62 +1,62 @@
-import { ChevronDownIcon, X as XIcon } from "lucide-react";
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { fn } from "storybook/test";
 import { Portal, createListCollection } from "@ark-ui/react";
-import * as Select from "../src/select";
 import { select } from "styled-system/recipes";
+import * as Select from "../src/select";
+import * as Field from "../src/field";
+import {
+  disabled,
+  ariaDisabled,
+  invalid,
+  readOnly,
+  required,
+} from "./utils/arg-types";
 
 const meta = {
   title: "Components/セレクトボックス",
   tags: ["autodocs"],
+  component: Select.Root,
   argTypes: {
     size: {
       control: "inline-radio",
       options: select.variantMap.size,
     },
-    disabled: {
-      description:
-        "無効化する必要がある場合は `disabled` 属性ではなく `aria-disabled` 属性を使用します。",
-      control: { type: "boolean" },
-      table: {
-        defaultValue: { summary: "false" },
-        type: { summary: "boolean" },
-      },
-    },
-    invalid: { control: "boolean" },
-    readOnly: { control: "boolean" },
-    required: { control: "boolean" },
+    disabled,
+    "aria-disabled": ariaDisabled,
+    invalid,
+    readOnly,
+    required,
   },
   args: {
     size: "lg",
     disabled: false,
+    "aria-disabled": false,
     invalid: false,
     readOnly: false,
     required: false,
-    onChange: fn(),
+    onValueChange: fn(),
   },
 } satisfies Meta<typeof Select.Root>;
 
 export default meta;
 type Story = StoryObj;
 
+const collection = createListCollection({
+  items: ["React", "Solid", "Vue"],
+});
+
 export const Basic: Story = {
-  render: ({ ...props }) => {
-    const collection = createListCollection({
-      items: ["React", "Solid", "Vue"],
-    });
-    return (
-      <Select.Root collection={collection} {...props}>
+  args: {
+    collection,
+    children: (
+      <>
         <Select.Label>ラベル</Select.Label>
         <Select.Control>
           <Select.Trigger>
             <Select.ValueText placeholder="Select a Framework" />
-            <Select.Indicator>
-              <ChevronDownIcon />
-            </Select.Indicator>
+            <Select.Indicator />
           </Select.Trigger>
-          <Select.ClearTrigger>
-            <XIcon />
-          </Select.ClearTrigger>
+          <Select.ClearTrigger />
         </Select.Control>
         <Portal>
           <Select.Positioner>
@@ -73,42 +73,29 @@ export const Basic: Story = {
             </Select.Content>
           </Select.Positioner>
         </Portal>
-      </Select.Root>
-    );
+      </>
+    ),
   },
 };
 
-export const NativeSelect: Story = {
-  render: ({ ...props }) => {
-    const collection = createListCollection({
-      items: ["React", "Solid", "Vue"],
-    });
-    return (
-      <Select.Root collection={collection} {...props}>
-        <Select.Label>ラベル</Select.Label>
-        <Select.Control>
-          <Select.Trigger asChild>
-            <select>
-              <Select.ValueText placeholder="Select a Framework" asChild>
-                <option value="">Select a Framework</option>
-              </Select.ValueText>
-              {collection.items.map((item) => (
-                <Select.Item key={item} item={item} asChild>
-                  <option>
-                    <Select.ItemText>{item}</Select.ItemText>
-                  </option>
-                </Select.Item>
-              ))}
-            </select>
-          </Select.Trigger>
-          <Select.Indicator>
-            <ChevronDownIcon />
-          </Select.Indicator>
-          <Select.ClearTrigger>
-            <XIcon />
-          </Select.ClearTrigger>
-        </Select.Control>
-      </Select.Root>
-    );
+export const Native: Story = {
+  args: {
+    onChange: fn(),
   },
+  render: ({ ...args }) => (
+    <Field.Root {...args}>
+      <Field.Label>Native select</Field.Label>
+      <Field.SupportText>
+        ネイティブセレクトを使う場合は<code>{"<Field.Select>"}</code>
+        コンポーネントを使用してください。
+      </Field.SupportText>
+      <Field.Select asChild>
+        <select>
+          <option value="react">React</option>
+          <option value="solid">Solid</option>
+          <option value="vue">Vue</option>
+        </select>
+      </Field.Select>
+    </Field.Root>
+  ),
 };

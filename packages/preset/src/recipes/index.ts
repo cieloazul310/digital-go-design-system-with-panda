@@ -3,6 +3,7 @@ import breadcrumb from "./breadcrumb";
 import button from "./button";
 import card from "./card";
 import checkbox from "./checkbox";
+import chipLabel from "./chip-label";
 import disclosure from "./disclosure";
 import digitalGoDivider from "./divider";
 import drawer from "./drawer";
@@ -20,6 +21,7 @@ import menuItem from "./menu-item";
 import menuList from "./menu-list";
 import notificationBanner from "./notification-banner";
 import orderedList from "./ordered-list";
+import progress from "./progress";
 import radioGroup from "./radio-group";
 import requirementBadge from "./requirement-badge";
 import resourceList from "./resource-list";
@@ -38,6 +40,7 @@ const recipes = {
   button,
   card,
   checkbox,
+  chipLabel,
   drawer,
   disclosure,
   digitalGoDivider,
@@ -55,6 +58,7 @@ const recipes = {
   menuList,
   notificationBanner,
   orderedList,
+  progress,
   radioGroup,
   requirementBadge,
   resourceList,

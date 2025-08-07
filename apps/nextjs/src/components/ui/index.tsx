@@ -9,6 +9,7 @@ import * as Fieldset from "./fieldset";
 import * as Menu from "./menu";
 import * as MenuList from "./menu-list";
 import * as NotificationBanner from "./notification-banner";
+import * as Progress from "./progress";
 import * as Select from "./select";
 import * as RadioGroup from "./radio-group";
 import * as ResourceList from "./resource-list";
@@ -17,6 +18,7 @@ import * as Tabs from "./tabs";
 import * as TreeView from "./tree-view";
 
 export * from "./button";
+export * from "./chip-label";
 export * from "./divider";
 export * from "./form";
 export * from "./hamburger-menu-button";
@@ -26,7 +28,6 @@ export * from "./ordered-list";
 export * from "./textarea";
 export * from "./unordered-list";
 export * from "./utility-link";
-export * from "./utils/create-style-context";
 
 export {
   Accordion,
@@ -40,6 +41,7 @@ export {
   Menu,
   MenuList,
   NotificationBanner,
+  Progress,
   Select,
   RadioGroup,
   ResourceList,

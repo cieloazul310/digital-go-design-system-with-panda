@@ -1,9 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { createTreeCollection } from "@ark-ui/react/tree-view";
+import { createTreeCollection, type TreeNode } from "@ark-ui/react/tree-view";
+import { ChevronRight } from "lucide-react";
 import * as StyledTreeView from "../src/tree-view";
 import { forwardRef } from "react";
 
-const TreeView = forwardRef<HTMLDivElement, StyledTreeView.RootProps>(
+const TreeView = forwardRef<HTMLDivElement, StyledTreeView.RootProps<TreeNode>>(
   (props, ref) => {
     return (
       <StyledTreeView.Root ref={ref} {...props}>
@@ -33,7 +34,9 @@ const TreeNode = (props: StyledTreeView.NodeProviderProps) => {
         <StyledTreeView.Branch>
           <StyledTreeView.BranchControl>
             <StyledTreeView.BranchText>{node.name}</StyledTreeView.BranchText>
-            <StyledTreeView.BranchIndicator />
+            <StyledTreeView.BranchIndicator>
+              <ChevronRight />
+            </StyledTreeView.BranchIndicator>
           </StyledTreeView.BranchControl>
           <StyledTreeView.BranchContent>
             {/* @ts-expect-error any type node */}

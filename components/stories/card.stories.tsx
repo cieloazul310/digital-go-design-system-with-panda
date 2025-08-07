@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { css } from "styled-system/css";
 import { circle } from "styled-system/patterns";
+import { card } from "styled-system/recipes";
 import * as Card from "../src/card";
 import { Button } from "../src/button";
 import { Link } from "../src/link";
@@ -25,10 +26,10 @@ const meta = {
   component: Card.Root,
   argTypes: {
     orientation: {
-      options: ["vertical", "horizontal"],
+      options: card.variantMap.orientation,
       control: { type: "radio" },
       table: {
-        type: { summary: "'vertical' | 'horizontal'" },
+        type: { summary: `${card.variantMap.orientation.join(" | ")}` },
       },
     },
   },
@@ -736,7 +737,7 @@ export const VerticalLayoutWithFormControl: Story = {
                 className={css({
                   aspectRatio: 4 / 3,
                   bgGradient: "to-tr",
-                  gradientFrom: "pink.200",
+                  gradientFrom: "magenta.200",
                   gradientTo: "orange.300",
                 })}
               />

@@ -8,7 +8,8 @@ export default defineRecipe({
   className: "menu-item",
   base: {
     /**
-     * flex relative items-center bg-white hover:bg-solid-gray-50 text-nowrap
+     * flex relative items-center text-nowrap
+     * bg-white hover:bg-solid-gray-50 focus-visible:bg-yellow-300
      * text-oln-16N-100 text-solid-gray-800
      * ${isCurrent ? '!text-blue-1000 !bg-blue-100 font-bold' : ''}
      */
@@ -20,6 +21,8 @@ export default defineRecipe({
     bg: {
       base: "transparent",
       _hover: "solid-gray.50",
+      _focusVisible: "yellow.300",
+      _highlighted: "yellow.300",
       _selected: {
         base: "colorPalette.100",
         _hover: "colorPalette.100",
@@ -56,17 +59,27 @@ export default defineRecipe({
     columnGap: 2,
     /**
      * focus-visible:outline focus-visible:outline-4 focus-visible:outline-black
-     * focus-visible:-outline-offset-4 focus-visible:bg-yellow-300
+     * focus-visible:-outline-offset-4
      * focus-visible:ring-[calc(6/16*1rem)] focus-visible:ring-inset
      * focus-visible:ring-yellow-300
      */
     _focusVisible: {
-      // rounded: 4,
+      rounded: 4,
       outlineStyle: "solid",
       outlineWidth: "4px",
       outlineColor: "black",
       outlineOffset: "calc(2 / 16 * 1rem)",
       focusRing: "calc(6 / 16 * 1rem)",
+      zIndex: 1,
+    },
+    _highlighted: {
+      rounded: 4,
+      outlineStyle: "solid",
+      outlineWidth: "4px",
+      outlineColor: "black",
+      outlineOffset: "calc(2 / 16 * 1rem)",
+      focusRing: "calc(6 / 16 * 1rem)",
+      zIndex: 1,
     },
   },
   variants: {

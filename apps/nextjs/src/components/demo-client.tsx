@@ -6,7 +6,10 @@ export function DemoClient({ name }: { name: DemoVariantMap }) {
   const loader = demoMap[name];
 
   const Component = loader
-    ? dynamic(loader, { ssr: false })
+    ? dynamic(loader, {
+        ssr: false,
+        loading: () => <p>Loading...</p>,
+      })
     : () => <p>Component not found</p>;
 
   return <Component />;

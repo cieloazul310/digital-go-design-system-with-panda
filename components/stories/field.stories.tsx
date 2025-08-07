@@ -1,8 +1,17 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-// import type { KeyboardEvent } from "react";
+import { useState } from "react";
 import { fn } from "storybook/test";
-import * as Field from "../src/field";
+import { useField } from "@ark-ui/react/field";
 import { field } from "styled-system/recipes";
+import * as Field from "../src/field";
+import { Button } from "../src/button";
+import {
+  disabled,
+  ariaDisabled,
+  invalid,
+  readOnly,
+  required,
+} from "./utils/arg-types";
 
 const meta = {
   title: "Components/インプットテキスト",
@@ -10,21 +19,14 @@ const meta = {
   component: Field.Root,
   argTypes: {
     size: {
-      control: "inline-radio",
       options: field.variantMap.size,
+      control: "inline-radio",
     },
-    disabled: {
-      description:
-        "無効化する必要がある場合は `disabled` 属性ではなく `aria-disabled` 属性を使用します。",
-      control: { type: "boolean" },
-      table: {
-        defaultValue: { summary: "false" },
-        type: { summary: "boolean" },
-      },
-    },
-    invalid: { control: "boolean" },
-    readOnly: { control: "boolean" },
-    required: { control: "boolean" },
+    disabled,
+    "aria-disabled": ariaDisabled,
+    invalid,
+    readOnly,
+    required,
   },
   args: {
     size: "lg",
@@ -105,5 +107,28 @@ export const Select: Story = {
         <Field.ErrorText>※エラーテキストが入ります</Field.ErrorText>
       </>
     ),
+  },
+};
+
+export const WithProvider: Story = {
+  render: ({ ...args }) => {
+    const [invalid, setInvalid] = useState(false);
+    const field = useField({ ...args, invalid });
+
+    return (
+      <>
+        <Button onClick={() => setInvalid((prev) => !prev)} my={4}>
+          Toggle invalid
+        </Button>
+        <Field.RootProvider value={field}>
+          <Field.Label>
+            ラベル<Field.RequirementBadge>※必須</Field.RequirementBadge>
+          </Field.Label>
+          <Field.SupportText>サポートテキスト</Field.SupportText>
+          <Field.Input placeholder="Placeholder" />
+          <Field.ErrorText>※エラーテキストが入ります</Field.ErrorText>
+        </Field.RootProvider>
+      </>
+    );
   },
 };

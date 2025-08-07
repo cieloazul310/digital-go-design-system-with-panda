@@ -9,6 +9,8 @@ import { notificationBannerAnatomy } from "../anatomy";
 
 export default defineSlotRecipe({
   className: "notification-banner",
+  description:
+    "サイト/サービス全体に関わる、またはページや要素単位における重要度の高い情報を、ユーザーの操作に関わらず、サイト/サービス側からユーザーへ提示する場合に用いる通知バナーです。通知に対するユーザーアクションを要求することが可能です。メンテナンスを通知したい、ユーザーの対応が必要な情報を通知してアクションさせたい、といった要求に対応することができます。",
   slots: notificationBannerAnatomy.keys(),
   base: {
     root: {

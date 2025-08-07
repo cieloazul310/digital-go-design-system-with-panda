@@ -4,7 +4,7 @@ export default function App() {
   return (
     <Disclosure.Root>
       <Disclosure.Summary>
-        <Disclosure.Icon />
+        <Disclosure.Indicator />
         ディスクロージャータイトル
       </Disclosure.Summary>
       <Disclosure.Content textStyle="std-17N-170" my={4}>

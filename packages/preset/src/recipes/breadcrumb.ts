@@ -63,6 +63,9 @@ export default defineSlotRecipe({
        */
       mx: 2,
       display: "inline",
+      width: "12px",
+      height: "12px",
+      fill: "none",
     },
   },
 });

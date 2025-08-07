@@ -1,102 +1,94 @@
+/**
+ * reference:
+ * https://github.com/chakra-ui/chakra-ui/blob/main/packages/react/src/components/select/select.tsx
+ */
 "use client";
-import type { Assign } from "@ark-ui/react";
-import { Select } from "@ark-ui/react/select";
-import { type SelectVariantProps, select } from "styled-system/recipes";
-import type { ComponentProps, HTMLStyledProps } from "styled-system/types";
-import { createStyleContext } from "../utils/create-style-context";
+import type { JSX, RefAttributes } from "react";
+import { Select, type CollectionItem } from "@ark-ui/react/select";
+import { select, type SelectVariantProps } from "styled-system/recipes";
+import { createStyleContext } from "styled-system/jsx";
 
 const { withProvider, withContext } = createStyleContext(select);
 
-export type RootProviderProps = ComponentProps<typeof RootProvider>;
-export const RootProvider = withProvider<
-  HTMLDivElement,
-  Assign<
-    Assign<
-      HTMLStyledProps<"div">,
-      Select.RootProviderBaseProps<Select.CollectionItem>
-    >,
-    SelectVariantProps
+export type RootProviderProps<T extends CollectionItem> =
+  Select.RootProviderProps<T> & SelectVariantProps;
+export const RootProvider = withProvider(Select.RootProvider, "root") as {
+  <T extends CollectionItem>(props: RootProviderProps<T>): JSX.Element;
+};
+
+export type RootProps<T extends CollectionItem> = Select.RootProps<T> &
+  RefAttributes<HTMLDivElement> &
+  SelectVariantProps;
+export const Root = withProvider(Select.Root, "root") as {
+  <T extends CollectionItem>(props: RootProps<T>): JSX.Element;
+};
+
+const DefaultClearIcon = (
+  <svg
+    aria-hidden={true}
+    fill="none"
+    height="24"
+    viewBox="0 0 24 24"
+    width="24"
   >
->(Select.RootProvider, "root");
+    <g>
+      <path
+        d="m6.4 18.6-1-1 5.5-5.6-5.6-5.6 1.1-1 5.6 5.5 5.6-5.6 1 1.1L13 12l5.6 5.6-1 1L12 13l-5.6 5.6Z"
+        fill="currentColor"
+      />
+    </g>
+  </svg>
+);
 
-export type RootProps = ComponentProps<typeof Root>;
-export const Root = withProvider<
-  HTMLDivElement,
-  Assign<
-    Assign<HTMLStyledProps<"div">, Select.RootBaseProps<Select.CollectionItem>>,
-    SelectVariantProps
+export const ClearTrigger = withContext(Select.ClearTrigger, "clearTrigger", {
+  defaultProps: { children: DefaultClearIcon },
+});
+
+export const Content = withContext(Select.Content, "content");
+
+export const Control = withContext(Select.Control, "control");
+
+const DefaultIndicator = (
+  <svg
+    aria-hidden={true}
+    fill="none"
+    height="16"
+    viewBox="0 0 16 16"
+    width="16"
   >
->(Select.Root, "root");
+    <path
+      d="M13.3344 4.40002L8.00104 9.73336L2.66771 4.40002L1.73438 5.33336L8.00104 11.6L14.2677 5.33336L13.3344 4.40002Z"
+      fill="currentColor"
+    />
+  </svg>
+);
 
-export const ClearTrigger = withContext<
-  HTMLButtonElement,
-  Assign<HTMLStyledProps<"button">, Select.ClearTriggerBaseProps>
->(Select.ClearTrigger, "clearTrigger");
+export const Indicator = withContext(Select.Indicator, "indicator", {
+  defaultProps: { children: DefaultIndicator },
+});
 
-export const Content = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Select.ContentBaseProps>
->(Select.Content, "content");
+export const ItemGroupLabel = withContext(
+  Select.ItemGroupLabel,
+  "itemGroupLabel",
+);
 
-export const Control = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Select.ControlBaseProps>
->(Select.Control, "control");
+export const ItemGroup = withContext(Select.ItemGroup, "itemGroup");
 
-export const Indicator = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Select.IndicatorBaseProps>
->(Select.Indicator, "indicator");
+export const ItemIndicator = withContext(Select.ItemIndicator, "itemIndicator");
 
-export const ItemGroupLabel = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Select.ItemGroupLabelBaseProps>
->(Select.ItemGroupLabel, "itemGroupLabel");
+export const Item = withContext(Select.Item, "item");
 
-export const ItemGroup = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Select.ItemGroupBaseProps>
->(Select.ItemGroup, "itemGroup");
+export const ItemText = withContext(Select.ItemText, "itemText");
 
-export const ItemIndicator = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Select.ItemIndicatorBaseProps>
->(Select.ItemIndicator, "itemIndicator");
+export const Label = withContext(Select.Label, "label");
 
-export const Item = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Select.ItemBaseProps>
->(Select.Item, "item");
+export const List = withContext(Select.List, "list");
 
-export const ItemText = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"span">, Select.ItemTextBaseProps>
->(Select.ItemText, "itemText");
+export const Positioner = withContext(Select.Positioner, "positioner");
 
-export const Label = withContext<
-  HTMLLabelElement,
-  Assign<HTMLStyledProps<"label">, Select.LabelBaseProps>
->(Select.Label, "label");
+export const Trigger = withContext(Select.Trigger, "trigger");
 
-export const List = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Select.ListBaseProps>
->(Select.List, "list");
-
-export const Positioner = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Select.PositionerBaseProps>
->(Select.Positioner, "positioner");
-
-export const Trigger = withContext<
-  HTMLButtonElement,
-  Assign<HTMLStyledProps<"button">, Select.TriggerBaseProps>
->(Select.Trigger, "trigger");
-
-export const ValueText = withContext<
-  HTMLSpanElement,
-  Assign<HTMLStyledProps<"span">, Select.ValueTextBaseProps>
->(Select.ValueText, "valueText");
+export const ValueText = withContext(Select.ValueText, "valueText");
 
 export {
   SelectContext as Context,

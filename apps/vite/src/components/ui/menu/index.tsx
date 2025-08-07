@@ -1,105 +1,55 @@
 "use client";
-import type { Assign } from "@ark-ui/react";
 import { Menu } from "@ark-ui/react/menu";
-import { type MenuVariantProps, menu } from "styled-system/recipes";
-import type { ComponentProps, HTMLStyledProps } from "styled-system/types";
-import { createStyleContext } from "../utils/create-style-context";
+import { menu } from "styled-system/recipes";
+import { createStyleContext } from "styled-system/jsx";
+import type { ComponentProps } from "styled-system/types";
 
 const { withRootProvider, withContext } = createStyleContext(menu);
 
 export type RootProviderProps = ComponentProps<typeof RootProvider>;
-export const RootProvider = withRootProvider<
-  Assign<Menu.RootProviderProps, MenuVariantProps>
->(Menu.RootProvider);
+export const RootProvider = withRootProvider(Menu.RootProvider);
 
 export type RootProps = ComponentProps<typeof Root>;
-export const Root = withRootProvider<Assign<Menu.RootProps, MenuVariantProps>>(
-  Menu.Root,
+export const Root = withRootProvider(Menu.Root);
+
+export const Arrow = withContext(Menu.Arrow, "arrow");
+
+export const ArrowTip = withContext(Menu.ArrowTip, "arrowTip");
+
+export const CheckboxItem = withContext(Menu.CheckboxItem, "item");
+
+export const Content = withContext(Menu.Content, "content");
+
+export const ContextTrigger = withContext(
+  Menu.ContextTrigger,
+  "contextTrigger",
 );
 
-export const Arrow = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Menu.ArrowBaseProps>
->(Menu.Arrow, "arrow");
+export const Indicator = withContext(Menu.Indicator, "indicator");
 
-export const ArrowTip = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Menu.ArrowTipBaseProps>
->(Menu.ArrowTip, "arrowTip");
+export const ItemGroupLabel = withContext(
+  Menu.ItemGroupLabel,
+  "itemGroupLabel",
+);
 
-export const CheckboxItem = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Menu.CheckboxItemBaseProps>
->(Menu.CheckboxItem, "item");
+export const ItemGroup = withContext(Menu.ItemGroup, "itemGroup");
 
-export const Content = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Menu.ContentBaseProps>
->(Menu.Content, "content");
+export const ItemIndicator = withContext(Menu.ItemIndicator, "itemIndicator");
 
-export const ContextTrigger = withContext<
-  HTMLButtonElement,
-  Assign<HTMLStyledProps<"button">, Menu.ContextTriggerBaseProps>
->(Menu.ContextTrigger, "contextTrigger");
+export const Item = withContext(Menu.Item, "item");
 
-export const Indicator = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Menu.IndicatorBaseProps>
->(Menu.Indicator, "indicator");
+export const ItemText = withContext(Menu.ItemText, "itemText");
 
-export const ItemGroupLabel = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Menu.ItemGroupLabelBaseProps>
->(Menu.ItemGroupLabel, "itemGroupLabel");
+export const Positioner = withContext(Menu.Positioner, "positioner");
 
-export const ItemGroup = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Menu.ItemGroupBaseProps>
->(Menu.ItemGroup, "itemGroup");
+export const RadioItemGroup = withContext(Menu.RadioItemGroup, "itemGroup");
 
-export const ItemIndicator = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Menu.ItemIndicatorBaseProps>
->(Menu.ItemIndicator, "itemIndicator");
+export const RadioItem = withContext(Menu.RadioItem, "item");
 
-export const Item = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Menu.ItemBaseProps>
->(Menu.Item, "item");
+export const Separator = withContext(Menu.Separator, "separator");
 
-export const ItemText = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Menu.ItemTextBaseProps>
->(Menu.ItemText, "itemText");
+export const TriggerItem = withContext(Menu.TriggerItem, "triggerItem");
 
-export const Positioner = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Menu.PositionerBaseProps>
->(Menu.Positioner, "positioner");
-
-export const RadioItemGroup = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Menu.RadioItemGroupBaseProps>
->(Menu.RadioItemGroup, "itemGroup");
-
-export const RadioItem = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Menu.RadioItemBaseProps>
->(Menu.RadioItem, "item");
-
-export const Separator = withContext<
-  HTMLHRElement,
-  Assign<HTMLStyledProps<"hr">, Menu.SeparatorBaseProps>
->(Menu.Separator, "separator");
-
-export const TriggerItem = withContext<
-  HTMLDivElement,
-  Assign<HTMLStyledProps<"div">, Menu.TriggerItemBaseProps>
->(Menu.TriggerItem, "triggerItem");
-
-export const Trigger = withContext<
-  HTMLButtonElement,
-  Assign<HTMLStyledProps<"button">, Menu.TriggerBaseProps>
->(Menu.Trigger, "trigger");
+export const Trigger = withContext(Menu.Trigger, "trigger");
 
 export { MenuContext as Context } from "@ark-ui/react/menu";
