@@ -8,15 +8,21 @@ export default defineRecipe({
   className: "hamburger-menu-button",
   base: {
     /**
-     * flex w-fit items-center text-oln-16N-100 rounded-4 touch-manipulation
+     * flex w-fit items-center text-oln-16N-100 rounded-6 touch-manipulation
      */
     display: "flex",
     width: "fit-content",
     alignItems: "center",
     textStyle: "oln-16N-100",
-    rounded: 4,
+    rounded: 6,
+    /**
+     * gap-x-1 px-3 pb-1.5 pt-1
+     */
+    px: 3,
+    pb: 1.5,
+    pt: 1,
     touchAction: "manipulation",
-    gap: 1.5,
+    columnGap: 1.5,
     /**
      * hover:bg-solid-gray-50 hover:underline hover:underline-offset-[calc(3/16*1rem)]
      */

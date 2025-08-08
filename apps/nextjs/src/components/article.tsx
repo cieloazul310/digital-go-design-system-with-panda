@@ -71,6 +71,7 @@ export const Pre = (
       rounded={8}
       overflowX="auto"
       p={8}
+      my={8}
       {...props}
     />
   );

@@ -24,8 +24,15 @@ export const demoMap = {
   disclosure: () => import("@/demo/disclosure"),
   "disclosure-as-details": () => import("@/demo/disclosure-as-details"),
 
+  // divider
+  divider: () => import("@/demo/divider"),
+
   // drawer
   drawer: () => import("@/demo/drawer"),
+
+  "hamburger-menu-button": () => import("@/demo/hamburger-menu-button"),
+  "hamburger-menu-button-mobile": () =>
+    import("@/demo/hamburger-menu-button-mobile"),
 
   // resource-list
   "resource-list": () => import("@/demo/resource-list"),

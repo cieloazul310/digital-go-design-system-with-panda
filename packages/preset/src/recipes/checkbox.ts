@@ -8,11 +8,8 @@ export default defineSlotRecipe({
   slots: checkboxAnatomy.extendWith("group").keys(),
   base: {
     root: {
-      /**
-       * flex w-fit items-start py-2
-       */
       display: "flex",
-      alignItems: "flex-start",
+      alignItems: "center",
       width: "fit-content",
       py: 2,
       colorPalette: "keyColor",
@@ -22,20 +19,40 @@ export default defineSlotRecipe({
        * flex items-center justify-center shrink-0 rounded-[calc(1/8*100%)]
        * has-[input:hover:not(:focus):not([aria-disabled="true"])]:bg-solid-gray-420
        */
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
       flexShrink: 0,
-      rounded: "calc(1 / 4 * 100%)",
-      outlineStyle: "solid",
-      outlineWidth: "2px",
-      outlineColor: {
+      rounded: "calc(2 / 18 * 100%)",
+      borderWidth: "2px",
+      borderColor: {
         base: "solid-gray.420",
+        _checked: "colorPalette.primary",
         _invalid: { base: "error.1", _disabled: "solid-gray.420" },
         _groupHover: { base: "black", _disabled: "solid-gray.420" },
       },
       _disabled: {
         bg: "solid-gray.50",
+      },
+      _groupHover: {
+        outlineStyle: { base: "solid", _disabled: "hidden" },
+        outlineColor: "solid-gray.420",
+        _focus: {
+          outlineStyle: "solid",
+          outlineWidth: "4px",
+          outlineColor: "black",
+          outlineOffset: "calc(2 / 16 * 1rem)",
+          focusRing: "calc(2 / 16 * 1rem)",
+        },
+      },
+      /**
+       * focus:outline focus:outline-4 focus:outline-black
+       * focus:outline-offset-[calc(2/16*1rem)]
+       * focus:ring-[calc(2/16*1rem)] focus:ring-yellow-300
+       */
+      _focus: {
+        outlineStyle: "solid",
+        outlineWidth: "4px",
+        outlineColor: "black",
+        outlineOffset: "calc(2 / 16 * 1rem)",
+        focusRing: "calc(2 / 16 * 1rem)",
       },
     },
     indicator: {
@@ -43,53 +60,9 @@ export default defineSlotRecipe({
        * appearance-none size-3/4 rounded-[calc(2/18*100%)]
        */
       appearance: "none",
-      width: "3/4",
-      height: "3/4",
-      rounded: "calc(2 / 18 * 100%)",
+      width: "full",
+      height: "full",
       zIndex: 1,
-      borderColor: {
-        /**
-         * border-solid-gray-600 hover:border-black
-         * forced-colors:!border-[ButtonText]
-         */
-        base: "solid-gray.600",
-        _hover: "black",
-        _highContrast: "ButtonText",
-        _checked: {
-          /**
-           * checked:border-blue-900 checked:hover:border-blue-1100
-           * forced-colors:checked:!border-[Highlight]
-           */
-          base: "colorPalette.primary",
-          _hover: "colorPalette.primary.200",
-          _highContrast: "Highlight",
-        },
-        _indeterminate: {
-          /**
-           * indeterminate:border-blue-900 indeterminate:hover:border-blue-1100
-           * forced-colors:indeterminate:!border-[Highlight]
-           */
-          base: "colorPalette.primary",
-          _hover: "colorPalette.primary.200",
-          _highContrast: "Highlight",
-        },
-        _invalid: {
-          /**
-           * data-[error]:border-error-1 data-[error]:hover:border-red-1000
-           */
-          base: "error.1",
-          _disabled: "solid-gray.300",
-          _hover: { base: "red.1000", _disabled: "solid-gray.300" },
-        },
-        _disabled: {
-          /**
-           * aria-disabled:!border-solid-gray-300
-           * forced-colors:aria-disabled:!border-[GrayText]
-           */
-          base: "solid-gray.300",
-          _highContrast: "GrayText",
-        },
-      },
       bg: {
         /**
          * bg-white
@@ -181,26 +154,8 @@ export default defineSlotRecipe({
           clipPath: "path('M3.25,7.75H10.75V6.25H3.25V7.75Z')",
         },
       },
-      /**
-       * focus:outline focus:outline-4 focus:outline-black
-       * focus:outline-offset-[calc(2/16*1rem)]
-       * focus:ring-[calc(2/16*1rem)] focus:ring-yellow-300
-       */
-      _focus: {
-        outlineStyle: "solid",
-        outlineWidth: "4px",
-        outlineColor: "black",
-        outlineOffset: "calc(2 / 16 * 1rem)",
-        focusRing: "calc(2 / 16 * 1rem)",
-      },
     },
     label: {
-      /**
-       * text-solid-gray-800
-       * data-[size=sm]:pt-px data-[size=sm]:text-dns-16N-130
-       * data-[size=md]:pt-1 data-[size=md]:text-dns-16N-130
-       * data-[size=lg]:pt-2.5 data-[size=lg]:text-dns-17N-130
-       */
       color: "solid-gray.800",
     },
   },
@@ -208,118 +163,60 @@ export default defineSlotRecipe({
     size: {
       sm: {
         root: {
-          /**
-           * data-[size=sm]:gap-1
-           */
-          gap: 1,
+          gap: 1.5,
         },
         control: {
-          /**
-           * data-[size=sm]:size-6
-           */
-          width: 6,
-          height: 6,
-          outlineOffset: "-4px",
-          boxShadow: {
-            _groupHover: {
-              base: "inset 0 0 0 2px {colors.solid-gray.420}",
-              _disabled: "none",
-            },
+          width: "calc({spacing.9} / 2)",
+          height: "calc({spacing.9} / 2)",
+          _groupHover: {
+            outlineWidth: "2px",
+            _focus: { outlineWidth: "4px" },
           },
         },
-        indicator: {
-          /**
-           * data-[size=sm]:border-[calc(2/16*1rem)]
-           */
-          borderWidth: "calc(2 / 16 * 1rem)",
-        },
         label: {
-          /**
-           * data-[size=sm]:pt-px data-[size=sm]:text-dns-16N-130
-           */
-          pt: "1px",
           textStyle: "dns-16N-130",
         },
       },
       md: {
         root: {
-          /**
-           * data-[size=md]:gap-2
-           */
-          gap: 2,
+          gap: 2.5,
         },
         control: {
-          /**
-           * data-[size=md]:size-8
-           */
-          width: 8,
-          height: 8,
-          outlineOffset: "-5px",
-          boxShadow: {
-            _groupHover: {
-              base: "inset 0 0 0 4px {colors.solid-gray.420}",
-              _disabled: "none",
-            },
+          width: 6,
+          height: 6,
+          _groupHover: {
+            outlineWidth: "4px",
           },
         },
         indicator: {
-          /**
-           * data-[size=md]:border-[calc(2/16*1rem)]
-           * data-[size=md]:before:origin-top-left
-           * data-[size=md]:before:scale-[calc(20/14)]
-           */
-          borderWidth: "calc(2 / 16 * 1rem)",
           _before: {
             transformOrigin: "top left",
             scale: "calc(20 / 14)",
           },
         },
         label: {
-          /**
-           * data-[size=md]:pt-1 data-[size=md]:text-dns-16N-130
-           */
-          pt: 1,
           textStyle: "dns-16N-130",
         },
       },
       lg: {
         root: {
-          /**
-           * data-[size=lg]:gap-2
-           */
-          gap: 2,
+          gap: 2.5,
         },
         control: {
-          /**
-           * data-[size=lg]:size-11
-           */
-          width: 11,
-          height: 11,
-          outlineOffset: "-7px",
-          boxShadow: {
-            _groupHover: {
-              base: "inset 0 0 0 6px {colors.solid-gray.420}",
-              _disabled: "none",
-            },
+          width: 8,
+          height: 8,
+          _groupHover: {
+            outlineWidth: "6px",
+            _focus: { outlineWidth: "4px" },
           },
         },
         indicator: {
-          /**
-           * data-[size=lg]:border-[calc(3/16*1rem)]
-           * data-[size=lg]:before:origin-top-left
-           * data-[size=lg]:before:scale-[calc(27/14)]
-           */
-          borderWidth: "calc(3 / 16 * 1rem)",
           _before: {
             transformOrigin: "top left",
             scale: "calc(27 / 14)",
           },
         },
         label: {
-          /**
-           * data-[size=lg]:pt-2.5 data-[size=lg]:text-dns-17N-130
-           */
-          pt: 2.5,
           textStyle: "dns-17N-130",
         },
       },

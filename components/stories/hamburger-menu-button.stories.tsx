@@ -37,7 +37,6 @@ export const DesktopAndMobileCommon: Story = {
         })}
       >
         <HamburgerMenuButton
-          className={css({ p: 0.5 })}
           aria-controls={`${sampleId}-menu`}
           aria-expanded={isMenuOpen}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -155,6 +154,7 @@ export const MobileOnly: Story = {
           >
             <HamburgerMenuButton
               className={css({
+                p: 1,
                 /**
                  * hover:outline hover:outline-black
                  */
@@ -197,6 +197,7 @@ export const MobileOnly: Story = {
           <div className="relative">
             <HamburgerMenuButton
               className={css({
+                p: 1,
                 /**
                  * hover:outline hover:outline-black
                  */

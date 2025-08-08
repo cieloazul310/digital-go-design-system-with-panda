@@ -24,6 +24,7 @@ export default defineSlotRecipe({
       bg: "colorPalette.500",
       rounded: "full",
       overflow: "hidden",
+      position: "relative",
     },
     range: {
       bg: "colorPalette.1200",
@@ -55,7 +56,7 @@ export default defineSlotRecipe({
     circleRange: {
       stroke: "colorPalette.1200",
       strokeLinecap: "round",
-      transitionProperty: "stroke-dasharray, stroke",
+      transitionProperty: "stroke-dashoffset, stroke-dasharray",
       transitionDuration: "0.6s",
       _indeterminate: {
         animation: "circular-progress 1.5s linear infinite",

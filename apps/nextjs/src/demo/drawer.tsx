@@ -1,11 +1,18 @@
-import { Button } from "@/components/ui/button";
 import * as Drawer from "@/components/ui/drawer";
+import {
+  HamburgerMenuButton,
+  HamburgerIcon,
+  CloseIcon,
+} from "@/components/ui/hamburger-menu-button";
 
 export default function App() {
   return (
     <Drawer.Root placement="right">
       <Drawer.Trigger asChild>
-        <Button>開く</Button>
+        <HamburgerMenuButton>
+          <HamburgerIcon />
+          メニュー
+        </HamburgerMenuButton>
       </Drawer.Trigger>
       <Drawer.Backdrop />
       <Drawer.Positioner>
@@ -13,7 +20,10 @@ export default function App() {
           <Drawer.Header>
             <Drawer.Title>ドロワー</Drawer.Title>
             <Drawer.CloseTrigger asChild position="absolute" top="3" right="4">
-              <Button variant="outline">閉じる</Button>
+              <HamburgerMenuButton>
+                <CloseIcon />
+                閉じる
+              </HamburgerMenuButton>
             </Drawer.CloseTrigger>
           </Drawer.Header>
           <Drawer.Body>
