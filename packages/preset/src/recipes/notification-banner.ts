@@ -1,6 +1,8 @@
 /**
  * source:
  * https://github.com/digital-go-jp/design-system-example-components/tree/main/src/components/NotificationBanner
+ * https://github.com/digital-go-jp/design-system-example-components-html/blob/main/src/components/notification-banner
+ *
  * inspired by Park UI
  * https://park-ui.com/react/docs/components/alert
  */
@@ -118,11 +120,26 @@ export default defineSlotRecipe({
       color: "solid-gray.800",
     },
     actions: {
-      mt: 4,
-      display: "flex",
-      flexDirection: { base: "column", md: "row" },
-      justifyContent: "end",
-      gap: { base: 2, md: 4 },
+      /**
+       * margin-bottom: calc(-8 / 16 * 1rem);
+       * display: grid;
+       * gap: calc(8 / 16 * 1rem);
+       * grid-column: 1 / 4;
+       * @media (min-width: 48rem) {
+       *  .dads-notification-banner__actions {
+       *    grid-auto-flow: column;
+       *    gap: calc(16 / 16 * 1rem);
+       *    grid-column: 2 / 4;
+       *    justify-content: end;
+       *  }
+       * }
+       */
+      mb: "calc(-8 / 16 * 1rem)",
+      display: "grid",
+      gap: { base: "calc(8 / 16 * 1rem)", md: "calc(16 / 16 * 1rem)" },
+      gridColumn: { base: "1 / 4", md: "2 / 4" },
+      gridAutoFlow: { md: "column" },
+      justifyContent: { md: "end" },
     },
   },
   variants: {

@@ -34,6 +34,14 @@ export const demoMap = {
   "hamburger-menu-button-mobile": () =>
     import("@/demo/hamburger-menu-button-mobile"),
 
+  "notification-banner": () => import("@/demo/notification-banner"),
+  "notification-banner-chip": () => import("@/demo/notification-banner-chip"),
+  "notification-banner-types": () => import("@/demo/notification-banner-types"),
+  "notification-banner-with-action": () =>
+    import("@/demo/notification-banner-with-action"),
+  "notification-banner-with-close-button": () =>
+    import("@/demo/notification-banner-with-close-button"),
+
   // resource-list
   "resource-list": () => import("@/demo/resource-list"),
   "resource-list-aslink": () => import("@/demo/resource-list-aslink"),
