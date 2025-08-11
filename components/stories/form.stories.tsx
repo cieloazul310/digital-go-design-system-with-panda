@@ -20,6 +20,21 @@ const meta = {
     "aria-disabled": ariaDisabled,
     readOnly,
     required,
+    type: {
+      options: [
+        "text",
+        "password",
+        "email",
+        "number",
+        "tel",
+        "url",
+        "search",
+        "date",
+        "datetime-local",
+        "time",
+      ],
+      control: { type: "select" },
+    },
   },
   args: {
     size: "lg",
@@ -27,6 +42,8 @@ const meta = {
     "aria-disabled": false,
     readOnly: false,
     required: false,
+    type: "text",
+    name: "input",
   },
 } satisfies Meta<typeof Input>;
 
@@ -36,5 +53,18 @@ type Story = StoryObj<typeof meta>;
 export const InputText: Story = {
   args: {
     size: "lg",
+  },
+};
+
+export const Password: Story = {
+  args: {
+    size: "md",
+    type: "password",
+  },
+};
+
+export const Hoge: Story = {
+  args: {
+    size: "md",
   },
 };

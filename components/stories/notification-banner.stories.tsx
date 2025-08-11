@@ -85,11 +85,11 @@ export const WithAction: Story = {
           <p>
             ダミーテキストは、デザインの作成時に使用される仮の文章です。ダミーテキストは、デザインの作成時に使用される仮の文章です。ダミーテキストは、デザインの作成時に使用される仮の文章です。
           </p>
-          <NotificationBanner.Actions>
-            <Button variant="outline">アクションボタン</Button>
-            <Button>アクションボタン</Button>
-          </NotificationBanner.Actions>
         </NotificationBanner.Body>
+        <NotificationBanner.Actions>
+          <Button variant="outline">アクションボタン</Button>
+          <Button>アクションボタン</Button>
+        </NotificationBanner.Actions>
       </>
     ),
   },

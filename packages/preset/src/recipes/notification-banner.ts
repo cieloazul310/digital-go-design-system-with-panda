@@ -1,10 +1,13 @@
 /**
  * source:
  * https://github.com/digital-go-jp/design-system-example-components/tree/main/src/components/NotificationBanner
+ * https://github.com/digital-go-jp/design-system-example-components-html/blob/main/src/components/notification-banner
+ *
  * inspired by Park UI
  * https://park-ui.com/react/docs/components/alert
  */
 import { defineSlotRecipe } from "@pandacss/dev";
+import hamburgerMenuButton from "./hamburger-menu-button";
 import { notificationBannerAnatomy } from "../anatomy";
 
 export default defineSlotRecipe({
@@ -88,48 +91,11 @@ export default defineSlotRecipe({
         clipPath:
           "path('m6.4 18.6-1-1 5.5-5.6-5.6-5.6 1.1-1 5.6 5.5 5.6-5.6 1 1.1L13 12l5.6 5.6-1 1L12 13l-5.6 5.6Z')",
       },
-      /**
-       * inline-flex items-center gap-1
-       * px-3 pb-1.5 pt-1 desktop:px-2 desktop:py-0.5
-       * -mt-2 -mr-3 desktop:mt-0 desktop:mr-0
-       */
+      ...hamburgerMenuButton.base,
       display: "inline-flex",
-      alignItems: "center",
-      gap: 0.5,
-      mt: { base: -2, md: 0 },
-      mr: { base: -3, md: 0 },
-      px: { base: 3, md: 2 },
-      pt: 1,
-      pb: 1.5,
-      py: { base: 0, md: 0.5 },
-      /**
-       * text-solid-gray-900
-       */
+      gap: 1,
+      mr: -3,
       color: "solid-gray.900",
-      /**
-       * hover:bg-solid-gray-50 hover:underline hover:underline-offset-[calc(3/16*1rem)]
-       */
-      _hover: {
-        bg: "solid-gray.50",
-        textDecoration: "underline",
-        textUnderlineOffset: "calc(3 / 16 * 1rem)",
-        cursor: "pointer",
-      },
-      rounded: 6,
-      textStyle: "oln-16N-100",
-      /**
-       * focus-visible:outline focus-visible:outline-4
-       * focus-visible:outline-black focus-visible:outline-offset-[calc(2/16*1rem)]
-       * focus-visible:ring-[calc(2/16*1rem)]
-       * focus-visible:ring-yellow-300 focus-visible:bg-yellow-300
-       */
-      _focusVisible: {
-        outlineStyle: "solid",
-        outlineWidth: "4px",
-        outlineColor: "black",
-        outlineOffset: "calc(2 / 16 * 1rem)",
-        focusRing: "calc(2 / 16 * 1rem)",
-      },
     },
     heading: {
       /**
@@ -154,11 +120,26 @@ export default defineSlotRecipe({
       color: "solid-gray.800",
     },
     actions: {
-      mt: 4,
-      display: "flex",
-      flexDirection: { base: "column", md: "row" },
-      justifyContent: "end",
-      gap: { base: 2, md: 4 },
+      /**
+       * margin-bottom: calc(-8 / 16 * 1rem);
+       * display: grid;
+       * gap: calc(8 / 16 * 1rem);
+       * grid-column: 1 / 4;
+       * @media (min-width: 48rem) {
+       *  .dads-notification-banner__actions {
+       *    grid-auto-flow: column;
+       *    gap: calc(16 / 16 * 1rem);
+       *    grid-column: 2 / 4;
+       *    justify-content: end;
+       *  }
+       * }
+       */
+      mb: "calc(-8 / 16 * 1rem)",
+      display: "grid",
+      gap: { base: "calc(8 / 16 * 1rem)", md: "calc(16 / 16 * 1rem)" },
+      gridColumn: { base: "1 / 4", md: "2 / 4" },
+      gridAutoFlow: { md: "column" },
+      justifyContent: { md: "end" },
     },
   },
   variants: {

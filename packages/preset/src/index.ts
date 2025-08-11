@@ -5,11 +5,13 @@ import {
   type Palette,
 } from "@cieloazul310/digital-go-pandacss-utils";
 import recipes from "./recipes";
+import { keyframes } from "./keyframes";
 
 const base = {
   name: "digital-go-pandacss-preset",
   presets: [presetBase],
   theme: {
+    keyframes,
     recipes,
   },
 } satisfies Preset;
