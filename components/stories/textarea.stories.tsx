@@ -2,10 +2,10 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { useState } from "react";
 import { css } from "styled-system/css";
 import { Container } from "styled-system/jsx";
-import * as Field from "../src/field";
-import * as Fieldset from "../src/fieldset";
+import { Field } from "../src/field";
+import { Fieldset } from "../src/fieldset";
 import { Textarea } from "../src/textarea";
-import * as RadioGroup from "../src/radio-group";
+import { RadioGroup } from "../src/radio-group";
 import { Button } from "../src/button";
 import { disabled, ariaDisabled, readOnly, required } from "./utils/arg-types";
 

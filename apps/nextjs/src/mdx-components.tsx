@@ -4,7 +4,7 @@ import { OrderedList } from "@/components/ui/ordered-list";
 import { UnorderedList } from "@/components/ui/unordered-list";
 import { List } from "@/components/ui/list";
 import { Divider } from "@/components/ui/divider";
-import * as Table from "@/components/ui/table";
+import { Table } from "@/components/ui/table";
 import {
   Paragraph,
   Heading2,

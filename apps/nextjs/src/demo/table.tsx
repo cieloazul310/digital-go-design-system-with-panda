@@ -1,5 +1,5 @@
 import { css } from "styled-system/css";
-import * as Table from "@/components/ui/table";
+import { Table } from "@/components/ui/table";
 
 export default function App() {
   return (

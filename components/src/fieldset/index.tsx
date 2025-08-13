@@ -1,21 +1,8 @@
-"use client";
-import { Fieldset } from "@ark-ui/react/fieldset";
-import { fieldset } from "styled-system/recipes";
-import { createStyleContext } from "styled-system/jsx";
-import type { ComponentProps } from "styled-system/types";
+export { useFieldset, useFieldsetContext } from "@ark-ui/react/fieldset";
 
-const { withRootProvider, withContext } = createStyleContext(fieldset);
+export type {
+  UseFieldsetProps,
+  UseFieldsetReturn,
+} from "@ark-ui/react/fieldset";
 
-export type RootProviderProps = ComponentProps<typeof RootProvider>;
-export const RootProvider = withRootProvider(Fieldset.RootProvider);
-
-export type RootProps = ComponentProps<typeof Root>;
-export const Root = withRootProvider(Fieldset.Root);
-
-export const ErrorText = withContext(Fieldset.ErrorText, "errorText");
-
-export const SupportText = withContext(Fieldset.HelperText, "supportText");
-
-export const Legend = withContext(Fieldset.Legend, "legend");
-
-export { FieldsetContext as Context } from "@ark-ui/react/fieldset";
+export * as Fieldset from "./snippet";

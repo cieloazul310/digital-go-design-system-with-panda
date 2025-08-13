@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { css } from "styled-system/css";
-import * as Card from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Link } from "@/components/link";
 
 const data = [

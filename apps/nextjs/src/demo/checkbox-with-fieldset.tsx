@@ -1,6 +1,6 @@
 import { css } from "styled-system/css";
-import * as Checkbox from "@/components/ui/checkbox";
-import * as Fieldset from "@/components/ui/fieldset";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Fieldset } from "@/components/ui/fieldset";
 
 export default function App() {
   return (

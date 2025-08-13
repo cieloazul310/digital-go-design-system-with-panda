@@ -1,5 +1,5 @@
 import { css } from "styled-system/css";
-import * as ResourceList from "@/components/ui/resource-list";
+import { ResourceList } from "@/components/ui/resource-list";
 import { Link } from "@/components/link";
 
 const data = [

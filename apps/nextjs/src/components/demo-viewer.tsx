@@ -1,7 +1,7 @@
 import { readFile } from "fs/promises";
 import { resolve } from "path";
 import { codeToHtml } from "shiki";
-import * as Tabs from "@/components/ui/tabs";
+import { Tabs } from "@/components/ui/tabs";
 import { css } from "styled-system/css";
 import { DemoClient } from "./demo-client";
 import type { DemoVariantMap } from "@/utils/demo-map";

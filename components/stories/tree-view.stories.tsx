@@ -1,8 +1,11 @@
-import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { createTreeCollection, type TreeNode } from "@ark-ui/react/tree-view";
-import { ChevronRight } from "lucide-react";
-import * as StyledTreeView from "../src/tree-view";
 import { forwardRef } from "react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { ChevronRight } from "lucide-react";
+import {
+  TreeView as StyledTreeView,
+  createTreeCollection,
+  type TreeNode,
+} from "../src/tree-view";
 
 const TreeView = forwardRef<HTMLDivElement, StyledTreeView.RootProps<TreeNode>>(
   (props, ref) => {

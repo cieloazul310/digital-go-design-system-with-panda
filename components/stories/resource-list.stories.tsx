@@ -3,10 +3,10 @@ import NextLink from "next/link";
 import { EllipsisVertical, CircleUser, Heart } from "lucide-react";
 import { css } from "styled-system/css";
 import { link, resourceList } from "styled-system/recipes";
-import * as ResourceList from "../src/resource-list";
+import { ResourceList } from "../src/resource-list";
 import { Link } from "../src/link";
-import * as RadioGroup from "../src/radio-group";
-import * as Checkbox from "../src/checkbox";
+import { RadioGroup } from "../src/radio-group";
+import { Checkbox } from "../src/checkbox";
 
 const meta = {
   title: "Components/リソースリスト",

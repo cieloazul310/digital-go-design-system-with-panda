@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { useState } from "react";
 import { css } from "styled-system/css";
 import { drawer } from "styled-system/recipes";
-import * as Drawer from "../src/drawer";
+import { Drawer } from "../src/drawer";
 import { Button } from "../src/button";
 import {
   HamburgerMenuButton,

@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { css } from "styled-system/css";
 import { radioGroup } from "styled-system/recipes";
-import * as RadioGroup from "../src/radio-group";
-import * as Fieldset from "../src/fieldset";
+import { RadioGroup } from "../src/radio-group";
+import { Fieldset } from "../src/fieldset";
 import { Legend } from "../src/form/legend";
 import { RequirementBadge } from "../src/form/requirement-badge";
 import { SupportText } from "../src/form/support-text";

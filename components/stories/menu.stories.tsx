@@ -2,7 +2,7 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { fn } from "storybook/test";
 import { Portal } from "@ark-ui/react/portal";
-import { Menu } from "../src";
+import { Menu } from "../src/menu";
 import { Button } from "../src/button";
 import { menu } from "styled-system/recipes";
 

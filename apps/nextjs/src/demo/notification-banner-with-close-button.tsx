@@ -1,5 +1,5 @@
 import { useState } from "react";
-import * as NotificationBanner from "@/components/ui/notification-banner";
+import { NotificationBanner } from "@/components/ui/notification-banner";
 import { Button } from "@/components/ui/button";
 
 export default function App() {

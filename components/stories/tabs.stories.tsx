@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import NextLink from "next/link";
-import * as Tabs from "../src/tabs";
+import { Tabs } from "../src/tabs";
 
 const meta = {
   title: "Components/タブ",

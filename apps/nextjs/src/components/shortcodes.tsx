@@ -5,7 +5,7 @@ import type {
   JsxHTMLProps,
   JsxStyleProps,
 } from "styled-system/types";
-import * as Disclosure from "@/components/ui/disclosure";
+import { Disclosure } from "@/components/ui/disclosure";
 
 export const LeadingText = (
   props: JsxHTMLProps<ComponentProps<"p">, JsxStyleProps>,

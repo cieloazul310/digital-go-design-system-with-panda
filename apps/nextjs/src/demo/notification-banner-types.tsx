@@ -1,5 +1,5 @@
 import { Flex } from "styled-system/jsx";
-import * as NotificationBanner from "@/components/ui/notification-banner";
+import { NotificationBanner } from "@/components/ui/notification-banner";
 
 export default function App() {
   return (

@@ -12,7 +12,7 @@ import { css } from "styled-system/css";
 import { chipLabel, link } from "styled-system/recipes";
 import { Flex, HStack, styled } from "styled-system/jsx";
 import { ChipLabel } from "../src/chip-label";
-import * as Table from "../src/table";
+import { Table } from "../src/table";
 import { colorPalette } from "./utils/color-palette";
 
 const meta = {
