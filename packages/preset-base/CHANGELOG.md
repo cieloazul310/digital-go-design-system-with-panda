@@ -1,5 +1,13 @@
 # @cieloazul310/digital-go-pandacss-plugin
 
+## 0.1.0-beta.7
+
+### Patch Changes
+
+- 65c9202: change component import resolution
+- Updated dependencies [65c9202]
+  - @cieloazul310/digital-go-pandacss-utils@0.1.0-beta.7
+
 ## 0.1.0-beta.6
 
 ### Patch Changes

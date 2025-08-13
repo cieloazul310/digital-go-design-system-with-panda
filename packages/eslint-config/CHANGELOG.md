@@ -1,5 +1,11 @@
 # @repo/eslint-config
 
+## 0.1.0-beta.2
+
+### Patch Changes
+
+- 65c9202: change component import resolution
+
 ## 0.1.0-beta.1
 
 ### Patch Changes
