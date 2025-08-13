@@ -3,10 +3,9 @@
  * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Disclosure/Disclosure.stories.tsx
  */
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { useCollapsible } from "@ark-ui/react/collapsible";
 import { css } from "styled-system/css";
 import { styled, Container } from "styled-system/jsx";
-import { Disclosure } from "../src/disclosure";
+import { Disclosure, useDisclosure } from "../src/disclosure";
 import { disabled } from "./utils/arg-types";
 
 const meta = {
@@ -107,7 +106,7 @@ export const LazyMountAndUnmountOnExit: Story = {
 
 export const WithProvider: Story = {
   render: ({ ...args }) => {
-    const disclosure = useCollapsible({ ...args });
+    const disclosure = useDisclosure({ ...args });
     return (
       <>
         <p className={paragraph}>{disclosure.visible ? "Visible" : "Hidden"}</p>
