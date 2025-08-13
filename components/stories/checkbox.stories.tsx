@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { useCheckbox } from "@ark-ui/react/checkbox";
 import { checkbox } from "styled-system/recipes";
-import * as Checkbox from "../src/checkbox";
-import * as Field from "../src/field";
+import { Checkbox } from "../src/checkbox";
+import { Field } from "../src/field";
 import { colorPalette } from "./utils/color-palette";
 import {
   invalid,

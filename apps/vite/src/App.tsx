@@ -3,13 +3,13 @@ import { css } from "styled-system/css";
 import { menuItem } from "styled-system/recipes";
 import { styled, Stack } from "styled-system/jsx";
 
-import * as Drawer from "@/components/ui/drawer";
+import { Drawer } from "@/components/ui/drawer";
 import {
   HamburgerMenuButton,
   HamburgerIcon,
   CloseIcon,
 } from "@/components/ui/hamburger-menu-button";
-import * as ResourceList from "@/components/ui/resource-list";
+import { ResourceList } from "@/components/ui/resource-list";
 import { Heading2, Paragraph } from "@/components/article";
 import { ExternalLink } from "@/components/external-link";
 

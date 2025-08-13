@@ -1,4 +1,4 @@
-import * as Accordion from "@/components/ui/accordion";
+import { Accordion } from "@/components/ui/accordion";
 
 export default function App() {
   return (

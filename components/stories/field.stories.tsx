@@ -3,7 +3,7 @@ import { useState } from "react";
 import { fn } from "storybook/test";
 import { useField } from "@ark-ui/react/field";
 import { field } from "styled-system/recipes";
-import * as Field from "../src/field";
+import { Field } from "../src/field";
 import { Button } from "../src/button";
 import {
   disabled,

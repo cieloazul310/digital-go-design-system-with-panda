@@ -6,8 +6,8 @@ import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { css } from "styled-system/css";
 import { styled } from "styled-system/jsx";
-import * as Table from "../src/table";
-import * as Checkbox from "../src/checkbox";
+import { Table } from "../src/table";
+import { Checkbox } from "../src/checkbox";
 import { colorPalette } from "./utils/color-palette";
 
 const meta = {

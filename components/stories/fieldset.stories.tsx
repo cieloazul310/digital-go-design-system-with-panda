@@ -2,10 +2,10 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { fn } from "storybook/test";
 import { css } from "styled-system/css";
 import { fieldset } from "styled-system/recipes";
-import * as Fieldset from "../src/fieldset";
-import * as Field from "../src/field";
-import * as Checkbox from "../src/checkbox";
-import * as RadioGroup from "../src/radio-group";
+import { Fieldset } from "../src/fieldset";
+import { Field } from "../src/field";
+import { Checkbox } from "../src/checkbox";
+import { RadioGroup } from "../src/radio-group";
 import { disabled, ariaDisabled, invalid } from "./utils/arg-types";
 
 const meta = {

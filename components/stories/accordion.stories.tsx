@@ -3,7 +3,7 @@ import { useAccordion } from "@ark-ui/react/accordion";
 import { ChevronDownIcon } from "lucide-react";
 import { css } from "styled-system/css";
 import { styled, Container } from "styled-system/jsx";
-import * as Accordion from "../src/accordion";
+import { Accordion } from "../src/accordion";
 import { Button } from "../src/button";
 import { colorPalette } from "./utils/color-palette";
 import { disabled } from "./utils/arg-types";

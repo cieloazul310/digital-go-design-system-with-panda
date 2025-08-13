@@ -1,5 +1,5 @@
 import { useId } from "react";
-import * as Breadcrumb from "@/components/ui/breadcrumb";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 
 export default function App() {
   const breadcrumbsId = useId();

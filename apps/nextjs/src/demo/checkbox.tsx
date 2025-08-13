@@ -1,4 +1,4 @@
-import * as Checkbox from "@/components/ui/checkbox";
+import { Checkbox } from "@/components/ui/checkbox";
 
 export default function App() {
   return (

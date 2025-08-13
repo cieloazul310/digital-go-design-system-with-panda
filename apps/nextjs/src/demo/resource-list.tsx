@@ -1,5 +1,5 @@
 import { CircleUser, EllipsisVertical } from "lucide-react";
-import * as ResourceList from "@/components/ui/resource-list";
+import { ResourceList } from "@/components/ui/resource-list";
 
 export default function App() {
   return (

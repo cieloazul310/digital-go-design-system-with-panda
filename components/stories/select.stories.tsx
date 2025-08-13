@@ -2,8 +2,8 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { fn } from "storybook/test";
 import { Portal, createListCollection } from "@ark-ui/react";
 import { select } from "styled-system/recipes";
-import * as Select from "../src/select";
-import * as Field from "../src/field";
+import { Select } from "../src/select";
+import { Field } from "../src/field";
 import {
   disabled,
   ariaDisabled,

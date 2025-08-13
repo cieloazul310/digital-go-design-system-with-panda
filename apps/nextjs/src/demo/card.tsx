@@ -1,5 +1,5 @@
 import Image from "next/image";
-import * as Card from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 export default function App() {

@@ -1,4 +1,4 @@
-import * as Drawer from "@/components/ui/drawer";
+import { Drawer } from "@/components/ui/drawer";
 import {
   HamburgerMenuButton,
   HamburgerIcon,

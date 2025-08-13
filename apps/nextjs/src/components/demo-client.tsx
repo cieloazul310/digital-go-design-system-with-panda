@@ -1,6 +1,6 @@
 "use client";
 import dynamic from "next/dynamic";
-import * as Progress from "@/components/ui/progress";
+import { Progress } from "@/components/ui/progress";
 import { demoMap, type DemoVariantMap } from "@/utils/demo-map";
 
 export function DemoClient({ name }: { name: DemoVariantMap }) {

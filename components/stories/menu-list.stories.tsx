@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { createListCollection } from "@ark-ui/react/listbox";
 import NextLink from "next/link";
 import { css } from "styled-system/css";
-import * as MenuList from "../src/menu-list";
+import { MenuList } from "../src/menu-list";
 
 const meta = {
   title: "Components/メニューリスト",

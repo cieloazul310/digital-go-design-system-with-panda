@@ -3,7 +3,7 @@ import NextLink from "next/link";
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Home as HomeIcon } from "lucide-react";
 import { css } from "styled-system/css";
-import * as Breadcrumb from "../src/breadcrumb";
+import { Breadcrumb } from "../src/breadcrumb";
 
 const meta = {
   title: "Components/パンくずリスト",

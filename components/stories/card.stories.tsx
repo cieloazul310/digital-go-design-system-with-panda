@@ -11,13 +11,13 @@ import {
 import { css } from "styled-system/css";
 import { circle } from "styled-system/patterns";
 import { card } from "styled-system/recipes";
-import * as Card from "../src/card";
+import { Card } from "../src/card";
 import { Button } from "../src/button";
 import { Link } from "../src/link";
 // import { Divider } from "../src/divider";
 import { UnorderedList } from "../src/unordered-list";
 import { List } from "../src/list";
-import * as Checkbox from "../src/checkbox";
+import { Checkbox } from "../src/checkbox";
 import { withSubPath } from "./utils/withSubPath";
 
 const meta = {

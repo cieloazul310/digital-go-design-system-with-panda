@@ -2,9 +2,9 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { useState } from "react";
 import { useCheckboxGroup } from "@ark-ui/react/checkbox";
 import { css } from "styled-system/css";
-import * as Fieldset from "../src/fieldset";
+import { Fieldset } from "../src/fieldset";
 import { RequirementBadge } from "../src/form";
-import * as Checkbox from "../src/checkbox";
+import { Checkbox } from "../src/checkbox";
 import { colorPalette } from "./utils/color-palette";
 import { invalid, disabled, ariaDisabled, readOnly } from "./utils/arg-types";
 

@@ -6,7 +6,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { useCollapsible } from "@ark-ui/react/collapsible";
 import { css } from "styled-system/css";
 import { styled, Container } from "styled-system/jsx";
-import * as Disclosure from "../src/disclosure";
+import { Disclosure } from "../src/disclosure";
 import { disabled } from "./utils/arg-types";
 
 const meta = {

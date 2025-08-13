@@ -1,4 +1,4 @@
-import * as Disclosure from "@/components/ui/disclosure";
+import { Disclosure } from "@/components/ui/disclosure";
 
 export default function App() {
   return (

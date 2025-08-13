@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { notificationBanner } from "styled-system/recipes";
-import * as NotificationBanner from "../src/notification-banner";
+import { NotificationBanner } from "../src/notification-banner";
 import { Button } from "../src/button";
 
 const meta = {

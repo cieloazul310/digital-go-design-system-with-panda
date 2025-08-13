@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { css } from "styled-system/css";
 import { progress } from "styled-system/recipes";
 import { Center } from "styled-system/jsx";
-import * as Progress from "../src/progress";
+import { Progress } from "../src/progress";
 import { colorPalette } from "./utils/color-palette";
 
 const meta = {

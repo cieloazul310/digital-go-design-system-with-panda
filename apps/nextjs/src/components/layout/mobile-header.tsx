@@ -1,6 +1,6 @@
 import NextLink from "next/link";
 import { css } from "styled-system/css";
-import * as Drawer from "@/components/ui/drawer";
+import { Drawer } from "@/components/ui/drawer";
 import {
   HamburgerMenuButton,
   HamburgerIcon,
