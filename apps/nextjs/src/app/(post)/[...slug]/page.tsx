@@ -7,6 +7,7 @@ import { css } from "styled-system/css";
 import { Stack } from "styled-system/jsx";
 import { useMDXComponents } from "@/mdx-components";
 import { BaseLayout } from "@/components/layout/base";
+import { LeadingText } from "@/components/shortcodes";
 import { Link } from "@/components/link";
 import { post } from "@/content";
 
@@ -37,7 +38,7 @@ async function Page({ params }: { params: Promise<{ slug: string[] }> }) {
   });
   if (!item) return null;
   const { content, frontmatter, context } = item;
-  const { title, ark, storybook, digitalgo } = frontmatter;
+  const { title, ark, storybook, digitalgo, description } = frontmatter;
   const { older, newer } = context;
 
   return (
@@ -60,6 +61,7 @@ async function Page({ params }: { params: Promise<{ slug: string[] }> }) {
           >
             {title}
           </h1>
+          {description && <LeadingText>{description}</LeadingText>}
           {(ark || storybook || digitalgo) && (
             <Stack
               gap={{ base: 2, sm: 4 }}

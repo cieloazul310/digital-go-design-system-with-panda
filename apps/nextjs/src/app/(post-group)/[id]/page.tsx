@@ -72,9 +72,7 @@ export default async function Page({
                   <ResourceList.Title asChild>
                     <Link href={href}>{frontmatter.title}</Link>
                   </ResourceList.Title>
-                  <p>
-                    コンポーネントは、ユーザーインタフェースを作成するためのデザイン構成要素です。
-                  </p>
+                  {frontmatter.description && <p>{frontmatter.description}</p>}
                 </ResourceList.Content>
               </ResourceList.Main>
             </ResourceList.Root>

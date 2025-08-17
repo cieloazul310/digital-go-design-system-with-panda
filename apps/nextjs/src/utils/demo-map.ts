@@ -20,6 +20,12 @@ export const demoMap = {
   "checkbox-indeterminate": () => import("@/demo/checkbox-indeterminate"),
   "checkbox-with-fieldset": () => import("@/demo/checkbox-with-fieldset"),
 
+  // chip-label
+  "chip-label": () => import("@/demo/chip-label"),
+
+  // emergency-banner
+  "emergency-banner": () => import("@/demo/emergency-banner"),
+
   // disclosure
   disclosure: () => import("@/demo/disclosure"),
   "disclosure-as-details": () => import("@/demo/disclosure-as-details"),
