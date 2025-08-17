@@ -6,6 +6,7 @@ export const post = defineMdx({
   contentPath: path.resolve(process.cwd(), "docs"),
   basePath: "/",
   schema: {
+    description: z.string().optional(),
     ark: z.url().optional(),
     storybook: z.url().optional(),
     digitalgo: z.url().optional(),

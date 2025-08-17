@@ -7,6 +7,7 @@ import chipLabel from "./chip-label";
 import disclosure from "./disclosure";
 import digitalGoDivider from "./divider";
 import drawer from "./drawer";
+import emergencyBanner from "./emergency-banner";
 import errorText from "./error-text";
 import field from "./field";
 import fieldset from "./fieldset";
@@ -44,6 +45,7 @@ const recipes = {
   drawer,
   disclosure,
   digitalGoDivider,
+  emergencyBanner,
   errorText,
   field,
   fieldset,

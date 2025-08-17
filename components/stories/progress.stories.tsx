@@ -9,6 +9,7 @@ import { colorPalette } from "./utils/color-palette";
 const meta = {
   title: "Components/プログレスインジケーター",
   component: Progress.Root,
+  tags: ["autodocs"],
   argTypes: {
     layout: {
       control: { type: "radio" },

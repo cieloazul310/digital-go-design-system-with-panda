@@ -21,6 +21,17 @@ export const cardAnatomy = createAnatomy("card").parts(
 );
 
 /**
+ * https://github.com/digital-go-jp/design-system-example-components/tree/main/src/components/EmergencyBanner/parts
+ */
+export const emergencyBannerAnatomy = createAnatomy("emergency-banner").parts(
+  "root",
+  "heading",
+  "body",
+  "action",
+  "button",
+);
+
+/**
  * https://github.com/chakra-ui/ark/blob/main/packages/react/src/components/field/field.anatomy.ts
  */
 export const fieldAnatomy = createAnatomy("field").parts(
