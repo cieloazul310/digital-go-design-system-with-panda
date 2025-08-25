@@ -1,6 +1,6 @@
 import type { StorybookConfig } from "@storybook/nextjs-vite";
-
 import { join, dirname } from "path";
+import yaml from "@modyfi/vite-plugin-yaml";
 
 /**
  * This function is used to resolve the absolute path of a package.
@@ -23,5 +23,9 @@ const config: StorybookConfig = {
     experimentalRSC: true,
   },
   staticDirs: ["../public"],
+  viteFinal: async (config) => {
+    config.plugins = [...(config.plugins ?? []), yaml()];
+    return config;
+  },
 };
 export default config;

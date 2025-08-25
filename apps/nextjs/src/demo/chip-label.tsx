@@ -4,13 +4,16 @@ import {
   TriangleAlert,
   InfoIcon,
 } from "lucide-react";
-import { VStack, HStack } from "styled-system/jsx";
+import { css } from "styled-system/css";
+import { Flex } from "styled-system/jsx";
 import { ChipLabel } from "@/components/ui";
 
 export default function App() {
   return (
-    <VStack gap={8}>
-      <HStack gap={4}>
+    <Flex direction="column" gap={8}>
+      <div
+        className={css({ display: "inline-flex", gap: 4, flexWrap: "wrap" })}
+      >
         <ChipLabel>
           <CheckCircle2Icon />
           デフォルト
@@ -31,8 +34,10 @@ export default function App() {
           <InfoIcon />
           情報
         </ChipLabel>
-      </HStack>
-      <HStack gap={4}>
+      </div>
+      <div
+        className={css({ display: "inline-flex", gap: 4, flexWrap: "wrap" })}
+      >
         <ChipLabel variant="outlined">
           <CheckCircle2Icon />
           デフォルト
@@ -53,8 +58,10 @@ export default function App() {
           <InfoIcon />
           情報
         </ChipLabel>
-      </HStack>
-      <HStack gap={4}>
+      </div>
+      <div
+        className={css({ display: "inline-flex", gap: 4, flexWrap: "wrap" })}
+      >
         <ChipLabel variant="ghost">
           <CheckCircle2Icon />
           デフォルト
@@ -75,8 +82,10 @@ export default function App() {
           <InfoIcon />
           情報
         </ChipLabel>
-      </HStack>
-      <HStack gap={4}>
+      </div>
+      <div
+        className={css({ display: "inline-flex", gap: 4, flexWrap: "wrap" })}
+      >
         <ChipLabel variant="solid-fill">
           <CheckCircle2Icon />
           デフォルト
@@ -97,7 +106,7 @@ export default function App() {
           <InfoIcon />
           情報
         </ChipLabel>
-      </HStack>
-    </VStack>
+      </div>
+    </Flex>
   );
 }

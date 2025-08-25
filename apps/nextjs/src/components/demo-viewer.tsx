@@ -27,7 +27,6 @@ export async function DemoViewer({ name }: { name: DemoVariantMap }) {
         borderWidth="1px"
         borderColor="solid-gray.420"
         roundedBottom={8}
-        shadow="inner"
       >
         <DemoClient name={name} />
       </Tabs.Content>
