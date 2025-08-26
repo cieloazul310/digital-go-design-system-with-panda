@@ -457,8 +457,9 @@ export const VerticalWithAvatar: Story = {
                   width: "full",
                   height: "full",
                   objectFit: "cover",
+                  bg: "red.500",
                 })}
-                src={withSubPath("/IMG_0839.png")}
+                src={withSubPath("/s_human05.png")}
                 alt="Kiyomizu"
                 width={64}
                 height={64}
@@ -490,7 +491,7 @@ export const VerticalWithAvatar: Story = {
         </Card.Main>
         <Card.Image px={{ base: 4, md: 6 }}>
           <Image
-            src={withSubPath("/IMG_0839.png")}
+            src={withSubPath("/m_11_warmgray.png")}
             alt="Kiyomizu"
             width={640}
             height={400}
@@ -562,7 +563,7 @@ export const VerticalLayoutThree: Story = {
         </Card.Main>
         <Card.Image>
           <Image
-            src={withSubPath("/IMG_0839.png")}
+            src={withSubPath("/l_01_rectangle_white.png")}
             alt="Kiyomizu"
             width={640}
             height={400}
@@ -703,8 +704,9 @@ export const VerticalLayoutWithAvatarAndButtons: Story = {
               width: "full",
               height: "full",
               objectFit: "cover",
+              bg: "light-blue.900",
             })}
-            src={withSubPath("/IMG_0839.png")}
+            src={withSubPath("/s_human10.png")}
             alt="Kiyomizu"
             width={96}
             height={96}

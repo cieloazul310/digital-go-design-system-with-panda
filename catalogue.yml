@@ -41,6 +41,13 @@ components:
     digitalgo: https://design.digital.go.jp/components/checkbox/
     ark: https://ark-ui.com/docs/components/checkbox
   
+  ChipTag:
+    id: chip-tag
+    name: チップタグ
+    className: chip-tag
+    description: アイテム化した任意の情報を、表示・削除しやすくするための要素です。属性やユーザー情報をアイテムにして並べたり削除したりするような場合に有効です。
+    digitalgo: https://design.digital.go.jp/components/chip-tag/
+
   ChipLabel:
     id: chip-label
     name: チップラベル
