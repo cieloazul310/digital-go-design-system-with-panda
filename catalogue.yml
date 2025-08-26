@@ -80,6 +80,7 @@ components:
     name: 緊急時バナー
     className: emergency-banner
     description: 緊急時バナーは、当該ウェブサイトで本来成すべきコミュニケーションを中断してでもファーストビューを占有して注意を促すためのコンポーネントです。
+    storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/docs/components-%E7%B7%8A%E6%80%A5%E6%99%82%E3%83%90%E3%83%8A%E3%83%BC--docs
     digitalgo: https://design.digital.go.jp/components/emergency-banner/
   
   Field:
