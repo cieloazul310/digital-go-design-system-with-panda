@@ -20,6 +20,13 @@ export const cardAnatomy = createAnatomy("card").parts(
   "title",
 );
 
+export const chipTagAnatomy = createAnatomy("chip-tag").parts(
+  "root",
+  "icon",
+  "label",
+  "removeButton",
+);
+
 /**
  * https://github.com/digital-go-jp/design-system-example-components/tree/main/src/components/EmergencyBanner/parts
  */
