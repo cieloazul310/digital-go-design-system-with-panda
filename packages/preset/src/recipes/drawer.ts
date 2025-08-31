@@ -1,6 +1,6 @@
 /**
  * source:
- * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Drawer/Drawer.stories.tsx
+ * https://github.com/digital-go-jp/design-system-example-components-react/blob/main/src/components/Drawer/Drawer.stories.tsx
  * https://github.com/cschroeter/park-ui/blob/main/packages/preset/src/theme/recipes/drawer.ts
  */
 import { anatomy as dialogAnatomy } from "@zag-js/dialog";

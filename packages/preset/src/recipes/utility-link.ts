@@ -1,5 +1,5 @@
 /**
- * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/UtilityLink/UtilityLink.tsx
+ * https://github.com/digital-go-jp/design-system-example-components-react/blob/main/src/components/UtilityLink/UtilityLink.tsx
  */
 import { defineRecipe } from "@pandacss/dev";
 

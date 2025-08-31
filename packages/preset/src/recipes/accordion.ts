@@ -1,6 +1,6 @@
 /**
  * source:
- * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Accordion/Accordion.tsx
+ * https://github.com/digital-go-jp/design-system-example-components-react/blob/main/src/components/Accordion/Accordion.tsx
  */
 import { defineSlotRecipe } from "@pandacss/dev";
 import { anatomy as accordionAnatomy } from "@zag-js/accordion";

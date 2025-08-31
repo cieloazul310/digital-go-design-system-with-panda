@@ -1,6 +1,6 @@
 /**
  * source:
- * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Disclosure/Disclosure.tsx
+ * https://github.com/digital-go-jp/design-system-example-components-react/blob/main/src/components/Disclosure/Disclosure.tsx
  */
 import { defineSlotRecipe } from "@pandacss/dev";
 import { anatomy as disclosureAnatomy } from "@zag-js/collapsible";

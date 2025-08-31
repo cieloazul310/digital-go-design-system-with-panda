@@ -1,6 +1,6 @@
 /**
  * source:
- * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/RequirementBadge/RequirementBadge.tsx
+ * https://github.com/digital-go-jp/design-system-example-components-react/blob/main/src/components/RequirementBadge/RequirementBadge.tsx
  */
 import { defineRecipe } from "@pandacss/dev";
 

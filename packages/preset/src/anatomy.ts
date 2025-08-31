@@ -28,7 +28,7 @@ export const chipTagAnatomy = createAnatomy("chip-tag").parts(
 );
 
 /**
- * https://github.com/digital-go-jp/design-system-example-components/tree/main/src/components/EmergencyBanner/parts
+ * https://github.com/digital-go-jp/design-system-example-components-react/tree/main/src/components/EmergencyBanner/parts
  */
 export const emergencyBannerAnatomy = createAnatomy("emergency-banner").parts(
   "root",

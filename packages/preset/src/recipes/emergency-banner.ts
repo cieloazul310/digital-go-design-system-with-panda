@@ -1,5 +1,5 @@
 /**
- * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/EmergencyBanner/EmergencyBanner.tsx
+ * https://github.com/digital-go-jp/design-system-example-components-react/blob/main/src/components/EmergencyBanner/EmergencyBanner.tsx
  * https://github.com/digital-go-jp/design-system-example-components-html/blob/main/src/components/emergency-banner/emergency-banner.css
  */
 import { defineSlotRecipe } from "@pandacss/dev";

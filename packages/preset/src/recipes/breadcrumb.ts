@@ -1,6 +1,6 @@
 /**
  * source:
- * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Breadcrumbs/Breadcrumbs.tsx
+ * https://github.com/digital-go-jp/design-system-example-components-react/blob/main/src/components/Breadcrumbs/Breadcrumbs.tsx
  */
 import { defineSlotRecipe } from "@pandacss/dev";
 import { breadcrumbAnatomy } from "../anatomy";

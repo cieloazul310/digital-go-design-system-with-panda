@@ -1,6 +1,6 @@
 /**
  * source:
- * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Table/Table.stories.tsx
+ * https://github.com/digital-go-jp/design-system-example-components-react/blob/main/src/components/Table/Table.stories.tsx
  */
 import { defineSlotRecipe } from "@pandacss/dev";
 import { tableAnatomy } from "../anatomy";

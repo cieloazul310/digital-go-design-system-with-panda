@@ -1,6 +1,6 @@
 /**
  * source:
- * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Radio/Radio.tsx
+ * https://github.com/digital-go-jp/design-system-example-components-react/blob/main/src/components/Radio/Radio.tsx
  */
 import { defineSlotRecipe } from "@pandacss/dev";
 import { anatomy as radioGroupAnatomy } from "@zag-js/radio-group";

@@ -1,6 +1,6 @@
 /**
  * source:
- * https://github.com/digital-go-jp/design-system-example-components/tree/main/src/components/NotificationBanner
+ * https://github.com/digital-go-jp/design-system-example-components-react/tree/main/src/components/NotificationBanner
  * https://github.com/digital-go-jp/design-system-example-components-html/blob/main/src/components/notification-banner
  *
  * inspired by Park UI

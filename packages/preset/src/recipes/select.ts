@@ -1,6 +1,6 @@
 /**
  * source:
- * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Select/Select.tsx
+ * https://github.com/digital-go-jp/design-system-example-components-react/blob/main/src/components/Select/Select.tsx
  */
 import { defineSlotRecipe } from "@pandacss/dev";
 import { anatomy as selectAnatomy } from "@zag-js/select";

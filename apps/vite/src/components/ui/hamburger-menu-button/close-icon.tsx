@@ -1,6 +1,6 @@
 /**
  * source:
- * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/HamburgerMenuButton/parts/CloseIcon.tsx
+ * https://github.com/digital-go-jp/design-system-example-components-react/blob/main/src/components/HamburgerMenuButton/parts/CloseIcon.tsx
  */
 import type { ComponentProps } from "react";
 

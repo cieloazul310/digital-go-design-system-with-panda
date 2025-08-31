@@ -78,7 +78,7 @@ export default function App() {
 ## 構成
 
 - `utils`: ユーティリティパッケージ
-- `preset-base`: Tailwindテーマプラグインを基に作成したPandaプリセット
+- `preset-base`: デジタル庁デザイントークンをPanda CSSに移植したPandaプラグイン
 - `preset`: コンポーネントのレシピを内包したPandaプリセット
 
 ## コンポーネント

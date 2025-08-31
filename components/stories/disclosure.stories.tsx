@@ -1,6 +1,6 @@
 /**
  * reference:
- * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Disclosure/Disclosure.stories.tsx
+ * https://github.com/digital-go-jp/design-system-example-components-react/blob/main/src/components/Disclosure/Disclosure.stories.tsx
  */
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { css } from "styled-system/css";

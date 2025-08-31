@@ -23,6 +23,9 @@ export const demoMap = {
   // chip-label
   "chip-label": () => import("@/demo/chip-label"),
 
+  // chip-tag
+  "chip-tag": () => import("@/demo/chip-tag"),
+
   // emergency-banner
   "emergency-banner": () => import("@/demo/emergency-banner"),
 
