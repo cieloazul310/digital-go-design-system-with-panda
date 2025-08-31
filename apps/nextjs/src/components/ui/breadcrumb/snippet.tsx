@@ -1,6 +1,6 @@
 /**
  * Icon
- * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Breadcrumbs/Breadcrumbs.tsx
+ * https://github.com/digital-go-jp/design-system-example-components-react/blob/main/src/components/Breadcrumbs/Breadcrumbs.tsx
  */
 "use client";
 import { ark } from "@ark-ui/react/factory";

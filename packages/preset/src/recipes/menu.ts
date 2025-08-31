@@ -1,7 +1,7 @@
 /**
  * source:
- * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/LanguageSelector/parts/Menu.tsx
- * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/LanguageSelector/parts/MenuItem.tsx
+ * https://github.com/digital-go-jp/design-system-example-components-react/blob/main/src/components/LanguageSelector/parts/Menu.tsx
+ * https://github.com/digital-go-jp/design-system-example-components-react/blob/main/src/components/LanguageSelector/parts/MenuItem.tsx
  */
 import { defineSlotRecipe, type SystemStyleObject } from "@pandacss/dev";
 import { anatomy as menuAnatomy } from "@zag-js/menu";

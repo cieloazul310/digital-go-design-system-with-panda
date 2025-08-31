@@ -1,12 +1,21 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { useState } from "react";
 import { Database, CircleUserIcon } from "lucide-react";
 import { css } from "styled-system/css";
 import { ChipTag } from "../src/chip-tag";
+import { Divider } from "../src";
+import { colorPalette } from "./utils/color-palette";
 
 const meta = {
   title: "Components/チップタグ",
   tags: ["autodocs"],
   component: ChipTag.Root,
+  argTypes: {
+    colorPalette,
+  },
+  args: {
+    colorPalette: "keyColor",
+  },
 } satisfies Meta<typeof ChipTag.Root>;
 
 export default meta;
@@ -80,4 +89,71 @@ export const WithLargeIcon: Story = {
       </ChipTag.Root>
     </div>
   ),
+};
+
+export const WithAction: Story = {
+  render: ({ ...args }) => {
+    const items = [
+      "現行法令",
+      "法令",
+      "勅令",
+      "関連度順",
+      "長いラベル長いラベル長いラベル長いラベル",
+      "10件",
+      "長いラベル",
+    ];
+    const [selected, setSelected] = useState<string[]>([]);
+    const onItemClick = (item: string) => () => {
+      setSelected([...selected, item]);
+    };
+    const onSelectedItemClick = (item: string) => () => {
+      setSelected(selected.filter((val) => val !== item));
+    };
+
+    return (
+      <div className={css({ display: "flex", flexDirection: "column" })}>
+        <div
+          className={css({
+            display: "inline-flex",
+            gap: 2,
+            flexWrap: "wrap",
+            py: 2,
+          })}
+        >
+          {items
+            .filter((val) => !selected.includes(val))
+            .map((val) => (
+              <ChipTag.Root
+                key={val}
+                {...args}
+                colorPalette="solid-gray"
+                onClick={onItemClick(val)}
+              >
+                <ChipTag.Label>{val}</ChipTag.Label>
+              </ChipTag.Root>
+            ))}
+        </div>
+        <Divider />
+        <div
+          className={css({
+            display: "inline-flex",
+            gap: 2,
+            flexWrap: "wrap",
+            py: 2,
+          })}
+        >
+          {selected.map((val) => (
+            <ChipTag.Root
+              key={val}
+              {...args}
+              onClick={onSelectedItemClick(val)}
+            >
+              <ChipTag.Label>{val}</ChipTag.Label>
+              <ChipTag.RemoveButton />
+            </ChipTag.Root>
+          ))}
+        </div>
+      </div>
+    );
+  },
 };

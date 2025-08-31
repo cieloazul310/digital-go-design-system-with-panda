@@ -1,5 +1,5 @@
 /**
- * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Button/Button.stories.tsx
+ * https://github.com/digital-go-jp/design-system-example-components-react/blob/main/src/components/Button/Button.stories.tsx
  */
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { fn } from "storybook/test";

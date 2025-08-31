@@ -1,6 +1,6 @@
 /**
  * source:
- * https://github.com/digital-go-jp/design-system-example-components/blob/main/src/components/Ol/Ol.tsx
+ * https://github.com/digital-go-jp/design-system-example-components-react/blob/main/src/components/Ol/Ol.tsx
  */
 import { defineRecipe } from "@pandacss/dev";
 
