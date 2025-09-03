@@ -18,3 +18,7 @@ export const Label = withContext(ark.span, "label");
 export const RemoveButton = withContext(ark.span, "removeButton", {
   defaultProps: { "aria-label": "取り除く" },
 });
+
+export const AddButton = withContext(ark.span, "addButton", {
+  defaultProps: { "aria-label": "追加する" },
+});

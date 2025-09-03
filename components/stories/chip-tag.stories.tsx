@@ -130,6 +130,7 @@ export const WithAction: Story = {
                 onClick={onItemClick(val)}
               >
                 <ChipTag.Label>{val}</ChipTag.Label>
+                <ChipTag.AddButton />
               </ChipTag.Root>
             ))}
         </div>
