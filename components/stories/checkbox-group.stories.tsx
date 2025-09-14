@@ -108,70 +108,70 @@ export const Inline: Story = {
 
 export const Errored: Story = {
   render: ({ ...args }) => (
-    <Fieldset.Root
-      className={css({ display: "flex", flexDirection: "column", gap: 16 })}
-      invalid={args.invalid}
-      disabled={args.disabled}
-    >
-      <Checkbox.Group {...args} defaultValue={["選択肢2"]}>
-        <Fieldset.Legend>
-          ラベル<RequirementBadge>※必須</RequirementBadge>
-        </Fieldset.Legend>
-        <Fieldset.SupportText id="stacked-support-text">
-          サポートテキスト
-        </Fieldset.SupportText>
-        <div
-          className={css({
-            mt: 2,
-            display: "flex",
-            flexDirection: "column",
-            gap: 2,
-          })}
-        >
-          {["選択肢1", "選択肢2", "選択肢3"].map((value) => (
-            <Checkbox.Root
-              colorPalette={args.colorPalette}
-              key={value}
-              value={value}
-            >
-              <Checkbox.Control>
-                <Checkbox.Indicator />
-              </Checkbox.Control>
-              <Checkbox.HiddenInput />
-              <Checkbox.Label>{value}</Checkbox.Label>
-            </Checkbox.Root>
-          ))}
-        </div>
-        <Fieldset.ErrorText>＊エラーテキストが入ります</Fieldset.ErrorText>
-      </Checkbox.Group>
-      <Checkbox.Group {...args} defaultValue={["選択肢2"]}>
-        <Fieldset.Legend>
-          ラベル<RequirementBadge>※必須</RequirementBadge>
-        </Fieldset.Legend>
-        <Fieldset.SupportText id="stacked-support-text">
-          サポートテキスト
-        </Fieldset.SupportText>
-        <div
-          className={css({
-            mt: 2,
-            display: "flex",
-            flexWrap: "wrap",
-            columnGap: 4,
-          })}
-        >
-          {["選択肢1", "選択肢2", "選択肢3"].map((value) => (
-            <Checkbox.Root key={value} value={value}>
-              <Checkbox.Control>
-                <Checkbox.Indicator />
-              </Checkbox.Control>
-              <Checkbox.HiddenInput />
-              <Checkbox.Label>{value}</Checkbox.Label>
-            </Checkbox.Root>
-          ))}
-        </div>
-        <Fieldset.ErrorText>＊エラーテキストが入ります</Fieldset.ErrorText>
-      </Checkbox.Group>
-    </Fieldset.Root>
+    <div className={css({ display: "flex", flexDirection: "column", gap: 16 })}>
+      <Fieldset.Root invalid={args.invalid} disabled={args.disabled}>
+        <Checkbox.Group {...args} defaultValue={["選択肢2"]}>
+          <Fieldset.Legend>
+            ラベル<RequirementBadge>※必須</RequirementBadge>
+          </Fieldset.Legend>
+          <Fieldset.SupportText id="stacked-support-text">
+            サポートテキスト
+          </Fieldset.SupportText>
+          <div
+            className={css({
+              mt: 2,
+              display: "flex",
+              flexDirection: "column",
+              gap: 2,
+            })}
+          >
+            {["選択肢1", "選択肢2", "選択肢3"].map((value) => (
+              <Checkbox.Root
+                colorPalette={args.colorPalette}
+                key={value}
+                value={value}
+              >
+                <Checkbox.Control>
+                  <Checkbox.Indicator />
+                </Checkbox.Control>
+                <Checkbox.HiddenInput />
+                <Checkbox.Label>{value}</Checkbox.Label>
+              </Checkbox.Root>
+            ))}
+          </div>
+          <Fieldset.ErrorText>＊エラーテキストが入ります</Fieldset.ErrorText>
+        </Checkbox.Group>
+      </Fieldset.Root>
+      <Fieldset.Root invalid={args.invalid} disabled={args.disabled}>
+        <Checkbox.Group {...args} defaultValue={["選択肢2"]}>
+          <Fieldset.Legend>
+            ラベル<RequirementBadge>※必須</RequirementBadge>
+          </Fieldset.Legend>
+          <Fieldset.SupportText id="stacked-support-text">
+            サポートテキスト
+          </Fieldset.SupportText>
+          <div
+            className={css({
+              mt: 2,
+              display: "flex",
+              flexWrap: "wrap",
+              columnGap: 4,
+            })}
+          >
+            {["選択肢1", "選択肢2", "選択肢3"].map((value) => (
+              <Checkbox.Root key={value} value={value}>
+                <Checkbox.Control>
+                  <Checkbox.Indicator />
+                </Checkbox.Control>
+                <Checkbox.HiddenInput />
+                <Checkbox.Label>{value}</Checkbox.Label>
+              </Checkbox.Root>
+            ))}
+          </div>
+          <Fieldset.ErrorText>＊エラーテキストが入ります</Fieldset.ErrorText>
+        </Checkbox.Group>
+      </Fieldset.Root>
+    </div>
   ),
   args: {
     invalid: true,
@@ -180,70 +180,70 @@ export const Errored: Story = {
 
 export const Disabled: Story = {
   render: ({ ...args }) => (
-    <Fieldset.Root
-      className={css({ display: "flex", flexDirection: "column", gap: 16 })}
-      invalid={args.invalid}
-      disabled={args.disabled}
-    >
-      <Checkbox.Group {...args} defaultValue={["選択肢2"]}>
-        <Fieldset.Legend>
-          ラベル<RequirementBadge>※必須</RequirementBadge>
-        </Fieldset.Legend>
-        <Fieldset.SupportText id="stacked-support-text">
-          〜の理由により、この項目は無効化されています。
-        </Fieldset.SupportText>
-        <div
-          className={css({
-            mt: 2,
-            display: "flex",
-            flexDirection: "column",
-            gap: 2,
-          })}
-        >
-          {["選択肢1", "選択肢2", "選択肢3"].map((value) => (
-            <Checkbox.Root
-              colorPalette={args.colorPalette}
-              key={value}
-              value={value}
-            >
-              <Checkbox.Control>
-                <Checkbox.Indicator />
-              </Checkbox.Control>
-              <Checkbox.HiddenInput />
-              <Checkbox.Label>{value}</Checkbox.Label>
-            </Checkbox.Root>
-          ))}
-        </div>
-        <Fieldset.ErrorText>＊エラーテキストが入ります</Fieldset.ErrorText>
-      </Checkbox.Group>
-      <Checkbox.Group {...args} defaultValue={["選択肢2"]}>
-        <Fieldset.Legend>
-          ラベル<RequirementBadge>※必須</RequirementBadge>
-        </Fieldset.Legend>
-        <Fieldset.SupportText id="stacked-support-text">
-          〜の理由により、この項目は無効化されています。
-        </Fieldset.SupportText>
-        <div
-          className={css({
-            mt: 2,
-            display: "flex",
-            flexWrap: "wrap",
-            columnGap: 4,
-          })}
-        >
-          {["選択肢1", "選択肢2", "選択肢3"].map((value) => (
-            <Checkbox.Root key={value} value={value}>
-              <Checkbox.Control>
-                <Checkbox.Indicator />
-              </Checkbox.Control>
-              <Checkbox.HiddenInput />
-              <Checkbox.Label>{value}</Checkbox.Label>
-            </Checkbox.Root>
-          ))}
-        </div>
-        <Fieldset.ErrorText>＊エラーテキストが入ります</Fieldset.ErrorText>
-      </Checkbox.Group>
-    </Fieldset.Root>
+    <div className={css({ display: "flex", flexDirection: "column", gap: 16 })}>
+      <Fieldset.Root invalid={args.invalid} disabled={args.disabled}>
+        <Checkbox.Group {...args} defaultValue={["選択肢2"]}>
+          <Fieldset.Legend>
+            ラベル<RequirementBadge>※必須</RequirementBadge>
+          </Fieldset.Legend>
+          <Fieldset.SupportText id="stacked-support-text">
+            〜の理由により、この項目は無効化されています。
+          </Fieldset.SupportText>
+          <div
+            className={css({
+              mt: 2,
+              display: "flex",
+              flexDirection: "column",
+              gap: 2,
+            })}
+          >
+            {["選択肢1", "選択肢2", "選択肢3"].map((value) => (
+              <Checkbox.Root
+                colorPalette={args.colorPalette}
+                key={value}
+                value={value}
+              >
+                <Checkbox.Control>
+                  <Checkbox.Indicator />
+                </Checkbox.Control>
+                <Checkbox.HiddenInput />
+                <Checkbox.Label>{value}</Checkbox.Label>
+              </Checkbox.Root>
+            ))}
+          </div>
+          <Fieldset.ErrorText>＊エラーテキストが入ります</Fieldset.ErrorText>
+        </Checkbox.Group>
+      </Fieldset.Root>
+      <Fieldset.Root invalid={args.invalid} disabled={args.disabled}>
+        <Checkbox.Group {...args} defaultValue={["選択肢2"]}>
+          <Fieldset.Legend>
+            ラベル<RequirementBadge>※必須</RequirementBadge>
+          </Fieldset.Legend>
+          <Fieldset.SupportText id="stacked-support-text">
+            〜の理由により、この項目は無効化されています。
+          </Fieldset.SupportText>
+          <div
+            className={css({
+              mt: 2,
+              display: "flex",
+              flexWrap: "wrap",
+              columnGap: 4,
+            })}
+          >
+            {["選択肢1", "選択肢2", "選択肢3"].map((value) => (
+              <Checkbox.Root key={value} value={value}>
+                <Checkbox.Control>
+                  <Checkbox.Indicator />
+                </Checkbox.Control>
+                <Checkbox.HiddenInput />
+                <Checkbox.Label>{value}</Checkbox.Label>
+              </Checkbox.Root>
+            ))}
+          </div>
+          <Fieldset.ErrorText>＊エラーテキストが入ります</Fieldset.ErrorText>
+        </Checkbox.Group>
+      </Fieldset.Root>
+    </div>
   ),
   args: {
     disabled: true,
@@ -273,6 +273,9 @@ export const Indeterminate: Story = {
 
     return (
       <Fieldset.Root invalid={args.invalid} disabled={args.disabled}>
+        <Fieldset.Legend>
+          経験したことのあるスポーツを選択してください
+        </Fieldset.Legend>
         <Checkbox.Root
           colorPalette={args.colorPalette}
           invalid={args.invalid}

@@ -25,6 +25,7 @@ export const chipTagAnatomy = createAnatomy("chip-tag").parts(
   "icon",
   "label",
   "removeButton",
+  "addButton",
 );
 
 /**

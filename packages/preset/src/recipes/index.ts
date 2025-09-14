@@ -5,6 +5,7 @@ import card from "./card";
 import checkbox from "./checkbox";
 import chipLabel from "./chip-label";
 import chipTag from "./chip-tag";
+import datePicker from "./date-picker";
 import disclosure from "./disclosure";
 import digitalGoDivider from "./divider";
 import drawer from "./drawer";
@@ -44,6 +45,7 @@ const recipes = {
   checkbox,
   chipLabel,
   chipTag,
+  datePicker,
   drawer,
   disclosure,
   digitalGoDivider,

@@ -30,6 +30,7 @@ export default defineRecipe({
      * aria-disabled:border-solid-gray-300 aria-disabled:forced-colors:border-[GrayText]
      * aria-[invalid=true]:border-error-1 aria-[invalid=true]:hover:border-red-1000
      */
+    borderStyle: { base: "solid", _readOnly: "dashed" },
     borderWidth: "1px",
     borderColor: {
       base: "solid-gray.600",

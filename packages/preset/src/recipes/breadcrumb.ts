@@ -62,10 +62,14 @@ export default defineSlotRecipe({
        * mx-2 inline
        */
       mx: 2,
-      display: "inline",
+      display: "inline-flex",
       width: "12px",
       height: "12px",
-      fill: "none",
+      "& > svg": {
+        width: "full",
+        height: "full",
+        fill: "none",
+      },
     },
   },
 });

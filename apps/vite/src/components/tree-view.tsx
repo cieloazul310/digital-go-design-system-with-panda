@@ -1,6 +1,6 @@
 import { ChevronRightIcon } from "lucide-react";
 import { forwardRef } from "react";
-import { StyledTreeView } from "./ui/tree-view";
+import { TreeView as StyledTreeView } from "./ui/tree-view";
 
 export interface TreeNodeType {
   id: string;
