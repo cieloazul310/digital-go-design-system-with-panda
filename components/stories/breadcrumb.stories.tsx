@@ -1,7 +1,7 @@
 import { useId } from "react";
 import NextLink from "next/link";
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { Home as HomeIcon } from "lucide-react";
+import { Home as HomeIcon, Slash } from "lucide-react";
 import { css } from "styled-system/css";
 import { Breadcrumb } from "../src/breadcrumb";
 
@@ -129,6 +129,56 @@ export const WithIcon: Story = {
             </Breadcrumb.Link>
           </Breadcrumb.Item>
           <Breadcrumb.Separator />
+          <Breadcrumb.Item>
+            長いページタイトルが入ります長いページタイトルが入ります
+          </Breadcrumb.Item>
+        </Breadcrumb.List>
+      </Breadcrumb.Root>
+    );
+  },
+};
+
+export const WithCustomSeparator: Story = {
+  render: ({ ...props }) => {
+    const breadcrumbsId = useId();
+    return (
+      <Breadcrumb.Root aria-labelledby={`${breadcrumbsId}-label`} {...props}>
+        <Breadcrumb.Label id={`${breadcrumbsId}-label`}>
+          現在位置
+        </Breadcrumb.Label>
+        <Breadcrumb.List>
+          <Breadcrumb.Item>
+            <Breadcrumb.Link href="#" key="home">
+              ホーム
+            </Breadcrumb.Link>
+          </Breadcrumb.Item>
+          <Breadcrumb.Separator>
+            <Slash />
+          </Breadcrumb.Separator>
+          <Breadcrumb.Item>
+            <Breadcrumb.Link href="#" key="organization">
+              組織情報
+            </Breadcrumb.Link>
+          </Breadcrumb.Item>
+          <Breadcrumb.Separator>
+            <Slash />
+          </Breadcrumb.Separator>
+          <Breadcrumb.Item>
+            <Breadcrumb.Link href="#" key="a">
+              長いページタイトルが入ります長いページタイトルが入ります
+            </Breadcrumb.Link>
+          </Breadcrumb.Item>
+          <Breadcrumb.Separator>
+            <Slash />
+          </Breadcrumb.Separator>
+          <Breadcrumb.Item>
+            <Breadcrumb.Link href="#" key="b">
+              長いページタイトルが入ります長いページタイトルが入ります
+            </Breadcrumb.Link>
+          </Breadcrumb.Item>
+          <Breadcrumb.Separator>
+            <Slash />
+          </Breadcrumb.Separator>
           <Breadcrumb.Item>
             長いページタイトルが入ります長いページタイトルが入ります
           </Breadcrumb.Item>

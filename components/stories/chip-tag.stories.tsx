@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Database, CircleUserIcon } from "lucide-react";
 import { css } from "styled-system/css";
 import { ChipTag } from "../src/chip-tag";
-import { Divider } from "../src";
+import { Divider } from "../src/divider";
 import { colorPalette } from "./utils/color-palette";
 
 const meta = {

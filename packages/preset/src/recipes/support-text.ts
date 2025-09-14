@@ -8,9 +8,9 @@ export default defineRecipe({
   className: "support-text",
   base: {
     /**
-     * text-std-16N-170 text-solid-gray-700
+     * text-std-16N-170 text-solid-gray-600
      */
     textStyle: "std-16N-170",
-    color: "solid-gray.700",
+    color: "solid-gray.600",
   },
 });

@@ -247,11 +247,11 @@ export const WithTableOne: Story = {
           </colgroup>
           <Table.Head>
             <Table.Row>
-              <Table.Header scope="column">タイトル</Table.Header>
-              <Table.Header scope="column">担当者</Table.Header>
-              <Table.Header scope="column">ステータス</Table.Header>
-              <Table.Header scope="column">タグ</Table.Header>
-              <Table.Header scope="column">日付</Table.Header>
+              <Table.Header scope="col">タイトル</Table.Header>
+              <Table.Header scope="col">担当者</Table.Header>
+              <Table.Header scope="col">ステータス</Table.Header>
+              <Table.Header scope="col">タグ</Table.Header>
+              <Table.Header scope="col">日付</Table.Header>
             </Table.Row>
           </Table.Head>
           <Table.Body>
@@ -343,9 +343,9 @@ export const WithTableTwo: Story = {
           </colgroup>
           <Table.Head>
             <Table.Row>
-              <Table.Header scope="column">種別</Table.Header>
-              <Table.Header scope="column">リソース</Table.Header>
-              <Table.Header scope="column">状態</Table.Header>
+              <Table.Header scope="col">種別</Table.Header>
+              <Table.Header scope="col">リソース</Table.Header>
+              <Table.Header scope="col">状態</Table.Header>
             </Table.Row>
           </Table.Head>
           <Table.Body>

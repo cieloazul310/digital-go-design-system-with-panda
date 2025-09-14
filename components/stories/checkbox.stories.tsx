@@ -82,11 +82,10 @@ export const WithField: Story = {
 
     return (
       <Field.Root {...fieldProps}>
-        <Field.Label>
-          ラベル
+        <Field.SupportText>
+          ラベルはサポートテキストで{" "}
           <Field.RequirementBadge>※必須</Field.RequirementBadge>
-        </Field.Label>
-        <Field.SupportText>サポートテキスト</Field.SupportText>
+        </Field.SupportText>
         <Checkbox.Root {...props}>
           <Checkbox.Control>
             <Checkbox.Indicator />

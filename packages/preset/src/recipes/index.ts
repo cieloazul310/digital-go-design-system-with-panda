@@ -1,7 +1,6 @@
 import accordion from "./accordion";
 import breadcrumb from "./breadcrumb";
 import button from "./button";
-import calendar from "./calendar";
 import card from "./card";
 import checkbox from "./checkbox";
 import chipLabel from "./chip-label";
@@ -42,7 +41,6 @@ const recipes = {
   accordion,
   breadcrumb,
   button,
-  calendar,
   card,
   checkbox,
   chipLabel,

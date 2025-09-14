@@ -43,7 +43,7 @@
     "@digital-go-jp/design-tokens": "^1.1.0"
   },
   "devDependencies": {
-    "@pandacss/dev": "^1.2.0",
+    "@pandacss/dev": "^1.3.0",
     "@pandacss/preset-panda": "^1.0.1",
     "@repo/eslint-config": "^0.1.0-beta.2",
     "@repo/typescript-config": "^0.1.0-beta.2",

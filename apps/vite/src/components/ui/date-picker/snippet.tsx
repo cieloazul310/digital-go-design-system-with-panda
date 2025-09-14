@@ -16,14 +16,21 @@ export const RootProvider = withProvider(DatePicker.RootProvider, "root");
 
 export type RootProps = ComponentProps<typeof Root>;
 export const Root = withProvider(DatePicker.Root, "root", {
-  defaultProps: { locale: "ja-JP" },
+  defaultProps: {
+    locale: "ja-JP",
+    positioning: {
+      placement: "bottom-start",
+    },
+  },
 });
 
 export const ClearTrigger = withContext(
   DatePicker.ClearTrigger,
   "clearTrigger",
   {
-    defaultProps: { hidden: false },
+    defaultProps: {
+      hidden: false,
+    },
   },
 );
 
