@@ -1,5 +1,13 @@
 # @cieloazul310/digital-go-react-components
 
+## 0.1.0-beta.8
+
+### Patch Changes
+
+- 2b9ab3c: update cli package
+- Updated dependencies [2b9ab3c]
+  - styled-system@0.1.0-beta.8
+
 ## 0.1.0-beta.7
 
 ### Patch Changes
