@@ -1,5 +1,11 @@
 # @cieloazul310/digital-go-pandacss-utils
 
+## 0.1.0-beta.8
+
+### Patch Changes
+
+- 2b9ab3c: update cli package
+
 ## 0.1.0-beta.7
 
 ### Patch Changes
