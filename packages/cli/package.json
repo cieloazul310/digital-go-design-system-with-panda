@@ -22,7 +22,8 @@
     "public"
   ],
   "bin": {
-    "add": "./bin/add-snippets.cjs"
+    "add": "./bin/add-snippets.cjs",
+    "update": "./bin/update.cjs"
   },
   "scripts": {
     "build": "tsup",
