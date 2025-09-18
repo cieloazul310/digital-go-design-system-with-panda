@@ -1,5 +1,11 @@
 # @repo/eslint-config
 
+## 0.1.0-beta.4
+
+### Patch Changes
+
+- ea94003: quick fix
+
 ## 0.1.0-beta.3
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @cieloazul310/digital-go-react-components
 
+## 0.1.0-beta.9
+
+### Patch Changes
+
+- ea94003: quick fix
+- Updated dependencies [ea94003]
+  - styled-system@0.1.0-beta.9
+
 ## 0.1.0-beta.8
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @cieloazul310/digital-go-pandacss-utils
 
+## 0.1.0-beta.9
+
+### Patch Changes
+
+- ea94003: quick fix
+
 ## 0.1.0-beta.8
 
 ### Patch Changes
