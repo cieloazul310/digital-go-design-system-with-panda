@@ -41,8 +41,10 @@ describe("digital go panda css CLI", () => {
 
     const generatedFiles = readdirSync(join(componentDir, "accordion"), {
       recursive: true,
+      encoding: "utf-8",
     });
     expect(generatedFiles).toContain("index.tsx");
+    expect(generatedFiles).toContain("snippet.tsx");
   }
 
   it("if component.json exists", async () => {
