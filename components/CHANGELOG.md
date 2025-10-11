@@ -1,5 +1,13 @@
 # @cieloazul310/digital-go-react-components
 
+## 0.1.0-beta.10
+
+### Patch Changes
+
+- c5cb745: fix cli
+- Updated dependencies [c5cb745]
+  - styled-system@0.1.0-beta.10
+
 ## 0.1.0-beta.9
 
 ### Patch Changes

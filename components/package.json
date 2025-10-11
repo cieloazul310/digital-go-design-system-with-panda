@@ -1,6 +1,6 @@
 {
   "name": "components",
-  "version": "0.1.0-beta.9",
+  "version": "0.1.0-beta.10",
   "private": true,
   "license": "MIT",
   "homepage": "https://github.com/cieloazul310/digital-go-design-system-with-panda",
@@ -27,15 +27,15 @@
     "next": "^15.4.7",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "styled-system": "^0.1.0-beta.9"
+    "styled-system": "^0.1.0-beta.10"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^4.0.1",
-    "@cieloazul310/digital-go-pandacss-preset": "^0.1.0-beta.9",
+    "@cieloazul310/digital-go-pandacss-preset": "^0.1.0-beta.10",
     "@modyfi/vite-plugin-yaml": "^1.1.1",
     "@pandacss/dev": "^1.4.0",
-    "@repo/eslint-config": "^0.1.0-beta.4",
-    "@repo/typescript-config": "^0.1.0-beta.4",
+    "@repo/eslint-config": "^0.1.0-beta.5",
+    "@repo/typescript-config": "^0.1.0-beta.5",
     "@storybook/addon-a11y": "^9.0.15",
     "@storybook/addon-docs": "^9.0.15",
     "@storybook/addon-links": "^9.0.15",

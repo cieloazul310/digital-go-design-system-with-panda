@@ -1,6 +1,6 @@
 {
   "name": "@repo/eslint-config",
-  "version": "0.1.0-beta.4",
+  "version": "0.1.0-beta.5",
   "private": true,
   "type": "module",
   "main": "./index.mjs",
@@ -41,7 +41,7 @@
     "typescript-eslint": "^8.38.0"
   },
   "devDependencies": {
-    "@repo/typescript-config": "^0.1.0-beta.4",
+    "@repo/typescript-config": "^0.1.0-beta.5",
     "eslint": "^9.32.0",
     "typescript": "^5.8.3"
   },
