@@ -30,7 +30,7 @@ describe("update.ts", () => {
   });
 
   it("should update component to latest version", async () => {
-    await execa("node", [resolve(__dirname, "../bin/update.cjs")], {
+    await execa("node", [resolve(__dirname, "../bin/index.cjs"), "update"], {
       cwd: tmpDir,
     });
 

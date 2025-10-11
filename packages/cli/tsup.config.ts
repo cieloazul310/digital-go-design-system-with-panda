@@ -1,7 +1,7 @@
 import { defineConfig } from "tsup";
 
 export default defineConfig({
-  entry: ["src/add-snippets.ts", "src/update.ts"],
+  entry: ["src/index.ts"],
   outDir: "bin",
   splitting: false,
   clean: true,

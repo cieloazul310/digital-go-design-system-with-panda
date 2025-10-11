@@ -43,7 +43,7 @@
     "@cieloazul310/digital-go-pandacss-utils": "^0.1.0-beta.9"
   },
   "devDependencies": {
-    "@pandacss/dev": "^1.3.0",
+    "@pandacss/dev": "^1.4.0",
     "@repo/eslint-config": "^0.1.0-beta.4",
     "@repo/typescript-config": "^0.1.0-beta.4",
     "@zag-js/accordion": "^1.21.1",

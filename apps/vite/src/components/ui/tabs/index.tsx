@@ -1,3 +1,4 @@
+// Generated from Custom Source Directory
 export { useTabs, useTabsContext } from "@ark-ui/react/tabs";
 
 export type { UseTabsProps, UseTabsReturn } from "@ark-ui/react/tabs";

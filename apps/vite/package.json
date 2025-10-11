@@ -8,7 +8,7 @@
     "panda": "panda codegen",
     "start": "vite",
     "build": "tsc && vite build",
-    "sync": "node ../../packages/cli/bin/add-snippets.cjs",
+    "sync": "node ../../packages/cli/bin/index.cjs add",
     "eslint": "eslint src --fix",
     "preview": "vite preview"
   },
@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@cieloazul310/digital-go-pandacss-preset": "^0.1.0-beta.9",
-    "@pandacss/dev": "^1.3.0",
+    "@pandacss/dev": "^1.4.0",
     "@repo/eslint-config": "^0.1.0-beta.4",
     "@repo/typescript-config": "^0.1.0-beta.4",
     "@types/react": "^19.1.6",

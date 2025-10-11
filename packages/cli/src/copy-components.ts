@@ -25,12 +25,19 @@ export function copyComponents({
   }
 
   // .tsxファイルにはバージョンコメントを付与
-  const files = readdirSync(templateDir, { withFileTypes: true });
-  for (const file of files) {
-    if (file.isFile() && file.name.endsWith(".tsx") && versionComment) {
-      const filePath = join(templateDir, file.name);
-      const content = readFileSync(filePath, "utf8");
-      writeFileSync(filePath, versionComment + content, "utf8");
+  const dirs = readdirSync(templateDir, { withFileTypes: true });
+  for (const dir of dirs) {
+    if (dir.isDirectory()) {
+      const files = readdirSync(join(templateDir, dir.name), {
+        withFileTypes: true,
+      });
+      for (const file of files) {
+        if (file.isFile() && file.name.endsWith(".tsx")) {
+          const filePath = join(templateDir, dir.name, file.name);
+          const content = readFileSync(filePath, "utf8");
+          writeFileSync(filePath, versionComment + content, "utf8");
+        }
+      }
     }
   }
 
