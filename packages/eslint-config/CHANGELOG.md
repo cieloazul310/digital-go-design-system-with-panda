@@ -1,5 +1,11 @@
 # @repo/eslint-config
 
+## 0.1.0-beta.5
+
+### Patch Changes
+
+- c5cb745: fix cli
+
 ## 0.1.0-beta.4
 
 ### Patch Changes

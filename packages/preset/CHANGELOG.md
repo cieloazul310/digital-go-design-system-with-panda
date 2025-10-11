@@ -1,5 +1,14 @@
 # @cieloazul310/digital-go-pandacss-preset
 
+## 0.1.0-beta.10
+
+### Patch Changes
+
+- c5cb745: fix cli
+- Updated dependencies [c5cb745]
+  - @cieloazul310/digital-go-pandacss-plugin@0.1.0-beta.10
+  - @cieloazul310/digital-go-pandacss-utils@0.1.0-beta.10
+
 ## 0.1.0-beta.9
 
 ### Patch Changes
