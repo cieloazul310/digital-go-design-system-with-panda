@@ -33,7 +33,7 @@
     "@chromatic-com/storybook": "^4.0.1",
     "@cieloazul310/digital-go-pandacss-preset": "^0.1.0-beta.9",
     "@modyfi/vite-plugin-yaml": "^1.1.1",
-    "@pandacss/dev": "^1.3.0",
+    "@pandacss/dev": "^1.4.0",
     "@repo/eslint-config": "^0.1.0-beta.4",
     "@repo/typescript-config": "^0.1.0-beta.4",
     "@storybook/addon-a11y": "^9.0.15",

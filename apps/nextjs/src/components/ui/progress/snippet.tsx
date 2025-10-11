@@ -1,3 +1,4 @@
+// Generated from Custom Source Directory
 /**
  * source:
  * https://github.com/cschroeter/park-ui/blob/main/components/react/src/components/ui/styled/progress.tsx

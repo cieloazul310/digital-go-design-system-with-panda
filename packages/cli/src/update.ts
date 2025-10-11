@@ -14,7 +14,8 @@ function extractVersionComment(content: string): string | undefined | null {
 }
 */
 
-async function main() {
+/* eslint-disable-next-line @typescript-eslint/no-unused-vars */
+async function main(args: string[]) {
   const cwd = process.cwd();
   const { outDir, sourceDir, override } = readConfig(cwd);
 
@@ -82,7 +83,7 @@ async function main() {
   // コピー
   const versionComment = latestTag
     ? `// Generated from digital-go-design-system-with-panda@${latestTag} (commit: ${latestCommit})\n`
-    : undefined;
+    : "// Generated from Custom Source Directory\n";
 
   copyComponents({
     templateDir,
@@ -94,9 +95,11 @@ async function main() {
   console.log(`✅ UI components generated from GitHub at ${outDir}`);
 }
 
-main()
-  .then(() => process.exit(0))
-  .catch((err) => {
-    console.error(err);
-    process.exit(1);
-  });
+export async function updateComponents(args: string[]) {
+  await main(args)
+    .then(() => process.exit(0))
+    .catch((err) => {
+      console.error(err);
+      process.exit(1);
+    });
+}

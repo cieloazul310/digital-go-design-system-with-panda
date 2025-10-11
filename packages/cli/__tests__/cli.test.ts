@@ -12,6 +12,16 @@ import {
 import { tmpdir } from "os";
 import { join, resolve } from "path";
 
+describe("without arguments", () => {
+  it("shows help message", async () => {
+    const cliPath = join(__dirname, "../bin/index.cjs");
+    const { stdout } = await execa("node", [cliPath], { reject: false });
+    expect(stdout).toContain("Usage:");
+    expect(stdout).toContain("<add|update>");
+    expect(stdout).toContain("[options]");
+  });
+});
+
 describe("digital go panda css CLI", () => {
   let outputDir: string;
 
@@ -28,8 +38,8 @@ describe("digital go panda css CLI", () => {
   });
 
   async function runCliAndAssert(outDir: string, expectedMsg: string) {
-    const cliPath = join(__dirname, "../bin/add-snippets.cjs");
-    const { stdout } = await execa("node", [cliPath], { cwd: outDir });
+    const cliPath = join(__dirname, "../bin/index.cjs");
+    const { stdout } = await execa("node", [cliPath, "add"], { cwd: outDir });
 
     expect(stdout).toBe(expectedMsg);
 
@@ -92,10 +102,10 @@ describe("digital go panda css CLI", () => {
     // 必要ならサブディレクトリも作成
     mkdirSync(targetDir, { recursive: true });
 
-    const cliPath = join(__dirname, "../bin/add-snippets.cjs");
+    const cliPath = join(__dirname, "../bin/index.cjs");
     // エラーが出ることを期待
-    await expect(execa("node", [cliPath], { cwd: outputDir })).rejects.toThrow(
-      /already exists|overwrite/i,
-    );
+    await expect(
+      execa("node", [cliPath, "add"], { cwd: outputDir }),
+    ).rejects.toThrow(/already exists|overwrite/i);
   });
 });

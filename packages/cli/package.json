@@ -22,8 +22,7 @@
     "public"
   ],
   "bin": {
-    "add": "./bin/add-snippets.cjs",
-    "update": "./bin/update.cjs"
+    "digital-go-pandacss": "./bin/index.cjs"
   },
   "scripts": {
     "build": "tsup",
