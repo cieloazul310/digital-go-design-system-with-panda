@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
 import { Command } from "commander";
+import { existsSync } from "fs";
+import { join } from "path";
 import { loadCatalogue } from "./load-catalogue";
 import { installSnippets } from "./install-snippets";
 import { readConfig } from "./read-config";
-import { existsSync } from "fs";
-import { join } from "path";
 
 const program = new Command();
 
@@ -81,8 +81,8 @@ program
       return;
     }
 
-    for (const e of comps) {
-      console.log(`${e.id} — ${e.name}`);
+    for (const { id, name } of comps) {
+      console.log(`${id} — ${name}`);
     }
   });
 

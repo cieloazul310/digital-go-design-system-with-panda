@@ -39,11 +39,11 @@
     "@repo/eslint-config": "^0.1.0-beta.6",
     "@repo/typescript-config": "^0.1.0-beta.6",
     "@types/commander": "^2.12.5",
-    "eslint": "^9.32.0",
+    "eslint": "^9.37.0",
     "execa": "^9.6.0",
     "tsup": "8.5.0",
     "tsx": "^4.20.6",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.3"
   },
   "lint-staged": {
     "**/*.{js,mjs,cjs,tsx,ts,tsx}": [

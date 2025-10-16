@@ -40,17 +40,17 @@
   },
   "dependencies": {
     "@cieloazul310/digital-go-pandacss-utils": "^0.1.0-beta.11",
-    "@digital-go-jp/design-tokens": "^1.1.0"
+    "@digital-go-jp/design-tokens": "^1.1.1"
   },
   "devDependencies": {
-    "@pandacss/dev": "^1.4.0",
-    "@pandacss/preset-panda": "^1.4.0",
+    "@pandacss/dev": "^1.4.2",
+    "@pandacss/preset-panda": "^1.4.2",
     "@repo/eslint-config": "^0.1.0-beta.6",
     "@repo/typescript-config": "^0.1.0-beta.6",
-    "eslint": "^9.32.0",
+    "eslint": "^9.37.0",
     "polished": "^4.3.1",
     "tsup": "8.5.0",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.3"
   },
   "peerDependencies": {
     "@pandacss/dev": ">=1.0.1",

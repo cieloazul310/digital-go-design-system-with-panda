@@ -13,29 +13,29 @@
     "snippet:install": "npm run snippet -- install --all"
   },
   "dependencies": {
-    "@ark-ui/react": "^5.22.0",
+    "@ark-ui/react": "^5.26.1",
     "@cieloazul310/regista": "^1.2.0",
-    "@shikijs/rehype": "^3.7.0",
-    "lucide-react": "^0.513.0",
-    "next": "^15.4.7",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
+    "@shikijs/rehype": "^3.13.0",
+    "lucide-react": "^0.545.0",
+    "next": "^15.5.5",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
     "remark-gfm": "^4.0.1",
-    "shiki": "^3.7.0"
+    "shiki": "^3.13.0"
   },
   "devDependencies": {
     "@cieloazul310/digital-go-pandacss-preset": "^0.1.0-beta.11",
-    "@mdx-js/loader": "^3.1.0",
-    "@mdx-js/react": "^3.1.0",
-    "@next/mdx": "^15.3.5",
-    "@pandacss/dev": "^1.4.0",
+    "@mdx-js/loader": "^3.1.1",
+    "@mdx-js/react": "^3.1.1",
+    "@next/mdx": "^15.5.5",
+    "@pandacss/dev": "^1.4.2",
     "@repo/eslint-config": "^0.1.0-beta.6",
     "@repo/typescript-config": "^0.1.0-beta.6",
-    "@types/react": "^19.1.6",
-    "@types/react-dom": "^19.1.6",
-    "eslint": "^9.32.0",
-    "eslint-config-next": "^15.3.5",
-    "typescript": "^5.8.3"
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "eslint": "^9.37.0",
+    "eslint-config-next": "^15.5.5",
+    "typescript": "^5.9.3"
   },
   "lint-staged": {
     "**/*.{js,mjs,cjs,tsx,ts,tsx}": [
