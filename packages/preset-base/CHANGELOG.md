@@ -1,5 +1,13 @@
 # @cieloazul310/digital-go-pandacss-plugin
 
+## 0.1.0-beta.11
+
+### Patch Changes
+
+- 29af253: Update CLI package
+- Updated dependencies [29af253]
+  - @cieloazul310/digital-go-pandacss-utils@0.1.0-beta.11
+
 ## 0.1.0-beta.10
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @repo/typescript-config
 
+## 0.1.0-beta.6
+
+### Patch Changes
+
+- 29af253: Update CLI package
+
 ## 0.1.0-beta.5
 
 ### Patch Changes
