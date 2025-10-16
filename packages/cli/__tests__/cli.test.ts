@@ -29,12 +29,10 @@ describe("digital go panda css CLI", () => {
 
   beforeEach(() => {
     outputDir = mkdtempSync(join(tmpdir(), "digital-go-panda-cli-"));
-    console.log(`Temporary directory created: ${outputDir}`);
   });
 
   afterEach(() => {
     if (existsSync(outputDir)) {
-      console.log(`Cleaning up: ${outputDir}`);
       rmSync(outputDir, { recursive: true, force: true });
     }
   });
@@ -70,14 +68,14 @@ describe("digital go panda css CLI", () => {
     );
     await runCliAndAssert(
       outputDir,
-      "✅ UI components generated from GitHub at src/components/ui",
+      "✅ UIコンポーネントを src/components/ui に生成しました",
     );
   });
 
   it("if component.json does not exist", async () => {
     await runCliAndAssert(
       outputDir,
-      "✅ UI components generated from GitHub at src/components/ui",
+      "✅ UIコンポーネントを src/components/ui に生成しました",
     );
   });
 
@@ -89,7 +87,7 @@ describe("digital go panda css CLI", () => {
     );
     await runCliAndAssert(
       outputDir,
-      "✅ UI components generated from GitHub at src/components/ui",
+      "✅ UIコンポーネントを src/components/ui に生成しました",
       ["accordion"],
     );
   });
@@ -104,7 +102,7 @@ describe("digital go panda css CLI", () => {
     );
     await runCliAndAssert(
       outputDir,
-      "✅ UI components generated from GitHub at components/digital-go",
+      "✅ UIコンポーネントを components/digital-go に生成しました",
     );
   });
 
@@ -125,6 +123,6 @@ describe("digital go panda css CLI", () => {
     // エラーが出ることを期待
     await expect(
       execa("node", [cliPath, "install", "--all"], { cwd: outputDir }),
-    ).rejects.toThrow(/already exists|overwrite/i);
+    ).rejects.toThrow(/出力先ディレクトリ|上書き/i);
   });
 });

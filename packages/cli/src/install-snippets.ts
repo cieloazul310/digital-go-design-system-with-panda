@@ -38,7 +38,7 @@ async function main(args: string[]) {
   }
 
   if (!existsSync(templateDir)) {
-    throw new Error(`Template directory not found: ${templateDir}`);
+    throw new Error(`テンプレートディレクトリが見つかりません: ${templateDir}`);
   }
 
   // アプリ側へのコピー
@@ -52,7 +52,7 @@ async function main(args: string[]) {
     ids: idsToCopy,
   });
 
-  console.log(`✅ UI components generated from GitHub at ${outDir}`);
+  console.log(`✅ UIコンポーネントを ${outDir} に生成しました`);
 }
 
 export async function installSnippets(args: string[]) {

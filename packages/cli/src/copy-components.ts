@@ -24,7 +24,7 @@ export function copyComponents({
   if (!ids) {
     if (existsSync(outputDir) && !override) {
       throw new Error(
-        `Output directory already exists: ${outputDir}. Use --override to overwrite.`,
+        `出力先ディレクトリが既に存在します: ${outputDir}. --overrideを使用して上書きしてください。`,
       );
     }
 
@@ -56,21 +56,21 @@ export function copyComponents({
   // If the top-level output dir exists and override is false, fail early.
   if (existsSync(outputDir) && !override) {
     throw new Error(
-      `Output directory already exists: ${outputDir}. Use --override to overwrite.`,
+      `出力先ディレクトリが既に存在します: ${outputDir}. --overrideを使用して上書きしてください。`,
     );
   }
   for (const id of ids) {
     const src = join(templateDir, id);
     if (!existsSync(src)) {
       throw new Error(
-        `Template component not found: ${id} (expected at ${src})`,
+        `テンプレートコンポーネントが見つかりません: ${id} (expected at ${src})`,
       );
     }
 
     const dest = join(outputDir, id);
     if (existsSync(dest) && !override) {
       throw new Error(
-        `Output directory already exists for component ${id}: ${dest}. Use --override to overwrite.`,
+        `出力先ディレクトリが既に存在します: ${dest}. --overrideを使用して上書きしてください。`,
       );
     }
 
