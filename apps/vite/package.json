@@ -8,9 +8,8 @@
     "panda": "panda codegen",
     "start": "vite",
     "build": "tsc && vite build",
-    "cli": "node ../../packages/cli/bin/index.cjs",
-    "cli:help": "npm run cli -- --help",
-    "cli:add": "npm run cli -- install --all",
+    "snippet": "node ../../packages/cli/bin/index.cjs",
+    "snippet:install": "npm run snippet -- install --all",
     "eslint": "eslint src --fix",
     "preview": "vite preview"
   },
