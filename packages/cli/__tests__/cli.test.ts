@@ -49,7 +49,10 @@ describe("digital go panda css CLI", () => {
 
     expect(stdout).toBe(expectedMsg);
 
-    const componentDir = join(outDir, expectedMsg.match(/at (.+)$/)?.[1] ?? "");
+    // extract path from stdout: support English 'at <path>' and Japanese messages that include 'src/...' or 'components/...'
+    const pathMatch = stdout.match(/at (.+)$|(?:src\/\S+|components\/\S+)/m);
+    const extractedPath = pathMatch ? (pathMatch[1] ?? pathMatch[0]) : "";
+    const componentDir = join(outDir, extractedPath);
     expect(existsSync(componentDir)).toBe(true);
 
     const files = readdirSync(componentDir, { withFileTypes: true });
