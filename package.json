@@ -6,7 +6,7 @@
     "node": ">=22",
     "npm": ">=10"
   },
-  "packageManager": "npm@11.4.1",
+  "packageManager": "npm@11.6.2",
   "workspaces": [
     "packages/*",
     "apps/*",
@@ -28,16 +28,16 @@
     "test": "vitest"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.29.6",
-    "@types/node": "^22",
+    "@changesets/cli": "^2.29.7",
+    "@types/node": "^24",
     "change-case": "^5.4.4",
-    "eslint": "^9.32.0",
-    "lint-staged": "^16.1.4",
+    "eslint": "^9.37.0",
+    "lint-staged": "^16.2.4",
     "prettier": "^3.6.2",
     "tsup": "^8.5.0",
-    "tsx": "^4.20.5",
-    "turbo": "^2.5.5",
-    "typescript": "^5.8.3",
+    "tsx": "^4.20.6",
+    "turbo": "^2.5.8",
+    "typescript": "^5.9.3",
     "vitest": "^3.2.4",
     "yaml": "^2.8.1"
   },
