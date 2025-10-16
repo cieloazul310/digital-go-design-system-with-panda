@@ -1,5 +1,13 @@
 # @cieloazul310/digital-go-react-components
 
+## 0.1.1
+
+### Patch Changes
+
+- c1777e3: CLIパッケージを安定化しました
+- Updated dependencies [c1777e3]
+  - styled-system@0.1.1
+
 ## 0.1.0
 
 ### Minor Changes
