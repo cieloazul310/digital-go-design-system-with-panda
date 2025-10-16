@@ -1,5 +1,11 @@
 # @repo/eslint-config
 
+## 0.1.1
+
+### Patch Changes
+
+- c1777e3: CLIパッケージを安定化しました
+
 ## 0.1.0
 
 ### Minor Changes
