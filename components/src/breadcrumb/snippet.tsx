@@ -1,4 +1,3 @@
-// Generated from Custom Source Directory
 /**
  * Icon
  * https://github.com/digital-go-jp/design-system-example-components-react/blob/main/src/components/Breadcrumbs/Breadcrumbs.tsx

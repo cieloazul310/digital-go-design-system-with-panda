@@ -1,4 +1,3 @@
-// Generated from Custom Source Directory
 /**
  * reference:
  * https://github.com/chakra-ui/chakra-ui/blob/main/packages/react/src/components/select/select.tsx

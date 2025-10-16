@@ -12,34 +12,82 @@ export function copyComponents({
   outputDir,
   versionComment,
   override = true,
+  ids,
 }: {
   templateDir: string;
   outputDir: string;
   versionComment?: string;
   override?: boolean;
+  ids?: string[];
 }) {
+  // If copying all components (ids not provided), behave as before
+  if (!ids) {
+    if (existsSync(outputDir) && !override) {
+      throw new Error(
+        `Output directory already exists: ${outputDir}. Use --override to overwrite.`,
+      );
+    }
+
+    // Copy everything first
+    cpSync(templateDir, outputDir, { recursive: true });
+
+    // Then prefix versionComment to .tsx files in the destination
+    const dirs = readdirSync(outputDir, { withFileTypes: true });
+    for (const dir of dirs) {
+      if (dir.isDirectory()) {
+        const destDir = join(outputDir, dir.name);
+        const files = readdirSync(destDir, { withFileTypes: true });
+        for (const file of files) {
+          if (file.isFile() && file.name.endsWith(".tsx")) {
+            const destPath = join(destDir, file.name);
+            const content = readFileSync(destPath, "utf8");
+            // avoid double-prefixing if already present
+            if (versionComment && content.startsWith(versionComment)) continue;
+            writeFileSync(destPath, (versionComment || "") + content, "utf8");
+          }
+        }
+      }
+    }
+
+    return;
+  }
+
+  // Partial copy: ids provided
+  // If the top-level output dir exists and override is false, fail early.
   if (existsSync(outputDir) && !override) {
     throw new Error(
       `Output directory already exists: ${outputDir}. Use --override to overwrite.`,
     );
   }
+  for (const id of ids) {
+    const src = join(templateDir, id);
+    if (!existsSync(src)) {
+      throw new Error(
+        `Template component not found: ${id} (expected at ${src})`,
+      );
+    }
 
-  // .tsxファイルにはバージョンコメントを付与
-  const dirs = readdirSync(templateDir, { withFileTypes: true });
-  for (const dir of dirs) {
-    if (dir.isDirectory()) {
-      const files = readdirSync(join(templateDir, dir.name), {
-        withFileTypes: true,
-      });
-      for (const file of files) {
-        if (file.isFile() && file.name.endsWith(".tsx")) {
-          const filePath = join(templateDir, dir.name, file.name);
-          const content = readFileSync(filePath, "utf8");
-          writeFileSync(filePath, versionComment + content, "utf8");
-        }
+    const dest = join(outputDir, id);
+    if (existsSync(dest) && !override) {
+      throw new Error(
+        `Output directory already exists for component ${id}: ${dest}. Use --override to overwrite.`,
+      );
+    }
+
+    // Ensure dest parent exists
+    // Use cpSync per-component to avoid copying everything
+    // Copy the whole component directory first
+    cpSync(src, dest, { recursive: true });
+
+    // Then prefix versionComment to .tsx files in dest
+    const destFiles = readdirSync(dest, { withFileTypes: true });
+    for (const file of destFiles) {
+      if (file.isFile() && file.name.endsWith(".tsx")) {
+        const destPath = join(dest, file.name);
+        const content = readFileSync(destPath, "utf8");
+        if (versionComment && content.startsWith(versionComment)) continue;
+        writeFileSync(destPath, (versionComment || "") + content, "utf8");
       }
     }
   }
-
-  cpSync(templateDir, outputDir, { recursive: true });
 }

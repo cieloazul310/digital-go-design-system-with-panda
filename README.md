@@ -49,11 +49,17 @@ export default defineConfig({
 
 ### 3. コンポーネントをインストール
 
+#### すべてのコンポーネントを生成、アップデート
+
 ```sh
-npx @cieloazul310/digital-go-pandacss-cli add
+npx @cieloazul310/digital-go-pandacss-cli install --all
 ```
 
-`src/components/ui`にコンポーネントを生成
+#### 個別のコンポーネントを生成、アップデート
+
+```sh
+npx @cieloazul310/digital-go-pandacss-cli install accordion button card
+```
 
 ### 4. コンポーネントを使う
 

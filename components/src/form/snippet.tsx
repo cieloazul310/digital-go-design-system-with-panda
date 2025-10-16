@@ -1,4 +1,3 @@
-// Generated from Custom Source Directory
 export * from "./error-text";
 export * from "./input";
 export * from "./label";

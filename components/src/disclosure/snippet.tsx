@@ -1,4 +1,3 @@
-// Generated from Custom Source Directory
 "use client";
 import { Collapsible } from "@ark-ui/react/collapsible";
 import { disclosure } from "styled-system/recipes";

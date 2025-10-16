@@ -6,25 +6,22 @@
   "main": "./index.mjs",
   "exports": {
     ".": {
-      "source": "./index.mjs",
       "import": "./index.mjs"
     },
     "./library": {
-      "source": "./library.mjs",
       "import": "./library.mjs"
     },
     "./react-app": {
-      "source": "./react-app.mjs",
       "import": "./react-app.mjs"
     },
     "./react-internal": {
-      "source": "./react-internal.mjs",
       "import": "./react-internal.mjs"
     }
   },
   "files": [
+    "index.mjs",
     "library.mjs",
-    "app.mjs",
+    "react-app.mjs",
     "react-internal.mjs"
   ],
   "dependencies": {
