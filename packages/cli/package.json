@@ -25,20 +25,24 @@
     "digital-go-pandacss": "./bin/index.cjs"
   },
   "scripts": {
+    "prebuild": "tsx ../../scripts/generate-catalogue.ts",
     "build": "tsup",
     "dev": "npm run build -- --watch",
     "eslint": "eslint src --fix",
     "format": "prettier --parser typescript --write ."
   },
   "dependencies": {
+    "commander": "^14.0.1",
     "simple-git": "^3.28.0"
   },
   "devDependencies": {
     "@repo/eslint-config": "^0.1.0-beta.5",
     "@repo/typescript-config": "^0.1.0-beta.5",
+    "@types/commander": "^2.12.5",
     "eslint": "^9.32.0",
     "execa": "^9.6.0",
     "tsup": "8.5.0",
+    "tsx": "^4.20.6",
     "typescript": "^5.8.3"
   },
   "lint-staged": {

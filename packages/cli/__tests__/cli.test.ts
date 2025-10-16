@@ -15,9 +15,11 @@ import { join, resolve } from "path";
 describe("without arguments", () => {
   it("shows help message", async () => {
     const cliPath = join(__dirname, "../bin/index.cjs");
-    const { stdout } = await execa("node", [cliPath], { reject: false });
+    const { stdout } = await execa("node", [cliPath, "--help"], {
+      reject: false,
+    });
     expect(stdout).toContain("Usage:");
-    expect(stdout).toContain("<add|update>");
+    expect(stdout).toContain("[command]");
     expect(stdout).toContain("[options]");
   });
 });
@@ -37,9 +39,15 @@ describe("digital go panda css CLI", () => {
     }
   });
 
-  async function runCliAndAssert(outDir: string, expectedMsg: string) {
+  async function runCliAndAssert(
+    outDir: string,
+    expectedMsg: string,
+    args: string[] = ["--all"],
+  ) {
     const cliPath = join(__dirname, "../bin/index.cjs");
-    const { stdout } = await execa("node", [cliPath, "add"], { cwd: outDir });
+    const { stdout } = await execa("node", [cliPath, "install", ...args], {
+      cwd: outDir,
+    });
 
     expect(stdout).toBe(expectedMsg);
 
@@ -49,12 +57,10 @@ describe("digital go panda css CLI", () => {
     const files = readdirSync(componentDir, { withFileTypes: true });
     expect(files.length).toBeGreaterThan(0);
 
-    const generatedFiles = readdirSync(join(componentDir, "accordion"), {
-      recursive: true,
-      encoding: "utf-8",
-    });
-    expect(generatedFiles).toContain("index.tsx");
-    expect(generatedFiles).toContain("snippet.tsx");
+    const accordionIndex = join(componentDir, "accordion", "index.tsx");
+    const accordionSnippet = join(componentDir, "accordion", "snippet.tsx");
+    expect(existsSync(accordionIndex)).toBe(true);
+    expect(existsSync(accordionSnippet)).toBe(true);
   }
 
   it("if component.json exists", async () => {
@@ -72,6 +78,19 @@ describe("digital go panda css CLI", () => {
     await runCliAndAssert(
       outputDir,
       "✅ UI components generated from GitHub at src/components/ui",
+    );
+  });
+
+  it("partial generation (single component)", async () => {
+    // ensure components.json available for stable catalogue mapping
+    cpSync(
+      resolve(__dirname, "../public/components.json"),
+      join(outputDir, "components.json"),
+    );
+    await runCliAndAssert(
+      outputDir,
+      "✅ UI components generated from GitHub at src/components/ui",
+      ["accordion"],
     );
   });
 
@@ -105,7 +124,7 @@ describe("digital go panda css CLI", () => {
     const cliPath = join(__dirname, "../bin/index.cjs");
     // エラーが出ることを期待
     await expect(
-      execa("node", [cliPath, "add"], { cwd: outputDir }),
+      execa("node", [cliPath, "install", "--all"], { cwd: outputDir }),
     ).rejects.toThrow(/already exists|overwrite/i);
   });
 });

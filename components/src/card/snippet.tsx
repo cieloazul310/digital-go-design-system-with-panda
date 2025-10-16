@@ -1,4 +1,3 @@
-// Generated from Custom Source Directory
 "use client";
 import { ark } from "@ark-ui/react/factory";
 import { card } from "styled-system/recipes";

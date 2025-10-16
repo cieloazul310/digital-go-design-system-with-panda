@@ -1,4 +1,3 @@
-// Generated from Custom Source Directory
 /**
  * reference:
  * https://github.com/cschroeter/park-ui/blob/main/components/react/src/components/ui/styled/accordion.tsx

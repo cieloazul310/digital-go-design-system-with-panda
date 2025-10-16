@@ -1,4 +1,3 @@
-// Generated from Custom Source Directory
 export {
   useCollapsible as useDisclosure,
   useCollapsibleContext as useDisclosureContext,

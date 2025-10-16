@@ -1,4 +1,3 @@
-// Generated from Custom Source Directory
 import type { PropsWithChildren } from "react";
 import { ark } from "@ark-ui/react/factory";
 import { styled } from "styled-system/jsx";

@@ -1,4 +1,3 @@
-// Generated from Custom Source Directory
 "use client";
 import { Fieldset } from "@ark-ui/react/fieldset";
 import { fieldset } from "styled-system/recipes";

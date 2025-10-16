@@ -1,4 +1,3 @@
-// Generated from Custom Source Directory
 "use client";
 import { RadioGroup } from "@ark-ui/react/radio-group";
 import { radioGroup } from "styled-system/recipes";
