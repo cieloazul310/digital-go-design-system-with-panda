@@ -1,7 +1,7 @@
 {
   "name": "app",
   "private": true,
-  "version": "0.1.0-beta.10",
+  "version": "0.1.0-beta.11",
   "type": "module",
   "scripts": {
     "prebuild": "panda codegen",
@@ -20,10 +20,10 @@
     "react-dom": "^19.1.1"
   },
   "devDependencies": {
-    "@cieloazul310/digital-go-pandacss-preset": "^0.1.0-beta.10",
+    "@cieloazul310/digital-go-pandacss-preset": "^0.1.0-beta.11",
     "@pandacss/dev": "^1.4.0",
-    "@repo/eslint-config": "^0.1.0-beta.5",
-    "@repo/typescript-config": "^0.1.0-beta.5",
+    "@repo/eslint-config": "^0.1.0-beta.6",
+    "@repo/typescript-config": "^0.1.0-beta.6",
     "@types/react": "^19.1.6",
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react-swc": "^3.10.1",
