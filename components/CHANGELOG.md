@@ -1,5 +1,28 @@
 # @cieloazul310/digital-go-react-components
 
+## 0.1.0
+
+### Minor Changes
+
+- 3ba4563: beta version
+
+### Patch Changes
+
+- c5cb745: fix cli
+- 2b9ab3c: update cli package
+- ea94003: quick fix
+- 4c18a70: update recipes
+- 29af253: Update CLI package
+- 65c9202: change component import resolution
+- Updated dependencies [c5cb745]
+- Updated dependencies [2b9ab3c]
+- Updated dependencies [ea94003]
+- Updated dependencies [4c18a70]
+- Updated dependencies [29af253]
+- Updated dependencies [3ba4563]
+- Updated dependencies [65c9202]
+  - styled-system@0.1.0
+
 ## 0.1.0-beta.11
 
 ### Patch Changes
