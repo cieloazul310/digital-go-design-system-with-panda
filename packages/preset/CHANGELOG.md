@@ -1,5 +1,14 @@
 # @cieloazul310/digital-go-pandacss-preset
 
+## 0.1.2
+
+### Patch Changes
+
+- 3535920: quick bug fix
+- Updated dependencies [3535920]
+  - @cieloazul310/digital-go-pandacss-plugin@0.1.2
+  - @cieloazul310/digital-go-pandacss-utils@0.1.2
+
 ## 0.1.1
 
 ### Patch Changes
