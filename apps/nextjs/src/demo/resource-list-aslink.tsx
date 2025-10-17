@@ -7,30 +7,30 @@ const data = [
     title: "はじめに",
     description:
       "本ウェブサイトの概要と、デザインシステムの一般的な概念について知ることができます",
-    href: "https://design.digital.go.jp/introduction/",
+    href: "https://design.digital.go.jp/dads/introduction/",
   },
   {
     title: "ガイダンス",
     description:
       "デジタル庁デザインシステムの特徴を把握し、デザインプロジェクトにどのように導入できるかを知りましょう",
-    href: "https://design.digital.go.jp/guidance/",
+    href: "https://design.digital.go.jp/dads/guidance/",
   },
   {
     title: "基本デザイン",
     description:
       "デザイン全体を形作るために必要な基本デザインの紹介とそのガイドラインです",
-    href: "https://design.digital.go.jp/foundations/",
+    href: "https://design.digital.go.jp/dads/foundations/",
   },
   {
     title: "コンポーネント",
     description:
       "ボタンやリスト等、画面を構成する情報は、様々なUIコンポーネントの形で利用者に情報の意味と操作方法を伝えます",
-    href: "https://design.digital.go.jp/components/",
+    href: "https://design.digital.go.jp/dads/components/",
   },
   {
     title: "リソース",
     description: "デジタル庁デザインシステムに付随する資料やデータ等です",
-    href: "https://design.digital.go.jp/resources/",
+    href: "https://design.digital.go.jp/dads/resources/",
   },
 ];
 

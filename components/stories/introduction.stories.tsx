@@ -45,7 +45,7 @@ export const Introduction: Story = {
         React サンプルコンポーネント🐼
       </h1>
       <p className="my-4">
-        <Link href="https://design.digital.go.jp/" target="_blank">
+        <Link href="https://design.digital.go.jp/dads/" target="_blank">
           デジタル庁デザインシステム
         </Link>
         のコンポーネントの一部を
@@ -79,7 +79,7 @@ export const Introduction: Story = {
       </p>
       <UnorderedList>
         <List>
-          <Link href="https://design.digital.go.jp/" target="_blank">
+          <Link href="https://design.digital.go.jp/dads/" target="_blank">
             デジタル庁デザインシステムウェブサイト（ガイドライン）
           </Link>
         </List>

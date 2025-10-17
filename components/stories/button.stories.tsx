@@ -173,7 +173,7 @@ export const DisabledButtons = {
           <br />
           詳しくはデジタル庁デザインシステム専用サイトの
           <Link
-            href="https://design.digital.go.jp/components/button/?tab=accessibility#h3-%E7%84%A1%E5%8A%B9%E3%83%9C%E3%82%BF%E3%83%B3%EF%BC%88disabled%EF%BC%89%E3%81%AF%E3%82%BF%E3%83%96%E3%83%95%E3%82%A9%E3%83%BC%E3%82%AB%E3%82%B9%E3%81%A7%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84"
+            href="https://design.digital.go.jp/dads/components/button/?tab=accessibility#h3-%E7%84%A1%E5%8A%B9%E3%83%9C%E3%82%BF%E3%83%B3%EF%BC%88disabled%EF%BC%89%E3%81%AF%E3%82%BF%E3%83%96%E3%83%95%E3%82%A9%E3%83%BC%E3%82%AB%E3%82%B9%E3%81%A7%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84"
             target="_blank"
           >
             ボタン（アクセシビリティ） -

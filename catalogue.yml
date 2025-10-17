@@ -4,7 +4,7 @@ components:
     name: アコーディオン
     className: accordion
     description: アコーディオンは、ユーザーがコンテンツのセクションを展開または折りたたむことができるユーザーインタフェースです。
-    digitalgo: https://design.digital.go.jp/components/accordion/
+    digitalgo: https://design.digital.go.jp/dads/components/accordion/
     ark: https://ark-ui.com/docs/components/accordion
     storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/docs/components-%E3%82%A2%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%83%B3--docs
   
@@ -14,7 +14,7 @@ components:
     className: breadcrumb
     description: パンくずリストは、ウェブサイトの階層内でユーザーの現在の位置を表示します。
     storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/docs/components-%E3%83%91%E3%83%B3%E3%81%8F%E3%81%9A%E3%83%AA%E3%82%B9%E3%83%88--docs
-    digitalgo: https://design.digital.go.jp/components/breadcrumb/
+    digitalgo: https://design.digital.go.jp/dads/components/breadcrumb/
   
   Button:
     id: button
@@ -22,7 +22,7 @@ components:
     className: button
     description: ボタンは、主にアクション実行またはページ遷移のためのトリガーとして使用します。
     storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/docs/components-%E3%83%9C%E3%82%BF%E3%83%B3--docs
-    digitalgo: https://design.digital.go.jp/components/button/
+    digitalgo: https://design.digital.go.jp/dads/components/button/
   
   Card:
     id: card
@@ -30,7 +30,7 @@ components:
     className: card
     description: カードは、単一の主題に関するコンテンツをまとめて表示するコンテナとなるコンポーネントです。
     storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/docs/components-%E3%82%AB%E3%83%BC%E3%83%89--docs
-    digitalgo: https://design.digital.go.jp/components/card/
+    digitalgo: https://design.digital.go.jp/dads/components/card/
   
   Checkbox:
     id: checkbox
@@ -38,7 +38,7 @@ components:
     className: checkbox
     description: チェックボックスは、複数の項目の中から複数の選択肢を選ぶことを可能にします。
     storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/docs/components-%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9-%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97--docs
-    digitalgo: https://design.digital.go.jp/components/checkbox/
+    digitalgo: https://design.digital.go.jp/dads/components/checkbox/
     ark: https://ark-ui.com/docs/components/checkbox
   
   ChipTag:
@@ -47,7 +47,7 @@ components:
     className: chip-tag
     description: アイテム化した任意の情報を、表示・削除しやすくするための要素です。属性やユーザー情報をアイテムにして並べたり削除したりするような場合に有効です。
     storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/docs/components-チップタグ--docs
-    digitalgo: https://design.digital.go.jp/components/chip-tag/
+    digitalgo: https://design.digital.go.jp/dads/components/chip-tag/
 
   ChipLabel:
     id: chip-label
@@ -55,7 +55,7 @@ components:
     className: chip-label
     description: 状態や状況を示すキーワードを表示して、情報の分類・整理の効率を向上させるグラフィック要素です。情報リストやテーブルの各行などのステータスを分かりやすく表示したい場合に有効です。
     storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/docs/components-%E3%83%81%E3%83%83%E3%83%97%E3%83%A9%E3%83%99%E3%83%AB--docs
-    digitalgo: https://design.digital.go.jp/components/chip-label/
+    digitalgo: https://design.digital.go.jp/dads/components/chip-label/
   
   DatePicker:
     id: date-picker
@@ -63,7 +63,7 @@ components:
     className: date-picker
     description: 日付ピッカーは、日付を選択するためのフォームコントロールを提供します。カレンダーは、日付の選択を補助するコンポーネントです。
     storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/docs/components-%E6%97%A5%E4%BB%98%E3%83%94%E3%83%83%E3%82%AB%E3%83%BC%EF%BC%8F%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%80%E3%83%BC--docs
-    digitalgo: https://design.digital.go.jp/components/date-picker/
+    digitalgo: https://design.digital.go.jp/dads/components/date-picker/
     ark: https://ark-ui.com/docs/components/date-picker
 
   Disclosure:
@@ -72,7 +72,7 @@ components:
     className: disclosure
     description: ディスクロージャーは、コンテンツのセクション内の任意の範囲を折りたたむことができるユーザーインターフェースです。
     storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/docs/components-%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B8%E3%83%A3%E3%83%BC--docs
-    digitalgo: https://design.digital.go.jp/components/disclosure/
+    digitalgo: https://design.digital.go.jp/dads/components/disclosure/
     ark: https://ark-ui.com/docs/components/collapsible
   
   Divider:
@@ -81,7 +81,7 @@ components:
     className: divider
     description: ディバイダーは、異なるセクション、コンポーネント、またはコンテンツのグループ間に設けられる視覚的な区切りです。
     storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/docs/components-%E3%83%87%E3%82%A3%E3%83%90%E3%82%A4%E3%83%80%E3%83%BC--docs
-    digitalgo: https://design.digital.go.jp/components/divider/
+    digitalgo: https://design.digital.go.jp/dads/components/divider/
   
   Drawer:
     id: drawer
@@ -89,7 +89,7 @@ components:
     className: drawer
     description: ブラウザ画面の四辺(上下左右端)から展開し、モバイルメニューなどのコンポーネントを格納可能なコンテナです。
     storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/story/components-%E3%83%89%E3%83%AD%E3%83%AF%E3%83%BC--basic
-    digitalgo: https://design.digital.go.jp/components/drawer/
+    digitalgo: https://design.digital.go.jp/dads/components/drawer/
     ark: https://ark-ui.com/docs/components/dialog
   
   EmergencyBanner:
@@ -98,7 +98,7 @@ components:
     className: emergency-banner
     description: 緊急時バナーは、当該ウェブサイトで本来成すべきコミュニケーションを中断してでもファーストビューを占有して注意を促すためのコンポーネントです。
     storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/docs/components-%E7%B7%8A%E6%80%A5%E6%99%82%E3%83%90%E3%83%8A%E3%83%BC--docs
-    digitalgo: https://design.digital.go.jp/components/emergency-banner/
+    digitalgo: https://design.digital.go.jp/dads/components/emergency-banner/
   
   Field:
     id: field
@@ -106,16 +106,29 @@ components:
     className: field
     description: インプットテキストコンポーネントは、名前や電話番号など、1行以内のテキストを入力する場合に使用します。
     storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/docs/components-%E3%82%A4%E3%83%B3%E3%83%97%E3%83%83%E3%83%88%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88--docs
-    digitalgo: https://design.digital.go.jp/components/input-text/
+    digitalgo: https://design.digital.go.jp/dads/components/input-text/
     ark: https://ark-ui.com/docs/components/field
   
+  Fieldset:
+    id: fieldset
+    name: フィールドセット
+    className: fieldset
+    storybook: http://localhost:6006/?path=/story/components-%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E3%82%BB%E3%83%83%E3%83%88--basic
+    ark: https://ark-ui.com/docs/components/fieldset
+
+  Form:
+    id: form
+    name: フォームコントロール
+    className: form
+    storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/docs/components-%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0--docs
+
   HamburgerMenuButton:
     id: hamburger-menu-button
     name: ハンバーガーメニューボタン
     className: hamburger-menu-button
     description: ハンバーガーメニューボタンは画面スペース資源に制限のある、主にモバイルデバイスで使用されるモバイルメニューを表示するためのトリガーとなるボタンです。
     storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/docs/component-dads-v2-hamburgermenubutton--docs
-    digitalgo: https://design.digital.go.jp/components/hamburger-menu-button/
+    digitalgo: https://design.digital.go.jp/dads/components/hamburger-menu-button/
   
   Link:
     id: link
@@ -123,15 +136,23 @@ components:
     className: link
     description: 「リンクテキスト」は通常、色や下線などの視覚的な表現で通常のテキストと区別され、リンクを持つテキスト要素です。
     storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/docs/components-%E3%83%AA%E3%83%B3%E3%82%AF--docs
-    digitalgo: https://design.digital.go.jp/foundations/link-text/
+    digitalgo: https://design.digital.go.jp/dads/foundations/link-text/
   
+  List:
+    id: list
+    name: リスト
+    className: list
+    description: 一般的なリスト要素。HTMLのul要素、ol要素に相当します。
+    storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/story/components-%E3%83%AA%E3%82%B9%E3%83%88-ol--basic
+    digitalgo: https://design.digital.go.jp/dads/components/list/
+
   NotificationBanner:
     id: notification-banner
     name: ノティフィケーションバナー
     className: notification-banner
     description: ウェブサイト全体に関わる、またはページや要素単位における重要度の高い情報を、ユーザーの操作に関わらず、ウェブサイト側からユーザーへ提示する場合に用いる通知バナーです。
     storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/docs/components-%E3%83%8E%E3%83%86%E3%82%A3%E3%83%95%E3%82%A3%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%90%E3%83%8A%E3%83%BC--docs
-    digitalgo: https://design.digital.go.jp/components/notification-banner/
+    digitalgo: https://design.digital.go.jp/dads/components/notification-banner/
   
   Progress:
     id: progress
@@ -139,7 +160,7 @@ components:
     className: progress
     description: プログレスインジケーターは、ユーザーのアクションに対して処理進行中であることを通知します。
     storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/story/components-%E3%83%97%E3%83%AD%E3%82%B0%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%B3%E3%82%B8%E3%82%B1%E3%83%BC%E3%82%BF%E3%83%BC--docs
-    digitalgo: https://design.digital.go.jp/components/progress-indicator/
+    digitalgo: https://design.digital.go.jp/dads/components/progress-indicator/
   
   ResourceList:
     id: resource-list
@@ -147,7 +168,7 @@ components:
     className: resource-list
     description: リソースリストは、共通した複数の任意情報で構成されたオブジェクトのリストを表示します。
     storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/docs/components-%E3%83%AA%E3%82%BD%E3%83%BC%E3%82%B9%E3%83%AA%E3%82%B9%E3%83%88--docs
-    digitalgo: https://design.digital.go.jp/components/resource-list/
+    digitalgo: https://design.digital.go.jp/dads/components/resource-list/
   
   Select:
     id: select
@@ -155,7 +176,7 @@ components:
     className: select
     description: セレクトボックスは、複数の選択肢を提供するフォームコントロールです。
     storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/docs/components-%E3%82%BB%E3%83%AC%E3%82%AF%E3%83%88%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9--docs
-    digitalgo: https://design.digital.go.jp/components/select/
+    digitalgo: https://design.digital.go.jp/dads/components/select/
     ark: https://ark-ui.com/docs/components/select
   
   Table:
@@ -164,7 +185,7 @@ components:
     className: table
     description: テーブルは、データや情報を行と列の組み合わせで構造化された表組です。
     storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/docs/components-%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB--docs
-    digitalgo: https://design.digital.go.jp/components/table/
+    digitalgo: https://design.digital.go.jp/dads/components/table/
   
   Tabs:
     id: tabs

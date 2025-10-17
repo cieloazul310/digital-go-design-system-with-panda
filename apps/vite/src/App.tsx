@@ -39,7 +39,7 @@ const links = [
     title: "デジタル庁デザインシステム",
     description:
       "デジタル庁デザインシステムの使い方、基本デザインやコンポーネントの仕様、ガイドライン、作例、アクセシビリティのドキュメントなどが含まれます。",
-    url: "https://design.digital.go.jp/",
+    url: "https://design.digital.go.jp/dads/",
   },
   {
     title: "Ark UI",
@@ -249,7 +249,7 @@ function App() {
                 })}
               >
                 <ExternalLink
-                  href="https://design.digital.go.jp/"
+                  href="https://design.digital.go.jp/dads/"
                   target="_blank"
                   rel="noopener noreferer"
                 >
