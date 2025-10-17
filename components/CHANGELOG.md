@@ -1,5 +1,13 @@
 # @cieloazul310/digital-go-react-components
 
+## 0.1.2
+
+### Patch Changes
+
+- 3535920: quick bug fix
+- Updated dependencies [3535920]
+  - styled-system@0.1.2
+
 ## 0.1.1
 
 ### Patch Changes

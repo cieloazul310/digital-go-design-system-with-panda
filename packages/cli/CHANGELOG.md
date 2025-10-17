@@ -1,5 +1,11 @@
 # @cieloazul310/digital-go-pandacss-cli
 
+## 0.1.2
+
+### Patch Changes
+
+- 3535920: quick bug fix
+
 ## 0.1.1
 
 ### Patch Changes
