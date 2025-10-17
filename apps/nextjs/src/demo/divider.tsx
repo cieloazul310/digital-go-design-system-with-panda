@@ -1,5 +1,5 @@
 import { css } from "styled-system/css";
-import { Divider } from "@/components/ui";
+import { Divider } from "@/components/ui/divider";
 
 export default function App() {
   const paragraph = css({ my: 4 });

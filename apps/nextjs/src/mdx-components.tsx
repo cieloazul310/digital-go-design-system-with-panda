@@ -1,8 +1,6 @@
 import type { MDXComponents } from "mdx/types";
 import { css } from "styled-system/css";
-import { OrderedList } from "@/components/ui/ordered-list";
-import { UnorderedList } from "@/components/ui/unordered-list";
-import { List } from "@/components/ui/list";
+import { List, OrderedList, UnorderedList } from "@/components/ui/list";
 import { Divider } from "@/components/ui/divider";
 import { Table } from "@/components/ui/table";
 import {

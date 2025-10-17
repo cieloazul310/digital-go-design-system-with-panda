@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { UnorderedList } from "../src/unordered-list";
-import { List } from "../src/list";
+import { List, UnorderedList } from "../src/list";
 
 const meta = {
   title: "Components/リスト/Ul",

@@ -6,7 +6,7 @@ import {
 } from "lucide-react";
 import { css } from "styled-system/css";
 import { Flex } from "styled-system/jsx";
-import { ChipLabel } from "@/components/ui";
+import { ChipLabel } from "@/components/ui/chip-label";
 
 export default function App() {
   return (

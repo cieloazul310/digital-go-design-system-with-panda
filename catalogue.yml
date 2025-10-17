@@ -109,6 +109,19 @@ components:
     digitalgo: https://design.digital.go.jp/dads/components/input-text/
     ark: https://ark-ui.com/docs/components/field
   
+  Fieldset:
+    id: fieldset
+    name: フィールドセット
+    className: fieldset
+    storybook: http://localhost:6006/?path=/story/components-%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E3%82%BB%E3%83%83%E3%83%88--basic
+    ark: https://ark-ui.com/docs/components/fieldset
+
+  Form:
+    id: form
+    name: フォームコントロール
+    className: form
+    storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/docs/components-%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0--docs
+
   HamburgerMenuButton:
     id: hamburger-menu-button
     name: ハンバーガーメニューボタン
@@ -125,6 +138,14 @@ components:
     storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/docs/components-%E3%83%AA%E3%83%B3%E3%82%AF--docs
     digitalgo: https://design.digital.go.jp/dads/foundations/link-text/
   
+  List:
+    id: list
+    name: リスト
+    className: list
+    description: 一般的なリスト要素。HTMLのul要素、ol要素に相当します。
+    storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/story/components-%E3%83%AA%E3%82%B9%E3%83%88-ol--basic
+    digitalgo: https://design.digital.go.jp/dads/components/list/
+
   NotificationBanner:
     id: notification-banner
     name: ノティフィケーションバナー
