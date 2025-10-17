@@ -15,7 +15,7 @@ Next.js Example
 ### 1. React + Panda CSS プロジェクトにプリセットをインストール
 
 ```sh
-npm install @cieloazul310/digital-go-pandacss-preset
+npm install --save-dev @cieloazul310/digital-go-pandacss-preset
 ```
 
 ### 2. `panda.config`の設定
@@ -120,7 +120,7 @@ export default function App() {
 ## リンク
 
 デジタル庁デザインシステムβ版  
-<https://design.digital.go.jp/>
+<https://design.digital.go.jp/dads/>
 
 React サンプルコンポーネント (Tailwind)  
 <https://github.com/digital-go-jp/design-system-example-components>

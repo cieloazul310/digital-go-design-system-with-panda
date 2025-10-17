@@ -32,7 +32,7 @@ export default function Layout({ children }: PropsWithChildren) {
               my: 4,
             })}
           >
-            <Link href="https://design.digital.go.jp/">
+            <Link href="https://design.digital.go.jp/dads/">
               デジタル庁デザインシステムウェブサイト
             </Link>
             のコンテンツを加工して作成
