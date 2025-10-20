@@ -1,10 +1,11 @@
 #!/usr/bin/env node
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from "fs";
+import { readFile, writeFile, mkdir } from "fs/promises";
 import { resolve } from "path";
-import * as yaml from "yaml";
+import { parse } from "yaml";
 import { fileURLToPath } from "url";
+import { exists } from "./fs-exists";
 
-function main() {
+async function main() {
   const repoRoot = resolve(__dirname, "..");
   const cataloguePath = resolve(repoRoot, "catalogue.yml");
   const outDir = resolve(repoRoot, "packages", "cli");
@@ -12,7 +13,7 @@ function main() {
 
   let file: string | undefined;
   try {
-    file = readFileSync(cataloguePath, "utf8");
+    file = await readFile(cataloguePath, "utf8");
   } catch (err: unknown) {
     console.error(`Could not read ${cataloguePath}:`, getErrorMessage(err));
     process.exitCode = 2;
@@ -21,7 +22,7 @@ function main() {
 
   let catalogue: Record<string, any> | undefined;
   try {
-    catalogue = yaml.parse(file);
+    catalogue = parse(file);
   } catch (err) {
     console.error(
       `Failed to parse YAML at ${cataloguePath}:`,
@@ -32,8 +33,8 @@ function main() {
   }
 
   try {
-    if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true });
-    writeFileSync(outPath, JSON.stringify(catalogue, null, 2), "utf8");
+    if (!(await exists(outDir))) await mkdir(outDir, { recursive: true });
+    await writeFile(outPath, JSON.stringify(catalogue, null, 2), "utf8");
     console.log(`Wrote ${outPath}`);
   } catch (err) {
     console.error(`Failed to write ${outPath}:`, getErrorMessage(err));
@@ -54,5 +55,7 @@ function getErrorMessage(err: unknown): string {
 
 // ESM-safe check: run main when the script is executed directly
 if (fileURLToPath(import.meta.url) === process.argv[1]) {
-  main();
+  (async () => {
+    await main();
+  })();
 }

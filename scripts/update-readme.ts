@@ -1,53 +1,63 @@
 // scripts/update-readme.ts
-import * as fs from "fs";
-import * as path from "path";
+import { readFile, writeFile } from "fs/promises";
+import { resolve } from "path";
+import { fileURLToPath } from "url";
 import { loadCatalogue } from "./load-catalogue";
 
-const catalog = loadCatalogue();
+async function main() {
+  const catalog = await loadCatalogue();
 
-function createTable() {
-  const tableHeader =
-    "| 名称 | className | Recipe | Storybook |\n|------|---------|--------|-----------|";
+  function createTable() {
+    const tableHeader =
+      "| 名称 | className | Recipe | Storybook |\n|------|---------|--------|-----------|";
 
-  function recipeURL(id: string) {
-    return `https://github.com/cieloazul310/digital-go-design-system-with-panda/blob/main/packages/preset/src/recipes/${id}.ts`;
+    function recipeURL(id: string) {
+      return `https://github.com/cieloazul310/digital-go-design-system-with-panda/blob/main/packages/preset/src/recipes/${id}.ts`;
+    }
+
+    const tableRows = Object.entries(catalog.components)
+      .map(([_, { name, id, storybook }]) => {
+        if (!storybook) {
+          return `| ${name} | ${id} | [Recipe](${recipeURL(id)}) | |`;
+        }
+        return `| ${name} | ${id} | [Recipe](${recipeURL(id)}) | [Storybook](${storybook}) |`;
+      })
+      .join("\n");
+
+    return [tableHeader, tableRows].join("\n");
   }
 
-  const tableRows = Object.entries(catalog.components)
-    .map(([_, { name, id, storybook }]) => {
-      if (!storybook) {
-        return `| ${name} | ${id} | [Recipe](${recipeURL(id)}) | |`;
-      }
-      return `| ${name} | ${id} | [Recipe](${recipeURL(id)}) | [Storybook](${storybook}) |`;
-    })
-    .join("\n");
+  const newTable = createTable();
 
-  return [tableHeader, tableRows].join("\n");
-}
+  async function updateReadme(readmePath: string) {
+    const readme = await readFile(readmePath, "utf8");
+    const isMdx = /.mdx$/.test(readmePath);
+    let updated: string;
 
-const newTable = createTable();
+    if (isMdx) {
+      updated = readme.replace(
+        /\{\/\* @catalog-start \*\/\}([\s\S]*?)\{\/\* @catalog-end \*\/\}/,
+        `\{\/\* @catalog-start \*\/\}\n${newTable}\n\{\/\* @catalog-end \*\/\}`,
+      );
+    } else {
+      updated = readme.replace(
+        /<!-- @catalog-start -->([\s\S]*?)<!-- @catalog-end -->/,
+        `<!-- @catalog-start -->\n${newTable}\n<!-- @catalog-end -->`,
+      );
+    }
 
-function updateReadme(readmePath: string) {
-  const readme = fs.readFileSync(readmePath, "utf8");
-  const isMdx = /.mdx$/.test(readmePath);
-  let updated: string;
-
-  if (isMdx) {
-    updated = readme.replace(
-      /\{\/\* @catalog-start \*\/\}([\s\S]*?)\{\/\* @catalog-end \*\/\}/,
-      `\{\/\* @catalog-start \*\/\}\n${newTable}\n\{\/\* @catalog-end \*\/\}`,
-    );
-  } else {
-    updated = readme.replace(
-      /<!-- @catalog-start -->([\s\S]*?)<!-- @catalog-end -->/,
-      `<!-- @catalog-start -->\n${newTable}\n<!-- @catalog-end -->`,
-    );
+    await writeFile(readmePath, updated);
+    console.log("README.md updated!");
   }
 
-  fs.writeFileSync(readmePath, updated);
-  console.log("README.md updated!");
+  ["../README.md", "../apps/nextjs/src/app/(mdx)/page.mdx"]
+    .map((file) => resolve(__dirname, file))
+    .forEach(updateReadme);
 }
 
-["../README.md", "../apps/nextjs/src/app/(mdx)/page.mdx"]
-  .map((file) => path.resolve(__dirname, file))
-  .forEach(updateReadme);
+// ESM-safe check: run main when the script is executed directly
+if (fileURLToPath(import.meta.url) === process.argv[1]) {
+  (async () => {
+    await main();
+  })();
+}

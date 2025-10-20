@@ -1,16 +1,26 @@
 import { describe, it, expect, beforeEach, afterEach } from "vitest";
 import { execa } from "execa";
 import {
-  rmSync,
-  mkdtempSync,
-  readdirSync,
-  existsSync,
-  cpSync,
-  writeFileSync,
-  mkdirSync,
-} from "fs";
+  rm,
+  mkdtemp,
+  readdir,
+  access,
+  cp,
+  writeFile,
+  mkdir,
+} from "fs/promises";
+import { constants } from "fs";
 import { tmpdir } from "os";
 import { join, resolve } from "path";
+
+async function exists(path: string): Promise<boolean> {
+  try {
+    await access(path, constants.F_OK);
+    return true;
+  } catch {
+    return false;
+  }
+}
 
 describe("without arguments", () => {
   it("shows help message", async () => {
@@ -27,13 +37,13 @@ describe("without arguments", () => {
 describe("digital go panda css CLI", () => {
   let outputDir: string;
 
-  beforeEach(() => {
-    outputDir = mkdtempSync(join(tmpdir(), "digital-go-panda-cli-"));
+  beforeEach(async () => {
+    outputDir = await mkdtemp(join(tmpdir(), "digital-go-panda-cli-"));
   });
 
-  afterEach(() => {
-    if (existsSync(outputDir)) {
-      rmSync(outputDir, { recursive: true, force: true });
+  afterEach(async () => {
+    if (await exists(outputDir)) {
+      await rm(outputDir, { recursive: true, force: true });
     }
   });
 
@@ -53,19 +63,19 @@ describe("digital go panda css CLI", () => {
     const pathMatch = stdout.match(/at (.+)$|(?:src\/\S+|components\/\S+)/m);
     const extractedPath = pathMatch ? (pathMatch[1] ?? pathMatch[0]) : "";
     const componentDir = join(outDir, extractedPath);
-    expect(existsSync(componentDir)).toBe(true);
+    expect(await exists(componentDir)).toBe(true);
 
-    const files = readdirSync(componentDir, { withFileTypes: true });
+    const files = await readdir(componentDir, { withFileTypes: true });
     expect(files.length).toBeGreaterThan(0);
 
     const accordionIndex = join(componentDir, "accordion", "index.tsx");
     const accordionSnippet = join(componentDir, "accordion", "snippet.tsx");
-    expect(existsSync(accordionIndex)).toBe(true);
-    expect(existsSync(accordionSnippet)).toBe(true);
+    expect(await exists(accordionIndex)).toBe(true);
+    expect(await exists(accordionSnippet)).toBe(true);
   }
 
   it("if component.json exists", async () => {
-    cpSync(
+    await cp(
       resolve(__dirname, "../public/components.json"),
       join(outputDir, "components.json"),
     );
@@ -84,7 +94,7 @@ describe("digital go panda css CLI", () => {
 
   it("partial generation (single component)", async () => {
     // ensure components.json available for stable catalogue mapping
-    cpSync(
+    await cp(
       resolve(__dirname, "../public/components.json"),
       join(outputDir, "components.json"),
     );
@@ -99,7 +109,7 @@ describe("digital go panda css CLI", () => {
     const customConfig = {
       outDir: "components/digital-go",
     };
-    writeFileSync(
+    await writeFile(
       join(outputDir, "components.json"),
       JSON.stringify(customConfig, null, 2),
     );
@@ -113,14 +123,14 @@ describe("digital go panda css CLI", () => {
     const customConfig = {
       override: false,
     };
-    writeFileSync(
+    await writeFile(
       join(outputDir, "components.json"),
       JSON.stringify(customConfig, null, 2),
     );
     // 事前にディレクトリを作成しておく
     const targetDir = join(outputDir, "src/components/ui");
     // 必要ならサブディレクトリも作成
-    mkdirSync(targetDir, { recursive: true });
+    await mkdir(targetDir, { recursive: true });
 
     const cliPath = join(__dirname, "../bin/index.cjs");
     // エラーが出ることを期待

@@ -1,13 +1,8 @@
-import {
-  readdirSync,
-  readFileSync,
-  writeFileSync,
-  existsSync,
-  cpSync,
-} from "fs";
+import { readdir, readFile, writeFile, cp } from "fs/promises";
 import { join } from "path";
+import { exists } from "./fs-exists";
 
-export function copyComponents({
+export async function copyComponents({
   templateDir,
   outputDir,
   versionComment,
@@ -22,28 +17,28 @@ export function copyComponents({
 }) {
   // If copying all components (ids not provided), behave as before
   if (!ids) {
-    if (existsSync(outputDir) && !override) {
+    if ((await exists(outputDir)) && !override) {
       throw new Error(
         `出力先ディレクトリが既に存在します: ${outputDir}. --overrideを使用して上書きしてください。`,
       );
     }
 
     // Copy everything first
-    cpSync(templateDir, outputDir, { recursive: true });
+    await cp(templateDir, outputDir, { recursive: true });
 
     // Then prefix versionComment to .tsx files in the destination
-    const dirs = readdirSync(outputDir, { withFileTypes: true });
+    const dirs = await readdir(outputDir, { withFileTypes: true });
     for (const dir of dirs) {
       if (dir.isDirectory()) {
         const destDir = join(outputDir, dir.name);
-        const files = readdirSync(destDir, { withFileTypes: true });
+        const files = await readdir(destDir, { withFileTypes: true });
         for (const file of files) {
           if (file.isFile() && file.name.endsWith(".tsx")) {
             const destPath = join(destDir, file.name);
-            const content = readFileSync(destPath, "utf8");
+            const content = await readFile(destPath, "utf8");
             // avoid double-prefixing if already present
             if (versionComment && content.startsWith(versionComment)) continue;
-            writeFileSync(destPath, (versionComment || "") + content, "utf8");
+            await writeFile(destPath, (versionComment || "") + content, "utf8");
           }
         }
       }
@@ -54,39 +49,39 @@ export function copyComponents({
 
   // Partial copy: ids provided
   // If the top-level output dir exists and override is false, fail early.
-  if (existsSync(outputDir) && !override) {
+  if ((await exists(outputDir)) && !override) {
     throw new Error(
       `出力先ディレクトリが既に存在します: ${outputDir}. --overrideを使用して上書きしてください。`,
     );
   }
   for (const id of ids) {
     const src = join(templateDir, id);
-    if (!existsSync(src)) {
+    if (!(await exists(src))) {
       throw new Error(
         `テンプレートコンポーネントが見つかりません: ${id} (expected at ${src})`,
       );
     }
 
     const dest = join(outputDir, id);
-    if (existsSync(dest) && !override) {
+    if ((await exists(dest)) && !override) {
       throw new Error(
         `出力先ディレクトリが既に存在します: ${dest}. --overrideを使用して上書きしてください。`,
       );
     }
 
     // Ensure dest parent exists
-    // Use cpSync per-component to avoid copying everything
+    // Use cp per-component to avoid copying everything
     // Copy the whole component directory first
-    cpSync(src, dest, { recursive: true });
+    await cp(src, dest, { recursive: true });
 
     // Then prefix versionComment to .tsx files in dest
-    const destFiles = readdirSync(dest, { withFileTypes: true });
+    const destFiles = await readdir(dest, { withFileTypes: true });
     for (const file of destFiles) {
       if (file.isFile() && file.name.endsWith(".tsx")) {
         const destPath = join(dest, file.name);
-        const content = readFileSync(destPath, "utf8");
+        const content = await readFile(destPath, "utf8");
         if (versionComment && content.startsWith(versionComment)) continue;
-        writeFileSync(destPath, (versionComment || "") + content, "utf8");
+        await writeFile(destPath, (versionComment || "") + content, "utf8");
       }
     }
   }

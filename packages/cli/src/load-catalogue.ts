@@ -1,4 +1,4 @@
-import { readFileSync } from "fs";
+import { readFile } from "fs/promises";
 import { resolve } from "path";
 
 export type Catalogue = {
@@ -16,11 +16,11 @@ export type Catalogue = {
   >;
 };
 
-export function loadCatalogue(): Catalogue {
+export async function loadCatalogue(): Promise<Catalogue> {
   const cataloguePath = resolve(__dirname, "..", "public", "catalogue.json");
   let file: string;
   try {
-    file = readFileSync(cataloguePath, "utf8");
+    file = await readFile(cataloguePath, "utf8");
   } catch (err: unknown) {
     throw new Error(`Could not read ${cataloguePath}: ${getErrorMessage(err)}`);
   }
