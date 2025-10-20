@@ -1,6 +1,6 @@
 {
   "name": "@cieloazul310/digital-go-pandacss-plugin",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "license": "MIT",
   "homepage": "https://github.com/cieloazul310/digital-go-design-system-with-panda",
   "author": {
@@ -39,14 +39,14 @@
     "format": "prettier --parser typescript --write ."
   },
   "dependencies": {
-    "@cieloazul310/digital-go-pandacss-utils": "^0.1.2",
+    "@cieloazul310/digital-go-pandacss-utils": "^0.1.3",
     "@digital-go-jp/design-tokens": "^1.1.1"
   },
   "devDependencies": {
     "@pandacss/dev": "^1.4.2",
     "@pandacss/preset-panda": "^1.4.2",
-    "@repo/eslint-config": "^0.1.2",
-    "@repo/typescript-config": "^0.1.2",
+    "@repo/eslint-config": "^0.1.3",
+    "@repo/typescript-config": "^0.1.3",
     "eslint": "^9.37.0",
     "polished": "^4.3.1",
     "tsup": "8.5.0",

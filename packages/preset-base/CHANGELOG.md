@@ -1,5 +1,13 @@
 # @cieloazul310/digital-go-pandacss-plugin
 
+## 0.1.3
+
+### Patch Changes
+
+- cc36479: CLIパッケージに使用されている`fs`を`fs/promises`に置き換えました。
+- Updated dependencies [cc36479]
+  - @cieloazul310/digital-go-pandacss-utils@0.1.3
+
 ## 0.1.2
 
 ### Patch Changes
