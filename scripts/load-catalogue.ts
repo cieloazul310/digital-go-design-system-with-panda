@@ -1,6 +1,6 @@
-import fs from "fs";
-import path from "path";
-import * as yaml from "yaml";
+import { readFile } from "fs/promises";
+import { resolve } from "path";
+import { parse } from "yaml";
 
 export type Catalogue = {
   components: Record<
@@ -17,10 +17,7 @@ export type Catalogue = {
   >;
 };
 
-export function loadCatalogue(): Catalogue {
-  const file = fs.readFileSync(
-    path.resolve(__dirname, "../catalogue.yml"),
-    "utf8",
-  );
-  return yaml.parse(file);
+export async function loadCatalogue(): Promise<Catalogue> {
+  const file = await readFile(resolve(__dirname, "../catalogue.yml"), "utf8");
+  return parse(file);
 }

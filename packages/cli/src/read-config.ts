@@ -1,5 +1,6 @@
-import { existsSync, readFileSync } from "fs";
+import { readFile } from "fs/promises";
 import { join } from "path";
+import { exists } from "./fs-exists";
 
 export type ComponentsConfig = {
   outDir: string;
@@ -8,17 +9,20 @@ export type ComponentsConfig = {
   // 他に必要なフィールドがあれば追加
 };
 
-export function readConfig(cwd: string = process.cwd()): ComponentsConfig {
+export async function readConfig(
+  cwd: string = process.cwd(),
+): Promise<ComponentsConfig> {
   const defaultConfig: ComponentsConfig = {
     outDir: "src/components/ui",
     override: true,
   };
   const configPath = join(cwd, "components.json");
-  if (!existsSync(configPath)) {
+  if (!(await exists(configPath))) {
     return defaultConfig;
   }
+
   const config = JSON.parse(
-    readFileSync(configPath, "utf-8"),
+    await readFile(configPath, "utf-8"),
   ) as ComponentsConfig;
   return {
     ...defaultConfig,

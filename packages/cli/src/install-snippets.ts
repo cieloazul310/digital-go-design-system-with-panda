@@ -1,22 +1,23 @@
 #!/usr/bin/env node
 import { simpleGit } from "simple-git";
 import { tmpdir } from "os";
-import { cpSync, existsSync } from "fs";
+import { cp } from "fs/promises";
 import { join } from "path";
 import { readConfig } from "./read-config";
 import { copyComponents } from "./copy-components";
 import { createVersionComment } from "./version-comment";
+import { exists } from "./fs-exists";
 
 async function main(args: string[]) {
   const cwd = process.cwd();
-  const { outDir, sourceDir, override } = readConfig(cwd);
+  const { outDir, sourceDir, override } = await readConfig(cwd);
   const tmpPath = join(tmpdir(), `digital-go-pandacss-${Date.now()}`);
 
   let templateDir: string | undefined = undefined;
   let versionComment: string | undefined = undefined;
 
   if (sourceDir) {
-    cpSync(join(cwd, sourceDir), tmpPath, { recursive: true });
+    await cp(join(cwd, sourceDir), tmpPath, { recursive: true });
     templateDir = tmpPath;
     versionComment = createVersionComment();
   } else {
@@ -37,14 +38,14 @@ async function main(args: string[]) {
     versionComment = createVersionComment({ tag, commit });
   }
 
-  if (!existsSync(templateDir)) {
+  if (!(await exists(templateDir))) {
     throw new Error(`テンプレートディレクトリが見つかりません: ${templateDir}`);
   }
 
   // アプリ側へのコピー
   const outputDir = join(cwd, outDir);
   const idsToCopy = args && args.length > 0 ? args : undefined;
-  copyComponents({
+  await copyComponents({
     templateDir,
     outputDir,
     override,

@@ -1,9 +1,9 @@
 // scripts/update-readme.ts
-import * as fs from "fs";
-import * as path from "path";
+import { readFile, writeFile } from "fs/promises";
+import { resolve } from "path";
 import { loadCatalogue } from "./load-catalogue";
 
-const catalog = loadCatalogue();
+const catalog = await loadCatalogue();
 
 function createTable() {
   const tableHeader =
@@ -27,8 +27,8 @@ function createTable() {
 
 const newTable = createTable();
 
-function updateReadme(readmePath: string) {
-  const readme = fs.readFileSync(readmePath, "utf8");
+async function updateReadme(readmePath: string) {
+  const readme = await readFile(readmePath, "utf8");
   const isMdx = /.mdx$/.test(readmePath);
   let updated: string;
 
@@ -44,10 +44,10 @@ function updateReadme(readmePath: string) {
     );
   }
 
-  fs.writeFileSync(readmePath, updated);
+  await writeFile(readmePath, updated);
   console.log("README.md updated!");
 }
 
 ["../README.md", "../apps/nextjs/src/app/(mdx)/page.mdx"]
-  .map((file) => path.resolve(__dirname, file))
+  .map((file) => resolve(__dirname, file))
   .forEach(updateReadme);

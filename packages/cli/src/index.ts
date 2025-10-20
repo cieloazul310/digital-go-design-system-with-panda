@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
 import { Command } from "commander";
-import { existsSync } from "fs";
 import { join } from "path";
 import { loadCatalogue } from "./load-catalogue";
 import { installSnippets } from "./install-snippets";
 import { readConfig } from "./read-config";
+import { exists } from "./fs-exists";
 
 const program = new Command();
 
@@ -29,7 +29,7 @@ program
     }
 
     // Determine target ids
-    const catalogue = loadCatalogue() ?? { components: {} };
+    const catalogue = (await loadCatalogue()) ?? { components: {} };
     const availableIds = Object.values(catalogue.components || {}).map(
       ({ id }) => id,
     );
@@ -43,11 +43,11 @@ program
 
     try {
       // Pre-check: read components.json and fail early if outDir exists and override is false
-      const { outDir: cfgOutDir, override: cfgOverride } = readConfig(
+      const { outDir: cfgOutDir, override: cfgOverride } = await readConfig(
         process.cwd(),
       );
       const outputPath = join(process.cwd(), cfgOutDir);
-      if (existsSync(outputPath) && !cfgOverride) {
+      if ((await exists(outputPath)) && !cfgOverride) {
         console.error(
           `出力先ディレクトリが既に存在します: ${outputPath}. --overrideを使用して上書きしてください。`,
         );
@@ -67,8 +67,8 @@ program
   .command("list")
   .description("利用可能なコンポーネントIDの一覧を表示します")
   .option("--json", "JSON形式で出力します")
-  .action((options: { json?: boolean }) => {
-    const catalogue = loadCatalogue();
+  .action(async (options: { json?: boolean }) => {
+    const catalogue = await loadCatalogue();
     if (!catalogue || !catalogue.components) {
       console.error("カタログが見つかりません");
       process.exit(1);

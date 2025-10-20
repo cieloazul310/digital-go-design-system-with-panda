@@ -1,6 +1,6 @@
-import { readdirSync, readFileSync, writeFileSync } from "fs";
+import { readdir, readFile, writeFile } from "fs/promises";
 import { join, extname } from "path";
-import * as yaml from "yaml";
+import { parse, stringify } from "yaml";
 import * as changeCase from "change-case";
 
 // MDXフロントマター抽出用
@@ -20,18 +20,18 @@ function extractFrontmatter(content: string) {
 
 // 既存catalogue.ymlの読み込み
 const cataloguePath = join(__dirname, "../catalogue.yml");
-const catalogue = yaml.parse(readFileSync(cataloguePath, "utf8")) as any;
+const catalogue = parse(await readFile(cataloguePath, "utf8")) as any;
 
 // MDXファイルの走査
 const docsDir = join(__dirname, "../apps/nextjs/docs/components");
-for (const file of readdirSync(docsDir, {
+for (const file of await readdir(docsDir, {
   recursive: true,
   encoding: "utf8",
 })) {
   const [id] = file.split("/");
 
   if (extname(file) !== ".mdx") continue;
-  const content = readFileSync(join(docsDir, file), "utf8");
+  const content = await readFile(join(docsDir, file), "utf8");
   const fm = extractFrontmatter(content);
 
   // titleをキーにcatalogueへ反映
@@ -51,5 +51,5 @@ for (const file of readdirSync(docsDir, {
 console.log(catalogue);
 
 // catalogue.ymlへ書き戻し
-writeFileSync(cataloguePath, yaml.stringify(catalogue), "utf8");
+writeFile(cataloguePath, stringify(catalogue), "utf8");
 console.log("catalogue.yml updated!");
