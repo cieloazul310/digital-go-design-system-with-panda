@@ -1,5 +1,11 @@
 # @repo/typescript-config
 
+## 0.1.3
+
+### Patch Changes
+
+- cc36479: CLIパッケージに使用されている`fs`を`fs/promises`に置き換えました。
+
 ## 0.1.2
 
 ### Patch Changes
