@@ -1,14 +1,14 @@
-import type { PropsWithChildren } from "react";
 import { ark } from "@ark-ui/react/factory";
 import { styled } from "styled-system/jsx";
 import {
   hamburgerMenuButton,
   type HamburgerMenuButtonVariantProps,
 } from "styled-system/recipes";
+import type { HTMLStyledProps } from "styled-system/jsx";
 
 export interface HamburgerMenuButtonProps
   extends HamburgerMenuButtonVariantProps,
-    PropsWithChildren {}
+    HTMLStyledProps<"button"> {}
 
 export const HamburgerMenuButton = styled(ark.button, hamburgerMenuButton);
 
