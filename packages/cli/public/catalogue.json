@@ -9,6 +9,14 @@
       "ark": "https://ark-ui.com/docs/components/accordion",
       "storybook": "https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/docs/components-%E3%82%A2%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%83%B3--docs"
     },
+    "Blockquote": {
+      "id": "blockquote",
+      "name": "引用ブロック",
+      "className": "blockqupte",
+      "description": "引用ブロックは段落単位での引用を表し、これ自体も段落となるコンポーネントです。",
+      "storybook": "https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/docs/components-%E5%BC%95%E7%94%A8%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF--docs",
+      "digitalgo": "https://design.digital.go.jp/dads/components/blockquote/"
+    },
     "Breadcrumb": {
       "id": "breadcrumb",
       "name": "パンくずリスト",

@@ -1,4 +1,5 @@
 import accordion from "./accordion";
+import blockquote from "./blockquote";
 import breadcrumb from "./breadcrumb";
 import button from "./button";
 import card from "./card";
@@ -39,6 +40,7 @@ import utilityLink from "./utility-link";
 
 const recipes = {
   accordion,
+  blockquote,
   breadcrumb,
   button,
   card,
