@@ -7,6 +7,7 @@ import checkbox from "./checkbox";
 import chipLabel from "./chip-label";
 import chipTag from "./chip-tag";
 import datePicker from "./date-picker";
+import descriptionList from "./description-list";
 import disclosure from "./disclosure";
 import digitalGoDivider from "./divider";
 import drawer from "./drawer";
@@ -48,9 +49,10 @@ const recipes = {
   chipLabel,
   chipTag,
   datePicker,
-  drawer,
+  descriptionList,
   disclosure,
   digitalGoDivider,
+  drawer,
   emergencyBanner,
   errorText,
   field,

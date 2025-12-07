@@ -74,6 +74,14 @@ components:
     digitalgo: https://design.digital.go.jp/dads/components/date-picker/
     ark: https://ark-ui.com/docs/components/date-picker
 
+  DescriptionList:
+    id: description-list
+    name: 説明リスト
+    className: description-list
+    description: 「説明したいこと」と「その説明文」のペアを1つの項目として数え、それが複数連なるようなコンテンツの時に使用します。
+    storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/docs/components-%E8%AA%AC%E6%98%8E%E3%83%AA%E3%82%B9%E3%83%88--docs
+    digitalgo: https://design.digital.go.jp/dads/components/description-list/
+
   Disclosure:
     id: disclosure
     name: ディスクロージャー
