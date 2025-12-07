@@ -12,8 +12,8 @@ export const Root = withProvider(ark.dl, "root");
 
 export const Item = withContext(ark.div, "item");
 
-export const ItemTerm = withContext(ark.dt, "item-term");
+export const Term = withContext(ark.dt, "term");
 
-export const ItemMarker = withContext(ark.span, "item-marker");
+export const Marker = withContext(ark.span, "marker");
 
-export const ItemDescription = withContext(ark.dd, "item-description");
+export const Description = withContext(ark.dd, "description");

@@ -6,7 +6,7 @@ import { defineSlotRecipe } from "@pandacss/dev";
 
 export default defineSlotRecipe({
   className: "description-list",
-  slots: ["root", "item", "item-term", "item-marker", "item-description"],
+  slots: ["root", "item", "term", "marker", "description"],
   base: {
     root: {
       /**
@@ -22,16 +22,16 @@ export default defineSlotRecipe({
       rowGap: "calc(8 / 16 * 1rem)",
       overflowWrap: "anywhere",
     },
-    "item-term": {
+    term: {
       /**
        * font-weight: bold;
        */
       fontWeight: "bold",
     },
-    "item-marker": {
+    marker: {
       display: "none",
     },
-    "item-description": {
+    description: {
       /**
        * margin-left: calc(32 / 16 * 1rem);
        */
@@ -42,7 +42,7 @@ export default defineSlotRecipe({
     marker: {
       none: {},
       bullet: {
-        "item-term": {
+        term: {
           /**
            * margin-left: calc(32 / 16 * 1rem);
            * display: list-item;
@@ -54,7 +54,7 @@ export default defineSlotRecipe({
         },
       },
       custom: {
-        "item-marker": {
+        marker: {
           display: "inline-block",
           minWidth: "calc(32 / 16 * 1rem)",
           height: "1em",

@@ -27,16 +27,16 @@ export const Basic: Story = {
     children: (
       <>
         <DescriptionList.Item>
-          <DescriptionList.ItemTerm>項目名1</DescriptionList.ItemTerm>
-          <DescriptionList.ItemDescription>
+          <DescriptionList.Term>項目名1</DescriptionList.Term>
+          <DescriptionList.Description>
             これは項目1の説明文です。
-          </DescriptionList.ItemDescription>
+          </DescriptionList.Description>
         </DescriptionList.Item>
         <DescriptionList.Item>
-          <DescriptionList.ItemTerm>項目名2</DescriptionList.ItemTerm>
-          <DescriptionList.ItemDescription>
+          <DescriptionList.Term>項目名2</DescriptionList.Term>
+          <DescriptionList.Description>
             これは項目2の説明文です。
-          </DescriptionList.ItemDescription>
+          </DescriptionList.Description>
         </DescriptionList.Item>
       </>
     ),
@@ -49,16 +49,16 @@ export const WithBullet: Story = {
     children: (
       <>
         <DescriptionList.Item>
-          <DescriptionList.ItemTerm>項目名1</DescriptionList.ItemTerm>
-          <DescriptionList.ItemDescription>
+          <DescriptionList.Term>項目名1</DescriptionList.Term>
+          <DescriptionList.Description>
             これは項目1の説明文です。
-          </DescriptionList.ItemDescription>
+          </DescriptionList.Description>
         </DescriptionList.Item>
         <DescriptionList.Item>
-          <DescriptionList.ItemTerm>項目名2</DescriptionList.ItemTerm>
-          <DescriptionList.ItemDescription>
+          <DescriptionList.Term>項目名2</DescriptionList.Term>
+          <DescriptionList.Description>
             これは項目2の説明文です。
-          </DescriptionList.ItemDescription>
+          </DescriptionList.Description>
         </DescriptionList.Item>
       </>
     ),
@@ -71,26 +71,26 @@ export const WithCustomMarker: Story = {
     children: (
       <>
         <DescriptionList.Item>
-          <DescriptionList.ItemTerm>
-            <DescriptionList.ItemMarker>
+          <DescriptionList.Term>
+            <DescriptionList.Marker>
               <Phone />
-            </DescriptionList.ItemMarker>
+            </DescriptionList.Marker>
             項目名1
-          </DescriptionList.ItemTerm>
-          <DescriptionList.ItemDescription>
+          </DescriptionList.Term>
+          <DescriptionList.Description>
             これは項目1の説明文です。
-          </DescriptionList.ItemDescription>
+          </DescriptionList.Description>
         </DescriptionList.Item>
         <DescriptionList.Item>
-          <DescriptionList.ItemTerm>
-            <DescriptionList.ItemMarker>
+          <DescriptionList.Term>
+            <DescriptionList.Marker>
               <Mail />
-            </DescriptionList.ItemMarker>
+            </DescriptionList.Marker>
             項目名2
-          </DescriptionList.ItemTerm>
-          <DescriptionList.ItemDescription>
+          </DescriptionList.Term>
+          <DescriptionList.Description>
             これは項目2の説明文です。
-          </DescriptionList.ItemDescription>
+          </DescriptionList.Description>
         </DescriptionList.Item>
       </>
     ),
