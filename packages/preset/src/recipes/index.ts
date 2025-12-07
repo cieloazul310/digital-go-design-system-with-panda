@@ -31,6 +31,7 @@ import radioGroup from "./radio-group";
 import requirementBadge from "./requirement-badge";
 import resourceList from "./resource-list";
 import select from "./select";
+import stepNavigation from "./step-navigation";
 import supportText from "./support-text";
 import table from "./table";
 import tabs from "./tabs";
@@ -73,6 +74,7 @@ const recipes = {
   requirementBadge,
   resourceList,
   select,
+  stepNavigation,
   supportText,
   table,
   tabs,
