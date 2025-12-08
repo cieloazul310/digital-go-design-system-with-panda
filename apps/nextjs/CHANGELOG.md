@@ -1,5 +1,11 @@
 # nextjs
 
+## 0.1.4
+
+### Patch Changes
+
+- 32f444a: コンポーネントを追加
+
 ## 0.1.3
 
 ### Patch Changes

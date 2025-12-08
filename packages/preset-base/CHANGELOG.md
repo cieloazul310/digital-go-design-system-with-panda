@@ -1,5 +1,13 @@
 # @cieloazul310/digital-go-pandacss-plugin
 
+## 0.1.4
+
+### Patch Changes
+
+- 32f444a: コンポーネントを追加
+- Updated dependencies [32f444a]
+  - @cieloazul310/digital-go-pandacss-utils@0.1.4
+
 ## 0.1.3
 
 ### Patch Changes
