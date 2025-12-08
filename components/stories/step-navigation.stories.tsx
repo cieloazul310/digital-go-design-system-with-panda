@@ -35,9 +35,21 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const items = [
-  { value: "first", title: "First", description: "Contact Info" },
-  { value: "second", title: "Second", description: "Date & Time" },
-  { value: "third", title: "Third", description: "Select Rooms" },
+  {
+    value: "first",
+    title: "ステップのタイトル",
+    description: "ステップの説明が入ります。",
+  },
+  {
+    value: "second",
+    title: "ステップのタイトル",
+    description: "ステップの説明が入ります。",
+  },
+  {
+    value: "third",
+    title: "ステップのタイトル",
+    description: "ステップの説明が入ります。",
+  },
 ];
 
 export const Basic: Story = {
@@ -50,8 +62,36 @@ export const Basic: Story = {
             <StepNavigation.Item key={index} index={index}>
               <StepNavigation.Trigger>
                 <StepNavigation.Indicator>{index + 1}</StepNavigation.Indicator>
-                <span>{item.title}</span>
+                <StepNavigation.Title>{item.title}</StepNavigation.Title>
               </StepNavigation.Trigger>
+              <StepNavigation.Description>
+                {item.description}
+              </StepNavigation.Description>
+              <StepNavigation.Separator />
+            </StepNavigation.Item>
+          ))}
+        </StepNavigation.List>
+      </>
+    ),
+  },
+};
+
+export const Vertical: Story = {
+  args: {
+    count: items.length,
+    orientation: "vertical",
+    children: (
+      <>
+        <StepNavigation.List>
+          {items.map((item, index) => (
+            <StepNavigation.Item key={index} index={index}>
+              <StepNavigation.Trigger>
+                <StepNavigation.Indicator>{index + 1}</StepNavigation.Indicator>
+                <StepNavigation.Title>{item.title}</StepNavigation.Title>
+              </StepNavigation.Trigger>
+              <StepNavigation.Description>
+                {item.description}
+              </StepNavigation.Description>
               <StepNavigation.Separator />
             </StepNavigation.Item>
           ))}
