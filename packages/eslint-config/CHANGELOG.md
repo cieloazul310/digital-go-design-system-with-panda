@@ -1,5 +1,11 @@
 # @repo/eslint-config
 
+## 0.1.5
+
+### Patch Changes
+
+- 4f8f16b: ステップナビゲーションコンポーネントを追加
+
 ## 0.1.4
 
 ### Patch Changes

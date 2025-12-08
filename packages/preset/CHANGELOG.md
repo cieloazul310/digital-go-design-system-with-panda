@@ -1,5 +1,14 @@
 # @cieloazul310/digital-go-pandacss-preset
 
+## 0.1.5
+
+### Patch Changes
+
+- 4f8f16b: ステップナビゲーションコンポーネントを追加
+- Updated dependencies [4f8f16b]
+  - @cieloazul310/digital-go-pandacss-plugin@0.1.5
+  - @cieloazul310/digital-go-pandacss-utils@0.1.5
+
 ## 0.1.4
 
 ### Patch Changes
