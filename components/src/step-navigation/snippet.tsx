@@ -1,4 +1,5 @@
 "use client";
+import { ark } from "@ark-ui/react/factory";
 import { Steps } from "@ark-ui/react/steps";
 import { stepNavigation } from "styled-system/recipes";
 import { createStyleContext } from "styled-system/jsx";
@@ -22,5 +23,9 @@ export const Trigger = withContext(Steps.Trigger, "trigger");
 export const Indicator = withContext(Steps.Indicator, "indicator");
 
 export const Separator = withContext(Steps.Separator, "separator");
+
+export const Title = withContext(ark.span, "title");
+
+export const Description = withContext(ark.p, "description");
 
 export { StepsContext as Context } from "@ark-ui/react/steps";

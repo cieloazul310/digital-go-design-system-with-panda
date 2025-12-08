@@ -8,7 +8,7 @@ import { anatomy as stepNavigationAnatomy } from "@zag-js/steps";
 
 export default defineSlotRecipe({
   className: "step-navigation",
-  slots: stepNavigationAnatomy.keys(),
+  slots: stepNavigationAnatomy.extendWith("title", "description").keys(),
   base: {
     root: {
       /**
@@ -20,10 +20,11 @@ export default defineSlotRecipe({
        * letter-spacing: 0.02em;
        * overflow-wrap: anywhere;
        */
+      textStyle: "std-16N-170",
       overflowWrap: "anywhere",
       colorPalette: "keyColor",
-      "--_step-width": "320px",
-      "--_step-min-width": "160px",
+      // "--_step-width": "320",
+      // "--_step-min-width": "160",
     },
     list: {
       /**
@@ -48,33 +49,8 @@ export default defineSlotRecipe({
        */
       position: "relative",
       boxSizing: "border-box",
-      _before: {
-        /**
-         * position: absolute;
-         * z-index: -1;
-         * content: "";
-         */
-        position: "absolute",
-        zIndex: -1,
-        content: '""',
-      },
-      _after: {
-        /**
-         * position: absolute;
-         * z-index: -1;
-         * content: "";
-         */
-        position: "absolute",
-        zIndex: -1,
-        content: '""',
-      },
-      _first: {
-        _before: {
-          display: "none",
-        },
-      },
       _last: {
-        _after: {
+        "& [data-part=separator]": {
           display: "none",
         },
       },
@@ -87,30 +63,6 @@ export default defineSlotRecipe({
         width: "calc(var(--_step-width, 320) / 16 * 1rem)",
         minWidth: "calc(var(--_step-min-width, 160) / 16 * 1rem)",
         px: "calc(16 / 16 * 1rem)",
-        _before: {
-          /**
-           * top: calc(var(--_number-size) / 2 + var(--_number-margin));
-           * right: 50%;
-           * width: 50%;
-           * border-bottom: 1px solid;
-           */
-          top: "calc(var(--_number-size) / 2 + var(--_number-margin))",
-          right: "50%",
-          width: "50%",
-          borderBottomWidth: "1px",
-        },
-        _after: {
-          /**
-           * top: calc(var(--_number-size) / 2 + var(--_number-margin));
-           * left: 50%;
-           * width: 50%;
-           * border-bottom: 1px solid;
-           */
-          top: "calc(var(--_number-size) / 2 + var(--_number-margin))",
-          left: "50%",
-          width: "50%",
-          borderBottomWidth: "1px",
-        },
       },
       _vertical: {
         /**
@@ -119,30 +71,47 @@ export default defineSlotRecipe({
          */
         flex: 1,
         pb: "calc(24 / 16 * 1rem)",
-        _before: {
-          /**
-           * left: calc(var(--_number-size) / 2 + var(--_number-margin));
-           * top: 0;
-           * height: calc(32 / 16 * 1rem);
-           * border-right: 1px solid;
-           */
-          left: "calc(var(--_number-size) / 2 + var(--_number-margin))",
-          top: 0,
-          height: "calc(32 / 16 * 1rem)",
-          borderRightWidth: "1px",
-        },
-        _after: {
-          /**
-           * left: calc(var(--_number-size) / 2 + var(--_number-margin));
-           * bottom: 0;
-           * height: calc(100% - calc(32 / 16 * 1rem));
-           * border-right: 1px solid;
-           */
-          left: "calc(var(--_number-size) / 2 + var(--_number-margin))",
-          bottom: 0,
-          height: "calc(100% - calc(32 / 16 * 1rem))",
-          borderRightWidth: "1px",
-        },
+      },
+    },
+    trigger: {
+      /**
+       * display: block;
+       * border: 0;
+       * background: none;
+       * padding: 0;
+       * color: inherit;
+       * font: inherit;
+       * text-wrap: pretty;
+       */
+      display: "block",
+      borderWidth: 0,
+      bg: "none",
+      p: 0,
+      color: "inherit",
+      font: "inherit",
+      textWrap: "pretty",
+      cursor: "pointer",
+      _horizontal: {
+        /**
+         * width: 100%;
+         * text-align: center;
+         */
+        width: "100%",
+        textAlign: "center",
+      },
+      _vertical: {
+        /**
+         * position: relative;
+         * display: flex;
+         * align-items: baseline;
+         * column-gap: calc(16 / 16 * 1rem);
+         * text-align: left;
+         */
+        position: "relative",
+        display: "flex",
+        alignItems: "baseline",
+        columnGap: "calc(16 / 16 * 1rem)",
+        textAlign: "left",
       },
     },
     indicator: {
@@ -169,7 +138,7 @@ export default defineSlotRecipe({
       position: "relative",
       display: "grid",
       placeContent: "center",
-      margin: "calc(4 / 16 * 1rem)",
+      m: "calc(4 / 16 * 1rem)",
       boxSizing: "border-box",
       width: "fit-content",
       height: "var(--_number-size)",
@@ -181,12 +150,12 @@ export default defineSlotRecipe({
       bg: "white",
       py: 0,
       px: "calc(2 / 16 * 1rem)",
-      fontWeight: "bold",
-      fontSize: "calc(20 / 16 * 1rem)",
-      lineHeight: 1.5,
-      letterSpacing: "0.02em",
+      textStyle: "std-20B-150",
       textDecoration: "inherit",
       textDecorationThickness: "inherit",
+      _after: {
+        content: '""',
+      },
       _current: {
         /**
          * background-color: var(--color-neutral-solid-gray-800);
@@ -209,8 +178,26 @@ export default defineSlotRecipe({
       },
       _complete: {
         bg: "colorPalette.bg",
+        _after: {
+          /**
+           * position: absolute;
+           * top: calc(-10 / 16 * 1rem);
+           * left: calc(50% + calc(6 / 16 * 1rem));
+           * border-radius: 50%;
+           * background-color: var(--color-neutral-white);
+           */
+          position: "absolute",
+          top: "calc(-10 / 16 * 1rem)",
+          left: "calc(50% + calc(6 / 16 * 1rem))",
+          borderRadius: "full",
+          bg: "colorPalette.primary",
+          width: "36px",
+          height: "36px",
+          clipPath:
+            "path('M18 0C8.064 0 0 8.064 0 18C0 27.936 8.064 36 18 36C27.936 36 36 27.936 36 18C36 8.064 27.936 0 18 0Z M14.4 27L5.4 18L7.938 15.462L14.4 21.906L28.062 8.244L30.6 10.8L14.4 27Z')",
+        },
       },
-      _horizontal: {
+      "[data-orientation=horizontal] > &": {
         /**
          * margin-right: auto;
          * margin-left: auto;
@@ -218,14 +205,107 @@ export default defineSlotRecipe({
         mr: "auto",
         ml: "auto",
       },
-      _vertical: {
+      "[data-orientation=vertical] > &": {
         /**
          * flex-shrink: 0;
          */
         flexShrink: 0,
+        mx: "calc(4 / 16 * 1rem)",
       },
     },
-    separator: {},
+    title: {
+      /**
+       * display: block;
+       * font-weight: bold;
+       * font-size: calc(18 / 16 * 1rem);
+       * line-height: 1.6;
+       * letter-spacing: 0.02em;
+       * text-decoration-thickness: inherit;
+       */
+      display: "block",
+      // fontWeight: "bold",
+      // fontSize: "calc(18 / 16 * 1rem)",
+      // lineHeight: 1.6,
+      // letterSpacing: "0.02em",
+      textStyle: "std-18B-160",
+      textDecorationThickness: "inherit",
+      "[data-orientation=horizontal] &": {
+        /**
+         * margin-top: var(--_title-margin);
+         */
+        mt: "var(--_title-margin)",
+      },
+      "[data-orientation=vertical] &": {
+        /**
+         * padding: calc(var(--_number-size) / 2 + var(--_number-margin) - 0.875rem) 0;
+         */
+        pt: "calc(var(--_number-size) / 2 + var(--_number-margin) - 0.875rem)",
+        pb: 0,
+      },
+    },
+    description: {
+      /**
+       * margin: var(--_description-margin) 0 0;
+       */
+      mt: "var(--_description-margin)",
+      "[data-orientation=horizontal] &": {
+        /**
+         * text-align: center;
+         */
+        textAlign: "center",
+      },
+      "[data-orientation=vertical] &": {
+        /**
+         * margin-top: calc(
+         *   var(--_description-margin) -
+         *   (var(--_number-size) / 2 + var(--_number-margin) - 0.875rem)
+         * );
+         * padding-left: calc(
+         *   var(--_number-size) +
+         *   var(--_number-margin) +
+         *   var(--_number-margin) +
+         *   calc(16 / 16 * 1rem)
+         * );
+         */
+        mt: "calc(var(--_description-margin) - (var(--_number-size) / 2 + var(--_number-margin) - 0.875rem))",
+        pl: "calc(var(--_number-size) + var(--_number-margin) + var(--_number-margin) + calc(16 / 16 * 1rem))",
+      },
+    },
+    separator: {
+      /**
+       * position: absolute;
+       * z-index: -1;
+       * content: "";
+       */
+      position: "absolute",
+      zIndex: -1,
+      content: '""',
+      borderColor: "colorPalette.primary",
+      _horizontal: {
+        /**
+         * top: calc(var(--_number-size) / 2 + var(--_number-margin));
+         * left: 50%;
+         * width: 50%;
+         * border-bottom: 1px solid;
+         */
+        top: "calc(var(--_number-size) / 2 + var(--_number-margin))",
+        left: "50%",
+        width: "100%",
+        borderBottomWidth: "1px",
+      },
+      _vertical: {
+        /**
+         * left: calc(var(--_number-size) / 2 + var(--_number-margin));
+         * bottom: 0;
+         * height: calc(100% - calc(32 / 16 * 1rem));
+         * border-right: 1px solid;
+         */
+        left: "calc(var(--_number-size) / 2 + var(--_number-margin))",
+        top: "calc(50% - calc((32 / 16 * 1rem) / 2))",
+        height: "100%",
+        borderRightWidth: "1px",
+      },
+    },
   },
   variants: {
     size: {
@@ -246,7 +326,11 @@ export default defineSlotRecipe({
             "--_description-margin": "calc(8 / 16 * 1rem)",
           },
         },
-        indicator: {},
+        indicator: {
+          _after: {
+            transform: "scale(0.5)",
+          },
+        },
       },
       sm: {
         root: {
@@ -269,9 +353,33 @@ export default defineSlotRecipe({
            * border-width: 1px;
            * font-size: calc(16 / 16 * 1rem);
            */
-          margin: "calc(3 / 16 * 1rem)",
+          m: "calc(3 / 16 * 1rem)",
           borderWidth: "1px",
-          fontSize: "calc(16 / 16 * 1rem)",
+          // fontSize: "calc(16 / 16 * 1rem)",
+          textStyle: "std-16B-170",
+          "[data-orientation=horizontal] > &": {
+            /**
+             * margin-right: auto;
+             * margin-left: auto;
+             */
+            mr: "auto",
+            ml: "auto",
+          },
+          "[data-orientation=vertical] > &": {
+            mx: "calc(4 / 16 * 1rem)",
+          },
+          _after: {
+            transform: "scale(0.33)",
+          },
+        },
+        title: {
+          /**
+           * font-weight: bold;
+           * font-size: calc(16 / 16 * 1rem);
+           * line-height: 1.7;
+           * letter-spacing: 0.02em;
+           */
+          textStyle: "std-16B-170",
         },
       },
     },
