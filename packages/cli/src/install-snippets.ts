@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { simpleGit } from "simple-git";
 import { tmpdir } from "os";
-import { cp } from "fs/promises";
+import { cp, readdir } from "fs/promises";
 import { join } from "path";
 import { readConfig } from "./read-config";
 import { copyComponents } from "./copy-components";
@@ -44,7 +44,22 @@ async function main(args: string[]) {
 
   // アプリ側へのコピー
   const outputDir = join(cwd, outDir);
-  const idsToCopy = args && args.length > 0 ? args : undefined;
+  let idsToCopy = args && args.length > 0 ? args : undefined;
+
+  // If ids were provided (from the catalogue), intersect with actual directories in the templateDir.
+  if (idsToCopy) {
+    const entries = await readdir(templateDir, { withFileTypes: true });
+    const available = entries.filter((e) => e.isDirectory()).map((d) => d.name);
+    const existing = idsToCopy.filter((id) => available.includes(id));
+    const missing = idsToCopy.filter((id) => !available.includes(id));
+    if (missing.length > 0) {
+      console.warn(
+        `Warning: the following components were listed in the catalogue but are not present in the template repository and will be skipped: ${missing.join(", ")}`,
+      );
+    }
+    idsToCopy = existing.length > 0 ? existing : undefined;
+  }
+
   await copyComponents({
     templateDir,
     outputDir,

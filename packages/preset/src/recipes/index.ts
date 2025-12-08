@@ -1,4 +1,5 @@
 import accordion from "./accordion";
+import blockquote from "./blockquote";
 import breadcrumb from "./breadcrumb";
 import button from "./button";
 import card from "./card";
@@ -6,6 +7,7 @@ import checkbox from "./checkbox";
 import chipLabel from "./chip-label";
 import chipTag from "./chip-tag";
 import datePicker from "./date-picker";
+import descriptionList from "./description-list";
 import disclosure from "./disclosure";
 import digitalGoDivider from "./divider";
 import drawer from "./drawer";
@@ -29,6 +31,7 @@ import radioGroup from "./radio-group";
 import requirementBadge from "./requirement-badge";
 import resourceList from "./resource-list";
 import select from "./select";
+import stepNavigation from "./step-navigation";
 import supportText from "./support-text";
 import table from "./table";
 import tabs from "./tabs";
@@ -39,6 +42,7 @@ import utilityLink from "./utility-link";
 
 const recipes = {
   accordion,
+  blockquote,
   breadcrumb,
   button,
   card,
@@ -46,9 +50,10 @@ const recipes = {
   chipLabel,
   chipTag,
   datePicker,
-  drawer,
+  descriptionList,
   disclosure,
   digitalGoDivider,
+  drawer,
   emergencyBanner,
   errorText,
   field,
@@ -69,6 +74,7 @@ const recipes = {
   requirementBadge,
   resourceList,
   select,
+  stepNavigation,
   supportText,
   table,
   tabs,
