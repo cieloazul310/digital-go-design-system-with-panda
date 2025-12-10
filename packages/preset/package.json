@@ -1,6 +1,6 @@
 {
   "name": "@cieloazul310/digital-go-pandacss-preset",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "license": "MIT",
   "homepage": "https://github.com/cieloazul310/digital-go-design-system-with-panda",
   "author": {
@@ -39,13 +39,13 @@
     "format": "prettier --parser typescript --write ."
   },
   "dependencies": {
-    "@cieloazul310/digital-go-pandacss-plugin": "^0.1.5",
-    "@cieloazul310/digital-go-pandacss-utils": "^0.1.5"
+    "@cieloazul310/digital-go-pandacss-plugin": "^0.2.0",
+    "@cieloazul310/digital-go-pandacss-utils": "^0.2.0"
   },
   "devDependencies": {
     "@pandacss/dev": "^1.4.2",
-    "@repo/eslint-config": "^0.1.5",
-    "@repo/typescript-config": "^0.1.5",
+    "@repo/eslint-config": "^0.2.0",
+    "@repo/typescript-config": "^0.2.0",
     "@zag-js/accordion": "^1.26.2",
     "@zag-js/anatomy": "^1.26.2",
     "@zag-js/checkbox": "^1.26.2",

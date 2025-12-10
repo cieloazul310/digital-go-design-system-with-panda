@@ -1,5 +1,11 @@
 # @cieloazul310/digital-go-pandacss-utils
 
+## 0.2.0
+
+### Minor Changes
+
+- b922a73: ユーティリティ`focusRing`を`focusBox`に変更しました
+
 ## 0.1.5
 
 ### Patch Changes
