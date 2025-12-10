@@ -1,5 +1,16 @@
 # @cieloazul310/digital-go-react-components
 
+## 0.2.0
+
+### Minor Changes
+
+- b922a73: ユーティリティ`focusRing`を`focusBox`に変更しました
+
+### Patch Changes
+
+- Updated dependencies [b922a73]
+  - styled-system@0.2.0
+
 ## 0.1.5
 
 ### Patch Changes
