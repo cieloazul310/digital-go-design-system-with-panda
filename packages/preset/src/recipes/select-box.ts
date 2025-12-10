@@ -53,7 +53,7 @@ export default defineRecipe({
       outlineWidth: "4px",
       outlineColor: "black",
       outlineOffset: "calc(2 / 16 * 1rem)",
-      focusRing: "calc(2 / 16 * 1rem)",
+      focusBox: "calc(2 / 16 * 1rem)",
     },
   },
   variants: {
