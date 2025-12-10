@@ -24,7 +24,7 @@ export default defineRecipe({
       outlineWidth: "4px",
       outlineColor: "black",
       outlineOffset: "calc(2 / 16 * 1rem)",
-      focusRing: "calc(2 / 16 * 1rem)",
+      focusBox: "calc(2 / 16 * 1rem)",
     },
     /**
      * aria-disabled:pointer-events-none aria-disabled:forced-colors:border-[GrayText] aria-disabled:forced-colors:text-[GrayText]

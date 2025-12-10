@@ -69,7 +69,7 @@ export default defineRecipe({
       outlineWidth: "4px",
       outlineColor: "black",
       outlineOffset: "calc(2 / 16 * 1rem)",
-      focusRing: "calc(6 / 16 * 1rem)",
+      focusBox: "calc(6 / 16 * 1rem)",
       zIndex: 1,
     },
     _highlighted: {
@@ -78,7 +78,7 @@ export default defineRecipe({
       outlineWidth: "4px",
       outlineColor: "black",
       outlineOffset: "calc(2 / 16 * 1rem)",
-      focusRing: "calc(6 / 16 * 1rem)",
+      focusBox: "calc(6 / 16 * 1rem)",
       zIndex: 1,
     },
   },

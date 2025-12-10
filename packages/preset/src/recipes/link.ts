@@ -19,7 +19,7 @@ export default defineRecipe({
       _visited: "magenta.900",
       _hover: "colorPalette.primary.100",
       _focusVisible: "colorPalette.primary.100",
-      _active: "orange.700",
+      _active: "orange.800",
     },
     /**
      * focus-visible:bg-yellow-300
@@ -51,7 +51,7 @@ export default defineRecipe({
       outlineWidth: "4px",
       outlineColor: "black",
       outlineOffset: "calc(2 / 16 * 1rem)",
-      focusRing: "calc(2 / 16 * 1rem)",
+      focusBox: "calc(2 / 16 * 1rem)",
     },
     /**
      * with icon

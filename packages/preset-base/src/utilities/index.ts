@@ -19,8 +19,8 @@ const borderInset = defineUtility({
   },
 });
 
-const focusRing = defineUtility({
-  className: "ring",
+const focusBox = defineUtility({
+  className: "focus-box",
   values: "borderWidths",
   transform(value, { token }) {
     return {
@@ -31,7 +31,7 @@ const focusRing = defineUtility({
 
 const utilities = {
   borderInset,
-  focusRing,
+  focusBox,
 };
 
 export default utilities;
