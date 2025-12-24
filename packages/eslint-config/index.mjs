@@ -1,5 +1,6 @@
 import { cwd } from "process";
 import { resolve } from "path";
+import { defineConfig } from "eslint/config";
 import eslint from "@eslint/js";
 import globals from "globals";
 import tseslint from "typescript-eslint";
@@ -9,9 +10,9 @@ const project = resolve(cwd(), "./tsconfig.json");
 /**
  * @type {import("eslint").Linter.Config}
  */
-export default tseslint.config(
+export default defineConfig(
   eslint.configs.recommended,
-  ...tseslint.configs.recommended,
+  tseslint.configs.recommended,
   eslintPluginImport.flatConfigs.recommended,
   eslintPluginImport.flatConfigs.typescript,
   {
