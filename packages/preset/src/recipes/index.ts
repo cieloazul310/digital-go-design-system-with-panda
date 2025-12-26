@@ -15,6 +15,7 @@ import emergencyBanner from "./emergency-banner";
 import errorText from "./error-text";
 import field from "./field";
 import fieldset from "./fieldset";
+import fileUpload from "./file-upload";
 import hamburgerMenuButton from "./hamburger-menu-button";
 import input from "./input";
 import label from "./label";
@@ -58,6 +59,7 @@ const recipes = {
   errorText,
   field,
   fieldset,
+  fileUpload,
   hamburgerMenuButton,
   input,
   label,
