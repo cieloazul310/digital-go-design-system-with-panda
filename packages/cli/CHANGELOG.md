@@ -1,5 +1,11 @@
 # @cieloazul310/digital-go-pandacss-cli
 
+## 0.2.1
+
+### Patch Changes
+
+- 721af9d: ラジオボタン、テキストエリア、ユーティリティリンクを追加
+
 ## 0.2.0
 
 ### Minor Changes

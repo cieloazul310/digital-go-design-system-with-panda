@@ -1,5 +1,13 @@
 # @cieloazul310/digital-go-pandacss-plugin
 
+## 0.2.1
+
+### Patch Changes
+
+- 721af9d: ラジオボタン、テキストエリア、ユーティリティリンクを追加
+- Updated dependencies [721af9d]
+  - @cieloazul310/digital-go-pandacss-utils@0.2.1
+
 ## 0.2.0
 
 ### Minor Changes
