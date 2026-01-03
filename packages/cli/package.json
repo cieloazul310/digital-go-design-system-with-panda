@@ -1,6 +1,6 @@
 {
   "name": "@cieloazul310/digital-go-pandacss-cli",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "type": "module",
   "license": "MIT",
   "homepage": "https://github.com/cieloazul310/digital-go-design-system-with-panda",
@@ -36,8 +36,8 @@
     "simple-git": "^3.28.0"
   },
   "devDependencies": {
-    "@repo/eslint-config": "^0.2.0",
-    "@repo/typescript-config": "^0.2.0",
+    "@repo/eslint-config": "^0.2.1",
+    "@repo/typescript-config": "^0.2.1",
     "eslint": "^9.37.0",
     "execa": "^9.6.0",
     "tsup": "8.5.0",
