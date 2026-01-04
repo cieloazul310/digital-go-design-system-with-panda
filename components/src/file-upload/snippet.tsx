@@ -50,4 +50,8 @@ export const ItemPreviewImage = withContext(
 export {
   FileUploadContext as Context,
   FileUploadHiddenInput as HiddenInput,
+  type FileUploadFileAcceptDetails as FileAcceptDetails,
+  type FileUploadFileChangeDetails as FileChangeDetails,
+  type FileUploadFileRejectDetails as FileRejectDetails,
+  type FileUploadFileValidateDetails as FileValidateDetails,
 } from "@ark-ui/react/file-upload";

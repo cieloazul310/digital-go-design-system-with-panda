@@ -33,3 +33,5 @@ export {
   CheckboxContext as Context,
   CheckboxHiddenInput as HiddenInput,
 } from "@ark-ui/react/checkbox";
+
+export type { CheckboxCheckedChangeDetails as CheckedChangeDetails } from "@ark-ui/react/checkbox";

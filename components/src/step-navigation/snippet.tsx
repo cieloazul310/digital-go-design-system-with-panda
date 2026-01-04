@@ -29,3 +29,5 @@ export const Title = withContext(ark.span, "title");
 export const Description = withContext(ark.p, "description");
 
 export { StepsContext as Context } from "@ark-ui/react/steps";
+
+export type { StepChangeDetails as ChangeDetails } from "@ark-ui/react/steps";

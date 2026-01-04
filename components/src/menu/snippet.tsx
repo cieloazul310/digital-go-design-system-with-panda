@@ -53,3 +53,10 @@ export const TriggerItem = withContext(Menu.TriggerItem, "triggerItem");
 export const Trigger = withContext(Menu.Trigger, "trigger");
 
 export { MenuContext as Context } from "@ark-ui/react/menu";
+
+export type {
+  MenuHighlightChangeDetails as HighlightChangeDetails,
+  MenuOpenChangeDetails as OpenChangeDetails,
+  MenuSelectionDetails as SelectionDetails,
+  MenuValueChangeDetails as ValueChangeDetails,
+} from "@ark-ui/react/menu";

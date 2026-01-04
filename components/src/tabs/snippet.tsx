@@ -25,3 +25,8 @@ export const List = withContext(Tabs.List, "list");
 export const Trigger = withContext(Tabs.Trigger, "trigger");
 
 export { TabsContext as Context } from "@ark-ui/react/tabs";
+
+export type {
+  TabsFocusChangeDetails as FocusChangeDetails,
+  TabsValueChangeDetails as ValueChangeDetails,
+} from "@ark-ui/react/tabs";

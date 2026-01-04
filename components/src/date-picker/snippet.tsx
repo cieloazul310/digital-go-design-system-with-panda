@@ -85,3 +85,10 @@ export const ViewTrigger = withContext(DatePicker.ViewTrigger, "viewTrigger");
 export const YearSelect = withContext(DatePicker.YearSelect, "yearSelect");
 
 export { DatePickerContext as Context } from "@ark-ui/react/date-picker";
+
+export type {
+  DatePickerFocusChangeDetails as FocusChangeDetails,
+  DatePickerOpenChangeDetails as OpenChangeDetails,
+  DatePickerValueChangeDetails as ValueChangeDetails,
+  DatePickerViewChangeDetails as ViewChangeDetails,
+} from "@ark-ui/react/date-picker";

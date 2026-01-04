@@ -94,3 +94,9 @@ export {
   SelectContext as Context,
   SelectHiddenSelect as HiddenSelect,
 } from "@ark-ui/react/select";
+
+export type {
+  SelectHighlightChangeDetails as HighlightChangeDetails,
+  SelectOpenChangeDetails as OpenChangeDetails,
+  SelectValueChangeDetails as ValueChangeDetails,
+} from "@ark-ui/react/select";

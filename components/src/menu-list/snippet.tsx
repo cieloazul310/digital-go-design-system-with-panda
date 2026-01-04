@@ -38,3 +38,12 @@ export const ItemIndicator = withContext(
   Listbox.ItemIndicator,
   "itemIndicator",
 );
+
+export { ListboxContext as Context } from "@ark-ui/react/listbox";
+
+export type {
+  ListboxHighlightChangeDetails as HighlightChangeDetails,
+  ListboxScrollToIndexDetails as ScrollToIndexDetails,
+  ListboxSelectionDetails as SelectionDetails,
+  ListboxValueChangeDetails as ValueChangeDetails,
+} from "@ark-ui/react/listbox";
