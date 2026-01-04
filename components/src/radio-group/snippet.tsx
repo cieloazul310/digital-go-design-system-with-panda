@@ -26,3 +26,5 @@ export {
   RadioGroupContext as Context,
   RadioGroupItemHiddenInput as ItemHiddenInput,
 } from "@ark-ui/react/radio-group";
+
+export type { RadioGroupValueChangeDetails as ValueChangeDetails } from "@ark-ui/react/radio-group";

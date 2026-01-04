@@ -71,3 +71,15 @@ export type NodeProviderProps = TreeView.NodeProviderProps<TreeNode>;
 export const NodeProvider = TreeView.NodeProvider;
 
 export { TreeViewContext as Context } from "@ark-ui/react/tree-view";
+
+export type {
+  TreeViewCheckedChangeDetails as ViewCheckedChangeDetails,
+  TreeViewExpandedChangeDetails as ViewExpandedChangeDetails,
+  TreeViewFocusChangeDetails as ViewFocusChangeDetails,
+  TreeViewLoadChildrenCompleteDetails as ViewLoadChildrenCompleteDetails,
+  TreeViewLoadChildrenDetails as ViewLoadChildrenDetails,
+  TreeViewLoadChildrenErrorDetails as ViewLoadChildrenErrorDetails,
+  TreeViewRenameCompleteDetails as ViewRenameCompleteDetails,
+  TreeViewRenameStartDetails as ViewRenameStartDetails,
+  TreeViewSelectionChangeDetails as ViewSelectionChangeDetails,
+} from "@ark-ui/react/tree-view";
