@@ -23,8 +23,8 @@ export default defineRecipe({
       outlineStyle: "solid",
       outlineWidth: "4px",
       outlineColor: "black",
-      outlineOffset: "calc(2 / 16 * 1rem)",
-      focusBox: "calc(2 / 16 * 1rem)",
+      outlineOffset: 0.5,
+      focusBox: "calc({spacing.1} / 2)",
     },
     /**
      * aria-disabled:pointer-events-none aria-disabled:forced-colors:border-[GrayText] aria-disabled:forced-colors:text-[GrayText]
@@ -36,10 +36,14 @@ export default defineRecipe({
      * button default
      */
     display: "inline-flex",
+    columnGap: 1,
     textAlign: "center",
     alignItems: "center",
     justifyContent: "center",
     cursor: "pointer",
+    _icon: {
+      flexShrink: 0,
+    },
   },
   variants: {
     variant: {
@@ -130,7 +134,7 @@ export default defineRecipe({
         /**
          * lg: 'min-w-[calc(136/16*1rem)] min-h-14 rounded-8 px-4 py-3 text-oln-16B-100'
          */
-        minWidth: "calc(136 / 16 * 1rem)",
+        minWidth: "calc({spacing.1} * 34)",
         minHeight: 14,
         rounded: 8,
         px: 4,
@@ -156,6 +160,7 @@ export default defineRecipe({
         minWidth: 20,
         minHeight: 9,
         textStyle: "oln-16B-100",
+        px: 3,
         py: 0.5,
         rounded: 6,
         _after: {

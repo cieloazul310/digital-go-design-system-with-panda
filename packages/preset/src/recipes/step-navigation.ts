@@ -62,7 +62,7 @@ export default defineSlotRecipe({
          */
         width: "calc(var(--_step-width, 320) / 16 * 1rem)",
         minWidth: "calc(var(--_step-min-width, 160) / 16 * 1rem)",
-        px: "calc(16 / 16 * 1rem)",
+        px: 4,
       },
       _vertical: {
         /**
@@ -70,7 +70,7 @@ export default defineSlotRecipe({
          * padding-bottom: calc(24 / 16 * 1rem);
          */
         flex: 1,
-        pb: "calc(24 / 16 * 1rem)",
+        pb: 6,
       },
     },
     trigger: {
@@ -110,7 +110,7 @@ export default defineSlotRecipe({
         position: "relative",
         display: "flex",
         alignItems: "baseline",
-        columnGap: "calc(16 / 16 * 1rem)",
+        columnGap: 4,
         textAlign: "left",
       },
     },
@@ -138,7 +138,7 @@ export default defineSlotRecipe({
       position: "relative",
       display: "grid",
       placeContent: "center",
-      m: "calc(4 / 16 * 1rem)",
+      m: 1,
       boxSizing: "border-box",
       width: "fit-content",
       height: "var(--_number-size)",
@@ -149,7 +149,7 @@ export default defineSlotRecipe({
       borderColor: "colorPalette.primary",
       bg: "white",
       py: 0,
-      px: "calc(2 / 16 * 1rem)",
+      px: 0.5,
       textStyle: "std-20B-150",
       textDecoration: "inherit",
       textDecorationThickness: "inherit",
@@ -173,8 +173,8 @@ export default defineSlotRecipe({
         outlineWidth: "var(--_outline-width)",
         outlineStyle: "solid",
         outlineColor: "colorPalette.primary",
-        outlineOffset: "calc(2 / 16 * 1rem)",
-        boxShadow: "0 0 0 calc(2 / 16 * 1rem) white",
+        outlineOffset: 0.5,
+        boxShadow: "0 0 0 {spacing.0.5} white",
       },
       _complete: {
         bg: "colorPalette.bg",
@@ -187,8 +187,8 @@ export default defineSlotRecipe({
            * background-color: var(--color-neutral-white);
            */
           position: "absolute",
-          top: "calc(-10 / 16 * 1rem)",
-          left: "calc(50% + calc(6 / 16 * 1rem))",
+          top: -2.5,
+          left: "calc(50% + {spacing.1.5})",
           borderRadius: "full",
           bg: "colorPalette.primary",
           width: "36px",
@@ -210,7 +210,7 @@ export default defineSlotRecipe({
          * flex-shrink: 0;
          */
         flexShrink: 0,
-        mx: "calc(4 / 16 * 1rem)",
+        mx: 1,
       },
     },
     title: {
@@ -268,7 +268,7 @@ export default defineSlotRecipe({
          * );
          */
         mt: "calc(var(--_description-margin) - (var(--_number-size) / 2 + var(--_number-margin) - 0.875rem))",
-        pl: "calc(var(--_number-size) + var(--_number-margin) + var(--_number-margin) + calc(16 / 16 * 1rem))",
+        pl: "calc(var(--_number-size) + var(--_number-margin) + var(--_number-margin) + {spacing.4})",
       },
     },
     separator: {
@@ -301,7 +301,7 @@ export default defineSlotRecipe({
          * border-right: 1px solid;
          */
         left: "calc(var(--_number-size) / 2 + var(--_number-margin))",
-        top: "calc(50% - calc((32 / 16 * 1rem) / 2))",
+        top: "calc(50% - {spacing.4})",
         height: "100%",
         borderRightWidth: "1px",
       },
@@ -319,11 +319,11 @@ export default defineSlotRecipe({
              * --_title-margin: calc(24 / 16 * 1rem);
              * --_description-margin: calc(8 / 16 * 1rem);
              */
-            "--_number-size": "calc(44 / 16 * 1rem)",
-            "--_number-margin": "calc(4 / 16 * 1rem)",
-            "--_outline-width": "calc(2 / 16 * 1rem)",
-            "--_title-margin": "calc(24 / 16 * 1rem)",
-            "--_description-margin": "calc(8 / 16 * 1rem)",
+            "--_number-size": "{spacing.11}",
+            "--_number-margin": "{spacing.1}",
+            "--_outline-width": "{spacing.0.5}",
+            "--_title-margin": "{spacing.6}",
+            "--_description-margin": "{spacing.2}",
           },
         },
         indicator: {
@@ -341,11 +341,11 @@ export default defineSlotRecipe({
            * --_title-margin: calc(16 / 16 * 1rem);
            * --_description-margin: calc(4 / 16 * 1rem);
            */
-          "--_number-size": "calc(32 / 16 * 1rem)",
-          "--_number-margin": "calc(3 / 16 * 1rem)",
-          "--_outline-width": "calc(1 / 16 * 1rem)",
-          "--_title-margin": "calc(16 / 16 * 1rem)",
-          "--_description-margin": "calc(4 / 16 * 1rem)",
+          "--_number-size": "{spacing.8}",
+          "--_number-margin": "calc({spacing.1} * 3 / 4)",
+          "--_outline-width": "calc({spacing.1} / 4)",
+          "--_title-margin": "{spacing.4}",
+          "--_description-margin": "{spacing.1}",
         },
         indicator: {
           /**
@@ -353,9 +353,8 @@ export default defineSlotRecipe({
            * border-width: 1px;
            * font-size: calc(16 / 16 * 1rem);
            */
-          m: "calc(3 / 16 * 1rem)",
+          m: "calc({spacing.1} * 3 / 4)",
           borderWidth: "1px",
-          // fontSize: "calc(16 / 16 * 1rem)",
           textStyle: "std-16B-170",
           "[data-orientation=horizontal] > &": {
             /**
@@ -366,7 +365,7 @@ export default defineSlotRecipe({
             ml: "auto",
           },
           "[data-orientation=vertical] > &": {
-            mx: "calc(4 / 16 * 1rem)",
+            mx: 1,
           },
           _after: {
             transform: "scale(0.33)",

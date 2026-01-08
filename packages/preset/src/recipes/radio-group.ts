@@ -102,8 +102,8 @@ export default defineSlotRecipe({
           outlineStyle: "solid",
           outlineWidth: "4px",
           outlineColor: "black",
-          outlineOffset: "calc(2 / 16 * 1rem)",
-          focusBox: "calc(2 / 16 * 1rem)",
+          outlineOffset: 0.5,
+          focusBox: "calc({spacing.1} / 2)",
         },
       },
       /**
@@ -115,8 +115,8 @@ export default defineSlotRecipe({
         outlineStyle: "solid",
         outlineWidth: "4px",
         outlineColor: "black",
-        outlineOffset: "calc(2 / 16 * 1rem)",
-        focusBox: "calc(2 / 16 * 1rem)",
+        outlineOffset: 0.5,
+        focusBox: "calc({spacing.1} / 2)",
       },
       _before: {
         /**
@@ -202,7 +202,7 @@ export default defineSlotRecipe({
           /**
            * data-[size=sm]:border-[calc(2/16*1rem)]
            */
-          borderWidth: "calc(2 / 16 * 1rem)",
+          borderWidth: "{spacing.0.5}",
         },
         itemText: {
           /**
@@ -231,7 +231,7 @@ export default defineSlotRecipe({
           /**
            * data-[size=md]:border-[calc(2/16*1rem)]
            */
-          borderWidth: "calc(2 / 16 * 1rem)",
+          borderWidth: "{spacing.0.5}",
         },
         itemText: {
           /**
@@ -260,7 +260,7 @@ export default defineSlotRecipe({
           /**
            * data-[size=lg]:border-[calc(3/16*1rem)]
            */
-          borderWidth: "calc(3 / 16 * 1rem)",
+          borderWidth: "calc({spacing.1} * 3 / 4)",
         },
         itemText: {
           /**

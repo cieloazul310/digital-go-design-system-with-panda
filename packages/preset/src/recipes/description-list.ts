@@ -16,10 +16,10 @@ export default defineSlotRecipe({
        * gap: calc(8 / 16 * 1rem) 0;
        * overflow-wrap: anywhere;
        */
-      mt: "calc(16 / 16 * 1rem)",
-      mb: "calc(16 / 16 * 1rem)",
+      mt: 4,
+      mb: 4,
       display: "grid",
-      rowGap: "calc(8 / 16 * 1rem)",
+      rowGap: 2,
       overflowWrap: "anywhere",
     },
     term: {
@@ -35,7 +35,7 @@ export default defineSlotRecipe({
       /**
        * margin-left: calc(32 / 16 * 1rem);
        */
-      ml: "calc(32 / 16 * 1rem)",
+      ml: 8,
     },
   },
   variants: {
@@ -48,7 +48,7 @@ export default defineSlotRecipe({
            * display: list-item;
            * list-style-type: disc;
            */
-          ml: "calc(32 / 16 * 1rem)",
+          ml: 8,
           display: "list-item",
           listStyleType: "disc",
         },
@@ -56,7 +56,7 @@ export default defineSlotRecipe({
       custom: {
         marker: {
           display: "inline-block",
-          minWidth: "calc(32 / 16 * 1rem)",
+          minWidth: 8,
           height: "1em",
         },
       },

@@ -34,8 +34,8 @@ export default defineSlotRecipe({
         outlineStyle: "solid",
         outlineWidth: "4px",
         outlineColor: "black",
-        outlineOffset: "calc(2 / 16 * 1rem)",
-        focusBox: "calc(2 / 16 * 1rem)",
+        outlineOffset: 0.5,
+        focusBox: "calc({spacing.1} / 2)",
       },
     },
     image: {
