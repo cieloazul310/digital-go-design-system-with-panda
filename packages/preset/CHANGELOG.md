@@ -1,5 +1,14 @@
 # @cieloazul310/digital-go-pandacss-preset
 
+## 0.2.2
+
+### Patch Changes
+
+- 76a3fe1: レシピの`calc(n / 16 * 1rem)`の箇所をspacingのトークンで書き換え
+- Updated dependencies [76a3fe1]
+  - @cieloazul310/digital-go-pandacss-plugin@0.2.2
+  - @cieloazul310/digital-go-pandacss-utils@0.2.2
+
 ## 0.2.1
 
 ### Patch Changes
