@@ -1,5 +1,11 @@
 # @repo/typescript-config
 
+## 0.2.2
+
+### Patch Changes
+
+- 76a3fe1: レシピの`calc(n / 16 * 1rem)`の箇所をspacingのトークンで書き換え
+
 ## 0.2.1
 
 ### Patch Changes

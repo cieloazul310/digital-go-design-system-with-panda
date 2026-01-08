@@ -1,5 +1,13 @@
 # @cieloazul310/digital-go-react-components
 
+## 0.2.2
+
+### Patch Changes
+
+- 76a3fe1: レシピの`calc(n / 16 * 1rem)`の箇所をspacingのトークンで書き換え
+- Updated dependencies [76a3fe1]
+  - styled-system@0.2.2
+
 ## 0.2.1
 
 ### Patch Changes
