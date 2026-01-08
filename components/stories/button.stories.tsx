@@ -3,6 +3,7 @@
  */
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { fn } from "storybook/test";
+import { ThumbsUp } from "lucide-react";
 import { cx, css } from "styled-system/css";
 import { hstack } from "styled-system/patterns";
 import { button } from "styled-system/recipes";
@@ -63,6 +64,18 @@ export const ColorPalette: Story = {
   args: {
     size: "lg",
     colorPalette: "magenta",
+  },
+};
+
+export const WithIcon: Story = {
+  args: {
+    size: "lg",
+    children: (
+      <>
+        <ThumbsUp />
+        イイネ！
+      </>
+    ),
   },
 };
 

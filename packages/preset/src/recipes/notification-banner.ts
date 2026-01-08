@@ -21,8 +21,8 @@ export default defineSlotRecipe({
        * [--icon-size:calc(24/16*1rem)] desktop:[--icon-size:calc(36/16*1rem)]
        */
       "--icon-size": {
-        base: "calc(24 / 16 * 1rem)",
-        md: "calc(36 / 16 * 1rem)",
+        base: "{spacing.6}",
+        md: "{spacing.9}",
       },
       "--icon-scale": {
         base: 24 / 36,
@@ -60,7 +60,7 @@ export default defineSlotRecipe({
       /**
        * mt-[calc(2/16*1rem)] desktop:mt-0
        */
-      mt: { base: "calc(2 / 16 * 1rem)", md: 0 },
+      mt: { base: 0.5, md: 0 },
       /**
        * h-auto max-w-full
        */
@@ -134,9 +134,9 @@ export default defineSlotRecipe({
        *  }
        * }
        */
-      mb: "calc(-8 / 16 * 1rem)",
+      mb: -2,
       display: "grid",
-      gap: { base: "calc(8 / 16 * 1rem)", md: "calc(16 / 16 * 1rem)" },
+      gap: { base: 2, md: 4 },
       gridColumn: { base: "1 / 4", md: "2 / 4" },
       gridAutoFlow: { md: "column" },
       justifyContent: { md: "end" },

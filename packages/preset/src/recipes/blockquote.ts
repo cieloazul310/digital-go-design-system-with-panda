@@ -12,13 +12,13 @@ export default defineRecipe({
      * padding-left: calc(24 / 16 * 1rem);
      */
     my: 0,
-    mx: "calc(40 / 16 * 1rem)",
+    mx: 10,
     borderLeftWidth: "8px",
     borderColor: "solid-gray.536",
-    pt: "calc(8 / 16 * 1rem)",
-    pr: "calc(16 / 16 * 1rem)",
-    pb: "calc(8 / 16 * 1rem)",
-    pl: "calc(24 / 16 * 1rem)",
+    pt: 2,
+    pr: 4,
+    pb: 2,
+    pl: 6,
     "& > *:first-child": {
       mt: 0,
     },

@@ -18,7 +18,7 @@ export default defineSlotRecipe({
     content: {
       minWidth: "fit-content",
       width: "auto",
-      maxHeight: "calc((44 * 6.5 + 16) / 16 * 1rem)",
+      maxHeight: "calc({spacing.1} * 75.5)",
       py: 2,
       borderWidth: "1px",
       borderColor: "solid-gray.420",
@@ -54,8 +54,8 @@ export default defineSlotRecipe({
         outlineStyle: "solid",
         outlineWidth: "4px",
         outlineColor: "black",
-        outlineOffset: "calc(2 / 16 * 1rem)",
-        focusBox: "calc(2 / 16 * 1rem)",
+        outlineOffset: 0.5,
+        focusBox: "calc({spacing.1} / 2)",
         zIndex: 1,
       },
       /**
@@ -72,7 +72,7 @@ export default defineSlotRecipe({
     isCondensed: {
       true: {
         content: {
-          maxHeight: "calc((32 * 6.5 + 16) / 16 * 1rem)",
+          maxHeight: "calc({spacing.2} * 28)",
         },
         itemGroupLabel: {
           py: 1.5,

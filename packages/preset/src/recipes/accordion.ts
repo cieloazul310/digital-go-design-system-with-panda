@@ -23,8 +23,8 @@ export default defineSlotRecipe({
       borderBottomWidth: "1px",
       borderBottomColor: "solid-gray.420",
       "--icon-size": {
-        base: "calc(20 / 16 * 1rem)",
-        md: "calc(32 / 16 * 1rem)",
+        base: "{spacing.5}",
+        md: "{spacing.8}",
       },
     },
     itemTrigger: {
@@ -48,8 +48,8 @@ export default defineSlotRecipe({
        */
       py: { base: 2, md: 3.5 },
       pl: {
-        base: "calc(var(--icon-size) + (12 / 16 * 1rem))",
-        md: "calc(var(--icon-size) + (20 / 16 * 1rem))",
+        base: "calc(var(--icon-size) + {spacing.3})",
+        md: "calc(var(--icon-size) + {spacing.5})",
       },
       pr: { base: 2, md: 4 },
       cursor: { _hover: "pointer" },
@@ -66,8 +66,8 @@ export default defineSlotRecipe({
         outlineStyle: "solid",
         outlineWidth: "4px",
         outlineColor: "black",
-        outlineOffset: "calc(2 / 16 * 1rem)",
-        focusBox: "calc(2 / 16 * 1rem)",
+        outlineOffset: 0.5,
+        focusBox: "calc({spacing.1} / 2)",
       },
       /**
        * remove button style
@@ -120,8 +120,8 @@ export default defineSlotRecipe({
         desktop:pl-[calc(var(--icon-size)+(20/16*1rem))] desktop:pr-4 desktop:py-6
        */
       pl: {
-        base: "calc(var(--icon-size) + (12 / 16 * 1rem))",
-        md: "calc(var(--icon-size) + (20 / 16 * 1rem))",
+        base: "calc(var(--icon-size) + {spacing.3})",
+        md: "calc(var(--icon-size) + {spacing.5})",
       },
       pr: { base: 2, md: 4 },
       py: { base: 4, md: 6 },
