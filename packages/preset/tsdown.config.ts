@@ -10,6 +10,7 @@ export default defineConfig({
       target: ["node22"],
     },
   },
+  inlineOnly: false,
   dts: true,
   clean: true,
 });
