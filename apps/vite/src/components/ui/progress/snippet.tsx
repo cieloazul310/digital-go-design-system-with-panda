@@ -34,3 +34,8 @@ export const ValueText = withContext(Progress.ValueText, "valueText");
 export const View = withContext(Progress.View, "view");
 
 export { ProgressContext as Context } from "@ark-ui/react/progress";
+
+export type {
+  ProgressValueChangeDetails as ValueChangeDetails,
+  ProgressValueTranslationDetails as ValueTranslationDetails,
+} from "@ark-ui/react/progress";

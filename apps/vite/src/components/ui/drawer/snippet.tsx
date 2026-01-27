@@ -38,7 +38,9 @@ export const Body = withContext(ark.div, "body");
 
 export const Footer = withContext(ark.div, "footer");
 
-export {
-  DialogContext as Context,
-  type DialogContextProps as ContextProps,
+export { DialogContext as Context } from "@ark-ui/react/dialog";
+
+export type {
+  DialogContextProps as ContextProps,
+  DialogOpenChangeDetails as OpenChangeDetails,
 } from "@ark-ui/react/dialog";

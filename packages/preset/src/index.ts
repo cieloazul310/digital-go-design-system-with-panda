@@ -18,7 +18,7 @@ const base = {
 
 export default definePreset(base);
 
-export const createPreset = (keyColor?: Palette) =>
+export const createPreset = (keyColor: Palette = "blue") =>
   definePreset({
     ...base,
     theme: {
@@ -26,7 +26,7 @@ export const createPreset = (keyColor?: Palette) =>
       extend: {
         semanticTokens: {
           colors: {
-            keyColor: createKeyColor(keyColor ?? "blue"),
+            keyColor: createKeyColor(keyColor),
           },
         },
       },

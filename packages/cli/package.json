@@ -1,7 +1,6 @@
 {
   "name": "@cieloazul310/digital-go-pandacss-cli",
   "version": "0.2.2",
-  "type": "module",
   "license": "MIT",
   "homepage": "https://github.com/cieloazul310/digital-go-design-system-with-panda",
   "author": {
@@ -17,6 +16,7 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
+  "type": "module",
   "files": [
     "bin",
     "public"
@@ -26,7 +26,7 @@
   },
   "scripts": {
     "prebuild": "tsx ../../scripts/generate-catalogue.ts",
-    "build": "tsup",
+    "build": "tsdown",
     "dev": "npm run build -- --watch",
     "eslint": "eslint src --fix",
     "format": "prettier --parser typescript --write ."
@@ -40,7 +40,7 @@
     "@repo/typescript-config": "^0.2.2",
     "eslint": "^9.37.0",
     "execa": "^9.6.0",
-    "tsup": "8.5.0",
+    "tsdown": "^0.20.1",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3"
   },
