@@ -1,5 +1,11 @@
 # @repo/eslint-config
 
+## 0.2.3
+
+### Patch Changes
+
+- 203fdd3: ビルドツールを`tsup`から`tsdown`に変更
+
 ## 0.2.2
 
 ### Patch Changes
