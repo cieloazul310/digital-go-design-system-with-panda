@@ -10,6 +10,7 @@ export default defineConfig({
       target: ["node22"],
     },
   },
+  external: [/^@pandacss\//],
   dts: true,
   clean: true,
 });

@@ -10,7 +10,7 @@ export default defineConfig({
       target: ["node22"],
     },
   },
-  inlineOnly: false,
+  external: [/^@pandacss\//, /^@cieloazul310\//],
   dts: true,
   clean: true,
 });
