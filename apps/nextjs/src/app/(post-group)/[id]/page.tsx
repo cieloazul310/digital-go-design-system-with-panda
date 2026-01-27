@@ -1,7 +1,6 @@
 import { css } from "styled-system/css";
 import { post } from "@/content";
 import { ResourceList } from "@/components/ui/resource-list";
-import { BaseLayout } from "@/components/layout/base";
 import { Heading2 } from "@/components/article";
 import { LeadingText } from "@/components/shortcodes";
 import { Link } from "@/components/link";
@@ -24,7 +23,7 @@ export default async function Page({
   const data = allPosts.filter(({ slug }) => slug.includes(id));
 
   return (
-    <BaseLayout slug={[id]}>
+    <>
       <article>
         <hgroup
           className={css({
@@ -69,9 +68,9 @@ export default async function Page({
             >
               <ResourceList.Main py={8} textStyle="std-17N-170">
                 <ResourceList.Content gap={4}>
-                  <ResourceList.Title asChild>
-                    <Link href={href}>{frontmatter.title}</Link>
-                  </ResourceList.Title>
+                  <Link href={href}>
+                    <ResourceList.Title>{frontmatter.title}</ResourceList.Title>
+                  </Link>
                   {frontmatter.description && <p>{frontmatter.description}</p>}
                 </ResourceList.Content>
               </ResourceList.Main>
@@ -79,6 +78,6 @@ export default async function Page({
           ))}
         </nav>
       </section>
-    </BaseLayout>
+    </>
   );
 }

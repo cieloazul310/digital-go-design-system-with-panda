@@ -1,12 +1,11 @@
 import remarkGfm from "remark-gfm";
 import NextLink from "next/link";
 import rehypeShiki from "@shikijs/rehype";
-import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { css } from "styled-system/css";
 import { Stack } from "styled-system/jsx";
 import { useMDXComponents } from "@/mdx-components";
-import { BaseLayout } from "@/components/layout/base";
+import { Button } from "@/components/ui/button";
 import { LeadingText } from "@/components/shortcodes";
 import { Link } from "@/components/link";
 import { post } from "@/content";
@@ -42,7 +41,7 @@ async function Page({ params }: { params: Promise<{ slug: string[] }> }) {
   const { older, newer } = context;
 
   return (
-    <BaseLayout slug={slug}>
+    <>
       <article>
         <hgroup
           className={css({
@@ -131,7 +130,7 @@ async function Page({ params }: { params: Promise<{ slug: string[] }> }) {
           )}
         </div>
       </nav>
-    </BaseLayout>
+    </>
   );
 }
 

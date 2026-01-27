@@ -16,24 +16,28 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
+  "type": "module",
   "files": [
     "dist"
   ],
   "types": "./dist/index.d.ts",
-  "main": "./dist/index.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
   "exports": {
     ".": {
       "source": "./src/index.ts",
-      "types": "./dist/index.d.ts",
       "import": {
         "types": "./dist/index.d.mts",
         "default": "./dist/index.mjs"
       },
-      "require": "./dist/index.js"
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
     }
   },
   "scripts": {
-    "build": "tsup",
+    "build": "tsdown",
     "dev": "npm run build -- --watch",
     "eslint": "eslint src --fix",
     "format": "prettier --parser typescript --write ."
@@ -61,7 +65,7 @@
     "@zag-js/tabs": "^1.26.2",
     "@zag-js/tree-view": "^1.26.2",
     "eslint": "^9.37.0",
-    "tsup": "8.5.0",
+    "tsdown": "^0.20.1",
     "typescript": "^5.9.3"
   },
   "peerDependencies": {
