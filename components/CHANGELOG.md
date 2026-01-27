@@ -1,5 +1,13 @@
 # @cieloazul310/digital-go-react-components
 
+## 0.2.3
+
+### Patch Changes
+
+- 203fdd3: ビルドツールを`tsup`から`tsdown`に変更
+- Updated dependencies [203fdd3]
+  - styled-system@0.2.3
+
 ## 0.2.2
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @cieloazul310/digital-go-pandacss-plugin
 
+## 0.2.3
+
+### Patch Changes
+
+- 203fdd3: ビルドツールを`tsup`から`tsdown`に変更
+- Updated dependencies [203fdd3]
+  - @cieloazul310/digital-go-pandacss-utils@0.2.3
+
 ## 0.2.2
 
 ### Patch Changes
