@@ -53,7 +53,7 @@ export default function App() {
         >
           <ResourceList.Main py={8} textStyle="std-17N-170">
             <ResourceList.Content gap={4}>
-              <ResourceList.Title asChild>
+              <ResourceList.Title>
                 <Link href={href}>{title}</Link>
               </ResourceList.Title>
               <p>{description}</p>

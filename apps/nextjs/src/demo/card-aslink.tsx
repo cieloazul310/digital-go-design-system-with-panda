@@ -42,7 +42,7 @@ export default function App() {
           <Card.Main>
             <hgroup>
               <p>{name_en}</p>
-              <Card.Title asChild>
+              <Card.Title>
                 <Link href={url}>{name}</Link>
               </Card.Title>
             </hgroup>

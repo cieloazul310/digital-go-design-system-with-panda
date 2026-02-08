@@ -68,9 +68,9 @@ export default async function Page({
             >
               <ResourceList.Main py={8} textStyle="std-17N-170">
                 <ResourceList.Content gap={4}>
-                  <Link href={href}>
-                    <ResourceList.Title>{frontmatter.title}</ResourceList.Title>
-                  </Link>
+                  <ResourceList.Title>
+                    <Link href={href}>{frontmatter.title}</Link>
+                  </ResourceList.Title>
                   {frontmatter.description && <p>{frontmatter.description}</p>}
                 </ResourceList.Content>
               </ResourceList.Main>

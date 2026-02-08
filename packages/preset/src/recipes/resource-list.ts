@@ -78,15 +78,17 @@ export default defineSlotRecipe({
           position: "relative",
         },
         title: {
-          _before: {
-            content: '""',
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "full",
-            height: "full",
-            zIndex: 0,
-            cursor: "inherit",
+          "& > a": {
+            _before: {
+              content: '""',
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "full",
+              height: "full",
+              zIndex: 0,
+              cursor: "inherit",
+            },
           },
         },
       },
