@@ -88,7 +88,7 @@ export const AsLink: Story = {
           />
         </Card.Image>
         <Card.Main>
-          <Card.Title asChild>
+          <Card.Title>
             <Link href="/">清水寺</Link>
           </Card.Title>
         </Card.Main>
@@ -107,7 +107,7 @@ export const OnlyMainArea: Story = {
     }),
     children: (
       <Card.Main>
-        <Card.Title asChild>
+        <Card.Title>
           <Link color="inherit" href="/">
             子育て支援補助金制度
           </Link>
@@ -145,7 +145,7 @@ export const MainAndImageResponsive: Story = {
           />
         </Card.Image>
         <Card.Main>
-          <Card.Title asChild>
+          <Card.Title>
             <Link color="inherit" href="/">
               第18回くらしの広場交流会
             </Link>
@@ -193,7 +193,7 @@ export const MainAndImageBg: Story = {
           />
         </Card.Image>
         <Card.Main>
-          <Card.Title asChild>
+          <Card.Title>
             <Link color="inherit" href="/">
               地域をつなぐ秋のマルシェ
             </Link>
@@ -382,7 +382,7 @@ export const VerticalWithVideo: Story = {
         </Card.Image>
         <Card.Main>
           <div className={css({ display: "flex", alignItems: "center" })}>
-            <Card.Title flexGrow={1} asChild>
+            <Card.Title flexGrow={1}>
               <Link href="/" color="inherit">
                 もりやまかわ遊園地の開業
               </Link>
@@ -520,7 +520,7 @@ export const VerticalWithInsetImageAndEndIcon: Story = {
       <>
         <Card.Main>
           <div className={css({ display: "flex", alignItems: "center" })}>
-            <Card.Title flexGrow={1} asChild>
+            <Card.Title flexGrow={1}>
               <Link color="inherit" href="/">
                 アジアにおける交通問題
               </Link>

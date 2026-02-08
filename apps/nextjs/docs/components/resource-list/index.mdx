@@ -17,6 +17,8 @@ import { ResourceList } from "@/components/ui/resource-list";
 
 ### リンク
 
-`<ResourceList.Root>`に`asLink`属性を付与すると、ホバー時にインタラクションが加わる。このとき、通常`<ResourceList.Title>`に`asChild`属性を付与し、子要素のリンクと合成して使用する。
+`<ResourceList.Root>`に`asLink`属性を付与すると、ホバー時にインタラクションが加わる。<del>このとき、通常`<ResourceList.Title>`に`asChild`属性を付与し、子要素のリンクと合成して使用する。</del>
+
+<ins>v0.3以降を使用する場合は、`<ResourceList.Title>`に`asChild`属性を付与しないでください</ins>
 
 <DemoViewer name="resource-list-aslink" />

@@ -68,7 +68,7 @@ export const AsLink: Story = {
           <CircleUser />
           <ResourceList.Content>
             <span>ラベル</span>
-            <ResourceList.Title asChild>
+            <ResourceList.Title>
               <Link
                 href="https://cieloazul310.github.io"
                 target="_blank"
@@ -185,7 +185,7 @@ export const AccountsExample: Story = {
           <li>
             <ResourceList.Main>
               <ResourceList.Content>
-                <ResourceList.Title asChild>
+                <ResourceList.Title>
                   <NextLink
                     className={link()}
                     href={`/${lastName}_${firstName}`}
@@ -367,7 +367,7 @@ export const SearchResultExample: Story = {
         <ResourceList.Root key={href} {...props}>
           <ResourceList.Main>
             <ResourceList.Content>
-              <ResourceList.Title mb={4} asChild>
+              <ResourceList.Title mb={4}>
                 <NextLink className={link()} href={href}>
                   {title}
                 </NextLink>
@@ -436,7 +436,7 @@ export const InformationExample: Story = {
                   重要
                 </span>
               )}
-              <ResourceList.Title asChild>
+              <ResourceList.Title>
                 <NextLink className={link()} href={href}>
                   {title}
                 </NextLink>
