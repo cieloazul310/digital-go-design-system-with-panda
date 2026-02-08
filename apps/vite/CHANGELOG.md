@@ -1,5 +1,38 @@
 # app
 
+## 0.3.0
+
+### Minor Changes
+
+- 5c02036: カードとリソースリストの`asLink`アプローチを変更
+
+  v0.3以降は`<Card.Title>`及び`<ResourceList.Title>`と直下のLinkコンポーネントの**合成をしないでください。**
+  v0.2以前のバージョンを使用している場合は、以下のようにTitleコンポーネントの`asChild`属性を削除してください。
+
+  ```diff
+  <Card.Root asLink key={name}>
+    <Card.Main>
+  -    <Card.Title asChild>
+  +    <Card.Title>
+        <Link href="#">リンクタイトル</Link>
+      </Card.Title>
+    </Card.Main>
+  </Card.Root>
+  ```
+
+  ```diff
+  <ResourceList.Root asLink>
+    <ResourceList.Main>
+      <ResourceList.Content>
+  -      <ResourceList.Title asChild>
+  +      <ResourceList.Title>
+          <Link href="#>リンクタイトル</Link>
+        </ResourceList.Title>
+      </ResourceList.Content>
+    </ResourceList.Main>
+  </ResourceList.Root>
+  ```
+
 ## 0.2.3
 
 ### Patch Changes
