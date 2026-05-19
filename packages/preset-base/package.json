@@ -47,14 +47,14 @@
     "@digital-go-jp/design-tokens": "^1.1.1"
   },
   "devDependencies": {
-    "@pandacss/dev": "^1.4.2",
-    "@pandacss/preset-panda": "^1.4.2",
+    "@pandacss/dev": "^1.11.1",
+    "@pandacss/preset-panda": "^1.11.1",
     "@repo/eslint-config": "^0.3.0",
     "@repo/typescript-config": "^0.3.0",
     "eslint": "^9.37.0",
     "polished": "^4.3.1",
-    "tsdown": "^0.20.1",
-    "typescript": "^5.9.3"
+    "tsdown": "^0.22.0",
+    "typescript": "^6.0.3"
   },
   "peerDependencies": {
     "@pandacss/dev": ">=1.0.1",
