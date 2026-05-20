@@ -1,6 +1,9 @@
 import remarkGfm from "remark-gfm";
 import NextLink from "next/link";
-import rehypeShiki from "@shikijs/rehype";
+import rehypePrettyCode, {
+  type Options as RehypePrettyCodeOptions,
+} from "rehype-pretty-code";
+import { transformerNotationDiff } from "@shikijs/transformers";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { css } from "styled-system/css";
 import { Stack } from "styled-system/jsx";
@@ -25,12 +28,11 @@ async function Page({ params }: { params: Promise<{ slug: string[] }> }) {
       remarkPlugins: [remarkGfm],
       rehypePlugins: [
         [
-          rehypeShiki,
+          rehypePrettyCode,
           {
-            themes: {
-              light: "slack-dark",
-            },
-          },
+            theme: "slack-dark",
+            transformers: [transformerNotationDiff()],
+          } satisfies RehypePrettyCodeOptions,
         ],
       ],
     },
