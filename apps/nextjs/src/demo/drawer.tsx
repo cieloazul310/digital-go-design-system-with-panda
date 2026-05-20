@@ -7,7 +7,7 @@ import {
 
 export default function App() {
   return (
-    <Drawer.Root placement="right">
+    <Drawer.Root swipeDirection="end">
       <Drawer.Trigger asChild>
         <HamburgerMenuButton>
           <HamburgerIcon />
