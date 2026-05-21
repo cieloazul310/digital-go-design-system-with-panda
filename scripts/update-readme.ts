@@ -9,18 +9,25 @@ async function main() {
 
   function createTable() {
     const tableHeader =
-      "| 名称 | className | Recipe | Storybook |\n|------|---------|--------|-----------|";
+      "| 状態 | 名称 | className | Recipe | Storybook |\n|------|------|---------|--------|-----------|";
+
+    function statusEmoji(status?: string) {
+      if (status === "done") return "✅";
+      if (status === "progress") return "🔨";
+      return "❌";
+    }
 
     function recipeURL(id: string) {
       return `https://github.com/cieloazul310/digital-go-design-system-with-panda/blob/main/packages/preset/src/recipes/${id}.ts`;
     }
 
     const tableRows = Object.entries(catalog.components)
-      .map(([_, { name, id, storybook }]) => {
+      .map(([_, { name, id, storybook, status }]) => {
+        const emoji = statusEmoji(status);
         if (!storybook) {
-          return `| ${name} | ${id} | [Recipe](${recipeURL(id)}) | |`;
+          return `| ${emoji} | ${name} | ${id} | [Recipe](${recipeURL(id)}) | |`;
         }
-        return `| ${name} | ${id} | [Recipe](${recipeURL(id)}) | [Storybook](${storybook}) |`;
+        return `| ${emoji} | ${name} | ${id} | [Recipe](${recipeURL(id)}) | [Storybook](${storybook}) |`;
       })
       .join("\n");
 

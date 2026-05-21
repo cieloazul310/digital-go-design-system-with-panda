@@ -17,10 +17,18 @@ program
   .command("install [ids...]")
   .description("インストールするコンポーネントを指定します")
   .option("--all", "すべてのコンポーネントをインストールします")
+  .option(
+    "--include-progress",
+    "作業中のコンポーネントも --all でインストールします",
+  )
   /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
   .action(async (ids: string[] = [], options: any) => {
     if (options.all && ids.length > 0) {
       console.error("コンポーネントIDと--allを同時に指定することはできません");
+      process.exit(2);
+    }
+    if (options.includeProgress && !options.all) {
+      console.error("--include-progress は --all と併用してください");
       process.exit(2);
     }
     if (!options.all && ids.length === 0) {
@@ -33,7 +41,15 @@ program
     const availableIds = Object.values(catalogue.components || {}).map(
       ({ id }) => id,
     );
-    const targetIds = options.all ? availableIds : ids;
+    const targetIds = options.all
+      ? Object.values(catalogue.components || {})
+          .filter(
+            ({ status }) =>
+              status === "done" ||
+              (options.includeProgress && status === "progress"),
+          )
+          .map(({ id }) => id)
+      : ids;
 
     const unknown = targetIds.filter((id) => !availableIds.includes(id));
     if (unknown.length) {

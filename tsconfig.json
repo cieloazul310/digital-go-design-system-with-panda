@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["node"],
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
     "declaration": true,
@@ -19,6 +20,6 @@
     "verbatimModuleSyntax": true,
     "allowImportingTsExtensions": true
   },
-  "include": ["app", "packages"],
+  "include": ["app", "packages", "scripts"],
   "exclude": ["**/node_modules/**", "node_modules"]
 }

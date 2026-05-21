@@ -105,6 +105,54 @@ describe("digital go panda css CLI", () => {
     );
   });
 
+  it("includes progress components with --all --include-progress", async () => {
+    await cp(
+      resolve(__dirname, "../public/components.json"),
+      join(outputDir, "components.json"),
+    );
+
+    const cliPath = join(__dirname, "../bin/index.cjs");
+    const { stdout } = await execa(
+      "node",
+      [cliPath, "install", "--all", "--include-progress"],
+      { cwd: outputDir },
+    );
+
+    expect(stdout).toContain(
+      "✅ UIコンポーネントを src/components/ui に生成しました",
+    );
+
+    const progressComponent = join(
+      outputDir,
+      "src/components/ui",
+      "date-input",
+    );
+    expect(await exists(progressComponent)).toBe(true);
+  });
+
+  it("includes progress components without --include-progress", async () => {
+    await cp(
+      resolve(__dirname, "../public/components.json"),
+      join(outputDir, "components.json"),
+    );
+
+    const cliPath = join(__dirname, "../bin/index.cjs");
+    const { stdout } = await execa("node", [cliPath, "install", "--all"], {
+      cwd: outputDir,
+    });
+
+    expect(stdout).toContain(
+      "✅ UIコンポーネントを src/components/ui に生成しました",
+    );
+
+    const progressComponent = join(
+      outputDir,
+      "src/components/ui",
+      "date-input",
+    );
+    expect(await exists(progressComponent)).toBe(false);
+  });
+
   it("custom output directory", async () => {
     const customConfig = {
       outDir: "components/digital-go",
