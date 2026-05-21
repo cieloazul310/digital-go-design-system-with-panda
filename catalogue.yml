@@ -74,6 +74,15 @@ components:
     digitalgo: https://design.digital.go.jp/dads/components/date-picker/
     ark: https://ark-ui.com/docs/components/date-picker
 
+  DateInput:
+    id: date-input
+    name: 日付入力
+    className: date-input
+    description: 日付を分割形式で入力できるフォームコントロールです。
+    storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/docs/components-%E6%97%A5%E4%BB%98%E5%85%A5%E5%8A%9B--docs
+    digitalgo: https://design.digital.go.jp/dads/components/date-picker/
+    ark: https://ark-ui.com/docs/components/date-input
+
   DescriptionList:
     id: description-list
     name: 説明リスト
