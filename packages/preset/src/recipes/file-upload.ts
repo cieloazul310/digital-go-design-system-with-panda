@@ -51,7 +51,7 @@ export default defineSlotRecipe({
       display: "list-item",
       color: {
         base: "solid-gray.600",
-        "[data-status=rejected]": "error.1",
+        "&[data-status=rejected]": "error.1",
         _marker: "solid-gray.600",
       },
       "& > *": {
