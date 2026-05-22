@@ -10,7 +10,9 @@ export default defineConfig({
       target: ["node22"],
     },
   },
-  external: [/^@pandacss\//, /^@zag-js\//, /^@cieloazul310\//],
+  deps: {
+    neverBundle: [/^@pandacss\//, /^@zag-js\//, /^@cieloazul310\//],
+  },
   dts: true,
   clean: true,
 });

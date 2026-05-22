@@ -88,6 +88,18 @@ export const Code = (
         px: 1,
         rounded: 2,
       },
+      "& .diff.remove": {
+        bg: "error.2/30",
+        _before: {
+          content: "'-'",
+        },
+      },
+      "& .diff.add": {
+        bg: "success.2/30",
+        _before: {
+          content: "'+'",
+        },
+      },
     })}
     {...props}
   />

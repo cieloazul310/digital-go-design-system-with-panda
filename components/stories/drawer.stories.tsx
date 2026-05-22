@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { useState } from "react";
 import { css } from "styled-system/css";
-import { drawer } from "styled-system/recipes";
 import { Drawer } from "../src/drawer";
 import { Button } from "../src/button";
 import {
@@ -15,16 +14,16 @@ const meta = {
   component: Drawer.Root,
   tags: ["autodocs"],
   argTypes: {
-    placement: {
-      options: drawer.variantMap.placement,
+    swipeDirection: {
+      options: ["start", "end", "up", "down"],
       control: { type: "radio" },
       table: {
-        type: { summary: `${drawer.variantMap.placement.join(" | ")}` },
+        type: { summary: `${["start", "end", "up", "down"].join(" | ")}` },
       },
     },
   },
   args: {
-    placement: "right",
+    swipeDirection: "end",
     defaultOpen: false,
     lazyMount: false,
     unmountOnExit: false,
@@ -37,7 +36,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Basic: Story = {
   args: {
-    placement: "right",
+    swipeDirection: "end",
     children: (
       <>
         <Drawer.Trigger asChild>
@@ -77,9 +76,75 @@ export const Basic: Story = {
   },
 };
 
+export const Bottom: Story = {
+  args: {
+    swipeDirection: "down",
+    snapPoints: [0.5, 0.75, 1],
+    defaultSnapPoint: 0.75,
+    children: (
+      <>
+        <Drawer.Trigger asChild>
+          <HamburgerMenuButton>
+            <HamburgerIcon />
+            メニュー
+          </HamburgerMenuButton>
+        </Drawer.Trigger>
+        <Drawer.Backdrop />
+        <Drawer.Positioner>
+          <Drawer.Content className={css({ roundedTop: 16 })}>
+            <Drawer.Grabber
+              className={css({
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexShrink: 0,
+                width: "full",
+                paddingY: "20px",
+                cursor: { base: "grab", _active: "grabbing" },
+                touchAction: "none",
+                userSelect: "none",
+              })}
+            >
+              <Drawer.GrabberIndicator
+                className={css({
+                  width: "40px",
+                  height: "4px",
+                  bg: { base: "solid-gray.420", _hover: "solid-gray.536" },
+                  borderRadius: "1000px",
+                })}
+              />
+            </Drawer.Grabber>
+            <Drawer.Header>
+              <Drawer.Title>ドロワー</Drawer.Title>
+              <Drawer.CloseTrigger
+                asChild
+                position="absolute"
+                top="3"
+                right="4"
+              >
+                <HamburgerMenuButton>
+                  <CloseIcon />
+                  閉じる
+                </HamburgerMenuButton>
+              </Drawer.CloseTrigger>
+            </Drawer.Header>
+            <Drawer.Body>
+              {Array.from({ length: 10 }).map((_, i) => (
+                <p className={css({ my: 4 })} key={i.toString()}>
+                  あなたは絶対けっしてその講義物というものの後へあれたでし。近頃一遍のお話者はもっともその話ですただけで出来てかねるでしょでも発展描けるないますから、ぴたりにもせよたでですう。
+                </p>
+              ))}
+            </Drawer.Body>
+          </Drawer.Content>
+        </Drawer.Positioner>
+      </>
+    ),
+  },
+};
+
 export const HandleOutside: Story = {
   args: {
-    placement: "right",
+    swipeDirection: "end",
   },
   render: ({ defaultOpen = false, ...args }) => {
     const [open, setOpen] = useState(defaultOpen);

@@ -3,10 +3,10 @@
  * https://github.com/digital-go-jp/design-system-example-components-react/blob/main/src/components/Drawer/Drawer.stories.tsx
  * https://github.com/cschroeter/park-ui/blob/main/packages/preset/src/theme/recipes/drawer.ts
  */
-import { anatomy as dialogAnatomy } from "@zag-js/dialog";
+import { anatomy as drawerAnatomy } from "@zag-js/drawer";
 import { defineSlotRecipe } from "@pandacss/dev";
 
-const anatomy = dialogAnatomy.extendWith("header", "body", "footer");
+const anatomy = drawerAnatomy.extendWith("header", "body", "footer");
 
 export default defineSlotRecipe({
   className: "drawer",
@@ -28,10 +28,10 @@ export default defineSlotRecipe({
       zIndex: 10,
       // zIndex: "overlay",
       _open: {
-        animation: "backdrop-in",
+        animation: "fade-in 0.5s cubic-bezier(0.32, 0.72, 0, 1)",
       },
       _closed: {
-        animation: "backdrop-out",
+        animation: "fade-out 0.5s cubic-bezier(0.32, 0.72, 0, 1)",
       },
     },
     positioner: {
@@ -44,9 +44,25 @@ export default defineSlotRecipe({
       /**
        * w-72
        */
-      width: 72,
+      width: {
+        base: "full",
+        "&[data-swipe-direction=right]": 72,
+        "&[data-swipe-direction=left]": 72,
+      },
       zIndex: 1400,
       // zIndex: "modal",
+      "&[data-swipe-direction=up]": {
+        left: 0,
+      },
+      "&[data-swipe-direction=down]": {
+        left: 0,
+      },
+      "&[data-swipe-direction=right]": {
+        right: 0,
+      },
+      "&[data-swipe-direction=left]": {
+        left: 0,
+      },
     },
     content: {
       /**
@@ -69,9 +85,41 @@ export default defineSlotRecipe({
        */
       display: "grid",
       gridTemplateRows: "auto 1fr",
-      height: "100dvh",
+      // height: "100dvh",
+      height: "full",
       _hidden: {
         display: "none",
+      },
+      /**
+       * transition: transform 0.5s cubic-bezier(0.32, 0.72, 0, 1);
+       * animation-duration: 0.5s;
+       * animation-timing-function: cubic-bezier(0.32, 0.72, 0, 1);
+       */
+      transition: "transform 0.5s cubic-bezier(0.32, 0.72, 0, 1)",
+      animationDuration: "0.5s",
+      animationTimingFunction: "cubic-bezier(0.32, 0.72, 0, 1)",
+      borderWidth: {
+        base: "0px",
+        "&[data-swipe-direction=right]": "0px 0px 0px 1px",
+        "&[data-swipe-direction=left]": "0px 1px 0px 0px",
+        "&[data-swipe-direction=down]": "1px 0px 0px 0px",
+        "&[data-swipe-direction=up]": "0px 0px 1px 0px",
+      },
+      _open: {
+        animationName: {
+          "&[data-swipe-direction=up]": "slide-in-top",
+          "&[data-swipe-direction=down]": "slide-in-bottom",
+          "&[data-swipe-direction=left]": "slide-in-left",
+          "&[data-swipe-direction=right]": "slide-in-right",
+        },
+      },
+      _closed: {
+        animationName: {
+          "&[data-swipe-direction=up]": "slide-out-top",
+          "&[data-swipe-direction=down]": "slide-out-bottom",
+          "&[data-swipe-direction=left]": "slide-out-left",
+          "&[data-swipe-direction=right]": "slide-out-right",
+        },
       },
     },
     header: {
@@ -95,34 +143,5 @@ export default defineSlotRecipe({
       py: 4,
       textStyle: "std-17N-170",
     },
-  },
-  variants: {
-    placement: {
-      right: {
-        positioner: {
-          right: 0,
-        },
-        content: {
-          /**
-           * border-l
-           */
-          borderLeftWidth: "1px",
-        },
-      },
-      left: {
-        positioner: {
-          left: 0,
-        },
-        content: {
-          /**
-           * border-l
-           */
-          borderRightWidth: "1px",
-        },
-      },
-    },
-  },
-  defaultVariants: {
-    placement: "right",
   },
 });

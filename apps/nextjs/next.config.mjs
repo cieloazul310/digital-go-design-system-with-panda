@@ -1,20 +1,18 @@
 import createMDX from "@next/mdx";
 import remarkGfm from "remark-gfm";
-import rehypeShiki from "@shikijs/rehype";
+import rehypePrettyCode from "rehype-pretty-code";
+import { transformerNotationDiff } from "@shikijs/transformers";
+
+/** @type {import('rehype-pretty-code').Options} */
+const options = {
+  theme: "slack-dark",
+  transformers: [transformerNotationDiff()],
+};
 
 const withMdx = createMDX({
   options: {
     remarkPlugins: [remarkGfm],
-    rehypePlugins: [
-      [
-        rehypeShiki,
-        {
-          themes: {
-            light: "slack-dark",
-          },
-        },
-      ],
-    ],
+    rehypePlugins: [[rehypePrettyCode, options]],
   },
 });
 

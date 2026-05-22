@@ -105,6 +105,76 @@ describe("digital go panda css CLI", () => {
     );
   });
 
+  it("includes progress components with --all --include-progress", async () => {
+    const sourceDir = "./components/src";
+    await mkdir(join(outputDir, "components"), { recursive: true });
+    await cp(
+      resolve(__dirname, "../../..", "components/src"),
+      join(outputDir, "components/src"),
+      { recursive: true },
+    );
+    const customConfig = {
+      outDir: "src/components/ui",
+      sourceDir,
+    };
+    await writeFile(
+      join(outputDir, "components.json"),
+      JSON.stringify(customConfig, null, 2),
+    );
+
+    const cliPath = join(__dirname, "../bin/index.cjs");
+    const { stdout } = await execa(
+      "node",
+      [cliPath, "install", "--all", "--include-progress"],
+      { cwd: outputDir },
+    );
+
+    expect(stdout).toContain(
+      "✅ UIコンポーネントを src/components/ui に生成しました",
+    );
+
+    const progressComponent = join(
+      outputDir,
+      "src/components/ui",
+      "date-input",
+    );
+    expect(await exists(progressComponent)).toBe(true);
+  });
+
+  it("includes progress components without --include-progress", async () => {
+    const sourceDir = "./components/src";
+    await mkdir(join(outputDir, "components"), { recursive: true });
+    await cp(
+      resolve(__dirname, "../../..", "components/src"),
+      join(outputDir, "components/src"),
+      { recursive: true },
+    );
+    const customConfig = {
+      outDir: "src/components/ui",
+      sourceDir,
+    };
+    await writeFile(
+      join(outputDir, "components.json"),
+      JSON.stringify(customConfig, null, 2),
+    );
+
+    const cliPath = join(__dirname, "../bin/index.cjs");
+    const { stdout } = await execa("node", [cliPath, "install", "--all"], {
+      cwd: outputDir,
+    });
+
+    expect(stdout).toContain(
+      "✅ UIコンポーネントを src/components/ui に生成しました",
+    );
+
+    const progressComponent = join(
+      outputDir,
+      "src/components/ui",
+      "date-input",
+    );
+    expect(await exists(progressComponent)).toBe(false);
+  });
+
   it("custom output directory", async () => {
     const customConfig = {
       outDir: "components/digital-go",

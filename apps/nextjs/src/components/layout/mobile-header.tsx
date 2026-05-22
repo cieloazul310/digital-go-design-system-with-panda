@@ -62,7 +62,7 @@ export function MobileHeader({ slug }: MobileHeaderProps) {
             デジタル庁デザインシステムβ版 for Panda CSS
           </NextLink>
         </h1>
-        <Drawer.Root placement="right">
+        <Drawer.Root swipeDirection="end">
           <Drawer.Trigger asChild>
             <HamburgerMenuButton>
               <HamburgerIcon />

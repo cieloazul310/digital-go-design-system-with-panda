@@ -13,6 +13,7 @@ export type Catalogue = {
       digitalgo?: string;
       ark?: string;
       storybook?: string;
+      status?: "done" | "progress" | "not-started";
     }
   >;
 };
