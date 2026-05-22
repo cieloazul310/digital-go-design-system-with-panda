@@ -106,9 +106,20 @@ describe("digital go panda css CLI", () => {
   });
 
   it("includes progress components with --all --include-progress", async () => {
+    const sourceDir = "./components/src";
+    await mkdir(join(outputDir, "components"), { recursive: true });
     await cp(
-      resolve(__dirname, "../public/components.json"),
+      resolve(__dirname, "../../..", "components/src"),
+      join(outputDir, "components/src"),
+      { recursive: true },
+    );
+    const customConfig = {
+      outDir: "src/components/ui",
+      sourceDir,
+    };
+    await writeFile(
       join(outputDir, "components.json"),
+      JSON.stringify(customConfig, null, 2),
     );
 
     const cliPath = join(__dirname, "../bin/index.cjs");
@@ -131,9 +142,20 @@ describe("digital go panda css CLI", () => {
   });
 
   it("includes progress components without --include-progress", async () => {
+    const sourceDir = "./components/src";
+    await mkdir(join(outputDir, "components"), { recursive: true });
     await cp(
-      resolve(__dirname, "../public/components.json"),
+      resolve(__dirname, "../../..", "components/src"),
+      join(outputDir, "components/src"),
+      { recursive: true },
+    );
+    const customConfig = {
+      outDir: "src/components/ui",
+      sourceDir,
+    };
+    await writeFile(
       join(outputDir, "components.json"),
+      JSON.stringify(customConfig, null, 2),
     );
 
     const cliPath = join(__dirname, "../bin/index.cjs");
