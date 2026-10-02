@@ -1,7 +1,7 @@
 import { defineSemanticTokens } from "@pandacss/dev";
-import colors from "./colors";
+import { colors } from "./colors";
 
-export default defineSemanticTokens({
+export const semanticTokens = defineSemanticTokens({
   colors,
   fontWeights: {
     N: { value: "{fontWeights.400}", description: "400 (normal)" },

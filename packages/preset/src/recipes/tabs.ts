@@ -1,7 +1,7 @@
 import { defineSlotRecipe } from "@pandacss/dev";
 import { anatomy as tabsAnatomy } from "@zag-js/tabs";
 
-export default defineSlotRecipe({
+export const tabs = defineSlotRecipe({
   className: "tabs",
   slots: tabsAnatomy.keys(),
   base: {

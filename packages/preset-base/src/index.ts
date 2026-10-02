@@ -1,14 +1,14 @@
 import { definePreset } from "@pandacss/dev";
 import { preset as pandaPreset } from "@pandacss/preset-panda";
-import semanticTokens from "./semanticTokens";
-import textStyles from "./textStyles";
-import tokens from "./tokens";
-import utilities from "./utilities";
-import globalCss from "./globalCss";
+import { semanticTokens } from "./semantic-tokens";
+import { textStyles } from "./text-styles";
+import { tokens } from "./tokens";
+import { utilities } from "./utilities";
+import { globalCss } from "./global-css";
 
 const { breakpoints, keyframes } = pandaPreset.theme;
 
-const preset = definePreset({
+export const preset = definePreset({
   name: "digital-go",
   theme: {
     extend: {

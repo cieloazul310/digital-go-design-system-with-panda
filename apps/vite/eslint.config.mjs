@@ -1,12 +1,9 @@
+import { defineConfig } from "eslint/config";
 import appConfig from "@repo/eslint-config/react-app";
 
-/**
- * @type {import("eslint").Linter.Config}
- */
-export default [
-  ...appConfig,
+export default defineConfig([
   {
-    files: ["postcss.config.cjs"],
-    languageOptions: {},
+    ignores: ["styled-system/**/*", "src/components/ui/**/*"],
   },
-];
+  ...appConfig,
+]);

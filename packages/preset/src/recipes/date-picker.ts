@@ -1,10 +1,10 @@
 import { defineSlotRecipe } from "@pandacss/dev";
 import { anatomy as datePickerAnatomy } from "@zag-js/date-picker";
-import label from "./label";
-import input from "./input";
-import selectBox from "./select-box";
+import { label } from "./label";
+import { input } from "./input";
+import { selectBox } from "./select-box";
 
-export default defineSlotRecipe({
+export const datePicker = defineSlotRecipe({
   className: "date-picker",
   slots: datePickerAnatomy.extendWith("view").keys(),
   base: {

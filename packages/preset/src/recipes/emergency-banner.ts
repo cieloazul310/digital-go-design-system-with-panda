@@ -5,7 +5,7 @@
 import { defineSlotRecipe } from "@pandacss/dev";
 import { emergencyBannerAnatomy } from "../anatomy";
 
-export default defineSlotRecipe({
+export const emergencyBanner = defineSlotRecipe({
   className: "emergency-banner",
   slots: emergencyBannerAnatomy.keys(),
   base: {

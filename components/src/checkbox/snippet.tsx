@@ -5,11 +5,11 @@
 "use client";
 import { Checkbox } from "@ark-ui/react/checkbox";
 import { checkbox } from "styled-system/recipes";
-import { createStyleContext } from "styled-system/jsx";
+import { createSlotRecipeContext } from "styled-system/jsx";
 import type { ComponentProps } from "styled-system/types";
 
 const { withRootProvider, withProvider, withContext } =
-  createStyleContext(checkbox);
+  createSlotRecipeContext(checkbox);
 
 export type RootProviderProps = ComponentProps<typeof RootProvider>;
 export const RootProvider = withProvider(Checkbox.RootProvider, "root");

@@ -1,10 +1,10 @@
 import { defineSlotRecipe } from "@pandacss/dev";
 import { fieldsetAnatomy } from "../anatomy";
-import errorText from "./error-text";
-import label from "./label";
-import supportText from "./support-text";
+import { errorText } from "./error-text";
+import { label } from "./label";
+import { supportText } from "./support-text";
 
-export default defineSlotRecipe({
+export const fieldset = defineSlotRecipe({
   className: "fieldset",
   slots: fieldsetAnatomy.keys(),
   base: {

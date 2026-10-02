@@ -5,13 +5,13 @@
  */
 import { defineSlotRecipe, type SystemStyleObject } from "@pandacss/dev";
 import { anatomy as menuAnatomy } from "@zag-js/menu";
-import menuItem from "./menu-item";
+import { menuItem } from "./menu-item";
 
 const itemStyle = {
   ...menuItem.base,
 } satisfies SystemStyleObject;
 
-export default defineSlotRecipe({
+export const menu = defineSlotRecipe({
   className: "menu",
   slots: menuAnatomy.keys(),
   base: {

@@ -3,7 +3,7 @@
  */
 import { defineRecipe } from "@pandacss/dev";
 
-export default defineRecipe({
+export const utilityLink = defineRecipe({
   className: "utility-link",
   description:
     "ユーティリティリンクはふつうの横並びリンクリストに近いが、それよりもコンパクトに作られています。",

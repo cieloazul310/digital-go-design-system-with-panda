@@ -5,7 +5,7 @@
 import { defineSlotRecipe } from "@pandacss/dev";
 import { anatomy as accordionAnatomy } from "@zag-js/accordion";
 
-export default defineSlotRecipe({
+export const accordion = defineSlotRecipe({
   className: "accordion",
   description:
     "アコーディオンは、ユーザーがコンテンツのセクションを展開または折りたたむことができるユーザーインターフェースです。項目をコンパクトにリスト表示しつつページ遷移せず関連情報を表示したいという要求に対応します。※セクション内の任意の範囲で折りたたみ表示をする場合は「ディスクロージャー」コンポーネントを使用してください。",

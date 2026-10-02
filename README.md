@@ -63,6 +63,12 @@ npx @cieloazul310/digital-go-pandacss-cli install --all
 npx @cieloazul310/digital-go-pandacss-cli install accordion button card
 ```
 
+Panda CSS v2形式のsnippetを既定で生成します。Panda CSS v1を使用する場合は、`--panda-version v1`を指定してください。
+
+```sh
+npx @cieloazul310/digital-go-pandacss-cli install accordion --panda-version v1
+```
+
 ### 4. コンポーネントを使う
 
 ```tsx

@@ -4,7 +4,7 @@
  */
 import { defineRecipe } from "@pandacss/dev";
 
-export default defineRecipe({
+export const textarea = defineRecipe({
   className: "textarea",
   description:
     "テキストエリアコンポーネントは、1行以上のテキストを入力する場合に使用します。",

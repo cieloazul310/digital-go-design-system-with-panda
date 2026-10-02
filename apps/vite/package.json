@@ -14,23 +14,23 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@ark-ui/react": "^5.36.2",
-    "lucide-react": "^1.16.0",
-    "react": "^19.2.6",
-    "react-dom": "^19.2.6"
+    "@ark-ui/react": "^5.39.2",
+    "lucide-react": "^1.49.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
   },
   "devDependencies": {
     "@cieloazul310/digital-go-pandacss-preset": "^0.4.0",
-    "@pandacss/dev": "^1.11.1",
+    "@pandacss/dev": "^2.0.0",
+    "@pandacss/vite": "^2.0.0",
     "@repo/eslint-config": "^0.4.0",
     "@repo/typescript-config": "^0.4.0",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react-swc": "^4.3.1",
-    "eslint": "^9.37.0",
-    "typescript": "^6.0.3",
-    "vite": "^8.0.13",
-    "vite-tsconfig-paths": "^6.1.1"
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react-swc": "^4.3.3",
+    "eslint": "^10.11.0",
+    "typescript": "^6",
+    "vite": "^8.3.1"
   },
   "lint-staged": {
     "**/*.{js,mjs,cjs,tsx,ts,tsx}": [

@@ -2,18 +2,26 @@ import { readdir, readFile, writeFile, cp } from "fs/promises";
 import { join } from "path";
 import { exists } from "./fs-exists";
 
+function adaptPandaVersion(content: string, pandaVersion: "v1" | "v2") {
+  return pandaVersion === "v1"
+    ? content.replaceAll("createSlotRecipeContext", "createStyleContext")
+    : content;
+}
+
 export async function copyComponents({
   templateDir,
   outputDir,
   versionComment,
   override = true,
   ids,
+  pandaVersion = "v2",
 }: {
   templateDir: string;
   outputDir: string;
   versionComment?: string;
   override?: boolean;
   ids?: string[];
+  pandaVersion?: "v1" | "v2";
 }) {
   // If copying all components (ids not provided), behave as before
   if (!ids) {
@@ -35,10 +43,14 @@ export async function copyComponents({
         for (const file of files) {
           if (file.isFile() && file.name.endsWith(".tsx")) {
             const destPath = join(destDir, file.name);
-            const content = await readFile(destPath, "utf8");
-            // avoid double-prefixing if already present
-            if (versionComment && content.startsWith(versionComment)) continue;
-            await writeFile(destPath, (versionComment || "") + content, "utf8");
+            const content = adaptPandaVersion(
+              await readFile(destPath, "utf8"),
+              pandaVersion,
+            );
+            const prefixedContent = content.startsWith(versionComment || "")
+              ? content
+              : (versionComment || "") + content;
+            await writeFile(destPath, prefixedContent, "utf8");
           }
         }
       }
@@ -79,9 +91,14 @@ export async function copyComponents({
     for (const file of destFiles) {
       if (file.isFile() && file.name.endsWith(".tsx")) {
         const destPath = join(dest, file.name);
-        const content = await readFile(destPath, "utf8");
-        if (versionComment && content.startsWith(versionComment)) continue;
-        await writeFile(destPath, (versionComment || "") + content, "utf8");
+        const content = adaptPandaVersion(
+          await readFile(destPath, "utf8"),
+          pandaVersion,
+        );
+        const prefixedContent = content.startsWith(versionComment || "")
+          ? content
+          : (versionComment || "") + content;
+        await writeFile(destPath, prefixedContent, "utf8");
       }
     }
   }

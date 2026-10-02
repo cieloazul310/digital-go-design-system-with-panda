@@ -3,15 +3,15 @@ import { css } from "styled-system/css";
 import { menuItem } from "styled-system/recipes";
 import { styled, Stack } from "styled-system/jsx";
 
-import { Drawer } from "@/components/ui/drawer";
+import { Drawer } from "./components/ui/drawer";
 import {
   HamburgerMenuButton,
   HamburgerIcon,
   CloseIcon,
-} from "@/components/ui/hamburger-menu-button";
-import { ResourceList } from "@/components/ui/resource-list";
-import { Heading2, Paragraph } from "@/components/article";
-import { ExternalLink } from "@/components/external-link";
+} from "./components/ui/hamburger-menu-button";
+import { ResourceList } from "./components/ui/resource-list";
+import { Heading2, Paragraph } from "./components/article";
+import { ExternalLink } from "./components/external-link";
 
 const collection = createListCollection({
   items: [
@@ -116,7 +116,7 @@ function App() {
           >
             デジタル庁デザインシステムβ版 for Panda CSS
           </h1>
-          <Drawer.Root placement="right">
+          <Drawer.Root swipeDirection="end">
             <Drawer.Trigger asChild>
               <HamburgerMenuButton>
                 <HamburgerIcon />
@@ -314,17 +314,15 @@ function App() {
                 })}
               >
                 {links.map(({ title, description, url }) => (
-                  <ResourceList.Root borderWidth="1px" asLink asChild key={url}>
-                    <li>
-                      <ResourceList.Main>
-                        <ResourceList.Content py={4}>
-                          <ResourceList.Title asChild mb={4}>
-                            <ExternalLink href={url}>{title}</ExternalLink>
-                          </ResourceList.Title>
-                          <p>{description}</p>
-                        </ResourceList.Content>
-                      </ResourceList.Main>
-                    </li>
+                  <ResourceList.Root borderWidth="1px" asLink key={url}>
+                    <ResourceList.Main>
+                      <ResourceList.Content py={4}>
+                        <ResourceList.Title mb={4}>
+                          <ExternalLink href={url}>{title}</ExternalLink>
+                        </ResourceList.Title>
+                        <p>{description}</p>
+                      </ResourceList.Content>
+                    </ResourceList.Main>
                   </ResourceList.Root>
                 ))}
               </ul>

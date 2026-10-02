@@ -1,8 +1,8 @@
 import { defineSlotRecipe } from "@pandacss/dev";
 import { menuListAnatomy } from "../anatomy";
-import menuItem from "./menu-item";
+import { menuItem } from "./menu-item";
 
-export default defineSlotRecipe({
+export const menuList = defineSlotRecipe({
   className: "menu-list",
   slots: menuListAnatomy.keys(),
   base: {

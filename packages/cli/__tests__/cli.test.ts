@@ -6,12 +6,14 @@ import {
   readdir,
   access,
   cp,
+  readFile,
   writeFile,
   mkdir,
 } from "fs/promises";
 import { constants } from "fs";
 import { tmpdir } from "os";
 import { join, resolve } from "path";
+import { copyComponents } from "../src/copy-components";
 
 async function exists(path: string): Promise<boolean> {
   try {
@@ -73,6 +75,68 @@ describe("digital go panda css CLI", () => {
     expect(await exists(accordionIndex)).toBe(true);
     expect(await exists(accordionSnippet)).toBe(true);
   }
+
+  async function setupLocalAccordionSource() {
+    const sourceDir = "./components/src";
+    await mkdir(join(outputDir, sourceDir), { recursive: true });
+    await cp(
+      resolve(__dirname, "../../..", "components/src/accordion"),
+      join(outputDir, sourceDir, "accordion"),
+      { recursive: true },
+    );
+    await writeFile(
+      join(outputDir, "components.json"),
+      JSON.stringify({ outDir: "src/components/ui", sourceDir }),
+    );
+  }
+
+  it("generates Panda CSS v2 snippets by default", async () => {
+    await setupLocalAccordionSource();
+    const cliPath = join(__dirname, "../bin/index.cjs");
+    await execa("node", [cliPath, "install", "accordion"], {
+      cwd: outputDir,
+    });
+
+    const snippet = await readFile(
+      join(outputDir, "src/components/ui/accordion/snippet.tsx"),
+      "utf8",
+    );
+    expect(snippet).toContain("createSlotRecipeContext");
+    expect(snippet).not.toContain("createStyleContext");
+  });
+
+  it("generates Panda CSS v1 snippets when requested", async () => {
+    await setupLocalAccordionSource();
+    const cliPath = join(__dirname, "../bin/index.cjs");
+    await execa(
+      "node",
+      [cliPath, "install", "accordion", "--panda-version", "v1"],
+      { cwd: outputDir },
+    );
+
+    const snippet = await readFile(
+      join(outputDir, "src/components/ui/accordion/snippet.tsx"),
+      "utf8",
+    );
+    expect(snippet).toContain("createStyleContext");
+    expect(snippet).not.toContain("createSlotRecipeContext");
+  });
+
+  it("converts Panda CSS v2 snippets in full copies when v1 is requested", async () => {
+    await setupLocalAccordionSource();
+    await copyComponents({
+      templateDir: join(outputDir, "components/src"),
+      outputDir: join(outputDir, "full-copy"),
+      pandaVersion: "v1",
+    });
+
+    const snippet = await readFile(
+      join(outputDir, "full-copy/accordion/snippet.tsx"),
+      "utf8",
+    );
+    expect(snippet).toContain("createStyleContext");
+    expect(snippet).not.toContain("createSlotRecipeContext");
+  });
 
   it("if component.json exists", async () => {
     await cp(

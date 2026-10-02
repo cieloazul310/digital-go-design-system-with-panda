@@ -4,9 +4,9 @@
  */
 import { defineSlotRecipe } from "@pandacss/dev";
 import { breadcrumbAnatomy } from "../anatomy";
-import link from "./link";
+import { link } from "./link";
 
-export default defineSlotRecipe({
+export const breadcrumb = defineSlotRecipe({
   className: "breadcrumb",
   description:
     "パンくずリストは、ウェブサイトの階層内でユーザーの現在の位置を表示します。",

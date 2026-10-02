@@ -6,10 +6,11 @@
 "use client";
 import { ark } from "@ark-ui/react/factory";
 import { notificationBanner } from "styled-system/recipes";
-import { createStyleContext } from "styled-system/jsx";
+import { createSlotRecipeContext } from "styled-system/jsx";
 import type { ComponentProps } from "styled-system/types";
 
-const { withProvider, withContext } = createStyleContext(notificationBanner);
+const { withProvider, withContext } =
+  createSlotRecipeContext(notificationBanner);
 
 export type RootProps = ComponentProps<typeof Root>;
 export const Root = withProvider(ark.div, "root");

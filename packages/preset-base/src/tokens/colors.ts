@@ -121,4 +121,4 @@ const colors = defineTokens.colors({
   },
 });
 
-export default colors;
+export { colors };

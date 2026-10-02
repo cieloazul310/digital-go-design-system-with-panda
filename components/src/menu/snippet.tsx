@@ -1,10 +1,10 @@
 "use client";
 import { Menu } from "@ark-ui/react/menu";
 import { menu } from "styled-system/recipes";
-import { createStyleContext } from "styled-system/jsx";
+import { createSlotRecipeContext } from "styled-system/jsx";
 import type { ComponentProps } from "styled-system/types";
 
-const { withRootProvider, withContext } = createStyleContext(menu);
+const { withRootProvider, withContext } = createSlotRecipeContext(menu);
 
 export type RootProviderProps = ComponentProps<typeof RootProvider>;
 export const RootProvider = withRootProvider(Menu.RootProvider);

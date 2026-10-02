@@ -2,11 +2,11 @@
 import { ark } from "@ark-ui/react/factory";
 import { Steps } from "@ark-ui/react/steps";
 import { stepNavigation } from "styled-system/recipes";
-import { createStyleContext } from "styled-system/jsx";
+import { createSlotRecipeContext } from "styled-system/jsx";
 import type { ComponentProps } from "styled-system/types";
 
 const { withRootProvider, withProvider, withContext } =
-  createStyleContext(stepNavigation);
+  createSlotRecipeContext(stepNavigation);
 
 export type RootProviderProps = ComponentProps<typeof RootProvider>;
 export const RootProvider = withRootProvider(Steps.RootProvider);

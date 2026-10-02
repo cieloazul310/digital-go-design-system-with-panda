@@ -7,9 +7,9 @@
 import { DateInput } from "@ark-ui/react/date-input";
 import { dateInput } from "styled-system/recipes";
 import type { ComponentProps } from "styled-system/types";
-import { createStyleContext } from "styled-system/jsx";
+import { createSlotRecipeContext } from "styled-system/jsx";
 
-const { withProvider, withContext } = createStyleContext(dateInput);
+const { withProvider, withContext } = createSlotRecipeContext(dateInput);
 
 export type RootProviderProps = ComponentProps<typeof RootProvider>;
 export const RootProvider = withProvider(DateInput.RootProvider, "root");

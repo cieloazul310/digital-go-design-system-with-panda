@@ -1,10 +1,8 @@
+import { defineConfig } from "eslint/config";
 import reactInternalConfig from "@repo/eslint-config/react-internal";
 import storybook from "eslint-plugin-storybook";
 
-/**
- * @type {import("eslint").Linter.Config}
- */
-export default [
+export default defineConfig([
   ...reactInternalConfig,
   ...storybook.configs["flat/recommended"],
   {
@@ -13,4 +11,4 @@ export default [
       "@typescript-eslint/no-require-imports": "off",
     },
   },
-];
+]);

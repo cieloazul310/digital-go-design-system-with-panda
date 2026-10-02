@@ -8,7 +8,7 @@ import { defineSlotRecipe } from "@pandacss/dev";
 
 const anatomy = drawerAnatomy.extendWith("header", "body", "footer");
 
-export default defineSlotRecipe({
+export const drawer = defineSlotRecipe({
   className: "drawer",
   description:
     "ブラウザ画面の四辺(上下左右端)から展開し、モバイルメニューなどのコンポーネントを格納可能なコンテナです。",

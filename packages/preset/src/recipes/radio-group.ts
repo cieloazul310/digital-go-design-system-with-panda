@@ -4,9 +4,9 @@
  */
 import { defineSlotRecipe } from "@pandacss/dev";
 import { anatomy as radioGroupAnatomy } from "@zag-js/radio-group";
-import legend from "./legend";
+import { legend } from "./legend";
 
-export default defineSlotRecipe({
+export const radioGroup = defineSlotRecipe({
   className: "radio-group",
   slots: radioGroupAnatomy.keys(),
   base: {

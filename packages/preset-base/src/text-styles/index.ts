@@ -380,4 +380,4 @@ textStyle.forEach(([key, { fontFamily, description, variants }]) => {
   });
 });
 
-export default defineTextStyles(Object.fromEntries(map));
+export const textStyles = defineTextStyles(Object.fromEntries(map));

@@ -1,7 +1,7 @@
 import { defineSlotRecipe } from "@pandacss/dev";
 import { resourceListAnatomy } from "../anatomy";
 
-export default defineSlotRecipe({
+export const resourceList = defineSlotRecipe({
   className: "resource-list",
   slots: resourceListAnatomy.keys(),
   base: {

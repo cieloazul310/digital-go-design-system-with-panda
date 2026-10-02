@@ -5,7 +5,7 @@
 import { defineSlotRecipe } from "@pandacss/dev";
 import { tableAnatomy } from "../anatomy";
 
-export default defineSlotRecipe({
+export const table = defineSlotRecipe({
   className: "table",
   slots: tableAnatomy.keys(),
   base: {

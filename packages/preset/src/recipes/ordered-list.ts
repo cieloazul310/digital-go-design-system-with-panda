@@ -4,7 +4,7 @@
  */
 import { defineRecipe } from "@pandacss/dev";
 
-export default defineRecipe({
+export const orderedList = defineRecipe({
   className: "ordered-list",
   base: {
     /**

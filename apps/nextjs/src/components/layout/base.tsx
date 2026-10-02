@@ -1,4 +1,5 @@
 import type { PropsWithChildren } from "react";
+import NextLink from "next/link";
 import { css } from "styled-system/css";
 import { MobileHeader } from "./mobile-header";
 import { Menu } from "./menu";
@@ -51,7 +52,7 @@ export function BaseLayout({
             width: "sidebar-width",
           })}
         >
-          <a
+          <NextLink
             href="/"
             className={css({
               alignSelf: "center",
@@ -62,7 +63,7 @@ export function BaseLayout({
             })}
           >
             デジタル庁デザインシステムβ版 for Panda CSS
-          </a>
+          </NextLink>
           <Menu slug={slug} />
         </header>
         <main

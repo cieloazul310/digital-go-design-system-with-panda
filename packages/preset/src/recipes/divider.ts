@@ -4,7 +4,7 @@
  */
 import { defineRecipe } from "@pandacss/dev";
 
-export default defineRecipe({
+export const digitalGoDivider = defineRecipe({
   className: "divider",
   description:
     "ディバイダーは、異なるセクション、コンポーネント、またはコンテンツのグループ間に設けられる視覚的な区切りで、HTMLのhr要素に相当します。要素間に明確な区切りを設けることで、読みやすさを向上させる役割を果たします。",
