@@ -1,5 +1,11 @@
 # @cieloazul310/digital-go-pandacss-cli
 
+## 0.5.0-beta.0
+
+### Minor Changes
+
+- 745b3b0: Panda CSS v2に対応
+
 ## 0.4.0
 
 ### Minor Changes
