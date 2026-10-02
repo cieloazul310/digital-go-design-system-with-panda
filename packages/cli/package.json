@@ -32,17 +32,17 @@
     "format": "prettier --parser typescript --write ."
   },
   "dependencies": {
-    "commander": "^14.0.3",
-    "simple-git": "^3.36.0"
+    "commander": "^15.0.0",
+    "simple-git": "^4.0.2"
   },
   "devDependencies": {
     "@repo/eslint-config": "^0.4.0",
     "@repo/typescript-config": "^0.4.0",
-    "eslint": "^9.37.0",
-    "execa": "^9.6.1",
-    "tsdown": "^0.22.0",
-    "tsx": "^4.22.2",
-    "typescript": "^6.0.3"
+    "eslint": "^10.11.0",
+    "execa": "^10.0.1",
+    "tsdown": "^0.23.0",
+    "tsx": "^4.23.15",
+    "typescript": "^6"
   },
   "lint-staged": {
     "**/*.{js,mjs,cjs,tsx,ts,tsx}": [

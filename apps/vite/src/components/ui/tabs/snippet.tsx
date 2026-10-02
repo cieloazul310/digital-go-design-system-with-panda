@@ -6,10 +6,10 @@
 "use client";
 import { Tabs } from "@ark-ui/react/tabs";
 import { tabs } from "styled-system/recipes";
-import { createStyleContext } from "styled-system/jsx";
+import { createSlotRecipeContext } from "styled-system/jsx";
 import type { ComponentProps } from "styled-system/types";
 
-const { withProvider, withContext } = createStyleContext(tabs);
+const { withProvider, withContext } = createSlotRecipeContext(tabs);
 
 export type RootProviderProps = ComponentProps<typeof RootProvider>;
 export const RootProvider = withProvider(Tabs.RootProvider, "root");

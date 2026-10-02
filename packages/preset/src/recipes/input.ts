@@ -4,7 +4,7 @@
  */
 import { defineRecipe } from "@pandacss/dev";
 
-export default defineRecipe({
+export const input = defineRecipe({
   className: "input",
   description:
     "インプットテキストコンポーネントは、名前や電話番号など、1行以内のテキストを入力する場合に使用します。",

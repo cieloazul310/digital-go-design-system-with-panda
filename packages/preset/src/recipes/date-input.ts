@@ -1,9 +1,9 @@
 import { defineSlotRecipe } from "@pandacss/dev";
 import { anatomy as dateInputAnatomy } from "@zag-js/date-input";
-import input from "./input";
-import label from "./label";
+import { input } from "./input";
+import { label } from "./label";
 
-export default defineSlotRecipe({
+export const dateInput = defineSlotRecipe({
   className: "date-input",
   description:
     "日付入力は、日付を分割形式で入力できるフォームコントロールです。",

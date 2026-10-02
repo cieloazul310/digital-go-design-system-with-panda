@@ -2,9 +2,9 @@
 import type { JSX, RefAttributes } from "react";
 import { Listbox, type CollectionItem } from "@ark-ui/react/listbox";
 import { menuList, type MenuListVariantProps } from "styled-system/recipes";
-import { createStyleContext } from "styled-system/jsx";
+import { createSlotRecipeContext } from "styled-system/jsx";
 
-const { withProvider, withContext } = createStyleContext(menuList);
+const { withProvider, withContext } = createSlotRecipeContext(menuList);
 
 export type RootProviderProps<T extends CollectionItem> =
   Listbox.RootProviderProps<T> & MenuListVariantProps;

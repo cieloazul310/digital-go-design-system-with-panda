@@ -28,7 +28,7 @@ const buttonCommon = {
   },
 } satisfies SystemStyleObject;
 
-export default defineSlotRecipe({
+export const chipTag = defineSlotRecipe({
   slots: chipTagAnatomy.keys(),
   className: "chip-tag",
   base: {

@@ -1,6 +1,6 @@
 import { defineRecipe } from "@pandacss/dev";
 
-export default defineRecipe({
+export const list = defineRecipe({
   className: "list",
   base: {
     /**

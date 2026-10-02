@@ -1,6 +1,6 @@
 import { defineRecipe } from "@pandacss/dev";
 
-export default defineRecipe({
+export const unorderedList = defineRecipe({
   className: "unordered-list",
   base: {
     /**

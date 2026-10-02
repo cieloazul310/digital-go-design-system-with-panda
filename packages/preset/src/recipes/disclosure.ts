@@ -5,7 +5,7 @@
 import { defineSlotRecipe } from "@pandacss/dev";
 import { anatomy as disclosureAnatomy } from "@zag-js/collapsible";
 
-export default defineSlotRecipe({
+export const disclosure = defineSlotRecipe({
   className: "disclosure",
   description:
     "ディスクロージャーは、コンテンツのセクション内の任意の範囲を折りたたむことができるユーザーインターフェースです。※セクション単位で折りたたみ表示をする場合は「アコーディオン」コンポーネントを使用してください。",

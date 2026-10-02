@@ -4,7 +4,7 @@
  */
 import { defineSlotRecipe } from "@pandacss/dev";
 
-export default defineSlotRecipe({
+export const descriptionList = defineSlotRecipe({
   className: "description-list",
   slots: ["root", "item", "term", "marker", "description"],
   base: {

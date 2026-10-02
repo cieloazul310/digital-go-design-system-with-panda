@@ -4,13 +4,13 @@
  */
 import { defineSlotRecipe } from "@pandacss/dev";
 import { fieldAnatomy } from "../anatomy";
-import errorText from "./error-text";
-import input from "./input";
-import label from "./label";
-import requirementBadge from "./requirement-badge";
-import selectBox from "./select-box";
-import supportText from "./support-text";
-import textarea from "./textarea";
+import { errorText } from "./error-text";
+import { input } from "./input";
+import { label } from "./label";
+import { requirementBadge } from "./requirement-badge";
+import { selectBox } from "./select-box";
+import { supportText } from "./support-text";
+import { textarea } from "./textarea";
 
 const field = defineSlotRecipe({
   className: "field",
@@ -67,4 +67,4 @@ const field = defineSlotRecipe({
   },
 });
 
-export default field;
+export { field };

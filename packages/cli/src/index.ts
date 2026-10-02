@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { Command } from "commander";
+import { Command, Option } from "commander";
 import { join } from "path";
 import { loadCatalogue } from "./load-catalogue";
 import { installSnippets } from "./install-snippets";
@@ -20,6 +20,11 @@ program
   .option(
     "--include-progress",
     "作業中のコンポーネントも --all でインストールします",
+  )
+  .addOption(
+    new Option("--panda-version <version>", "Panda CSSのバージョン")
+      .choices(["v1", "v2"])
+      .default("v2"),
   )
   /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
   .action(async (ids: string[] = [], options: any) => {
@@ -71,7 +76,7 @@ program
       }
 
       // installSnippets reads components.json itself for outDir/sourceDir
-      await installSnippets(targetIds);
+      await installSnippets(targetIds, options.pandaVersion);
       /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
     } catch (err: any) {
       console.error(err);

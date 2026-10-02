@@ -7,10 +7,10 @@
 import { Drawer } from "@ark-ui/react/drawer";
 import { ark } from "@ark-ui/react/factory";
 import { drawer } from "styled-system/recipes";
-import { createStyleContext } from "styled-system/jsx";
+import { createSlotRecipeContext } from "styled-system/jsx";
 import type { ComponentProps } from "styled-system/types";
 
-const { withRootProvider, withContext } = createStyleContext(drawer);
+const { withRootProvider, withContext } = createSlotRecipeContext(drawer);
 
 export type RootProviderProps = ComponentProps<typeof RootProvider>;
 export const RootProvider = withRootProvider(Drawer.RootProvider);

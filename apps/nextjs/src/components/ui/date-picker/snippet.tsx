@@ -8,9 +8,9 @@
 import { DatePicker } from "@ark-ui/react/date-picker";
 import { datePicker } from "styled-system/recipes";
 import type { ComponentProps } from "styled-system/types";
-import { createStyleContext } from "styled-system/jsx";
+import { createSlotRecipeContext } from "styled-system/jsx";
 
-const { withProvider, withContext } = createStyleContext(datePicker);
+const { withProvider, withContext } = createSlotRecipeContext(datePicker);
 
 export type RootProviderProps = ComponentProps<typeof RootProvider>;
 export const RootProvider = withProvider(DatePicker.RootProvider, "root");

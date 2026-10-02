@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { getContrast } from "polished";
-import colors from "../src/tokens/colors";
+import { colors } from "../src/tokens/colors";
 
 describe("All color tokens meet contrast requirements", () => {
   const colorKeys = Object.keys(colors).filter((key) => {

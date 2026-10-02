@@ -2,11 +2,11 @@
 import { ark } from "@ark-ui/react/factory";
 import { FileUpload } from "@ark-ui/react/file-upload";
 import { fileUpload } from "styled-system/recipes";
-import { createStyleContext } from "styled-system/jsx";
+import { createSlotRecipeContext } from "styled-system/jsx";
 import type { ComponentProps } from "styled-system/types";
 
 const { withRootProvider, withProvider, withContext } =
-  createStyleContext(fileUpload);
+  createSlotRecipeContext(fileUpload);
 
 export type RootProvider = ComponentProps<typeof RootProvider>;
 export const RootProvider = withRootProvider(FileUpload.RootProvider);

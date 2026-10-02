@@ -6,7 +6,7 @@
 import { defineSlotRecipe } from "@pandacss/dev";
 import { anatomy as stepNavigationAnatomy } from "@zag-js/steps";
 
-export default defineSlotRecipe({
+export const stepNavigation = defineSlotRecipe({
   className: "step-navigation",
   slots: stepNavigationAnatomy.extendWith("title", "description").keys(),
   base: {

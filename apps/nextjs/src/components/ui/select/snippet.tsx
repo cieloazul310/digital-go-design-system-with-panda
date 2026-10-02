@@ -7,9 +7,9 @@
 import type { JSX, RefAttributes } from "react";
 import { Select, type CollectionItem } from "@ark-ui/react/select";
 import { select, type SelectVariantProps } from "styled-system/recipes";
-import { createStyleContext } from "styled-system/jsx";
+import { createSlotRecipeContext } from "styled-system/jsx";
 
-const { withProvider, withContext } = createStyleContext(select);
+const { withProvider, withContext } = createSlotRecipeContext(select);
 
 export type RootProviderProps<T extends CollectionItem> =
   Select.RootProviderProps<T> & SelectVariantProps;

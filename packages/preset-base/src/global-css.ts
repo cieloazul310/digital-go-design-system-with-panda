@@ -1,6 +1,6 @@
 import { defineGlobalStyles } from "@pandacss/dev";
 
-export default defineGlobalStyles({
+export const globalCss = defineGlobalStyles({
   html: {
     fontSmoothing: "auto",
   },

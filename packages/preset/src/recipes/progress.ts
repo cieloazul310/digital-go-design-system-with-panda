@@ -8,7 +8,7 @@
 import { defineSlotRecipe } from "@pandacss/dev";
 import { anatomy as progressAnatomy } from "@zag-js/progress";
 
-export default defineSlotRecipe({
+export const progress = defineSlotRecipe({
   className: "progress",
   description:
     "プログレスインジケーターは、ユーザーのアクションに対して処理進行中であることを通知します。データ取得リクエストの応答を待っていることをユーザーに伝えたいといった要求に対応します。",

@@ -5,10 +5,10 @@
 "use client";
 import { Progress } from "@ark-ui/react/progress";
 import { progress } from "styled-system/recipes";
-import { createStyleContext } from "styled-system/jsx";
+import { createSlotRecipeContext } from "styled-system/jsx";
 import type { ComponentProps } from "styled-system/types";
 
-const { withProvider, withContext } = createStyleContext(progress);
+const { withProvider, withContext } = createSlotRecipeContext(progress);
 
 export type RootProviderProps = ComponentProps<typeof RootProvider>;
 export const RootProvider = withProvider(Progress.RootProvider, "root");

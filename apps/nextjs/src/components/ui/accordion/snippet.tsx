@@ -6,10 +6,10 @@
 "use client";
 import { Accordion } from "@ark-ui/react/accordion";
 import { accordion } from "styled-system/recipes";
-import { createStyleContext } from "styled-system/jsx";
+import { createSlotRecipeContext } from "styled-system/jsx";
 import type { ComponentProps } from "styled-system/types";
 
-const { withProvider, withContext } = createStyleContext(accordion);
+const { withProvider, withContext } = createSlotRecipeContext(accordion);
 
 export type RootProviderProps = ComponentProps<typeof RootProvider>;
 export const RootProvider = withProvider(Accordion.RootProvider, "root");

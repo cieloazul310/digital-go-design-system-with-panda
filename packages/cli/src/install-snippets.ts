@@ -8,12 +8,14 @@ import { copyComponents } from "./copy-components";
 import { createVersionComment } from "./version-comment";
 import { exists } from "./fs-exists";
 
-async function main(args: string[]) {
+async function main(args: string[], pandaVersion: "v1" | "v2") {
   const cwd = process.cwd();
   const { outDir, sourceDir, override } = await readConfig(cwd);
   const tmpPath = join(tmpdir(), `digital-go-pandacss-${Date.now()}`);
 
+  /* eslint-disable-next-line no-useless-assignment */
   let templateDir: string | undefined = undefined;
+  /* eslint-disable-next-line no-useless-assignment */
   let versionComment: string | undefined = undefined;
 
   if (sourceDir) {
@@ -66,13 +68,17 @@ async function main(args: string[]) {
     override,
     versionComment,
     ids: idsToCopy,
+    pandaVersion,
   });
 
   console.log(`✅ UIコンポーネントを ${outDir} に生成しました`);
 }
 
-export async function installSnippets(args: string[]) {
-  await main(args)
+export async function installSnippets(
+  args: string[],
+  pandaVersion: "v1" | "v2" = "v2",
+) {
+  await main(args, pandaVersion)
     .then(() => process.exit(0))
     .catch((err) => {
       console.error(err);

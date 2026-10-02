@@ -7,9 +7,9 @@
 import type { JSX, RefAttributes } from "react";
 import { type TreeNode, TreeView } from "@ark-ui/react/tree-view";
 import { treeView, type TreeViewVariantProps } from "styled-system/recipes";
-import { createStyleContext } from "styled-system/jsx";
+import { createSlotRecipeContext } from "styled-system/jsx";
 
-const { withProvider, withContext } = createStyleContext(treeView);
+const { withProvider, withContext } = createSlotRecipeContext(treeView);
 
 export type RootProviderProps<T extends TreeNode> =
   TreeView.RootProviderProps<T> & TreeViewVariantProps;

@@ -6,4 +6,4 @@ const colors = defineSemanticTokens.colors({
   ring: { value: "{colors.yellow.300}" },
 });
 
-export default colors;
+export { colors };

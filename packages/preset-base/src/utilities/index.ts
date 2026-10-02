@@ -34,4 +34,4 @@ const utilities = {
   focusBox,
 };
 
-export default utilities;
+export { utilities };

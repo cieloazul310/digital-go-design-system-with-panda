@@ -2,10 +2,10 @@
 "use client";
 import { Fieldset } from "@ark-ui/react/fieldset";
 import { fieldset } from "styled-system/recipes";
-import { createStyleContext } from "styled-system/jsx";
+import { createSlotRecipeContext } from "styled-system/jsx";
 import type { ComponentProps } from "styled-system/types";
 
-const { withRootProvider, withContext } = createStyleContext(fieldset);
+const { withRootProvider, withContext } = createSlotRecipeContext(fieldset);
 
 export type RootProviderProps = ComponentProps<typeof RootProvider>;
 export const RootProvider = withRootProvider(Fieldset.RootProvider);

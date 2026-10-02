@@ -1,10 +1,8 @@
+import { defineConfig } from "eslint/config";
 import eslintPluginReactRefresh from "eslint-plugin-react-refresh";
 import reactInternal from "./react-internal.mjs";
 
-/**
- * @type {import("eslint").Linter.Config}
- */
-export default [
+export default defineConfig([
   ...reactInternal,
   {
     plugins: {
@@ -17,4 +15,4 @@ export default [
       ],
     },
   },
-];
+]);

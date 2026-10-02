@@ -1,20 +1,19 @@
-import { cwd } from "process";
-import { resolve } from "path";
+import { cwd } from "node:process";
+import { resolve } from "node:path";
 import { defineConfig } from "eslint/config";
 import eslint from "@eslint/js";
 import globals from "globals";
 import tseslint from "typescript-eslint";
-import eslintPluginImport from "eslint-plugin-import";
+import { importX } from "eslint-plugin-import-x";
+import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 
 const project = resolve(cwd(), "./tsconfig.json");
-/**
- * @type {import("eslint").Linter.Config}
- */
-export default defineConfig(
+
+export default defineConfig([
   eslint.configs.recommended,
-  tseslint.configs.recommended,
-  eslintPluginImport.flatConfigs.recommended,
-  eslintPluginImport.flatConfigs.typescript,
+  ...tseslint.configs.recommended,
+  importX.flatConfigs.recommended,
+  importX.flatConfigs.typescript,
   {
     files: ["**/*.cjs"],
     languageOptions: {
@@ -25,11 +24,7 @@ export default defineConfig(
   },
   {
     settings: {
-      "import/resolver": {
-        typescript: {
-          project,
-        },
-      },
+      "import-x/resolver-next": [createTypeScriptImportResolver({ project })],
     },
   },
-);
+]);

@@ -4,7 +4,7 @@
  */
 import { defineRecipe } from "@pandacss/dev";
 
-export default defineRecipe({
+export const selectBox = defineRecipe({
   className: "select-box",
   description:
     "セレクトボックスは、複数の選択肢を提供するフォームコントロールです。",

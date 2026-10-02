@@ -1,10 +1,10 @@
 "use client";
 import { Collapsible } from "@ark-ui/react/collapsible";
 import { disclosure } from "styled-system/recipes";
-import { createStyleContext } from "styled-system/jsx";
+import { createSlotRecipeContext } from "styled-system/jsx";
 import type { ComponentProps } from "styled-system/types";
 
-const { withProvider, withContext } = createStyleContext(disclosure);
+const { withProvider, withContext } = createSlotRecipeContext(disclosure);
 
 export type RootProviderProps = ComponentProps<typeof RootProvider>;
 export const RootProvider = withProvider(Collapsible.RootProvider, "root");

@@ -1,6 +1,6 @@
 import { defineRecipe } from "@pandacss/dev";
 
-export default defineRecipe({
+export const blockquote = defineRecipe({
   className: "blockquote",
   base: {
     /**

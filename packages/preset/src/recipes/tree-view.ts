@@ -1,8 +1,8 @@
 import { defineSlotRecipe } from "@pandacss/dev";
 import { anatomy as treeViewAnatomy } from "@zag-js/tree-view";
-import menuItem from "./menu-item";
+import { menuItem } from "./menu-item";
 
-export default defineSlotRecipe({
+export const treeView = defineSlotRecipe({
   className: "tree-view",
   slots: treeViewAnatomy.keys(),
   base: {

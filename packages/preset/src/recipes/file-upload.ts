@@ -1,9 +1,9 @@
 import { defineSlotRecipe } from "@pandacss/dev";
 import { anatomy as fileUploadAnatomy } from "@zag-js/file-upload";
-import label from "./label";
-import link from "./link";
+import { label } from "./label";
+import { link } from "./link";
 
-export default defineSlotRecipe({
+export const fileUpload = defineSlotRecipe({
   className: "file-upload",
   slots: fileUploadAnatomy.extendWith("itemDetail").keys(),
   base: {

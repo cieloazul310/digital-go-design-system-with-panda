@@ -4,7 +4,7 @@
  */
 import { defineRecipe } from "@pandacss/dev";
 
-export default defineRecipe({
+export const menuItem = defineRecipe({
   className: "menu-item",
   base: {
     /**

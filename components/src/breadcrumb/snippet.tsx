@@ -5,10 +5,10 @@
 "use client";
 import { ark } from "@ark-ui/react/factory";
 import { breadcrumb } from "styled-system/recipes";
-import { createStyleContext } from "styled-system/jsx";
+import { createSlotRecipeContext } from "styled-system/jsx";
 import type { ComponentProps } from "styled-system/types";
 
-const { withProvider, withContext } = createStyleContext(breadcrumb);
+const { withProvider, withContext } = createSlotRecipeContext(breadcrumb);
 
 export type RootProps = ComponentProps<typeof Root>;
 export const Root = withProvider(ark.nav, "root");

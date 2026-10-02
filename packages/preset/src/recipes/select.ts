@@ -4,11 +4,11 @@
  */
 import { defineSlotRecipe } from "@pandacss/dev";
 import { anatomy as selectAnatomy } from "@zag-js/select";
-import label from "./label";
-import selectBox from "./select-box";
-import menu from "./menu";
+import { label } from "./label";
+import { selectBox } from "./select-box";
+import { menu } from "./menu";
 
-export default defineSlotRecipe({
+export const select = defineSlotRecipe({
   className: "select",
   description:
     "セレクトボックスは、複数の選択肢を提供するフォームコントロールです。",
