@@ -58,8 +58,8 @@
     "typescript": "^6"
   },
   "peerDependencies": {
-    "@pandacss/dev": ">=1.0.1",
-    "@pandacss/preset-panda": ">=1.0.0"
+    "@pandacss/dev": "^1.0.1 || ^2.0.0",
+    "@pandacss/preset-panda": "^1.0.0 || ^2.0.0"
   },
   "lint-staged": {
     "**/*.{js,mjs,cjs,tsx,ts,tsx}": [
