@@ -54,7 +54,6 @@ export default defineConfig({
 ```json
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "paths": {
       "styled-system/*": [
         "./styled-system/*"
@@ -76,6 +75,12 @@ npx @cieloazul310/digital-go-pandacss-cli install --all
 
 ```sh
 npx @cieloazul310/digital-go-pandacss-cli install accordion button card
+```
+
+デフォルトではPanda CSS v2形式のsnippetを生成します。Panda CSS v1を使用する場合は、`--panda-version v1`を指定してください。
+
+```sh
+npx @cieloazul310/digital-go-pandacss-cli install accordion --panda-version v1
 ```
 
 ---
