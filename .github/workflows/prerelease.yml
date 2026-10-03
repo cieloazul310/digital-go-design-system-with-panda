@@ -51,7 +51,8 @@ jobs:
         uses: changesets/action@v2
         with:
           # This expects you to have a script called release which does a build for your packages and calls changeset publish
-          publish-script: ${{ steps.detect-package-manager.outputs.manager }} run publish-packages
+          version-script: ${{ steps.detect-package-manager.outputs.manager }} run version
+          publish-script: ${{ steps.detect-package-manager.outputs.manager }} run publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
