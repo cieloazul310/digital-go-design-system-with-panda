@@ -1,5 +1,11 @@
 # @cieloazul310/digital-go-pandacss-utils
 
+## 0.6.2
+
+### Patch Changes
+
+- 6f09eb2: Panda CSS v2に対応
+
 ## 0.6.1
 
 ### Patch Changes
