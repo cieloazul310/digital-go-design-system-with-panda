@@ -1,5 +1,11 @@
 # @cieloazul310/digital-go-pandacss-utils
 
+## 0.6.1
+
+### Patch Changes
+
+- 7e0dcb7: バージョンスクリプトを修正
+
 ## 0.6.0
 
 ### Minor Changes
