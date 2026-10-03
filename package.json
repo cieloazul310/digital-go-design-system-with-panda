@@ -23,8 +23,8 @@
     "build:package": "turbo run build --filter='./packages/*' --filter='./components'",
     "build:docs": "tsx ./scripts/update-readme.ts",
     "changeset": "changeset",
-    "version": "npm run build:package && changeset version",
-    "publish": "changeset publish",
+    "version": "changeset version",
+    "publish": "npm run build:package && changeset publish",
     "lint-staged": "lint-staged",
     "test": "vitest"
   },
