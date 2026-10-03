@@ -60,4 +60,4 @@ jobs:
           publish-script: ${{ steps.detect-package-manager.outputs.manager }} run publish-packages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
