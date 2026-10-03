@@ -25,7 +25,7 @@
     "shiki": "^4.5.0"
   },
   "devDependencies": {
-    "@cieloazul310/digital-go-pandacss-preset": "^0.5.0-beta.0",
+    "@cieloazul310/digital-go-pandacss-preset": "^0.5.0",
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
     "@next/mdx": "^16.3.8",

@@ -1,5 +1,16 @@
 # @cieloazul310/digital-go-pandacss-plugin
 
+## 0.5.0
+
+### Minor Changes
+
+- 745b3b0: Panda CSS v2に対応
+
+### Patch Changes
+
+- Updated dependencies [745b3b0]
+  - @cieloazul310/digital-go-pandacss-utils@0.5.0
+
 ## 0.5.0-beta.0
 
 ### Minor Changes
