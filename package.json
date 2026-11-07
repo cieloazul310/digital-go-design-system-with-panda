@@ -21,6 +21,7 @@
     "dev": "turbo run dev --parallel",
     "build": "turbo run build",
     "build:package": "turbo run build --filter='./packages/*' --filter='./components'",
+    "generate:design-system": "npm run build:package && npm run panda --workspace components -- --spec && cp packages/generated/dist/specs/design-system.json apps/nextjs/public/design-system.json",
     "build:docs": "tsx ./scripts/update-readme.ts",
     "changeset": "changeset",
     "version": "changeset version",

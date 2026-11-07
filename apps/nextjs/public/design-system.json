@@ -1,0 +1,6239 @@
+{
+  "schemaVersion": 1,
+  "categories": {
+    "breakpoints": [
+      0,
+      5
+    ],
+    "colors": [
+      5,
+      257
+    ],
+    "fontSizes": [
+      257,
+      271
+    ],
+    "fontWeights": [
+      271,
+      275
+    ],
+    "fonts": [
+      275,
+      277
+    ],
+    "lineHeights": [
+      277,
+      285
+    ],
+    "radii": [
+      285,
+      293
+    ],
+    "shadows": [
+      293,
+      301
+    ],
+    "sizes": [
+      301,
+      359
+    ],
+    "spacing": [
+      359,
+      430
+    ]
+  },
+  "paths": [
+    "breakpoints.sm",
+    "breakpoints.md",
+    "breakpoints.lg",
+    "breakpoints.xl",
+    "breakpoints.2xl",
+    "colors.white",
+    "colors.black",
+    "colors.blue.50",
+    "colors.blue.100",
+    "colors.blue.200",
+    "colors.blue.300",
+    "colors.blue.400",
+    "colors.blue.500",
+    "colors.blue.600",
+    "colors.blue.700",
+    "colors.blue.800",
+    "colors.blue.900",
+    "colors.blue.1000",
+    "colors.blue.1100",
+    "colors.blue.1200",
+    "colors.blue.primary.100",
+    "colors.blue.primary.200",
+    "colors.blue.primary.300",
+    "colors.blue.primary",
+    "colors.blue.secondary",
+    "colors.blue.tertiary",
+    "colors.blue.bg",
+    "colors.light-blue.50",
+    "colors.light-blue.100",
+    "colors.light-blue.200",
+    "colors.light-blue.300",
+    "colors.light-blue.400",
+    "colors.light-blue.500",
+    "colors.light-blue.600",
+    "colors.light-blue.700",
+    "colors.light-blue.800",
+    "colors.light-blue.900",
+    "colors.light-blue.1000",
+    "colors.light-blue.1100",
+    "colors.light-blue.1200",
+    "colors.light-blue.primary.100",
+    "colors.light-blue.primary.200",
+    "colors.light-blue.primary.300",
+    "colors.light-blue.primary",
+    "colors.light-blue.secondary",
+    "colors.light-blue.tertiary",
+    "colors.light-blue.bg",
+    "colors.cyan.50",
+    "colors.cyan.100",
+    "colors.cyan.200",
+    "colors.cyan.300",
+    "colors.cyan.400",
+    "colors.cyan.500",
+    "colors.cyan.600",
+    "colors.cyan.700",
+    "colors.cyan.800",
+    "colors.cyan.900",
+    "colors.cyan.1000",
+    "colors.cyan.1100",
+    "colors.cyan.1200",
+    "colors.cyan.primary.100",
+    "colors.cyan.primary.200",
+    "colors.cyan.primary.300",
+    "colors.cyan.primary",
+    "colors.cyan.secondary",
+    "colors.cyan.tertiary",
+    "colors.cyan.bg",
+    "colors.green.50",
+    "colors.green.100",
+    "colors.green.200",
+    "colors.green.300",
+    "colors.green.400",
+    "colors.green.500",
+    "colors.green.600",
+    "colors.green.700",
+    "colors.green.800",
+    "colors.green.900",
+    "colors.green.1000",
+    "colors.green.1100",
+    "colors.green.1200",
+    "colors.green.primary.100",
+    "colors.green.primary.200",
+    "colors.green.primary.300",
+    "colors.green.primary",
+    "colors.green.secondary",
+    "colors.green.tertiary",
+    "colors.green.bg",
+    "colors.lime.50",
+    "colors.lime.100",
+    "colors.lime.200",
+    "colors.lime.300",
+    "colors.lime.400",
+    "colors.lime.500",
+    "colors.lime.600",
+    "colors.lime.700",
+    "colors.lime.800",
+    "colors.lime.900",
+    "colors.lime.1000",
+    "colors.lime.1100",
+    "colors.lime.1200",
+    "colors.lime.primary.100",
+    "colors.lime.primary.200",
+    "colors.lime.primary.300",
+    "colors.lime.primary",
+    "colors.lime.secondary",
+    "colors.lime.tertiary",
+    "colors.lime.bg",
+    "colors.yellow.50",
+    "colors.yellow.100",
+    "colors.yellow.200",
+    "colors.yellow.300",
+    "colors.yellow.400",
+    "colors.yellow.500",
+    "colors.yellow.600",
+    "colors.yellow.700",
+    "colors.yellow.800",
+    "colors.yellow.900",
+    "colors.yellow.1000",
+    "colors.yellow.1100",
+    "colors.yellow.1200",
+    "colors.yellow.primary.100",
+    "colors.yellow.primary.200",
+    "colors.yellow.primary.300",
+    "colors.yellow.primary",
+    "colors.yellow.secondary",
+    "colors.yellow.tertiary",
+    "colors.yellow.bg",
+    "colors.orange.50",
+    "colors.orange.100",
+    "colors.orange.200",
+    "colors.orange.300",
+    "colors.orange.400",
+    "colors.orange.500",
+    "colors.orange.600",
+    "colors.orange.700",
+    "colors.orange.800",
+    "colors.orange.900",
+    "colors.orange.1000",
+    "colors.orange.1100",
+    "colors.orange.1200",
+    "colors.orange.primary.100",
+    "colors.orange.primary.200",
+    "colors.orange.primary.300",
+    "colors.orange.primary",
+    "colors.orange.secondary",
+    "colors.orange.tertiary",
+    "colors.orange.bg",
+    "colors.red.50",
+    "colors.red.100",
+    "colors.red.200",
+    "colors.red.300",
+    "colors.red.400",
+    "colors.red.500",
+    "colors.red.600",
+    "colors.red.700",
+    "colors.red.800",
+    "colors.red.900",
+    "colors.red.1000",
+    "colors.red.1100",
+    "colors.red.1200",
+    "colors.red.primary.100",
+    "colors.red.primary.200",
+    "colors.red.primary.300",
+    "colors.red.primary",
+    "colors.red.secondary",
+    "colors.red.tertiary",
+    "colors.red.bg",
+    "colors.magenta.50",
+    "colors.magenta.100",
+    "colors.magenta.200",
+    "colors.magenta.300",
+    "colors.magenta.400",
+    "colors.magenta.500",
+    "colors.magenta.600",
+    "colors.magenta.700",
+    "colors.magenta.800",
+    "colors.magenta.900",
+    "colors.magenta.1000",
+    "colors.magenta.1100",
+    "colors.magenta.1200",
+    "colors.magenta.primary.100",
+    "colors.magenta.primary.200",
+    "colors.magenta.primary.300",
+    "colors.magenta.primary",
+    "colors.magenta.secondary",
+    "colors.magenta.tertiary",
+    "colors.magenta.bg",
+    "colors.purple.50",
+    "colors.purple.100",
+    "colors.purple.200",
+    "colors.purple.300",
+    "colors.purple.400",
+    "colors.purple.500",
+    "colors.purple.600",
+    "colors.purple.700",
+    "colors.purple.800",
+    "colors.purple.900",
+    "colors.purple.1000",
+    "colors.purple.1100",
+    "colors.purple.1200",
+    "colors.purple.primary.100",
+    "colors.purple.primary.200",
+    "colors.purple.primary.300",
+    "colors.purple.primary",
+    "colors.purple.secondary",
+    "colors.purple.tertiary",
+    "colors.purple.bg",
+    "colors.solid-gray.50",
+    "colors.solid-gray.100",
+    "colors.solid-gray.200",
+    "colors.solid-gray.300",
+    "colors.solid-gray.400",
+    "colors.solid-gray.420",
+    "colors.solid-gray.500",
+    "colors.solid-gray.536",
+    "colors.solid-gray.600",
+    "colors.solid-gray.700",
+    "colors.solid-gray.800",
+    "colors.solid-gray.900",
+    "colors.solid-gray.primary.100",
+    "colors.solid-gray.primary.200",
+    "colors.solid-gray.primary.300",
+    "colors.solid-gray.primary",
+    "colors.solid-gray.secondary",
+    "colors.solid-gray.tertiary",
+    "colors.solid-gray.bg",
+    "colors.success.1",
+    "colors.success.2",
+    "colors.error.1",
+    "colors.error.2",
+    "colors.warning.yellow.1",
+    "colors.warning.yellow.2",
+    "colors.warning.orange.1",
+    "colors.warning.orange.2",
+    "colors.focus.yellow",
+    "colors.focus.blue",
+    "colors.keyColor.50",
+    "colors.keyColor.100",
+    "colors.keyColor.200",
+    "colors.keyColor.300",
+    "colors.keyColor.400",
+    "colors.keyColor.500",
+    "colors.keyColor.600",
+    "colors.keyColor.700",
+    "colors.keyColor.800",
+    "colors.keyColor.900",
+    "colors.keyColor.1000",
+    "colors.keyColor.1100",
+    "colors.keyColor.1200",
+    "colors.keyColor.primary.100",
+    "colors.keyColor.primary.200",
+    "colors.keyColor.primary.300",
+    "colors.keyColor.primary",
+    "colors.keyColor.secondary",
+    "colors.keyColor.tertiary",
+    "colors.keyColor.bg",
+    "colors.ring",
+    "fontSizes.14",
+    "fontSizes.16",
+    "fontSizes.17",
+    "fontSizes.18",
+    "fontSizes.20",
+    "fontSizes.22",
+    "fontSizes.24",
+    "fontSizes.28",
+    "fontSizes.32",
+    "fontSizes.36",
+    "fontSizes.45",
+    "fontSizes.48",
+    "fontSizes.57",
+    "fontSizes.64",
+    "fontWeights.400",
+    "fontWeights.700",
+    "fontWeights.N",
+    "fontWeights.B",
+    "fonts.body",
+    "fonts.mono",
+    "lineHeights.100",
+    "lineHeights.120",
+    "lineHeights.130",
+    "lineHeights.140",
+    "lineHeights.150",
+    "lineHeights.160",
+    "lineHeights.170",
+    "lineHeights.175",
+    "radii.4",
+    "radii.6",
+    "radii.8",
+    "radii.12",
+    "radii.16",
+    "radii.24",
+    "radii.32",
+    "radii.full",
+    "shadows.1",
+    "shadows.2",
+    "shadows.3",
+    "shadows.4",
+    "shadows.5",
+    "shadows.6",
+    "shadows.7",
+    "shadows.8",
+    "sizes.0",
+    "sizes.1",
+    "sizes.2",
+    "sizes.3",
+    "sizes.4",
+    "sizes.5",
+    "sizes.6",
+    "sizes.7",
+    "sizes.8",
+    "sizes.9",
+    "sizes.10",
+    "sizes.11",
+    "sizes.12",
+    "sizes.14",
+    "sizes.16",
+    "sizes.20",
+    "sizes.24",
+    "sizes.28",
+    "sizes.32",
+    "sizes.36",
+    "sizes.40",
+    "sizes.44",
+    "sizes.48",
+    "sizes.52",
+    "sizes.56",
+    "sizes.60",
+    "sizes.64",
+    "sizes.72",
+    "sizes.80",
+    "sizes.96",
+    "sizes.0.5",
+    "sizes.1.5",
+    "sizes.2.5",
+    "sizes.3.5",
+    "sizes.4.5",
+    "sizes.5.5",
+    "sizes.xs",
+    "sizes.sm",
+    "sizes.md",
+    "sizes.lg",
+    "sizes.xl",
+    "sizes.2xl",
+    "sizes.3xl",
+    "sizes.4xl",
+    "sizes.5xl",
+    "sizes.6xl",
+    "sizes.7xl",
+    "sizes.8xl",
+    "sizes.prose",
+    "sizes.full",
+    "sizes.min",
+    "sizes.max",
+    "sizes.fit",
+    "sizes.breakpoint-sm",
+    "sizes.breakpoint-md",
+    "sizes.breakpoint-lg",
+    "sizes.breakpoint-xl",
+    "sizes.breakpoint-2xl",
+    "spacing.0",
+    "spacing.1",
+    "spacing.2",
+    "spacing.3",
+    "spacing.4",
+    "spacing.5",
+    "spacing.6",
+    "spacing.7",
+    "spacing.8",
+    "spacing.9",
+    "spacing.10",
+    "spacing.11",
+    "spacing.12",
+    "spacing.14",
+    "spacing.16",
+    "spacing.20",
+    "spacing.24",
+    "spacing.28",
+    "spacing.32",
+    "spacing.36",
+    "spacing.40",
+    "spacing.44",
+    "spacing.48",
+    "spacing.52",
+    "spacing.56",
+    "spacing.60",
+    "spacing.64",
+    "spacing.72",
+    "spacing.80",
+    "spacing.96",
+    "spacing.0.5",
+    "spacing.1.5",
+    "spacing.2.5",
+    "spacing.3.5",
+    "spacing.4.5",
+    "spacing.5.5",
+    "spacing.-1",
+    "spacing.-2",
+    "spacing.-3",
+    "spacing.-4",
+    "spacing.-5",
+    "spacing.-6",
+    "spacing.-7",
+    "spacing.-8",
+    "spacing.-9",
+    "spacing.-10",
+    "spacing.-11",
+    "spacing.-12",
+    "spacing.-14",
+    "spacing.-16",
+    "spacing.-20",
+    "spacing.-24",
+    "spacing.-28",
+    "spacing.-32",
+    "spacing.-36",
+    "spacing.-40",
+    "spacing.-44",
+    "spacing.-48",
+    "spacing.-52",
+    "spacing.-56",
+    "spacing.-60",
+    "spacing.-64",
+    "spacing.-72",
+    "spacing.-80",
+    "spacing.-96",
+    "spacing.-0.5",
+    "spacing.-1.5",
+    "spacing.-2.5",
+    "spacing.-3.5",
+    "spacing.-4.5",
+    "spacing.-5.5"
+  ],
+  "tokens": {
+    "breakpoints.sm": {
+      "category": "breakpoints",
+      "cssVar": "--breakpoints-sm",
+      "source": 1
+    },
+    "breakpoints.md": {
+      "category": "breakpoints",
+      "cssVar": "--breakpoints-md",
+      "source": 1
+    },
+    "breakpoints.lg": {
+      "category": "breakpoints",
+      "cssVar": "--breakpoints-lg",
+      "source": 1
+    },
+    "breakpoints.xl": {
+      "category": "breakpoints",
+      "cssVar": "--breakpoints-xl",
+      "source": 1
+    },
+    "breakpoints.2xl": {
+      "category": "breakpoints",
+      "cssVar": "--breakpoints-2xl",
+      "source": 1
+    },
+    "colors.white": {
+      "category": "colors",
+      "cssVar": "--colors-white",
+      "source": 1
+    },
+    "colors.black": {
+      "category": "colors",
+      "cssVar": "--colors-black",
+      "source": 1
+    },
+    "colors.blue.50": {
+      "category": "colors",
+      "cssVar": "--colors-blue-50",
+      "source": 1
+    },
+    "colors.blue.100": {
+      "category": "colors",
+      "cssVar": "--colors-blue-100",
+      "source": 1
+    },
+    "colors.blue.200": {
+      "category": "colors",
+      "cssVar": "--colors-blue-200",
+      "source": 1
+    },
+    "colors.blue.300": {
+      "category": "colors",
+      "cssVar": "--colors-blue-300",
+      "source": 1
+    },
+    "colors.blue.400": {
+      "category": "colors",
+      "cssVar": "--colors-blue-400",
+      "source": 1
+    },
+    "colors.blue.500": {
+      "category": "colors",
+      "cssVar": "--colors-blue-500",
+      "source": 1
+    },
+    "colors.blue.600": {
+      "category": "colors",
+      "cssVar": "--colors-blue-600",
+      "source": 1
+    },
+    "colors.blue.700": {
+      "category": "colors",
+      "cssVar": "--colors-blue-700",
+      "source": 1
+    },
+    "colors.blue.800": {
+      "category": "colors",
+      "cssVar": "--colors-blue-800",
+      "source": 1
+    },
+    "colors.blue.900": {
+      "category": "colors",
+      "cssVar": "--colors-blue-900",
+      "source": 1
+    },
+    "colors.blue.1000": {
+      "category": "colors",
+      "cssVar": "--colors-blue-1000",
+      "source": 1
+    },
+    "colors.blue.1100": {
+      "category": "colors",
+      "cssVar": "--colors-blue-1100",
+      "source": 1
+    },
+    "colors.blue.1200": {
+      "category": "colors",
+      "cssVar": "--colors-blue-1200",
+      "source": 1
+    },
+    "colors.blue.primary.100": {
+      "category": "colors",
+      "cssVar": "--colors-blue-primary-100",
+      "source": 1
+    },
+    "colors.blue.primary.200": {
+      "category": "colors",
+      "cssVar": "--colors-blue-primary-200",
+      "source": 1
+    },
+    "colors.blue.primary.300": {
+      "category": "colors",
+      "cssVar": "--colors-blue-primary-300",
+      "source": 1
+    },
+    "colors.blue.primary": {
+      "category": "colors",
+      "cssVar": "--colors-blue-primary",
+      "source": 1
+    },
+    "colors.blue.secondary": {
+      "category": "colors",
+      "cssVar": "--colors-blue-secondary",
+      "source": 1
+    },
+    "colors.blue.tertiary": {
+      "category": "colors",
+      "cssVar": "--colors-blue-tertiary",
+      "source": 1
+    },
+    "colors.blue.bg": {
+      "category": "colors",
+      "cssVar": "--colors-blue-bg",
+      "source": 1
+    },
+    "colors.light-blue.50": {
+      "category": "colors",
+      "cssVar": "--colors-light-blue-50",
+      "source": 1
+    },
+    "colors.light-blue.100": {
+      "category": "colors",
+      "cssVar": "--colors-light-blue-100",
+      "source": 1
+    },
+    "colors.light-blue.200": {
+      "category": "colors",
+      "cssVar": "--colors-light-blue-200",
+      "source": 1
+    },
+    "colors.light-blue.300": {
+      "category": "colors",
+      "cssVar": "--colors-light-blue-300",
+      "source": 1
+    },
+    "colors.light-blue.400": {
+      "category": "colors",
+      "cssVar": "--colors-light-blue-400",
+      "source": 1
+    },
+    "colors.light-blue.500": {
+      "category": "colors",
+      "cssVar": "--colors-light-blue-500",
+      "source": 1
+    },
+    "colors.light-blue.600": {
+      "category": "colors",
+      "cssVar": "--colors-light-blue-600",
+      "source": 1
+    },
+    "colors.light-blue.700": {
+      "category": "colors",
+      "cssVar": "--colors-light-blue-700",
+      "source": 1
+    },
+    "colors.light-blue.800": {
+      "category": "colors",
+      "cssVar": "--colors-light-blue-800",
+      "source": 1
+    },
+    "colors.light-blue.900": {
+      "category": "colors",
+      "cssVar": "--colors-light-blue-900",
+      "source": 1
+    },
+    "colors.light-blue.1000": {
+      "category": "colors",
+      "cssVar": "--colors-light-blue-1000",
+      "source": 1
+    },
+    "colors.light-blue.1100": {
+      "category": "colors",
+      "cssVar": "--colors-light-blue-1100",
+      "source": 1
+    },
+    "colors.light-blue.1200": {
+      "category": "colors",
+      "cssVar": "--colors-light-blue-1200",
+      "source": 1
+    },
+    "colors.light-blue.primary.100": {
+      "category": "colors",
+      "cssVar": "--colors-light-blue-primary-100",
+      "source": 1
+    },
+    "colors.light-blue.primary.200": {
+      "category": "colors",
+      "cssVar": "--colors-light-blue-primary-200",
+      "source": 1
+    },
+    "colors.light-blue.primary.300": {
+      "category": "colors",
+      "cssVar": "--colors-light-blue-primary-300",
+      "source": 1
+    },
+    "colors.light-blue.primary": {
+      "category": "colors",
+      "cssVar": "--colors-light-blue-primary",
+      "source": 1
+    },
+    "colors.light-blue.secondary": {
+      "category": "colors",
+      "cssVar": "--colors-light-blue-secondary",
+      "source": 1
+    },
+    "colors.light-blue.tertiary": {
+      "category": "colors",
+      "cssVar": "--colors-light-blue-tertiary",
+      "source": 1
+    },
+    "colors.light-blue.bg": {
+      "category": "colors",
+      "cssVar": "--colors-light-blue-bg",
+      "source": 1
+    },
+    "colors.cyan.50": {
+      "category": "colors",
+      "cssVar": "--colors-cyan-50",
+      "source": 1
+    },
+    "colors.cyan.100": {
+      "category": "colors",
+      "cssVar": "--colors-cyan-100",
+      "source": 1
+    },
+    "colors.cyan.200": {
+      "category": "colors",
+      "cssVar": "--colors-cyan-200",
+      "source": 1
+    },
+    "colors.cyan.300": {
+      "category": "colors",
+      "cssVar": "--colors-cyan-300",
+      "source": 1
+    },
+    "colors.cyan.400": {
+      "category": "colors",
+      "cssVar": "--colors-cyan-400",
+      "source": 1
+    },
+    "colors.cyan.500": {
+      "category": "colors",
+      "cssVar": "--colors-cyan-500",
+      "source": 1
+    },
+    "colors.cyan.600": {
+      "category": "colors",
+      "cssVar": "--colors-cyan-600",
+      "source": 1
+    },
+    "colors.cyan.700": {
+      "category": "colors",
+      "cssVar": "--colors-cyan-700",
+      "source": 1
+    },
+    "colors.cyan.800": {
+      "category": "colors",
+      "cssVar": "--colors-cyan-800",
+      "source": 1
+    },
+    "colors.cyan.900": {
+      "category": "colors",
+      "cssVar": "--colors-cyan-900",
+      "source": 1
+    },
+    "colors.cyan.1000": {
+      "category": "colors",
+      "cssVar": "--colors-cyan-1000",
+      "source": 1
+    },
+    "colors.cyan.1100": {
+      "category": "colors",
+      "cssVar": "--colors-cyan-1100",
+      "source": 1
+    },
+    "colors.cyan.1200": {
+      "category": "colors",
+      "cssVar": "--colors-cyan-1200",
+      "source": 1
+    },
+    "colors.cyan.primary.100": {
+      "category": "colors",
+      "cssVar": "--colors-cyan-primary-100",
+      "source": 1
+    },
+    "colors.cyan.primary.200": {
+      "category": "colors",
+      "cssVar": "--colors-cyan-primary-200",
+      "source": 1
+    },
+    "colors.cyan.primary.300": {
+      "category": "colors",
+      "cssVar": "--colors-cyan-primary-300",
+      "source": 1
+    },
+    "colors.cyan.primary": {
+      "category": "colors",
+      "cssVar": "--colors-cyan-primary",
+      "source": 1
+    },
+    "colors.cyan.secondary": {
+      "category": "colors",
+      "cssVar": "--colors-cyan-secondary",
+      "source": 1
+    },
+    "colors.cyan.tertiary": {
+      "category": "colors",
+      "cssVar": "--colors-cyan-tertiary",
+      "source": 1
+    },
+    "colors.cyan.bg": {
+      "category": "colors",
+      "cssVar": "--colors-cyan-bg",
+      "source": 1
+    },
+    "colors.green.50": {
+      "category": "colors",
+      "cssVar": "--colors-green-50",
+      "source": 1
+    },
+    "colors.green.100": {
+      "category": "colors",
+      "cssVar": "--colors-green-100",
+      "source": 1
+    },
+    "colors.green.200": {
+      "category": "colors",
+      "cssVar": "--colors-green-200",
+      "source": 1
+    },
+    "colors.green.300": {
+      "category": "colors",
+      "cssVar": "--colors-green-300",
+      "source": 1
+    },
+    "colors.green.400": {
+      "category": "colors",
+      "cssVar": "--colors-green-400",
+      "source": 1
+    },
+    "colors.green.500": {
+      "category": "colors",
+      "cssVar": "--colors-green-500",
+      "source": 1
+    },
+    "colors.green.600": {
+      "category": "colors",
+      "cssVar": "--colors-green-600",
+      "source": 1
+    },
+    "colors.green.700": {
+      "category": "colors",
+      "cssVar": "--colors-green-700",
+      "source": 1
+    },
+    "colors.green.800": {
+      "category": "colors",
+      "cssVar": "--colors-green-800",
+      "source": 1
+    },
+    "colors.green.900": {
+      "category": "colors",
+      "cssVar": "--colors-green-900",
+      "source": 1
+    },
+    "colors.green.1000": {
+      "category": "colors",
+      "cssVar": "--colors-green-1000",
+      "source": 1
+    },
+    "colors.green.1100": {
+      "category": "colors",
+      "cssVar": "--colors-green-1100",
+      "source": 1
+    },
+    "colors.green.1200": {
+      "category": "colors",
+      "cssVar": "--colors-green-1200",
+      "source": 1
+    },
+    "colors.green.primary.100": {
+      "category": "colors",
+      "cssVar": "--colors-green-primary-100",
+      "source": 1
+    },
+    "colors.green.primary.200": {
+      "category": "colors",
+      "cssVar": "--colors-green-primary-200",
+      "source": 1
+    },
+    "colors.green.primary.300": {
+      "category": "colors",
+      "cssVar": "--colors-green-primary-300",
+      "source": 1
+    },
+    "colors.green.primary": {
+      "category": "colors",
+      "cssVar": "--colors-green-primary",
+      "source": 1
+    },
+    "colors.green.secondary": {
+      "category": "colors",
+      "cssVar": "--colors-green-secondary",
+      "source": 1
+    },
+    "colors.green.tertiary": {
+      "category": "colors",
+      "cssVar": "--colors-green-tertiary",
+      "source": 1
+    },
+    "colors.green.bg": {
+      "category": "colors",
+      "cssVar": "--colors-green-bg",
+      "source": 1
+    },
+    "colors.lime.50": {
+      "category": "colors",
+      "cssVar": "--colors-lime-50",
+      "source": 1
+    },
+    "colors.lime.100": {
+      "category": "colors",
+      "cssVar": "--colors-lime-100",
+      "source": 1
+    },
+    "colors.lime.200": {
+      "category": "colors",
+      "cssVar": "--colors-lime-200",
+      "source": 1
+    },
+    "colors.lime.300": {
+      "category": "colors",
+      "cssVar": "--colors-lime-300",
+      "source": 1
+    },
+    "colors.lime.400": {
+      "category": "colors",
+      "cssVar": "--colors-lime-400",
+      "source": 1
+    },
+    "colors.lime.500": {
+      "category": "colors",
+      "cssVar": "--colors-lime-500",
+      "source": 1
+    },
+    "colors.lime.600": {
+      "category": "colors",
+      "cssVar": "--colors-lime-600",
+      "source": 1
+    },
+    "colors.lime.700": {
+      "category": "colors",
+      "cssVar": "--colors-lime-700",
+      "source": 1
+    },
+    "colors.lime.800": {
+      "category": "colors",
+      "cssVar": "--colors-lime-800",
+      "source": 1
+    },
+    "colors.lime.900": {
+      "category": "colors",
+      "cssVar": "--colors-lime-900",
+      "source": 1
+    },
+    "colors.lime.1000": {
+      "category": "colors",
+      "cssVar": "--colors-lime-1000",
+      "source": 1
+    },
+    "colors.lime.1100": {
+      "category": "colors",
+      "cssVar": "--colors-lime-1100",
+      "source": 1
+    },
+    "colors.lime.1200": {
+      "category": "colors",
+      "cssVar": "--colors-lime-1200",
+      "source": 1
+    },
+    "colors.lime.primary.100": {
+      "category": "colors",
+      "cssVar": "--colors-lime-primary-100",
+      "source": 1
+    },
+    "colors.lime.primary.200": {
+      "category": "colors",
+      "cssVar": "--colors-lime-primary-200",
+      "source": 1
+    },
+    "colors.lime.primary.300": {
+      "category": "colors",
+      "cssVar": "--colors-lime-primary-300",
+      "source": 1
+    },
+    "colors.lime.primary": {
+      "category": "colors",
+      "cssVar": "--colors-lime-primary",
+      "source": 1
+    },
+    "colors.lime.secondary": {
+      "category": "colors",
+      "cssVar": "--colors-lime-secondary",
+      "source": 1
+    },
+    "colors.lime.tertiary": {
+      "category": "colors",
+      "cssVar": "--colors-lime-tertiary",
+      "source": 1
+    },
+    "colors.lime.bg": {
+      "category": "colors",
+      "cssVar": "--colors-lime-bg",
+      "source": 1
+    },
+    "colors.yellow.50": {
+      "category": "colors",
+      "cssVar": "--colors-yellow-50",
+      "source": 1
+    },
+    "colors.yellow.100": {
+      "category": "colors",
+      "cssVar": "--colors-yellow-100",
+      "source": 1
+    },
+    "colors.yellow.200": {
+      "category": "colors",
+      "cssVar": "--colors-yellow-200",
+      "source": 1
+    },
+    "colors.yellow.300": {
+      "category": "colors",
+      "cssVar": "--colors-yellow-300",
+      "source": 1
+    },
+    "colors.yellow.400": {
+      "category": "colors",
+      "cssVar": "--colors-yellow-400",
+      "source": 1
+    },
+    "colors.yellow.500": {
+      "category": "colors",
+      "cssVar": "--colors-yellow-500",
+      "source": 1
+    },
+    "colors.yellow.600": {
+      "category": "colors",
+      "cssVar": "--colors-yellow-600",
+      "source": 1
+    },
+    "colors.yellow.700": {
+      "category": "colors",
+      "cssVar": "--colors-yellow-700",
+      "source": 1
+    },
+    "colors.yellow.800": {
+      "category": "colors",
+      "cssVar": "--colors-yellow-800",
+      "source": 1
+    },
+    "colors.yellow.900": {
+      "category": "colors",
+      "cssVar": "--colors-yellow-900",
+      "source": 1
+    },
+    "colors.yellow.1000": {
+      "category": "colors",
+      "cssVar": "--colors-yellow-1000",
+      "source": 1
+    },
+    "colors.yellow.1100": {
+      "category": "colors",
+      "cssVar": "--colors-yellow-1100",
+      "source": 1
+    },
+    "colors.yellow.1200": {
+      "category": "colors",
+      "cssVar": "--colors-yellow-1200",
+      "source": 1
+    },
+    "colors.yellow.primary.100": {
+      "category": "colors",
+      "cssVar": "--colors-yellow-primary-100",
+      "source": 1
+    },
+    "colors.yellow.primary.200": {
+      "category": "colors",
+      "cssVar": "--colors-yellow-primary-200",
+      "source": 1
+    },
+    "colors.yellow.primary.300": {
+      "category": "colors",
+      "cssVar": "--colors-yellow-primary-300",
+      "source": 1
+    },
+    "colors.yellow.primary": {
+      "category": "colors",
+      "cssVar": "--colors-yellow-primary",
+      "source": 1
+    },
+    "colors.yellow.secondary": {
+      "category": "colors",
+      "cssVar": "--colors-yellow-secondary",
+      "source": 1
+    },
+    "colors.yellow.tertiary": {
+      "category": "colors",
+      "cssVar": "--colors-yellow-tertiary",
+      "source": 1
+    },
+    "colors.yellow.bg": {
+      "category": "colors",
+      "cssVar": "--colors-yellow-bg",
+      "source": 1
+    },
+    "colors.orange.50": {
+      "category": "colors",
+      "cssVar": "--colors-orange-50",
+      "source": 1
+    },
+    "colors.orange.100": {
+      "category": "colors",
+      "cssVar": "--colors-orange-100",
+      "source": 1
+    },
+    "colors.orange.200": {
+      "category": "colors",
+      "cssVar": "--colors-orange-200",
+      "source": 1
+    },
+    "colors.orange.300": {
+      "category": "colors",
+      "cssVar": "--colors-orange-300",
+      "source": 1
+    },
+    "colors.orange.400": {
+      "category": "colors",
+      "cssVar": "--colors-orange-400",
+      "source": 1
+    },
+    "colors.orange.500": {
+      "category": "colors",
+      "cssVar": "--colors-orange-500",
+      "source": 1
+    },
+    "colors.orange.600": {
+      "category": "colors",
+      "cssVar": "--colors-orange-600",
+      "source": 1
+    },
+    "colors.orange.700": {
+      "category": "colors",
+      "cssVar": "--colors-orange-700",
+      "source": 1
+    },
+    "colors.orange.800": {
+      "category": "colors",
+      "cssVar": "--colors-orange-800",
+      "source": 1
+    },
+    "colors.orange.900": {
+      "category": "colors",
+      "cssVar": "--colors-orange-900",
+      "source": 1
+    },
+    "colors.orange.1000": {
+      "category": "colors",
+      "cssVar": "--colors-orange-1000",
+      "source": 1
+    },
+    "colors.orange.1100": {
+      "category": "colors",
+      "cssVar": "--colors-orange-1100",
+      "source": 1
+    },
+    "colors.orange.1200": {
+      "category": "colors",
+      "cssVar": "--colors-orange-1200",
+      "source": 1
+    },
+    "colors.orange.primary.100": {
+      "category": "colors",
+      "cssVar": "--colors-orange-primary-100",
+      "source": 1
+    },
+    "colors.orange.primary.200": {
+      "category": "colors",
+      "cssVar": "--colors-orange-primary-200",
+      "source": 1
+    },
+    "colors.orange.primary.300": {
+      "category": "colors",
+      "cssVar": "--colors-orange-primary-300",
+      "source": 1
+    },
+    "colors.orange.primary": {
+      "category": "colors",
+      "cssVar": "--colors-orange-primary",
+      "source": 1
+    },
+    "colors.orange.secondary": {
+      "category": "colors",
+      "cssVar": "--colors-orange-secondary",
+      "source": 1
+    },
+    "colors.orange.tertiary": {
+      "category": "colors",
+      "cssVar": "--colors-orange-tertiary",
+      "source": 1
+    },
+    "colors.orange.bg": {
+      "category": "colors",
+      "cssVar": "--colors-orange-bg",
+      "source": 1
+    },
+    "colors.red.50": {
+      "category": "colors",
+      "cssVar": "--colors-red-50",
+      "source": 1
+    },
+    "colors.red.100": {
+      "category": "colors",
+      "cssVar": "--colors-red-100",
+      "source": 1
+    },
+    "colors.red.200": {
+      "category": "colors",
+      "cssVar": "--colors-red-200",
+      "source": 1
+    },
+    "colors.red.300": {
+      "category": "colors",
+      "cssVar": "--colors-red-300",
+      "source": 1
+    },
+    "colors.red.400": {
+      "category": "colors",
+      "cssVar": "--colors-red-400",
+      "source": 1
+    },
+    "colors.red.500": {
+      "category": "colors",
+      "cssVar": "--colors-red-500",
+      "source": 1
+    },
+    "colors.red.600": {
+      "category": "colors",
+      "cssVar": "--colors-red-600",
+      "source": 1
+    },
+    "colors.red.700": {
+      "category": "colors",
+      "cssVar": "--colors-red-700",
+      "source": 1
+    },
+    "colors.red.800": {
+      "category": "colors",
+      "cssVar": "--colors-red-800",
+      "source": 1
+    },
+    "colors.red.900": {
+      "category": "colors",
+      "cssVar": "--colors-red-900",
+      "source": 1
+    },
+    "colors.red.1000": {
+      "category": "colors",
+      "cssVar": "--colors-red-1000",
+      "source": 1
+    },
+    "colors.red.1100": {
+      "category": "colors",
+      "cssVar": "--colors-red-1100",
+      "source": 1
+    },
+    "colors.red.1200": {
+      "category": "colors",
+      "cssVar": "--colors-red-1200",
+      "source": 1
+    },
+    "colors.red.primary.100": {
+      "category": "colors",
+      "cssVar": "--colors-red-primary-100",
+      "source": 1
+    },
+    "colors.red.primary.200": {
+      "category": "colors",
+      "cssVar": "--colors-red-primary-200",
+      "source": 1
+    },
+    "colors.red.primary.300": {
+      "category": "colors",
+      "cssVar": "--colors-red-primary-300",
+      "source": 1
+    },
+    "colors.red.primary": {
+      "category": "colors",
+      "cssVar": "--colors-red-primary",
+      "source": 1
+    },
+    "colors.red.secondary": {
+      "category": "colors",
+      "cssVar": "--colors-red-secondary",
+      "source": 1
+    },
+    "colors.red.tertiary": {
+      "category": "colors",
+      "cssVar": "--colors-red-tertiary",
+      "source": 1
+    },
+    "colors.red.bg": {
+      "category": "colors",
+      "cssVar": "--colors-red-bg",
+      "source": 1
+    },
+    "colors.magenta.50": {
+      "category": "colors",
+      "cssVar": "--colors-magenta-50",
+      "source": 1
+    },
+    "colors.magenta.100": {
+      "category": "colors",
+      "cssVar": "--colors-magenta-100",
+      "source": 1
+    },
+    "colors.magenta.200": {
+      "category": "colors",
+      "cssVar": "--colors-magenta-200",
+      "source": 1
+    },
+    "colors.magenta.300": {
+      "category": "colors",
+      "cssVar": "--colors-magenta-300",
+      "source": 1
+    },
+    "colors.magenta.400": {
+      "category": "colors",
+      "cssVar": "--colors-magenta-400",
+      "source": 1
+    },
+    "colors.magenta.500": {
+      "category": "colors",
+      "cssVar": "--colors-magenta-500",
+      "source": 1
+    },
+    "colors.magenta.600": {
+      "category": "colors",
+      "cssVar": "--colors-magenta-600",
+      "source": 1
+    },
+    "colors.magenta.700": {
+      "category": "colors",
+      "cssVar": "--colors-magenta-700",
+      "source": 1
+    },
+    "colors.magenta.800": {
+      "category": "colors",
+      "cssVar": "--colors-magenta-800",
+      "source": 1
+    },
+    "colors.magenta.900": {
+      "category": "colors",
+      "cssVar": "--colors-magenta-900",
+      "source": 1
+    },
+    "colors.magenta.1000": {
+      "category": "colors",
+      "cssVar": "--colors-magenta-1000",
+      "source": 1
+    },
+    "colors.magenta.1100": {
+      "category": "colors",
+      "cssVar": "--colors-magenta-1100",
+      "source": 1
+    },
+    "colors.magenta.1200": {
+      "category": "colors",
+      "cssVar": "--colors-magenta-1200",
+      "source": 1
+    },
+    "colors.magenta.primary.100": {
+      "category": "colors",
+      "cssVar": "--colors-magenta-primary-100",
+      "source": 1
+    },
+    "colors.magenta.primary.200": {
+      "category": "colors",
+      "cssVar": "--colors-magenta-primary-200",
+      "source": 1
+    },
+    "colors.magenta.primary.300": {
+      "category": "colors",
+      "cssVar": "--colors-magenta-primary-300",
+      "source": 1
+    },
+    "colors.magenta.primary": {
+      "category": "colors",
+      "cssVar": "--colors-magenta-primary",
+      "source": 1
+    },
+    "colors.magenta.secondary": {
+      "category": "colors",
+      "cssVar": "--colors-magenta-secondary",
+      "source": 1
+    },
+    "colors.magenta.tertiary": {
+      "category": "colors",
+      "cssVar": "--colors-magenta-tertiary",
+      "source": 1
+    },
+    "colors.magenta.bg": {
+      "category": "colors",
+      "cssVar": "--colors-magenta-bg",
+      "source": 1
+    },
+    "colors.purple.50": {
+      "category": "colors",
+      "cssVar": "--colors-purple-50",
+      "source": 1
+    },
+    "colors.purple.100": {
+      "category": "colors",
+      "cssVar": "--colors-purple-100",
+      "source": 1
+    },
+    "colors.purple.200": {
+      "category": "colors",
+      "cssVar": "--colors-purple-200",
+      "source": 1
+    },
+    "colors.purple.300": {
+      "category": "colors",
+      "cssVar": "--colors-purple-300",
+      "source": 1
+    },
+    "colors.purple.400": {
+      "category": "colors",
+      "cssVar": "--colors-purple-400",
+      "source": 1
+    },
+    "colors.purple.500": {
+      "category": "colors",
+      "cssVar": "--colors-purple-500",
+      "source": 1
+    },
+    "colors.purple.600": {
+      "category": "colors",
+      "cssVar": "--colors-purple-600",
+      "source": 1
+    },
+    "colors.purple.700": {
+      "category": "colors",
+      "cssVar": "--colors-purple-700",
+      "source": 1
+    },
+    "colors.purple.800": {
+      "category": "colors",
+      "cssVar": "--colors-purple-800",
+      "source": 1
+    },
+    "colors.purple.900": {
+      "category": "colors",
+      "cssVar": "--colors-purple-900",
+      "source": 1
+    },
+    "colors.purple.1000": {
+      "category": "colors",
+      "cssVar": "--colors-purple-1000",
+      "source": 1
+    },
+    "colors.purple.1100": {
+      "category": "colors",
+      "cssVar": "--colors-purple-1100",
+      "source": 1
+    },
+    "colors.purple.1200": {
+      "category": "colors",
+      "cssVar": "--colors-purple-1200",
+      "source": 1
+    },
+    "colors.purple.primary.100": {
+      "category": "colors",
+      "cssVar": "--colors-purple-primary-100",
+      "source": 1
+    },
+    "colors.purple.primary.200": {
+      "category": "colors",
+      "cssVar": "--colors-purple-primary-200",
+      "source": 1
+    },
+    "colors.purple.primary.300": {
+      "category": "colors",
+      "cssVar": "--colors-purple-primary-300",
+      "source": 1
+    },
+    "colors.purple.primary": {
+      "category": "colors",
+      "cssVar": "--colors-purple-primary",
+      "source": 1
+    },
+    "colors.purple.secondary": {
+      "category": "colors",
+      "cssVar": "--colors-purple-secondary",
+      "source": 1
+    },
+    "colors.purple.tertiary": {
+      "category": "colors",
+      "cssVar": "--colors-purple-tertiary",
+      "source": 1
+    },
+    "colors.purple.bg": {
+      "category": "colors",
+      "cssVar": "--colors-purple-bg",
+      "source": 1
+    },
+    "colors.solid-gray.50": {
+      "category": "colors",
+      "cssVar": "--colors-solid-gray-50",
+      "source": 1
+    },
+    "colors.solid-gray.100": {
+      "category": "colors",
+      "cssVar": "--colors-solid-gray-100",
+      "source": 1
+    },
+    "colors.solid-gray.200": {
+      "category": "colors",
+      "cssVar": "--colors-solid-gray-200",
+      "source": 1
+    },
+    "colors.solid-gray.300": {
+      "category": "colors",
+      "cssVar": "--colors-solid-gray-300",
+      "source": 1
+    },
+    "colors.solid-gray.400": {
+      "category": "colors",
+      "cssVar": "--colors-solid-gray-400",
+      "source": 1
+    },
+    "colors.solid-gray.420": {
+      "category": "colors",
+      "cssVar": "--colors-solid-gray-420",
+      "source": 1
+    },
+    "colors.solid-gray.500": {
+      "category": "colors",
+      "cssVar": "--colors-solid-gray-500",
+      "source": 1
+    },
+    "colors.solid-gray.536": {
+      "category": "colors",
+      "cssVar": "--colors-solid-gray-536",
+      "source": 1
+    },
+    "colors.solid-gray.600": {
+      "category": "colors",
+      "cssVar": "--colors-solid-gray-600",
+      "source": 1
+    },
+    "colors.solid-gray.700": {
+      "category": "colors",
+      "cssVar": "--colors-solid-gray-700",
+      "source": 1
+    },
+    "colors.solid-gray.800": {
+      "category": "colors",
+      "cssVar": "--colors-solid-gray-800",
+      "source": 1
+    },
+    "colors.solid-gray.900": {
+      "category": "colors",
+      "cssVar": "--colors-solid-gray-900",
+      "source": 1
+    },
+    "colors.solid-gray.primary.100": {
+      "category": "colors",
+      "cssVar": "--colors-solid-gray-primary-100",
+      "source": 1
+    },
+    "colors.solid-gray.primary.200": {
+      "category": "colors",
+      "cssVar": "--colors-solid-gray-primary-200",
+      "source": 1
+    },
+    "colors.solid-gray.primary.300": {
+      "category": "colors",
+      "cssVar": "--colors-solid-gray-primary-300",
+      "source": 1
+    },
+    "colors.solid-gray.primary": {
+      "category": "colors",
+      "cssVar": "--colors-solid-gray-primary",
+      "source": 1
+    },
+    "colors.solid-gray.secondary": {
+      "category": "colors",
+      "cssVar": "--colors-solid-gray-secondary",
+      "source": 1
+    },
+    "colors.solid-gray.tertiary": {
+      "category": "colors",
+      "cssVar": "--colors-solid-gray-tertiary",
+      "source": 1
+    },
+    "colors.solid-gray.bg": {
+      "category": "colors",
+      "cssVar": "--colors-solid-gray-bg",
+      "source": 1
+    },
+    "colors.success.1": {
+      "category": "colors",
+      "cssVar": "--colors-success-1",
+      "description": "成功、安全、完了などを意味するカラー",
+      "source": 1
+    },
+    "colors.success.2": {
+      "category": "colors",
+      "cssVar": "--colors-success-2",
+      "description": "成功、安全、完了などを意味するカラー",
+      "source": 1
+    },
+    "colors.error.1": {
+      "category": "colors",
+      "cssVar": "--colors-error-1",
+      "description": "失敗やエラーのほか、危険情報や制約条件の提示など注意喚起を意味するカラー",
+      "source": 1
+    },
+    "colors.error.2": {
+      "category": "colors",
+      "cssVar": "--colors-error-2",
+      "description": "失敗やエラーのほか、危険情報や制約条件の提示など注意喚起を意味するカラー",
+      "source": 1
+    },
+    "colors.warning.yellow.1": {
+      "category": "colors",
+      "cssVar": "--colors-warning-yellow-1",
+      "description": "警告や禁止事項などを意味するカラー",
+      "source": 1
+    },
+    "colors.warning.yellow.2": {
+      "category": "colors",
+      "cssVar": "--colors-warning-yellow-2",
+      "description": "警告や禁止事項などを意味するカラー",
+      "source": 1
+    },
+    "colors.warning.orange.1": {
+      "category": "colors",
+      "cssVar": "--colors-warning-orange-1",
+      "description": "警告や禁止事項などを意味するカラー",
+      "source": 1
+    },
+    "colors.warning.orange.2": {
+      "category": "colors",
+      "cssVar": "--colors-warning-orange-2",
+      "description": "警告や禁止事項などを意味するカラー",
+      "source": 1
+    },
+    "colors.focus.yellow": {
+      "category": "colors",
+      "cssVar": "--colors-focus-yellow",
+      "source": 1
+    },
+    "colors.focus.blue": {
+      "category": "colors",
+      "cssVar": "--colors-focus-blue",
+      "source": 1
+    },
+    "colors.keyColor.50": {
+      "category": "colors",
+      "cssVar": "--colors-key-color-50",
+      "originalValue": "{colors.blue.50}",
+      "semantic": true,
+      "source": 2
+    },
+    "colors.keyColor.100": {
+      "category": "colors",
+      "cssVar": "--colors-key-color-100",
+      "originalValue": "{colors.blue.100}",
+      "semantic": true,
+      "source": 2
+    },
+    "colors.keyColor.200": {
+      "category": "colors",
+      "cssVar": "--colors-key-color-200",
+      "originalValue": "{colors.blue.200}",
+      "semantic": true,
+      "source": 2
+    },
+    "colors.keyColor.300": {
+      "category": "colors",
+      "cssVar": "--colors-key-color-300",
+      "originalValue": "{colors.blue.300}",
+      "semantic": true,
+      "source": 2
+    },
+    "colors.keyColor.400": {
+      "category": "colors",
+      "cssVar": "--colors-key-color-400",
+      "originalValue": "{colors.blue.400}",
+      "semantic": true,
+      "source": 2
+    },
+    "colors.keyColor.500": {
+      "category": "colors",
+      "cssVar": "--colors-key-color-500",
+      "originalValue": "{colors.blue.500}",
+      "semantic": true,
+      "source": 2
+    },
+    "colors.keyColor.600": {
+      "category": "colors",
+      "cssVar": "--colors-key-color-600",
+      "originalValue": "{colors.blue.600}",
+      "semantic": true,
+      "source": 2
+    },
+    "colors.keyColor.700": {
+      "category": "colors",
+      "cssVar": "--colors-key-color-700",
+      "originalValue": "{colors.blue.700}",
+      "semantic": true,
+      "source": 2
+    },
+    "colors.keyColor.800": {
+      "category": "colors",
+      "cssVar": "--colors-key-color-800",
+      "originalValue": "{colors.blue.800}",
+      "semantic": true,
+      "source": 2
+    },
+    "colors.keyColor.900": {
+      "category": "colors",
+      "cssVar": "--colors-key-color-900",
+      "originalValue": "{colors.blue.900}",
+      "semantic": true,
+      "source": 2
+    },
+    "colors.keyColor.1000": {
+      "category": "colors",
+      "cssVar": "--colors-key-color-1000",
+      "originalValue": "{colors.blue.1000}",
+      "semantic": true,
+      "source": 2
+    },
+    "colors.keyColor.1100": {
+      "category": "colors",
+      "cssVar": "--colors-key-color-1100",
+      "originalValue": "{colors.blue.1100}",
+      "semantic": true,
+      "source": 2
+    },
+    "colors.keyColor.1200": {
+      "category": "colors",
+      "cssVar": "--colors-key-color-1200",
+      "originalValue": "{colors.blue.1200}",
+      "semantic": true,
+      "source": 2
+    },
+    "colors.keyColor.primary.100": {
+      "category": "colors",
+      "cssVar": "--colors-key-color-primary-100",
+      "originalValue": "{colors.blue.primary.100}",
+      "semantic": true,
+      "source": 2
+    },
+    "colors.keyColor.primary.200": {
+      "category": "colors",
+      "cssVar": "--colors-key-color-primary-200",
+      "originalValue": "{colors.blue.primary.200}",
+      "semantic": true,
+      "source": 2
+    },
+    "colors.keyColor.primary.300": {
+      "category": "colors",
+      "cssVar": "--colors-key-color-primary-300",
+      "originalValue": "{colors.blue.primary.300}",
+      "semantic": true,
+      "source": 2
+    },
+    "colors.keyColor.primary": {
+      "category": "colors",
+      "cssVar": "--colors-key-color-primary",
+      "originalValue": "{colors.blue.primary}",
+      "description": "ウェブサイトのトーン＆マナーを確定するカラーです。サイト全体を通じて視覚的にブランドを伝える主要な要素（たとえば、ロゴタイプ、ヘッダーやグローバルナビゲーションの視覚表現）や、優先される動線や状況を示すUI（たとえば、CTAボタン、アクティブな状態表示等）に使用されます。プライマリーカラーには、主要な背景色とのコントラスト比が少なくとも4.5:1以上を維持できるカラーを選択する必要があります。",
+      "semantic": true,
+      "source": 2
+    },
+    "colors.keyColor.secondary": {
+      "category": "colors",
+      "cssVar": "--colors-key-color-secondary",
+      "originalValue": "{colors.blue.secondary}",
+      "description": "セカンダリーカラーは、プライマリーカラーを補完して、あまり目立たなくていい副次的な動線や状況を示すUI（たとえば、選択肢を提供するボタン、機能や状態を表示するパーツ等）で使用します。プライマリーカラーと同じ色相で明度が高いまたは低いものを選択します。これにより、カラーの一貫性を保ちながら視覚的な対比、情報の階層、優先の順列等を反映したUIを作成する際に役立ちます。セカンダリーカラーを主要な背景色と隣接する表示要素に使用する場合は、主要な背景色とのコントラスト比が少なくとも3:1以上を維持できるカラーを選択する必要があります。なお、セカンダリーカラーをテキストのカラーとして使用する場合は、コントラスト比が少なくとも4.5:1以上でなければなりません。",
+      "semantic": true,
+      "source": 2
+    },
+    "colors.keyColor.tertiary": {
+      "category": "colors",
+      "cssVar": "--colors-key-color-tertiary",
+      "originalValue": "{colors.blue.tertiary}",
+      "description": "ターシャリーカラーは、セカンダリーカラーと反対の明度で設定します。プライマリーカラーと同色相で、明度高をセカンダリーカラーとした場合は明度低をターシャリーカラーに、明度低をセカンダリーカラーとした場合は明度高をターシャリーカラーとします。ターシャリーカラーを主要な背景色と隣接する表示要素に使用する場合は、主要な背景色とのコントラスト比が少なくとも3:1以上を維持できるカラーを選択する必要があります。なお、ターシャリーカラーをテキストのカラーとして使用する場合は、コントラスト比が少なくとも4.5:1以上でなければなりません。",
+      "semantic": true,
+      "source": 2
+    },
+    "colors.keyColor.bg": {
+      "category": "colors",
+      "cssVar": "--colors-key-color-bg",
+      "originalValue": "{colors.blue.bg}",
+      "description": "白または黒以外のバックグラウンドカラーは、ウェブサイトやアプリのさまざまなセクションや要素の背景に特別に選ばれるカラーです。テキストや非テキスト要素のカラーは、背景色とのコントラスト比を考慮して設定されていますが、通常、この時に想定している背景色は白または黒です。バックグラウンドカラーの上にテキストや非テキスト要素が配置される場合、そのままではコントラスト要件を満たさなくなる場合があります。バックグラウンドカラーに応じて、コントラスト比を調整してください。",
+      "semantic": true,
+      "source": 2
+    },
+    "colors.ring": {
+      "category": "colors",
+      "cssVar": "--colors-ring",
+      "originalValue": "{colors.yellow.300}",
+      "semantic": true,
+      "source": 1
+    },
+    "fontSizes.14": {
+      "category": "fontSizes",
+      "cssVar": "--font-sizes-14",
+      "description": "基本的には使用しません。フッター要素などコンテンツに付随する情報や、UIやコンテンツを構成する際の領域的な制約がある場合のように標準的な文字サイズ（16 CSS px以上）の使用が難しいケースにおいてのみ使用される文字サイズです。なお、14 CSS px未満の大きさの使用は原則として許容されません。",
+      "source": 1
+    },
+    "fontSizes.16": {
+      "category": "fontSizes",
+      "cssVar": "--font-sizes-16",
+      "description": "読み物コンテンツ向けに多く使用される見出しや本文を構成する文字サイズ。なお、本文やUIにおいては16 CSS px以上が基準値となります。",
+      "source": 1
+    },
+    "fontSizes.17": {
+      "category": "fontSizes",
+      "cssVar": "--font-sizes-17",
+      "description": "読み物コンテンツ向けに多く使用される見出しや本文を構成する文字サイズ。なお、本文やUIにおいては16 CSS px以上が基準値となります。",
+      "source": 1
+    },
+    "fontSizes.18": {
+      "category": "fontSizes",
+      "cssVar": "--font-sizes-18",
+      "description": "読み物コンテンツ向けに多く使用される見出しや本文を構成する文字サイズ。なお、本文やUIにおいては16 CSS px以上が基準値となります。",
+      "source": 1
+    },
+    "fontSizes.20": {
+      "category": "fontSizes",
+      "cssVar": "--font-sizes-20",
+      "description": "読み物コンテンツ向けに多く使用される見出しや本文を構成する文字サイズ。なお、本文やUIにおいては16 CSS px以上が基準値となります。",
+      "source": 1
+    },
+    "fontSizes.22": {
+      "category": "fontSizes",
+      "cssVar": "--font-sizes-22",
+      "description": "読み物コンテンツ向けに多く使用される見出しや本文を構成する文字サイズ。なお、本文やUIにおいては16 CSS px以上が基準値となります。",
+      "source": 1
+    },
+    "fontSizes.24": {
+      "category": "fontSizes",
+      "cssVar": "--font-sizes-24",
+      "description": "読み物コンテンツ向けに多く使用される見出しや本文を構成する文字サイズ。なお、本文やUIにおいては16 CSS px以上が基準値となります。",
+      "source": 1
+    },
+    "fontSizes.28": {
+      "category": "fontSizes",
+      "cssVar": "--font-sizes-28",
+      "description": "読み物コンテンツ向けに多く使用される見出しや本文を構成する文字サイズ。なお、本文やUIにおいては16 CSS px以上が基準値となります。",
+      "source": 1
+    },
+    "fontSizes.32": {
+      "category": "fontSizes",
+      "cssVar": "--font-sizes-32",
+      "description": "読み物コンテンツ向けに多く使用される見出しや本文を構成する文字サイズ。なお、本文やUIにおいては16 CSS px以上が基準値となります。",
+      "source": 1
+    },
+    "fontSizes.36": {
+      "category": "fontSizes",
+      "cssVar": "--font-sizes-36",
+      "description": "読み物コンテンツ向けに多く使用される見出しや本文を構成する文字サイズ。なお、本文やUIにおいては16 CSS px以上が基準値となります。",
+      "source": 1
+    },
+    "fontSizes.45": {
+      "category": "fontSizes",
+      "cssVar": "--font-sizes-45",
+      "description": "読み物コンテンツ向けに多く使用される見出しや本文を構成する文字サイズ。なお、本文やUIにおいては16 CSS px以上が基準値となります。",
+      "source": 1
+    },
+    "fontSizes.48": {
+      "category": "fontSizes",
+      "cssVar": "--font-sizes-48",
+      "description": "視覚的なインパクトが必要なデザイン要素としての文字サイズ。",
+      "source": 1
+    },
+    "fontSizes.57": {
+      "category": "fontSizes",
+      "cssVar": "--font-sizes-57",
+      "description": "視覚的なインパクトが必要なデザイン要素としての文字サイズ。",
+      "source": 1
+    },
+    "fontSizes.64": {
+      "category": "fontSizes",
+      "cssVar": "--font-sizes-64",
+      "description": "視覚的なインパクトが必要なデザイン要素としての文字サイズ。",
+      "source": 1
+    },
+    "fontWeights.400": {
+      "category": "fontWeights",
+      "cssVar": "--font-weights-400",
+      "source": 1
+    },
+    "fontWeights.700": {
+      "category": "fontWeights",
+      "cssVar": "--font-weights-700",
+      "source": 1
+    },
+    "fontWeights.N": {
+      "category": "fontWeights",
+      "cssVar": "--font-weights--n",
+      "originalValue": "{fontWeights.400}",
+      "description": "400 (normal)",
+      "semantic": true,
+      "source": 1
+    },
+    "fontWeights.B": {
+      "category": "fontWeights",
+      "cssVar": "--font-weights--b",
+      "originalValue": "{fontWeights.700}",
+      "description": "700 (bold)",
+      "semantic": true,
+      "source": 1
+    },
+    "fonts.body": {
+      "category": "fonts",
+      "cssVar": "--fonts-body",
+      "source": 1
+    },
+    "fonts.mono": {
+      "category": "fonts",
+      "cssVar": "--fonts-mono",
+      "source": 1
+    },
+    "lineHeights.100": {
+      "category": "lineHeights",
+      "cssVar": "--line-heights-100",
+      "description": "主にボタンなど、コンポーネント内で使用されるワンラインのテキストで上下の余白を持っていない行間",
+      "source": 1
+    },
+    "lineHeights.120": {
+      "category": "lineHeights",
+      "cssVar": "--line-heights-120",
+      "description": "主に管理画面や業務システムの画面等で、膨大な情報を一覧表示したりなど、限られた画面領域での表示情報量を最優先した行間",
+      "source": 1
+    },
+    "lineHeights.130": {
+      "category": "lineHeights",
+      "cssVar": "--line-heights-130",
+      "description": "主に管理画面や業務システムの画面等で使用する、表示情報量を優先した行間",
+      "source": 1
+    },
+    "lineHeights.140": {
+      "category": "lineHeights",
+      "cssVar": "--line-heights-140",
+      "description": "見出しなど、やや大きな文字に使用される行間",
+      "source": 1
+    },
+    "lineHeights.150": {
+      "category": "lineHeights",
+      "cssVar": "--line-heights-150",
+      "description": "一般的なウェブサイトの本文や見出しで使用される行間（本文の行間としては最低限度）",
+      "source": 1
+    },
+    "lineHeights.160": {
+      "category": "lineHeights",
+      "cssVar": "--line-heights-160",
+      "description": "一般的なウェブサイトの本文で使用される行間",
+      "source": 1
+    },
+    "lineHeights.170": {
+      "category": "lineHeights",
+      "cssVar": "--line-heights-170",
+      "description": "一般的なウェブサイトの本文で使用する、心理的負荷の軽減を考慮した行間",
+      "source": 1
+    },
+    "lineHeights.175": {
+      "category": "lineHeights",
+      "cssVar": "--line-heights-175",
+      "description": "一般的なウェブサイトの本文で使用する、心理的負荷の軽減を考慮した行間。採用するグリッド幅やフォントサイズに応じて170%と使い分ける",
+      "source": 1
+    },
+    "radii.4": {
+      "category": "radii",
+      "cssVar": "--radii-4",
+      "source": 1
+    },
+    "radii.6": {
+      "category": "radii",
+      "cssVar": "--radii-6",
+      "source": 1
+    },
+    "radii.8": {
+      "category": "radii",
+      "cssVar": "--radii-8",
+      "source": 1
+    },
+    "radii.12": {
+      "category": "radii",
+      "cssVar": "--radii-12",
+      "source": 1
+    },
+    "radii.16": {
+      "category": "radii",
+      "cssVar": "--radii-16",
+      "source": 1
+    },
+    "radii.24": {
+      "category": "radii",
+      "cssVar": "--radii-24",
+      "source": 1
+    },
+    "radii.32": {
+      "category": "radii",
+      "cssVar": "--radii-32",
+      "source": 1
+    },
+    "radii.full": {
+      "category": "radii",
+      "cssVar": "--radii-full",
+      "source": 1
+    },
+    "shadows.1": {
+      "category": "shadows",
+      "cssVar": "--shadows-1",
+      "source": 1
+    },
+    "shadows.2": {
+      "category": "shadows",
+      "cssVar": "--shadows-2",
+      "source": 1
+    },
+    "shadows.3": {
+      "category": "shadows",
+      "cssVar": "--shadows-3",
+      "source": 1
+    },
+    "shadows.4": {
+      "category": "shadows",
+      "cssVar": "--shadows-4",
+      "source": 1
+    },
+    "shadows.5": {
+      "category": "shadows",
+      "cssVar": "--shadows-5",
+      "source": 1
+    },
+    "shadows.6": {
+      "category": "shadows",
+      "cssVar": "--shadows-6",
+      "source": 1
+    },
+    "shadows.7": {
+      "category": "shadows",
+      "cssVar": "--shadows-7",
+      "source": 1
+    },
+    "shadows.8": {
+      "category": "shadows",
+      "cssVar": "--shadows-8",
+      "source": 1
+    },
+    "sizes.0": {
+      "category": "sizes",
+      "cssVar": "--sizes-0",
+      "source": 1
+    },
+    "sizes.1": {
+      "category": "sizes",
+      "cssVar": "--sizes-1",
+      "source": 1
+    },
+    "sizes.2": {
+      "category": "sizes",
+      "cssVar": "--sizes-2",
+      "source": 1
+    },
+    "sizes.3": {
+      "category": "sizes",
+      "cssVar": "--sizes-3",
+      "source": 1
+    },
+    "sizes.4": {
+      "category": "sizes",
+      "cssVar": "--sizes-4",
+      "source": 1
+    },
+    "sizes.5": {
+      "category": "sizes",
+      "cssVar": "--sizes-5",
+      "source": 1
+    },
+    "sizes.6": {
+      "category": "sizes",
+      "cssVar": "--sizes-6",
+      "source": 1
+    },
+    "sizes.7": {
+      "category": "sizes",
+      "cssVar": "--sizes-7",
+      "source": 1
+    },
+    "sizes.8": {
+      "category": "sizes",
+      "cssVar": "--sizes-8",
+      "source": 1
+    },
+    "sizes.9": {
+      "category": "sizes",
+      "cssVar": "--sizes-9",
+      "source": 1
+    },
+    "sizes.10": {
+      "category": "sizes",
+      "cssVar": "--sizes-10",
+      "source": 1
+    },
+    "sizes.11": {
+      "category": "sizes",
+      "cssVar": "--sizes-11",
+      "source": 1
+    },
+    "sizes.12": {
+      "category": "sizes",
+      "cssVar": "--sizes-12",
+      "source": 1
+    },
+    "sizes.14": {
+      "category": "sizes",
+      "cssVar": "--sizes-14",
+      "source": 1
+    },
+    "sizes.16": {
+      "category": "sizes",
+      "cssVar": "--sizes-16",
+      "source": 1
+    },
+    "sizes.20": {
+      "category": "sizes",
+      "cssVar": "--sizes-20",
+      "source": 1
+    },
+    "sizes.24": {
+      "category": "sizes",
+      "cssVar": "--sizes-24",
+      "source": 1
+    },
+    "sizes.28": {
+      "category": "sizes",
+      "cssVar": "--sizes-28",
+      "source": 1
+    },
+    "sizes.32": {
+      "category": "sizes",
+      "cssVar": "--sizes-32",
+      "source": 1
+    },
+    "sizes.36": {
+      "category": "sizes",
+      "cssVar": "--sizes-36",
+      "source": 1
+    },
+    "sizes.40": {
+      "category": "sizes",
+      "cssVar": "--sizes-40",
+      "source": 1
+    },
+    "sizes.44": {
+      "category": "sizes",
+      "cssVar": "--sizes-44",
+      "source": 1
+    },
+    "sizes.48": {
+      "category": "sizes",
+      "cssVar": "--sizes-48",
+      "source": 1
+    },
+    "sizes.52": {
+      "category": "sizes",
+      "cssVar": "--sizes-52",
+      "source": 1
+    },
+    "sizes.56": {
+      "category": "sizes",
+      "cssVar": "--sizes-56",
+      "source": 1
+    },
+    "sizes.60": {
+      "category": "sizes",
+      "cssVar": "--sizes-60",
+      "source": 1
+    },
+    "sizes.64": {
+      "category": "sizes",
+      "cssVar": "--sizes-64",
+      "source": 1
+    },
+    "sizes.72": {
+      "category": "sizes",
+      "cssVar": "--sizes-72",
+      "source": 1
+    },
+    "sizes.80": {
+      "category": "sizes",
+      "cssVar": "--sizes-80",
+      "source": 1
+    },
+    "sizes.96": {
+      "category": "sizes",
+      "cssVar": "--sizes-96",
+      "source": 1
+    },
+    "sizes.0.5": {
+      "category": "sizes",
+      "cssVar": "--sizes-0\\.5",
+      "source": 1
+    },
+    "sizes.1.5": {
+      "category": "sizes",
+      "cssVar": "--sizes-1\\.5",
+      "source": 1
+    },
+    "sizes.2.5": {
+      "category": "sizes",
+      "cssVar": "--sizes-2\\.5",
+      "source": 1
+    },
+    "sizes.3.5": {
+      "category": "sizes",
+      "cssVar": "--sizes-3\\.5",
+      "source": 1
+    },
+    "sizes.4.5": {
+      "category": "sizes",
+      "cssVar": "--sizes-4\\.5",
+      "source": 1
+    },
+    "sizes.5.5": {
+      "category": "sizes",
+      "cssVar": "--sizes-5\\.5",
+      "source": 1
+    },
+    "sizes.xs": {
+      "category": "sizes",
+      "cssVar": "--sizes-xs",
+      "source": 1
+    },
+    "sizes.sm": {
+      "category": "sizes",
+      "cssVar": "--sizes-sm",
+      "source": 1
+    },
+    "sizes.md": {
+      "category": "sizes",
+      "cssVar": "--sizes-md",
+      "source": 1
+    },
+    "sizes.lg": {
+      "category": "sizes",
+      "cssVar": "--sizes-lg",
+      "source": 1
+    },
+    "sizes.xl": {
+      "category": "sizes",
+      "cssVar": "--sizes-xl",
+      "source": 1
+    },
+    "sizes.2xl": {
+      "category": "sizes",
+      "cssVar": "--sizes-2xl",
+      "source": 1
+    },
+    "sizes.3xl": {
+      "category": "sizes",
+      "cssVar": "--sizes-3xl",
+      "source": 1
+    },
+    "sizes.4xl": {
+      "category": "sizes",
+      "cssVar": "--sizes-4xl",
+      "source": 1
+    },
+    "sizes.5xl": {
+      "category": "sizes",
+      "cssVar": "--sizes-5xl",
+      "source": 1
+    },
+    "sizes.6xl": {
+      "category": "sizes",
+      "cssVar": "--sizes-6xl",
+      "source": 1
+    },
+    "sizes.7xl": {
+      "category": "sizes",
+      "cssVar": "--sizes-7xl",
+      "source": 1
+    },
+    "sizes.8xl": {
+      "category": "sizes",
+      "cssVar": "--sizes-8xl",
+      "source": 1
+    },
+    "sizes.prose": {
+      "category": "sizes",
+      "cssVar": "--sizes-prose",
+      "source": 1
+    },
+    "sizes.full": {
+      "category": "sizes",
+      "cssVar": "--sizes-full",
+      "source": 1
+    },
+    "sizes.min": {
+      "category": "sizes",
+      "cssVar": "--sizes-min",
+      "source": 1
+    },
+    "sizes.max": {
+      "category": "sizes",
+      "cssVar": "--sizes-max",
+      "source": 1
+    },
+    "sizes.fit": {
+      "category": "sizes",
+      "cssVar": "--sizes-fit",
+      "source": 1
+    },
+    "sizes.breakpoint-sm": {
+      "category": "sizes",
+      "cssVar": "--sizes-breakpoint-sm",
+      "source": 1
+    },
+    "sizes.breakpoint-md": {
+      "category": "sizes",
+      "cssVar": "--sizes-breakpoint-md",
+      "source": 1
+    },
+    "sizes.breakpoint-lg": {
+      "category": "sizes",
+      "cssVar": "--sizes-breakpoint-lg",
+      "source": 1
+    },
+    "sizes.breakpoint-xl": {
+      "category": "sizes",
+      "cssVar": "--sizes-breakpoint-xl",
+      "source": 1
+    },
+    "sizes.breakpoint-2xl": {
+      "category": "sizes",
+      "cssVar": "--sizes-breakpoint-2xl",
+      "source": 1
+    },
+    "spacing.0": {
+      "category": "spacing",
+      "cssVar": "--spacing-0",
+      "source": 1
+    },
+    "spacing.1": {
+      "category": "spacing",
+      "cssVar": "--spacing-1",
+      "source": 1
+    },
+    "spacing.2": {
+      "category": "spacing",
+      "cssVar": "--spacing-2",
+      "source": 1
+    },
+    "spacing.3": {
+      "category": "spacing",
+      "cssVar": "--spacing-3",
+      "source": 1
+    },
+    "spacing.4": {
+      "category": "spacing",
+      "cssVar": "--spacing-4",
+      "source": 1
+    },
+    "spacing.5": {
+      "category": "spacing",
+      "cssVar": "--spacing-5",
+      "source": 1
+    },
+    "spacing.6": {
+      "category": "spacing",
+      "cssVar": "--spacing-6",
+      "source": 1
+    },
+    "spacing.7": {
+      "category": "spacing",
+      "cssVar": "--spacing-7",
+      "source": 1
+    },
+    "spacing.8": {
+      "category": "spacing",
+      "cssVar": "--spacing-8",
+      "source": 1
+    },
+    "spacing.9": {
+      "category": "spacing",
+      "cssVar": "--spacing-9",
+      "source": 1
+    },
+    "spacing.10": {
+      "category": "spacing",
+      "cssVar": "--spacing-10",
+      "source": 1
+    },
+    "spacing.11": {
+      "category": "spacing",
+      "cssVar": "--spacing-11",
+      "source": 1
+    },
+    "spacing.12": {
+      "category": "spacing",
+      "cssVar": "--spacing-12",
+      "source": 1
+    },
+    "spacing.14": {
+      "category": "spacing",
+      "cssVar": "--spacing-14",
+      "source": 1
+    },
+    "spacing.16": {
+      "category": "spacing",
+      "cssVar": "--spacing-16",
+      "source": 1
+    },
+    "spacing.20": {
+      "category": "spacing",
+      "cssVar": "--spacing-20",
+      "source": 1
+    },
+    "spacing.24": {
+      "category": "spacing",
+      "cssVar": "--spacing-24",
+      "source": 1
+    },
+    "spacing.28": {
+      "category": "spacing",
+      "cssVar": "--spacing-28",
+      "source": 1
+    },
+    "spacing.32": {
+      "category": "spacing",
+      "cssVar": "--spacing-32",
+      "source": 1
+    },
+    "spacing.36": {
+      "category": "spacing",
+      "cssVar": "--spacing-36",
+      "source": 1
+    },
+    "spacing.40": {
+      "category": "spacing",
+      "cssVar": "--spacing-40",
+      "source": 1
+    },
+    "spacing.44": {
+      "category": "spacing",
+      "cssVar": "--spacing-44",
+      "source": 1
+    },
+    "spacing.48": {
+      "category": "spacing",
+      "cssVar": "--spacing-48",
+      "source": 1
+    },
+    "spacing.52": {
+      "category": "spacing",
+      "cssVar": "--spacing-52",
+      "source": 1
+    },
+    "spacing.56": {
+      "category": "spacing",
+      "cssVar": "--spacing-56",
+      "source": 1
+    },
+    "spacing.60": {
+      "category": "spacing",
+      "cssVar": "--spacing-60",
+      "source": 1
+    },
+    "spacing.64": {
+      "category": "spacing",
+      "cssVar": "--spacing-64",
+      "source": 1
+    },
+    "spacing.72": {
+      "category": "spacing",
+      "cssVar": "--spacing-72",
+      "source": 1
+    },
+    "spacing.80": {
+      "category": "spacing",
+      "cssVar": "--spacing-80",
+      "source": 1
+    },
+    "spacing.96": {
+      "category": "spacing",
+      "cssVar": "--spacing-96",
+      "source": 1
+    },
+    "spacing.0.5": {
+      "category": "spacing",
+      "cssVar": "--spacing-0\\.5",
+      "source": 1
+    },
+    "spacing.1.5": {
+      "category": "spacing",
+      "cssVar": "--spacing-1\\.5",
+      "source": 1
+    },
+    "spacing.2.5": {
+      "category": "spacing",
+      "cssVar": "--spacing-2\\.5",
+      "source": 1
+    },
+    "spacing.3.5": {
+      "category": "spacing",
+      "cssVar": "--spacing-3\\.5",
+      "source": 1
+    },
+    "spacing.4.5": {
+      "category": "spacing",
+      "cssVar": "--spacing-4\\.5",
+      "source": 1
+    },
+    "spacing.5.5": {
+      "category": "spacing",
+      "cssVar": "--spacing-5\\.5",
+      "source": 1
+    },
+    "spacing.-1": {
+      "category": "spacing",
+      "originalValue": "0.25rem",
+      "source": 1
+    },
+    "spacing.-2": {
+      "category": "spacing",
+      "originalValue": "0.5rem",
+      "source": 1
+    },
+    "spacing.-3": {
+      "category": "spacing",
+      "originalValue": "0.75rem",
+      "source": 1
+    },
+    "spacing.-4": {
+      "category": "spacing",
+      "originalValue": "1rem",
+      "source": 1
+    },
+    "spacing.-5": {
+      "category": "spacing",
+      "originalValue": "1.25rem",
+      "source": 1
+    },
+    "spacing.-6": {
+      "category": "spacing",
+      "originalValue": "1.5rem",
+      "source": 1
+    },
+    "spacing.-7": {
+      "category": "spacing",
+      "originalValue": "1.75rem",
+      "source": 1
+    },
+    "spacing.-8": {
+      "category": "spacing",
+      "originalValue": "2rem",
+      "source": 1
+    },
+    "spacing.-9": {
+      "category": "spacing",
+      "originalValue": "2.25rem",
+      "source": 1
+    },
+    "spacing.-10": {
+      "category": "spacing",
+      "originalValue": "2.5rem",
+      "source": 1
+    },
+    "spacing.-11": {
+      "category": "spacing",
+      "originalValue": "2.75rem",
+      "source": 1
+    },
+    "spacing.-12": {
+      "category": "spacing",
+      "originalValue": "3rem",
+      "source": 1
+    },
+    "spacing.-14": {
+      "category": "spacing",
+      "originalValue": "3.5rem",
+      "source": 1
+    },
+    "spacing.-16": {
+      "category": "spacing",
+      "originalValue": "4rem",
+      "source": 1
+    },
+    "spacing.-20": {
+      "category": "spacing",
+      "originalValue": "5rem",
+      "source": 1
+    },
+    "spacing.-24": {
+      "category": "spacing",
+      "originalValue": "6rem",
+      "source": 1
+    },
+    "spacing.-28": {
+      "category": "spacing",
+      "originalValue": "7rem",
+      "source": 1
+    },
+    "spacing.-32": {
+      "category": "spacing",
+      "originalValue": "8rem",
+      "source": 1
+    },
+    "spacing.-36": {
+      "category": "spacing",
+      "originalValue": "9rem",
+      "source": 1
+    },
+    "spacing.-40": {
+      "category": "spacing",
+      "originalValue": "10rem",
+      "source": 1
+    },
+    "spacing.-44": {
+      "category": "spacing",
+      "originalValue": "11rem",
+      "source": 1
+    },
+    "spacing.-48": {
+      "category": "spacing",
+      "originalValue": "12rem",
+      "source": 1
+    },
+    "spacing.-52": {
+      "category": "spacing",
+      "originalValue": "13rem",
+      "source": 1
+    },
+    "spacing.-56": {
+      "category": "spacing",
+      "originalValue": "14rem",
+      "source": 1
+    },
+    "spacing.-60": {
+      "category": "spacing",
+      "originalValue": "15rem",
+      "source": 1
+    },
+    "spacing.-64": {
+      "category": "spacing",
+      "originalValue": "16rem",
+      "source": 1
+    },
+    "spacing.-72": {
+      "category": "spacing",
+      "originalValue": "18rem",
+      "source": 1
+    },
+    "spacing.-80": {
+      "category": "spacing",
+      "originalValue": "20rem",
+      "source": 1
+    },
+    "spacing.-96": {
+      "category": "spacing",
+      "originalValue": "24rem",
+      "source": 1
+    },
+    "spacing.-0.5": {
+      "category": "spacing",
+      "originalValue": "0.125rem",
+      "source": 1
+    },
+    "spacing.-1.5": {
+      "category": "spacing",
+      "originalValue": "0.375rem",
+      "source": 1
+    },
+    "spacing.-2.5": {
+      "category": "spacing",
+      "originalValue": "0.625rem",
+      "source": 1
+    },
+    "spacing.-3.5": {
+      "category": "spacing",
+      "originalValue": "0.875rem",
+      "source": 1
+    },
+    "spacing.-4.5": {
+      "category": "spacing",
+      "originalValue": "1.125rem",
+      "source": 1
+    },
+    "spacing.-5.5": {
+      "category": "spacing",
+      "originalValue": "1.375rem",
+      "source": 1
+    }
+  },
+  "conditions": {
+    "_active": "&:is(:active, [data-active])",
+    "_after": "&::after",
+    "_anyPointerCoarse": "@media (any-pointer: coarse)",
+    "_anyPointerFine": "@media (any-pointer: fine)",
+    "_anyPointerNone": "@media (any-pointer: none)",
+    "_atValue": "&[data-state=at-value]",
+    "_autofill": "&:autofill",
+    "_backdrop": "&::backdrop",
+    "_before": "&::before",
+    "_checked": "&:is(:checked, [data-checked], [aria-checked=true], [data-state=\"checked\"])",
+    "_closed": "&:is([closed], [data-closed], [data-state=\"closed\"])",
+    "_complete": "&[data-complete]",
+    "_current": "&:is([aria-current=true], [data-current])",
+    "_currentPage": "&[aria-current=page]",
+    "_currentStep": "&[aria-current=step]",
+    "_dark": ".dark &",
+    "_default": "&:default",
+    "_disabled": "&:is(:disabled, [disabled], [data-disabled], [aria-disabled=true])",
+    "_dragging": "&[data-dragging]",
+    "_empty": "&:is(:empty, [data-empty])",
+    "_enabled": "&:enabled",
+    "_even": "&:nth-child(even)",
+    "_expanded": "&:is([aria-expanded=true], [data-expanded], [data-state=\"expanded\"])",
+    "_file": "&::file-selector-button",
+    "_first": "&:first-child",
+    "_firstLetter": "&::first-letter",
+    "_firstLine": "&::first-line",
+    "_firstOfType": "&:first-of-type",
+    "_focus": "&:is(:focus, [data-focus])",
+    "_focusVisible": "&:is(:focus-visible, [data-focus-visible])",
+    "_focusWithin": "&:focus-within",
+    "_fullscreen": "&:is(:fullscreen, [data-fullscreen])",
+    "_grabbed": "&:is([aria-grabbed=true], [data-grabbed])",
+    "_groupActive": ".group:is(:active, [data-active]) &",
+    "_groupChecked": ".group:is(:checked, [data-checked], [aria-checked=true], [data-state=\"checked\"]) &",
+    "_groupDisabled": ".group:is(:disabled, [disabled], [data-disabled], [aria-disabled=true]) &",
+    "_groupExpanded": ".group:is([aria-expanded=true], [data-expanded], [data-state=\"expanded\"]) &",
+    "_groupFocus": ".group:is(:focus, [data-focus]) &",
+    "_groupFocusVisible": ".group:is(:focus-visible, [data-focus-visible]) &",
+    "_groupFocusWithin": ".group:focus-within &",
+    "_groupHover": ".group:is(:hover, [data-hover]) &",
+    "_groupInvalid": ".group:is(:invalid, [data-invalid], [aria-invalid=true]) &",
+    "_hidden": "&:is([hidden], [data-hidden])",
+    "_highContrast": "@media (forced-colors: active)",
+    "_highlighted": "&[data-highlighted]",
+    "_horizontal": "&[data-orientation=horizontal]",
+    "_hover": "&:is(:hover, [data-hover])",
+    "_icon": "& :where(svg)",
+    "_inRange": "&:is(:in-range, [data-in-range])",
+    "_incomplete": "&[data-incomplete]",
+    "_indeterminate": "&:is(:indeterminate, [data-indeterminate], [aria-checked=mixed], [data-state=\"indeterminate\"])",
+    "_inert": "&:is([inert], [data-inert])",
+    "_invalid": "&:is(:invalid, [data-invalid], [aria-invalid=true])",
+    "_invertedColors": "@media (inverted-colors: inverted)",
+    "_landscape": "@media (orientation: landscape)",
+    "_last": "&:last-child",
+    "_lastOfType": "&:last-of-type",
+    "_lessContrast": "@media (prefers-contrast: less)",
+    "_light": ".light &",
+    "_loading": "&:is([data-loading], [aria-busy=true])",
+    "_ltr": ":where([dir=ltr], :dir(ltr)) &",
+    "_marker": "&::marker, &::-webkit-details-marker",
+    "_moreContrast": "@media (prefers-contrast: more)",
+    "_motionReduce": "@media (prefers-reduced-motion: reduce)",
+    "_motionSafe": "@media (prefers-reduced-motion: no-preference)",
+    "_noscript": "@media (scripting: none)",
+    "_now": "&[data-now]",
+    "_odd": "&:nth-child(odd)",
+    "_only": "&:only-child",
+    "_onlyOfType": "&:only-of-type",
+    "_open": "&:is([open], [data-open], [data-state=\"open\"], :popover-open)",
+    "_optional": "&:optional",
+    "_osDark": "@media (prefers-color-scheme: dark)",
+    "_osLight": "@media (prefers-color-scheme: light)",
+    "_outOfRange": "&:is(:out-of-range, [data-outside-range])",
+    "_overValue": "&[data-state=over-value]",
+    "_peerActive": ".peer:is(:active, [data-active]) ~ &",
+    "_peerChecked": ".peer:is(:checked, [data-checked], [aria-checked=true], [data-state=\"checked\"]) ~ &",
+    "_peerDisabled": ".peer:is(:disabled, [disabled], [data-disabled], [aria-disabled=true]) ~ &",
+    "_peerExpanded": ".peer:is([aria-expanded=true], [data-expanded], [data-state=\"expanded\"]) ~ &",
+    "_peerFocus": ".peer:is(:focus, [data-focus]) ~ &",
+    "_peerFocusVisible": ".peer:is(:focus-visible, [data-focus-visible]) ~ &",
+    "_peerFocusWithin": ".peer:focus-within ~ &",
+    "_peerHover": ".peer:is(:hover, [data-hover]) ~ &",
+    "_peerInvalid": ".peer:is(:invalid, [data-invalid], [aria-invalid=true]) ~ &",
+    "_peerPlaceholderShown": ".peer:placeholder-shown ~ &",
+    "_placeholder": "&::placeholder, &[data-placeholder]",
+    "_placeholderShown": "&:is(:placeholder-shown, [data-placeholder-shown])",
+    "_pointerCoarse": "@media (pointer: coarse)",
+    "_pointerFine": "@media (pointer: fine)",
+    "_pointerNone": "@media (pointer: none)",
+    "_portrait": "@media (orientation: portrait)",
+    "_pressed": "&:is([aria-pressed=true], [data-pressed])",
+    "_print": "@media print",
+    "_rangeEnd": "&[data-range-end]",
+    "_rangeStart": "&[data-range-start]",
+    "_readOnly": "&:is(:read-only, [data-read-only], [aria-readonly=true])",
+    "_readWrite": "&:read-write",
+    "_required": "&:is(:required, [data-required], [aria-required=true])",
+    "_rtl": ":where([dir=rtl], :dir(rtl)) &",
+    "_scrollbar": "&::-webkit-scrollbar",
+    "_scrollbarThumb": "&::-webkit-scrollbar-thumb",
+    "_scrollbarTrack": "&::-webkit-scrollbar-track",
+    "_selected": "&:is([aria-selected=true], [data-selected])",
+    "_selection": "&::selection",
+    "_starting": "@starting-style",
+    "_target": "&:target",
+    "_today": "&[data-today]",
+    "_topmost": "&[data-topmost]",
+    "_unavailable": "&[data-unavailable]",
+    "_underValue": "&[data-state=under-value]",
+    "_userInvalid": "&:is(:user-invalid, [data-user-invalid])",
+    "_userValid": "&:is(:user-valid, [data-user-valid])",
+    "_valid": "&:is(:valid, [data-valid])",
+    "_vertical": "&[data-orientation=vertical]",
+    "_visited": "&:visited"
+  },
+  "themes": {},
+  "values": [
+    {
+      "token": "breakpoints.2xl",
+      "value": "96rem"
+    },
+    {
+      "token": "breakpoints.lg",
+      "value": "64rem"
+    },
+    {
+      "token": "breakpoints.md",
+      "value": "48rem"
+    },
+    {
+      "token": "breakpoints.sm",
+      "value": "40rem"
+    },
+    {
+      "token": "breakpoints.xl",
+      "value": "80rem"
+    },
+    {
+      "token": "colors.black",
+      "value": "#000000"
+    },
+    {
+      "token": "colors.blue.100",
+      "value": "#d9e6ff"
+    },
+    {
+      "token": "colors.blue.1000",
+      "value": "#00118f"
+    },
+    {
+      "token": "colors.blue.1100",
+      "value": "#000071"
+    },
+    {
+      "token": "colors.blue.1200",
+      "value": "#000060"
+    },
+    {
+      "token": "colors.blue.200",
+      "value": "#c5d7fb"
+    },
+    {
+      "token": "colors.blue.300",
+      "value": "#9db7f9"
+    },
+    {
+      "token": "colors.blue.400",
+      "value": "#7096f8"
+    },
+    {
+      "token": "colors.blue.50",
+      "value": "#e8f1fe"
+    },
+    {
+      "token": "colors.blue.500",
+      "value": "#4979f5"
+    },
+    {
+      "token": "colors.blue.600",
+      "value": "#3460fb"
+    },
+    {
+      "token": "colors.blue.700",
+      "value": "#264af4"
+    },
+    {
+      "token": "colors.blue.800",
+      "value": "#0031d8"
+    },
+    {
+      "token": "colors.blue.900",
+      "value": "#0017c1"
+    },
+    {
+      "token": "colors.blue.bg",
+      "value": "#e8f1fe"
+    },
+    {
+      "token": "colors.blue.primary",
+      "value": "#0017c1"
+    },
+    {
+      "token": "colors.blue.primary.100",
+      "value": "#00118f"
+    },
+    {
+      "token": "colors.blue.primary.200",
+      "value": "#000071"
+    },
+    {
+      "token": "colors.blue.primary.300",
+      "value": "#000060"
+    },
+    {
+      "token": "colors.blue.secondary",
+      "value": "#264af4"
+    },
+    {
+      "token": "colors.blue.tertiary",
+      "value": "#00118f"
+    },
+    {
+      "token": "colors.cyan.100",
+      "value": "#c8f8ff"
+    },
+    {
+      "token": "colors.cyan.1000",
+      "value": "#006173"
+    },
+    {
+      "token": "colors.cyan.1100",
+      "value": "#004c59"
+    },
+    {
+      "token": "colors.cyan.1200",
+      "value": "#003741"
+    },
+    {
+      "token": "colors.cyan.200",
+      "value": "#99f2ff"
+    },
+    {
+      "token": "colors.cyan.300",
+      "value": "#79e2f2"
+    },
+    {
+      "token": "colors.cyan.400",
+      "value": "#2bc8e4"
+    },
+    {
+      "token": "colors.cyan.50",
+      "value": "#e9f7f9"
+    },
+    {
+      "token": "colors.cyan.500",
+      "value": "#01b7d6"
+    },
+    {
+      "token": "colors.cyan.600",
+      "value": "#00a3bf"
+    },
+    {
+      "token": "colors.cyan.700",
+      "value": "#008da6"
+    },
+    {
+      "token": "colors.cyan.800",
+      "value": "#008299"
+    },
+    {
+      "token": "colors.cyan.900",
+      "value": "#006f83"
+    },
+    {
+      "token": "colors.cyan.bg",
+      "value": "#e9f7f9"
+    },
+    {
+      "token": "colors.cyan.primary",
+      "value": "#008299"
+    },
+    {
+      "token": "colors.cyan.primary.100",
+      "value": "#006f83"
+    },
+    {
+      "token": "colors.cyan.primary.200",
+      "value": "#006173"
+    },
+    {
+      "token": "colors.cyan.primary.300",
+      "value": "#004c59"
+    },
+    {
+      "token": "colors.cyan.secondary",
+      "value": "#00a3bf"
+    },
+    {
+      "token": "colors.cyan.tertiary",
+      "value": "#006173"
+    },
+    {
+      "token": "colors.error.1",
+      "value": "#ec0000"
+    },
+    {
+      "token": "colors.error.2",
+      "value": "#ce0000"
+    },
+    {
+      "token": "colors.focus.blue",
+      "value": "#0877d7"
+    },
+    {
+      "token": "colors.focus.yellow",
+      "value": "#b78f00"
+    },
+    {
+      "token": "colors.green.100",
+      "value": "#c2e5d1"
+    },
+    {
+      "token": "colors.green.1000",
+      "value": "#0c472a"
+    },
+    {
+      "token": "colors.green.1100",
+      "value": "#08351f"
+    },
+    {
+      "token": "colors.green.1200",
+      "value": "#032213"
+    },
+    {
+      "token": "colors.green.200",
+      "value": "#9bd4b5"
+    },
+    {
+      "token": "colors.green.300",
+      "value": "#71c598"
+    },
+    {
+      "token": "colors.green.400",
+      "value": "#51b883"
+    },
+    {
+      "token": "colors.green.50",
+      "value": "#e6f5ec"
+    },
+    {
+      "token": "colors.green.500",
+      "value": "#2cac6e"
+    },
+    {
+      "token": "colors.green.600",
+      "value": "#259d63"
+    },
+    {
+      "token": "colors.green.700",
+      "value": "#1d8b56"
+    },
+    {
+      "token": "colors.green.800",
+      "value": "#197a4b"
+    },
+    {
+      "token": "colors.green.900",
+      "value": "#115a36"
+    },
+    {
+      "token": "colors.green.bg",
+      "value": "#e6f5ec"
+    },
+    {
+      "token": "colors.green.primary",
+      "value": "#197a4b"
+    },
+    {
+      "token": "colors.green.primary.100",
+      "value": "#115a36"
+    },
+    {
+      "token": "colors.green.primary.200",
+      "value": "#0c472a"
+    },
+    {
+      "token": "colors.green.primary.300",
+      "value": "#08351f"
+    },
+    {
+      "token": "colors.green.secondary",
+      "value": "#259d63"
+    },
+    {
+      "token": "colors.green.tertiary",
+      "value": "#0c472a"
+    },
+    {
+      "token": "colors.keyColor.100",
+      "value": "#d9e6ff",
+      "refs": [
+        "colors.blue.100"
+      ]
+    },
+    {
+      "token": "colors.keyColor.1000",
+      "value": "#00118f",
+      "refs": [
+        "colors.blue.1000"
+      ]
+    },
+    {
+      "token": "colors.keyColor.1100",
+      "value": "#000071",
+      "refs": [
+        "colors.blue.1100"
+      ]
+    },
+    {
+      "token": "colors.keyColor.1200",
+      "value": "#000060",
+      "refs": [
+        "colors.blue.1200"
+      ]
+    },
+    {
+      "token": "colors.keyColor.200",
+      "value": "#c5d7fb",
+      "refs": [
+        "colors.blue.200"
+      ]
+    },
+    {
+      "token": "colors.keyColor.300",
+      "value": "#9db7f9",
+      "refs": [
+        "colors.blue.300"
+      ]
+    },
+    {
+      "token": "colors.keyColor.400",
+      "value": "#7096f8",
+      "refs": [
+        "colors.blue.400"
+      ]
+    },
+    {
+      "token": "colors.keyColor.50",
+      "value": "#e8f1fe",
+      "refs": [
+        "colors.blue.50"
+      ]
+    },
+    {
+      "token": "colors.keyColor.500",
+      "value": "#4979f5",
+      "refs": [
+        "colors.blue.500"
+      ]
+    },
+    {
+      "token": "colors.keyColor.600",
+      "value": "#3460fb",
+      "refs": [
+        "colors.blue.600"
+      ]
+    },
+    {
+      "token": "colors.keyColor.700",
+      "value": "#264af4",
+      "refs": [
+        "colors.blue.700"
+      ]
+    },
+    {
+      "token": "colors.keyColor.800",
+      "value": "#0031d8",
+      "refs": [
+        "colors.blue.800"
+      ]
+    },
+    {
+      "token": "colors.keyColor.900",
+      "value": "#0017c1",
+      "refs": [
+        "colors.blue.900"
+      ]
+    },
+    {
+      "token": "colors.keyColor.bg",
+      "value": "#e8f1fe",
+      "refs": [
+        "colors.blue.bg"
+      ]
+    },
+    {
+      "token": "colors.keyColor.primary",
+      "value": "#0017c1",
+      "refs": [
+        "colors.blue.primary"
+      ]
+    },
+    {
+      "token": "colors.keyColor.primary.100",
+      "value": "#00118f",
+      "refs": [
+        "colors.blue.primary.100"
+      ]
+    },
+    {
+      "token": "colors.keyColor.primary.200",
+      "value": "#000071",
+      "refs": [
+        "colors.blue.primary.200"
+      ]
+    },
+    {
+      "token": "colors.keyColor.primary.300",
+      "value": "#000060",
+      "refs": [
+        "colors.blue.primary.300"
+      ]
+    },
+    {
+      "token": "colors.keyColor.secondary",
+      "value": "#264af4",
+      "refs": [
+        "colors.blue.secondary"
+      ]
+    },
+    {
+      "token": "colors.keyColor.tertiary",
+      "value": "#00118f",
+      "refs": [
+        "colors.blue.tertiary"
+      ]
+    },
+    {
+      "token": "colors.light-blue.100",
+      "value": "#dcf0ff"
+    },
+    {
+      "token": "colors.light-blue.1000",
+      "value": "#00428c"
+    },
+    {
+      "token": "colors.light-blue.1100",
+      "value": "#00316a"
+    },
+    {
+      "token": "colors.light-blue.1200",
+      "value": "#00234b"
+    },
+    {
+      "token": "colors.light-blue.200",
+      "value": "#c0e4ff"
+    },
+    {
+      "token": "colors.light-blue.300",
+      "value": "#97d3ff"
+    },
+    {
+      "token": "colors.light-blue.400",
+      "value": "#57b8ff"
+    },
+    {
+      "token": "colors.light-blue.50",
+      "value": "#f0f9ff"
+    },
+    {
+      "token": "colors.light-blue.500",
+      "value": "#39abff"
+    },
+    {
+      "token": "colors.light-blue.600",
+      "value": "#008bf2"
+    },
+    {
+      "token": "colors.light-blue.700",
+      "value": "#0877d7"
+    },
+    {
+      "token": "colors.light-blue.800",
+      "value": "#0066be"
+    },
+    {
+      "token": "colors.light-blue.900",
+      "value": "#0055ad"
+    },
+    {
+      "token": "colors.light-blue.bg",
+      "value": "#f0f9ff"
+    },
+    {
+      "token": "colors.light-blue.primary",
+      "value": "#0066be"
+    },
+    {
+      "token": "colors.light-blue.primary.100",
+      "value": "#0055ad"
+    },
+    {
+      "token": "colors.light-blue.primary.200",
+      "value": "#00428c"
+    },
+    {
+      "token": "colors.light-blue.primary.300",
+      "value": "#00316a"
+    },
+    {
+      "token": "colors.light-blue.secondary",
+      "value": "#008bf2"
+    },
+    {
+      "token": "colors.light-blue.tertiary",
+      "value": "#00428c"
+    },
+    {
+      "token": "colors.lime.100",
+      "value": "#d0f5a2"
+    },
+    {
+      "token": "colors.lime.1000",
+      "value": "#3e5a00"
+    },
+    {
+      "token": "colors.lime.1100",
+      "value": "#2c4100"
+    },
+    {
+      "token": "colors.lime.1200",
+      "value": "#1e2d00"
+    },
+    {
+      "token": "colors.lime.200",
+      "value": "#c0f354"
+    },
+    {
+      "token": "colors.lime.300",
+      "value": "#ade830"
+    },
+    {
+      "token": "colors.lime.400",
+      "value": "#9ddd15"
+    },
+    {
+      "token": "colors.lime.50",
+      "value": "#ebfad9"
+    },
+    {
+      "token": "colors.lime.500",
+      "value": "#8cc80c"
+    },
+    {
+      "token": "colors.lime.600",
+      "value": "#7eb40d"
+    },
+    {
+      "token": "colors.lime.700",
+      "value": "#6fa104"
+    },
+    {
+      "token": "colors.lime.800",
+      "value": "#618e00"
+    },
+    {
+      "token": "colors.lime.900",
+      "value": "#507500"
+    },
+    {
+      "token": "colors.lime.bg",
+      "value": "#ebfad9"
+    },
+    {
+      "token": "colors.lime.primary",
+      "value": "#507500"
+    },
+    {
+      "token": "colors.lime.primary.100",
+      "value": "#3e5a00"
+    },
+    {
+      "token": "colors.lime.primary.200",
+      "value": "#2c4100"
+    },
+    {
+      "token": "colors.lime.primary.300",
+      "value": "#1e2d00"
+    },
+    {
+      "token": "colors.lime.secondary",
+      "value": "#6fa104"
+    },
+    {
+      "token": "colors.lime.tertiary",
+      "value": "#3e5a00"
+    },
+    {
+      "token": "colors.magenta.100",
+      "value": "#ffd0ff"
+    },
+    {
+      "token": "colors.magenta.1000",
+      "value": "#6c006c"
+    },
+    {
+      "token": "colors.magenta.1100",
+      "value": "#500050"
+    },
+    {
+      "token": "colors.magenta.1200",
+      "value": "#3b003b"
+    },
+    {
+      "token": "colors.magenta.200",
+      "value": "#ffaeff"
+    },
+    {
+      "token": "colors.magenta.300",
+      "value": "#ff8eff"
+    },
+    {
+      "token": "colors.magenta.400",
+      "value": "#f661f6"
+    },
+    {
+      "token": "colors.magenta.50",
+      "value": "#f3e5f4"
+    },
+    {
+      "token": "colors.magenta.500",
+      "value": "#f137f1"
+    },
+    {
+      "token": "colors.magenta.600",
+      "value": "#db00db"
+    },
+    {
+      "token": "colors.magenta.700",
+      "value": "#c000c0"
+    },
+    {
+      "token": "colors.magenta.800",
+      "value": "#aa00aa"
+    },
+    {
+      "token": "colors.magenta.900",
+      "value": "#8b008b"
+    },
+    {
+      "token": "colors.magenta.bg",
+      "value": "#f3e5f4"
+    },
+    {
+      "token": "colors.magenta.primary",
+      "value": "#c000c0"
+    },
+    {
+      "token": "colors.magenta.primary.100",
+      "value": "#aa00aa"
+    },
+    {
+      "token": "colors.magenta.primary.200",
+      "value": "#8b008b"
+    },
+    {
+      "token": "colors.magenta.primary.300",
+      "value": "#6c006c"
+    },
+    {
+      "token": "colors.magenta.secondary",
+      "value": "#f137f1"
+    },
+    {
+      "token": "colors.magenta.tertiary",
+      "value": "#6c006c"
+    },
+    {
+      "token": "colors.orange.100",
+      "value": "#ffdfca"
+    },
+    {
+      "token": "colors.orange.1000",
+      "value": "#8b3200"
+    },
+    {
+      "token": "colors.orange.1100",
+      "value": "#6d2700"
+    },
+    {
+      "token": "colors.orange.1200",
+      "value": "#541e00"
+    },
+    {
+      "token": "colors.orange.200",
+      "value": "#ffc199"
+    },
+    {
+      "token": "colors.orange.300",
+      "value": "#ffa66d"
+    },
+    {
+      "token": "colors.orange.400",
+      "value": "#ff8d44"
+    },
+    {
+      "token": "colors.orange.50",
+      "value": "#ffeee2"
+    },
+    {
+      "token": "colors.orange.500",
+      "value": "#ff7628"
+    },
+    {
+      "token": "colors.orange.600",
+      "value": "#fb5b01"
+    },
+    {
+      "token": "colors.orange.700",
+      "value": "#e25100"
+    },
+    {
+      "token": "colors.orange.800",
+      "value": "#c74700"
+    },
+    {
+      "token": "colors.orange.900",
+      "value": "#ac3e00"
+    },
+    {
+      "token": "colors.orange.bg",
+      "value": "#ffeee2"
+    },
+    {
+      "token": "colors.orange.primary",
+      "value": "#c74700"
+    },
+    {
+      "token": "colors.orange.primary.100",
+      "value": "#ac3e00"
+    },
+    {
+      "token": "colors.orange.primary.200",
+      "value": "#8b3200"
+    },
+    {
+      "token": "colors.orange.primary.300",
+      "value": "#6d2700"
+    },
+    {
+      "token": "colors.orange.secondary",
+      "value": "#fb5b01"
+    },
+    {
+      "token": "colors.orange.tertiary",
+      "value": "#6d2700"
+    },
+    {
+      "token": "colors.purple.100",
+      "value": "#ecddff"
+    },
+    {
+      "token": "colors.purple.1000",
+      "value": "#41048e"
+    },
+    {
+      "token": "colors.purple.1100",
+      "value": "#30016c"
+    },
+    {
+      "token": "colors.purple.1200",
+      "value": "#21004b"
+    },
+    {
+      "token": "colors.purple.200",
+      "value": "#ddc2ff"
+    },
+    {
+      "token": "colors.purple.300",
+      "value": "#cda6ff"
+    },
+    {
+      "token": "colors.purple.400",
+      "value": "#bb87ff"
+    },
+    {
+      "token": "colors.purple.50",
+      "value": "#f1eafa"
+    },
+    {
+      "token": "colors.purple.500",
+      "value": "#a565f8"
+    },
+    {
+      "token": "colors.purple.600",
+      "value": "#8843e1"
+    },
+    {
+      "token": "colors.purple.700",
+      "value": "#6f23d0"
+    },
+    {
+      "token": "colors.purple.800",
+      "value": "#5c10be"
+    },
+    {
+      "token": "colors.purple.900",
+      "value": "#5109ad"
+    },
+    {
+      "token": "colors.purple.bg",
+      "value": "#f1eafa"
+    },
+    {
+      "token": "colors.purple.primary",
+      "value": "#6f23d0"
+    },
+    {
+      "token": "colors.purple.primary.100",
+      "value": "#5c10be"
+    },
+    {
+      "token": "colors.purple.primary.200",
+      "value": "#5109ad"
+    },
+    {
+      "token": "colors.purple.primary.300",
+      "value": "#41048e"
+    },
+    {
+      "token": "colors.purple.secondary",
+      "value": "#a565f8"
+    },
+    {
+      "token": "colors.purple.tertiary",
+      "value": "#41048e"
+    },
+    {
+      "token": "colors.red.100",
+      "value": "#ffdada"
+    },
+    {
+      "token": "colors.red.1000",
+      "value": "#a90000"
+    },
+    {
+      "token": "colors.red.1100",
+      "value": "#850000"
+    },
+    {
+      "token": "colors.red.1200",
+      "value": "#620000"
+    },
+    {
+      "token": "colors.red.200",
+      "value": "#ffbbbb"
+    },
+    {
+      "token": "colors.red.300",
+      "value": "#ff9696"
+    },
+    {
+      "token": "colors.red.400",
+      "value": "#ff7171"
+    },
+    {
+      "token": "colors.red.50",
+      "value": "#fdeeee"
+    },
+    {
+      "token": "colors.red.500",
+      "value": "#ff5454"
+    },
+    {
+      "token": "colors.red.600",
+      "value": "#fe3939"
+    },
+    {
+      "token": "colors.red.700",
+      "value": "#fa0000"
+    },
+    {
+      "token": "colors.red.800",
+      "value": "#ec0000"
+    },
+    {
+      "token": "colors.red.900",
+      "value": "#ce0000"
+    },
+    {
+      "token": "colors.red.bg",
+      "value": "#fdeeee"
+    },
+    {
+      "token": "colors.red.primary",
+      "value": "#ec0000"
+    },
+    {
+      "token": "colors.red.primary.100",
+      "value": "#ce0000"
+    },
+    {
+      "token": "colors.red.primary.200",
+      "value": "#a90000"
+    },
+    {
+      "token": "colors.red.primary.300",
+      "value": "#850000"
+    },
+    {
+      "token": "colors.red.secondary",
+      "value": "#fe3939"
+    },
+    {
+      "token": "colors.red.tertiary",
+      "value": "#a90000"
+    },
+    {
+      "token": "colors.ring",
+      "value": "#ffd43d",
+      "refs": [
+        "colors.yellow.300"
+      ]
+    },
+    {
+      "token": "colors.solid-gray.100",
+      "value": "#e6e6e6"
+    },
+    {
+      "token": "colors.solid-gray.200",
+      "value": "#cccccc"
+    },
+    {
+      "token": "colors.solid-gray.300",
+      "value": "#b3b3b3"
+    },
+    {
+      "token": "colors.solid-gray.400",
+      "value": "#999999"
+    },
+    {
+      "token": "colors.solid-gray.420",
+      "value": "#949494"
+    },
+    {
+      "token": "colors.solid-gray.50",
+      "value": "#f2f2f2"
+    },
+    {
+      "token": "colors.solid-gray.500",
+      "value": "#7f7f7f"
+    },
+    {
+      "token": "colors.solid-gray.536",
+      "value": "#767676"
+    },
+    {
+      "token": "colors.solid-gray.600",
+      "value": "#666666"
+    },
+    {
+      "token": "colors.solid-gray.700",
+      "value": "#4d4d4d"
+    },
+    {
+      "token": "colors.solid-gray.800",
+      "value": "#333333"
+    },
+    {
+      "token": "colors.solid-gray.900",
+      "value": "#1a1a1a"
+    },
+    {
+      "token": "colors.solid-gray.bg",
+      "value": "#f2f2f2"
+    },
+    {
+      "token": "colors.solid-gray.primary",
+      "value": "#4d4d4d"
+    },
+    {
+      "token": "colors.solid-gray.primary.100",
+      "value": "#333333"
+    },
+    {
+      "token": "colors.solid-gray.primary.200",
+      "value": "#1a1a1a"
+    },
+    {
+      "token": "colors.solid-gray.primary.300",
+      "value": "#000000"
+    },
+    {
+      "token": "colors.solid-gray.secondary",
+      "value": "#767676"
+    },
+    {
+      "token": "colors.solid-gray.tertiary",
+      "value": "#949494"
+    },
+    {
+      "token": "colors.success.1",
+      "value": "#259d63"
+    },
+    {
+      "token": "colors.success.2",
+      "value": "#197a4b"
+    },
+    {
+      "token": "colors.warning.orange.1",
+      "value": "#fb5b01"
+    },
+    {
+      "token": "colors.warning.orange.2",
+      "value": "#c74700"
+    },
+    {
+      "token": "colors.warning.yellow.1",
+      "value": "#b78f00"
+    },
+    {
+      "token": "colors.warning.yellow.2",
+      "value": "#927200"
+    },
+    {
+      "token": "colors.white",
+      "value": "#ffffff"
+    },
+    {
+      "token": "colors.yellow.100",
+      "value": "#fff0b3"
+    },
+    {
+      "token": "colors.yellow.1000",
+      "value": "#806300"
+    },
+    {
+      "token": "colors.yellow.1100",
+      "value": "#6e5600"
+    },
+    {
+      "token": "colors.yellow.1200",
+      "value": "#604b00"
+    },
+    {
+      "token": "colors.yellow.200",
+      "value": "#ffe380"
+    },
+    {
+      "token": "colors.yellow.300",
+      "value": "#ffd43d"
+    },
+    {
+      "token": "colors.yellow.400",
+      "value": "#ffc700"
+    },
+    {
+      "token": "colors.yellow.50",
+      "value": "#fbf5e0"
+    },
+    {
+      "token": "colors.yellow.500",
+      "value": "#ebb700"
+    },
+    {
+      "token": "colors.yellow.600",
+      "value": "#d2a400"
+    },
+    {
+      "token": "colors.yellow.700",
+      "value": "#b78f00"
+    },
+    {
+      "token": "colors.yellow.800",
+      "value": "#a58000"
+    },
+    {
+      "token": "colors.yellow.900",
+      "value": "#927200"
+    },
+    {
+      "token": "colors.yellow.bg",
+      "value": "#fbf5e0"
+    },
+    {
+      "token": "colors.yellow.primary",
+      "value": "#927200"
+    },
+    {
+      "token": "colors.yellow.primary.100",
+      "value": "#806300"
+    },
+    {
+      "token": "colors.yellow.primary.200",
+      "value": "#6e5600"
+    },
+    {
+      "token": "colors.yellow.primary.300",
+      "value": "#604b00"
+    },
+    {
+      "token": "colors.yellow.secondary",
+      "value": "#b78f00"
+    },
+    {
+      "token": "colors.yellow.tertiary",
+      "value": "#806300"
+    },
+    {
+      "token": "fontSizes.14",
+      "value": "0.875rem"
+    },
+    {
+      "token": "fontSizes.16",
+      "value": "1rem"
+    },
+    {
+      "token": "fontSizes.17",
+      "value": "1.0625rem"
+    },
+    {
+      "token": "fontSizes.18",
+      "value": "1.125rem"
+    },
+    {
+      "token": "fontSizes.20",
+      "value": "1.25rem"
+    },
+    {
+      "token": "fontSizes.22",
+      "value": "1.375rem"
+    },
+    {
+      "token": "fontSizes.24",
+      "value": "1.5rem"
+    },
+    {
+      "token": "fontSizes.28",
+      "value": "1.75rem"
+    },
+    {
+      "token": "fontSizes.32",
+      "value": "2rem"
+    },
+    {
+      "token": "fontSizes.36",
+      "value": "2.25rem"
+    },
+    {
+      "token": "fontSizes.45",
+      "value": "2.8125rem"
+    },
+    {
+      "token": "fontSizes.48",
+      "value": "3rem"
+    },
+    {
+      "token": "fontSizes.57",
+      "value": "3.5625rem"
+    },
+    {
+      "token": "fontSizes.64",
+      "value": "4rem"
+    },
+    {
+      "token": "fontWeights.400",
+      "value": "400"
+    },
+    {
+      "token": "fontWeights.700",
+      "value": "700"
+    },
+    {
+      "token": "fontWeights.B",
+      "value": "700",
+      "refs": [
+        "fontWeights.700"
+      ]
+    },
+    {
+      "token": "fontWeights.N",
+      "value": "400",
+      "refs": [
+        "fontWeights.400"
+      ]
+    },
+    {
+      "token": "fonts.body",
+      "value": "Noto Sans JP, -apple-system, BlinkMacSystemFont, sans-serif"
+    },
+    {
+      "token": "fonts.mono",
+      "value": "Noto Sans Mono, monospace"
+    },
+    {
+      "token": "lineHeights.100",
+      "value": "1"
+    },
+    {
+      "token": "lineHeights.120",
+      "value": "1.2"
+    },
+    {
+      "token": "lineHeights.130",
+      "value": "1.3"
+    },
+    {
+      "token": "lineHeights.140",
+      "value": "1.4"
+    },
+    {
+      "token": "lineHeights.150",
+      "value": "1.5"
+    },
+    {
+      "token": "lineHeights.160",
+      "value": "1.6"
+    },
+    {
+      "token": "lineHeights.170",
+      "value": "1.7"
+    },
+    {
+      "token": "lineHeights.175",
+      "value": "1.75"
+    },
+    {
+      "token": "radii.12",
+      "value": "0.75rem"
+    },
+    {
+      "token": "radii.16",
+      "value": "1rem"
+    },
+    {
+      "token": "radii.24",
+      "value": "1.5rem"
+    },
+    {
+      "token": "radii.32",
+      "value": "2rem"
+    },
+    {
+      "token": "radii.4",
+      "value": "0.25rem"
+    },
+    {
+      "token": "radii.6",
+      "value": "0.375rem"
+    },
+    {
+      "token": "radii.8",
+      "value": "0.5rem"
+    },
+    {
+      "token": "radii.full",
+      "value": "624.9375rem"
+    },
+    {
+      "token": "shadows.1",
+      "value": "0 2px 8px 1px rgba(0,0,0,0.1), 0 1px 5px 0 rgba(0,0,0,0.3)"
+    },
+    {
+      "token": "shadows.2",
+      "value": "0 2px 12px 2px rgba(0,0,0,0.1), 0 1px 6px 0 rgba(0,0,0,0.3)"
+    },
+    {
+      "token": "shadows.3",
+      "value": "0 4px 16px 3px rgba(0,0,0,0.1), 0 1px 6px 0 rgba(0,0,0,0.3)"
+    },
+    {
+      "token": "shadows.4",
+      "value": "0 6px 20px 4px rgba(0,0,0,0.1), 0 2px 6px 0 rgba(0,0,0,0.3)"
+    },
+    {
+      "token": "shadows.5",
+      "value": "0 8px 24px 5px rgba(0,0,0,0.1), 0 2px 10px 0 rgba(0,0,0,0.3)"
+    },
+    {
+      "token": "shadows.6",
+      "value": "0 10px 30px 6px rgba(0,0,0,0.1), 0 3px 12px 0 rgba(0,0,0,0.3)"
+    },
+    {
+      "token": "shadows.7",
+      "value": "0 12px 36px 7px rgba(0,0,0,0.1), 0 3px 14px 0 rgba(0,0,0,0.3)"
+    },
+    {
+      "token": "shadows.8",
+      "value": "0 14px 40px 7px rgba(0,0,0,0.1), 0 3px 16px 0 rgba(0,0,0,0.3)"
+    },
+    {
+      "token": "sizes.0",
+      "value": "0rem"
+    },
+    {
+      "token": "sizes.0.5",
+      "value": "0.125rem"
+    },
+    {
+      "token": "sizes.1",
+      "value": "0.25rem"
+    },
+    {
+      "token": "sizes.1.5",
+      "value": "0.375rem"
+    },
+    {
+      "token": "sizes.10",
+      "value": "2.5rem"
+    },
+    {
+      "token": "sizes.11",
+      "value": "2.75rem"
+    },
+    {
+      "token": "sizes.12",
+      "value": "3rem"
+    },
+    {
+      "token": "sizes.14",
+      "value": "3.5rem"
+    },
+    {
+      "token": "sizes.16",
+      "value": "4rem"
+    },
+    {
+      "token": "sizes.2",
+      "value": "0.5rem"
+    },
+    {
+      "token": "sizes.2.5",
+      "value": "0.625rem"
+    },
+    {
+      "token": "sizes.20",
+      "value": "5rem"
+    },
+    {
+      "token": "sizes.24",
+      "value": "6rem"
+    },
+    {
+      "token": "sizes.28",
+      "value": "7rem"
+    },
+    {
+      "token": "sizes.2xl",
+      "value": "42rem"
+    },
+    {
+      "token": "sizes.3",
+      "value": "0.75rem"
+    },
+    {
+      "token": "sizes.3.5",
+      "value": "0.875rem"
+    },
+    {
+      "token": "sizes.32",
+      "value": "8rem"
+    },
+    {
+      "token": "sizes.36",
+      "value": "9rem"
+    },
+    {
+      "token": "sizes.3xl",
+      "value": "48rem"
+    },
+    {
+      "token": "sizes.4",
+      "value": "1rem"
+    },
+    {
+      "token": "sizes.4.5",
+      "value": "1.125rem"
+    },
+    {
+      "token": "sizes.40",
+      "value": "10rem"
+    },
+    {
+      "token": "sizes.44",
+      "value": "11rem"
+    },
+    {
+      "token": "sizes.48",
+      "value": "12rem"
+    },
+    {
+      "token": "sizes.4xl",
+      "value": "56rem"
+    },
+    {
+      "token": "sizes.5",
+      "value": "1.25rem"
+    },
+    {
+      "token": "sizes.5.5",
+      "value": "1.375rem"
+    },
+    {
+      "token": "sizes.52",
+      "value": "13rem"
+    },
+    {
+      "token": "sizes.56",
+      "value": "14rem"
+    },
+    {
+      "token": "sizes.5xl",
+      "value": "64rem"
+    },
+    {
+      "token": "sizes.6",
+      "value": "1.5rem"
+    },
+    {
+      "token": "sizes.60",
+      "value": "15rem"
+    },
+    {
+      "token": "sizes.64",
+      "value": "16rem"
+    },
+    {
+      "token": "sizes.6xl",
+      "value": "72rem"
+    },
+    {
+      "token": "sizes.7",
+      "value": "1.75rem"
+    },
+    {
+      "token": "sizes.72",
+      "value": "18rem"
+    },
+    {
+      "token": "sizes.7xl",
+      "value": "80rem"
+    },
+    {
+      "token": "sizes.8",
+      "value": "2rem"
+    },
+    {
+      "token": "sizes.80",
+      "value": "20rem"
+    },
+    {
+      "token": "sizes.8xl",
+      "value": "90rem"
+    },
+    {
+      "token": "sizes.9",
+      "value": "2.25rem"
+    },
+    {
+      "token": "sizes.96",
+      "value": "24rem"
+    },
+    {
+      "token": "sizes.breakpoint-2xl",
+      "value": "96rem"
+    },
+    {
+      "token": "sizes.breakpoint-lg",
+      "value": "64rem"
+    },
+    {
+      "token": "sizes.breakpoint-md",
+      "value": "48rem"
+    },
+    {
+      "token": "sizes.breakpoint-sm",
+      "value": "40rem"
+    },
+    {
+      "token": "sizes.breakpoint-xl",
+      "value": "80rem"
+    },
+    {
+      "token": "sizes.fit",
+      "value": "fit-content"
+    },
+    {
+      "token": "sizes.full",
+      "value": "100%"
+    },
+    {
+      "token": "sizes.lg",
+      "value": "32rem"
+    },
+    {
+      "token": "sizes.max",
+      "value": "max-content"
+    },
+    {
+      "token": "sizes.md",
+      "value": "28rem"
+    },
+    {
+      "token": "sizes.min",
+      "value": "min-content"
+    },
+    {
+      "token": "sizes.prose",
+      "value": "60ch"
+    },
+    {
+      "token": "sizes.sm",
+      "value": "24rem"
+    },
+    {
+      "token": "sizes.xl",
+      "value": "36rem"
+    },
+    {
+      "token": "sizes.xs",
+      "value": "20rem"
+    },
+    {
+      "token": "spacing.-0.5",
+      "value": "calc(0.125rem * -1)",
+      "refs": [
+        "spacing.0.5"
+      ]
+    },
+    {
+      "token": "spacing.-1",
+      "value": "calc(0.25rem * -1)",
+      "refs": [
+        "spacing.1"
+      ]
+    },
+    {
+      "token": "spacing.-1.5",
+      "value": "calc(0.375rem * -1)",
+      "refs": [
+        "spacing.1.5"
+      ]
+    },
+    {
+      "token": "spacing.-10",
+      "value": "calc(2.5rem * -1)",
+      "refs": [
+        "spacing.10"
+      ]
+    },
+    {
+      "token": "spacing.-11",
+      "value": "calc(2.75rem * -1)",
+      "refs": [
+        "spacing.11"
+      ]
+    },
+    {
+      "token": "spacing.-12",
+      "value": "calc(3rem * -1)",
+      "refs": [
+        "spacing.12"
+      ]
+    },
+    {
+      "token": "spacing.-14",
+      "value": "calc(3.5rem * -1)",
+      "refs": [
+        "spacing.14"
+      ]
+    },
+    {
+      "token": "spacing.-16",
+      "value": "calc(4rem * -1)",
+      "refs": [
+        "spacing.16"
+      ]
+    },
+    {
+      "token": "spacing.-2",
+      "value": "calc(0.5rem * -1)",
+      "refs": [
+        "spacing.2"
+      ]
+    },
+    {
+      "token": "spacing.-2.5",
+      "value": "calc(0.625rem * -1)",
+      "refs": [
+        "spacing.2.5"
+      ]
+    },
+    {
+      "token": "spacing.-20",
+      "value": "calc(5rem * -1)",
+      "refs": [
+        "spacing.20"
+      ]
+    },
+    {
+      "token": "spacing.-24",
+      "value": "calc(6rem * -1)",
+      "refs": [
+        "spacing.24"
+      ]
+    },
+    {
+      "token": "spacing.-28",
+      "value": "calc(7rem * -1)",
+      "refs": [
+        "spacing.28"
+      ]
+    },
+    {
+      "token": "spacing.-3",
+      "value": "calc(0.75rem * -1)",
+      "refs": [
+        "spacing.3"
+      ]
+    },
+    {
+      "token": "spacing.-3.5",
+      "value": "calc(0.875rem * -1)",
+      "refs": [
+        "spacing.3.5"
+      ]
+    },
+    {
+      "token": "spacing.-32",
+      "value": "calc(8rem * -1)",
+      "refs": [
+        "spacing.32"
+      ]
+    },
+    {
+      "token": "spacing.-36",
+      "value": "calc(9rem * -1)",
+      "refs": [
+        "spacing.36"
+      ]
+    },
+    {
+      "token": "spacing.-4",
+      "value": "calc(1rem * -1)",
+      "refs": [
+        "spacing.4"
+      ]
+    },
+    {
+      "token": "spacing.-4.5",
+      "value": "calc(1.125rem * -1)",
+      "refs": [
+        "spacing.4.5"
+      ]
+    },
+    {
+      "token": "spacing.-40",
+      "value": "calc(10rem * -1)",
+      "refs": [
+        "spacing.40"
+      ]
+    },
+    {
+      "token": "spacing.-44",
+      "value": "calc(11rem * -1)",
+      "refs": [
+        "spacing.44"
+      ]
+    },
+    {
+      "token": "spacing.-48",
+      "value": "calc(12rem * -1)",
+      "refs": [
+        "spacing.48"
+      ]
+    },
+    {
+      "token": "spacing.-5",
+      "value": "calc(1.25rem * -1)",
+      "refs": [
+        "spacing.5"
+      ]
+    },
+    {
+      "token": "spacing.-5.5",
+      "value": "calc(1.375rem * -1)",
+      "refs": [
+        "spacing.5.5"
+      ]
+    },
+    {
+      "token": "spacing.-52",
+      "value": "calc(13rem * -1)",
+      "refs": [
+        "spacing.52"
+      ]
+    },
+    {
+      "token": "spacing.-56",
+      "value": "calc(14rem * -1)",
+      "refs": [
+        "spacing.56"
+      ]
+    },
+    {
+      "token": "spacing.-6",
+      "value": "calc(1.5rem * -1)",
+      "refs": [
+        "spacing.6"
+      ]
+    },
+    {
+      "token": "spacing.-60",
+      "value": "calc(15rem * -1)",
+      "refs": [
+        "spacing.60"
+      ]
+    },
+    {
+      "token": "spacing.-64",
+      "value": "calc(16rem * -1)",
+      "refs": [
+        "spacing.64"
+      ]
+    },
+    {
+      "token": "spacing.-7",
+      "value": "calc(1.75rem * -1)",
+      "refs": [
+        "spacing.7"
+      ]
+    },
+    {
+      "token": "spacing.-72",
+      "value": "calc(18rem * -1)",
+      "refs": [
+        "spacing.72"
+      ]
+    },
+    {
+      "token": "spacing.-8",
+      "value": "calc(2rem * -1)",
+      "refs": [
+        "spacing.8"
+      ]
+    },
+    {
+      "token": "spacing.-80",
+      "value": "calc(20rem * -1)",
+      "refs": [
+        "spacing.80"
+      ]
+    },
+    {
+      "token": "spacing.-9",
+      "value": "calc(2.25rem * -1)",
+      "refs": [
+        "spacing.9"
+      ]
+    },
+    {
+      "token": "spacing.-96",
+      "value": "calc(24rem * -1)",
+      "refs": [
+        "spacing.96"
+      ]
+    },
+    {
+      "token": "spacing.0",
+      "value": "0rem"
+    },
+    {
+      "token": "spacing.0.5",
+      "value": "0.125rem"
+    },
+    {
+      "token": "spacing.1",
+      "value": "0.25rem"
+    },
+    {
+      "token": "spacing.1.5",
+      "value": "0.375rem"
+    },
+    {
+      "token": "spacing.10",
+      "value": "2.5rem"
+    },
+    {
+      "token": "spacing.11",
+      "value": "2.75rem"
+    },
+    {
+      "token": "spacing.12",
+      "value": "3rem"
+    },
+    {
+      "token": "spacing.14",
+      "value": "3.5rem"
+    },
+    {
+      "token": "spacing.16",
+      "value": "4rem"
+    },
+    {
+      "token": "spacing.2",
+      "value": "0.5rem"
+    },
+    {
+      "token": "spacing.2.5",
+      "value": "0.625rem"
+    },
+    {
+      "token": "spacing.20",
+      "value": "5rem"
+    },
+    {
+      "token": "spacing.24",
+      "value": "6rem"
+    },
+    {
+      "token": "spacing.28",
+      "value": "7rem"
+    },
+    {
+      "token": "spacing.3",
+      "value": "0.75rem"
+    },
+    {
+      "token": "spacing.3.5",
+      "value": "0.875rem"
+    },
+    {
+      "token": "spacing.32",
+      "value": "8rem"
+    },
+    {
+      "token": "spacing.36",
+      "value": "9rem"
+    },
+    {
+      "token": "spacing.4",
+      "value": "1rem"
+    },
+    {
+      "token": "spacing.4.5",
+      "value": "1.125rem"
+    },
+    {
+      "token": "spacing.40",
+      "value": "10rem"
+    },
+    {
+      "token": "spacing.44",
+      "value": "11rem"
+    },
+    {
+      "token": "spacing.48",
+      "value": "12rem"
+    },
+    {
+      "token": "spacing.5",
+      "value": "1.25rem"
+    },
+    {
+      "token": "spacing.5.5",
+      "value": "1.375rem"
+    },
+    {
+      "token": "spacing.52",
+      "value": "13rem"
+    },
+    {
+      "token": "spacing.56",
+      "value": "14rem"
+    },
+    {
+      "token": "spacing.6",
+      "value": "1.5rem"
+    },
+    {
+      "token": "spacing.60",
+      "value": "15rem"
+    },
+    {
+      "token": "spacing.64",
+      "value": "16rem"
+    },
+    {
+      "token": "spacing.7",
+      "value": "1.75rem"
+    },
+    {
+      "token": "spacing.72",
+      "value": "18rem"
+    },
+    {
+      "token": "spacing.8",
+      "value": "2rem"
+    },
+    {
+      "token": "spacing.80",
+      "value": "20rem"
+    },
+    {
+      "token": "spacing.9",
+      "value": "2.25rem"
+    },
+    {
+      "token": "spacing.96",
+      "value": "24rem"
+    }
+  ],
+  "colorPalettes": [
+    "black",
+    "blue",
+    "blue.primary",
+    "cyan",
+    "cyan.primary",
+    "error",
+    "focus",
+    "green",
+    "green.primary",
+    "keyColor",
+    "keyColor.primary",
+    "light-blue",
+    "light-blue.primary",
+    "lime",
+    "lime.primary",
+    "magenta",
+    "magenta.primary",
+    "orange",
+    "orange.primary",
+    "purple",
+    "purple.primary",
+    "red",
+    "red.primary",
+    "ring",
+    "solid-gray",
+    "solid-gray.primary",
+    "success",
+    "warning",
+    "warning.orange",
+    "warning.yellow",
+    "white",
+    "yellow",
+    "yellow.primary"
+  ],
+  "keyframes": [
+    "bounce",
+    "circular-progress",
+    "fade-in",
+    "fade-out",
+    "ping",
+    "position",
+    "pulse",
+    "slide-in-bottom",
+    "slide-in-left",
+    "slide-in-right",
+    "slide-in-top",
+    "slide-out-bottom",
+    "slide-out-left",
+    "slide-out-right",
+    "slide-out-top",
+    "spin"
+  ],
+  "textStyles": {
+    "dns-14B-120": {
+      "description": "Denseテキストは管理画面や業務システムなど、限られた画面領域での表示情報量を優先したテキストスタイルです。たとえば、データテーブル内での情報提示など、表示領域に制約がある場合のテキストスタイルとして使用します。"
+    },
+    "dns-14B-130": {
+      "description": "Denseテキストは管理画面や業務システムなど、限られた画面領域での表示情報量を優先したテキストスタイルです。たとえば、データテーブル内での情報提示など、表示領域に制約がある場合のテキストスタイルとして使用します。"
+    },
+    "dns-14N-120": {
+      "description": "Denseテキストは管理画面や業務システムなど、限られた画面領域での表示情報量を優先したテキストスタイルです。たとえば、データテーブル内での情報提示など、表示領域に制約がある場合のテキストスタイルとして使用します。"
+    },
+    "dns-14N-130": {
+      "description": "Denseテキストは管理画面や業務システムなど、限られた画面領域での表示情報量を優先したテキストスタイルです。たとえば、データテーブル内での情報提示など、表示領域に制約がある場合のテキストスタイルとして使用します。"
+    },
+    "dns-16B-120": {
+      "description": "Denseテキストは管理画面や業務システムなど、限られた画面領域での表示情報量を優先したテキストスタイルです。たとえば、データテーブル内での情報提示など、表示領域に制約がある場合のテキストスタイルとして使用します。"
+    },
+    "dns-16B-130": {
+      "description": "Denseテキストは管理画面や業務システムなど、限られた画面領域での表示情報量を優先したテキストスタイルです。たとえば、データテーブル内での情報提示など、表示領域に制約がある場合のテキストスタイルとして使用します。"
+    },
+    "dns-16N-120": {
+      "description": "Denseテキストは管理画面や業務システムなど、限られた画面領域での表示情報量を優先したテキストスタイルです。たとえば、データテーブル内での情報提示など、表示領域に制約がある場合のテキストスタイルとして使用します。"
+    },
+    "dns-16N-130": {
+      "description": "Denseテキストは管理画面や業務システムなど、限られた画面領域での表示情報量を優先したテキストスタイルです。たとえば、データテーブル内での情報提示など、表示領域に制約がある場合のテキストスタイルとして使用します。"
+    },
+    "dns-17B-120": {
+      "description": "Denseテキストは管理画面や業務システムなど、限られた画面領域での表示情報量を優先したテキストスタイルです。たとえば、データテーブル内での情報提示など、表示領域に制約がある場合のテキストスタイルとして使用します。"
+    },
+    "dns-17B-130": {
+      "description": "Denseテキストは管理画面や業務システムなど、限られた画面領域での表示情報量を優先したテキストスタイルです。たとえば、データテーブル内での情報提示など、表示領域に制約がある場合のテキストスタイルとして使用します。"
+    },
+    "dns-17N-120": {
+      "description": "Denseテキストは管理画面や業務システムなど、限られた画面領域での表示情報量を優先したテキストスタイルです。たとえば、データテーブル内での情報提示など、表示領域に制約がある場合のテキストスタイルとして使用します。"
+    },
+    "dns-17N-130": {
+      "description": "Denseテキストは管理画面や業務システムなど、限られた画面領域での表示情報量を優先したテキストスタイルです。たとえば、データテーブル内での情報提示など、表示領域に制約がある場合のテキストスタイルとして使用します。"
+    },
+    "dsp-48B-140": {
+      "description": "Displayテキストは、主に冒頭で大きく掲出されるテキストやメッセージを伝えるヘッドコピーなど、視覚的なインパクトを強く与えたい場合に使用されます。"
+    },
+    "dsp-48N-140": {
+      "description": "Displayテキストは、主に冒頭で大きく掲出されるテキストやメッセージを伝えるヘッドコピーなど、視覚的なインパクトを強く与えたい場合に使用されます。"
+    },
+    "dsp-57B-140": {
+      "description": "Displayテキストは、主に冒頭で大きく掲出されるテキストやメッセージを伝えるヘッドコピーなど、視覚的なインパクトを強く与えたい場合に使用されます。"
+    },
+    "dsp-57N-140": {
+      "description": "Displayテキストは、主に冒頭で大きく掲出されるテキストやメッセージを伝えるヘッドコピーなど、視覚的なインパクトを強く与えたい場合に使用されます。"
+    },
+    "dsp-64B-140": {
+      "description": "Displayテキストは、主に冒頭で大きく掲出されるテキストやメッセージを伝えるヘッドコピーなど、視覚的なインパクトを強く与えたい場合に使用されます。"
+    },
+    "dsp-64N-140": {
+      "description": "Displayテキストは、主に冒頭で大きく掲出されるテキストやメッセージを伝えるヘッドコピーなど、視覚的なインパクトを強く与えたい場合に使用されます。"
+    },
+    "mono-14B-150": {
+      "description": "Monoテキストはコード系コンテンツへの適用を想定したテキストスタイルです。文字・単語レベルの可読性を優先したモノスペース（等幅フォント）を使用します。"
+    },
+    "mono-14N-150": {
+      "description": "Monoテキストはコード系コンテンツへの適用を想定したテキストスタイルです。文字・単語レベルの可読性を優先したモノスペース（等幅フォント）を使用します。"
+    },
+    "mono-16B-150": {
+      "description": "Monoテキストはコード系コンテンツへの適用を想定したテキストスタイルです。文字・単語レベルの可読性を優先したモノスペース（等幅フォント）を使用します。"
+    },
+    "mono-16N-150": {
+      "description": "Monoテキストはコード系コンテンツへの適用を想定したテキストスタイルです。文字・単語レベルの可読性を優先したモノスペース（等幅フォント）を使用します。"
+    },
+    "mono-17B-150": {
+      "description": "Monoテキストはコード系コンテンツへの適用を想定したテキストスタイルです。文字・単語レベルの可読性を優先したモノスペース（等幅フォント）を使用します。"
+    },
+    "mono-17N-150": {
+      "description": "Monoテキストはコード系コンテンツへの適用を想定したテキストスタイルです。文字・単語レベルの可読性を優先したモノスペース（等幅フォント）を使用します。"
+    },
+    "oln-14B-100": {
+      "description": "Onelineテキストは1行展開を前提として、主にUI要素への適用を想定したテキストスタイルです。行間の余白を最小限にすることでUIパーツに対するデザイン、及びコーディング実装調整コストの軽減を優先したデキストスタイルとなります。"
+    },
+    "oln-14N-100": {
+      "description": "Onelineテキストは1行展開を前提として、主にUI要素への適用を想定したテキストスタイルです。行間の余白を最小限にすることでUIパーツに対するデザイン、及びコーディング実装調整コストの軽減を優先したデキストスタイルとなります。"
+    },
+    "oln-16B-100": {
+      "description": "Onelineテキストは1行展開を前提として、主にUI要素への適用を想定したテキストスタイルです。行間の余白を最小限にすることでUIパーツに対するデザイン、及びコーディング実装調整コストの軽減を優先したデキストスタイルとなります。"
+    },
+    "oln-16N-100": {
+      "description": "Onelineテキストは1行展開を前提として、主にUI要素への適用を想定したテキストスタイルです。行間の余白を最小限にすることでUIパーツに対するデザイン、及びコーディング実装調整コストの軽減を優先したデキストスタイルとなります。"
+    },
+    "oln-17B-100": {
+      "description": "Onelineテキストは1行展開を前提として、主にUI要素への適用を想定したテキストスタイルです。行間の余白を最小限にすることでUIパーツに対するデザイン、及びコーディング実装調整コストの軽減を優先したデキストスタイルとなります。"
+    },
+    "oln-17N-100": {
+      "description": "Onelineテキストは1行展開を前提として、主にUI要素への適用を想定したテキストスタイルです。行間の余白を最小限にすることでUIパーツに対するデザイン、及びコーディング実装調整コストの軽減を優先したデキストスタイルとなります。"
+    },
+    "std-16B-170": {
+      "description": "Standardテキストは、ページの文書構造を形成する見出しや本文など、多くの要素において最も使用される普遍的なテキストスタイルです。"
+    },
+    "std-16B-175": {
+      "description": "Standardテキストは、ページの文書構造を形成する見出しや本文など、多くの要素において最も使用される普遍的なテキストスタイルです。"
+    },
+    "std-16N-170": {
+      "description": "Standardテキストは、ページの文書構造を形成する見出しや本文など、多くの要素において最も使用される普遍的なテキストスタイルです。"
+    },
+    "std-16N-175": {
+      "description": "Standardテキストは、ページの文書構造を形成する見出しや本文など、多くの要素において最も使用される普遍的なテキストスタイルです。"
+    },
+    "std-17B-170": {
+      "description": "Standardテキストは、ページの文書構造を形成する見出しや本文など、多くの要素において最も使用される普遍的なテキストスタイルです。"
+    },
+    "std-17N-170": {
+      "description": "Standardテキストは、ページの文書構造を形成する見出しや本文など、多くの要素において最も使用される普遍的なテキストスタイルです。"
+    },
+    "std-18B-160": {
+      "description": "Standardテキストは、ページの文書構造を形成する見出しや本文など、多くの要素において最も使用される普遍的なテキストスタイルです。"
+    },
+    "std-18N-160": {
+      "description": "Standardテキストは、ページの文書構造を形成する見出しや本文など、多くの要素において最も使用される普遍的なテキストスタイルです。"
+    },
+    "std-20B-150": {
+      "description": "Standardテキストは、ページの文書構造を形成する見出しや本文など、多くの要素において最も使用される普遍的なテキストスタイルです。"
+    },
+    "std-20N-150": {
+      "description": "Standardテキストは、ページの文書構造を形成する見出しや本文など、多くの要素において最も使用される普遍的なテキストスタイルです。"
+    },
+    "std-22B-150": {
+      "description": "Standardテキストは、ページの文書構造を形成する見出しや本文など、多くの要素において最も使用される普遍的なテキストスタイルです。"
+    },
+    "std-22N-150": {
+      "description": "Standardテキストは、ページの文書構造を形成する見出しや本文など、多くの要素において最も使用される普遍的なテキストスタイルです。"
+    },
+    "std-24B-150": {
+      "description": "Standardテキストは、ページの文書構造を形成する見出しや本文など、多くの要素において最も使用される普遍的なテキストスタイルです。"
+    },
+    "std-24N-150": {
+      "description": "Standardテキストは、ページの文書構造を形成する見出しや本文など、多くの要素において最も使用される普遍的なテキストスタイルです。"
+    },
+    "std-26N-150": {
+      "description": "Standardテキストは、ページの文書構造を形成する見出しや本文など、多くの要素において最も使用される普遍的なテキストスタイルです。"
+    },
+    "std-28B-150": {
+      "description": "Standardテキストは、ページの文書構造を形成する見出しや本文など、多くの要素において最も使用される普遍的なテキストスタイルです。"
+    },
+    "std-28N-150": {
+      "description": "Standardテキストは、ページの文書構造を形成する見出しや本文など、多くの要素において最も使用される普遍的なテキストスタイルです。"
+    },
+    "std-32B-150": {
+      "description": "Standardテキストは、ページの文書構造を形成する見出しや本文など、多くの要素において最も使用される普遍的なテキストスタイルです。"
+    },
+    "std-32N-150": {
+      "description": "Standardテキストは、ページの文書構造を形成する見出しや本文など、多くの要素において最も使用される普遍的なテキストスタイルです。"
+    },
+    "std-36B-140": {
+      "description": "Standardテキストは、ページの文書構造を形成する見出しや本文など、多くの要素において最も使用される普遍的なテキストスタイルです。"
+    },
+    "std-36N-140": {
+      "description": "Standardテキストは、ページの文書構造を形成する見出しや本文など、多くの要素において最も使用される普遍的なテキストスタイルです。"
+    },
+    "std-45B-140": {
+      "description": "Standardテキストは、ページの文書構造を形成する見出しや本文など、多くの要素において最も使用される普遍的なテキストスタイルです。"
+    },
+    "std-45N-140": {
+      "description": "Standardテキストは、ページの文書構造を形成する見出しや本文など、多くの要素において最も使用される普遍的なテキストスタイルです。"
+    }
+  },
+  "recipes": {
+    "blockquote": {
+      "className": "blockquote",
+      "variants": {}
+    },
+    "button": {
+      "className": "button",
+      "variants": {
+        "size": {
+          "values": [
+            "lg",
+            "md",
+            "sm",
+            "xs"
+          ],
+          "allowsBoolean": false
+        },
+        "variant": {
+          "values": [
+            "outline",
+            "solid-fill",
+            "text"
+          ],
+          "allowsBoolean": false
+        }
+      },
+      "defaultVariants": {
+        "size": "md",
+        "variant": "solid-fill"
+      },
+      "description": "ボタンは、主にアクション実行またはページ遷移のためのトリガーとして使用します。画面内におけるボタンの重要度に応じて使い分け可能な複数のスタイルがあります。"
+    },
+    "chipLabel": {
+      "className": "chip-label",
+      "variants": {
+        "variant": {
+          "values": [
+            "ghost",
+            "outlined",
+            "solid-fill",
+            "text"
+          ],
+          "allowsBoolean": false
+        }
+      },
+      "defaultVariants": {
+        "variant": "text"
+      },
+      "description": "状態や状況を示すキーワードを表示して、情報の分類・整理の効率を向上させるグラフィック要素です。情報リストやテーブルの各行などのステータスを分かりやすく表示したい場合に有効です。"
+    },
+    "digitalGoDivider": {
+      "className": "divider",
+      "variants": {
+        "color": {
+          "values": [
+            "black",
+            "gray-420",
+            "gray-536"
+          ],
+          "allowsBoolean": false
+        }
+      },
+      "defaultVariants": {
+        "color": "gray-420"
+      },
+      "description": "ディバイダーは、異なるセクション、コンポーネント、またはコンテンツのグループ間に設けられる視覚的な区切りで、HTMLのhr要素に相当します。要素間に明確な区切りを設けることで、読みやすさを向上させる役割を果たします。"
+    },
+    "errorText": {
+      "className": "error-text",
+      "variants": {}
+    },
+    "hamburgerMenuButton": {
+      "className": "hamburger-menu-button",
+      "variants": {}
+    },
+    "input": {
+      "className": "input",
+      "variants": {
+        "size": {
+          "values": [
+            "lg",
+            "md",
+            "sm"
+          ],
+          "allowsBoolean": false
+        }
+      },
+      "defaultVariants": {
+        "size": "lg"
+      },
+      "description": "インプットテキストコンポーネントは、名前や電話番号など、1行以内のテキストを入力する場合に使用します。"
+    },
+    "label": {
+      "className": "label",
+      "variants": {
+        "size": {
+          "values": [
+            "lg",
+            "md",
+            "sm"
+          ],
+          "allowsBoolean": false
+        }
+      },
+      "defaultVariants": {
+        "size": "md"
+      }
+    },
+    "legend": {
+      "className": "legend",
+      "variants": {
+        "size": {
+          "values": [
+            "lg",
+            "md",
+            "sm"
+          ],
+          "allowsBoolean": false
+        }
+      },
+      "defaultVariants": {
+        "size": "md"
+      }
+    },
+    "link": {
+      "className": "link",
+      "variants": {},
+      "description": "リンクテキストは通常、色や下線などの視覚的な表現で通常のテキストと区別され、URLと関連づけられたテキスト文字列です。この関連付けをハイパーリンクと呼び、これはウェブをウェブたらしめている基本的な概念のひとつです。"
+    },
+    "list": {
+      "className": "list",
+      "variants": {}
+    },
+    "menuItem": {
+      "className": "menu-item",
+      "variants": {
+        "isCondensed": {
+          "values": [
+            "true"
+          ],
+          "allowsBoolean": true
+        },
+        "variant": {
+          "values": [
+            "boxed",
+            "standard"
+          ],
+          "allowsBoolean": false
+        }
+      },
+      "defaultVariants": {
+        "isCondensed": false,
+        "variant": "standard"
+      }
+    },
+    "orderedList": {
+      "className": "ordered-list",
+      "variants": {}
+    },
+    "requirementBadge": {
+      "className": "requirement-badge",
+      "variants": {}
+    },
+    "supportText": {
+      "className": "support-text",
+      "variants": {}
+    },
+    "textarea": {
+      "className": "textarea",
+      "variants": {},
+      "description": "テキストエリアコンポーネントは、1行以上のテキストを入力する場合に使用します。"
+    },
+    "unorderedList": {
+      "className": "unordered-list",
+      "variants": {}
+    },
+    "utilityLink": {
+      "className": "utility-link",
+      "variants": {},
+      "description": "ユーティリティリンクはふつうの横並びリンクリストに近いが、それよりもコンパクトに作られています。"
+    }
+  },
+  "slotRecipes": {
+    "accordion": {
+      "className": "accordion",
+      "slots": [
+        "root",
+        "item",
+        "itemTrigger",
+        "itemContent",
+        "itemIndicator"
+      ],
+      "variants": {},
+      "description": "アコーディオンは、ユーザーがコンテンツのセクションを展開または折りたたむことができるユーザーインターフェースです。項目をコンパクトにリスト表示しつつページ遷移せず関連情報を表示したいという要求に対応します。※セクション内の任意の範囲で折りたたみ表示をする場合は「ディスクロージャー」コンポーネントを使用してください。"
+    },
+    "breadcrumb": {
+      "className": "breadcrumb",
+      "slots": [
+        "root",
+        "label",
+        "list",
+        "item",
+        "link",
+        "separator"
+      ],
+      "variants": {},
+      "description": "パンくずリストは、ウェブサイトの階層内でユーザーの現在の位置を表示します。"
+    },
+    "card": {
+      "className": "card",
+      "slots": [
+        "root",
+        "main",
+        "image",
+        "sub",
+        "title"
+      ],
+      "variants": {
+        "asLink": {
+          "values": [
+            "true"
+          ],
+          "allowsBoolean": true
+        },
+        "orientation": {
+          "values": [
+            "horizontal",
+            "vertical"
+          ],
+          "allowsBoolean": false
+        }
+      },
+      "defaultVariants": {
+        "asLink": false,
+        "orientation": "vertical"
+      },
+      "description": "単一の主題に関するコンテンツをまとめて表示するコンテナとなるコンポーネントです。さまざまなタイプとサイズの要素やコンポーネントを柔軟に格納できます。本来カードコンポーネントは、あらゆるコンテンツ（コンポーネントや要素）を内包することができ、非常に自由度の高いコンテナとなります。本デザインシステムでは、情報設計をしやすいカードを提供するため、自由度に制約を設けたコンポーネント仕様として策定しています。"
+    },
+    "checkbox": {
+      "className": "checkbox",
+      "slots": [
+        "root",
+        "label",
+        "control",
+        "indicator",
+        "group"
+      ],
+      "variants": {
+        "size": {
+          "values": [
+            "lg",
+            "md",
+            "sm"
+          ],
+          "allowsBoolean": false
+        }
+      },
+      "defaultVariants": {
+        "size": "sm"
+      },
+      "description": "チェックボックスは、複数の項目の中から複数の選択肢を選ぶことを可能にします。また、ひとつの選択肢のオン・オフの切り替えにも用いることができます。"
+    },
+    "chipTag": {
+      "className": "chip-tag",
+      "slots": [
+        "root",
+        "icon",
+        "label",
+        "removeButton",
+        "addButton"
+      ],
+      "variants": {}
+    },
+    "dateInput": {
+      "className": "date-input",
+      "slots": [
+        "root",
+        "label",
+        "control",
+        "segmentGroup",
+        "segment",
+        "hiddenInput"
+      ],
+      "variants": {
+        "size": {
+          "values": [
+            "lg",
+            "md",
+            "sm"
+          ],
+          "allowsBoolean": false
+        },
+        "variant": {
+          "values": [
+            "consolidated",
+            "separated"
+          ],
+          "allowsBoolean": false
+        }
+      },
+      "defaultVariants": {
+        "size": "lg",
+        "variant": "consolidated"
+      },
+      "description": "日付入力は、日付を分割形式で入力できるフォームコントロールです。"
+    },
+    "datePicker": {
+      "className": "date-picker",
+      "slots": [
+        "clearTrigger",
+        "content",
+        "control",
+        "input",
+        "label",
+        "monthSelect",
+        "nextTrigger",
+        "positioner",
+        "presetTrigger",
+        "prevTrigger",
+        "rangeText",
+        "root",
+        "table",
+        "tableBody",
+        "tableCell",
+        "tableCellTrigger",
+        "tableHead",
+        "tableHeader",
+        "tableRow",
+        "trigger",
+        "view",
+        "viewControl",
+        "viewTrigger",
+        "yearSelect",
+        "view"
+      ],
+      "variants": {}
+    },
+    "descriptionList": {
+      "className": "description-list",
+      "slots": [
+        "root",
+        "item",
+        "term",
+        "marker",
+        "description"
+      ],
+      "variants": {
+        "marker": {
+          "values": [
+            "bullet",
+            "custom",
+            "none"
+          ],
+          "allowsBoolean": false
+        }
+      },
+      "defaultVariants": {
+        "marker": "none"
+      }
+    },
+    "disclosure": {
+      "className": "disclosure",
+      "slots": [
+        "root",
+        "trigger",
+        "content",
+        "indicator",
+        "indicator"
+      ],
+      "variants": {},
+      "description": "ディスクロージャーは、コンテンツのセクション内の任意の範囲を折りたたむことができるユーザーインターフェースです。※セクション単位で折りたたみ表示をする場合は「アコーディオン」コンポーネントを使用してください。"
+    },
+    "drawer": {
+      "className": "drawer",
+      "slots": [
+        "positioner",
+        "content",
+        "title",
+        "description",
+        "trigger",
+        "backdrop",
+        "grabber",
+        "grabberIndicator",
+        "closeTrigger",
+        "swipeArea",
+        "header",
+        "body",
+        "footer"
+      ],
+      "variants": {},
+      "description": "ブラウザ画面の四辺(上下左右端)から展開し、モバイルメニューなどのコンポーネントを格納可能なコンテナです。"
+    },
+    "emergencyBanner": {
+      "className": "emergency-banner",
+      "slots": [
+        "root",
+        "heading",
+        "body",
+        "action",
+        "button"
+      ],
+      "variants": {}
+    },
+    "field": {
+      "className": "field",
+      "slots": [
+        "root",
+        "errorText",
+        "supportText",
+        "input",
+        "label",
+        "select",
+        "textarea",
+        "requirementBadge"
+      ],
+      "variants": {
+        "size": {
+          "values": [
+            "lg",
+            "md",
+            "sm"
+          ],
+          "allowsBoolean": false
+        }
+      },
+      "defaultVariants": {
+        "size": "md"
+      }
+    },
+    "fieldset": {
+      "className": "fieldset",
+      "slots": [
+        "root",
+        "errorText",
+        "supportText",
+        "legend"
+      ],
+      "variants": {
+        "size": {
+          "values": [
+            "lg",
+            "md",
+            "sm"
+          ],
+          "allowsBoolean": false
+        }
+      },
+      "defaultVariants": {
+        "size": "md"
+      }
+    },
+    "fileUpload": {
+      "className": "file-upload",
+      "slots": [
+        "root",
+        "dropzone",
+        "item",
+        "itemDeleteTrigger",
+        "itemGroup",
+        "itemName",
+        "itemPreview",
+        "itemPreviewImage",
+        "itemSizeText",
+        "label",
+        "trigger",
+        "clearTrigger",
+        "itemDetail"
+      ],
+      "variants": {}
+    },
+    "menu": {
+      "className": "menu",
+      "slots": [
+        "arrow",
+        "arrowTip",
+        "content",
+        "contextTrigger",
+        "indicator",
+        "item",
+        "itemGroup",
+        "itemGroupLabel",
+        "itemIndicator",
+        "itemText",
+        "positioner",
+        "separator",
+        "trigger",
+        "triggerItem"
+      ],
+      "variants": {
+        "isCondensed": {
+          "values": [
+            "true"
+          ],
+          "allowsBoolean": true
+        }
+      },
+      "defaultVariants": {
+        "isCondensed": false
+      }
+    },
+    "menuList": {
+      "className": "menu-list",
+      "slots": [
+        "root",
+        "label",
+        "content",
+        "item",
+        "itemGroup",
+        "itemGroupLabel",
+        "itemText",
+        "itemIndicator",
+        "input"
+      ],
+      "variants": {
+        "isCondensed": {
+          "values": [
+            "true"
+          ],
+          "allowsBoolean": true
+        },
+        "variant": {
+          "values": [
+            "boxed",
+            "standard"
+          ],
+          "allowsBoolean": false
+        }
+      },
+      "defaultVariants": {
+        "isCondensed": false,
+        "variant": "standard"
+      }
+    },
+    "notificationBanner": {
+      "className": "notification-banner",
+      "slots": [
+        "root",
+        "icon",
+        "close",
+        "header",
+        "heading",
+        "body",
+        "actions"
+      ],
+      "variants": {
+        "bannerStyle": {
+          "values": [
+            "color-chip",
+            "standard"
+          ],
+          "allowsBoolean": false
+        },
+        "type": {
+          "values": [
+            "error",
+            "info1",
+            "info2",
+            "success",
+            "warning"
+          ],
+          "allowsBoolean": false
+        }
+      },
+      "defaultVariants": {
+        "bannerStyle": "standard",
+        "type": "info1"
+      },
+      "description": "サイト/サービス全体に関わる、またはページや要素単位における重要度の高い情報を、ユーザーの操作に関わらず、サイト/サービス側からユーザーへ提示する場合に用いる通知バナーです。通知に対するユーザーアクションを要求することが可能です。メンテナンスを通知したい、ユーザーの対応が必要な情報を通知してアクションさせたい、といった要求に対応することができます。"
+    },
+    "progress": {
+      "className": "progress",
+      "slots": [
+        "root",
+        "label",
+        "track",
+        "range",
+        "valueText",
+        "view",
+        "circle",
+        "circleTrack",
+        "circleRange"
+      ],
+      "variants": {
+        "layout": {
+          "values": [
+            "horizontal",
+            "vertical"
+          ],
+          "allowsBoolean": false
+        }
+      },
+      "defaultVariants": {
+        "layout": "vertical"
+      },
+      "description": "プログレスインジケーターは、ユーザーのアクションに対して処理進行中であることを通知します。データ取得リクエストの応答を待っていることをユーザーに伝えたいといった要求に対応します。"
+    },
+    "radioGroup": {
+      "className": "radio-group",
+      "slots": [
+        "root",
+        "label",
+        "item",
+        "itemText",
+        "itemControl",
+        "indicator"
+      ],
+      "variants": {
+        "size": {
+          "values": [
+            "lg",
+            "md",
+            "sm"
+          ],
+          "allowsBoolean": false
+        }
+      },
+      "defaultVariants": {
+        "size": "sm"
+      }
+    },
+    "resourceList": {
+      "className": "resource-list",
+      "slots": [
+        "root",
+        "main",
+        "action",
+        "content",
+        "title"
+      ],
+      "variants": {
+        "asLink": {
+          "values": [
+            "true"
+          ],
+          "allowsBoolean": true
+        },
+        "variant": {
+          "values": [
+            "frame",
+            "list"
+          ],
+          "allowsBoolean": false
+        }
+      },
+      "defaultVariants": {
+        "asLink": false,
+        "variant": "list"
+      }
+    },
+    "select": {
+      "className": "select",
+      "slots": [
+        "label",
+        "positioner",
+        "trigger",
+        "indicator",
+        "clearTrigger",
+        "item",
+        "itemText",
+        "itemIndicator",
+        "itemGroup",
+        "itemGroupLabel",
+        "list",
+        "content",
+        "root",
+        "control",
+        "valueText"
+      ],
+      "variants": {
+        "size": {
+          "values": [
+            "lg",
+            "md",
+            "sm"
+          ],
+          "allowsBoolean": false
+        }
+      },
+      "defaultVariants": {
+        "size": "lg"
+      },
+      "description": "セレクトボックスは、複数の選択肢を提供するフォームコントロールです。"
+    },
+    "stepNavigation": {
+      "className": "step-navigation",
+      "slots": [
+        "root",
+        "list",
+        "item",
+        "trigger",
+        "indicator",
+        "separator",
+        "content",
+        "nextTrigger",
+        "prevTrigger",
+        "progress",
+        "title",
+        "description"
+      ],
+      "variants": {
+        "size": {
+          "values": [
+            "md",
+            "sm"
+          ],
+          "allowsBoolean": false
+        }
+      },
+      "defaultVariants": {
+        "size": "md"
+      }
+    },
+    "table": {
+      "className": "table",
+      "slots": [
+        "root",
+        "head",
+        "body",
+        "foot",
+        "row",
+        "header",
+        "cell",
+        "colgroup",
+        "col",
+        "caption"
+      ],
+      "variants": {
+        "dense": {
+          "values": [
+            "false",
+            "true"
+          ],
+          "allowsBoolean": true
+        },
+        "hovered": {
+          "values": [
+            "true"
+          ],
+          "allowsBoolean": true
+        },
+        "striped": {
+          "values": [
+            "true"
+          ],
+          "allowsBoolean": true
+        }
+      },
+      "defaultVariants": {
+        "dense": false,
+        "hovered": false,
+        "striped": false
+      }
+    },
+    "tabs": {
+      "className": "tabs",
+      "slots": [
+        "root",
+        "list",
+        "trigger",
+        "content",
+        "indicator"
+      ],
+      "variants": {}
+    },
+    "treeView": {
+      "className": "tree-view",
+      "slots": [
+        "branch",
+        "branchContent",
+        "branchControl",
+        "branchIndentGuide",
+        "branchIndicator",
+        "branchText",
+        "branchTrigger",
+        "item",
+        "itemIndicator",
+        "itemText",
+        "label",
+        "nodeCheckbox",
+        "nodeRenameInput",
+        "root",
+        "tree"
+      ],
+      "variants": {
+        "isCondensed": {
+          "values": [
+            "false",
+            "true"
+          ],
+          "allowsBoolean": true
+        },
+        "variant": {
+          "values": [
+            "boxed",
+            "standard"
+          ],
+          "allowsBoolean": false
+        }
+      }
+    }
+  },
+  "patterns": {
+    "aspectRatio": {
+      "jsxName": "AspectRatio",
+      "properties": {
+        "ratio": {
+          "kind": "primitive",
+          "primitive": "number"
+        }
+      },
+      "strict": false,
+      "blocklist": [
+        "aspectRatio"
+      ]
+    },
+    "bleed": {
+      "jsxName": "Bleed",
+      "properties": {
+        "block": {
+          "kind": "property",
+          "property": "marginBlock"
+        },
+        "inline": {
+          "kind": "property",
+          "property": "marginInline"
+        }
+      },
+      "defaultValues": {
+        "inline": "0",
+        "block": "0"
+      },
+      "strict": false
+    },
+    "box": {
+      "jsxName": "Box",
+      "properties": {},
+      "strict": false
+    },
+    "center": {
+      "jsxName": "Center",
+      "properties": {
+        "inline": {
+          "kind": "primitive",
+          "primitive": "boolean"
+        }
+      },
+      "strict": false
+    },
+    "circle": {
+      "jsxName": "Circle",
+      "properties": {
+        "size": {
+          "kind": "property",
+          "property": "width"
+        }
+      },
+      "strict": false
+    },
+    "container": {
+      "jsxName": "Container",
+      "properties": {},
+      "strict": false
+    },
+    "cq": {
+      "jsxName": "Cq",
+      "properties": {
+        "name": {
+          "kind": "token",
+          "category": "containerNames",
+          "property": "containerName"
+        },
+        "type": {
+          "kind": "property",
+          "property": "containerType"
+        }
+      },
+      "defaultValues": {
+        "type": "inline-size"
+      },
+      "strict": false
+    },
+    "divider": {
+      "jsxName": "Divider",
+      "properties": {
+        "color": {
+          "kind": "token",
+          "category": "colors",
+          "property": "borderColor"
+        },
+        "orientation": {
+          "kind": "enum",
+          "values": [
+            "horizontal",
+            "vertical"
+          ]
+        },
+        "thickness": {
+          "kind": "token",
+          "category": "sizes",
+          "property": "borderWidth"
+        }
+      },
+      "defaultValues": {
+        "orientation": "horizontal",
+        "thickness": "1px"
+      },
+      "strict": false
+    },
+    "flex": {
+      "jsxName": "Flex",
+      "properties": {
+        "align": {
+          "kind": "property",
+          "property": "alignItems"
+        },
+        "basis": {
+          "kind": "property",
+          "property": "flexBasis"
+        },
+        "direction": {
+          "kind": "property",
+          "property": "flexDirection"
+        },
+        "grow": {
+          "kind": "property",
+          "property": "flexGrow"
+        },
+        "justify": {
+          "kind": "property",
+          "property": "justifyContent"
+        },
+        "shrink": {
+          "kind": "property",
+          "property": "flexShrink"
+        },
+        "wrap": {
+          "kind": "property",
+          "property": "flexWrap"
+        }
+      },
+      "strict": false
+    },
+    "float": {
+      "jsxName": "Float",
+      "properties": {
+        "offset": {
+          "kind": "token",
+          "category": "spacing",
+          "property": "top"
+        },
+        "offsetX": {
+          "kind": "token",
+          "category": "spacing",
+          "property": "left"
+        },
+        "offsetY": {
+          "kind": "token",
+          "category": "spacing",
+          "property": "top"
+        },
+        "placement": {
+          "kind": "enum",
+          "values": [
+            "bottom-end",
+            "bottom-start",
+            "top-end",
+            "top-start",
+            "bottom-center",
+            "top-center",
+            "middle-center",
+            "middle-end",
+            "middle-start"
+          ]
+        }
+      },
+      "defaultValues": {
+        "kind": "js-callback",
+        "id": "patterns.float.defaultValues",
+        "hash": "fn1-1b7wm3u"
+      },
+      "strict": false
+    },
+    "grid": {
+      "jsxName": "Grid",
+      "properties": {
+        "columnGap": {
+          "kind": "property",
+          "property": "gap"
+        },
+        "columns": {
+          "kind": "primitive",
+          "primitive": "number"
+        },
+        "gap": {
+          "kind": "property",
+          "property": "gap"
+        },
+        "minChildWidth": {
+          "kind": "token",
+          "category": "sizes",
+          "property": "width"
+        },
+        "rowGap": {
+          "kind": "property",
+          "property": "gap"
+        }
+      },
+      "defaultValues": {
+        "kind": "js-callback",
+        "id": "patterns.grid.defaultValues",
+        "hash": "fn1-i5dpeq"
+      },
+      "strict": false
+    },
+    "gridItem": {
+      "jsxName": "GridItem",
+      "properties": {
+        "colEnd": {
+          "kind": "primitive",
+          "primitive": "number"
+        },
+        "colSpan": {
+          "kind": "primitive",
+          "primitive": "number"
+        },
+        "colStart": {
+          "kind": "primitive",
+          "primitive": "number"
+        },
+        "rowEnd": {
+          "kind": "primitive",
+          "primitive": "number"
+        },
+        "rowSpan": {
+          "kind": "primitive",
+          "primitive": "number"
+        },
+        "rowStart": {
+          "kind": "primitive",
+          "primitive": "number"
+        }
+      },
+      "strict": false
+    },
+    "hstack": {
+      "jsxName": "HStack",
+      "properties": {
+        "gap": {
+          "kind": "property",
+          "property": "gap"
+        },
+        "justify": {
+          "kind": "property",
+          "property": "justifyContent"
+        }
+      },
+      "defaultValues": {
+        "gap": "8px"
+      },
+      "strict": false
+    },
+    "linkOverlay": {
+      "jsxName": "LinkOverlay",
+      "properties": {},
+      "strict": false
+    },
+    "spacer": {
+      "jsxName": "Spacer",
+      "properties": {
+        "size": {
+          "kind": "token",
+          "category": "spacing"
+        }
+      },
+      "strict": false
+    },
+    "square": {
+      "jsxName": "Square",
+      "properties": {
+        "size": {
+          "kind": "property",
+          "property": "width"
+        }
+      },
+      "strict": false
+    },
+    "stack": {
+      "jsxName": "Stack",
+      "properties": {
+        "align": {
+          "kind": "property",
+          "property": "alignItems"
+        },
+        "direction": {
+          "kind": "property",
+          "property": "flexDirection"
+        },
+        "gap": {
+          "kind": "property",
+          "property": "gap"
+        },
+        "justify": {
+          "kind": "property",
+          "property": "justifyContent"
+        }
+      },
+      "defaultValues": {
+        "direction": "column",
+        "gap": "8px"
+      },
+      "strict": false
+    },
+    "visuallyHidden": {
+      "jsxName": "VisuallyHidden",
+      "properties": {},
+      "strict": false
+    },
+    "vstack": {
+      "jsxName": "VStack",
+      "properties": {
+        "gap": {
+          "kind": "property",
+          "property": "gap"
+        },
+        "justify": {
+          "kind": "property",
+          "property": "justifyContent"
+        }
+      },
+      "defaultValues": {
+        "gap": "8px"
+      },
+      "strict": false
+    },
+    "wrap": {
+      "jsxName": "Wrap",
+      "properties": {
+        "align": {
+          "kind": "property",
+          "property": "alignItems"
+        },
+        "columnGap": {
+          "kind": "property",
+          "property": "gap"
+        },
+        "gap": {
+          "kind": "property",
+          "property": "gap"
+        },
+        "justify": {
+          "kind": "property",
+          "property": "justifyContent"
+        },
+        "rowGap": {
+          "kind": "property",
+          "property": "gap"
+        }
+      },
+      "strict": false
+    }
+  },
+  "sources": {
+    "entries": [
+      {
+        "kind": "preset",
+        "name": "@pandacss/preset-base"
+      },
+      {
+        "kind": "preset",
+        "name": "digital-go"
+      },
+      {
+        "kind": "preset",
+        "name": "digital-go-pandacss-preset"
+      },
+      {
+        "kind": "config",
+        "file": "panda.config.ts"
+      }
+    ],
+    "conditions": {
+      "_active": 0,
+      "_after": 0,
+      "_anyPointerCoarse": 0,
+      "_anyPointerFine": 0,
+      "_anyPointerNone": 0,
+      "_atValue": 0,
+      "_autofill": 0,
+      "_backdrop": 0,
+      "_before": 0,
+      "_checked": 0,
+      "_closed": 0,
+      "_complete": 0,
+      "_current": 0,
+      "_currentPage": 0,
+      "_currentStep": 0,
+      "_dark": 0,
+      "_default": 0,
+      "_disabled": 0,
+      "_dragging": 0,
+      "_empty": 0,
+      "_enabled": 0,
+      "_even": 0,
+      "_expanded": 0,
+      "_file": 0,
+      "_first": 0,
+      "_firstLetter": 0,
+      "_firstLine": 0,
+      "_firstOfType": 0,
+      "_focus": 0,
+      "_focusVisible": 0,
+      "_focusWithin": 0,
+      "_fullscreen": 0,
+      "_grabbed": 0,
+      "_groupActive": 0,
+      "_groupChecked": 0,
+      "_groupDisabled": 0,
+      "_groupExpanded": 0,
+      "_groupFocus": 0,
+      "_groupFocusVisible": 0,
+      "_groupFocusWithin": 0,
+      "_groupHover": 0,
+      "_groupInvalid": 0,
+      "_hidden": 0,
+      "_highContrast": 0,
+      "_highlighted": 0,
+      "_horizontal": 0,
+      "_hover": 0,
+      "_icon": 0,
+      "_inRange": 0,
+      "_incomplete": 0,
+      "_indeterminate": 0,
+      "_inert": 0,
+      "_invalid": 0,
+      "_invertedColors": 0,
+      "_landscape": 0,
+      "_last": 0,
+      "_lastOfType": 0,
+      "_lessContrast": 0,
+      "_light": 0,
+      "_loading": 0,
+      "_ltr": 0,
+      "_marker": 0,
+      "_moreContrast": 0,
+      "_motionReduce": 0,
+      "_motionSafe": 0,
+      "_noscript": 0,
+      "_now": 0,
+      "_odd": 0,
+      "_only": 0,
+      "_onlyOfType": 0,
+      "_open": 0,
+      "_optional": 0,
+      "_osDark": 0,
+      "_osLight": 0,
+      "_outOfRange": 0,
+      "_overValue": 0,
+      "_peerActive": 0,
+      "_peerChecked": 0,
+      "_peerDisabled": 0,
+      "_peerExpanded": 0,
+      "_peerFocus": 0,
+      "_peerFocusVisible": 0,
+      "_peerFocusWithin": 0,
+      "_peerHover": 0,
+      "_peerInvalid": 0,
+      "_peerPlaceholderShown": 0,
+      "_placeholder": 0,
+      "_placeholderShown": 0,
+      "_pointerCoarse": 0,
+      "_pointerFine": 0,
+      "_pointerNone": 0,
+      "_portrait": 0,
+      "_pressed": 0,
+      "_print": 0,
+      "_rangeEnd": 0,
+      "_rangeStart": 0,
+      "_readOnly": 0,
+      "_readWrite": 0,
+      "_required": 0,
+      "_rtl": 0,
+      "_scrollbar": 0,
+      "_scrollbarThumb": 0,
+      "_scrollbarTrack": 0,
+      "_selected": 0,
+      "_selection": 0,
+      "_starting": 0,
+      "_target": 0,
+      "_today": 0,
+      "_topmost": 0,
+      "_unavailable": 0,
+      "_underValue": 0,
+      "_userInvalid": 0,
+      "_userValid": 0,
+      "_valid": 0,
+      "_vertical": 0,
+      "_visited": 0
+    }
+  }
+}
