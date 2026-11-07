@@ -311,20 +311,18 @@ export const stepNavigation = defineSlotRecipe({
     size: {
       md: {
         root: {
-          root: {
-            /**
-             * --_number-size: calc(44 / 16 * 1rem);
-             * --_number-margin: calc(4 / 16 * 1rem);
-             * --_outline-width: calc(2 / 16 * 1rem);
-             * --_title-margin: calc(24 / 16 * 1rem);
-             * --_description-margin: calc(8 / 16 * 1rem);
-             */
-            "--_number-size": "{spacing.11}",
-            "--_number-margin": "{spacing.1}",
-            "--_outline-width": "{spacing.0.5}",
-            "--_title-margin": "{spacing.6}",
-            "--_description-margin": "{spacing.2}",
-          },
+          /**
+           * --_number-size: calc(44 / 16 * 1rem);
+           * --_number-margin: calc(4 / 16 * 1rem);
+           * --_outline-width: calc(2 / 16 * 1rem);
+           * --_title-margin: calc(24 / 16 * 1rem);
+           * --_description-margin: calc(8 / 16 * 1rem);
+           */
+          "--_number-size": "{spacing.11}",
+          "--_number-margin": "{spacing.1}",
+          "--_outline-width": "{spacing.0.5}",
+          "--_title-margin": "{spacing.6}",
+          "--_description-margin": "{spacing.2}",
         },
         indicator: {
           _after: {
