@@ -1,2 +1,10 @@
 #!/bin/sh
+
+set -e
+
 npm run lint-staged
+
+if ! git diff --cached --quiet -- packages/preset-base packages/preset; then
+  npm run generate:design-system
+  git add apps/nextjs/public/design-system.json
+fi

@@ -10,6 +10,9 @@ Storybook
 Next.js Example  
 <https://digital-go-design-system-with-panda.vercel.app/>
 
+Panda Studio  
+<https://studio.panda-css.com/#url=https://digital-go-design-system-with-panda.vercel.app/design-system.json>
+
 ## 使い方
 
 ### 1. React + Panda CSS プロジェクトにプリセットをインストール
