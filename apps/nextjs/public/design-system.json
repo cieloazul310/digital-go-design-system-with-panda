@@ -4974,6 +4974,8 @@
       "variants": {
         "variant": {
           "values": [
+            "filled-1",
+            "filled-2",
             "ghost",
             "outlined",
             "solid-fill",

@@ -24,7 +24,7 @@ const meta = {
       options: chipLabel.variantMap.variant,
       control: { type: "radio" },
       description:
-        "チップラベルのスタイルを、塗りボタン（`solid-fill`）、アウトラインボタン（`outline`）、テキストボタン（`text`）、アウトライン+塗り(`ghost`)の4種類から選択します。",
+        "チップラベルのスタイルを、塗りボタン（`filled-2`、旧`solid-fill`）、アウトラインボタン（`outline`）、テキストボタン（`text`）、アウトライン+塗り(`filled-1`、 旧`ghost`)の4種類から選択します。",
       table: {
         type: { summary: `${chipLabel.variantMap.variant.join(" | ")}` },
       },
@@ -120,7 +120,7 @@ export const WithoutIcon: Story = {
     ...css.raw({
       rounded: 0,
     }),
-    variant: "solid-fill",
+    variant: "filled-2",
   },
   render: ({ ...args }) => (
     <Flex gap={4}>
@@ -197,21 +197,21 @@ export const WithTableOne: Story = {
     const chip = (status: string) => {
       if (status === "下書き") {
         return (
-          <ChipLabel {...args} variant="solid-fill" colorPalette="solid-gray">
+          <ChipLabel {...args} variant="filled-2" colorPalette="solid-gray">
             {status}
           </ChipLabel>
         );
       }
       if (status === "公開済み") {
         return (
-          <ChipLabel {...args} variant="ghost" colorPalette="lime">
+          <ChipLabel {...args} variant="filled-1" colorPalette="lime">
             {status}
           </ChipLabel>
         );
       }
       if (status === "公開予約中") {
         return (
-          <ChipLabel {...args} variant="ghost" colorPalette="yellow">
+          <ChipLabel {...args} variant="filled-1" colorPalette="yellow">
             {status}
           </ChipLabel>
         );
@@ -321,13 +321,13 @@ export const WithTableTwo: Story = {
     const chip = (status: boolean) => {
       if (status) {
         return (
-          <ChipLabel {...args} variant="solid-fill">
+          <ChipLabel {...args} variant="filled-2">
             提供中
           </ChipLabel>
         );
       }
       return (
-        <ChipLabel {...args} variant="ghost">
+        <ChipLabel {...args} variant="filled-1">
           提供予定
         </ChipLabel>
       );
