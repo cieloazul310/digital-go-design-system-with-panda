@@ -15,8 +15,7 @@ import { Card } from "../src/card";
 import { Button } from "../src/button";
 import { Link } from "../src/link";
 // import { Divider } from "../src/divider";
-import { UnorderedList } from "../src/unordered-list";
-import { List } from "../src/list";
+import { List, UnorderedList } from "../src/list";
 import { Checkbox } from "../src/checkbox";
 import { withSubPath } from "./utils/withSubPath";
 
@@ -235,7 +234,7 @@ export const RoundedMainAreaVertical: Story = {
           Icon: BaggageClaimIcon,
         },
       ].map(({ title, description, Icon }) => (
-        <Card.Root {...props} key={title}>
+        <Card.Root key={title} {...props}>
           <Card.Image position="relative">
             <div
               className={css({
@@ -310,7 +309,7 @@ export const RoundedMainAreaHorizontal: Story = {
           Icon: BaggageClaimIcon,
         },
       ].map(({ title, description, Icon }) => (
-        <Card.Root {...props} key={title}>
+        <Card.Root key={title} {...props}>
           <Card.Image position="relative">
             <div
               className={css({
@@ -800,7 +799,7 @@ export const HorizontalLayoutWithColorChip: Story = {
         { title: "温室効果ガス排出削減" },
         { title: "給水栓整備" },
       ].map(({ title }) => (
-        <Card.Root {...props} key={title}>
+        <Card.Root key={title} {...props}>
           <Card.Main justifyContent="center">
             <Card.Title>
               <Link color="inherit" href="/">

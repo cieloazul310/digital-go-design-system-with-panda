@@ -185,9 +185,9 @@ components:
 
   List:
     id: list
-    name: リスト
+    name: 箇条書きリスト
     className: list
-    description: 一般的なリスト要素。HTMLのul要素、ol要素に相当します。
+    description: 箇条書きリストは、1つ以上の項目を列挙するときに使用します。HTMLには<ul>要素と<ol>要素がありますが、本デザインシステムではすべて<ul>要素を使い、項目番号は地のテキストとして扱います。
     storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/story/components-%E3%83%AA%E3%82%B9%E3%83%88-ol--basic
     digitalgo: https://design.digital.go.jp/dads/components/list/
     status: done
