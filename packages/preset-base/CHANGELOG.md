@@ -1,5 +1,18 @@
 # @cieloazul310/digital-go-pandacss-plugin
 
+## 0.7.0
+
+### Minor Changes
+
+- de8b271: - スイッチコンポーネントを追加
+  - デジタル庁デザインシステムの仕様に従い、順序付きリストに`<ol>`要素を使用しないように変更
+  - チップラベルのバリアント名称変更を反映
+
+### Patch Changes
+
+- Updated dependencies [de8b271]
+  - @cieloazul310/digital-go-pandacss-utils@0.7.0
+
 ## 0.6.2
 
 ### Patch Changes
