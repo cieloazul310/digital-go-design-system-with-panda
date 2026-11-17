@@ -64,6 +64,7 @@
     "@zag-js/radio-group": "^1.44.0",
     "@zag-js/select": "^1.44.0",
     "@zag-js/steps": "^1.44.0",
+    "@zag-js/switch": "^1.44.0",
     "@zag-js/tabs": "^1.44.0",
     "@zag-js/tree-view": "^1.44.0",
     "eslint": "^10.11.0",
@@ -86,6 +87,7 @@
     "@zag-js/radio-group": "^1.0.0",
     "@zag-js/select": "^1.0.0",
     "@zag-js/steps": "^1.0.0",
+    "@zag-js/switch": "^1.0.0",
     "@zag-js/tabs": "^1.0.0",
     "@zag-js/tree-view": "^1.0.0"
   },

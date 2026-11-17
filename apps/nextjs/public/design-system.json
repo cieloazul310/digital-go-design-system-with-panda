@@ -5651,6 +5651,28 @@
         "size": "md"
       }
     },
+    "switchRecipe": {
+      "className": "switch",
+      "slots": [
+        "root",
+        "label",
+        "control",
+        "thumb"
+      ],
+      "variants": {
+        "variant": {
+          "values": [
+            "mode",
+            "onOff"
+          ],
+          "allowsBoolean": false
+        }
+      },
+      "defaultVariants": {
+        "variant": "onOff"
+      },
+      "description": "スイッチは、設定のオン・オフや2つの選択肢を切り替えるためのコントロールです。"
+    },
     "table": {
       "className": "table",
       "slots": [
