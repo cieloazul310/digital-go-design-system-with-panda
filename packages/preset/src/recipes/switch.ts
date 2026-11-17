@@ -3,6 +3,7 @@ import { anatomy as switchAnatomy } from "@zag-js/switch";
 
 export const switchRecipe = defineSlotRecipe({
   className: "switch",
+  jsx: ["Switch", /Switch\.+/],
   description:
     "スイッチは、設定のオン・オフや2つの選択肢を切り替えるためのコントロールです。",
   slots: switchAnatomy.keys(),
