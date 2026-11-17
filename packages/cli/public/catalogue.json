@@ -21,9 +21,9 @@
     },
     "Breadcrumb": {
       "id": "breadcrumb",
-      "name": "パンくずリスト",
+      "name": "パンくずナビゲーション",
       "className": "breadcrumb",
-      "description": "パンくずリストは、ウェブサイトの階層内でユーザーの現在の位置を表示します。",
+      "description": "パンくずナビゲーションは、ウェブサイトの階層内でユーザーの現在の位置を表示します。",
       "storybook": "https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/docs/components-%E3%83%91%E3%83%B3%E3%81%8F%E3%81%9A%E3%83%AA%E3%82%B9%E3%83%88--docs",
       "digitalgo": "https://design.digital.go.jp/dads/components/breadcrumb/",
       "status": "done"
@@ -186,9 +186,9 @@
     },
     "List": {
       "id": "list",
-      "name": "リスト",
+      "name": "箇条書きリスト",
       "className": "list",
-      "description": "一般的なリスト要素。HTMLのul要素、ol要素に相当します。",
+      "description": "箇条書きリストは、1つ以上の項目を列挙するときに使用します。HTMLには<ul>要素と<ol>要素がありますが、本デザインシステムではすべて<ul>要素を使い、項目番号は地のテキストとして扱います。",
       "storybook": "https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/story/components-%E3%83%AA%E3%82%B9%E3%83%88-ol--basic",
       "digitalgo": "https://design.digital.go.jp/dads/components/list/",
       "status": "done"
@@ -249,6 +249,15 @@
       "digitalgo": "https://design.digital.go.jp/dads/components/step-navigation/",
       "ark": "https://ark-ui.com/docs/components/steps",
       "status": "done"
+    },
+    "Switch": {
+      "id": "switch",
+      "name": "スイッチ",
+      "className": "switch",
+      "description": "スイッチは、設定のオン・オフや2つの選択肢を切り替えるためのコントロールです。",
+      "digitalgo": "https://design.digital.go.jp/dads/components/switch/",
+      "ark": "https://ark-ui.com/docs/components/switch",
+      "status": "progress"
     },
     "Table": {
       "id": "table",

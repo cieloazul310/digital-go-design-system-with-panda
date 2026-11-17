@@ -249,6 +249,15 @@ components:
     ark: https://ark-ui.com/docs/components/steps
     status: done
 
+  Switch:
+    id: switch
+    name: スイッチ
+    className: switch
+    description: スイッチは、設定のオン・オフや2つの選択肢を切り替えるためのコントロールです。
+    digitalgo: https://design.digital.go.jp/dads/components/switch/
+    ark: https://ark-ui.com/docs/components/switch
+    status: progress
+
   Table:
     id: table
     name: テーブル／データテーブル

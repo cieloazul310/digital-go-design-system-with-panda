@@ -55,6 +55,10 @@ export const demoMap = {
   "resource-list": () => import("@/demo/resource-list"),
   "resource-list-aslink": () => import("@/demo/resource-list-aslink"),
 
+  // switch
+  "switch-on-off": () => import("@/demo/switch-on-off"),
+  "switch-mode": () => import("@/demo/switch-mode"),
+
   // table
   table: () => import("@/demo/table"),
   "table-dense-hovered-striped": () =>

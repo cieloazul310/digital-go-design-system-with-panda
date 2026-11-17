@@ -35,6 +35,7 @@ import { resourceList } from "./resource-list";
 import { select } from "./select";
 import { stepNavigation } from "./step-navigation";
 import { supportText } from "./support-text";
+import { switchRecipe } from "./switch";
 import { table } from "./table";
 import { tabs } from "./tabs";
 import { textarea } from "./textarea";
@@ -83,6 +84,7 @@ export const slotRecipes = {
   notificationBanner,
   progress,
   radioGroup,
+  switchRecipe,
   resourceList,
   select,
   stepNavigation,
