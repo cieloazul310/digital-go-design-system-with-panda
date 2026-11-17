@@ -256,7 +256,7 @@ components:
     description: スイッチは、設定のオン・オフや2つの選択肢を切り替えるためのコントロールです。
     digitalgo: https://design.digital.go.jp/dads/components/switch/
     ark: https://ark-ui.com/docs/components/switch
-    status: progress
+    status: done
 
   Table:
     id: table
