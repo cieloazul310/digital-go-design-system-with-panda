@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { List, UnorderedList } from "../src/list";
 
 const meta = {
-  title: "Components/リスト/Ul",
+  title: "Components/箇条書きリスト/リストマークタイプ",
   component: UnorderedList,
 } satisfies Meta<typeof UnorderedList>;
 

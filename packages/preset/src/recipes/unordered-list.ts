@@ -9,9 +9,9 @@ export const unorderedList = defineRecipe({
     pl: 8,
     listStyle: "revert",
     /**
-     * [&_:where(ol,ul)]:mt-1 [&_:where(ol,ul)]:-mb-1
+     * [&:where(ul)]:mt-1 [&:where(ul)]:-mb-1
      */
-    "&:where(ol,ul)": {
+    "&:where(ul)": {
       mt: 1,
       mb: -1,
     },

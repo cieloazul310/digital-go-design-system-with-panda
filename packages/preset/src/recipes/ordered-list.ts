@@ -1,23 +1,36 @@
 /**
  * source:
- * https://github.com/digital-go-jp/design-system-example-components-react/blob/main/src/components/Ol/Ol.tsx
+ * https://github.com/digital-go-jp/design-system-example-components-react/blob/main/src/components/List/List.tsx
  */
 import { defineRecipe } from "@pandacss/dev";
 
 export const orderedList = defineRecipe({
   className: "ordered-list",
   base: {
-    /**
-     * pl-8 list-[revert]
-     */
-    pl: 8,
-    listStyle: "revert",
-    /**
-     * [&_:where(ol,ul)]:mt-1 [&_:where(ol,ul)]:-mb-1
-     */
-    "&:where(ol,ul)": {
+    listStyle: "none",
+    "&:where(ul)": {
       mt: 1,
       mb: -1,
+    },
+    "& > li": {
+      pl: 8,
+    },
+    "& > li > span:first-child": {
+      ml: -8,
+      display: "inline-block",
+      minW: 8,
+      whiteSpace: "nowrap",
+    },
+    "& > li > a:only-child": {
+      ml: -8,
+      pl: 8,
+    },
+    "& > li > a:only-child > span:first-child": {
+      ml: -8,
+      display: "inline-block",
+      minW: 8,
+      whiteSpace: "nowrap",
+      textDecoration: "inherit",
     },
   },
 });

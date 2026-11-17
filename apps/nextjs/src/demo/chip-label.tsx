@@ -62,23 +62,23 @@ export default function App() {
       <div
         className={css({ display: "inline-flex", gap: 4, flexWrap: "wrap" })}
       >
-        <ChipLabel variant="ghost">
+        <ChipLabel variant="filled-1">
           <CheckCircle2Icon />
           デフォルト
         </ChipLabel>
-        <ChipLabel colorPalette="green" variant="ghost">
+        <ChipLabel colorPalette="green" variant="filled-1">
           <CheckCircle2Icon />
           成功
         </ChipLabel>
-        <ChipLabel colorPalette="red" variant="ghost">
+        <ChipLabel colorPalette="red" variant="filled-1">
           <CircleXIcon />
           失敗
         </ChipLabel>
-        <ChipLabel colorPalette="yellow" variant="ghost">
+        <ChipLabel colorPalette="yellow" variant="filled-1">
           <TriangleAlert />
           注意
         </ChipLabel>
-        <ChipLabel colorPalette="solid-gray" variant="ghost">
+        <ChipLabel colorPalette="solid-gray" variant="filled-1">
           <InfoIcon />
           情報
         </ChipLabel>
@@ -86,23 +86,23 @@ export default function App() {
       <div
         className={css({ display: "inline-flex", gap: 4, flexWrap: "wrap" })}
       >
-        <ChipLabel variant="solid-fill">
+        <ChipLabel variant="filled-2">
           <CheckCircle2Icon />
           デフォルト
         </ChipLabel>
-        <ChipLabel colorPalette="green" variant="solid-fill">
+        <ChipLabel colorPalette="green" variant="filled-2">
           <CheckCircle2Icon />
           成功
         </ChipLabel>
-        <ChipLabel colorPalette="red" variant="solid-fill">
+        <ChipLabel colorPalette="red" variant="filled-2">
           <CircleXIcon />
           失敗
         </ChipLabel>
-        <ChipLabel colorPalette="yellow" variant="solid-fill">
+        <ChipLabel colorPalette="yellow" variant="filled-2">
           <TriangleAlert />
           注意
         </ChipLabel>
-        <ChipLabel colorPalette="solid-gray" variant="solid-fill">
+        <ChipLabel colorPalette="solid-gray" variant="filled-2">
           <InfoIcon />
           情報
         </ChipLabel>

@@ -1,8 +1,7 @@
 import type { StoryObj, Meta } from "@storybook/nextjs-vite";
 import { css } from "styled-system/css";
 import { Link } from "../src/link";
-import { UnorderedList } from "../src/unordered-list";
-import { List } from "../src/list";
+import { List, UnorderedList } from "../src/list";
 
 const meta = {
   title: "Getting Started/Introduction",

@@ -4,4 +4,4 @@ import { orderedList } from "styled-system/recipes";
 import type { ComponentProps } from "styled-system/types";
 
 export type OrderedListProps = ComponentProps<typeof OrderedList>;
-export const OrderedList = styled(ark.ol, orderedList);
+export const OrderedList = styled(ark.ul, orderedList);

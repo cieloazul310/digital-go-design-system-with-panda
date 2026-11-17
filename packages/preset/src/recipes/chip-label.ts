@@ -28,11 +28,27 @@ export const chipLabel = defineRecipe({
         color: "colorPalette.primary",
         borderColor: "currentcolor",
       },
+      "filled-1": {
+        color: "colorPalette.primary",
+        bg: "colorPalette.bg",
+        borderColor: "currentColor",
+      },
+      "filled-2": {
+        bg: "colorPalette.primary",
+        color: "white",
+        borderColor: "transparent",
+      },
+      /**
+       * @deprecated
+       */
       ghost: {
         color: "colorPalette.primary",
         bg: "colorPalette.bg",
         borderColor: "currentColor",
       },
+      /**
+       * @deprecated
+       */
       "solid-fill": {
         bg: "colorPalette.primary",
         color: "white",

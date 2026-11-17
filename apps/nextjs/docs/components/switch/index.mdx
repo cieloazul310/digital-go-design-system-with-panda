@@ -1,0 +1,26 @@
+---
+title: スイッチ
+date: 2026-11-17
+lastmod: 2026-11-17
+description: スイッチは、設定のオン・オフや2つの選択肢を切り替えるためのコントロールです。
+digitalgo: https://design.digital.go.jp/dads/components/switch/
+ark: https://ark-ui.com/docs/components/switch
+---
+
+```tsx
+import { Switch } from "@/components/ui/switch";
+```
+
+## 使用例
+
+オン・オフの切り替えと2つの選択肢の切り替えのどちらにも、Ark UIの`Switch.Root`と各slotを組み合わせます。2つの選択肢を切り替える場合は`variant="mode"`を指定します。
+
+Slot Recipeのvariant軸は`variant`で、値は`onOff`または`mode`です。既定値は`onOff`です。
+
+### オン・オフを切り替えるとき
+
+<DemoViewer name="switch-on-off" />
+
+### 2つの選択肢のどちらかに切り替えるとき
+
+<DemoViewer name="switch-mode" />

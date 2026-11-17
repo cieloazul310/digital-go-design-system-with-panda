@@ -2,11 +2,65 @@
 title: リスト
 date: 2025-10-17
 lastmod: 2025-10-17
-description: 一般的なリスト要素。HTMLのul要素、ol要素に相当します。
-storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/story/components-%E3%83%AA%E3%82%B9%E3%83%88-ol--basic
+description: ul要素を使って表現する箇条書きリストと、テキストで項番を表現する順序付きリストです。
+storybook: https://cieloazul310.github.io/digital-go-design-system-with-panda/?path=/story/components-%E3%83%AA%E3%82%B9%E3%83%88-%E9%A0%86%E5%BA%8F%E4%BB%98%E3%81%8D%E3%83%AA%E3%82%B9%E3%83%88--basic
 digitalgo: https://design.digital.go.jp/dads/components/list/
 ---
 
 ```tsx
 import { List, OrderedList, UnorderedList } from "@/components/ui/list";
 ```
+
+## MDXの順序付きリスト
+
+`OrderedList`は、項番を各`List`の子要素として明示するコンポーネントです。Markdownの`1.`形式を使う場合は、MDXの`ol`マッピングで項番をテキストの`<span>`として挿入してください。この変換はMDX環境に依存するため、共通コンポーネントのsnippetには含めず、利用するアプリの`mdx-components.tsx`に実装します。
+
+```tsx
+import {
+  isValidElement,
+  type ComponentProps,
+} from "react";
+import type { MDXComponents } from "mdx/types";
+import { List, OrderedList } from "@/components/ui/list";
+
+type MarkdownOrderedListProps = ComponentProps<typeof OrderedList> & {
+  start?: number;
+};
+
+type MarkdownListItemProps = ComponentProps<typeof List> & {
+  value?: number;
+};
+
+function MarkdownOrderedList({
+  children,
+  start = 1,
+  ...props
+}: MarkdownOrderedListProps) {
+  const items = Array.isArray(children) ? children : [children];
+  const numberedItems = items.map((child, index) => {
+    if (!isValidElement<MarkdownListItemProps>(child)) return child;
+
+    const { children: itemChildren, value, ...itemProps } = child.props;
+    const number = value ?? start + index;
+    const ListItem = child.type;
+
+    return (
+      <ListItem key={child.key ?? `ordered-list-item-${number}`} {...itemProps}>
+        <span>{number}.</span>
+        {itemChildren}
+      </ListItem>
+    );
+  });
+
+  return <OrderedList {...props}>{numberedItems}</OrderedList>;
+}
+
+export function useMDXComponents(components: MDXComponents): MDXComponents {
+  return {
+    ol: MarkdownOrderedList,
+    ...components,
+  };
+}
+```
+
+この例は通常の10進数の項番を対象としています。独自の項番表記や厳密な番号付けが必要な場合は、Markdownの自動採番に任せず、`OrderedList`内の`List`に項番をテキストで明記してください。
