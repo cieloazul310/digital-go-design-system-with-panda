@@ -4945,20 +4945,20 @@
     "button": {
       "className": "button",
       "variants": {
+        "variant": {
+          "values": [
+            "solid-fill",
+            "outline",
+            "text"
+          ],
+          "allowsBoolean": false
+        },
         "size": {
           "values": [
             "lg",
             "md",
             "sm",
             "xs"
-          ],
-          "allowsBoolean": false
-        },
-        "variant": {
-          "values": [
-            "outline",
-            "solid-fill",
-            "text"
           ],
           "allowsBoolean": false
         }
@@ -4974,12 +4974,12 @@
       "variants": {
         "variant": {
           "values": [
+            "text",
+            "outlined",
             "filled-1",
             "filled-2",
             "ghost",
-            "outlined",
-            "solid-fill",
-            "text"
+            "solid-fill"
           ],
           "allowsBoolean": false
         }
@@ -4994,9 +4994,9 @@
       "variants": {
         "color": {
           "values": [
-            "black",
             "gray-420",
-            "gray-536"
+            "gray-536",
+            "black"
           ],
           "allowsBoolean": false
         }
@@ -5019,9 +5019,9 @@
       "variants": {
         "size": {
           "values": [
-            "lg",
+            "sm",
             "md",
-            "sm"
+            "lg"
           ],
           "allowsBoolean": false
         }
@@ -5036,9 +5036,9 @@
       "variants": {
         "size": {
           "values": [
-            "lg",
+            "sm",
             "md",
-            "sm"
+            "lg"
           ],
           "allowsBoolean": false
         }
@@ -5052,9 +5052,9 @@
       "variants": {
         "size": {
           "values": [
-            "lg",
+            "sm",
             "md",
-            "sm"
+            "lg"
           ],
           "allowsBoolean": false
         }
@@ -5075,18 +5075,18 @@
     "menuItem": {
       "className": "menu-item",
       "variants": {
+        "variant": {
+          "values": [
+            "standard",
+            "boxed"
+          ],
+          "allowsBoolean": false
+        },
         "isCondensed": {
           "values": [
             "true"
           ],
           "allowsBoolean": true
-        },
-        "variant": {
-          "values": [
-            "boxed",
-            "standard"
-          ],
-          "allowsBoolean": false
         }
       },
       "defaultVariants": {
@@ -5157,18 +5157,18 @@
         "title"
       ],
       "variants": {
+        "orientation": {
+          "values": [
+            "vertical",
+            "horizontal"
+          ],
+          "allowsBoolean": false
+        },
         "asLink": {
           "values": [
             "true"
           ],
           "allowsBoolean": true
-        },
-        "orientation": {
-          "values": [
-            "horizontal",
-            "vertical"
-          ],
-          "allowsBoolean": false
         }
       },
       "defaultVariants": {
@@ -5189,9 +5189,9 @@
       "variants": {
         "size": {
           "values": [
-            "lg",
+            "sm",
             "md",
-            "sm"
+            "lg"
           ],
           "allowsBoolean": false
         }
@@ -5223,18 +5223,18 @@
         "hiddenInput"
       ],
       "variants": {
-        "size": {
-          "values": [
-            "lg",
-            "md",
-            "sm"
-          ],
-          "allowsBoolean": false
-        },
         "variant": {
           "values": [
             "consolidated",
             "separated"
+          ],
+          "allowsBoolean": false
+        },
+        "size": {
+          "values": [
+            "sm",
+            "md",
+            "lg"
           ],
           "allowsBoolean": false
         }
@@ -5288,9 +5288,9 @@
       "variants": {
         "marker": {
           "values": [
+            "none",
             "bullet",
-            "custom",
-            "none"
+            "custom"
           ],
           "allowsBoolean": false
         }
@@ -5453,18 +5453,18 @@
         "input"
       ],
       "variants": {
+        "variant": {
+          "values": [
+            "standard",
+            "boxed"
+          ],
+          "allowsBoolean": false
+        },
         "isCondensed": {
           "values": [
             "true"
           ],
           "allowsBoolean": true
-        },
-        "variant": {
-          "values": [
-            "boxed",
-            "standard"
-          ],
-          "allowsBoolean": false
         }
       },
       "defaultVariants": {
@@ -5484,20 +5484,20 @@
         "actions"
       ],
       "variants": {
-        "bannerStyle": {
+        "type": {
           "values": [
-            "color-chip",
-            "standard"
+            "success",
+            "error",
+            "warning",
+            "info1",
+            "info2"
           ],
           "allowsBoolean": false
         },
-        "type": {
+        "bannerStyle": {
           "values": [
-            "error",
-            "info1",
-            "info2",
-            "success",
-            "warning"
+            "standard",
+            "color-chip"
           ],
           "allowsBoolean": false
         }
@@ -5524,8 +5524,8 @@
       "variants": {
         "layout": {
           "values": [
-            "horizontal",
-            "vertical"
+            "vertical",
+            "horizontal"
           ],
           "allowsBoolean": false
         }
@@ -5548,9 +5548,9 @@
       "variants": {
         "size": {
           "values": [
-            "lg",
+            "sm",
             "md",
-            "sm"
+            "lg"
           ],
           "allowsBoolean": false
         }
@@ -5569,18 +5569,18 @@
         "title"
       ],
       "variants": {
+        "variant": {
+          "values": [
+            "list",
+            "frame"
+          ],
+          "allowsBoolean": false
+        },
         "asLink": {
           "values": [
             "true"
           ],
           "allowsBoolean": true
-        },
-        "variant": {
-          "values": [
-            "frame",
-            "list"
-          ],
-          "allowsBoolean": false
         }
       },
       "defaultVariants": {
@@ -5662,8 +5662,8 @@
       "variants": {
         "variant": {
           "values": [
-            "mode",
-            "onOff"
+            "onOff",
+            "mode"
           ],
           "allowsBoolean": false
         }
@@ -5695,13 +5695,13 @@
           ],
           "allowsBoolean": true
         },
-        "hovered": {
+        "striped": {
           "values": [
             "true"
           ],
           "allowsBoolean": true
         },
-        "striped": {
+        "hovered": {
           "values": [
             "true"
           ],
@@ -5745,19 +5745,19 @@
         "tree"
       ],
       "variants": {
-        "isCondensed": {
-          "values": [
-            "false",
-            "true"
-          ],
-          "allowsBoolean": true
-        },
         "variant": {
           "values": [
-            "boxed",
-            "standard"
+            "standard",
+            "boxed"
           ],
           "allowsBoolean": false
+        },
+        "isCondensed": {
+          "values": [
+            "true",
+            "false"
+          ],
+          "allowsBoolean": true
         }
       }
     }
