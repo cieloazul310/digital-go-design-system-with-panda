@@ -18,6 +18,7 @@ import { field } from "./field";
 import { fieldset } from "./fieldset";
 import { fileUpload } from "./file-upload";
 import { hamburgerMenuButton } from "./hamburger-menu-button";
+import { horizontalMenu } from "./horizontal-menu";
 import { input } from "./input";
 import { label } from "./label";
 import { legend } from "./legend";
@@ -50,6 +51,7 @@ export const recipes = {
   digitalGoDivider,
   errorText,
   hamburgerMenuButton,
+  horizontalMenu,
   input,
   label,
   legend,

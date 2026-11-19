@@ -20,17 +20,10 @@ export async function DemoViewer({ name }: { name: DemoVariantMap }) {
         <Tabs.Trigger value="preview">プレビュー</Tabs.Trigger>
         <Tabs.Trigger value="code">サンプルコード</Tabs.Trigger>
       </Tabs.List>
-      <Tabs.Content
-        value="preview"
-        p={4}
-        minHeight="25vh"
-        borderWidth="1px"
-        borderColor="solid-gray.420"
-        roundedBottom={8}
-      >
+      <Tabs.Content value="preview" p={4} minHeight="25vh" roundedBottom={8}>
         <DemoClient name={name} />
       </Tabs.Content>
-      <Tabs.Content value="code" position="relative">
+      <Tabs.Content value="code" position="relative" p={0} roundedBottom={8}>
         <div
           className={css({
             "& > pre": {

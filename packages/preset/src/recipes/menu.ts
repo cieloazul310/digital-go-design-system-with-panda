@@ -3,13 +3,13 @@
  * https://github.com/digital-go-jp/design-system-example-components-react/blob/main/src/components/LanguageSelector/parts/Menu.tsx
  * https://github.com/digital-go-jp/design-system-example-components-react/blob/main/src/components/LanguageSelector/parts/MenuItem.tsx
  */
-import { defineSlotRecipe, type SystemStyleObject } from "@pandacss/dev";
+import { defineSlotRecipe } from "@pandacss/dev";
 import { anatomy as menuAnatomy } from "@zag-js/menu";
 import { menuItem } from "./menu-item";
 
 const itemStyle = {
   ...menuItem.base,
-} satisfies SystemStyleObject;
+};
 
 export const menu = defineSlotRecipe({
   className: "menu",
@@ -66,6 +66,18 @@ export const menu = defineSlotRecipe({
           focus-visible:outline focus-visible:outline-4 focus-visible:outline-black focus-visible:-outline-offset-4 focus-visible:bg-yellow-300 focus-visible:ring-[calc(6/16*1rem)] focus-visible:ring-inset focus-visible:ring-yellow-300
           ${className ?? ''}
      */
+    },
+    indicator: {
+      // mt-1 shrink-0 size-4
+      mt: 1,
+      flexShrink: 0,
+      width: 4,
+      height: 4,
+      _open: {
+        "& svg": {
+          rotate: "180deg",
+        },
+      },
     },
   },
   variants: {

@@ -25,7 +25,21 @@ export const ContextTrigger = withContext(
   "contextTrigger",
 );
 
-export const Indicator = withContext(Menu.Indicator, "indicator");
+const Chevron = (
+  <svg
+    width={16}
+    height={16}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    aria-hidden={true}
+  >
+    <path d="M12 17L3 8L4 7L12 15L20 7L21 8L12 17Z" />
+  </svg>
+);
+
+export const Indicator = withContext(Menu.Indicator, "indicator", {
+  defaultProps: { children: Chevron },
+});
 
 export const ItemGroupLabel = withContext(
   Menu.ItemGroupLabel,

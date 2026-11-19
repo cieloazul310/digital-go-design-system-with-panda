@@ -5014,6 +5014,11 @@
       "className": "hamburger-menu-button",
       "variants": {}
     },
+    "horizontalMenu": {
+      "className": "horizontal-menu",
+      "variants": {},
+      "description": "水平メニューは、利用者を目的のページへ誘導するためのグローバルナビゲーションです。"
+    },
     "input": {
       "className": "input",
       "variants": {
@@ -5723,7 +5728,20 @@
         "content",
         "indicator"
       ],
-      "variants": {}
+      "variants": {
+        "placement": {
+          "values": [
+            "top",
+            "bottom",
+            "left",
+            "right"
+          ],
+          "allowsBoolean": false
+        }
+      },
+      "defaultVariants": {
+        "placement": "top"
+      }
     },
     "treeView": {
       "className": "tree-view",
